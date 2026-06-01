@@ -93,8 +93,11 @@
 <body class="bg-slate-50 text-slate-800">
   <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
     <div class="mx-auto max-w-6xl px-4 py-4 flex items-center gap-3">
-      <div class="h-10 w-10 rounded-xl bg-blue-600 text-white grid place-items-center font-bold">CLT</div>
-      <h1 class="text-xl sm:text-2xl font-bold text-slate-900">Calculadora de Rescisão CLT 2026</h1>
+      <a href="/" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-blue-600 text-white grid place-items-center font-bold">CT</div>
+        <span class="text-lg font-bold text-slate-900 hidden sm:block">Calcule Trabalhador</span>
+      </a>
+      <h1 class="text-xl sm:text-2xl font-bold text-slate-900 ml-2">Calculadora de Rescisão CLT 2026</h1>
     </div>
   </header>
 
@@ -196,7 +199,7 @@
     <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <h2 class="text-2xl font-bold text-slate-900">Como calcular a rescisão</h2>
       <p class="mt-3">O cálculo parte de cinco eixos: salário base, tempo de serviço, dias trabalhados no mês da saída, modalidade de desligamento e regra de aviso prévio. Em seguida, calcula-se férias vencidas e proporcionais com adicional de 1/3, 13º proporcional por meses trabalhados no ano, FGTS acumulado (estimativa de 8% ao mês) e eventual multa de 40% para demissão sem justa causa.</p>
-      <p class="mt-3">A lógica condicional é o coração da conta: muda o tipo de desligamento, mudam as verbas. Por isso, não existe “valor padrão” de rescisão. O valor correto depende do cenário real. A calculadora foi construída para permitir exatamente essa análise condicional, sem depender de fórmulas ocultas.</p>
+      <p class="mt-3">A lógica condicional é o coração da conta: muda o tipo de desligamento, mudam as verbas. Por isso, não existe "valor padrão" de rescisão. O valor correto depende do cenário real. A calculadora foi construída para permitir exatamente essa análise condicional, sem depender de fórmulas ocultas.</p>
     </section>
 
     <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -319,7 +322,7 @@
       <h2 class="text-2xl font-bold text-slate-900">Conclusão</h2>
       <p class="mt-3">Calcular rescisão não precisa ser um processo confuso. Quando você separa cada verba e entende as regras por tipo de desligamento, a conferência fica objetiva e reduz o risco de aceitar um valor incorreto. Esta calculadora foi criada exatamente para esse objetivo: oferecer clareza, rapidez e autonomia ao trabalhador CLT.</p>
       <p class="mt-3">Use o resultado como base de revisão e guarde seus documentos. Se surgir diferença relevante em relação ao termo oficial, procure orientação especializada para garantir que todos os direitos sejam respeitados.</p>
-      <p class="mt-3">Outra vantagem prática é poder se preparar antes da homologação. Com uma estimativa em mãos, o trabalhador chega à conversa com RH ou contabilidade mais seguro, sabendo quais perguntas fazer e quais verbas precisam aparecer no termo rescisório. Isso reduz ansiedade em um momento normalmente delicado e ajuda a evitar decisões precipitadas. A melhor abordagem é combinar esta simulação com conferência documental: holerites recentes, extrato de FGTS, contrato de trabalho e eventuais aditivos. Dessa forma, você transforma a rescisão em um processo transparente, com mais previsibilidade financeira e menos risco de prejuízo.</p>
+      <p class="mt-3">Outra vantagem prática é poder se preparar antes da homologação. Com uma estimativa em mãos, o trabalhador chega à conversa com RH ou contabilidade mais seguro, sabendo quais perguntas fazer e quais verbas precisam aparecer no termo rescisório.</p>
     </section>
 
     <section class="mt-6 rounded-2xl border border-red-200 bg-red-50 p-6 shadow-sm">
@@ -327,6 +330,42 @@
       <p class="mt-3 text-red-900">Esta calculadora tem finalidade informativa e educacional. Os valores exibidos são estimativas e não substituem o cálculo oficial da empresa, documentos de homologação, convenção coletiva ou orientação profissional. Para decisões jurídicas e contestação de verbas, consulte contador, advogado trabalhista ou sindicato da categoria.</p>
     </section>
   </main>
+
+  <!-- RODAPÉ -->
+  <footer class="mt-12 border-t border-slate-200 bg-slate-900 text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="h-9 w-9 rounded-xl bg-blue-600 text-white grid place-items-center font-bold text-sm">CT</div>
+            <span class="text-white font-bold text-lg">Calcule Trabalhador</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">Portal de calculadoras trabalhistas gratuitas, atualizadas com a legislação brasileira de 2026.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">Calculadoras</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/saque-aniversario-fgts" class="hover:text-white transition-colors">Saque-Aniversário FGTS</a></li>
+            <li><a href="/salario-liquido-clt-2026" class="hover:text-white transition-colors">Salário Líquido CLT 2026</a></li>
+            <li><a href="/calculadora-rescisao-clt-2026" class="hover:text-white transition-colors">Calculadora de Rescisão CLT</a></li>
+            <li><a href="/calculadora-ferias-clt-2026" class="hover:text-white transition-colors">Calculadora de Férias CLT</a></li>
+            <li><a href="/calculadora-13-salario-2026" class="hover:text-white transition-colors">Calculadora de 13º Salário</a></li>
+            <li><a href="/calculadora-horas-extras-clt-2026" class="hover:text-white transition-colors">Calculadora de Horas Extras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">Informações</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/" class="hover:text-white transition-colors">Página Inicial</a></li>
+          </ul>
+          <p class="mt-4 text-xs text-slate-500 leading-relaxed">As ferramentas deste portal têm caráter informativo e educacional. Consulte sempre um profissional para decisões trabalhistas.</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
+        © 2026 Calcule Trabalhador. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
 
   <script>
     const brl = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v || 0);
