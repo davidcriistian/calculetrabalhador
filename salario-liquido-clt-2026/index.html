@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salário Líquido CLT 2026: Calculadora com INSS e IRRF Atualizados | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule seu salário líquido CLT em 2026 com INSS progressivo, IRRF, redutor de isenção até R$ 5.000 e deduções. Guia completo, exemplos práticos, FAQ e atualização das regras." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/salario-liquido-clt-2026/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre salário bruto e salário líquido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salário bruto é o valor contratado em carteira antes dos descontos. Salário líquido é o valor final recebido após descontos de INSS, IRRF e demais itens da folha." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como é calculado o INSS em 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O INSS é calculado de forma progressiva por faixas. Cada alíquota incide apenas na parcela correspondente da remuneração, respeitando o teto previdenciário." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem está isento de IRRF em 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende da base de cálculo mensal e do redutor aplicado em 2026. Na prática, faixas de renda mais baixas podem ter IRRF zerado pelo redutor de isenção." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vale-transporte desconta do salário líquido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O vale-transporte pode ser descontado em folha conforme regra legal e política da empresa. Esse desconto reduz o valor líquido recebido." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dependentes reduzem o imposto de renda retido na fonte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Dependentes podem gerar dedução na base de cálculo do IRRF. A calculadora considera essa dedução e compara com o desconto simplificado mensal." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pensão alimentícia influencia o salário líquido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Influencia sim. A pensão judicial pode reduzir o valor líquido final e também afetar a base de cálculo do IRRF, conforme a natureza da decisão judicial." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Horas extras entram automaticamente nesta calculadora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não automaticamente. Se você já souber o impacto total de horas extras e adicionais, pode incorporar esses valores no salário bruto ou em ajustes de desconto." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usar esta simulação para comparar propostas de emprego?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Comparar salário líquido é uma forma eficiente de avaliar propostas, porque revela quanto realmente entra no orçamento após descontos obrigatórios." 
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --azul: #1d4ed8;
+      --azul-escuro: #0f172a;
+      --fundo: #f8fafc;
+      --texto: #1f2937;
+      --card: #ffffff;
+      --borda: #e5e7eb;
+      --verde: #15803d;
+      --rosa: #be123c;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #eff6ff 100%);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--borda);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-wrap { padding: 18px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .title { margin: 0; font-size: clamp(1.5rem, 2.8vw, 2.3rem); color: #111827; }
+    .badge {
+      width: 40px; height: 40px; border-radius: 10px; background: var(--azul);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700;
+    }
+
+    main { padding: 32px 0 56px; }
+
+    .info, .card {
+      background: var(--card);
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+    }
+
+    .info { margin-bottom: 24px; padding: 18px; }
+    .grid { display: grid; gap: 18px; }
+    .grid-main { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+
+    @media (min-width: 980px) {
+      .grid-main { grid-template-columns: 360px 1fr; }
+      .result-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card { padding: 18px; margin-top: 18px; }
+    .card h2 { margin: 0 0 10px; color: #111827; font-size: 1.45rem; }
+    .card h3 { margin: 20px 0 10px; color: #111827; font-size: 1.1rem; }
+    .muted { color: #6b7280; font-size: 0.93rem; }
+
+    label { display: block; font-weight: 600; margin: 12px 0 6px; }
+    input {
+      width: 100%; padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 10px;
+      font-size: 1rem; color: #111827; background: #fff;
+    }
+
+    .kpi { border-radius: 12px; padding: 14px; border: 1px solid; background: #fff; }
+    .kpi small { color: #6b7280; display: block; }
+    .kpi strong { display: block; font-size: clamp(1.4rem, 2.5vw, 2rem); margin-top: 6px; }
+
+    .kpi-liquido { border-color: #bbf7d0; background: #f0fdf4; }
+    .kpi-liquido strong { color: var(--verde); }
+
+    .kpi-inss { border-color: #bfdbfe; background: #eff6ff; }
+    .kpi-inss strong { color: #1d4ed8; }
+
+    .kpi-irrf { border-color: #fecdd3; background: #fff1f2; }
+    .kpi-irrf strong { color: var(--rosa); }
+
+    .kpi-base { border-color: #ddd6fe; background: #f5f3ff; }
+    .kpi-base strong { color: #6d28d9; }
+
+    .summary-tip {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 0.93rem;
+    }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+    th, td { border-bottom: 1px solid #eef2f7; padding: 10px 6px; text-align: left; vertical-align: top; }
+    th { color: #374151; background: #f9fafb; }
+
+    .note {
+      margin-top: 18px;
+      border: 1px solid #fcd34d;
+      background: #fffbeb;
+      color: #92400e;
+      border-radius: 12px;
+      padding: 14px;
+      line-height: 1.5;
+    }
+
+    .footer-link {
+      margin-top: 18px;
+      display: inline-block;
+      color: var(--azul);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 36px 16px;
+      border: 2px dashed #d1d5db;
+      border-radius: 12px;
+      color: #6b7280;
+      background: #f9fafb;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 10px;
+      align-items: start;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--azul);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+    }
+
+    .link-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+
+    .link-card {
+      display: block;
+      text-decoration: none;
+      color: #0f172a;
+      border: 1px solid #dbeafe;
+      background: #f8fbff;
+      border-radius: 10px;
+      padding: 12px;
+      transition: .2s;
+    }
+
+    .link-card:hover { border-color: #60a5fa; background: #eef6ff; }
+
+    @media (min-width: 900px) {
+      .link-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    details {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 12px;
+      background: #f8fafc;
+      color: #111827;
+    }
+
+    details p { margin: 0; padding: 12px; }
+
+    .disclaimer {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #fecaca;
+      background: #fef2f2;
+      color: #7f1d1d;
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-wrap">
+      <span class="badge">R$</span>
+      <h1 class="title">Calculadora de Salário Líquido CLT 2026</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="info">
+      <strong>Simulação independente</strong>
+      <p class="muted" style="margin: 8px 0 0;">
+        Ferramenta gratuita para estimar salário líquido com INSS progressivo, IRRF 2026 e redutor de isenção.
+        A calculadora foi pensada para orientar trabalhadores CLT e facilitar conferência de holerite.
+      </p>
+    </section>
+
+    <section class="grid grid-main">
+      <div class="card" style="margin-top:0;">
+        <h2>Dados da simulação</h2>
+        <p class="muted">Preencha os campos para calcular seu salário líquido.</p>
+
+        <label for="salarioBruto">Salário bruto mensal</label>
+        <input id="salarioBruto" type="text" placeholder="R$ 0,00" inputmode="numeric" />
+
+        <label for="dependentes">Número de dependentes (IR)</label>
+        <input id="dependentes" type="number" min="0" step="1" value="0" />
+
+        <p class="muted" id="deducaoDependente" style="margin-top: 10px;"></p>
+      </div>
+
+      <div class="card" style="margin-top:0;">
+        <div id="resultadoVazio" class="empty">Informe o salário bruto para ver o resultado.</div>
+
+        <div id="resultadoConteudo" style="display:none;">
+          <div class="grid result-grid" style="margin-bottom: 16px;">
+            <div class="kpi kpi-liquido">
+              <small>Salário líquido estimado</small>
+              <strong id="kpiLiquido">R$ 0,00</strong>
+            </div>
+            <div class="kpi kpi-inss">
+              <small>Desconto INSS</small>
+              <strong id="kpiInss">R$ 0,00</strong>
+            </div>
+            <div class="kpi kpi-irrf">
+              <small>Desconto IRRF</small>
+              <strong id="kpiIrrf">R$ 0,00</strong>
+            </div>
+            <div class="kpi kpi-base">
+              <small>Base de cálculo IRRF</small>
+              <strong id="kpiBase">R$ 0,00</strong>
+            </div>
+          </div>
+
+          <h3>Memória de cálculo</h3>
+          <p class="muted" style="margin:0 0 10px;">
+            A leitura dos dados abaixo ajuda a entender por que o valor líquido muda conforme salário, dependentes e regras de tributação.
+            Esse detalhamento é útil para conferência do contracheque e para comparar propostas de emprego com mais segurança.
+          </p>
+          <table>
+            <tbody>
+              <tr><td>Salário bruto</td><td id="memBruto"></td></tr>
+              <tr><td>INSS total</td><td id="memInss"></td></tr>
+              <tr><td>Dedução por dependentes</td><td id="memDep"></td></tr>
+              <tr><td>Desconto simplificado mensal</td><td id="memSimp"></td></tr>
+              <tr><td>Dedução aplicada no IR</td><td id="memAplicada"></td></tr>
+              <tr><td>IRRF bruto da faixa</td><td id="memBrutoIr"></td></tr>
+              <tr><td>Redutor IR 2026</td><td id="memRedutor"></td></tr>
+            </tbody>
+          </table>
+
+          <div class="summary-tip">
+            <strong>Dica:</strong> se o seu holerite apresentar valor muito diferente da simulação, verifique eventos como horas extras,
+            faltas, adicionais (noturno/periculosidade), descontos de benefícios e pensão judicial.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Tabela INSS 2026 (CLT)</h3>
+      <table>
+        <thead><tr><th>Faixa salarial</th><th>Alíquota</th></tr></thead>
+        <tbody id="tabelaInss"></tbody>
+      </table>
+
+      <h3 style="margin-top: 18px;">Tabela IRRF 2026 (mensal)</h3>
+      <table>
+        <thead><tr><th>Base de cálculo</th><th>Alíquota</th><th>Parcela a deduzir</th></tr></thead>
+        <tbody id="tabelaIrrf"></tbody>
+      </table>
+
+      <div class="note">
+        Simulação de referência. Holerite real pode incluir outros eventos (benefícios, faltas, horas extras, adicional noturno,
+        pensão, etc.).
+      </div>
+
+      <a class="footer-link" href="/">← Voltar para a página principal</a>
+    </section>
+
+    <section class="card">
+      <h2>O que é Salário Líquido CLT</h2>
+      <h3>Conceito essencial para quem recebe por folha</h3>
+      <p>
+        Salário líquido CLT é o valor que efetivamente entra na conta do trabalhador após todos os descontos da folha de pagamento.
+        Muita gente olha apenas o salário bruto no contrato e, por isso, se frustra quando recebe o primeiro holerite. O bruto representa
+        a remuneração antes de tributos e deduções. O líquido representa o dinheiro disponível para pagar contas, organizar o orçamento
+        mensal e planejar objetivos financeiros.
+      </p>
+      <h3>Diferença entre salário bruto e líquido</h3>
+      <p>
+        O salário bruto funciona como ponto de partida. A partir dele, entram descontos obrigatórios, como INSS e IRRF, além de possíveis
+        descontos previstos em norma interna ou convenção coletiva, como vale-transporte, coparticipação de plano de saúde e contribuições
+        específicas. O resultado final é o salário líquido. Em termos práticos: bruto é a referência contratual; líquido é a realidade no bolso.
+      </p>
+      <h3>Componentes que formam o líquido</h3>
+      <p>
+        Para chegar ao valor líquido, você precisa observar não apenas tributos, mas também deduções particulares da sua situação pessoal.
+        Dependentes podem alterar o imposto de renda, pensão judicial pode reduzir base tributável em cenários específicos e benefícios
+        corporativos podem gerar descontos diretos na folha. Entender esses componentes evita confusão e ajuda a conferir se o valor pago
+        está coerente com os critérios legais e com o que foi pactuado com a empresa.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Como funciona o cálculo</h2>
+      <h3>INSS progressivo em 2026</h3>
+      <p>
+        O INSS em regime CLT segue lógica progressiva. Isso significa que cada alíquota incide apenas sobre a parcela da remuneração dentro de
+        cada faixa, e não sobre o total inteiro com uma única taxa. Esse método torna o cálculo mais equilibrado entre salários menores e maiores,
+        respeitando também o teto previdenciário. Na prática, o desconto de quem ganha mais sobe gradualmente, sem “pulo” integral de alíquota.
+      </p>
+      <h3>IRRF por faixas com dedução</h3>
+      <p>
+        Depois do INSS, calcula-se o IRRF sobre uma base reduzida por deduções legais e/ou desconto simplificado. A tabela mensal tem alíquotas
+        e parcelas a deduzir. Em 2026, o redutor de isenção ampliado para rendas até patamares próximos de R$ 5.000 alterou significativamente
+        o valor efetivo de retenção para muitos trabalhadores, especialmente nas faixas intermediárias. Por isso, duas pessoas com salário bruto
+        parecido podem ter IRRF diferente dependendo da composição da base de cálculo.
+      </p>
+      <h3>Descontos obrigatórios e opcionais</h3>
+      <p>
+        Além de INSS e IRRF, outros itens podem impactar o líquido: vale-transporte, adiantamentos, descontos de benefícios e rubricas de acordo
+        coletivo. Esses valores não seguem uma regra única para todas as empresas, então a simulação deve ser interpretada como uma estimativa
+        técnica educacional. Ainda assim, ela oferece base confiável para auditoria inicial do holerite.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Como usar esta calculadora</h2>
+      <p>
+        Para obter resultado útil, preencha os campos com atenção e compare com seu contracheque do mesmo mês de referência.
+        Se houver variáveis no período (bônus, faltas, horas extras), faça mais de uma simulação para criar cenários.
+      </p>
+      <ol class="steps">
+        <li>
+          <span class="step-number">1</span>
+          <div>
+            <strong>Informe o salário bruto mensal</strong><br>
+            Use o valor contratual bruto da competência que você quer analisar.
+          </div>
+        </li>
+        <li>
+          <span class="step-number">2</span>
+          <div>
+            <strong>Preencha o número de dependentes para IR</strong><br>
+            Isso afeta deduções e pode diminuir o imposto retido na fonte.
+          </div>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <div>
+            <strong>Confira os blocos de resultado</strong><br>
+            Observe salário líquido, INSS, IRRF e base tributável para entender o comportamento do cálculo.
+          </div>
+        </li>
+        <li>
+          <span class="step-number">4</span>
+          <div>
+            <strong>Analise a memória de cálculo</strong><br>
+            Ela mostra de onde veio cada valor e facilita identificar divergências com o holerite.
+          </div>
+        </li>
+        <li>
+          <span class="step-number">5</span>
+          <div>
+            <strong>Compare com seu contracheque oficial</strong><br>
+            Diferenças pequenas podem existir por regras internas, mas diferenças grandes pedem revisão.
+          </div>
+        </li>
+        <li>
+          <span class="step-number">6</span>
+          <div>
+            <strong>Use cenários para decisões financeiras</strong><br>
+            Simule reajustes, mudança de emprego e impacto de benefícios antes de decidir.
+          </div>
+        </li>
+      </ol>
+      <h3>Dicas para resultados mais precisos</h3>
+      <p>
+        Sempre use a competência correta (mês exato do holerite), mantenha coerência entre bruto e eventos da folha, e evite comparar meses
+        diferentes sem ajustar variáveis. Se você recebeu férias, 13º, PLR ou rescisão, trate esses casos separadamente com calculadoras específicas.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Exemplos Práticos</h2>
+      <h3>Cenários comparativos para entender o impacto dos descontos</h3>
+      <p>
+        A tabela abaixo ilustra três faixas de renda (baixa, média e alta) usando as regras de 2026. Os valores são exemplos educativos,
+        úteis para noção de ordem de grandeza. O resultado real pode variar conforme descontos complementares e particularidades contratuais.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Cenário</th>
+            <th>Salário Bruto</th>
+            <th>INSS estimado</th>
+            <th>IRRF estimado</th>
+            <th>Salário Líquido estimado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Exemplo 1</strong><br>Faixa inicial</td>
+            <td>R$ 2.000,00</td>
+            <td>~ R$ 159,81</td>
+            <td>R$ 0,00 (com redutor)</td>
+            <td><strong>~ R$ 1.840,19</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Exemplo 2</strong><br>Faixa média</td>
+            <td>R$ 5.000,00</td>
+            <td>~ R$ 528,85</td>
+            <td>Baixo/variável conforme deduções</td>
+            <td><strong>~ R$ 4.300,00 a R$ 4.450,00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Exemplo 3</strong><br>Faixa alta</td>
+            <td>R$ 10.000,00</td>
+            <td>Teto aproximado do INSS</td>
+            <td>Incidência relevante de IRRF</td>
+            <td><strong>~ R$ 7.900,00 a R$ 8.400,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin-top:10px;">
+        *Faixas estimadas variam conforme dependentes, pensão, rubricas internas e política de benefícios da empresa.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Mudanças para 2026</h2>
+      <h3>Atualização das faixas do INSS</h3>
+      <p>
+        As faixas previdenciárias foram ajustadas para o ano de 2026, alterando a distribuição do desconto progressivo. Esse ajuste influencia
+        diretamente o valor líquido, principalmente para quem está próximo dos limites entre faixas.
+      </p>
+      <h3>Atualização do IRRF mensal</h3>
+      <p>
+        As regras de retenção mensal do imposto de renda foram mantidas com estrutura por faixa e parcela a deduzir, mas o comportamento final
+        da retenção foi impactado pelo redutor aplicado em 2026. Em muitos casos, houve redução efetiva do IR para rendas de menor e média faixa.
+      </p>
+      <h3>Novo redutor de isenção até R$ 5.000</h3>
+      <p>
+        O redutor trouxe efeito prático importante: trabalhadores com base de cálculo mais baixa podem ver IRRF muito reduzido ou zerado.
+        Isso aumentou a previsibilidade do líquido para parte significativa dos empregados CLT e mudou o planejamento de orçamento de muitas famílias.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Benefícios de saber seu salário líquido</h2>
+      <h3>Planejamento financeiro realista</h3>
+      <p>
+        Orçamento eficiente se faz com dinheiro disponível, não com valor bruto de contrato. Ao conhecer o líquido, você evita subestimar
+        despesas fixas, reduz risco de endividamento e consegue definir metas de reserva, investimento e consumo com muito mais precisão.
+      </p>
+      <h3>Comparação de propostas de trabalho</h3>
+      <p>
+        Em processos seletivos, comparar só salário bruto pode levar a decisões ruins. Uma proposta com bruto ligeiramente maior pode gerar
+        líquido parecido (ou menor) se tiver descontos mais pesados. Simular antes de aceitar oferta melhora sua negociação.
+      </p>
+      <h3>Gestão do orçamento familiar</h3>
+      <p>
+        Para quem divide despesas domésticas, saber o valor líquido médio mensal ajuda no equilíbrio da casa. Isso facilita organização de contas,
+        parcelamentos, educação dos filhos e decisões de médio prazo como mudança de moradia, compra de veículo e formação de patrimônio.
+      </p>
+      <h3>Conferência de direitos e prevenção de erros</h3>
+      <p>
+        Acompanhar o salário líquido com frequência também fortalece a proteção dos seus direitos. Quando o trabalhador compreende a lógica de
+        desconto e compara mês a mês, fica mais fácil notar inconsistências, como retenções fora do padrão, rubricas desconhecidas ou divergências
+        entre contrato e holerite. Essa rotina simples pode evitar prejuízos acumulados por longos períodos. Em cenários de reajuste salarial,
+        troca de função ou alteração de benefícios, a simulação funciona como um painel de controle para entender o efeito financeiro real antes
+        de assinar documentos. Em resumo, saber calcular o líquido não é apenas questão matemática: é ferramenta prática de autonomia profissional.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Salário bruto x salário líquido — qual escolher como referência?</h2>
+      <h3>Quando olhar o bruto e quando olhar o líquido</h3>
+      <p>
+        O salário bruto é importante para negociação contratual e comparação formal de remuneração. Já o líquido é essencial para tomada de decisão
+        no dia a dia: pagar contas, fazer compras maiores, definir padrão de vida e calcular folga mensal de caixa. Em resumo, os dois importam,
+        mas com finalidades diferentes.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Salário Bruto</th>
+            <th>Salário Líquido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Negociação de contrato</td>
+            <td>Referência principal</td>
+            <td>Referência complementar</td>
+          </tr>
+          <tr>
+            <td>Organização do orçamento</td>
+            <td>Baixa utilidade direta</td>
+            <td>Referência principal</td>
+          </tr>
+          <tr>
+            <td>Comparação de propostas</td>
+            <td>Útil, mas insuficiente</td>
+            <td>Decisivo para decisão prática</td>
+          </tr>
+          <tr>
+            <td>Conferência de holerite</td>
+            <td>Ponto de partida</td>
+            <td>Resultado final esperado</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>FAQ - Perguntas Frequentes</h2>
+
+      <details>
+        <summary>1) Qual a diferença entre salário bruto e salário líquido?</summary>
+        <p>Bruto é o valor antes dos descontos. Líquido é o valor final recebido após INSS, IRRF e demais deduções da folha.</p>
+      </details>
+
+      <details>
+        <summary>2) Como é calculado o INSS em 2026?</summary>
+        <p>O cálculo é progressivo por faixas. Cada percentual incide apenas sobre parte da remuneração dentro da faixa correspondente.</p>
+      </details>
+
+      <details>
+        <summary>3) Quem está isento de IRRF em 2026?</summary>
+        <p>Depende da base de cálculo e do redutor de isenção aplicado no período. Faixas menores podem ter retenção zerada.</p>
+      </details>
+
+      <details>
+        <summary>4) Vale-transporte desconta do salário líquido?</summary>
+        <p>Sim. O desconto de vale-transporte, quando aplicável, reduz o valor líquido recebido no mês.</p>
+      </details>
+
+      <details>
+        <summary>5) Dependentes diminuem o imposto de renda?</summary>
+        <p>Podem diminuir. Dependentes geram dedução legal na base de cálculo do IRRF e podem reduzir a retenção final.</p>
+      </details>
+
+      <details>
+        <summary>6) Pensão alimentícia altera o cálculo?</summary>
+        <p>Sim. Dependendo da decisão judicial e da natureza da rubrica, pode impactar base de IR e valor líquido final.</p>
+      </details>
+
+      <details>
+        <summary>7) A calculadora considera horas extras automaticamente?</summary>
+        <p>Não automaticamente. Para máxima precisão, inclua o efeito total de eventos variáveis na análise do mês correspondente.</p>
+      </details>
+
+      <details>
+        <summary>8) Esta simulação substitui orientação profissional?</summary>
+        <p>Não. Ela é uma referência prática. Em casos específicos, consulte contador, RH ou advogado trabalhista.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Links internos úteis</h2>
+      <h3>Outras calculadoras do site</h3>
+      <div class="link-grid">
+        <a class="link-card" href="/saque-aniversario-fgts">
+          <strong>Saque-Aniversário FGTS</strong><br>
+          Veja quanto você pode sacar conforme a tabela oficial.
+        </a>
+        <a class="link-card" href="/calculadora-rescisao">
+          <strong>Calculadora de Rescisão</strong><br>
+          Simule valores em desligamento sem justa causa.
+        </a>
+        <a class="link-card" href="/calculadora-13-salario">
+          <strong>Calculadora de 13º Salário</strong><br>
+          Estime parcelas e descontos do décimo terceiro.
+        </a>
+        <a class="link-card" href="/calculadora-ferias">
+          <strong>Calculadora de Férias CLT</strong><br>
+          Entenda adicionais, abono e descontos no período.
+        </a>
+      </div>
+
+      <h3>Artigos relacionados no blog</h3>
+      <div class="link-grid">
+        <a class="link-card" href="/blog/saque-aniversario-fgts-2026">
+          <strong>Guia de Saque-Aniversário FGTS 2026</strong><br>
+          Regras, calendário e comparação com saque-rescisão.
+        </a>
+        <a class="link-card" href="/blog/como-conferir-holerite-clt">
+          <strong>Como conferir seu holerite CLT</strong><br>
+          Checklist para validar descontos mês a mês.
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Disclaimer Legal</h2>
+      <div class="disclaimer">
+        <strong>Aviso importante:</strong> esta calculadora possui caráter exclusivamente informativo e educacional.
+        Os resultados apresentados são estimativas baseadas nas tabelas e parâmetros informados para 2026. O cálculo oficial
+        do holerite depende de regras da empresa, convenção coletiva, rubricas específicas e documentos formais da folha.
+        Para decisões trabalhistas, fiscais ou judiciais, recomenda-se consultar profissional contábil, departamento de RH
+        ou advogado especializado.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const INSS_FAIXAS_2026 = [
+      { ate: 1621.0, aliquota: 0.075 },
+      { ate: 2902.84, aliquota: 0.09 },
+      { ate: 4354.27, aliquota: 0.12 },
+      { ate: 8475.55, aliquota: 0.14 },
+    ];
+
+    const IRRF_FAIXAS_2026 = [
+      { ate: 2428.8, aliquota: 0, deducao: 0 },
+      { ate: 2826.65, aliquota: 0.075, deducao: 182.16 },
+      { ate: 3751.05, aliquota: 0.15, deducao: 394.16 },
+      { ate: 4664.68, aliquota: 0.225, deducao: 675.49 },
+      { ate: Infinity, aliquota: 0.275, deducao: 908.73 },
+    ];
+
+    const TETO_INSS_2026 = 8475.55;
+    const DEDUCAO_DEPENDENTE_2026 = 189.59;
+    const DESCONTO_SIMPLIFICADO_MENSAL_2026 = 607.2;
+
+    const els = {
+      salario: document.getElementById('salarioBruto'),
+      dependentes: document.getElementById('dependentes'),
+      deducaoDependente: document.getElementById('deducaoDependente'),
+      vazio: document.getElementById('resultadoVazio'),
+      conteudo: document.getElementById('resultadoConteudo'),
+      kpiLiquido: document.getElementById('kpiLiquido'),
+      kpiInss: document.getElementById('kpiInss'),
+      kpiIrrf: document.getElementById('kpiIrrf'),
+      kpiBase: document.getElementById('kpiBase'),
+      memBruto: document.getElementById('memBruto'),
+      memInss: document.getElementById('memInss'),
+      memDep: document.getElementById('memDep'),
+      memSimp: document.getElementById('memSimp'),
+      memAplicada: document.getElementById('memAplicada'),
+      memBrutoIr: document.getElementById('memBrutoIr'),
+      memRedutor: document.getElementById('memRedutor'),
+      tabelaInss: document.getElementById('tabelaInss'),
+      tabelaIrrf: document.getElementById('tabelaIrrf'),
+    };
+
+    function formatCurrency(value) {
+      return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
+    }
+
+    function formatPercent(value) {
+      return `${(value * 100).toFixed(1).replace('.', ',')}%`;
+    }
+
+    function parseCurrency(value) {
+      const cleaned = String(value || '').replace(/[^\d]/g, '');
+      return cleaned ? Number(cleaned) / 100 : 0;
+    }
+
+    function calcularINSS(salarioBruto) {
+      if (salarioBruto <= 0) return 0;
+      const base = Math.min(salarioBruto, TETO_INSS_2026);
+      let anterior = 0;
+      let desconto = 0;
+      INSS_FAIXAS_2026.forEach((faixa) => {
+        const baseFaixa = Math.max(0, Math.min(base, faixa.ate) - anterior);
+        desconto += baseFaixa * faixa.aliquota;
+        anterior = faixa.ate;
+      });
+      return desconto;
+    }
+
+    function calcularIRRF({ salarioBruto, inss, dependentes }) {
+      const deducaoDependentes = dependentes * DEDUCAO_DEPENDENTE_2026;
+      const deducaoEscolhida = Math.max(deducaoDependentes, DESCONTO_SIMPLIFICADO_MENSAL_2026);
+      const baseCalculo = Math.max(0, salarioBruto - inss - deducaoEscolhida);
+
+      const faixa = IRRF_FAIXAS_2026.find((f) => baseCalculo <= f.ate) || IRRF_FAIXAS_2026[IRRF_FAIXAS_2026.length - 1];
+      const impostoBruto = Math.max(0, baseCalculo * faixa.aliquota - faixa.deducao);
+
+      let redutor2026 = 0;
+      if (baseCalculo <= 5000) {
+        redutor2026 = impostoBruto;
+      } else if (baseCalculo <= 7350) {
+        redutor2026 = Math.max(0, 978.62 - 0.133145 * baseCalculo);
+      }
+
+      const impostoFinal = Math.max(0, impostoBruto - Math.min(impostoBruto, redutor2026));
+
+      return {
+        baseCalculo,
+        deducaoDependentes,
+        deducaoEscolhida,
+        impostoBruto,
+        redutor2026: Math.min(impostoBruto, redutor2026),
+        impostoFinal,
+      };
+    }
+
+    function renderTabelas() {
+      let anterior = 0;
+      els.tabelaInss.innerHTML = INSS_FAIXAS_2026.map((f, idx) => {
+        const label = idx === 0
+          ? `Até ${formatCurrency(f.ate)}`
+          : `De ${formatCurrency(anterior + 0.01)} até ${formatCurrency(f.ate)}`;
+        anterior = f.ate;
+        return `<tr><td>${label}</td><td>${formatPercent(f.aliquota)}</td></tr>`;
+      }).join('');
+
+      let anteriorIr = 0;
+      els.tabelaIrrf.innerHTML = IRRF_FAIXAS_2026.map((f, idx) => {
+        const label = f.ate === Infinity
+          ? `Acima de ${formatCurrency(anteriorIr + 0.01)}`
+          : idx === 0
+            ? `Até ${formatCurrency(f.ate)}`
+            : `De ${formatCurrency(anteriorIr + 0.01)} até ${formatCurrency(f.ate)}`;
+        anteriorIr = Number.isFinite(f.ate) ? f.ate : anteriorIr;
+        return `<tr><td>${label}</td><td>${f.aliquota === 0 ? 'Isento' : formatPercent(f.aliquota)}</td><td>${formatCurrency(f.deducao)}</td></tr>`;
+      }).join('');
+
+      els.deducaoDependente.textContent = `Dedução por dependente considerada: ${formatCurrency(DEDUCAO_DEPENDENTE_2026)}`;
+    }
+
+    function atualizar() {
+      const bruto = parseCurrency(els.salario.value);
+      const deps = Math.max(0, parseInt(els.dependentes.value || '0', 10) || 0);
+
+      if (bruto <= 0) {
+        els.vazio.style.display = 'block';
+        els.conteudo.style.display = 'none';
+        return;
+      }
+
+      const inss = calcularINSS(bruto);
+      const irrf = calcularIRRF({ salarioBruto: bruto, inss, dependentes: deps });
+      const liquido = Math.max(0, bruto - inss - irrf.impostoFinal);
+
+      els.vazio.style.display = 'none';
+      els.conteudo.style.display = 'block';
+
+      els.kpiLiquido.textContent = formatCurrency(liquido);
+      els.kpiInss.textContent = formatCurrency(inss);
+      els.kpiIrrf.textContent = formatCurrency(irrf.impostoFinal);
+      els.kpiBase.textContent = formatCurrency(irrf.baseCalculo);
+
+      els.memBruto.textContent = formatCurrency(bruto);
+      els.memInss.textContent = formatCurrency(inss);
+      els.memDep.textContent = formatCurrency(irrf.deducaoDependentes);
+      els.memSimp.textContent = formatCurrency(DESCONTO_SIMPLIFICADO_MENSAL_2026);
+      els.memAplicada.textContent = formatCurrency(irrf.deducaoEscolhida);
+      els.memBrutoIr.textContent = formatCurrency(irrf.impostoBruto);
+      els.memRedutor.textContent = formatCurrency(irrf.redutor2026);
+    }
+
+    els.salario.addEventListener('input', (e) => {
+      const val = parseCurrency(e.target.value);
+      e.target.value = val ? formatCurrency(val) : '';
+      atualizar();
+    });
+
+    els.dependentes.addEventListener('input', atualizar);
+
+    renderTabelas();
+    atualizar();
+  </script>
+</body>
+</html>
