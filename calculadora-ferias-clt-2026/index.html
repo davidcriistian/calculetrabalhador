@@ -350,7 +350,7 @@
             <thead class="bg-slate-100"><tr><th class="px-3 py-2 text-left">Base de cálculo</th><th class="px-3 py-2 text-left">Alíquota</th><th class="px-3 py-2 text-left">Parcela a deduzir</th></tr></thead>
             <tbody id="tabelaIrrf" class="divide-y divide-slate-200"></tbody>
           </table>
-          <p class="mt-2 text-xs text-slate-500">Dedução por dependente de referência em 2026: R$ 189,59 por dependente (nesta simulação padrão foi considerada 0 dependente).</p>
+          <p class="mt-2 text-xs text-slate-500">Nesta calculadora, a base de IRRF segue o critério solicitado: valor bruto total das férias menos o INSS da simulação.</p>
         </div>
       </div>
     </section>
@@ -373,8 +373,6 @@
     ];
 
     const TETO_INSS_2026 = 8475.55;
-    const DEDUCAO_DEPENDENTE_2026 = 189.59;
-    const DESCONTO_SIMPLIFICADO_MENSAL_2026 = 607.2;
 
     const byId = (id) => document.getElementById(id);
     const brl = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(v) ? v : 0);
@@ -395,10 +393,8 @@
       return desconto;
     }
 
-    function calcularIRRF(valorBruto, inss, dependentes = 0) {
-      const deducaoDependentes = dependentes * DEDUCAO_DEPENDENTE_2026;
-      const deducaoEscolhida = Math.max(deducaoDependentes, DESCONTO_SIMPLIFICADO_MENSAL_2026);
-      const baseCalculo = Math.max(0, valorBruto - inss - deducaoEscolhida);
+    function calcularIRRF(valorBruto, inss) {
+      const baseCalculo = Math.max(0, valorBruto - inss);
 
       const faixa = IRRF_FAIXAS_2026.find((f) => baseCalculo <= f.ate) || IRRF_FAIXAS_2026[IRRF_FAIXAS_2026.length - 1];
       const impostoBruto = Math.max(0, baseCalculo * faixa.aliquota - faixa.deducao);
@@ -411,7 +407,7 @@
       }
 
       const impostoFinal = Math.max(0, impostoBruto - Math.min(impostoBruto, redutor2026));
-      return { impostoFinal, baseCalculo, deducaoEscolhida };
+      return { impostoFinal, baseCalculo, redutor2026: Math.min(impostoBruto, redutor2026) };
     }
 
     function renderTabelas() {
@@ -473,7 +469,7 @@
       const valorBrutoTotal = valorFerias + adicionalUmTerco + abonoPecuniario + adiantamento13;
 
       const inss = calcularINSS(valorBrutoTotal);
-      const irrfCalc = calcularIRRF(valorBrutoTotal, inss, 0);
+      const irrfCalc = calcularIRRF(valorBrutoTotal, inss);
       const irrf = irrfCalc.impostoFinal;
 
       const valorLiquido = Math.max(0, valorBrutoTotal - inss - irrf);
@@ -504,7 +500,7 @@
           ${adiantar13 ? `<li><strong>Adiantamento do 13º:</strong> ${brl(salarioBruto)} ÷ 2 = ${brl(adiantamento13)}.</li>` : ''}
           <li><strong>Bruto total:</strong> ${brl(valorBrutoTotal)}.</li>
           <li><strong>INSS:</strong> cálculo progressivo 2026 aplicado sobre o bruto total = ${brl(inss)}.</li>
-          <li><strong>IRRF:</strong> base ${brl(irrfCalc.baseCalculo)} após INSS e dedução simplificada mensal ${brl(irrfCalc.deducaoEscolhida)} = ${brl(irrf)}.</li>
+          <li><strong>IRRF:</strong> base ${brl(irrfCalc.baseCalculo)} (valor bruto total - INSS), com aplicação da tabela progressiva 2026 = ${brl(irrf)}.</li>
           <li><strong>Líquido:</strong> ${brl(valorBrutoTotal)} - ${brl(inss)} - ${brl(irrf)} = <strong>${brl(valorLiquido)}</strong>.</li>
         </ul>
       `;
