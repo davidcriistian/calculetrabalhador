@@ -490,6 +490,96 @@ if (window.navigation && window.self !== window.top) {
       observer.observe(document.body, { childList: true, subtree: true });
     })();
   </script>
+  <template id="card-horas-extras-template">
+    <div class="card">
+      <div class="icon"></div>
+      <span class="badge badge-new">Novo</span>
+      <h3>Calculadora de Horas Extras CLT</h3>
+      <p>Calcule horas extras com adicional de 50% e 100%, valor por hora e total a receber.</p>
+      <a href="/calculadora-horas-extras-clt-2026" class="btn">Calcular agora</a>
+    </div>
+  </template>
+
+  <script>
+    (function () {
+      const TARGET_HREF = '/calculadora-horas-extras-clt-2026';
+
+      function alreadyInserted() {
+        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
+      }
+
+      function findCardAncestor(el) {
+        let cur = el;
+        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
+          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
+            return cur;
+          }
+          cur = cur.parentElement;
+        }
+        return null;
+      }
+
+      function injectCard() {
+        if (alreadyInserted()) return true;
+
+        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
+          const href = (a.getAttribute('href') || '').toLowerCase();
+          return href.includes('calculadora-13-salario-2026') || href.includes('calculadora-ferias-clt-2026');
+        });
+
+        if (!sourceAnchor) return false;
+
+        const sourceCard = findCardAncestor(sourceAnchor);
+        if (!sourceCard || !sourceCard.parentElement) return false;
+
+        const card = sourceCard.cloneNode(true);
+
+        const icon = card.querySelector('.icon');
+        if (icon) {
+          icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>';
+        }
+
+        let badge = card.querySelector('.badge, .badge-new');
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'badge badge-new';
+          const h3El = card.querySelector('h3');
+          if (h3El) card.insertBefore(badge, h3El);
+        }
+        badge.textContent = 'Novo';
+        badge.classList.add('badge-new');
+
+        const h3 = card.querySelector('h3');
+        if (h3) h3.textContent = 'Calculadora de Horas Extras CLT';
+
+        const p = card.querySelector('p');
+        if (p) p.textContent = 'Calcule horas extras com adicional de 50% e 100%, valor por hora e total a receber.';
+
+        const link = card.querySelector('a[href]');
+        if (link) {
+          link.setAttribute('href', TARGET_HREF);
+          link.textContent = 'Calcular agora';
+          link.classList.add('btn');
+        }
+
+        sourceCard.insertAdjacentElement('afterend', card);
+        return true;
+      }
+
+      let tries = 0;
+      const maxTries = 40;
+      const timer = setInterval(() => {
+        tries += 1;
+        const ok = injectCard();
+        if (ok || tries >= maxTries) clearInterval(timer);
+      }, 250);
+
+      const observer = new MutationObserver(() => {
+        if (injectCard()) observer.disconnect();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 
 </html>
