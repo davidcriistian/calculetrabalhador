@@ -2,84 +2,84 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-	<meta name="generator" content="Hostinger Horizons" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="google-site-verification" content="-w-ovEuYunc1megdmbzwWCggx_ltcPMHN0_iHDzilb8" />
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YSGJHTYT7"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-9YSGJHTYT7');
-	</script>
-	<title>Calcule Trabalhador — Calculadoras Trabalhistas Online Grátis</title>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="generator" content="Hostinger Horizons" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="-w-ovEuYunc1megdmbzwWCggx_ltcPMHN0_iHDzilb8" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YSGJHTYT7"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9YSGJHTYT7');
+        </script>
+        <title>Calcule Trabalhador — Calculadoras Trabalhistas Online Grátis</title>
   <script type="module" crossorigin src="/assets/index-7NI06iCh.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-C4IXwA1g.css">
   <script type="module">
 window.onerror = (message, source, lineno, colno, errorObj) => {
-	const errorDetails = errorObj ? JSON.stringify({
-		name: errorObj.name,
-		message: errorObj.message,
-		stack: errorObj.stack,
-		source,
-		lineno,
-		colno,
-	}) : null;
+        const errorDetails = errorObj ? JSON.stringify({
+                name: errorObj.name,
+                message: errorObj.message,
+                stack: errorObj.stack,
+                source,
+                lineno,
+                colno,
+        }) : null;
 
-	window.parent.postMessage({
-		type: 'horizons-runtime-error',
-		message,
-		error: errorDetails
-	}, '*');
+        window.parent.postMessage({
+                type: 'horizons-runtime-error',
+                message,
+                error: errorDetails
+        }, '*');
 };
 </script>
   <script type="module">
 const observer = new MutationObserver((mutations) => {
-	for (const mutation of mutations) {
-		for (const addedNode of mutation.addedNodes) {
-			if (
-				addedNode.nodeType === Node.ELEMENT_NODE &&
-				(
-					addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
-					addedNode.classList?.contains('backdrop')
-				)
-			) {
-				handleViteOverlay(addedNode);
-			}
-		}
-	}
+        for (const mutation of mutations) {
+                for (const addedNode of mutation.addedNodes) {
+                        if (
+                                addedNode.nodeType === Node.ELEMENT_NODE &&
+                                (
+                                        addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
+                                        addedNode.classList?.contains('backdrop')
+                                )
+                        ) {
+                                handleViteOverlay(addedNode);
+                        }
+                }
+        }
 });
 
 observer.observe(document.documentElement, {
-	childList: true,
-	subtree: true
+        childList: true,
+        subtree: true
 });
 
 function handleViteOverlay(node) {
-	if (!node.shadowRoot) {
-		return;
-	}
+        if (!node.shadowRoot) {
+                return;
+        }
 
-	const backdrop = node.shadowRoot.querySelector('.backdrop');
+        const backdrop = node.shadowRoot.querySelector('.backdrop');
 
-	if (backdrop) {
-		const overlayHtml = backdrop.outerHTML;
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(overlayHtml, 'text/html');
-		const messageBodyElement = doc.querySelector('.message-body');
-		const fileElement = doc.querySelector('.file');
-		const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
-		const fileText = fileElement ? fileElement.textContent.trim() : '';
-		const error = messageText + (fileText ? ' File:' + fileText : '');
+        if (backdrop) {
+                const overlayHtml = backdrop.outerHTML;
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(overlayHtml, 'text/html');
+                const messageBodyElement = doc.querySelector('.message-body');
+                const fileElement = doc.querySelector('.file');
+                const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
+                const fileText = fileElement ? fileElement.textContent.trim() : '';
+                const error = messageText + (fileText ? ' File:' + fileText : '');
 
-		window.parent.postMessage({
-			type: 'horizons-vite-error',
-			error,
-		}, '*');
-	}
+                window.parent.postMessage({
+                        type: 'horizons-vite-error',
+                        error,
+                }, '*');
+        }
 }
 </script>
   <script type="module">
@@ -89,135 +89,227 @@ const MATCH_AT_REGEX = /^\s*at\s+(?:async\s+)?(?:.*?\s+)?\(?/; // regex to remov
 const MATCH_PATH_REGEX = /^\//; // regex to remove the leading slash
 
 function parseStackFrameLine(line) {
-	const lineColMatch = line.match(MATCH_LINE_COL_REGEX);
-	if (!lineColMatch) return null;
-	const [, lineNum, colNum] = lineColMatch;
-	const suffix = `:${lineNum}:${colNum}`;
-	const idx = line.lastIndexOf(suffix);
-	if (idx === -1) return null;
-	const before = line.substring(0, idx);
-	const path = before.replace(MATCH_AT_REGEX, '').trim();
-	
-	if (!path) return null;
+        const lineColMatch = line.match(MATCH_LINE_COL_REGEX);
+        if (!lineColMatch) return null;
+        const [, lineNum, colNum] = lineColMatch;
+        const suffix = `:${lineNum}:${colNum}`;
+        const idx = line.lastIndexOf(suffix);
+        if (idx === -1) return null;
+        const before = line.substring(0, idx);
+        const path = before.replace(MATCH_AT_REGEX, '').trim();
+        
+        if (!path) return null;
 
-	try {
-		const pathname = new URL(path).pathname;
-		const filePath = pathname.replace(MATCH_PATH_REGEX, '') || pathname;
-		return `${filePath}:${lineNum}:${colNum}`;
-	} catch (e) {
-		const filePath = path.replace(MATCH_PATH_REGEX, '') || path;
-		return `${filePath}:${lineNum}:${colNum}`;
-	}
+        try {
+                const pathname = new URL(path).pathname;
+                const filePath = pathname.replace(MATCH_PATH_REGEX, '') || pathname;
+                return `${filePath}:${lineNum}:${colNum}`;
+        } catch (e) {
+                const filePath = path.replace(MATCH_PATH_REGEX, '') || path;
+                return `${filePath}:${lineNum}:${colNum}`;
+        }
 }
 
 function getFilePathFromStack(stack, skipFrames = 0) {
-	if (!stack || typeof stack !== 'string') return null;
-	const lines = stack.split('\n').slice(1);
+        if (!stack || typeof stack !== 'string') return null;
+        const lines = stack.split('\n').slice(1);
 
-	const frames = lines.map(line => parseStackFrameLine(line.replace(/\r$/, ''))).filter(Boolean);
+        const frames = lines.map(line => parseStackFrameLine(line.replace(/\r$/, ''))).filter(Boolean);
 
-	return frames[skipFrames] ?? null;
+        return frames[skipFrames] ?? null;
 }
 
 console.error = function(...args) {
-	originalConsoleError.apply(console, args);
+        originalConsoleError.apply(console, args);
 
-	let errorString = '';
-	let filePath = null;
+        let errorString = '';
+        let filePath = null;
 
-	for (let i = 0; i < args.length; i++) {
-		const arg = args[i];
-		if (arg instanceof Error) {
-			filePath = getFilePathFromStack(arg.stack, 0);
-			errorString = `${arg.name}: ${arg.message}`;
-			if (filePath) {
-				errorString = `${errorString} at ${filePath}`;
-			}
-			break;
-		}
-	}
+        for (let i = 0; i < args.length; i++) {
+                const arg = args[i];
+                if (arg instanceof Error) {
+                        filePath = getFilePathFromStack(arg.stack, 0);
+                        errorString = `${arg.name}: ${arg.message}`;
+                        if (filePath) {
+                                errorString = `${errorString} at ${filePath}`;
+                        }
+                        break;
+                }
+        }
 
-	if (!errorString) {
-		errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
-		const stack = new Error().stack;
-		filePath = getFilePathFromStack(stack, 1);
-		if (filePath) {
-			errorString = `${errorString} at ${filePath}`;
-		}
-	}
+        if (!errorString) {
+                errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
+                const stack = new Error().stack;
+                filePath = getFilePathFromStack(stack, 1);
+                if (filePath) {
+                        errorString = `${errorString} at ${filePath}`;
+                }
+        }
 
-	window.parent.postMessage({
-		type: 'horizons-console-error',
-		error: errorString
-	}, '*');
+        window.parent.postMessage({
+                type: 'horizons-console-error',
+                error: errorString
+        }, '*');
 };
 </script>
   <script type="module">
 const originalFetch = window.fetch;
 
 window.fetch = function(...args) {
-	const url = args[0] instanceof Request ? args[0].url : args[0];
+        const url = args[0] instanceof Request ? args[0].url : args[0];
 
-	// Skip WebSocket URLs
-	if (url.startsWith('ws:') || url.startsWith('wss:')) {
-		return originalFetch.apply(this, args);
-	}
+        // Skip WebSocket URLs
+        if (url.startsWith('ws:') || url.startsWith('wss:')) {
+                return originalFetch.apply(this, args);
+        }
 
-	return originalFetch.apply(this, args)
-		.then(async response => {
-			const contentType = response.headers.get('Content-Type') || '';
+        return originalFetch.apply(this, args)
+                .then(async response => {
+                        const contentType = response.headers.get('Content-Type') || '';
 
-			// Exclude HTML document responses
-			const isDocumentResponse =
-				contentType.includes('text/html') ||
-				contentType.includes('application/xhtml+xml');
+                        // Exclude HTML document responses
+                        const isDocumentResponse =
+                                contentType.includes('text/html') ||
+                                contentType.includes('application/xhtml+xml');
 
-			if (!response.ok && !isDocumentResponse) {
-					const responseClone = response.clone();
-					const errorFromRes = await responseClone.text();
-					const requestUrl = response.url;
-					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
-			}
+                        if (!response.ok && !isDocumentResponse) {
+                                        const responseClone = response.clone();
+                                        const errorFromRes = await responseClone.text();
+                                        const requestUrl = response.url;
+                                        console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
+                        }
 
-			return response;
-		})
-		.catch(error => {
-			if (!url.match(/.html?$/i)) {
-				console.error(error);
-			}
+                        return response;
+                })
+                .catch(error => {
+                        if (!url.match(/.html?$/i)) {
+                                console.error(error);
+                        }
 
-			throw error;
-		});
+                        throw error;
+                });
 };
 </script>
   <script type="module">
 if (window.navigation && window.self !== window.top) {
-	window.navigation.addEventListener('navigate', (event) => {
-		const url = event.destination.url;
+        window.navigation.addEventListener('navigate', (event) => {
+                const url = event.destination.url;
 
-		try {
-			const destinationUrl = new URL(url);
-			const destinationOrigin = destinationUrl.origin;
-			const currentOrigin = window.location.origin;
+                try {
+                        const destinationUrl = new URL(url);
+                        const destinationOrigin = destinationUrl.origin;
+                        const currentOrigin = window.location.origin;
 
-			if (destinationOrigin === currentOrigin) {
-				return;
-			}
-		} catch (error) {
-			return;
-		}
+                        if (destinationOrigin === currentOrigin) {
+                                return;
+                        }
+                } catch (error) {
+                        return;
+                }
 
-		window.parent.postMessage({
-			type: 'horizons-navigation-error',
-			url,
-		}, '*');
-	});
+                window.parent.postMessage({
+                        type: 'horizons-navigation-error',
+                        url,
+                }, '*');
+        });
 }
 </script>
 </head>
 
 <body>
-	<div id="root"></div>
+        <div id="root"></div>
+
+  <template id="card-rescisao-template">
+    <div class="card">
+      <div class="icon"></div>
+      <span class="badge badge-new">Novo</span>
+      <h3>Calculadora de Rescisão CLT</h3>
+      <p>Calcule sua rescisão considerando aviso prévio, férias, 13º salário, FGTS e multa rescisória.</p>
+      <a href="/calculadora-rescisao-clt-2026" class="btn">Calcular agora</a>
+    </div>
+  </template>
+
+  <script>
+    (function () {
+      const TARGET_HREF = '/calculadora-rescisao-clt-2026';
+
+      function alreadyInserted() {
+        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
+      }
+
+      function findCardAncestor(el) {
+        let cur = el;
+        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
+          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
+            return cur;
+          }
+          cur = cur.parentElement;
+        }
+        return null;
+      }
+
+      function injectCard() {
+        if (alreadyInserted()) return true;
+
+        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
+          const href = (a.getAttribute('href') || '').toLowerCase();
+          const txt = (a.textContent || '').toLowerCase();
+          return href.includes('salario-liquido-clt') || href.includes('saque-aniversario-fgts') || txt.includes('calcular agora');
+        });
+
+        if (!sourceAnchor) return false;
+
+        const sourceCard = findCardAncestor(sourceAnchor);
+        if (!sourceCard || !sourceCard.parentElement) return false;
+
+        const card = sourceCard.cloneNode(true);
+
+        const icon = card.querySelector('.icon');
+        if (icon && !icon.innerHTML.trim()) {
+          icon.innerHTML = '&#128196;';
+        }
+
+        let badge = card.querySelector('.badge, .badge-new');
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'badge badge-new';
+          const h3El = card.querySelector('h3');
+          if (h3El) card.insertBefore(badge, h3El);
+        }
+        badge.textContent = 'Novo';
+        badge.classList.add('badge-new');
+
+        const h3 = card.querySelector('h3');
+        if (h3) h3.textContent = 'Calculadora de Rescisão CLT';
+
+        const p = card.querySelector('p');
+        if (p) p.textContent = 'Calcule sua rescisão considerando aviso prévio, férias, 13º salário, FGTS e multa rescisória.';
+
+        const link = card.querySelector('a[href]');
+        if (link) {
+          link.setAttribute('href', TARGET_HREF);
+          link.textContent = 'Calcular agora';
+          link.classList.add('btn');
+        }
+
+        sourceCard.insertAdjacentElement('afterend', card);
+        return true;
+      }
+
+      let tries = 0;
+      const maxTries = 40;
+      const timer = setInterval(() => {
+        tries += 1;
+        const ok = injectCard();
+        if (ok || tries >= maxTries) clearInterval(timer);
+      }, 250);
+
+      const observer = new MutationObserver(() => {
+        if (injectCard()) observer.disconnect();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 
 </html>
