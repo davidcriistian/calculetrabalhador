@@ -585,13 +585,18 @@ if (window.navigation && window.self !== window.top) {
     const TARGET_HREF = '/calculadora-seguro-desemprego-2026';
 
     function alreadyInserted() {
-      return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
+      return !!document.querySelector('a[href="/calculadora-seguro-desemprego-2026"]');
     }
 
-    function findCardAncestor(el) {
+    function findCard(el) {
       let cur = el;
-      for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
-        if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
+      while (cur && cur !== document.body) {
+        if (
+          cur.querySelector &&
+          cur.querySelector('h3') &&
+          cur.querySelector('p') &&
+          cur.querySelector('a[href]')
+        ) {
           return cur;
         }
         cur = cur.parentElement;
@@ -599,18 +604,24 @@ if (window.navigation && window.self !== window.top) {
       return null;
     }
 
-    function injectCard() {
-      if (alreadyInserted()) return true;
+    function insertSeguroCard() {
+      if (alreadyInserted()) return;
 
-      const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
+      const anchors = Array.from(document.querySelectorAll('a[href]'));
+
+      const sourceAnchor = anchors.find((a) => {
         const href = (a.getAttribute('href') || '').toLowerCase();
-        return href.includes('calculadora-horas-extras-clt-2026') || href.includes('calculadora-ferias-clt-2026');
+        return (
+          href.includes('calculadora-horas-extras-clt-2026') ||
+          href.includes('calculadora-ferias-clt-2026') ||
+          href.includes('calculadora-13-salario-2026')
+        );
       });
 
-      if (!sourceAnchor) return false;
+      if (!sourceAnchor) return;
 
-      const sourceCard = findCardAncestor(sourceAnchor);
-      if (!sourceCard || !sourceCard.parentElement) return false;
+      const sourceCard = findCard(sourceAnchor);
+      if (!sourceCard || !sourceCard.parentElement) return;
 
       const card = sourceCard.cloneNode(true);
 
@@ -619,48 +630,41 @@ if (window.navigation && window.self !== window.top) {
         icon.innerHTML = '💼';
       }
 
-      let badge = card.querySelector('.badge, .badge-new');
-      if (!badge) {
-        badge = document.createElement('span');
-        badge.className = 'badge badge-new';
-        const h3El = card.querySelector('h3');
-        if (h3El) card.insertBefore(badge, h3El);
-      }
-
-      badge.textContent = 'Novo';
-      badge.classList.add('badge-new');
+      const badges = card.querySelectorAll('.badge, .badge-new');
+      badges.forEach((badge) => {
+        badge.textContent = 'NOVO';
+        badge.classList.add('badge-new');
+      });
 
       const h3 = card.querySelector('h3');
-      if (h3) h3.textContent = 'Calculadora Seguro-Desemprego 2026';
+      if (h3) {
+        h3.textContent = 'Calculadora Seguro-Desemprego 2026';
+      }
 
       const p = card.querySelector('p');
-      if (p) p.textContent = 'Calcule o valor das parcelas do seguro-desemprego com base na média dos últimos salários.';
+      if (p) {
+        p.textContent = 'Calcule o valor das parcelas do seguro-desemprego com base na média dos últimos salários.';
+      }
 
       const link = card.querySelector('a[href]');
       if (link) {
         link.setAttribute('href', TARGET_HREF);
-        link.textContent = 'Calcular agora';
-        link.classList.add('btn');
+        link.textContent = 'Calcular agora →';
       }
 
       sourceCard.insertAdjacentElement('afterend', card);
-      return true;
     }
 
-    let tries = 0;
-    const maxTries = 40;
+    document.addEventListener('DOMContentLoaded', insertSeguroCard);
+    window.addEventListener('load', insertSeguroCard);
 
-    const timer = setInterval(() => {
-      tries += 1;
-      const ok = injectCard();
-      if (ok || tries >= maxTries) clearInterval(timer);
-    }, 250);
+    setInterval(insertSeguroCard, 1000);
 
-    const observer = new MutationObserver(() => {
-      if (injectCard()) observer.disconnect();
+    const observer = new MutationObserver(insertSeguroCard);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
     });
-
-    observer.observe(document.body, { childList: true, subtree: true });
   })();
 </script>
 </body>
