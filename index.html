@@ -219,454 +219,125 @@ if (window.navigation && window.self !== window.top) {
 <body>
         <div id="root"></div>
 
-  <template id="card-rescisao-template">
-    <div class="card">
-      <div class="icon"></div>
-      <span class="badge badge-new">Novo</span>
-      <h3>Calculadora de Rescisão CLT</h3>
-      <p>Calcule sua rescisão considerando aviso prévio, férias, 13º salário, FGTS e multa rescisória.</p>
-      <a href="/calculadora-rescisao-clt-2026" class="btn">Calcular agora</a>
-    </div>
-  </template>
-
-  <script>
-    (function () {
-      const TARGET_HREF = '/calculadora-rescisao-clt-2026';
-
-      function alreadyInserted() {
-        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
-      }
-
-      function findCardAncestor(el) {
-        let cur = el;
-        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
-          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
-            return cur;
-          }
-          cur = cur.parentElement;
-        }
-        return null;
-      }
-
-      function injectCard() {
-        if (alreadyInserted()) return true;
-
-        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          const txt = (a.textContent || '').toLowerCase();
-          return href.includes('salario-liquido-clt') || href.includes('saque-aniversario-fgts') || txt.includes('calcular agora');
-        });
-
-        if (!sourceAnchor) return false;
-
-        const sourceCard = findCardAncestor(sourceAnchor);
-        if (!sourceCard || !sourceCard.parentElement) return false;
-
-        const card = sourceCard.cloneNode(true);
-
-        const icon = card.querySelector('.icon');
-        if (icon && !icon.innerHTML.trim()) {
-          icon.innerHTML = '&#128196;';
-        }
-
-        let badge = card.querySelector('.badge, .badge-new');
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'badge badge-new';
-          const h3El = card.querySelector('h3');
-          if (h3El) card.insertBefore(badge, h3El);
-        }
-        badge.textContent = 'Novo';
-        badge.classList.add('badge-new');
-
-        const h3 = card.querySelector('h3');
-        if (h3) h3.textContent = 'Calculadora de Rescisão CLT';
-
-        const p = card.querySelector('p');
-        if (p) p.textContent = 'Calcule sua rescisão considerando aviso prévio, férias, 13º salário, FGTS e multa rescisória.';
-
-        const link = card.querySelector('a[href]');
-        if (link) {
-          link.setAttribute('href', TARGET_HREF);
-          link.textContent = 'Calcular agora';
-          link.classList.add('btn');
-        }
-
-        sourceCard.insertAdjacentElement('afterend', card);
-        return true;
-      }
-
-      let tries = 0;
-      const maxTries = 40;
-      const timer = setInterval(() => {
-        tries += 1;
-        const ok = injectCard();
-        if (ok || tries >= maxTries) clearInterval(timer);
-      }, 250);
-
-      const observer = new MutationObserver(() => {
-        if (injectCard()) observer.disconnect();
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    })();
-  </script>
-  <template id="card-ferias-template">
-    <div class="card">
-      <div class="icon"></div>
-      <span class="badge badge-new">Novo</span>
-      <h3>Calculadora de Férias CLT</h3>
-      <p>Calcule suas férias com adicional de 1/3, venda de férias e descontos legais.</p>
-      <a href="/calculadora-ferias-clt-2026" class="btn">Calcular agora</a>
-    </div>
-  </template>
-
-  <script>
-    (function () {
-      const TARGET_HREF = '/calculadora-ferias-clt-2026';
-
-      function alreadyInserted() {
-        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
-      }
-
-      function findCardAncestor(el) {
-        let cur = el;
-        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
-          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
-            return cur;
-          }
-          cur = cur.parentElement;
-        }
-        return null;
-      }
-
-      function injectCard() {
-        if (alreadyInserted()) return true;
-
-        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          return href.includes('calculadora-rescisao-clt-2026') || href.includes('salario-liquido-clt');
-        });
-
-        if (!sourceAnchor) return false;
-
-        const sourceCard = findCardAncestor(sourceAnchor);
-        if (!sourceCard || !sourceCard.parentElement) return false;
-
-        const card = sourceCard.cloneNode(true);
-
-        const icon = card.querySelector('.icon');
-        if (icon) {
-          icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>';
-        }
-
-        let badge = card.querySelector('.badge, .badge-new');
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'badge badge-new';
-          const h3El = card.querySelector('h3');
-          if (h3El) card.insertBefore(badge, h3El);
-        }
-        badge.textContent = 'Novo';
-        badge.classList.add('badge-new');
-
-        const h3 = card.querySelector('h3');
-        if (h3) h3.textContent = 'Calculadora de Férias CLT';
-
-        const p = card.querySelector('p');
-        if (p) p.textContent = 'Calcule suas férias com adicional de 1/3, venda de férias e descontos legais.';
-
-        const link = card.querySelector('a[href]');
-        if (link) {
-          link.setAttribute('href', TARGET_HREF);
-          link.textContent = 'Calcular agora';
-          link.classList.add('btn');
-        }
-
-        sourceCard.insertAdjacentElement('afterend', card);
-        return true;
-      }
-
-      let tries = 0;
-      const maxTries = 40;
-      const timer = setInterval(() => {
-        tries += 1;
-        const ok = injectCard();
-        if (ok || tries >= maxTries) clearInterval(timer);
-      }, 250);
-
-      const observer = new MutationObserver(() => {
-        if (injectCard()) observer.disconnect();
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    })();
-  </script>
-  <template id="card-decimo-template">
-    <div class="card">
-      <div class="icon"></div>
-      <span class="badge badge-new">Novo</span>
-      <h3>Calculadora de 13º Salário</h3>
-      <p>Calcule o valor do seu décimo terceiro salário, parcelas, descontos e valor líquido final.</p>
-      <a href="/calculadora-13-salario-2026" class="btn">Calcular agora</a>
-    </div>
-  </template>
-
-  <script>
-    (function () {
-      const TARGET_HREF = '/calculadora-13-salario-2026';
-
-      function alreadyInserted() {
-        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
-      }
-
-      function findCardAncestor(el) {
-        let cur = el;
-        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
-          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
-            return cur;
-          }
-          cur = cur.parentElement;
-        }
-        return null;
-      }
-
-      function injectCard() {
-        if (alreadyInserted()) return true;
-
-        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          return href.includes('calculadora-ferias-clt-2026') || href.includes('calculadora-rescisao-clt-2026');
-        });
-
-        if (!sourceAnchor) return false;
-
-        const sourceCard = findCardAncestor(sourceAnchor);
-        if (!sourceCard || !sourceCard.parentElement) return false;
-
-        const card = sourceCard.cloneNode(true);
-
-        const icon = card.querySelector('.icon');
-        if (icon) {
-          icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"></rect><path d="M12 8V5"></path><path d="M9 5h6"></path><path d="M3 12h18"></path></svg>';
-        }
-
-        let badge = card.querySelector('.badge, .badge-new');
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'badge badge-new';
-          const h3El = card.querySelector('h3');
-          if (h3El) card.insertBefore(badge, h3El);
-        }
-        badge.textContent = 'Novo';
-        badge.classList.add('badge-new');
-
-        const h3 = card.querySelector('h3');
-        if (h3) h3.textContent = 'Calculadora de 13º Salário';
-
-        const p = card.querySelector('p');
-        if (p) p.textContent = 'Calcule o valor do seu décimo terceiro salário, parcelas, descontos e valor líquido final.';
-
-        const link = card.querySelector('a[href]');
-        if (link) {
-          link.setAttribute('href', TARGET_HREF);
-          link.textContent = 'Calcular agora';
-          link.classList.add('btn');
-        }
-
-        sourceCard.insertAdjacentElement('afterend', card);
-        return true;
-      }
-
-      let tries = 0;
-      const maxTries = 40;
-      const timer = setInterval(() => {
-        tries += 1;
-        const ok = injectCard();
-        if (ok || tries >= maxTries) clearInterval(timer);
-      }, 250);
-
-      const observer = new MutationObserver(() => {
-        if (injectCard()) observer.disconnect();
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    })();
-  </script>
-  <template id="card-horas-extras-template">
-    <div class="card">
-      <div class="icon"></div>
-      <span class="badge badge-new">Novo</span>
-      <h3>Calculadora de Horas Extras CLT</h3>
-      <p>Calcule horas extras com adicional de 50% e 100%, valor por hora e total a receber.</p>
-      <a href="/calculadora-horas-extras-clt-2026" class="btn">Calcular agora</a>
-    </div>
-  </template>
-
-  <script>
-    (function () {
-      const TARGET_HREF = '/calculadora-horas-extras-clt-2026';
-
-      function alreadyInserted() {
-        return !!document.querySelector(`a[href="${TARGET_HREF}"]`);
-      }
-
-      function findCardAncestor(el) {
-        let cur = el;
-        for (let i = 0; i < 8 && cur && cur !== document.body; i += 1) {
-          if (cur.querySelector && cur.querySelector('h3') && cur.querySelector('p') && cur.querySelector('a[href]')) {
-            return cur;
-          }
-          cur = cur.parentElement;
-        }
-        return null;
-      }
-
-      function injectCard() {
-        if (alreadyInserted()) return true;
-
-        const sourceAnchor = Array.from(document.querySelectorAll('a[href]')).find((a) => {
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          return href.includes('calculadora-13-salario-2026') || href.includes('calculadora-ferias-clt-2026');
-        });
-
-        if (!sourceAnchor) return false;
-
-        const sourceCard = findCardAncestor(sourceAnchor);
-        if (!sourceCard || !sourceCard.parentElement) return false;
-
-        const card = sourceCard.cloneNode(true);
-
-        const icon = card.querySelector('.icon');
-        if (icon) {
-          icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>';
-        }
-
-        let badge = card.querySelector('.badge, .badge-new');
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'badge badge-new';
-          const h3El = card.querySelector('h3');
-          if (h3El) card.insertBefore(badge, h3El);
-        }
-        badge.textContent = 'Novo';
-        badge.classList.add('badge-new');
-
-        const h3 = card.querySelector('h3');
-        if (h3) h3.textContent = 'Calculadora de Horas Extras CLT';
-
-        const p = card.querySelector('p');
-        if (p) p.textContent = 'Calcule horas extras com adicional de 50% e 100%, valor por hora e total a receber.';
-
-        const link = card.querySelector('a[href]');
-        if (link) {
-          link.setAttribute('href', TARGET_HREF);
-          link.textContent = 'Calcular agora';
-          link.classList.add('btn');
-        }
-
-        sourceCard.insertAdjacentElement('afterend', card);
-        return true;
-      }
-
-      let tries = 0;
-      const maxTries = 40;
-      const timer = setInterval(() => {
-        tries += 1;
-        const ok = injectCard();
-        if (ok || tries >= maxTries) clearInterval(timer);
-      }, 250);
-
-      const observer = new MutationObserver(() => {
-        if (injectCard()) observer.disconnect();
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    })();
-  </script>
-  <script>
-  (function () {
-    const TARGET_HREF = '/calculadora-seguro-desemprego-2026';
-
-    function alreadyInserted() {
-      return !!document.querySelector('a[href="/calculadora-seguro-desemprego-2026"]');
-    }
-
-    function findCard(el) {
-      let cur = el;
-      while (cur && cur !== document.body) {
-        if (
-          cur.querySelector &&
-          cur.querySelector('h3') &&
-          cur.querySelector('p') &&
-          cur.querySelector('a[href]')
-        ) {
-          return cur;
-        }
-        cur = cur.parentElement;
-      }
-      return null;
-    }
-
-    function insertSeguroCard() {
-      if (alreadyInserted()) return;
-
-      const anchors = Array.from(document.querySelectorAll('a[href]'));
-
-      const sourceAnchor = anchors.find((a) => {
-        const href = (a.getAttribute('href') || '').toLowerCase();
-        return (
-          href.includes('calculadora-horas-extras-clt-2026') ||
-          href.includes('calculadora-ferias-clt-2026') ||
-          href.includes('calculadora-13-salario-2026')
-        );
-      });
-
-      if (!sourceAnchor) return;
-
-      const sourceCard = findCard(sourceAnchor);
-      if (!sourceCard || !sourceCard.parentElement) return;
-
-      const card = sourceCard.cloneNode(true);
-
-      const icon = card.querySelector('.icon');
-      if (icon) {
-        icon.innerHTML = '💼';
-      }
-
-      const badges = card.querySelectorAll('.badge, .badge-new');
-      badges.forEach((badge) => {
-        badge.textContent = 'NOVO';
-        badge.classList.add('badge-new');
-      });
-
-      const h3 = card.querySelector('h3');
-      if (h3) {
-        h3.textContent = 'Calculadora Seguro-Desemprego 2026';
-      }
-
-      const p = card.querySelector('p');
-      if (p) {
-        p.textContent = 'Calcule o valor das parcelas do seguro-desemprego com base na média dos últimos salários.';
-      }
-
-      const link = card.querySelector('a[href]');
-      if (link) {
-        link.setAttribute('href', TARGET_HREF);
-        link.textContent = 'Calcular agora →';
-      }
-
-      sourceCard.insertAdjacentElement('afterend', card);
-    }
-
-    document.addEventListener('DOMContentLoaded', insertSeguroCard);
-    window.addEventListener('load', insertSeguroCard);
-
-    setInterval(insertSeguroCard, 1000);
-
-    const observer = new MutationObserver(insertSeguroCard);
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  })();
-</script>
+        <script>
+          (function () {
+            const TARGET_HREF = '/calculadora-seguro-desemprego-2026';
+            const TARGET_TITLE = 'Calculadora Seguro-Desemprego 2026';
+            const TARGET_DESCRIPTION = 'Calcule o valor das parcelas do seguro-desemprego com base na média dos últimos salários.';
+
+            function normalizeHref(value) {
+              return String(value || '').replace(/\/$/, '').toLowerCase();
+            }
+
+            function seguroCardExists() {
+              return Array.from(document.querySelectorAll('a[href]')).some(function (anchor) {
+                return normalizeHref(anchor.getAttribute('href')).includes('calculadora-seguro-desemprego-2026');
+              });
+            }
+
+            function findCardContainer(anchor) {
+              let current = anchor;
+
+              for (let i = 0; i < 12 && current && current !== document.body; i += 1) {
+                if (
+                  current.querySelector &&
+                  current.querySelector('h3') &&
+                  current.querySelector('p') &&
+                  current.querySelector('a[href]')
+                ) {
+                  return current;
+                }
+
+                current = current.parentElement;
+              }
+
+              return null;
+            }
+
+            function findReferenceCard() {
+              const priorityLinks = [
+                'calculadora-horas-extras-clt-2026',
+                'calculadora-ferias-clt-2026',
+                'calculadora-13-salario-2026',
+                'calculadora-rescisao-clt-2026',
+                'salario-liquido-clt-2026',
+                'saque-aniversario-fgts'
+              ];
+
+              const anchors = Array.from(document.querySelectorAll('a[href]'));
+
+              for (const linkPart of priorityLinks) {
+                const anchor = anchors.find(function (a) {
+                  return normalizeHref(a.getAttribute('href')).includes(linkPart);
+                });
+
+                if (anchor) {
+                  const card = findCardContainer(anchor);
+                  if (card && card.parentElement) return card;
+                }
+              }
+
+              return null;
+            }
+
+            function createSeguroCard(referenceCard) {
+              const card = referenceCard.cloneNode(true);
+
+              const h3 = card.querySelector('h3');
+              if (h3) h3.textContent = TARGET_TITLE;
+
+              const p = card.querySelector('p');
+              if (p) p.textContent = TARGET_DESCRIPTION;
+
+              const link = card.querySelector('a[href]');
+              if (link) {
+                link.setAttribute('href', TARGET_HREF);
+                link.textContent = 'Calcular agora →';
+              }
+
+              const badge = card.querySelector('.badge, .badge-new, [class*="badge"]');
+              if (badge) badge.textContent = 'NOVO';
+
+              const icon = card.querySelector('.icon, [class*="icon"]');
+              if (icon) icon.innerHTML = '💼';
+
+              return card;
+            }
+
+            function insertSeguroCard() {
+              if (seguroCardExists()) return true;
+
+              const referenceCard = findReferenceCard();
+              if (!referenceCard || !referenceCard.parentElement) return false;
+
+              const seguroCard = createSeguroCard(referenceCard);
+              referenceCard.insertAdjacentElement('afterend', seguroCard);
+
+              return true;
+            }
+
+            function startSeguroCardInjection() {
+              let attempts = 0;
+              const maxAttempts = 40;
+
+              const interval = window.setInterval(function () {
+                attempts += 1;
+
+                const inserted = insertSeguroCard();
+
+                if (inserted || attempts >= maxAttempts) {
+                  window.clearInterval(interval);
+                }
+              }, 250);
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', startSeguroCardInjection);
+            } else {
+              startSeguroCardInjection();
+            }
+          })();
+        </script>
 </body>
 
 </html>
