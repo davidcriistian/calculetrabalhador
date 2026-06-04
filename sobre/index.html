@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre o Calcule Trabalhador</title>
+  <meta name="description" content="Conheca o Calcule Trabalhador, um projeto com calculadoras trabalhistas gratuitas para ajudar trabalhadores brasileiros a entender direitos, valores e simulacoes com clareza." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/sobre/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Sobre o Calcule Trabalhador" />
+  <meta property="og:description" content="Conheca a missao do Calcule Trabalhador e entenda como as calculadoras trabalhistas gratuitas sao organizadas." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/sobre/" />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ef;
+      --blue: #1d4ed8;
+      --blue-dark: #1e40af;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 46px 20px 36px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 860px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 20px 56px;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel p:first-of-type {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-box {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
+      background: var(--surface-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+    }
+
+    .stat-box strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .stat-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 180px;
+      padding: 22px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .text-block {
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .text-block p {
+      margin-bottom: 0;
+    }
+
+    .notice {
+      padding: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .internal-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .internal-links a {
+      display: block;
+      padding: 14px 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 34px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .disclaimer {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 840px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .intro,
+      .cards,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navegacao principal">
+      <a class="brand" href="/">
+        <span class="brand-mark">CT</span>
+        <span>Calcule Trabalhador</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/salario-liquido-clt-2026">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026">Rescisao</a>
+        <a href="/contato/">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Institucional</p>
+      <h1>Sobre o Calcule Trabalhador</h1>
+      <p>O Calcule Trabalhador nasceu para ajudar trabalhadores brasileiros a entender direitos, valores e simulacoes trabalhistas com linguagem simples, ferramentas gratuitas e foco em informacao pratica.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro" aria-labelledby="who-title">
+      <div class="panel">
+        <h2 id="who-title">Quem somos</h2>
+        <p>O Calcule Trabalhador nasceu de uma necessidade simples: todo trabalhador brasileiro tem o direito de entender exatamente quanto vai receber, quanto tem direito a sacar e o que a lei garante para ele, sem depender de linguagem juridica complexa.</p>
+        <p>O projeto reune calculadoras trabalhistas e conteudos educativos para apoiar conferencias, planejamento financeiro e tomada de decisao. As ferramentas sao voltadas para trabalhadores CLT, pessoas em transicao profissional e qualquer pessoa que queira compreender melhor os principais calculos do dia a dia trabalhista.</p>
+      </div>
+      <aside class="stat-box" aria-label="Principios do projeto">
+        <div>
+          <strong>Gratuito</strong>
+          <span>Sem cadastro, sem instalacao e com simulacoes feitas diretamente no navegador.</span>
+        </div>
+        <div>
+          <strong>Educativo</strong>
+          <span>Os resultados ajudam na orientacao inicial, mas nao substituem analise profissional.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="values-title">
+      <h2 id="values-title">Nossos compromissos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Nossa Missao</h3>
+          <p>Oferecer ferramentas gratuitas, precisas e faceis de usar para que qualquer trabalhador CLT, MEI ou autonomo possa calcular seus direitos com mais confianca.</p>
+        </article>
+        <article class="card">
+          <h3>Precisao e Responsabilidade</h3>
+          <p>As calculadoras sao organizadas com base em regras, tabelas e criterios trabalhistas usados em simulacoes comuns. Para casos especificos, recomendamos consultar RH, contador ou profissional especializado.</p>
+        </article>
+        <article class="card">
+          <h3>Atualizacao Constante</h3>
+          <p>Monitoramos mudancas em salario minimo, INSS, IRRF, regras de beneficios e outros parametros relevantes para manter as ferramentas alinhadas ao ano vigente.</p>
+        </article>
+        <article class="card">
+          <h3>100% Gratuito</h3>
+          <p>Todas as ferramentas funcionam sem cadastro e sem custo. Os valores digitados nas paginas estaticas sao processados localmente no navegador.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="method-title">
+      <h2 id="method-title">Como as calculadoras sao feitas</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Regras de calculo</h3>
+          <p>Cada calculadora parte de uma situacao trabalhista especifica e transforma regras conhecidas em campos simples de preenchimento, resultados numericos e explicacoes de apoio.</p>
+        </div>
+        <div class="text-block">
+          <h3>Textos explicativos</h3>
+          <p>As paginas tambem incluem observacoes, alertas e orientacoes para que o usuario entenda o que esta sendo simulado, quais limites existem e quais dados podem alterar o resultado final.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="limits-title">
+      <h2 id="limits-title">Limitacoes dos calculos</h2>
+      <div class="notice">
+        <p>As calculadoras apresentam estimativas educativas. O valor real pode variar conforme documentos da empresa, convencoes coletivas, regras internas, descontos especificos, historico de faltas, dependentes, verbas adicionais e interpretacoes aplicaveis ao caso concreto.</p>
+        <p>Por isso, os resultados nao substituem holerite, termo de rescisao, consulta a fontes oficiais ou orientacao de contador, advogado trabalhista, sindicato ou setor de recursos humanos.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacidade dos dados digitados</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Uso local das ferramentas</h3>
+          <p>Nas calculadoras HTML estaticas, os valores informados sao usados pelo proprio navegador para gerar a simulacao. O objetivo e reduzir dependencia externa e preservar a experiencia do usuario.</p>
+        </div>
+        <div class="text-block">
+          <h3>Sem cadastro obrigatorio</h3>
+          <p>O site nao exige login para usar as calculadoras. Para detalhes sobre dados de navegacao, cookies e ferramentas de analise, consulte a politica de privacidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="updates-title">
+      <h2 id="updates-title">Compromisso com atualizacao</h2>
+      <p>O projeto prioriza calculadoras trabalhistas atualizadas para 2026 e uma migracao gradual para paginas HTML estaticas, mais simples de manter, mais rapidas para carregar e melhores para indexacao. A cada nova pagina, buscamos preservar nao apenas o calculo principal, mas tambem as mensagens, observacoes e conteudos que ajudam o usuario a interpretar a simulacao.</p>
+    </section>
+
+    <section aria-labelledby="links-title">
+      <h2 id="links-title">Ferramentas e paginas importantes</h2>
+      <div class="internal-links">
+        <a href="/">Home</a>
+        <a href="/salario-liquido-clt-2026">Calculadora de Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026">Calculadora de Rescisao</a>
+        <a href="/calculadora-ferias-clt-2026">Calculadora de Ferias</a>
+        <a href="/calculadora-13-salario-2026">Calculadora de 13o Salario</a>
+        <a href="/calculadora-horas-extras-clt-2026">Calculadora de Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026">Calculadora Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts">Calculadora Saque Aniversario FGTS</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Politica de Privacidade</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/salario-liquido-clt-2026">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026">Rescisao</a>
+        <a href="/calculadora-ferias-clt-2026">Ferias</a>
+        <a href="/calculadora-13-salario-2026">13o Salario</a>
+        <a href="/calculadora-horas-extras-clt-2026">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026">Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts">Saque Aniversario FGTS</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </div>
+      <p class="disclaimer">&copy; 2026 Calcule Trabalhador. Ferramentas educativas. Os resultados sao estimativas e nao substituem consulta a fontes oficiais ou orientacao profissional.</p>
+    </div>
+  </footer>
+</body>
+</html>
