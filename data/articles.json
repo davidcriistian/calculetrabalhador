@@ -7,6 +7,8 @@
     "description": "Entenda como funciona o saque-aniversário do FGTS em 2026, calendário, regras e pontos de atenção.",
     "publishedAt": "2026-06-04",
     "updatedAt": "2026-06-04",
-    "featured": true
+    "featured": true,
+    "showOnHome": true,
+    "homeOrder": 1
   }
 ]
