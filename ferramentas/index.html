@@ -650,77 +650,7 @@
 
     <section aria-labelledby="tools-title">
       <h2 id="tools-title" class="eyebrow">Ferramentas disponíveis</h2>
-      <div id="toolsGrid" class="tools-grid">
-        <a class="tool-card" href="/saque-aniversario-fgts/" data-title="Saque-Aniversário FGTS" data-category="FGTS" data-description="Simule o valor disponível no saque-aniversário com base no saldo do FGTS e na tabela oficial." data-slug="/saque-aniversario-fgts/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">R$</span>
-            <span class="tool-category">FGTS</span>
-          </span>
-          <h2>Saque-Aniversário FGTS</h2>
-          <p>Simule o valor disponível no saque-aniversário com base no saldo do FGTS e na tabela oficial.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/salario-liquido-clt-2026/" data-title="Salário Líquido" data-category="Salário" data-description="Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026." data-slug="/salario-liquido-clt-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">SL</span>
-            <span class="tool-category">Salário</span>
-          </span>
-          <h2>Salário Líquido</h2>
-          <p>Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/calculadora-rescisao-clt-2026/" data-title="Rescisão CLT" data-category="Rescisão" data-description="Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio." data-slug="/calculadora-rescisao-clt-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">RC</span>
-            <span class="tool-category">Rescisão</span>
-          </span>
-          <h2>Rescisão CLT</h2>
-          <p>Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/calculadora-13-salario-2026/" data-title="13º Salário" data-category="13º Salário" data-description="Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF." data-slug="/calculadora-13-salario-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">13</span>
-            <span class="tool-category">13º Salário</span>
-          </span>
-          <h2>13º Salário</h2>
-          <p>Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/calculadora-ferias-clt-2026/" data-title="Férias CLT" data-category="Férias" data-description="Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º." data-slug="/calculadora-ferias-clt-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">F</span>
-            <span class="tool-category">Férias</span>
-          </span>
-          <h2>Férias CLT</h2>
-          <p>Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/calculadora-horas-extras-clt-2026/" data-title="Horas Extras" data-category="Jornada" data-description="Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes." data-slug="/calculadora-horas-extras-clt-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">HE</span>
-            <span class="tool-category">Jornada</span>
-          </span>
-          <h2>Horas Extras</h2>
-          <p>Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-
-        <a class="tool-card" href="/calculadora-seguro-desemprego-2026/" data-title="Seguro-Desemprego" data-category="Benefício" data-description="Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego." data-slug="/calculadora-seguro-desemprego-2026/">
-          <span class="tool-card-top">
-            <span class="tool-icon" aria-hidden="true">SD</span>
-            <span class="tool-category">Benefício</span>
-          </span>
-          <h2>Seguro-Desemprego</h2>
-          <p>Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego.</p>
-          <span class="tool-action">Abrir ferramenta &rarr;</span>
-        </a>
-      </div>
+      <div id="toolsGrid" class="tools-grid"></div>
 
       <div id="emptyState" class="empty-state" aria-live="polite">
         <strong>Nenhuma ferramenta encontrada.</strong>
@@ -794,13 +724,53 @@
 
   <script>
     (() => {
+      const toolsGrid = document.getElementById('toolsGrid');
       const searchInput = document.getElementById('toolSearch');
       const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
-      const cards = Array.from(document.querySelectorAll('.tool-card'));
       const emptyState = document.getElementById('emptyState');
+      let cards = [];
       let activeCategory = 'Todas';
 
       const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+      const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char]));
+
+      const getIcon = (tool) => {
+        if (tool.category === 'FGTS') return 'R$';
+        if (tool.category === 'Salário') return 'SL';
+        if (tool.category === 'Rescisão') return 'RC';
+        if (tool.category === '13º Salário') return '13';
+        if (tool.category === 'Férias') return 'F';
+        if (tool.category === 'Jornada') return 'HE';
+        if (tool.category === 'Benefício') return 'SD';
+        return 'CT';
+      };
+
+      const renderCards = (tools) => {
+        toolsGrid.innerHTML = tools
+          .filter((tool) => tool.published)
+          .map((tool) => `
+            <a class="tool-card" href="${escapeHtml(tool.slug)}" data-title="${escapeHtml(tool.title)}" data-category="${escapeHtml(tool.category)}" data-description="${escapeHtml(tool.description)}" data-slug="${escapeHtml(tool.slug)}" data-featured="${tool.featured ? 'true' : 'false'}">
+              <span class="tool-card-top">
+                <span class="tool-icon" aria-hidden="true">${escapeHtml(getIcon(tool))}</span>
+                <span class="tool-category">${escapeHtml(tool.category)}</span>
+              </span>
+              <h2>${escapeHtml(tool.title)}</h2>
+              <p>${escapeHtml(tool.description)}</p>
+              <span class="tool-action">Abrir ferramenta &rarr;</span>
+            </a>
+          `)
+          .join('');
+
+        cards = Array.from(document.querySelectorAll('.tool-card'));
+        updateCards();
+      };
 
       const updateCards = () => {
         const query = normalize(searchInput.value.trim());
@@ -837,7 +807,21 @@
       });
 
       searchInput.addEventListener('input', updateCards);
-      updateCards();
+
+      fetch('/data/tools.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Catalogo indisponivel');
+          }
+
+          return response.json();
+        })
+        .then(renderCards)
+        .catch(() => {
+          toolsGrid.innerHTML = '';
+          cards = [];
+          updateCards();
+        });
     })();
   </script>
 </body>

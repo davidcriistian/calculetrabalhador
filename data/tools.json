@@ -11,7 +11,7 @@
   },
   {
     "id": "salario-liquido-clt-2026",
-    "title": "Salário Líquido CLT 2026",
+    "title": "Salário Líquido",
     "slug": "/salario-liquido-clt-2026/",
     "category": "Salário",
     "description": "Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026.",
@@ -21,7 +21,7 @@
   },
   {
     "id": "calculadora-rescisao-clt-2026",
-    "title": "Calculadora de Rescisão CLT",
+    "title": "Rescisão CLT",
     "slug": "/calculadora-rescisao-clt-2026/",
     "category": "Rescisão",
     "description": "Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio.",
@@ -31,7 +31,7 @@
   },
   {
     "id": "calculadora-13-salario-2026",
-    "title": "Calculadora de 13º Salário",
+    "title": "13º Salário",
     "slug": "/calculadora-13-salario-2026/",
     "category": "13º Salário",
     "description": "Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF.",
@@ -41,7 +41,7 @@
   },
   {
     "id": "calculadora-ferias-clt-2026",
-    "title": "Calculadora de Férias CLT",
+    "title": "Férias CLT",
     "slug": "/calculadora-ferias-clt-2026/",
     "category": "Férias",
     "description": "Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º.",
@@ -51,7 +51,7 @@
   },
   {
     "id": "calculadora-horas-extras-clt-2026",
-    "title": "Calculadora de Horas Extras",
+    "title": "Horas Extras",
     "slug": "/calculadora-horas-extras-clt-2026/",
     "category": "Jornada",
     "description": "Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes.",
@@ -61,7 +61,7 @@
   },
   {
     "id": "calculadora-seguro-desemprego-2026",
-    "title": "Calculadora Seguro-Desemprego 2026",
+    "title": "Seguro-Desemprego",
     "slug": "/calculadora-seguro-desemprego-2026/",
     "category": "Benefício",
     "description": "Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego.",
