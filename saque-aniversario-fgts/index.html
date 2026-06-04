@@ -275,6 +275,12 @@
       margin-top: 18px;
     }
 
+    .field-help {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .results {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -312,6 +318,74 @@
 
     .result-card.primary .result-value {
       color: var(--blue);
+    }
+
+    .result-help {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .empty-state {
+      padding: 20px;
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+    }
+
+    .empty-state strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .empty-state p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .availability {
+      margin-top: 16px;
+      padding: 16px;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 8px;
+      color: #312e81;
+      font-size: 14px;
+    }
+
+    .availability strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .highlight-card {
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .highlight-card strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .highlight-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .warning {
@@ -568,10 +642,11 @@
               <option>Novembro</option>
               <option>Dezembro</option>
             </select>
+            <p class="field-help" id="month-help">Selecione o mes de nascimento para ver a janela de saque.</p>
           </div>
 
           <div class="warning">
-            Ao aderir ao Saque Aniversario, voce perde o direito de sacar o saldo total do FGTS em caso de demissao sem justa causa. Nesse caso, recebe apenas a multa rescisoria de 40%.
+            Ao aderir ao Saque Aniversario, voce perde o direito de sacar o saldo total do FGTS em caso de demissao sem justa causa. Nesse caso, recebe apenas a multa rescisoria de 40%. Para voltar ao Saque Rescisao, e necessario aguardar 24 meses apos solicitar o cancelamento.
           </div>
         </div>
       </section>
@@ -582,24 +657,34 @@
           <p id="month-info">Informe o saldo para visualizar os resultados.</p>
         </div>
         <div class="panel-body">
-          <div class="results">
+          <div class="empty-state" id="empty-state">
+            <strong>Aguardando dados</strong>
+            <p>Informe o saldo do seu FGTS para visualizar os resultados detalhados da sua simulacao.</p>
+          </div>
+
+          <div class="results" id="results-grid" hidden>
             <div class="result-card primary">
               <p class="result-label">Valor disponivel para saque</p>
               <p class="result-value" id="withdrawal">R$ 0,00</p>
+              <p class="result-help">Disponivel para saque conforme saldo, aliquota e parcela adicional.</p>
             </div>
             <div class="result-card">
               <p class="result-label">Percentual aplicado</p>
               <p class="result-value" id="percentage">0%</p>
+              <p class="result-help">Percentual sobre o saldo total informado.</p>
             </div>
             <div class="result-card">
               <p class="result-label">Parcela adicional</p>
               <p class="result-value" id="additional">R$ 0,00</p>
+              <p class="result-help">Valor fixo adicional somado ao calculo da faixa.</p>
             </div>
             <div class="result-card">
               <p class="result-label">Saldo restante no FGTS</p>
               <p class="result-value" id="remaining">R$ 0,00</p>
+              <p class="result-help">Permanece na conta do FGTS apos o saque estimado.</p>
             </div>
           </div>
+          <div class="availability" id="availability-info" hidden></div>
         </div>
       </section>
     </div>
@@ -633,9 +718,11 @@
         <div class="comparison-card">
           <h3>Saque Aniversario</h3>
           <ul>
-            <li>Recebe parte do FGTS todo ano.</li>
-            <li>Pode antecipar valores via emprestimo.</li>
-            <li>Perde o saque integral se for demitido sem justa causa.</li>
+            <li>Recebe parte do FGTS todo ano, no mes do aniversario e nos dois meses seguintes.</li>
+            <li>O saque anual e previsivel e pode ajudar no planejamento financeiro.</li>
+            <li>Pode antecipar valores via emprestimo, conforme regras do banco contratado.</li>
+            <li>Perde o direito ao saque integral se for demitido sem justa causa.</li>
+            <li>Em caso de demissao sem justa causa, mantem apenas o direito a multa rescisoria de 40%.</li>
           </ul>
         </div>
         <div class="comparison-card">
@@ -643,7 +730,9 @@
           <ul>
             <li>Modelo padrao para quem nao adere ao Saque Aniversario.</li>
             <li>Permite saque integral em caso de demissao sem justa causa.</li>
+            <li>Mantem maior protecao para quem tem risco de desligamento.</li>
             <li>Nao oferece retirada anual programada.</li>
+            <li>Nao permite antecipacao do Saque Aniversario por emprestimo.</li>
           </ul>
         </div>
       </div>
@@ -652,6 +741,20 @@
     <section aria-labelledby="changes-title">
       <h2 id="changes-title">Mudan&ccedil;as nas regras em 2026</h2>
       <p>A partir de novembro de 2026, as regras de antecipacao do Saque Aniversario passam a ter limite menor de parcelas e teto de valor. Antes de aderir ou antecipar valores, confira as condicoes diretamente no aplicativo FGTS, na Caixa Economica Federal ou no banco contratado.</p>
+      <div class="highlights">
+        <div class="highlight-card">
+          <strong>3 parcelas anuais</strong>
+          <span>Limite previsto para antecipacao, reduzindo a quantidade anteriormente praticada em algumas operacoes.</span>
+        </div>
+        <div class="highlight-card">
+          <strong>R$ 1.500</strong>
+          <span>Teto citado para operacoes de antecipacao, sujeito as regras oficiais e condicoes da instituicao financeira.</span>
+        </div>
+        <div class="highlight-card">
+          <strong>24 meses</strong>
+          <span>Periodo de carencia para retornar ao Saque Rescisao depois de cancelar o Saque Aniversario.</span>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="what-title">
@@ -753,6 +856,25 @@
     const additionalEl = document.getElementById('additional');
     const remainingEl = document.getElementById('remaining');
     const monthInfoEl = document.getElementById('month-info');
+    const monthHelpEl = document.getElementById('month-help');
+    const emptyStateEl = document.getElementById('empty-state');
+    const resultsGridEl = document.getElementById('results-grid');
+    const availabilityInfoEl = document.getElementById('availability-info');
+
+    const monthWindows = {
+      Janeiro: { start: 'Janeiro', window: 'janeiro, fevereiro e marco' },
+      Fevereiro: { start: 'Fevereiro', window: 'fevereiro, marco e abril' },
+      Marco: { start: 'Marco', window: 'marco, abril e maio' },
+      Abril: { start: 'Abril', window: 'abril, maio e junho' },
+      Maio: { start: 'Maio', window: 'maio, junho e julho' },
+      Junho: { start: 'Junho', window: 'junho, julho e agosto' },
+      Julho: { start: 'Julho', window: 'julho, agosto e setembro' },
+      Agosto: { start: 'Agosto', window: 'agosto, setembro e outubro' },
+      Setembro: { start: 'Setembro', window: 'setembro, outubro e novembro' },
+      Outubro: { start: 'Outubro', window: 'outubro, novembro e dezembro' },
+      Novembro: { start: 'Novembro', window: 'novembro, dezembro e janeiro do ano seguinte' },
+      Dezembro: { start: 'Dezembro', window: 'dezembro, janeiro e fevereiro do ano seguinte' }
+    };
 
     function formatCurrency(value) {
       return new Intl.NumberFormat('pt-BR', {
@@ -776,14 +898,34 @@
       return { percentage: 5, additional: 2900 };
     }
 
+    function updateMonthHelp() {
+      const selectedMonth = monthSelect.value;
+      const monthData = monthWindows[selectedMonth];
+
+      if (!monthData) {
+        monthHelpEl.textContent = 'Selecione o mes de nascimento para ver a janela de saque.';
+        return;
+      }
+
+      monthHelpEl.textContent = 'Para nascidos em ' + selectedMonth + ', a janela estimada de saque e: ' + monthData.window + '.';
+    }
+
     function calculate() {
       const balance = parseCurrency(balanceInput.value);
+      const selectedMonth = monthSelect.value;
+      const monthData = monthWindows[selectedMonth];
+
+      updateMonthHelp();
 
       if (balance <= 0) {
         withdrawalEl.textContent = formatCurrency(0);
         percentageEl.textContent = '0%';
         additionalEl.textContent = formatCurrency(0);
         remainingEl.textContent = formatCurrency(0);
+        emptyStateEl.hidden = false;
+        resultsGridEl.hidden = true;
+        availabilityInfoEl.hidden = true;
+        availabilityInfoEl.innerHTML = '';
         monthInfoEl.textContent = 'Informe o saldo para visualizar os resultados.';
         return;
       }
@@ -792,15 +934,28 @@
       const withdrawal = balance * (rule.percentage / 100) + rule.additional;
       const remaining = Math.max(balance - withdrawal, 0);
 
+      emptyStateEl.hidden = true;
+      resultsGridEl.hidden = false;
       withdrawalEl.textContent = formatCurrency(withdrawal);
       percentageEl.textContent = rule.percentage + '%';
       additionalEl.textContent = formatCurrency(rule.additional);
       remainingEl.textContent = formatCurrency(remaining);
 
-      const selectedMonth = monthSelect.value;
-      monthInfoEl.textContent = selectedMonth
-        ? 'O saque estara disponivel a partir de ' + selectedMonth + '.'
+      monthInfoEl.textContent = monthData
+        ? 'Saque disponivel em ' + monthData.window + '.'
         : 'Selecione o mes de nascimento para complementar a simulacao.';
+
+      if (monthData) {
+        availabilityInfoEl.hidden = false;
+        availabilityInfoEl.innerHTML =
+          '<strong>Disponibilidade para nascidos em ' + selectedMonth + '</strong>' +
+          'O saque aniversario fica disponivel a partir do 1o dia util de ' + monthData.start + ' de 2026. ' +
+          'Voce tem prazo de 3 meses para sacar, dentro da janela de ' + monthData.window + '. ' +
+          'Apos esse prazo, o valor nao sacado retorna automaticamente para a conta do FGTS.';
+      } else {
+        availabilityInfoEl.hidden = true;
+        availabilityInfoEl.innerHTML = '';
+      }
     }
 
     balanceInput.addEventListener('input', function (event) {
