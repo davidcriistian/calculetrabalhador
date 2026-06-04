@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferramentas Trabalhistas Online Grátis | Calcule Trabalhador</title>
+  <meta name="description" content="Reunimos calculadoras trabalhistas gratuitas para simular salário líquido, rescisão, férias, 13º salário, horas extras, seguro-desemprego e FGTS." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/ferramentas/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Ferramentas Trabalhistas Online Grátis | Calcule Trabalhador" />
+  <meta property="og:description" content="Encontre calculadoras trabalhistas gratuitas para salário líquido, rescisão, férias, 13º salário, horas extras, seguro-desemprego e FGTS." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/ferramentas/" />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ef;
+      --blue: #1d4ed8;
+      --blue-dark: #1e40af;
+      --green: #16a34a;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-header-inner {
+      max-width: 1180px;
+      height: 68px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-menu-button,
+    .site-menu-close {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .site-menu-button:hover,
+    .site-menu-close:hover {
+      background: #f1f5f9;
+      color: var(--blue);
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .site-logo-icon {
+      width: 44px;
+      height: 44px;
+      border: 2.5px solid var(--blue);
+      border-radius: 12px;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .site-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .site-logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .site-logo-sub {
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+    }
+
+    .site-menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(15, 23, 42, 0.42);
+      backdrop-filter: blur(2px);
+    }
+
+    .site-menu-overlay[hidden] {
+      display: none;
+    }
+
+    .site-menu-drawer {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 50;
+      width: min(280px, 88vw);
+      background: #fff;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+      transform: translateX(-100%);
+      transition: transform 0.2s ease-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-menu-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .site-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-menu-nav {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .site-menu-nav a {
+      display: block;
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #334155;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .site-menu-nav a:hover {
+      background: #eff6ff;
+      color: var(--blue);
+    }
+
+    .site-menu-nav a[aria-current="page"] {
+      background: #eff6ff;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .site-menu-footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 46px 20px 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      color: var(--text);
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 20px 54px;
+    }
+
+    .toolbar {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 26px;
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .search-field {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0 16px;
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-field:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .filter-button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: #334155;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 9px 14px;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .filter-button:hover,
+    .filter-button.is-active {
+      border-color: var(--blue);
+      background: #eff6ff;
+      color: var(--blue);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .tool-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      text-decoration: none;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-2px);
+      border-color: #bfdbfe;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+    }
+
+    .tool-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .tool-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #eff6ff;
+      color: var(--blue);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .tool-category {
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      white-space: nowrap;
+    }
+
+    .tool-card h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .tool-card p {
+      margin: 10px 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      flex: 1;
+    }
+
+    .tool-action {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .empty-state {
+      display: none;
+      margin: 28px 0;
+      border: 1px dashed #bfdbfe;
+      border-radius: 18px;
+      background: #eff6ff;
+      padding: 28px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .empty-state.is-visible {
+      display: block;
+    }
+
+    .cta-band {
+      margin-top: 34px;
+      background: #0f172a;
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .cta-band h2 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: #cbd5e1;
+    }
+
+    .cta-band a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border-radius: 12px;
+      background: #fff;
+      color: #0f172a;
+      padding: 0 18px;
+      text-decoration: none;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 34px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-note {
+      max-width: 760px;
+      color: #94a3b8;
+      font-size: 13px;
+      margin: 0 0 14px;
+    }
+
+    .copyright {
+      color: #64748b;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    @media (min-width: 720px) {
+      .tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1040px) {
+      .search-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1240px) {
+      .tools-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-logo-main {
+        font-size: 17px;
+      }
+
+      .site-logo-sub {
+        font-size: 10px;
+      }
+
+      .hero-inner {
+        padding-top: 34px;
+      }
+
+      main {
+        padding-top: 24px;
+      }
+
+      .cta-band {
+        padding: 22px;
+      }
+
+      .cta-band a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <button
+        id="siteMenuOpen"
+        type="button"
+        class="site-menu-button"
+        aria-label="Abrir menu"
+        aria-controls="siteMenuDrawer"
+        aria-expanded="false"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </button>
+
+      <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+        <span class="site-logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+            <path d="M8 6h8"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M16 10h.01"></path>
+            <path d="M8 14h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M16 14h.01"></path>
+            <path d="M8 18h.01"></path>
+            <path d="M12 18h.01"></path>
+            <path d="M16 18h.01"></path>
+          </svg>
+        </span>
+        <span class="site-logo-text">
+          <span class="site-logo-main">Calcule</span>
+          <span class="site-logo-sub">Trabalhador</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="site-menu-overlay" hidden></div>
+
+    <aside id="siteMenuDrawer" class="site-menu-drawer" aria-hidden="true">
+      <div class="site-menu-header">
+        <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+          <span class="site-logo-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+              <path d="M8 6h8"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M16 10h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M16 14h.01"></path>
+              <path d="M8 18h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M16 18h.01"></path>
+            </svg>
+          </span>
+        </a>
+
+        <button id="siteMenuClose" class="site-menu-close" type="button" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="site-menu-nav" aria-label="Menu principal">
+        <a href="/">Home</a>
+        <a href="/ferramentas/" aria-current="page">Ferramentas</a>
+        <a href="/saque-aniversario-fgts/">Saque-Aniversário FGTS</a>
+        <a href="/salario-liquido-clt-2026/">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/">Rescisão CLT</a>
+        <a href="/calculadora-13-salario-2026/">13º Salário</a>
+        <a href="/calculadora-ferias-clt-2026/">Férias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </nav>
+
+      <div class="site-menu-footer">&copy; 2026 Calcule Trabalhador</div>
+    </aside>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Calculadoras gratuitas</p>
+      <h1>Ferramentas Trabalhistas Gratuitas</h1>
+      <p>Encontre calculadoras para simular salário líquido, rescisão, férias, 13º salário, horas extras, seguro-desemprego e FGTS. Todas as ferramentas são educativas e funcionam sem cadastro.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="toolbar" aria-label="Buscar e filtrar ferramentas">
+      <div class="search-row">
+        <input
+          id="toolSearch"
+          class="search-field"
+          type="search"
+          placeholder="Buscar ferramenta por nome, categoria ou descrição"
+          aria-label="Buscar ferramenta"
+        />
+      </div>
+
+      <div class="filters" aria-label="Filtrar por categoria">
+        <button class="filter-button is-active" type="button" data-filter="Todas">Todas</button>
+        <button class="filter-button" type="button" data-filter="FGTS">FGTS</button>
+        <button class="filter-button" type="button" data-filter="Salário">Salário</button>
+        <button class="filter-button" type="button" data-filter="Rescisão">Rescisão</button>
+        <button class="filter-button" type="button" data-filter="13º Salário">13º Salário</button>
+        <button class="filter-button" type="button" data-filter="Férias">Férias</button>
+        <button class="filter-button" type="button" data-filter="Jornada">Jornada</button>
+        <button class="filter-button" type="button" data-filter="Benefício">Benefício</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="tools-title">
+      <h2 id="tools-title" class="eyebrow">Ferramentas disponíveis</h2>
+      <div id="toolsGrid" class="tools-grid">
+        <a class="tool-card" href="/saque-aniversario-fgts/" data-title="Saque-Aniversário FGTS" data-category="FGTS" data-description="Simule o valor disponível no saque-aniversário com base no saldo do FGTS e na tabela oficial." data-slug="/saque-aniversario-fgts/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">R$</span>
+            <span class="tool-category">FGTS</span>
+          </span>
+          <h2>Saque-Aniversário FGTS</h2>
+          <p>Simule o valor disponível no saque-aniversário com base no saldo do FGTS e na tabela oficial.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/salario-liquido-clt-2026/" data-title="Salário Líquido" data-category="Salário" data-description="Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026." data-slug="/salario-liquido-clt-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">SL</span>
+            <span class="tool-category">Salário</span>
+          </span>
+          <h2>Salário Líquido</h2>
+          <p>Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/calculadora-rescisao-clt-2026/" data-title="Rescisão CLT" data-category="Rescisão" data-description="Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio." data-slug="/calculadora-rescisao-clt-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">RC</span>
+            <span class="tool-category">Rescisão</span>
+          </span>
+          <h2>Rescisão CLT</h2>
+          <p>Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/calculadora-13-salario-2026/" data-title="13º Salário" data-category="13º Salário" data-description="Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF." data-slug="/calculadora-13-salario-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">13</span>
+            <span class="tool-category">13º Salário</span>
+          </span>
+          <h2>13º Salário</h2>
+          <p>Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/calculadora-ferias-clt-2026/" data-title="Férias CLT" data-category="Férias" data-description="Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º." data-slug="/calculadora-ferias-clt-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">F</span>
+            <span class="tool-category">Férias</span>
+          </span>
+          <h2>Férias CLT</h2>
+          <p>Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/calculadora-horas-extras-clt-2026/" data-title="Horas Extras" data-category="Jornada" data-description="Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes." data-slug="/calculadora-horas-extras-clt-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">HE</span>
+            <span class="tool-category">Jornada</span>
+          </span>
+          <h2>Horas Extras</h2>
+          <p>Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+
+        <a class="tool-card" href="/calculadora-seguro-desemprego-2026/" data-title="Seguro-Desemprego" data-category="Benefício" data-description="Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego." data-slug="/calculadora-seguro-desemprego-2026/">
+          <span class="tool-card-top">
+            <span class="tool-icon" aria-hidden="true">SD</span>
+            <span class="tool-category">Benefício</span>
+          </span>
+          <h2>Seguro-Desemprego</h2>
+          <p>Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego.</p>
+          <span class="tool-action">Abrir ferramenta &rarr;</span>
+        </a>
+      </div>
+
+      <div id="emptyState" class="empty-state" aria-live="polite">
+        <strong>Nenhuma ferramenta encontrada.</strong>
+        <p>Tente buscar por outro termo ou selecione a categoria "Todas".</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="home-cta-title">
+      <div>
+        <h2 id="home-cta-title">Quer voltar para a página inicial?</h2>
+        <p>A Home reúne destaques, novidades e caminhos rápidos para as principais calculadoras.</p>
+      </div>
+      <a href="/">Voltar à Home</a>
+    </section>
+
+    <!-- Espaço futuro de monetização: ad-slot ad-slot-bottom -->
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/ferramentas/">Ferramentas</a>
+        <a href="/saque-aniversario-fgts/">Saque-Aniversário FGTS</a>
+        <a href="/salario-liquido-clt-2026/">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/">Rescisão CLT</a>
+        <a href="/calculadora-13-salario-2026/">13º Salário</a>
+        <a href="/calculadora-ferias-clt-2026/">Férias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </div>
+      <p class="footer-note">As ferramentas do Calcule Trabalhador têm finalidade educativa e ajudam em simulações iniciais. Os resultados não substituem holerite, termo de rescisão, orientação profissional ou consulta a fontes oficiais.</p>
+      <p class="copyright">&copy; 2026 Calcule Trabalhador. Ferramentas trabalhistas gratuitas.</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+
+      const openMenu = () => {
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+        overlay.hidden = false;
+      };
+
+      const closeMenu = () => {
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+        overlay.hidden = true;
+      };
+
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const searchInput = document.getElementById('toolSearch');
+      const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+      const cards = Array.from(document.querySelectorAll('.tool-card'));
+      const emptyState = document.getElementById('emptyState');
+      let activeCategory = 'Todas';
+
+      const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+      const updateCards = () => {
+        const query = normalize(searchInput.value.trim());
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          const content = normalize([
+            card.dataset.title,
+            card.dataset.category,
+            card.dataset.description,
+            card.dataset.slug
+          ].join(' '));
+
+          const matchesCategory = activeCategory === 'Todas' || category === activeCategory;
+          const matchesSearch = !query || content.includes(query);
+          const isVisible = matchesCategory && matchesSearch;
+
+          card.hidden = !isVisible;
+          if (isVisible) {
+            visibleCount += 1;
+          }
+        });
+
+        emptyState.classList.toggle('is-visible', visibleCount === 0);
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeCategory = button.dataset.filter;
+          filterButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+          updateCards();
+        });
+      });
+
+      searchInput.addEventListener('input', updateCards);
+      updateCards();
+    })();
+  </script>
+</body>
+</html>
