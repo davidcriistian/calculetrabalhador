@@ -652,17 +652,7 @@
 
     <section aria-labelledby="articles-title">
       <h2 id="articles-title" class="eyebrow">Artigos disponíveis</h2>
-      <div id="articlesGrid" class="articles-grid">
-        <a class="article-card" href="/blog/saque-aniversario-fgts-2026" data-title="Saque-Aniversário FGTS 2026" data-category="FGTS" data-description="Entenda como funciona o saque-aniversário do FGTS em 2026, calendário, regras e pontos de atenção." data-slug="/blog/saque-aniversario-fgts-2026">
-          <span class="article-card-top">
-            <span class="article-icon" aria-hidden="true">FG</span>
-            <span class="article-category">FGTS</span>
-          </span>
-          <h2>Saque-Aniversário FGTS 2026</h2>
-          <p>Entenda como funciona o saque-aniversário do FGTS em 2026, calendário, regras e pontos de atenção.</p>
-          <span class="article-action">Ler artigo &rarr;</span>
-        </a>
-      </div>
+      <div id="articlesGrid" class="articles-grid"></div>
 
       <div id="emptyState" class="empty-state" aria-live="polite">
         <strong>Nenhum artigo encontrado.</strong>
@@ -737,13 +727,46 @@
 
   <script>
     (() => {
+      const articlesGrid = document.getElementById('articlesGrid');
       const searchInput = document.getElementById('articleSearch');
       const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
-      const cards = Array.from(document.querySelectorAll('.article-card'));
       const emptyState = document.getElementById('emptyState');
+      let cards = [];
       let activeCategory = 'Todas';
 
       const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+      const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char]));
+
+      const getIcon = (article) => {
+        if (article.category === 'FGTS') return 'FG';
+        return 'CT';
+      };
+
+      const renderCards = (articles) => {
+        articlesGrid.innerHTML = articles
+          .map((article) => `
+            <a class="article-card" href="${escapeHtml(article.slug)}" data-title="${escapeHtml(article.title)}" data-category="${escapeHtml(article.category)}" data-description="${escapeHtml(article.description)}" data-slug="${escapeHtml(article.slug)}" data-published-at="${escapeHtml(article.publishedAt)}" data-updated-at="${escapeHtml(article.updatedAt)}" data-featured="${article.featured ? 'true' : 'false'}">
+              <span class="article-card-top">
+                <span class="article-icon" aria-hidden="true">${escapeHtml(getIcon(article))}</span>
+                <span class="article-category">${escapeHtml(article.category)}</span>
+              </span>
+              <h2>${escapeHtml(article.title)}</h2>
+              <p>${escapeHtml(article.description)}</p>
+              <span class="article-action">Ler artigo &rarr;</span>
+            </a>
+          `)
+          .join('');
+
+        cards = Array.from(document.querySelectorAll('.article-card'));
+        updateCards();
+      };
 
       const updateCards = () => {
         const query = normalize(searchInput.value.trim());
@@ -780,7 +803,21 @@
       });
 
       searchInput.addEventListener('input', updateCards);
-      updateCards();
+
+      fetch('/data/articles.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Catalogo indisponivel');
+          }
+
+          return response.json();
+        })
+        .then(renderCards)
+        .catch(() => {
+          articlesGrid.innerHTML = '';
+          cards = [];
+          updateCards();
+        });
     })();
   </script>
 </body>
