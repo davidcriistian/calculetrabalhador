@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Insalubridade 2026 | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule o adicional de insalubridade conforme os percentuais previstos na legislação trabalhista." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-insalubridade-2026/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora de Insalubridade 2026 | Calcule Trabalhador" />
+  <meta property="og:description" content="Simule o adicional de insalubridade pelos graus mínimo, médio e máximo, usando o salário mínimo informado." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-insalubridade-2026/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como calcular insalubridade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nesta simulação, multiplique o salário mínimo informado pelo percentual do grau de insalubridade: 10%, 20% ou 40%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais são os graus de insalubridade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Os graus mais usados são mínimo, médio e máximo, correspondendo a 10%, 20% e 40%, respectivamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Insalubridade é calculada sobre qual valor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Esta calculadora usa o salário mínimo informado pelo usuário como base de simulação. A base de cálculo pode envolver discussões jurídicas, norma coletiva ou entendimento específico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre insalubridade e periculosidade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Insalubridade envolve exposição a agentes nocivos à saúde. Periculosidade envolve exposição a risco acentuado, como inflamáveis, explosivos ou energia elétrica, conforme regras aplicáveis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem tem direito ao adicional?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O direito depende do enquadramento da atividade, exposição a agentes nocivos, avaliação técnica, laudo ou regra aplicável. A calculadora não confirma o direito, apenas simula valores."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-20 border-b border-slate-200 bg-white shadow-sm">
+    <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-4">
+      <button id="siteMenuOpen" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+          <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="fixed inset-0 z-40 hidden bg-black/40 backdrop-blur-[2px]"></div>
+    <aside id="siteMenuDrawer" class="fixed inset-y-0 left-0 z-50 flex w-[280px] -translate-x-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out" aria-hidden="true">
+      <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+        <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            </svg>
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+            <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+          </span>
+        </a>
+        <button id="siteMenuClose" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="4" x2="18" y2="18"></line>
+            <line x1="18" y1="4" x2="4" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-3" aria-label="Menu principal">
+        <a href="/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Calculadoras</a>
+        <a href="/saque-aniversario-fgts/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
+        <a href="/salario-liquido-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
+        <a href="/calculadora-aviso-previo-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Aviso Prévio</a>
+        <a href="/calculadora-adicional-noturno-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Adicional Noturno</a>
+        <a href="/calculadora-insalubridade-2026/" class="block rounded-lg bg-blue-50 px-4 py-3 font-bold text-blue-700">Insalubridade</a>
+        <a href="/calculadora-13-salario-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
+        <a href="/calculadora-ferias-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
+        <a href="/sobre/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Sobre</a>
+        <a href="/contato/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Contato</a>
+        <a href="/politica-de-privacidade/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Privacidade</a>
+      </nav>
+
+      <div class="border-t border-slate-200 px-5 py-4">
+        <p class="text-xs text-slate-400">&copy; 2026 Calcule Trabalhador</p>
+      </div>
+    </aside>
+  </header>
+
+  <main class="mx-auto max-w-6xl space-y-6 px-4 py-8">
+    <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Insalubridade 2026</h1>
+
+    <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
+      <p class="text-lg leading-8 text-slate-700">Simule o valor do adicional de insalubridade conforme o grau informado: mínimo, médio ou máximo. A ferramenta usa o salário mínimo digitado como base de cálculo para estimar o adicional mensal e anual.</p>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        <p class="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">A calculadora simula o valor conforme o grau informado. A ferramenta não confirma se o trabalhador tem direito ao adicional.</p>
+        <p class="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">O enquadramento depende de exposição a agentes nocivos, avaliação técnica, laudo/perícia ou regra aplicável.</p>
+      </div>
+      <p class="mt-3 rounded-xl border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-700">A base de cálculo pode ter discussões jurídicas, norma coletiva ou entendimento específico. Nesta simulação, usar o salário mínimo informado pelo usuário.</p>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <form id="calculator-form" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Dados para cálculo</h2>
+
+        <div class="mt-6 grid gap-4">
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Valor do salário mínimo</span>
+            <input id="minimum-wage" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ex.: 1600,00" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Grau de insalubridade</span>
+            <select id="degree" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100">
+              <option value="">Selecione o grau</option>
+              <option value="minimo">Mínimo (10%)</option>
+              <option value="medio">Médio (20%)</option>
+              <option value="maximo">Máximo (40%)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <button type="submit" class="rounded-xl bg-blue-700 px-6 py-3 font-bold text-white shadow-sm transition hover:bg-blue-800">Calcular insalubridade</button>
+          <button id="clear-button" type="button" class="rounded-xl border border-slate-300 px-6 py-3 font-bold text-slate-700 transition hover:bg-slate-100">Limpar</button>
+        </div>
+      </form>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-live="polite">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Resultado</h2>
+            <p id="result-status" class="mt-1 text-sm text-slate-500">Aguardando dados</p>
+          </div>
+          <span id="result-badge" class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">simulação</span>
+        </div>
+
+        <div class="mt-6 grid gap-3">
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Salário mínimo utilizado</p>
+              <p id="wage-result" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Grau selecionado</p>
+              <p id="degree-result" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-blue-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-blue-700">Percentual aplicado</p>
+              <p id="percent-result" class="mt-1 text-3xl font-extrabold text-blue-800">--</p>
+            </div>
+            <div class="rounded-xl bg-emerald-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">Valor do adicional mensal</p>
+              <p id="monthly-result" class="mt-1 text-3xl font-extrabold text-emerald-800">--</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-slate-900 p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-slate-300">Valor anual estimado</p>
+            <p id="annual-result" class="mt-1 text-4xl font-extrabold text-white">--</p>
+          </div>
+        </div>
+
+        <div id="dynamic-note" class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+          Preencha o salário mínimo e selecione o grau para calcular.
+        </div>
+      </section>
+    </section>
+
+    <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Como o cálculo é feito</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-4">
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">1. Base</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Use o salário mínimo informado pelo usuário.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">2. Grau</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Selecione mínimo, médio ou máximo.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">3. Percentual</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">10%, 20% ou 40%, conforme o grau.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">4. Valor</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Salário mínimo multiplicado pelo percentual.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-2">
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">O que é insalubridade?</h2>
+        <p class="mt-3 leading-7 text-slate-700">Insalubridade é a exposição do trabalhador a agentes nocivos à saúde acima dos limites de tolerância. O adicional busca compensar financeiramente essa exposição quando ela é caracterizada conforme as regras aplicáveis.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Quem tem direito?</h2>
+        <p class="mt-3 leading-7 text-slate-700">O direito depende da atividade, do ambiente de trabalho, do agente nocivo e do enquadramento técnico. A calculadora não define o direito ao adicional; ela apenas simula valores conforme o grau selecionado.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Quais são os graus de insalubridade?</h2>
+        <p class="mt-3 leading-7 text-slate-700">Os graus mais comuns são mínimo, médio e máximo, associados aos percentuais de 10%, 20% e 40%. O grau aplicável depende da caracterização da exposição e da regra técnica aplicável.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Como funciona a perícia?</h2>
+        <p class="mt-3 leading-7 text-slate-700">A perícia ou avaliação técnica analisa o ambiente, a exposição, os agentes nocivos, a intensidade e as medidas de proteção. Esse procedimento é essencial para confirmar enquadramento e grau.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+        <h2 class="text-2xl font-bold text-slate-900">Diferença entre insalubridade e periculosidade</h2>
+        <p class="mt-3 leading-7 text-slate-700">Insalubridade está ligada à exposição a agentes nocivos à saúde. Periculosidade está ligada a risco acentuado à vida ou integridade física, como inflamáveis, explosivos, energia elétrica ou outras hipóteses previstas em norma. São adicionais diferentes e não devem ser confundidos.</p>
+      </article>
+    </section>
+
+    <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
+      <div class="mt-5 space-y-3">
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Como calcular insalubridade?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Multiplique o salário mínimo informado pelo percentual do grau selecionado: 10%, 20% ou 40%.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Quais são os graus de insalubridade?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Os graus são mínimo, médio e máximo, associados respectivamente a 10%, 20% e 40%.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Insalubridade é calculada sobre qual valor?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Nesta simulação, o cálculo usa o salário mínimo informado pelo usuário. A base pode ter discussões jurídicas, norma coletiva ou entendimento específico.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Qual a diferença entre insalubridade e periculosidade?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Insalubridade envolve agentes nocivos à saúde; periculosidade envolve risco acentuado. As regras, bases e formas de cálculo são diferentes.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Quem tem direito ao adicional?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Quem tem exposição caracterizada por regra técnica, laudo, perícia ou norma aplicável. A calculadora não confirma o direito ao adicional.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Outras calculadoras trabalhistas</h2>
+      <p class="mt-3 text-slate-600">Continue simulando direitos, benefícios e verbas trabalhistas com as ferramentas gratuitas do Calcule Trabalhador.</p>
+      <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <a href="/salario-liquido-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
+        <a href="/calculadora-aviso-previo-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Aviso Prévio</a>
+        <a href="/calculadora-adicional-noturno-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Adicional Noturno</a>
+        <a href="/calculadora-ferias-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
+        <a href="/calculadora-13-salario-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
+        <a href="/calculadora-horas-extras-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
+        <a href="/ferramentas/" class="rounded-xl border border-blue-200 bg-blue-50 p-4 font-semibold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100">Ver todas as ferramentas</a>
+      </div>
+    </section>
+
+    <section class="rounded-2xl border border-red-200 bg-red-50 p-6">
+      <h2 class="text-2xl font-bold text-red-900">Aviso legal / Disclaimer</h2>
+      <p class="mt-3 text-red-900">Esta calculadora tem finalidade informativa e educacional. O resultado é uma estimativa matemática conforme o grau informado e não substitui laudo técnico, perícia, avaliação do ambiente de trabalho, convenção coletiva ou orientação profissional.</p>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 px-4 py-10 text-slate-300">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <a href="/" class="inline-flex items-center gap-3 text-white no-underline">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-blue-600 font-bold text-white">CT</span>
+          <span class="text-lg font-bold">Calcule Trabalhador</span>
+        </a>
+        <p class="text-sm text-slate-400">Calculadoras trabalhistas gratuitas para simulações educativas.</p>
+      </div>
+
+      <div class="mt-8 grid gap-8 md:grid-cols-2">
+        <nav aria-label="Links das calculadoras">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Calculadoras</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/saque-aniversario-fgts/" class="hover:text-white">Saque-Aniversário FGTS</a>
+            <a href="/salario-liquido-clt-2026/" class="hover:text-white">Salário Líquido CLT 2026</a>
+            <a href="/calculadora-rescisao-clt-2026/" class="hover:text-white">Rescisão CLT 2026</a>
+            <a href="/calculadora-aviso-previo-2026/" class="hover:text-white">Aviso Prévio 2026</a>
+            <a href="/calculadora-adicional-noturno-2026/" class="hover:text-white">Adicional Noturno 2026</a>
+            <a href="/calculadora-insalubridade-2026/" class="hover:text-white">Insalubridade 2026</a>
+            <a href="/calculadora-ferias-clt-2026/" class="hover:text-white">Férias CLT 2026</a>
+            <a href="/calculadora-13-salario-2026/" class="hover:text-white">13º Salário 2026</a>
+            <a href="/calculadora-horas-extras-clt-2026/" class="hover:text-white">Horas Extras CLT 2026</a>
+            <a href="/calculadora-seguro-desemprego-2026/" class="hover:text-white">Seguro-Desemprego 2026</a>
+          </div>
+        </nav>
+
+        <nav aria-label="Links institucionais">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Institucional</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/" class="hover:text-white">Home</a>
+            <a href="/sobre/" class="hover:text-white">Sobre</a>
+            <a href="/contato/" class="hover:text-white">Contato</a>
+            <a href="/politica-de-privacidade/" class="hover:text-white">Política de Privacidade</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="mt-8 border-t border-slate-800 pt-6 text-sm text-slate-400">
+        <p>As informações e resultados apresentados têm finalidade educativa e podem variar conforme regras internas, convenções coletivas e atualizações legais.</p>
+        <p class="mt-3">&copy; 2026 Calcule Trabalhador. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+
+      const openMenu = () => {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+      };
+
+      const closeMenu = () => {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+      };
+
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const byId = (id) => document.getElementById(id);
+    const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
+
+    const DEGREE_RULES = {
+      minimo: { label: 'Mínimo', percent: 10 },
+      medio: { label: 'Médio', percent: 20 },
+      maximo: { label: 'Máximo', percent: 40 }
+    };
+
+    const setInitialState = () => {
+      byId('result-status').textContent = 'Aguardando dados';
+      byId('result-badge').textContent = 'simulação';
+      byId('wage-result').textContent = '--';
+      byId('degree-result').textContent = '--';
+      byId('percent-result').textContent = '--';
+      byId('monthly-result').textContent = '--';
+      byId('annual-result').textContent = '--';
+      byId('dynamic-note').className = 'mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700';
+      byId('dynamic-note').textContent = 'Preencha o salário mínimo e selecione o grau para calcular.';
+    };
+
+    const calculateInsalubrity = ({ minimumWage, degree }) => {
+      const rule = DEGREE_RULES[degree];
+      const monthlyValue = minimumWage * (rule.percent / 100);
+      const annualValue = monthlyValue * 12;
+
+      return {
+        minimumWage,
+        degreeLabel: rule.label,
+        percent: rule.percent,
+        monthlyValue,
+        annualValue
+      };
+    };
+
+    const renderResult = (result) => {
+      byId('result-status').textContent = 'Cálculo realizado';
+      byId('result-badge').textContent = 'estimativa';
+      byId('wage-result').textContent = brl(result.minimumWage);
+      byId('degree-result').textContent = result.degreeLabel;
+      byId('percent-result').textContent = `${result.percent}%`;
+      byId('monthly-result').textContent = brl(result.monthlyValue);
+      byId('annual-result').textContent = brl(result.annualValue);
+      byId('dynamic-note').className = 'mt-5 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-6 text-blue-900';
+      byId('dynamic-note').textContent = 'Resultado calculado com base no salário mínimo informado e no grau selecionado. Esta simulação não confirma direito ao adicional nem substitui laudo ou perícia.';
+    };
+
+    byId('calculator-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const minimumWage = Number(byId('minimum-wage').value);
+      const degree = byId('degree').value;
+
+      if (!minimumWage || minimumWage <= 0 || !DEGREE_RULES[degree]) {
+        setInitialState();
+        byId('result-status').textContent = 'Dados incompletos';
+        byId('dynamic-note').className = 'mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900';
+        byId('dynamic-note').textContent = 'Informe salário mínimo maior que zero e selecione um grau de insalubridade.';
+        return;
+      }
+
+      renderResult(calculateInsalubrity({ minimumWage, degree }));
+    });
+
+    byId('clear-button').addEventListener('click', () => {
+      byId('minimum-wage').value = '';
+      byId('degree').value = '';
+      setInitialState();
+    });
+
+    setInitialState();
+  </script>
+</body>
+</html>
