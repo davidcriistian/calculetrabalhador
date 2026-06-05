@@ -133,5 +133,19 @@
     "showOnHome": true,
     "homeOrder": 9,
     "updatedAt": "2026-06-04"
+  },
+  {
+    "id": "calculadora-insalubridade-2026",
+    "title": "Insalubridade",
+    "slug": "/calculadora-insalubridade-2026/",
+    "category": "Adicionais",
+    "description": "Calcule o adicional de insalubridade conforme o grau e percentual aplicável.",
+    "icone": "⚠️",
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "featured": true,
+    "showOnHome": false,
+    "updatedAt": "2026-06-04"
   }
 ]
