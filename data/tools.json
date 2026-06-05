@@ -118,5 +118,20 @@
     "showOnHome": true,
     "homeOrder": 8,
     "updatedAt": "2026-06-04"
+  },
+  {
+    "id": "calculadora-adicional-noturno-2026",
+    "title": "Adicional Noturno",
+    "slug": "/calculadora-adicional-noturno-2026/",
+    "category": "Jornada",
+    "description": "Calcule adicional noturno conforme a CLT e percentual aplicado.",
+    "icone": "🌙",
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "featured": true,
+    "showOnHome": true,
+    "homeOrder": 9,
+    "updatedAt": "2026-06-04"
   }
 ]
