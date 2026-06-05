@@ -103,5 +103,20 @@
     "showOnHome": true,
     "homeOrder": 7,
     "updatedAt": "2026-06-04"
+  },
+  {
+    "id": "calculadora-aviso-previo-2026",
+    "title": "Aviso Prévio",
+    "slug": "/calculadora-aviso-previo-2026/",
+    "category": "Rescisão",
+    "description": "Calcule aviso prévio trabalhado ou indenizado conforme o salário e tempo de empresa.",
+    "icone": "📄",
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "featured": true,
+    "showOnHome": true,
+    "homeOrder": 8,
+    "updatedAt": "2026-06-04"
   }
 ]
