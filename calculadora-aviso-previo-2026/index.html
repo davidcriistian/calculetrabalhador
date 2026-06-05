@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Aviso Prévio 2026 | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule aviso prévio trabalhado ou indenizado com base no salário e tempo de empresa conforme a Lei 12.506/2011." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-aviso-previo-2026/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora de Aviso Prévio 2026 | Calcule Trabalhador" />
+  <meta property="og:description" content="Simule dias e valor estimado do aviso prévio trabalhado, indenizado ou descontado no pedido de demissão." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-aviso-previo-2026/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como calcular aviso prévio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O cálculo considera 30 dias de aviso prévio, acrescidos de 3 dias por ano completo trabalhado, limitado a 90 dias. O valor estimado é obtido multiplicando os dias de aviso pelo salário diário."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantos dias tem o aviso prévio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O aviso prévio tem no mínimo 30 dias. Pela Lei 12.506/2011, podem ser adicionados 3 dias por ano completo de serviço ao mesmo empregador."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o limite máximo do aviso prévio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O limite máximo do aviso prévio proporcional é de 90 dias."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aviso prévio pode ser descontado no pedido de demissão?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. No pedido de demissão, se o trabalhador não cumprir o aviso e a empresa não dispensar o cumprimento, o valor correspondente pode ser descontado das verbas rescisórias."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem tem direito ao aviso prévio proporcional?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O aviso prévio proporcional se aplica ao trabalhador com mais de um ano completo de serviço, observadas as regras legais e a modalidade de desligamento."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-20 border-b border-slate-200 bg-white shadow-sm">
+    <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-4">
+      <button id="siteMenuOpen" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+          <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="fixed inset-0 z-40 hidden bg-black/40 backdrop-blur-[2px]"></div>
+    <aside id="siteMenuDrawer" class="fixed inset-y-0 left-0 z-50 flex w-[280px] -translate-x-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out" aria-hidden="true">
+      <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+        <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            </svg>
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+            <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+          </span>
+        </a>
+        <button id="siteMenuClose" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="4" x2="18" y2="18"></line>
+            <line x1="18" y1="4" x2="4" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-3" aria-label="Menu principal">
+        <a href="/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Calculadoras</a>
+        <a href="/saque-aniversario-fgts/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
+        <a href="/salario-liquido-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
+        <a href="/calculadora-aviso-previo-2026/" class="block rounded-lg bg-blue-50 px-4 py-3 font-bold text-blue-700">Aviso Prévio</a>
+        <a href="/calculadora-13-salario-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
+        <a href="/calculadora-ferias-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
+        <a href="/sobre/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Sobre</a>
+        <a href="/contato/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Contato</a>
+        <a href="/politica-de-privacidade/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Privacidade</a>
+      </nav>
+
+      <div class="border-t border-slate-200 px-5 py-4">
+        <p class="text-xs text-slate-400">&copy; 2026 Calcule Trabalhador</p>
+      </div>
+    </aside>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Aviso Prévio 2026</h1>
+
+    <section class="mt-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
+      <p class="text-lg leading-8 text-slate-700">Simule o aviso prévio trabalhado, indenizado ou descontado no pedido de demissão com base no salário e no tempo de empresa. A regra segue a lógica geral da Lei 12.506/2011: 30 dias iniciais, mais 3 dias por ano completo, limitado a 90 dias.</p>
+      <p class="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">Esta ferramenta é educativa. Convenções coletivas, acordos, datas contratuais e documentos oficiais da empresa podem alterar o resultado final.</p>
+    </section>
+
+    <section class="mt-8 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <form id="calculator-form" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Dados para cálculo</h2>
+
+        <div class="mt-6 grid gap-4">
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Salário bruto mensal</span>
+            <input id="salary" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ex.: 3000,00" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100" />
+          </label>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block">
+              <span class="text-sm font-semibold text-slate-700">Data de admissão</span>
+              <input id="start-date" type="date" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100" />
+            </label>
+
+            <label class="block">
+              <span class="text-sm font-semibold text-slate-700">Data de desligamento</span>
+              <input id="end-date" type="date" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100" />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Tipo de aviso</span>
+            <select id="notice-type" class="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100">
+              <option value="indenizado">Aviso prévio indenizado</option>
+              <option value="trabalhado">Aviso prévio trabalhado</option>
+              <option value="desconto">Desconto de aviso no pedido de demissão</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <button type="submit" class="rounded-xl bg-blue-700 px-6 py-3 font-bold text-white shadow-sm transition hover:bg-blue-800">Calcular aviso prévio</button>
+          <button id="clear-button" type="button" class="rounded-xl border border-slate-300 px-6 py-3 font-bold text-slate-700 transition hover:bg-slate-100">Limpar</button>
+        </div>
+      </form>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-live="polite">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Resultado</h2>
+            <p id="result-status" class="mt-1 text-sm text-slate-500">Aguardando dados</p>
+          </div>
+          <span id="result-badge" class="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-slate-600">simulação</span>
+        </div>
+
+        <div class="mt-6 grid gap-3">
+          <div class="rounded-xl bg-slate-50 p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Tempo de empresa</p>
+            <p id="company-time" class="mt-1 text-xl font-extrabold text-slate-900">--</p>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Anos completos</p>
+              <p id="full-years" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Dias base</p>
+              <p id="base-days" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Dias adicionais</p>
+              <p id="additional-days" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+            <div class="rounded-xl bg-blue-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-blue-700">Dias totais de aviso</p>
+              <p id="total-days" class="mt-1 text-3xl font-extrabold text-blue-800">--</p>
+            </div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-slate-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-slate-500">Valor diário</p>
+              <p id="daily-value" class="mt-1 text-2xl font-extrabold text-slate-900">--</p>
+            </div>
+            <div id="estimated-card" class="rounded-xl bg-emerald-50 p-4">
+              <p id="estimated-label" class="text-xs font-bold uppercase tracking-wide text-emerald-700">Valor estimado</p>
+              <p id="estimated-value" class="mt-1 text-3xl font-extrabold text-emerald-800">--</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="dynamic-note" class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+          Preencha salário, admissão e desligamento para ver a simulação do aviso prévio.
+        </div>
+      </section>
+    </section>
+
+    <section class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Como o cálculo é feito</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-4">
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">1. Dias base</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">O aviso começa com 30 dias.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">2. Proporcional</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">São adicionados 3 dias por ano completo trabalhado.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">3. Limite</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">O total não pode passar de 90 dias.</p>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-4">
+          <p class="text-sm font-bold text-slate-900">4. Valor</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">O valor diário é salário dividido por 30.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10 grid gap-6 lg:grid-cols-2">
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">O que é aviso prévio?</h2>
+        <p class="mt-3 leading-7 text-slate-700">Aviso prévio é a comunicação antecipada do fim do contrato de trabalho. Ele pode ser trabalhado, quando o empregado permanece cumprindo o período, ou indenizado, quando o período é convertido em valor financeiro.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Como funciona o aviso prévio proporcional?</h2>
+        <p class="mt-3 leading-7 text-slate-700">A regra geral prevê 30 dias de aviso e acrescenta 3 dias por ano completo de serviço ao mesmo empregador, respeitando o limite de 90 dias. Por isso, o tempo de empresa muda diretamente a quantidade de dias calculados.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Aviso prévio trabalhado x indenizado</h2>
+        <p class="mt-3 leading-7 text-slate-700">No aviso trabalhado, o foco é saber quantos dias devem ser cumpridos. No aviso indenizado, o período não é trabalhado e o valor correspondente pode aparecer como verba estimada na rescisão.</p>
+      </article>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Pedido de demissão e desconto do aviso</h2>
+        <p class="mt-3 leading-7 text-slate-700">No pedido de demissão, se o trabalhador não cumprir o aviso e a empresa não dispensar essa obrigação, o valor correspondente pode ser descontado. Por isso, a calculadora mostra esse caso como possível desconto, não como verba a receber.</p>
+      </article>
+    </section>
+
+    <section class="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
+      <div class="mt-5 space-y-3">
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Como calcular aviso prévio?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Some 30 dias com 3 dias por ano completo trabalhado. Depois, limite o total a 90 dias e multiplique pelo valor diário do salário.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Quantos dias tem o aviso prévio?</summary>
+          <p class="mt-3 leading-7 text-slate-700">O aviso tem no mínimo 30 dias e pode aumentar conforme o tempo de empresa.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Qual o limite máximo do aviso prévio?</summary>
+          <p class="mt-3 leading-7 text-slate-700">O limite máximo é de 90 dias.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Aviso prévio pode ser descontado no pedido de demissão?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Pode, quando o trabalhador não cumpre o aviso e a empresa não dispensa o cumprimento.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 p-4">
+          <summary class="cursor-pointer font-bold text-slate-900">Quem tem direito ao aviso prévio proporcional?</summary>
+          <p class="mt-3 leading-7 text-slate-700">Em regra, trabalhadores com mais de um ano completo de serviço podem ter acréscimo proporcional de 3 dias por ano completo, conforme a Lei 12.506/2011.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-2xl border border-red-200 bg-red-50 p-6">
+      <h2 class="text-2xl font-bold text-red-900">Aviso legal / Disclaimer</h2>
+      <p class="mt-3 text-red-900">Esta calculadora tem finalidade informativa e educacional. Os valores exibidos são estimativas e não substituem documentos oficiais de rescisão, convenção coletiva, orientação do RH, contador, advogado trabalhista ou sindicato da categoria.</p>
+    </section>
+
+    <section class="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Outras calculadoras trabalhistas</h2>
+      <p class="mt-3 text-slate-600">Continue simulando direitos, benefícios e verbas trabalhistas com as ferramentas gratuitas do Calcule Trabalhador.</p>
+      <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="/salario-liquido-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
+        <a href="/calculadora-ferias-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
+        <a href="/calculadora-13-salario-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
+        <a href="/calculadora-horas-extras-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold text-slate-800 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
+        <a href="/ferramentas/" class="rounded-xl border border-blue-200 bg-blue-50 p-4 font-semibold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100">Ver todas as ferramentas</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 px-4 py-10 text-slate-300">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <a href="/" class="inline-flex items-center gap-3 text-white no-underline">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-blue-600 font-bold text-white">CT</span>
+          <span class="text-lg font-bold">Calcule Trabalhador</span>
+        </a>
+        <p class="text-sm text-slate-400">Calculadoras trabalhistas gratuitas para simulações educativas.</p>
+      </div>
+
+      <div class="mt-8 grid gap-8 md:grid-cols-2">
+        <nav aria-label="Links das calculadoras">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Calculadoras</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/saque-aniversario-fgts/" class="hover:text-white">Saque-Aniversário FGTS</a>
+            <a href="/salario-liquido-clt-2026/" class="hover:text-white">Salário Líquido CLT 2026</a>
+            <a href="/calculadora-rescisao-clt-2026/" class="hover:text-white">Rescisão CLT 2026</a>
+            <a href="/calculadora-aviso-previo-2026/" class="hover:text-white">Aviso Prévio 2026</a>
+            <a href="/calculadora-ferias-clt-2026/" class="hover:text-white">Férias CLT 2026</a>
+            <a href="/calculadora-13-salario-2026/" class="hover:text-white">13º Salário 2026</a>
+            <a href="/calculadora-horas-extras-clt-2026/" class="hover:text-white">Horas Extras CLT 2026</a>
+            <a href="/calculadora-seguro-desemprego-2026/" class="hover:text-white">Seguro-Desemprego 2026</a>
+          </div>
+        </nav>
+
+        <nav aria-label="Links institucionais">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Institucional</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/" class="hover:text-white">Home</a>
+            <a href="/sobre/" class="hover:text-white">Sobre</a>
+            <a href="/contato/" class="hover:text-white">Contato</a>
+            <a href="/politica-de-privacidade/" class="hover:text-white">Política de Privacidade</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="mt-8 border-t border-slate-800 pt-6 text-sm text-slate-400">
+        <p>As informações e resultados apresentados têm finalidade educativa e podem variar conforme regras internas, convenções coletivas e atualizações legais.</p>
+        <p class="mt-3">&copy; 2026 Calcule Trabalhador. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+
+      const openMenu = () => {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+      };
+
+      const closeMenu = () => {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+      };
+
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value || 0);
+
+    const byId = (id) => document.getElementById(id);
+
+    const parseDate = (value) => {
+      if (!value) return null;
+      const date = new Date(`${value}T00:00:00`);
+      return Number.isNaN(date.getTime()) ? null : date;
+    };
+
+    const fullYearsBetween = (start, end) => {
+      let years = end.getFullYear() - start.getFullYear();
+      const beforeAnniversary = end.getMonth() < start.getMonth() || (end.getMonth() === start.getMonth() && end.getDate() < start.getDate());
+      if (beforeAnniversary) years -= 1;
+      return Math.max(years, 0);
+    };
+
+    const formatCompanyTime = (start, end) => {
+      let years = end.getFullYear() - start.getFullYear();
+      let months = end.getMonth() - start.getMonth();
+      let days = end.getDate() - start.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const previousMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+        days += previousMonth.getDate();
+      }
+
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      const parts = [];
+      if (years > 0) parts.push(`${years} ${years === 1 ? 'ano' : 'anos'}`);
+      if (months > 0) parts.push(`${months} ${months === 1 ? 'mês' : 'meses'}`);
+      if (days > 0 || parts.length === 0) parts.push(`${days} ${days === 1 ? 'dia' : 'dias'}`);
+      return parts.join(', ');
+    };
+
+    const getTypeNote = (type, totalDays, estimatedValue) => {
+      if (type === 'indenizado') {
+        return `Aviso prévio indenizado: o valor estimado de ${brl(estimatedValue)} pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.`;
+      }
+
+      if (type === 'trabalhado') {
+        return `Aviso prévio trabalhado: a estimativa indica ${totalDays} dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.`;
+      }
+
+      return `Pedido de demissão com desconto: o valor estimado de ${brl(estimatedValue)} deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.`;
+    };
+
+    const setInitialState = () => {
+      byId('result-status').textContent = 'Aguardando dados';
+      byId('result-badge').textContent = 'simulação';
+      byId('company-time').textContent = '--';
+      byId('full-years').textContent = '--';
+      byId('base-days').textContent = '--';
+      byId('additional-days').textContent = '--';
+      byId('total-days').textContent = '--';
+      byId('daily-value').textContent = '--';
+      byId('estimated-label').textContent = 'Valor estimado';
+      byId('estimated-value').textContent = '--';
+      byId('estimated-card').className = 'rounded-xl bg-emerald-50 p-4';
+      byId('estimated-label').className = 'text-xs font-bold uppercase tracking-wide text-emerald-700';
+      byId('estimated-value').className = 'mt-1 text-3xl font-extrabold text-emerald-800';
+      byId('dynamic-note').className = 'mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700';
+      byId('dynamic-note').textContent = 'Preencha salário, admissão e desligamento para ver a simulação do aviso prévio.';
+    };
+
+    const calculateNotice = ({ salary, startDate, endDate, type }) => {
+      const fullYears = fullYearsBetween(startDate, endDate);
+      const baseDays = 30;
+      const rawAdditionalDays = fullYears * 3;
+      const totalDays = Math.min(90, baseDays + rawAdditionalDays);
+      const additionalDays = totalDays - baseDays;
+      const dailyValue = salary / 30;
+      const estimatedValue = totalDays * dailyValue;
+
+      return {
+        companyTime: formatCompanyTime(startDate, endDate),
+        fullYears,
+        baseDays,
+        additionalDays,
+        totalDays,
+        dailyValue,
+        estimatedValue,
+        note: getTypeNote(type, totalDays, estimatedValue)
+      };
+    };
+
+    const renderResult = (result, type) => {
+      byId('result-status').textContent = 'Cálculo realizado';
+      byId('company-time').textContent = result.companyTime;
+      byId('full-years').textContent = String(result.fullYears);
+      byId('base-days').textContent = `${result.baseDays} dias`;
+      byId('additional-days').textContent = `${result.additionalDays} dias`;
+      byId('total-days').textContent = `${result.totalDays} dias`;
+      byId('daily-value').textContent = brl(result.dailyValue);
+      byId('estimated-value').textContent = brl(result.estimatedValue);
+      byId('dynamic-note').textContent = result.note;
+
+      if (type === 'desconto') {
+        byId('result-badge').textContent = 'possível desconto';
+        byId('estimated-label').textContent = 'Possível desconto';
+        byId('estimated-card').className = 'rounded-xl bg-red-50 p-4';
+        byId('estimated-label').className = 'text-xs font-bold uppercase tracking-wide text-red-700';
+        byId('estimated-value').className = 'mt-1 text-3xl font-extrabold text-red-800';
+        byId('dynamic-note').className = 'mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-6 text-red-900';
+        return;
+      }
+
+      if (type === 'trabalhado') {
+        byId('result-badge').textContent = 'dias a cumprir';
+        byId('estimated-label').textContent = 'Referência salarial';
+        byId('estimated-card').className = 'rounded-xl bg-blue-50 p-4';
+        byId('estimated-label').className = 'text-xs font-bold uppercase tracking-wide text-blue-700';
+        byId('estimated-value').className = 'mt-1 text-3xl font-extrabold text-blue-800';
+        byId('dynamic-note').className = 'mt-5 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-6 text-blue-900';
+        return;
+      }
+
+      byId('result-badge').textContent = 'verba estimada';
+      byId('estimated-label').textContent = 'Verba estimada';
+      byId('estimated-card').className = 'rounded-xl bg-emerald-50 p-4';
+      byId('estimated-label').className = 'text-xs font-bold uppercase tracking-wide text-emerald-700';
+      byId('estimated-value').className = 'mt-1 text-3xl font-extrabold text-emerald-800';
+      byId('dynamic-note').className = 'mt-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm leading-6 text-emerald-900';
+    };
+
+    byId('calculator-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const salary = Number(byId('salary').value);
+      const startDate = parseDate(byId('start-date').value);
+      const endDate = parseDate(byId('end-date').value);
+      const type = byId('notice-type').value;
+
+      if (!salary || salary <= 0 || !startDate || !endDate || endDate < startDate) {
+        setInitialState();
+        byId('result-status').textContent = 'Dados incompletos';
+        byId('dynamic-note').className = 'mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900';
+        byId('dynamic-note').textContent = 'Informe um salário válido e datas coerentes para calcular o aviso prévio.';
+        return;
+      }
+
+      renderResult(calculateNotice({ salary, startDate, endDate, type }), type);
+    });
+
+    byId('clear-button').addEventListener('click', () => {
+      byId('salary').value = '';
+      byId('start-date').value = '';
+      byId('end-date').value = '';
+      byId('notice-type').value = 'indenizado';
+      setInitialState();
+    });
+
+    setInitialState();
+  </script>
+</body>
+</html>
