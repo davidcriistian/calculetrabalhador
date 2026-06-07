@@ -11,8 +11,7 @@
     "publishedAt": "2026-06-04",
     "updatedAt": "2026-06-04",
     "featured": true,
-    "showOnHome": true,
-    "homeOrder": 1
+    "showOnHome": false
   },
   {
     "id": "como-calcular-aviso-previo",
@@ -24,7 +23,9 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 1
   },
   {
     "id": "como-funciona-adicional-noturno",
@@ -36,7 +37,9 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 2
   },
   {
     "id": "insalubridade-quem-tem-direito",
@@ -48,7 +51,9 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 3
   },
   {
     "id": "como-calcular-ferias",
@@ -60,7 +65,9 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 4
   },
   {
     "id": "como-calcular-decimo-terceiro",
@@ -72,7 +79,9 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 5
   },
   {
     "id": "seguro-desemprego-quem-tem-direito",
@@ -84,6 +93,8 @@
     "cor": "#1d4ed8",
     "corBg": "#dbeafe",
     "publishedAt": "2026-05-01",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-05-01",
+    "showOnHome": true,
+    "homeOrder": 6
   }
 ]
