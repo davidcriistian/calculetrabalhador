@@ -13,5 +13,17 @@
     "featured": true,
     "showOnHome": true,
     "homeOrder": 1
+  },
+  {
+    "id": "como-calcular-aviso-previo",
+    "title": "Como Calcular Aviso Prévio em 2026",
+    "slug": "/blog/como-calcular-aviso-previo",
+    "category": "CLT",
+    "description": "Aprenda como calcular aviso prévio em 2026, entenda aviso trabalhado, indenizado e use nossa calculadora gratuita.",
+    "tempo": "8 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-05-01",
+    "updatedAt": "2026-05-01"
   }
 ]
