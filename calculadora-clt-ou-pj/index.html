@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora CLT ou PJ 2026: Compare Salário, Benefícios e Custos</title>
+  <meta name="description" content="Compare uma proposta CLT com PJ em 2026, estime salário líquido, benefícios, FGTS, férias, 13º, impostos e veja qual cenário pode compensar." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-clt-ou-pj/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora CLT ou PJ 2026: Compare Salário, Benefícios e Custos" />
+  <meta property="og:description" content="Compare CLT e PJ com salário líquido, benefícios, FGTS, férias, 13º, impostos e reservas mensais." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-clt-ou-pj/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"A calculadora diz se é melhor ser CLT ou PJ?","acceptedAnswer":{"@type":"Answer","text":"Não. A calculadora compara estimativas financeiras e mostra diferenças entre cenários, mas a decisão depende de riscos, estabilidade, benefícios, rotina e orientação profissional."}},
+      {"@type":"Question","name":"Por que o PJ precisa ganhar mais que o CLT?","acceptedAnswer":{"@type":"Answer","text":"Porque o PJ geralmente precisa pagar impostos, contador, benefícios próprios e reservas para férias, 13º e períodos sem trabalho."}},
+      {"@type":"Question","name":"O cálculo CLT considera salário líquido?","acceptedAnswer":{"@type":"Answer","text":"Sim. A estimativa usa INSS e IRRF aproximados, seguindo a lógica de salário líquido já utilizada no projeto para 2026."}},
+      {"@type":"Question","name":"A calculadora considera FGTS?","acceptedAnswer":{"@type":"Answer","text":"Sim. O cenário CLT inclui FGTS mensal estimado em 8% do salário bruto, tratado como valor de proteção patrimonial."}},
+      {"@type":"Question","name":"A calculadora considera 13º salário?","acceptedAnswer":{"@type":"Answer","text":"Sim. No CLT, o 13º é mensalizado como salário bruto dividido por 12. No PJ, a reserva de 13º é informada pelo usuário."}},
+      {"@type":"Question","name":"A calculadora considera férias?","acceptedAnswer":{"@type":"Answer","text":"Sim. No CLT, considera férias mais 1/3 mensalizadas. No PJ, a reserva mensal para férias é informada pelo usuário."}},
+      {"@type":"Question","name":"Benefícios entram na comparação?","acceptedAnswer":{"@type":"Answer","text":"Sim. O usuário pode informar benefícios CLT e custos de benefícios pagos por conta própria no cenário PJ."}},
+      {"@type":"Question","name":"Qual percentual de imposto PJ devo usar?","acceptedAnswer":{"@type":"Answer","text":"Use uma estimativa compatível com seu regime, atividade e orientação contábil. O percentual pode variar bastante entre MEI, Simples Nacional e outros enquadramentos."}},
+      {"@type":"Question","name":"O cálculo vale para MEI?","acceptedAnswer":{"@type":"Answer","text":"Pode servir como referência, mas o MEI tem limites, regras próprias e restrições de atividade. Confirme com contador antes de decidir."}},
+      {"@type":"Question","name":"O cálculo vale para Simples Nacional?","acceptedAnswer":{"@type":"Answer","text":"Serve como simulação aproximada se o percentual de imposto informado refletir o anexo, faixa e condições da empresa."}},
+      {"@type":"Question","name":"A calculadora inclui custo contábil?","acceptedAnswer":{"@type":"Answer","text":"Sim. Há campo específico para custo contábil mensal no cenário PJ."}},
+      {"@type":"Question","name":"A calculadora inclui INSS do PJ?","acceptedAnswer":{"@type":"Answer","text":"Sim. Há campo para informar contribuição mensal ou INSS/autonomia no cenário PJ."}},
+      {"@type":"Question","name":"O valor PJ necessário é oficial?","acceptedAnswer":{"@type":"Answer","text":"Não. O PJ necessário é uma estimativa de referência para aproximar o valor CLT mensal estimado, não um cálculo oficial."}},
+      {"@type":"Question","name":"CLT sempre é mais seguro?","acceptedAnswer":{"@type":"Answer","text":"Em geral, CLT oferece mais proteções trabalhistas, mas a análise final depende de estabilidade, benefícios, carreira, renda e perfil de risco."}},
+      {"@type":"Question","name":"PJ sempre ganha mais?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. Um valor PJ maior no contrato pode virar menor disponibilidade real após impostos, custos e reservas."}},
+      {"@type":"Question","name":"Como comparar plano de saúde?","acceptedAnswer":{"@type":"Answer","text":"No CLT, informe o valor estimado do benefício recebido. No PJ, informe quanto você pagaria por conta própria."}},
+      {"@type":"Question","name":"Vale-refeição e vale-alimentação entram como renda?","acceptedAnswer":{"@type":"Answer","text":"Na comparação financeira, eles podem ser tratados como benefício mensal porque reduzem gastos pessoais, mesmo não sendo salário líquido."}},
+      {"@type":"Question","name":"A calculadora considera seguro-desemprego?","acceptedAnswer":{"@type":"Answer","text":"Não como valor mensal direto. O seguro-desemprego é uma proteção possível no CLT em certos desligamentos, mas depende de regras específicas."}},
+      {"@type":"Question","name":"A calculadora considera rescisão CLT?","acceptedAnswer":{"@type":"Answer","text":"Não detalha verbas rescisórias. Ela compara valor mensal estimado; para rescisão, use a calculadora específica do site."}},
+      {"@type":"Question","name":"Devo colocar reservas no PJ?","acceptedAnswer":{"@type":"Answer","text":"Sim. Reservas para férias, 13º, impostos e períodos sem receita ajudam a comparar PJ com CLT de forma mais realista."}},
+      {"@type":"Question","name":"A empresa pode contratar PJ com rotina de empregado?","acceptedAnswer":{"@type":"Answer","text":"A relação deve respeitar a realidade do contrato. Subordinação, pessoalidade, habitualidade e onerosidade podem gerar riscos trabalhistas."}},
+      {"@type":"Question","name":"O resultado substitui análise de contador?","acceptedAnswer":{"@type":"Answer","text":"Não. A calculadora é educativa e não substitui análise contábil, trabalhista, tributária ou jurídica."}},
+      {"@type":"Question","name":"Posso usar campos opcionais como zero?","acceptedAnswer":{"@type":"Answer","text":"Sim. Benefícios, custos e reservas opcionais podem ficar em zero se não se aplicarem ao seu caso."}},
+      {"@type":"Question","name":"Quando os cenários estão próximos, o que analisar?","acceptedAnswer":{"@type":"Answer","text":"Analise estabilidade, benefícios, carga tributária real, possibilidade de crescimento, riscos contratuais e proteção em caso de desligamento."}}
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-20 border-b border-slate-200 bg-white shadow-sm">
+    <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-4">
+      <button id="siteMenuOpen" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+          <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="fixed inset-0 z-40 hidden bg-black/40 backdrop-blur-[2px]"></div>
+    <aside id="siteMenuDrawer" class="fixed inset-y-0 left-0 z-50 flex w-[280px] -translate-x-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out" aria-hidden="true">
+      <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+        <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            </svg>
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
+            <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
+          </span>
+        </a>
+        <button id="siteMenuClose" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="4" x2="18" y2="18"></line>
+            <line x1="18" y1="4" x2="4" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex-1 overflow-y-auto p-3" aria-label="Menu principal">
+        <a href="/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Calculadoras</a>
+        <a href="/saque-aniversario-fgts/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
+        <a href="/salario-liquido-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
+        <a href="/calculadora-rescisao-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
+        <a href="/calculadora-13-salario-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
+        <a href="/calculadora-ferias-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
+        <a href="/ferramentas/" class="block rounded-lg bg-blue-50 px-4 py-3 font-bold text-blue-700">Ferramentas</a>
+        <a href="/sobre/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Sobre</a>
+        <a href="/contato/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Contato</a>
+        <a href="/politica-de-privacidade/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Privacidade</a>
+      </nav>
+
+      <div class="border-t border-slate-200 px-5 py-4">
+        <p class="text-xs text-slate-400">&copy; 2026 Calcule Trabalhador</p>
+      </div>
+    </aside>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora CLT ou PJ</h1>
+
+    <section class="mt-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Compare proposta CLT e PJ com estimativas mensais</h2>
+      <p class="mt-3 leading-relaxed text-slate-700">A <strong>Calculadora CLT ou PJ</strong> ajuda a comparar uma proposta com carteira assinada e uma proposta como pessoa jurídica. A ferramenta estima salário líquido, benefícios, FGTS, férias, 13º, impostos, custos e reservas para mostrar uma visão financeira mais completa.</p>
+      <p class="mt-3 leading-relaxed text-slate-700">Use o resultado como referência educativa. A escolha entre CLT e PJ envolve também segurança, estabilidade, regime tributário, contrato, riscos trabalhistas e planejamento de longo prazo.</p>
+      <a href="#calculadora" class="mt-5 inline-block rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">Comparar CLT e PJ</a>
+    </section>
+
+    <section id="calculadora" class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Comparador CLT ou PJ</h2>
+      <p class="mt-2 text-slate-600">Preencha os dois cenários e clique em <strong>Calcular comparação</strong>. Campos opcionais podem ficar zerados.</p>
+
+      <div class="mt-5 grid gap-5 lg:grid-cols-2">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Cenário CLT</h3>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltSalario">Salário bruto CLT (R$)</label>
+              <input id="cltSalario" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Ex: 5000" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltBeneficios">Benefícios mensais (R$)</label>
+              <input id="cltBeneficios" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltVaVr">VA/VR mensal (R$)</label>
+              <input id="cltVaVr" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltVt">Vale-transporte (R$)</label>
+              <input id="cltVt" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltSaude">Plano/outros benefícios (R$)</label>
+              <input id="cltSaude" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="cltDependentes">Dependentes para IRRF</label>
+              <input id="cltDependentes" type="number" min="0" step="1" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="mb-1 block text-sm font-semibold" for="cltDescontos">Outros descontos mensais (R$)</label>
+              <input id="cltDescontos" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Cenário PJ</h3>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjValor">Valor mensal PJ (R$)</label>
+              <input id="pjValor" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Ex: 8000" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjImposto">Imposto estimado (%)</label>
+              <input id="pjImposto" type="number" min="0" max="100" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="6" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjContabilidade">Custo contábil mensal (R$)</label>
+              <input id="pjContabilidade" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjBeneficios">Benefícios próprios (R$)</label>
+              <input id="pjBeneficios" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjReservaFerias">Reserva para férias (R$)</label>
+              <input id="pjReservaFerias" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjReserva13">Reserva para 13º (R$)</label>
+              <input id="pjReserva13" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjInss">INSS/contribuição (R$)</label>
+              <input id="pjInss" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="pjOutros">Outros custos (R$)</label>
+              <input id="pjOutros" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        <button id="btnCalcular" class="rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">Calcular comparação</button>
+        <button id="btnLimpar" class="rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100">Limpar</button>
+      </div>
+
+      <div id="resultado" class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <h3 class="text-lg font-bold text-slate-900">Resultado da comparação</h3>
+        <div id="resultadoVazio" class="mt-4 rounded-lg border border-dashed border-slate-300 bg-white p-5 text-center font-semibold text-slate-500">Aguardando dados</div>
+        <div id="resultadoConteudo" class="hidden">
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <div class="rounded-lg border border-blue-200 bg-blue-50 p-3"><p class="text-xs text-slate-600">Valor CLT mensal estimado</p><p id="resCltTotal" class="text-lg font-bold text-blue-900">R$ 0,00</p></div>
+            <div class="rounded-lg border border-green-200 bg-green-50 p-3"><p class="text-xs text-slate-600">PJ real disponível</p><p id="resPjDisponivel" class="text-lg font-bold text-green-700">R$ 0,00</p></div>
+            <div class="rounded-lg border border-slate-200 bg-white p-3"><p class="text-xs text-slate-500">Diferença mensal</p><p id="resDiferencaMensal" class="text-lg font-bold text-slate-900">R$ 0,00</p></div>
+            <div class="rounded-lg border border-slate-200 bg-white p-3"><p class="text-xs text-slate-500">Diferença anual</p><p id="resDiferencaAnual" class="text-lg font-bold text-slate-900">R$ 0,00</p></div>
+            <div class="rounded-lg border border-indigo-200 bg-indigo-50 p-3"><p class="text-xs text-slate-600">PJ necessário aproximado</p><p id="resPjNecessario" class="text-lg font-bold text-indigo-900">R$ 0,00</p></div>
+          </div>
+
+          <div class="mt-4 grid gap-4 lg:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <h4 class="font-bold text-slate-900">Memória CLT</h4>
+              <table class="mt-3 w-full text-sm">
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-2">Salário líquido aproximado</td><td id="memCltLiquido" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">INSS estimado</td><td id="memCltInss" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">IRRF estimado</td><td id="memCltIrrf" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">13º mensalizado</td><td id="memClt13" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Férias + 1/3 mensalizado</td><td id="memCltFerias" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">FGTS mensal estimado</td><td id="memCltFgts" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Benefícios totais</td><td id="memCltBeneficios" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <h4 class="font-bold text-slate-900">Memória PJ</h4>
+              <table class="mt-3 w-full text-sm">
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-2">Valor mensal PJ</td><td id="memPjBruto" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Imposto estimado</td><td id="memPjImposto" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Custos mensais</td><td id="memPjCustos" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Reservas mensais</td><td id="memPjReservas" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Líquido PJ estimado</td><td id="memPjLiquido" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                  <tr><td class="py-2">Real disponível após reservas</td><td id="memPjReal" class="py-2 text-right font-semibold">R$ 0,00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p id="resInterpretacao" class="mt-4 rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm font-semibold text-blue-900"></p>
+          <p class="mt-3 text-sm text-slate-600">O PJ necessário é uma estimativa de referência, não um valor oficial. Ajuste impostos, benefícios e reservas conforme sua realidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">O que comparar entre CLT e PJ</h2>
+      <p class="mt-3">A comparação entre CLT e PJ não deve olhar apenas o valor bruto da proposta. No CLT, entram salário líquido, benefícios, FGTS, férias, 13º e proteções em caso de desligamento. No PJ, entram receita mensal, impostos, contador, contribuição previdenciária, benefícios pagos por conta própria e reservas para períodos sem remuneração.</p>
+      <p class="mt-3">Por isso, duas propostas aparentemente parecidas podem ter resultados bem diferentes. A análise mais útil transforma direitos, benefícios e custos em valores mensais estimados para deixar os cenários comparáveis.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Por que o salário PJ precisa ser maior</h2>
+      <p class="mt-3">O valor PJ precisa ser maior porque, em regra, ele não vem acompanhado dos mesmos direitos automáticos da CLT. O profissional precisa reservar dinheiro para férias, 13º, impostos, contador, plano de saúde, previdência e períodos sem contrato ou sem faturamento.</p>
+      <p class="mt-3">Um contrato PJ pode parecer melhor quando o valor mensal é alto, mas a vantagem diminui se os custos e reservas forem ignorados. A simulação ajuda justamente a enxergar o valor real disponível.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Direitos considerados na CLT</h2>
+      <p class="mt-3">Nesta comparação, o cenário CLT considera salário líquido aproximado, 13º mensalizado, férias com adicional de 1/3 mensalizadas, FGTS mensal estimado e benefícios informados pelo usuário. Esses itens ajudam a aproximar o valor econômico total da proposta com carteira assinada.</p>
+      <p class="mt-3">A ferramenta não calcula todos os direitos possíveis, como verbas rescisórias detalhadas, seguro-desemprego ou adicionais específicos. Para esses casos, use as calculadoras próprias do portal.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Custos comuns do PJ</h2>
+      <p class="mt-3">No PJ, custos comuns incluem imposto sobre faturamento, contabilidade, emissão de nota, contribuição previdenciária, plano de saúde, equipamentos, softwares, deslocamento, benefícios que antes eram pagos pela empresa e reserva para meses sem receita.</p>
+      <p class="mt-3">A calculadora permite informar esses custos separadamente para evitar que o valor bruto do contrato seja confundido com renda disponível.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Quando PJ pode compensar</h2>
+      <p class="mt-3">PJ pode compensar quando o valor contratado é suficiente para cobrir impostos, custos, reservas e ainda deixar renda disponível maior que o valor econômico da CLT. Também pode ser interessante para quem busca autonomia, múltiplos clientes ou maior flexibilidade comercial.</p>
+      <p class="mt-3">Mesmo assim, a análise deve considerar riscos de concentração em um único cliente, falta de benefícios, ausência de proteção típica do emprego e necessidade de disciplina financeira.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Quando CLT pode ser mais seguro</h2>
+      <p class="mt-3">CLT pode ser mais seguro quando o trabalhador valoriza estabilidade relativa, benefícios corporativos, FGTS, férias remuneradas, 13º salário, proteção previdenciária e regras mais claras de desligamento. Para muitas pessoas, a previsibilidade vale tanto quanto uma diferença mensal pequena.</p>
+      <p class="mt-3">Quando a diferença entre CLT e PJ é pequena, costuma ser prudente analisar a proteção do pacote CLT antes de decidir apenas pelo valor bruto.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Limitações da calculadora</h2>
+      <p class="mt-3">A calculadora usa fórmulas aproximadas e depende dos dados informados. Impostos de PJ podem variar conforme regime tributário, atividade, município, anexo do Simples, pró-labore e orientação contábil. O cálculo CLT também pode variar por descontos de folha, convenção coletiva e benefícios reais.</p>
+      <p class="mt-3">Use o resultado como ponto de partida para conversa com contador, advogado, RH ou consultor financeiro, principalmente antes de aceitar uma mudança de regime.</p>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">FAQ - Perguntas frequentes</h2>
+      <div class="mt-4 space-y-3">
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora diz se é melhor ser CLT ou PJ?</summary><p class="mt-2 text-sm">Não. Ela compara estimativas financeiras e mostra diferenças entre cenários, mas a decisão depende de riscos, estabilidade, benefícios e orientação profissional.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Por que o PJ precisa ganhar mais que o CLT?</summary><p class="mt-2 text-sm">Porque o PJ normalmente paga impostos, contador, benefícios próprios e reservas para férias, 13º e períodos sem receita.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">O cálculo CLT considera salário líquido?</summary><p class="mt-2 text-sm">Sim. A estimativa usa INSS e IRRF aproximados, seguindo a lógica de salário líquido já utilizada no projeto para 2026.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora considera FGTS?</summary><p class="mt-2 text-sm">Sim. O cenário CLT inclui FGTS mensal estimado em 8% do salário bruto.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora considera 13º salário?</summary><p class="mt-2 text-sm">Sim. No CLT, o 13º é mensalizado como salário bruto dividido por 12. No PJ, a reserva é informada pelo usuário.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora considera férias?</summary><p class="mt-2 text-sm">Sim. No CLT, considera férias mais 1/3 mensalizadas. No PJ, a reserva mensal para férias é informada pelo usuário.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Benefícios entram na comparação?</summary><p class="mt-2 text-sm">Sim. Você pode informar benefícios CLT e custos de benefícios pagos por conta própria no PJ.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Qual percentual de imposto PJ devo usar?</summary><p class="mt-2 text-sm">Use uma estimativa compatível com seu regime, atividade e orientação contábil.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">O cálculo vale para MEI?</summary><p class="mt-2 text-sm">Pode servir como referência, mas o MEI tem limites e restrições próprias. Confirme com contador.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">O cálculo vale para Simples Nacional?</summary><p class="mt-2 text-sm">Serve como simulação aproximada se o percentual informado refletir o anexo, faixa e condições da empresa.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora inclui custo contábil?</summary><p class="mt-2 text-sm">Sim. Há campo específico para custo contábil mensal no cenário PJ.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora inclui INSS do PJ?</summary><p class="mt-2 text-sm">Sim. Há campo para informar contribuição mensal ou INSS/autonomia no cenário PJ.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">O valor PJ necessário é oficial?</summary><p class="mt-2 text-sm">Não. É uma estimativa de referência para aproximar o valor CLT mensal estimado.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">CLT sempre é mais seguro?</summary><p class="mt-2 text-sm">Em geral, CLT oferece mais proteções trabalhistas, mas a análise final depende do caso.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">PJ sempre ganha mais?</summary><p class="mt-2 text-sm">Não. O contrato PJ pode parecer maior, mas ficar menor após custos, impostos e reservas.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Como comparar plano de saúde?</summary><p class="mt-2 text-sm">No CLT, informe o valor do benefício recebido. No PJ, informe quanto pagaria por conta própria.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Vale-refeição e vale-alimentação entram como renda?</summary><p class="mt-2 text-sm">Na comparação financeira, podem ser tratados como benefício mensal porque reduzem gastos pessoais.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora considera seguro-desemprego?</summary><p class="mt-2 text-sm">Não como valor mensal direto. Esse benefício depende de regras específicas de desligamento.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A calculadora considera rescisão CLT?</summary><p class="mt-2 text-sm">Não detalha verbas rescisórias. Para isso, use a calculadora de rescisão do site.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Devo colocar reservas no PJ?</summary><p class="mt-2 text-sm">Sim. Reservas para férias, 13º, impostos e meses sem receita tornam a comparação mais realista.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">A empresa pode contratar PJ com rotina de empregado?</summary><p class="mt-2 text-sm">A relação deve respeitar a realidade contratual. Subordinação e habitualidade podem gerar riscos trabalhistas.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">O resultado substitui análise de contador?</summary><p class="mt-2 text-sm">Não. A calculadora é educativa e não substitui análise contábil, trabalhista, tributária ou jurídica.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Posso usar campos opcionais como zero?</summary><p class="mt-2 text-sm">Sim. Benefícios, custos e reservas opcionais podem ficar em zero se não se aplicarem.</p></details>
+        <details class="rounded-lg border border-slate-200 bg-slate-50 p-3"><summary class="cursor-pointer font-semibold">Quando os cenários estão próximos, o que analisar?</summary><p class="mt-2 text-sm">Analise estabilidade, benefícios, tributação real, crescimento, riscos contratuais e proteção em caso de desligamento.</p></details>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Outras calculadoras trabalhistas</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        <a href="/salario-liquido-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">Salário Líquido CLT 2026</h3><p class="mt-1 text-sm text-slate-600">Compare salário bruto e líquido com INSS e IRRF.</p></a>
+        <a href="/calculadora-ferias-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">Férias CLT 2026</h3><p class="mt-1 text-sm text-slate-600">Calcule férias, 1/3, abono e descontos.</p></a>
+        <a href="/calculadora-13-salario-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">13º Salário 2026</h3><p class="mt-1 text-sm text-slate-600">Estime parcelas e descontos do décimo terceiro.</p></a>
+        <a href="/calculadora-rescisao-clt-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">Rescisão CLT 2026</h3><p class="mt-1 text-sm text-slate-600">Simule verbas rescisórias e FGTS.</p></a>
+        <a href="/calculadora-seguro-desemprego-2026/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">Seguro-Desemprego 2026</h3><p class="mt-1 text-sm text-slate-600">Confira estimativa de parcelas do benefício.</p></a>
+        <a href="/ferramentas/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 hover:border-blue-300 hover:bg-blue-50"><h3 class="font-bold text-slate-900">Todas as ferramentas</h3><p class="mt-1 text-sm text-slate-600">Veja a galeria completa de calculadoras.</p></a>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-red-200 bg-red-50 p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-red-900">Aviso legal</h2>
+      <p class="mt-3 text-red-900">Esta calculadora é educativa e usa estimativas. Ela não substitui análise contábil, trabalhista, tributária ou jurídica.</p>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 px-4 py-10 text-slate-300">
+    <div class="mx-auto max-w-6xl">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <a href="/" class="inline-flex items-center gap-3 text-white no-underline">
+          <span class="grid h-10 w-10 place-items-center rounded-lg bg-blue-600 font-bold text-white">CT</span>
+          <span class="text-lg font-bold">Calcule Trabalhador</span>
+        </a>
+        <p class="text-sm text-slate-400">Calculadoras trabalhistas gratuitas para simulações educativas.</p>
+      </div>
+      <div class="mt-8 grid gap-8 md:grid-cols-2">
+        <nav aria-label="Links das calculadoras">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Calculadoras</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/salario-liquido-clt-2026/" class="hover:text-white">Salário Líquido CLT 2026</a>
+            <a href="/calculadora-rescisao-clt-2026/" class="hover:text-white">Rescisão CLT 2026</a>
+            <a href="/calculadora-ferias-clt-2026/" class="hover:text-white">Férias CLT 2026</a>
+            <a href="/calculadora-13-salario-2026/" class="hover:text-white">13º Salário 2026</a>
+            <a href="/calculadora-horas-extras-clt-2026/" class="hover:text-white">Horas Extras CLT 2026</a>
+            <a href="/calculadora-seguro-desemprego-2026/" class="hover:text-white">Seguro-Desemprego 2026</a>
+          </div>
+        </nav>
+        <nav aria-label="Links institucionais">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Institucional</h2>
+          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <a href="/" class="hover:text-white">Home</a>
+            <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
+            <a href="/sobre/" class="hover:text-white">Sobre</a>
+            <a href="/contato/" class="hover:text-white">Contato</a>
+            <a href="/politica-de-privacidade/" class="hover:text-white">Política de Privacidade</a>
+          </div>
+        </nav>
+      </div>
+      <div class="mt-8 border-t border-slate-800 pt-6 text-sm text-slate-400">
+        <p>As informações e resultados apresentados têm finalidade educativa e podem variar conforme regras internas, convenções coletivas e atualizações legais.</p>
+        <p class="mt-3">&copy; 2026 Calcule Trabalhador. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+      const openMenu = () => {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+      };
+      const closeMenu = () => {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+      };
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+
+  <script>
+    const INSS_FAIXAS_2026 = [
+      { ate: 1621.0, aliquota: 0.075 },
+      { ate: 2902.84, aliquota: 0.09 },
+      { ate: 4354.27, aliquota: 0.12 },
+      { ate: 8475.55, aliquota: 0.14 },
+    ];
+    const IRRF_FAIXAS_2026 = [
+      { ate: 2428.8, aliquota: 0, deducao: 0 },
+      { ate: 2826.65, aliquota: 0.075, deducao: 182.16 },
+      { ate: 3751.05, aliquota: 0.15, deducao: 394.16 },
+      { ate: 4664.68, aliquota: 0.225, deducao: 675.49 },
+      { ate: Infinity, aliquota: 0.275, deducao: 908.73 },
+    ];
+    const TETO_INSS_2026 = 8475.55;
+    const DEDUCAO_DEPENDENTE_2026 = 189.59;
+    const DESCONTO_SIMPLIFICADO_MENSAL_2026 = 607.2;
+
+    const byId = (id) => document.getElementById(id);
+    const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
+    const numberValue = (id) => Math.max(0, parseFloat(byId(id).value || '0') || 0);
+
+    function calcularINSS(salarioBruto) {
+      if (salarioBruto <= 0) return 0;
+      const base = Math.min(salarioBruto, TETO_INSS_2026);
+      let anterior = 0;
+      let desconto = 0;
+      INSS_FAIXAS_2026.forEach((faixa) => {
+        const baseFaixa = Math.max(0, Math.min(base, faixa.ate) - anterior);
+        desconto += baseFaixa * faixa.aliquota;
+        anterior = faixa.ate;
+      });
+      return desconto;
+    }
+
+    function calcularIRRF({ salarioBruto, inss, dependentes }) {
+      const deducaoDependentes = Math.max(0, dependentes) * DEDUCAO_DEPENDENTE_2026;
+      const deducaoEscolhida = Math.max(deducaoDependentes, DESCONTO_SIMPLIFICADO_MENSAL_2026);
+      const baseCalculo = Math.max(0, salarioBruto - inss - deducaoEscolhida);
+      const faixa = IRRF_FAIXAS_2026.find((f) => baseCalculo <= f.ate) || IRRF_FAIXAS_2026[IRRF_FAIXAS_2026.length - 1];
+      const impostoBruto = Math.max(0, baseCalculo * faixa.aliquota - faixa.deducao);
+      let redutor2026 = 0;
+      if (baseCalculo <= 5000) {
+        redutor2026 = impostoBruto;
+      } else if (baseCalculo <= 7350) {
+        redutor2026 = Math.max(0, 978.62 - 0.133145 * baseCalculo);
+      }
+      return Math.max(0, impostoBruto - Math.min(impostoBruto, redutor2026));
+    }
+
+    function setMoney(id, value) {
+      byId(id).textContent = brl(value);
+    }
+
+    function limpar() {
+      ['cltSalario', 'pjValor'].forEach((id) => { byId(id).value = ''; });
+      ['cltBeneficios', 'cltVaVr', 'cltVt', 'cltSaude', 'cltDependentes', 'cltDescontos', 'pjContabilidade', 'pjBeneficios', 'pjReservaFerias', 'pjReserva13', 'pjInss', 'pjOutros'].forEach((id) => { byId(id).value = '0'; });
+      byId('pjImposto').value = '6';
+      byId('resultadoVazio').classList.remove('hidden');
+      byId('resultadoConteudo').classList.add('hidden');
+    }
+
+    function calcularComparacao() {
+      const cltSalario = numberValue('cltSalario');
+      const pjValor = numberValue('pjValor');
+      const impostoPercentual = Math.min(100, numberValue('pjImposto'));
+      byId('pjImposto').value = impostoPercentual;
+
+      if (!cltSalario || !pjValor) {
+        alert('Informe o salário CLT e o valor mensal PJ para calcular.');
+        return;
+      }
+
+      const cltBeneficios = numberValue('cltBeneficios') + numberValue('cltVaVr') + numberValue('cltVt') + numberValue('cltSaude');
+      const cltDependentes = Math.floor(numberValue('cltDependentes'));
+      byId('cltDependentes').value = cltDependentes;
+      const cltDescontos = numberValue('cltDescontos');
+      const cltInss = calcularINSS(cltSalario);
+      const cltIrrf = calcularIRRF({ salarioBruto: cltSalario, inss: cltInss, dependentes: cltDependentes });
+      const cltLiquido = Math.max(0, cltSalario - cltInss - cltIrrf - cltDescontos);
+      const clt13 = cltSalario / 12;
+      const cltFerias = (cltSalario + cltSalario / 3) / 12;
+      const cltFgts = cltSalario * 0.08;
+      const cltTotal = cltLiquido + clt13 + cltFerias + cltFgts + cltBeneficios;
+
+      const pjImposto = pjValor * (impostoPercentual / 100);
+      const pjCustosSemImposto = numberValue('pjContabilidade') + numberValue('pjBeneficios') + numberValue('pjInss') + numberValue('pjOutros');
+      const pjCustos = pjImposto + pjCustosSemImposto;
+      const pjReservas = numberValue('pjReservaFerias') + numberValue('pjReserva13');
+      const pjLiquido = Math.max(0, pjValor - pjCustos);
+      const pjRealDisponivel = Math.max(0, pjValor - pjCustos - pjReservas);
+      const diferencaMensal = pjRealDisponivel - cltTotal;
+      const diferencaAnual = diferencaMensal * 12;
+      const pjNecessario = cltTotal + pjCustos + pjReservas;
+
+      setMoney('resCltTotal', cltTotal);
+      setMoney('resPjDisponivel', pjRealDisponivel);
+      setMoney('resDiferencaMensal', diferencaMensal);
+      setMoney('resDiferencaAnual', diferencaAnual);
+      setMoney('resPjNecessario', pjNecessario);
+      setMoney('memCltLiquido', cltLiquido);
+      setMoney('memCltInss', cltInss);
+      setMoney('memCltIrrf', cltIrrf);
+      setMoney('memClt13', clt13);
+      setMoney('memCltFerias', cltFerias);
+      setMoney('memCltFgts', cltFgts);
+      setMoney('memCltBeneficios', cltBeneficios);
+      setMoney('memPjBruto', pjValor);
+      setMoney('memPjImposto', pjImposto);
+      setMoney('memPjCustos', pjCustos);
+      setMoney('memPjReservas', pjReservas);
+      setMoney('memPjLiquido', pjLiquido);
+      setMoney('memPjReal', pjRealDisponivel);
+
+      let interpretacao = 'Cenários próximos: analisar benefícios, riscos e estabilidade antes de decidir.';
+      if (diferencaMensal > cltTotal * 0.05) {
+        interpretacao = `PJ parece maior neste cenário. Ainda assim, confira se ${brl(pjNecessario)} cobre custos, reservas e riscos de forma adequada.`;
+      } else if (diferencaMensal < -(cltTotal * 0.05)) {
+        interpretacao = `CLT parece mais vantajoso neste cenário, considerando benefícios, FGTS, férias e 13º mensalizados.`;
+      }
+      byId('resInterpretacao').textContent = interpretacao;
+      byId('resultadoVazio').classList.add('hidden');
+      byId('resultadoConteudo').classList.remove('hidden');
+    }
+
+    byId('btnCalcular').addEventListener('click', calcularComparacao);
+    byId('btnLimpar').addEventListener('click', limpar);
+  </script>
+</body>
+</html>

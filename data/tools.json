@@ -147,5 +147,19 @@
     "featured": true,
     "showOnHome": false,
     "updatedAt": "2026-06-04"
+  },
+  {
+    "id": "calculadora-clt-ou-pj",
+    "title": "Calculadora CLT ou PJ",
+    "slug": "/calculadora-clt-ou-pj/",
+    "category": "Trabalhista",
+    "description": "Compare uma proposta CLT com PJ, estimando salário líquido, benefícios, FGTS, férias, 13º, impostos e custos.",
+    "icone": "CT",
+    "badge": null,
+    "badgeColor": null,
+    "published": true,
+    "featured": false,
+    "showOnHome": false,
+    "updatedAt": "2026-06-07"
   }
 ]
