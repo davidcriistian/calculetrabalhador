@@ -96,5 +96,17 @@
     "updatedAt": "2026-05-01",
     "showOnHome": true,
     "homeOrder": 6
+  },
+  {
+    "id": "rescisao-sem-justa-causa",
+    "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
+    "slug": "/blog/rescisao-sem-justa-causa",
+    "category": "CLT",
+    "description": "Entenda como funciona a rescisão sem justa causa em 2026, veja verbas, aviso prévio, FGTS, multa de 40% e use nossa calculadora gratuita.",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-05-01",
+    "updatedAt": "2026-05-01"
   }
 ]
