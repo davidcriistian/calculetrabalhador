@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metodologia | Calcule Trabalhador</title>
+  <meta name="description" content="Entenda a metodologia do Calcule Trabalhador, como as calculadoras funcionam, quais bases s&atilde;o utilizadas e por que os resultados s&atilde;o estimativas educativas." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/metodologia/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Metodologia | Calcule Trabalhador" />
+  <meta property="og:description" content="Entenda como as calculadoras funcionam, quais bases s&atilde;o usadas e por que os resultados s&atilde;o estimativas educativas." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/metodologia/" />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ef;
+      --blue: #1d4ed8;
+      --blue-dark: #1e40af;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-header-inner {
+      max-width: 1180px;
+      height: 68px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-menu-button,
+    .site-menu-close {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .site-menu-button:hover,
+    .site-menu-close:hover {
+      background: #f1f5f9;
+      color: var(--blue);
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .site-logo-icon {
+      width: 44px;
+      height: 44px;
+      border: 2.5px solid var(--blue);
+      border-radius: 12px;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .site-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .site-logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .site-logo-sub {
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+    }
+
+    .site-menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(15, 23, 42, 0.42);
+      backdrop-filter: blur(2px);
+    }
+
+    .site-menu-overlay[hidden] {
+      display: none;
+    }
+
+    .site-menu-drawer {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 50;
+      width: min(280px, 88vw);
+      background: #fff;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+      transform: translateX(-100%);
+      transition: transform 0.2s ease-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-menu-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .site-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-menu-nav {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .site-menu-nav a {
+      display: block;
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #334155;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .site-menu-nav a:hover {
+      background: #eff6ff;
+      color: var(--blue);
+    }
+
+    .site-menu-nav a[aria-current="page"] {
+      background: #eff6ff;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .site-menu-footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 46px 20px 36px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 860px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 20px 56px;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel p:first-of-type {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-box {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
+      background: var(--surface-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+    }
+
+    .stat-box strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .stat-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 180px;
+      padding: 22px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .text-block {
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .text-block p {
+      margin-bottom: 0;
+    }
+
+    .notice {
+      padding: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .internal-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .internal-links a {
+      display: block;
+      padding: 14px 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 34px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .disclaimer {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 840px) {
+      .intro,
+      .cards,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <button id="siteMenuOpen" type="button" class="site-menu-button" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+        <span class="site-logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+          </svg>
+        </span>
+        <span class="site-logo-text">
+          <span class="site-logo-main">CALCULE</span>
+          <span class="site-logo-sub">TRABALHADOR</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="site-menu-overlay" hidden></div>
+    <aside id="siteMenuDrawer" class="site-menu-drawer" aria-hidden="true">
+      <div class="site-menu-header">
+        <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+          <span class="site-logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            </svg>
+          </span>
+          <span class="site-logo-text">
+            <span class="site-logo-main">CALCULE</span>
+            <span class="site-logo-sub">TRABALHADOR</span>
+          </span>
+        </a>
+        <button id="siteMenuClose" type="button" class="site-menu-close" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="4" x2="18" y2="18"></line>
+            <line x1="18" y1="4" x2="4" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="site-menu-nav" aria-label="Menu principal">
+        <a href="/">Calculadoras</a>
+        <a href="/saque-aniversario-fgts/">Saque-Aniversario FGTS</a>
+        <a href="/salario-liquido-clt-2026/">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026/">Rescisao CLT</a>
+        <a href="/calculadora-13-salario-2026/">13o Salario</a>
+        <a href="/calculadora-ferias-clt-2026/">Ferias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </nav>
+
+      <div class="site-menu-footer">&copy; 2026 Calcule Trabalhador</div>
+    </aside>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Institucional</p>
+      <h1>Metodologia do Calcule Trabalhador</h1>
+      <p>Entenda como as calculadoras funcionam, quais bases podem ser consideradas e por que os resultados devem ser lidos como estimativas educativas.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="panel">
+        <h2 id="intro-title">Introducao</h2>
+        <p>O Calcule Trabalhador organiza calculadoras e conteudos para ajudar trabalhadores a entender valores, direitos e simulacoes de forma simples. As ferramentas disponiveis na <a href="/">Home</a> e na area de <a href="/ferramentas/">ferramentas</a> transformam regras gerais em campos de preenchimento e resultados estimados.</p>
+        <p>A metodologia tem finalidade educativa. Ela nao substitui holerite, TRCT, extratos, documentos oficiais, analise de RH, contador, sindicato, advogado ou orgao competente.</p>
+      </div>
+      <aside class="stat-box" aria-label="Principios da metodologia">
+        <div>
+          <strong>Simulacao</strong>
+          <span>Os resultados dependem dos dados informados e de criterios gerais aplicados em cada ferramenta.</span>
+        </div>
+        <div>
+          <strong>Interpretacao</strong>
+          <span>O usuario deve usar os valores como orientacao inicial, nao como calculo oficial.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="how-title">
+      <h2 id="how-title">Como funcionam as calculadoras</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Regras em campos simples</h3>
+          <p>Cada calculadora parte de uma situacao trabalhista especifica e transforma regras, tabelas ou criterios conhecidos em perguntas objetivas, como salario, datas, meses trabalhados e dados da simulacao.</p>
+        </div>
+        <div class="text-block">
+          <h3>Resultado explicado</h3>
+          <p>O objetivo nao e apenas exibir um numero, mas ajudar o usuario a compreender o que esta sendo considerado, quais limites existem e quando buscar confirmacao profissional ou oficial.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="data-title">
+      <h2 id="data-title">Dados informados pelo usuario</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Valores e salarios</h3>
+          <p>Algumas ferramentas solicitam salario bruto, salario mensal, valores recebidos, descontos, dependentes ou informacoes de renda para estimar bases e descontos.</p>
+        </article>
+        <article class="card">
+          <h3>Datas e periodos</h3>
+          <p>Calculadoras como ferias, 13o salario e rescisao podem usar datas de admissao, desligamento, meses trabalhados, periodo aquisitivo ou tempo de vinculo.</p>
+        </article>
+        <article class="card">
+          <h3>Modalidade da simulacao</h3>
+          <p>Algumas paginas consideram tipo de aviso, modalidade de contrato, regime de trabalho, numero de parcelas ou caracteristicas especificas da situacao simulada.</p>
+        </article>
+        <article class="card">
+          <h3>Responsabilidade pelos dados</h3>
+          <p>A qualidade da estimativa depende diretamente dos dados digitados. Informacoes incompletas, arredondadas ou diferentes dos documentos reais podem alterar o resultado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="bases-title">
+      <h2 id="bases-title">Bases utilizadas nos calculos</h2>
+      <div class="notice">
+        <p>Diferentes calculadoras podem usar referencias como INSS, IRRF, FGTS, seguro-desemprego, ferias, 13o salario, rescisao, CLT e regras publicas vigentes. A pagina de <a href="/fontes-oficiais/">fontes oficiais</a> explica melhor onde essas informacoes podem ser conferidas.</p>
+        <p>Essas bases sao aplicadas de forma educativa e simplificada. A depender do caso concreto, documentos da empresa, convencoes coletivas, acordos individuais, beneficios, adicionais e descontos especificos podem mudar o resultado.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="examples-title">
+      <h2 id="examples-title">Exemplos de calculos considerados</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Salario, descontos e beneficios</h3>
+          <p>A <a href="/salario-liquido-clt-2026/">calculadora de salario liquido</a> pode considerar descontos como INSS e IRRF. A <a href="/calculadora-seguro-desemprego-2026/">calculadora de seguro-desemprego</a> usa criterios gerais de faixas e parcelas.</p>
+        </div>
+        <div class="text-block">
+          <h3>Verbas trabalhistas</h3>
+          <p>Ferramentas como <a href="/calculadora-ferias-clt-2026/">ferias</a>, <a href="/calculadora-13-salario-2026/">13o salario</a> e <a href="/calculadora-rescisao-clt-2026/">rescisao</a> estimam valores a partir de periodos, salario e dados informados pelo usuario.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="limits-title">
+      <h2 id="limits-title">Limitacoes da metodologia</h2>
+      <div class="notice">
+        <p>Os resultados podem variar em relacao ao holerite, TRCT, extrato de FGTS, comunicados da empresa ou analise oficial. Entre os fatores que podem alterar uma simulacao estao convencoes coletivas, acordos individuais, adicionais, comissoes, faltas, dependentes, descontos especificos, verbas variaveis e documentos reais.</p>
+        <p>Por isso, nenhuma calculadora deve ser interpretada como resultado oficial, valor exato, garantia de direito ou calculo definitivo. Para entender melhor esses limites, consulte tambem o <a href="/disclaimer/">Disclaimer</a>.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="updates-title">
+      <h2 id="updates-title">Atualizacao das tabelas e regras</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Revisoes relevantes</h3>
+          <p>O site busca revisar faixas do INSS, IRRF, salario minimo, seguro-desemprego, FGTS e outras regras quando ha mudancas relevantes para as calculadoras.</p>
+        </div>
+        <div class="text-block">
+          <h3>Sem atualizacao em tempo real</h3>
+          <p>Mesmo com revisoes, a legislacao e as tabelas podem mudar. O usuario deve conferir fontes oficiais e documentos antes de usar uma estimativa para decisoes importantes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="interpret-title">
+      <h2 id="interpret-title">Como interpretar os resultados</h2>
+      <p>Use os resultados como ponto de partida para conferencia, planejamento e entendimento geral. Compare a simulacao com seus documentos, leia os conteudos explicativos do <a href="/blog/">blog</a> e procure RH, contador, sindicato, advogado ou orgao oficial quando houver duvida, divergencia ou decisao importante.</p>
+    </section>
+
+    <section aria-labelledby="related-title">
+      <h2 id="related-title">Comparacoes e cenarios especificos</h2>
+      <p>Algumas ferramentas, como a <a href="/calculadora-clt-ou-pj/">calculadora CLT ou PJ</a>, comparam cenarios para fins educativos. Esse tipo de resultado deve considerar riscos, beneficios, tributos, estabilidade, contrato e contexto profissional antes de qualquer decisao.</p>
+    </section>
+
+    <section aria-labelledby="notice-title">
+      <h2 id="notice-title">Conferencia institucional</h2>
+      <div class="notice">
+        <p>As calculadoras do Calcule Trabalhador apresentam estimativas educativas com base nos dados informados e em referencias gerais. Para confirmar valores aplicaveis ao seu caso, consulte documentos oficiais, fontes governamentais, RH, contador, sindicato ou advogado.</p>
+        <p>Veja tambem as <a href="/fontes-oficiais/">Fontes Oficiais</a>, leia o <a href="/disclaimer/">Disclaimer</a> e, se encontrar alguma divergencia, envie uma mensagem pela pagina de <a href="/contato/">contato</a>.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="legal-title">
+      <h2 id="legal-title">Regras de uso e privacidade</h2>
+      <p>O uso das paginas tambem esta sujeito aos <a href="/termos-de-uso/">Termos de Uso</a>. Para entender dados de navegacao, cookies e informacoes relacionadas ao uso do portal, consulte a <a href="/politica-de-privacidade/">Politica de Privacidade</a>. Para conhecer a proposta do projeto, veja a pagina <a href="/sobre/">Sobre</a>.</p>
+    </section>
+
+    <section aria-labelledby="links-title">
+      <h2 id="links-title">Paginas importantes</h2>
+      <div class="internal-links">
+        <a href="/">Home</a>
+        <a href="/ferramentas/">Ferramentas</a>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/termos-de-uso/">Termos de Uso</a>
+        <a href="/disclaimer/">Disclaimer</a>
+        <a href="/fontes-oficiais/">Fontes Oficiais</a>
+        <a href="/politica-de-privacidade/">Politica de Privacidade</a>
+        <a href="/contato/">Contato</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/salario-liquido-clt-2026">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026">Rescisao</a>
+        <a href="/calculadora-ferias-clt-2026">Ferias</a>
+        <a href="/calculadora-13-salario-2026">13o Salario</a>
+        <a href="/calculadora-horas-extras-clt-2026">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026">Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts">Saque Aniversario FGTS</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </div>
+      <p class="disclaimer">&copy; 2026 Calcule Trabalhador. Ferramentas educativas. Os resultados sao estimativas e nao substituem consulta a fontes oficiais ou orientacao profissional.</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+
+      const openMenu = () => {
+        drawer.classList.add('is-open');
+        overlay.hidden = false;
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+      };
+
+      const closeMenu = () => {
+        drawer.classList.remove('is-open');
+        overlay.hidden = true;
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+      };
+
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
