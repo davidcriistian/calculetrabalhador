@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pol&iacute;tica de Cookies | Calcule Trabalhador</title>
+  <meta name="description" content="Entenda como o Calcule Trabalhador utiliza cookies e tecnologias semelhantes para funcionamento, an&aacute;lise, desempenho e publicidade no site." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/politica-de-cookies/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Pol&iacute;tica de Cookies | Calcule Trabalhador" />
+  <meta property="og:description" content="Entenda como cookies e tecnologias semelhantes podem apoiar funcionamento, an&aacute;lise, desempenho e publicidade no Calcule Trabalhador." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/politica-de-cookies/" />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ef;
+      --blue: #1d4ed8;
+      --blue-dark: #1e40af;
+      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-header-inner {
+      max-width: 1180px;
+      height: 68px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-menu-button,
+    .site-menu-close {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .site-menu-button:hover,
+    .site-menu-close:hover {
+      background: #f1f5f9;
+      color: var(--blue);
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .site-logo-icon {
+      width: 44px;
+      height: 44px;
+      border: 2.5px solid var(--blue);
+      border-radius: 12px;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .site-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .site-logo-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .site-logo-sub {
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+    }
+
+    .site-menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(15, 23, 42, 0.42);
+      backdrop-filter: blur(2px);
+    }
+
+    .site-menu-overlay[hidden] {
+      display: none;
+    }
+
+    .site-menu-drawer {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 50;
+      width: min(280px, 88vw);
+      background: #fff;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+      transform: translateX(-100%);
+      transition: transform 0.2s ease-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-menu-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .site-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-menu-nav {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .site-menu-nav a {
+      display: block;
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #334155;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .site-menu-nav a:hover {
+      background: #eff6ff;
+      color: var(--blue);
+    }
+
+    .site-menu-nav a[aria-current="page"] {
+      background: #eff6ff;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .site-menu-footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 20px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 46px 20px 36px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 860px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 20px 56px;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel p:first-of-type {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-box {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
+      background: var(--surface-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+    }
+
+    .stat-box strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .stat-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 180px;
+      padding: 22px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .text-block {
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .text-block p {
+      margin-bottom: 0;
+    }
+
+    .notice {
+      padding: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .internal-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .internal-links a {
+      display: block;
+      padding: 14px 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 34px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .disclaimer {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 840px) {
+      .intro,
+      .cards,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <button id="siteMenuOpen" type="button" class="site-menu-button" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+        <span class="site-logo-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+          </svg>
+        </span>
+        <span class="site-logo-text">
+          <span class="site-logo-main">CALCULE</span>
+          <span class="site-logo-sub">TRABALHADOR</span>
+        </span>
+      </a>
+    </div>
+
+    <div id="siteMenuOverlay" class="site-menu-overlay" hidden></div>
+    <aside id="siteMenuDrawer" class="site-menu-drawer" aria-hidden="true">
+      <div class="site-menu-header">
+        <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
+          <span class="site-logo-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
+              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
+            </svg>
+          </span>
+          <span class="site-logo-text">
+            <span class="site-logo-main">CALCULE</span>
+            <span class="site-logo-sub">TRABALHADOR</span>
+          </span>
+        </a>
+        <button id="siteMenuClose" type="button" class="site-menu-close" aria-label="Fechar menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="4" x2="18" y2="18"></line>
+            <line x1="18" y1="4" x2="4" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="site-menu-nav" aria-label="Menu principal">
+        <a href="/">Calculadoras</a>
+        <a href="/saque-aniversario-fgts/">Saque-Aniversario FGTS</a>
+        <a href="/salario-liquido-clt-2026/">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026/">Rescisao CLT</a>
+        <a href="/calculadora-13-salario-2026/">13o Salario</a>
+        <a href="/calculadora-ferias-clt-2026/">Ferias CLT</a>
+        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </nav>
+
+      <div class="site-menu-footer">&copy; 2026 Calcule Trabalhador</div>
+    </aside>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Institucional</p>
+      <h1>Pol&iacute;tica de Cookies do Calcule Trabalhador</h1>
+      <p>Entenda como cookies e tecnologias semelhantes podem apoiar o funcionamento, a an&aacute;lise, o desempenho e a publicidade no site.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="panel">
+        <h2 id="intro-title">Introdu&ccedil;&atilde;o</h2>
+        <p>Esta Pol&iacute;tica de Cookies explica, de forma simples, como o Calcule Trabalhador pode utilizar cookies e tecnologias semelhantes durante a navega&ccedil;&atilde;o pela <a href="/">Home</a>, pelas <a href="/ferramentas/">ferramentas</a>, pelo <a href="/blog/">blog</a> e pelas demais p&aacute;ginas do site.</p>
+        <p>A p&aacute;gina complementa a <a href="/politica-de-privacidade/">Pol&iacute;tica de Privacidade</a> e ajuda o usu&aacute;rio a entender finalidades, categorias e formas de controle relacionadas a cookies.</p>
+      </div>
+      <aside class="stat-box" aria-label="Principios da politica de cookies">
+        <div>
+          <strong>Transpar&ecirc;ncia</strong>
+          <span>As informa&ccedil;&otilde;es sobre cookies devem ser claras, acess&iacute;veis e f&aacute;ceis de compreender.</span>
+        </div>
+        <div>
+          <strong>Controle</strong>
+          <span>O usu&aacute;rio pode controlar cookies pelo navegador e, quando dispon&iacute;vel, por prefer&ecirc;ncias do site.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="what-title">
+      <h2 id="what-title">O que s&atilde;o cookies</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Arquivos de navega&ccedil;&atilde;o</h3>
+          <p>Cookies s&atilde;o pequenos arquivos ou identificadores armazenados no navegador ou dispositivo do usu&aacute;rio quando ele acessa um site. Eles podem guardar informa&ccedil;&otilde;es t&eacute;cnicas ou prefer&ecirc;ncias de navega&ccedil;&atilde;o.</p>
+        </div>
+        <div class="text-block">
+          <h3>Tecnologias semelhantes</h3>
+          <p>Ferramentas de an&aacute;lise, publicidade, cache, tags, pixels e recursos do navegador tamb&eacute;m podem usar tecnologias semelhantes para medir acesso, lembrar prefer&ecirc;ncias ou melhorar a experi&ecirc;ncia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="why-title">
+      <h2 id="why-title">Por que utilizamos cookies</h2>
+      <div class="notice">
+        <p>Cookies podem ajudar no funcionamento do site, na estabilidade das p&aacute;ginas, na compreens&atilde;o de como os usu&aacute;rios navegam e, quando aplic&aacute;vel, na exibi&ccedil;&atilde;o ou medi&ccedil;&atilde;o de publicidade.</p>
+        <p>O uso de cookies deve respeitar finalidades claras. A ANPD orienta que informa&ccedil;&otilde;es sobre cookies sejam apresentadas com transpar&ecirc;ncia e linguagem acess&iacute;vel, especialmente quando houver tratamento de dados pessoais.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="types-title">
+      <h2 id="types-title">Tipos de cookies</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Cookies de sess&atilde;o</h3>
+          <p>S&atilde;o tempor&aacute;rios e normalmente deixam de existir quando o navegador &eacute; fechado. Podem apoiar recursos b&aacute;sicos durante uma visita.</p>
+        </article>
+        <article class="card">
+          <h3>Cookies persistentes</h3>
+          <p>Permanecem por um per&iacute;odo definido no navegador ou dispositivo. Podem lembrar prefer&ecirc;ncias, configura&ccedil;&otilde;es ou escolhas feitas anteriormente.</p>
+        </article>
+        <article class="card">
+          <h3>Cookies necess&aacute;rios</h3>
+          <p>Ajudam o site a funcionar corretamente, incluindo recursos t&eacute;cnicos de navega&ccedil;&atilde;o, seguran&ccedil;a, carregamento e disponibilidade das p&aacute;ginas.</p>
+        </article>
+        <article class="card">
+          <h3>Cookies anal&iacute;ticos</h3>
+          <p>Podem ajudar a entender p&aacute;ginas acessadas, origem de visitas, eventos de navega&ccedil;&atilde;o e comportamento agregado dos usu&aacute;rios.</p>
+        </article>
+        <article class="card">
+          <h3>Cookies de desempenho</h3>
+          <p>Podem apoiar medi&ccedil;&otilde;es de velocidade, estabilidade, carregamento e funcionamento das p&aacute;ginas, ajudando a identificar pontos de melhoria.</p>
+        </article>
+        <article class="card">
+          <h3>Cookies de publicidade</h3>
+          <p>Podem ser usados para exibir, limitar, personalizar ou medir an&uacute;ncios, conforme as ferramentas de publicidade configuradas no site.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="third-title">
+      <h2 id="third-title">Cookies de terceiros</h2>
+      <div class="content-grid">
+        <div class="text-block">
+          <h3>Servi&ccedil;os externos</h3>
+          <p>Ferramentas como Google Analytics, Google AdSense, navegadores, servi&ccedil;os de cache e provedores t&eacute;cnicos podem usar cookies ou tecnologias semelhantes conforme suas pr&oacute;prias pol&iacute;ticas.</p>
+        </div>
+        <div class="text-block">
+          <h3>Finalidades diferentes</h3>
+          <p>Esses terceiros podem atuar em an&aacute;lise, desempenho, seguran&ccedil;a, publicidade, armazenamento tempor&aacute;rio ou medi&ccedil;&atilde;o de recursos. O usu&aacute;rio deve consultar tamb&eacute;m as pol&iacute;ticas desses provedores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="control-title">
+      <h2 id="control-title">Como controlar cookies</h2>
+      <div class="notice">
+        <p>O usu&aacute;rio pode configurar o navegador para bloquear, apagar ou limitar cookies. Cada navegador possui seus pr&oacute;prios menus de privacidade e seguran&ccedil;a, e a altera&ccedil;&atilde;o dessas configura&ccedil;&otilde;es pode afetar algumas funcionalidades do site.</p>
+        <p>Quando houver banner ou painel de prefer&ecirc;ncias no site, ele poder&aacute; oferecer op&ccedil;&otilde;es adicionais para aceitar, rejeitar ou ajustar determinadas categorias de cookies n&atilde;o necess&aacute;rios.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Rela&ccedil;&atilde;o com a Pol&iacute;tica de Privacidade</h2>
+      <p>Esta Pol&iacute;tica de Cookies deve ser lida junto com a <a href="/politica-de-privacidade/">Pol&iacute;tica de Privacidade</a>, que explica de forma mais ampla como o site trata dados de navega&ccedil;&atilde;o, ferramentas de an&aacute;lise, publicidade, LGPD e direitos do usu&aacute;rio.</p>
+    </section>
+
+    <section aria-labelledby="context-title">
+      <h2 id="context-title">Contexto institucional</h2>
+      <p>Para entender a proposta do projeto, consulte a p&aacute;gina <a href="/sobre/">Sobre</a>. Para compreender as regras gerais de uso, leia os <a href="/termos-de-uso/">Termos de Uso</a>. Para conhecer os limites das informa&ccedil;&otilde;es educativas, veja o <a href="/disclaimer/">Disclaimer</a>.</p>
+    </section>
+
+    <section aria-labelledby="references-title">
+      <h2 id="references-title">Refer&ecirc;ncias e metodologia</h2>
+      <p>O conte&uacute;do desta p&aacute;gina &eacute; informativo e se apoia em boas pr&aacute;ticas de transpar&ecirc;ncia, incluindo orienta&ccedil;&otilde;es educativas da ANPD sobre cookies e prote&ccedil;&atilde;o de dados pessoais. Para saber como o site organiza suas bases e revis&otilde;es, veja tamb&eacute;m <a href="/fontes-oficiais/">Fontes Oficiais</a> e <a href="/metodologia/">Metodologia</a>.</p>
+    </section>
+
+    <section aria-labelledby="notice-title">
+      <h2 id="notice-title">Aviso institucional</h2>
+      <div class="notice">
+        <p>O Calcule Trabalhador utiliza cookies e tecnologias semelhantes para apoiar o funcionamento do site, melhorar a experi&ecirc;ncia de navega&ccedil;&atilde;o, analisar desempenho e, quando aplic&aacute;vel, exibir publicidade. Para saber mais sobre dados pessoais, consulte a <a href="/politica-de-privacidade/">Pol&iacute;tica de Privacidade</a>. Em caso de d&uacute;vida, entre em <a href="/contato/">contato</a>.</p>
+        <p>O uso do site tamb&eacute;m est&aacute; sujeito aos <a href="/termos-de-uso/">Termos de Uso</a>.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="links-title">
+      <h2 id="links-title">P&aacute;ginas importantes</h2>
+      <div class="internal-links">
+        <a href="/">Home</a>
+        <a href="/ferramentas/">Ferramentas</a>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/politica-de-privacidade/">Pol&iacute;tica de Privacidade</a>
+        <a href="/termos-de-uso/">Termos de Uso</a>
+        <a href="/disclaimer/">Disclaimer</a>
+        <a href="/fontes-oficiais/">Fontes Oficiais</a>
+        <a href="/metodologia/">Metodologia</a>
+        <a href="/contato/">Contato</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/salario-liquido-clt-2026">Salario Liquido</a>
+        <a href="/calculadora-rescisao-clt-2026">Rescisao</a>
+        <a href="/calculadora-ferias-clt-2026">Ferias</a>
+        <a href="/calculadora-13-salario-2026">13o Salario</a>
+        <a href="/calculadora-horas-extras-clt-2026">Horas Extras</a>
+        <a href="/calculadora-seguro-desemprego-2026">Seguro-Desemprego</a>
+        <a href="/saque-aniversario-fgts">Saque Aniversario FGTS</a>
+        <a href="/contato/">Contato</a>
+        <a href="/politica-de-privacidade/">Privacidade</a>
+      </div>
+      <p class="disclaimer">&copy; 2026 Calcule Trabalhador. Ferramentas educativas. Os resultados sao estimativas e nao substituem consulta a fontes oficiais ou orientacao profissional.</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const openButton = document.getElementById('siteMenuOpen');
+      const closeButton = document.getElementById('siteMenuClose');
+      const drawer = document.getElementById('siteMenuDrawer');
+      const overlay = document.getElementById('siteMenuOverlay');
+
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+
+      const openMenu = () => {
+        drawer.classList.add('is-open');
+        overlay.hidden = false;
+        drawer.setAttribute('aria-hidden', 'false');
+        openButton.setAttribute('aria-expanded', 'true');
+      };
+
+      const closeMenu = () => {
+        drawer.classList.remove('is-open');
+        overlay.hidden = true;
+        drawer.setAttribute('aria-hidden', 'true');
+        openButton.setAttribute('aria-expanded', 'false');
+      };
+
+      openButton.addEventListener('click', openMenu);
+      closeButton.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
