@@ -1,228 +1,169 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <meta name="generator" content="Hostinger Horizons" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="google-site-verification" content="-w-ovEuYunc1megdmbzwWCggx_ltcPMHN0_iHDzilb8" />
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YSGJHTYT7"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-9YSGJHTYT7');
-        </script>
-        <title>Calcule Trabalhador — Calculadoras Trabalhistas Online Grátis</title>
-  <script type="module" crossorigin src="/assets/index-DF-O0wkc.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-C4IXwA1g.css">
-  <link rel="stylesheet" href="/assets/home.css">
-  <script type="module">
-window.onerror = (message, source, lineno, colno, errorObj) => {
-        const errorDetails = errorObj ? JSON.stringify({
-                name: errorObj.name,
-                message: errorObj.message,
-                stack: errorObj.stack,
-                source,
-                lineno,
-                colno,
-        }) : null;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        window.parent.postMessage({
-                type: 'horizons-runtime-error',
-                message,
-                error: errorDetails
-        }, '*');
-};
-</script>
-  <script type="module">
-const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-                for (const addedNode of mutation.addedNodes) {
-                        if (
-                                addedNode.nodeType === Node.ELEMENT_NODE &&
-                                (
-                                        addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
-                                        addedNode.classList?.contains('backdrop')
-                                )
-                        ) {
-                                handleViteOverlay(addedNode);
-                        }
-                }
-        }
-});
+  <!-- Página de teste: não indexar -->
+  <meta name="robots" content="noindex, nofollow" />
 
-observer.observe(document.documentElement, {
-        childList: true,
-        subtree: true
-});
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-function handleViteOverlay(node) {
-        if (!node.shadowRoot) {
-                return;
-        }
+  <title>Home Refatorada V8 — Teste | Calcule Trabalhador</title>
+  <meta name="description" content="Versão de teste da Home refatorada do Calcule Trabalhador, criada apenas para validação visual e estrutural." />
 
-        const backdrop = node.shadowRoot.querySelector('.backdrop');
-
-        if (backdrop) {
-                const overlayHtml = backdrop.outerHTML;
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(overlayHtml, 'text/html');
-                const messageBodyElement = doc.querySelector('.message-body');
-                const fileElement = doc.querySelector('.file');
-                const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
-                const fileText = fileElement ? fileElement.textContent.trim() : '';
-                const error = messageText + (fileText ? ' File:' + fileText : '');
-
-                window.parent.postMessage({
-                        type: 'horizons-vite-error',
-                        error,
-                }, '*');
-        }
-}
-</script>
-  <script type="module">
-const originalConsoleError = console.error;
-const MATCH_LINE_COL_REGEX = /:(\d+):(\d+)\)?\s*$/; // regex to match the :lineNum:colNum
-const MATCH_AT_REGEX = /^\s*at\s+(?:async\s+)?(?:.*?\s+)?\(?/; // regex to remove the 'at' keyword and any 'async' or function name
-const MATCH_PATH_REGEX = /^\//; // regex to remove the leading slash
-
-function parseStackFrameLine(line) {
-        const lineColMatch = line.match(MATCH_LINE_COL_REGEX);
-        if (!lineColMatch) return null;
-        const [, lineNum, colNum] = lineColMatch;
-        const suffix = `:${lineNum}:${colNum}`;
-        const idx = line.lastIndexOf(suffix);
-        if (idx === -1) return null;
-        const before = line.substring(0, idx);
-        const path = before.replace(MATCH_AT_REGEX, '').trim();
-        
-        if (!path) return null;
-
-        try {
-                const pathname = new URL(path).pathname;
-                const filePath = pathname.replace(MATCH_PATH_REGEX, '') || pathname;
-                return `${filePath}:${lineNum}:${colNum}`;
-        } catch (e) {
-                const filePath = path.replace(MATCH_PATH_REGEX, '') || path;
-                return `${filePath}:${lineNum}:${colNum}`;
-        }
-}
-
-function getFilePathFromStack(stack, skipFrames = 0) {
-        if (!stack || typeof stack !== 'string') return null;
-        const lines = stack.split('\n').slice(1);
-
-        const frames = lines.map(line => parseStackFrameLine(line.replace(/\r$/, ''))).filter(Boolean);
-
-        return frames[skipFrames] ?? null;
-}
-
-console.error = function(...args) {
-        originalConsoleError.apply(console, args);
-
-        let errorString = '';
-        let filePath = null;
-
-        for (let i = 0; i < args.length; i++) {
-                const arg = args[i];
-                if (arg instanceof Error) {
-                        filePath = getFilePathFromStack(arg.stack, 0);
-                        errorString = `${arg.name}: ${arg.message}`;
-                        if (filePath) {
-                                errorString = `${errorString} at ${filePath}`;
-                        }
-                        break;
-                }
-        }
-
-        if (!errorString) {
-                errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
-                const stack = new Error().stack;
-                filePath = getFilePathFromStack(stack, 1);
-                if (filePath) {
-                        errorString = `${errorString} at ${filePath}`;
-                }
-        }
-
-        window.parent.postMessage({
-                type: 'horizons-console-error',
-                error: errorString
-        }, '*');
-};
-</script>
-  <script type="module">
-const originalFetch = window.fetch;
-
-window.fetch = function(...args) {
-        const url = args[0] instanceof Request ? args[0].url : args[0];
-
-        // Skip WebSocket URLs
-        if (url.startsWith('ws:') || url.startsWith('wss:')) {
-                return originalFetch.apply(this, args);
-        }
-
-        return originalFetch.apply(this, args)
-                .then(async response => {
-                        const contentType = response.headers.get('Content-Type') || '';
-
-                        // Exclude HTML document responses
-                        const isDocumentResponse =
-                                contentType.includes('text/html') ||
-                                contentType.includes('application/xhtml+xml');
-
-                        if (!response.ok && !isDocumentResponse) {
-                                        const responseClone = response.clone();
-                                        const errorFromRes = await responseClone.text();
-                                        const requestUrl = response.url;
-                                        console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
-                        }
-
-                        return response;
-                })
-                .catch(error => {
-                        if (!url.match(/.html?$/i)) {
-                                console.error(error);
-                        }
-
-                        throw error;
-                });
-};
-</script>
-  <script type="module">
-if (window.navigation && window.self !== window.top) {
-        window.navigation.addEventListener('navigate', (event) => {
-                const url = event.destination.url;
-
-                try {
-                        const destinationUrl = new URL(url);
-                        const destinationOrigin = destinationUrl.origin;
-                        const currentOrigin = window.location.origin;
-
-                        if (destinationOrigin === currentOrigin) {
-                                return;
-                        }
-                } catch (error) {
-                        return;
-                }
-
-                window.parent.postMessage({
-                        type: 'horizons-navigation-error',
-                        url,
-                }, '*');
-        });
-}
-</script>
+  <link rel="stylesheet" href="/assets/home-refactor-v8.css">
 </head>
-
 <body>
-  <div id="root"></div>
-  <script src="/assets/home.js" defer></script>
+  <header class="ct-header">
+    <div class="ct-header__inner">
+      <button class="ct-menu-button" id="menuOpen" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuDrawer">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="ct-logo" href="/" aria-label="Calcule Trabalhador">
+        <img src="/assets/images/logo-header.png" alt="Calcule Trabalhador" class="ct-logo__img">
+      </a>
+
+      <nav class="ct-nav" aria-label="Navegação principal">
+        <a class="active" href="/ferramentas/">Calculadoras</a>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre/">Sobre</a>
+      </nav>
+    </div>
+
+    <div class="ct-menu-overlay" id="menuOverlay" hidden></div>
+    <aside class="ct-menu-drawer" id="menuDrawer" aria-hidden="true">
+      <div class="ct-menu-drawer__top">
+        <span>Menu</span>
+        <button id="menuClose" type="button" aria-label="Fechar menu">×</button>
+      </div>
+      <nav>
+        <a class="is-active" href="/ferramentas/">
+          <img src="/assets/images/menu-icons/calculator.png" alt="" aria-hidden="true">
+          <span>Calculadoras</span>
+        </a>
+        <a href="/blog/">
+          <img src="/assets/images/menu-icons/blog.png" alt="" aria-hidden="true">
+          <span>Blog</span>
+        </a>
+        <a href="/sobre/">
+          <img src="/assets/images/menu-icons/user.png" alt="" aria-hidden="true">
+          <span>Sobre</span>
+        </a>
+        <a href="/contato/">
+          <img src="/assets/images/menu-icons/contact.png" alt="" aria-hidden="true">
+          <span>Contato</span>
+        </a>
+      </nav>
+    </aside>
+  </header>
+
+  <main>
+    <section class="ct-hero">
+      <div class="ct-hero__inner">
+        <span class="ct-hero__badge">✦ Tabelas atualizadas 2026</span>
+        <h1>Calcule seus direitos <span>trabalhistas em segundos</span></h1>
+        <p>Ferramentas gratuitas e necessárias para trabalhadores CLT, MEI e autônomos. Sem cadastro, sem complicação.</p>
+        <form class="ct-search" id="toolSearchForm">
+          <label class="sr-only" for="toolSearch">Buscar calculadora</label>
+          <input id="toolSearch" type="search" placeholder="Buscar calculadora... (ex: rescisão, FGTS, férias)" autocomplete="off">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="ct-stats" aria-label="Indicadores">
+      <div class="ct-stats__inner">
+        <article>
+          <strong>92<span>+</span></strong>
+          <p>Ferramentas,<br>planejadas</p>
+        </article>
+        <article>
+          <strong>100<span>%</span></strong>
+          <p>Gratuito para sempre</p>
+        </article>
+        <article>
+          <strong>0</strong>
+          <p>Dados armazenados</p>
+        </article>
+        <article>
+          <strong>2026</strong>
+          <p>Tabelas atualizadas</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ct-section ct-section--tools" id="ferramentas">
+      <div class="ct-section__head">
+        <div>
+          <p class="ct-eyebrow">🧮 Ferramentas</p>
+          <h2>Calculadoras disponíveis</h2>
+        </div>
+        <a href="/ferramentas/">Ver todas →</a>
+      </div>
+      <div class="ct-tools-grid" id="toolsGrid"></div>
+      <p class="ct-empty" id="toolsEmpty" hidden>Nenhuma ferramenta encontrada para sua busca.</p>
+    </section>
+
+    <section class="ct-feature">
+      <div class="ct-feature__inner">
+        <div class="ct-feature__copy">
+          <p class="ct-eyebrow">⚡ Novidade 2026</p>
+          <h2>Novas regras do Saque Aniversário FGTS</h2>
+          <p>A partir de novembro de 2026, o limite de antecipação cai de 5 para 3 parcelas, com teto de R$ 1.500. Use nossa calculadora para simular o impacto no seu saldo.</p>
+          <a href="/saque-aniversario-fgts/">Calcular agora →</a>
+        </div>
+        <div class="ct-feature__cards" aria-label="Faixas do saque-aniversário FGTS">
+          <article class="green"><strong>50%</strong><span>Saldo até R$ 500</span></article>
+          <article class="blue"><strong>30% + R$150</strong><span>R$ 1.000 a R$ 5.000</span></article>
+          <article class="purple"><strong>5% + R$ 2.900</strong><span>Acima de R$ 20.000</span></article>
+        </div>
+      </div>
+    </section>
+
+    <div id="articlesMount"></div>
+
+    <section class="ct-final-cta">
+      <div class="ct-final-cta__inner">
+        <div class="ct-final-cta__icon">🧮</div>
+        <h2>Conheça seus direitos</h2>
+        <p>Todas as ferramentas são gratuitas, sem cadastro e atualizadas com as tabelas oficiais de 2026.</p>
+        <a href="/ferramentas/">Começar a calcular →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ct-footer">
+    <div class="ct-footer__inner">
+      <div class="ct-footer__top">
+        <a class="ct-footer__brand" href="/" aria-label="Calcule Trabalhador">
+          <img src="/assets/images/logo-footer.png" alt="Calcule Trabalhador" class="ct-footer__logo">
+        </a>
+        <nav class="ct-footer__links" aria-label="Links institucionais">
+          <a href="/ferramentas/">Calculadoras</a>
+          <a href="/blog/">Blog</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/contato/">Contato</a>
+          <a href="/politica-de-privacidade/">Privacidade</a>
+          <a href="/politica-de-cookies/">Política de Cookies</a>
+          <a href="/termos-de-uso/">Termos de Uso</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/fontes-oficiais/">Fontes Oficiais</a>
+          <a href="/metodologia/">Metodologia</a>
+        </nav>
+      </div>
+      <div class="ct-footer__bottom">
+        <p>© 2026 Calcule Trabalhador. Ferramentas educativas — não substituem assessoria jurídica.</p>
+        <p>Tabelas atualizadas em maio de 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/home-refactor-v8.js" defer></script>
 </body>
 </html>
