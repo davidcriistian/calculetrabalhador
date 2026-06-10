@@ -54,89 +54,11 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <script src="/assets/js/global-layout.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <header class="sticky top-0 z-20 border-b border-slate-200 bg-white shadow-sm">
-    <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-4">
-      <button id="siteMenuOpen" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-
-      <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
-            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-          </svg>
-        </span>
-        <span class="flex flex-col leading-none">
-          <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
-          <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
-        </span>
-      </a>
-    </div>
-
-    <div id="siteMenuOverlay" class="fixed inset-0 z-40 hidden bg-black/40 backdrop-blur-[2px]"></div>
-    <aside id="siteMenuDrawer" class="fixed inset-y-0 left-0 z-50 flex w-[280px] -translate-x-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out" aria-hidden="true">
-      <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
-        <a href="/" class="flex items-center gap-3 text-slate-900" aria-label="Calcule Trabalhador - Home">
-          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-[2.5px] border-blue-700 bg-white">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
-              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            </svg>
-          </span>
-          <span class="flex flex-col leading-none">
-            <span class="text-xl font-extrabold tracking-tight">CALCULE</span>
-            <span class="mt-0.5 text-[11px] font-bold tracking-[0.12em] text-blue-700">TRABALHADOR</span>
-          </span>
-        </a>
-        <button id="siteMenuClose" type="button" class="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100" aria-label="Fechar menu">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-            <line x1="4" y1="4" x2="18" y2="18"></line>
-            <line x1="18" y1="4" x2="4" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="flex-1 overflow-y-auto p-3" aria-label="Menu principal">
-        <a href="/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Calculadoras</a>
-        <a href="/saque-aniversario-fgts/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Saque-Aniversário FGTS</a>
-        <a href="/salario-liquido-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Salário Líquido</a>
-        <a href="/calculadora-rescisao-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Rescisão CLT</a>
-        <a href="/calculadora-13-salario-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">13º Salário</a>
-        <a href="/calculadora-ferias-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Férias CLT</a>
-        <a href="/calculadora-horas-extras-clt-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Seguro-Desemprego</a>
-        <a href="/ferramentas/" class="block rounded-lg bg-blue-50 px-4 py-3 font-bold text-blue-700">Ferramentas</a>
-        <a href="/sobre/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Sobre</a>
-        <a href="/contato/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Contato</a>
-        <a href="/politica-de-privacidade/" class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Privacidade</a>
-      </nav>
-
-      <div class="border-t border-slate-200 px-5 py-4">
-        <p class="text-xs text-slate-400">&copy; 2026 Calcule Trabalhador</p>
-      </div>
-    </aside>
-  </header>
+  <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl px-4 py-8">
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora CLT ou PJ</h1>
@@ -370,77 +292,8 @@
     </section>
   </main>
 
-  <footer class="bg-slate-950 px-4 py-10 text-slate-300">
-    <div class="mx-auto max-w-6xl">
-      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/" class="inline-flex items-center gap-3 text-white no-underline">
-          <span class="grid h-10 w-10 place-items-center rounded-lg bg-blue-600 font-bold text-white">CT</span>
-          <span class="text-lg font-bold">Calcule Trabalhador</span>
-        </a>
-        <p class="text-sm text-slate-400">Calculadoras trabalhistas gratuitas para simulações educativas.</p>
-      </div>
-      <div class="mt-8 grid gap-8 md:grid-cols-2">
-        <nav aria-label="Links das calculadoras">
-          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Calculadoras</h2>
-          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
-            <a href="/salario-liquido-clt-2026/" class="hover:text-white">Salário Líquido CLT 2026</a>
-            <a href="/calculadora-rescisao-clt-2026/" class="hover:text-white">Rescisão CLT 2026</a>
-            <a href="/calculadora-ferias-clt-2026/" class="hover:text-white">Férias CLT 2026</a>
-            <a href="/calculadora-13-salario-2026/" class="hover:text-white">13º Salário 2026</a>
-            <a href="/calculadora-horas-extras-clt-2026/" class="hover:text-white">Horas Extras CLT 2026</a>
-            <a href="/calculadora-seguro-desemprego-2026/" class="hover:text-white">Seguro-Desemprego 2026</a>
-          </div>
-        </nav>
-        <nav aria-label="Links institucionais">
-          <h2 class="text-sm font-bold uppercase tracking-wide text-white">Institucional</h2>
-          <div class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
-            <a href="/" class="hover:text-white">Home</a>
-            <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
-            <a href="/sobre/" class="hover:text-white">Sobre</a>
-            <a href="/contato/" class="hover:text-white">Contato</a>
-            <a href="/politica-de-privacidade/" class="hover:text-white">Política de Privacidade</a>
-            <a href="/politica-de-cookies/" class="hover:text-white">Política de Cookies</a>
-            <a href="/termos-de-uso/" class="hover:text-white">Termos de Uso</a>
-            <a href="/disclaimer/" class="hover:text-white">Disclaimer</a>
-            <a href="/fontes-oficiais/" class="hover:text-white">Fontes Oficiais</a>
-            <a href="/metodologia/" class="hover:text-white">Metodologia</a>
-          </div>
-        </nav>
-      </div>
-      <div class="mt-8 border-t border-slate-800 pt-6 text-sm text-slate-400">
-        <p>As informações e resultados apresentados têm finalidade educativa e podem variar conforme regras internas, convenções coletivas e atualizações legais.</p>
-        <p class="mt-3">&copy; 2026 Calcule Trabalhador. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="global-footer"></div>
 
-  <script>
-    (() => {
-      const openButton = document.getElementById('siteMenuOpen');
-      const closeButton = document.getElementById('siteMenuClose');
-      const drawer = document.getElementById('siteMenuDrawer');
-      const overlay = document.getElementById('siteMenuOverlay');
-      if (!openButton || !closeButton || !drawer || !overlay) return;
-      const openMenu = () => {
-        drawer.classList.remove('-translate-x-full');
-        overlay.classList.remove('hidden');
-        drawer.setAttribute('aria-hidden', 'false');
-        openButton.setAttribute('aria-expanded', 'true');
-      };
-      const closeMenu = () => {
-        drawer.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-        drawer.setAttribute('aria-hidden', 'true');
-        openButton.setAttribute('aria-expanded', 'false');
-      };
-      openButton.addEventListener('click', openMenu);
-      closeButton.addEventListener('click', closeMenu);
-      overlay.addEventListener('click', closeMenu);
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeMenu();
-      });
-    })();
-  </script>
 
   <script>
     const INSS_FAIXAS_2026 = [

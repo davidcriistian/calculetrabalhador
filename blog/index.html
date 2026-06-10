@@ -12,6 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/global-layout.css">
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
@@ -525,99 +526,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header-inner">
-      <button
-        id="siteMenuOpen"
-        class="site-menu-button"
-        type="button"
-        aria-label="Abrir menu"
-        aria-controls="siteMenuDrawer"
-        aria-expanded="false"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M4 6h16"></path>
-          <path d="M4 12h16"></path>
-          <path d="M4 18h16"></path>
-        </svg>
-      </button>
-
-      <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
-        <span class="site-logo-text" aria-hidden="true">
-          <span class="site-logo-main">Calcule</span>
-          <span class="site-logo-sub">Trabalhador</span>
-        </span>
-        <span class="site-logo-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-            <path d="M8 7h8"></path>
-            <path d="M8 11h.01"></path>
-            <path d="M12 11h.01"></path>
-            <path d="M16 11h.01"></path>
-            <path d="M8 15h.01"></path>
-            <path d="M12 15h.01"></path>
-            <path d="M16 15h.01"></path>
-            <path d="M8 18h.01"></path>
-            <path d="M12 18h.01"></path>
-            <path d="M16 18h.01"></path>
-          </svg>
-        </span>
-      </a>
-    </div>
-
-    <div id="siteMenuOverlay" class="site-menu-overlay" hidden></div>
-
-    <aside id="siteMenuDrawer" class="site-menu-drawer" aria-hidden="true">
-      <div class="site-menu-header">
-        <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
-          <span class="site-logo-text" aria-hidden="true">
-            <span class="site-logo-main">Calcule</span>
-            <span class="site-logo-sub">Trabalhador</span>
-          </span>
-          <span class="site-logo-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-              <path d="M8 7h8"></path>
-              <path d="M8 11h.01"></path>
-              <path d="M12 11h.01"></path>
-              <path d="M16 11h.01"></path>
-              <path d="M8 15h.01"></path>
-              <path d="M12 15h.01"></path>
-              <path d="M16 15h.01"></path>
-              <path d="M8 18h.01"></path>
-              <path d="M12 18h.01"></path>
-              <path d="M16 18h.01"></path>
-            </svg>
-          </span>
-        </a>
-
-        <button id="siteMenuClose" class="site-menu-close" type="button" aria-label="Fechar menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="site-menu-nav" aria-label="Menu principal">
-        <a href="/">Home</a>
-        <a href="/ferramentas/">Ferramentas</a>
-        <a href="/blog/" aria-current="page">Blog</a>
-        <a href="/saque-aniversario-fgts/">Saque-Aniversário FGTS</a>
-        <a href="/salario-liquido-clt-2026/">Salário Líquido</a>
-        <a href="/calculadora-rescisao-clt-2026/">Rescisão CLT</a>
-        <a href="/calculadora-13-salario-2026/">13º Salário</a>
-        <a href="/calculadora-ferias-clt-2026/">Férias CLT</a>
-        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
-        <a href="/sobre/">Sobre</a>
-        <a href="/contato/">Contato</a>
-        <a href="/politica-de-privacidade/">Privacidade</a>
-      </nav>
-
-      <div class="site-menu-footer">&copy; 2026 Calcule Trabalhador</div>
-    </aside>
-  </header>
+  <div id="global-header"></div>
 
   <section class="hero">
     <div class="hero-inner">
@@ -671,64 +580,8 @@
     <!-- Espaço futuro de monetização: ad-slot ad-slot-bottom -->
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/ferramentas/">Ferramentas</a>
-        <a href="/blog/">Blog</a>
-        <a href="/saque-aniversario-fgts/">Saque-Aniversário FGTS</a>
-        <a href="/salario-liquido-clt-2026/">Salário Líquido</a>
-        <a href="/calculadora-rescisao-clt-2026/">Rescisão CLT</a>
-        <a href="/calculadora-13-salario-2026/">13º Salário</a>
-        <a href="/calculadora-ferias-clt-2026/">Férias CLT</a>
-        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
-        <a href="/sobre/">Sobre</a>
-        <a href="/contato/">Contato</a>
-        <a href="/politica-de-privacidade/">Privacidade</a>
-        <a href="/politica-de-cookies/">Politica de Cookies</a>
-        <a href="/termos-de-uso/">Termos de Uso</a>
-        <a href="/disclaimer/">Disclaimer</a>
-        <a href="/fontes-oficiais/">Fontes Oficiais</a>
-        <a href="/metodologia/">Metodologia</a>
-      </div>
-      <p class="footer-note">Os artigos do Calcule Trabalhador têm finalidade educativa e ajudam em pesquisas iniciais. O conteúdo não substitui orientação jurídica, contábil, profissional ou consulta a fontes oficiais.</p>
-      <p class="copyright">&copy; 2026 Calcule Trabalhador. Conteúdo trabalhista gratuito.</p>
-    </div>
-  </footer>
+  <div id="global-footer"></div>
 
-  <script>
-    (() => {
-      const openButton = document.getElementById('siteMenuOpen');
-      const closeButton = document.getElementById('siteMenuClose');
-      const drawer = document.getElementById('siteMenuDrawer');
-      const overlay = document.getElementById('siteMenuOverlay');
-
-      const openMenu = () => {
-        drawer.classList.add('is-open');
-        drawer.setAttribute('aria-hidden', 'false');
-        openButton.setAttribute('aria-expanded', 'true');
-        overlay.hidden = false;
-      };
-
-      const closeMenu = () => {
-        drawer.classList.remove('is-open');
-        drawer.setAttribute('aria-hidden', 'true');
-        openButton.setAttribute('aria-expanded', 'false');
-        overlay.hidden = true;
-      };
-
-      openButton.addEventListener('click', openMenu);
-      closeButton.addEventListener('click', closeMenu);
-      overlay.addEventListener('click', closeMenu);
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-          closeMenu();
-        }
-      });
-    })();
-  </script>
 
   <script>
     (() => {
@@ -825,5 +678,6 @@
         });
     })();
   </script>
+  <script src="/assets/js/global-layout.js" defer></script>
 </body>
 </html>

@@ -467,86 +467,10 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header-inner">
-      <button id="siteMenuOpen" type="button" class="site-menu-button" aria-label="Abrir menu" aria-controls="siteMenuDrawer" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-
-      <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
-        <span class="site-logo-icon">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
-            <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-          </svg>
-        </span>
-        <span class="site-logo-text">
-          <span class="site-logo-main">CALCULE</span>
-          <span class="site-logo-sub">TRABALHADOR</span>
-        </span>
-      </a>
-    </div>
-
-    <div id="siteMenuOverlay" class="site-menu-overlay" hidden></div>
-    <aside id="siteMenuDrawer" class="site-menu-drawer" aria-hidden="true">
-      <div class="site-menu-header">
-        <a href="/" class="site-logo" aria-label="Calcule Trabalhador - Home">
-          <span class="site-logo-icon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="3" y="3" width="20" height="20" rx="3" stroke="#1d4ed8" stroke-width="1.8"></rect>
-              <rect x="6" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="15" y="6" width="5" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="6" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="11.5" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="17" y="12" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="6" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="11.5" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-              <rect x="17" y="17" width="3" height="3" rx="1" fill="#1d4ed8"></rect>
-            </svg>
-          </span>
-          <span class="site-logo-text">
-            <span class="site-logo-main">CALCULE</span>
-            <span class="site-logo-sub">TRABALHADOR</span>
-          </span>
-        </a>
-        <button id="siteMenuClose" type="button" class="site-menu-close" aria-label="Fechar menu">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-            <line x1="4" y1="4" x2="18" y2="18"></line>
-            <line x1="18" y1="4" x2="4" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="site-menu-nav" aria-label="Menu principal">
-        <a href="/">Calculadoras</a>
-        <a href="/saque-aniversario-fgts/">Saque-Aniversário FGTS</a>
-        <a href="/salario-liquido-clt-2026/">Salário Líquido</a>
-        <a href="/calculadora-rescisao-clt-2026/">Rescisão CLT</a>
-        <a href="/calculadora-13-salario-2026/">13º Salário</a>
-        <a href="/calculadora-ferias-clt-2026/">Férias CLT</a>
-        <a href="/calculadora-horas-extras-clt-2026/">Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026/">Seguro-Desemprego</a>
-        <a href="/sobre/">Sobre</a>
-        <a href="/contato/" aria-current="page">Contato</a>
-        <a href="/politica-de-privacidade/">Privacidade</a>
-      </nav>
-
-      <div class="site-menu-footer">&copy; 2026 Calcule Trabalhador</div>
-    </aside>
-  </header>
+  <div id="global-header"></div>
 
   <section class="hero">
     <div class="hero-inner">
@@ -634,63 +558,7 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/sobre/">Sobre</a>
-        <a href="/contato/">Contato</a>
-        <a href="/politica-de-privacidade/">Privacidade</a>
-        <a href="/politica-de-cookies/">Politica de Cookies</a>
-        <a href="/termos-de-uso/">Termos de Uso</a>
-        <a href="/disclaimer/">Disclaimer</a>
-        <a href="/fontes-oficiais/">Fontes Oficiais</a>
-        <a href="/metodologia/">Metodologia</a>
-        <a href="/salario-liquido-clt-2026">Salario Liquido</a>
-        <a href="/calculadora-rescisao-clt-2026">Rescisao</a>
-        <a href="/calculadora-ferias-clt-2026">Ferias</a>
-        <a href="/calculadora-13-salario-2026">13o Salario</a>
-        <a href="/calculadora-horas-extras-clt-2026">Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026">Seguro-Desemprego</a>
-        <a href="/saque-aniversario-fgts">Saque Aniversario FGTS</a>
-      </div>
-      <p class="disclaimer">&copy; 2026 Calcule Trabalhador. Ferramentas educativas. Os resultados sao estimativas e nao substituem consulta a fontes oficiais ou orientacao profissional.</p>
-    </div>
-  </footer>
-
-  <script>
-    (() => {
-      const openButton = document.getElementById('siteMenuOpen');
-      const closeButton = document.getElementById('siteMenuClose');
-      const drawer = document.getElementById('siteMenuDrawer');
-      const overlay = document.getElementById('siteMenuOverlay');
-
-      if (!openButton || !closeButton || !drawer || !overlay) return;
-
-      const openMenu = () => {
-        drawer.classList.add('is-open');
-        overlay.hidden = false;
-        drawer.setAttribute('aria-hidden', 'false');
-        openButton.setAttribute('aria-expanded', 'true');
-      };
-
-      const closeMenu = () => {
-        drawer.classList.remove('is-open');
-        overlay.hidden = true;
-        drawer.setAttribute('aria-hidden', 'true');
-        openButton.setAttribute('aria-expanded', 'false');
-      };
-
-      openButton.addEventListener('click', openMenu);
-      closeButton.addEventListener('click', closeMenu);
-      overlay.addEventListener('click', closeMenu);
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeMenu();
-      });
-    })();
-  </script>
-
+  <div id="global-footer"></div>
   <script>
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
@@ -702,5 +570,6 @@
       successMessage.focus?.();
     });
   </script>
+  <script src="/assets/js/global-layout.js" defer></script>
 </body>
 </html>
