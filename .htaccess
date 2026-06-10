@@ -1,6 +1,17 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteBase /
+
+	# Redirects permanentes das URLs com ano para URLs evergreen
+	RewriteRule ^salario-liquido-clt-2026/?$ /salario-liquido-clt/ [R=301,L]
+	RewriteRule ^calculadora-rescisao-clt-2026/?$ /calculadora-rescisao-clt/ [R=301,L]
+	RewriteRule ^calculadora-ferias-clt-2026/?$ /calculadora-ferias-clt/ [R=301,L]
+	RewriteRule ^calculadora-13-salario-2026/?$ /calculadora-13-salario/ [R=301,L]
+	RewriteRule ^calculadora-horas-extras-clt-2026/?$ /calculadora-horas-extras-clt/ [R=301,L]
+	RewriteRule ^calculadora-seguro-desemprego-2026/?$ /calculadora-seguro-desemprego/ [R=301,L]
+	RewriteRule ^calculadora-aviso-previo-2026/?$ /calculadora-aviso-previo/ [R=301,L]
+	RewriteRule ^calculadora-adicional-noturno-2026/?$ /calculadora-adicional-noturno/ [R=301,L]
+	RewriteRule ^calculadora-insalubridade-2026/?$ /calculadora-insalubridade/ [R=301,L]
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^ index.html [L]

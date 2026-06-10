@@ -15,9 +15,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "salario-liquido-clt-2026",
+    "id": "salario-liquido-clt",
     "title": "Salário Líquido",
-    "slug": "/salario-liquido-clt-2026/",
+    "slug": "/salario-liquido-clt/",
     "category": "Salário",
     "description": "Calcule salário líquido com INSS, IRRF, dependentes e descontos aplicáveis em 2026.",
     "icone": "💳",
@@ -30,9 +30,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-rescisao-clt-2026",
+    "id": "calculadora-rescisao-clt",
     "title": "Rescisão CLT",
-    "slug": "/calculadora-rescisao-clt-2026/",
+    "slug": "/calculadora-rescisao-clt/",
     "category": "Rescisão",
     "description": "Estime verbas rescisórias, FGTS, multa de 40%, férias, 13º e aviso prévio.",
     "icone": "📋",
@@ -45,9 +45,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-13-salario-2026",
+    "id": "calculadora-13-salario",
     "title": "13º Salário",
-    "slug": "/calculadora-13-salario-2026/",
+    "slug": "/calculadora-13-salario/",
     "category": "13º Salário",
     "description": "Calcule o 13º salário integral ou proporcional, com descontos de INSS e IRRF.",
     "icone": "🎄",
@@ -60,9 +60,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-ferias-clt-2026",
+    "id": "calculadora-ferias-clt",
     "title": "Férias CLT",
-    "slug": "/calculadora-ferias-clt-2026/",
+    "slug": "/calculadora-ferias-clt/",
     "category": "Férias",
     "description": "Calcule férias CLT com adicional de 1/3, abono, INSS, IRRF e adiantamento de 13º.",
     "icone": "🏖️",
@@ -75,9 +75,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-horas-extras-clt-2026",
+    "id": "calculadora-horas-extras-clt",
     "title": "Horas Extras",
-    "slug": "/calculadora-horas-extras-clt-2026/",
+    "slug": "/calculadora-horas-extras-clt/",
     "category": "Jornada",
     "description": "Calcule horas extras com adicional de 50%, 100% e jornadas de trabalho diferentes.",
     "icone": "⏰",
@@ -90,9 +90,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-seguro-desemprego-2026",
+    "id": "calculadora-seguro-desemprego",
     "title": "Seguro-Desemprego",
-    "slug": "/calculadora-seguro-desemprego-2026/",
+    "slug": "/calculadora-seguro-desemprego/",
     "category": "Benefício",
     "description": "Simule valor da parcela, quantidade de parcelas e total estimado do seguro-desemprego.",
     "icone": "💼",
@@ -105,9 +105,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-aviso-previo-2026",
+    "id": "calculadora-aviso-previo",
     "title": "Aviso Prévio",
-    "slug": "/calculadora-aviso-previo-2026/",
+    "slug": "/calculadora-aviso-previo/",
     "category": "Rescisão",
     "description": "Calcule aviso prévio trabalhado ou indenizado conforme o salário e tempo de empresa.",
     "icone": "📄",
@@ -120,9 +120,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-adicional-noturno-2026",
+    "id": "calculadora-adicional-noturno",
     "title": "Adicional Noturno",
-    "slug": "/calculadora-adicional-noturno-2026/",
+    "slug": "/calculadora-adicional-noturno/",
     "category": "Jornada",
     "description": "Calcule adicional noturno conforme a CLT e percentual aplicado.",
     "icone": "🌙",
@@ -135,9 +135,9 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "id": "calculadora-insalubridade-2026",
+    "id": "calculadora-insalubridade",
     "title": "Insalubridade",
-    "slug": "/calculadora-insalubridade-2026/",
+    "slug": "/calculadora-insalubridade/",
     "category": "Adicionais",
     "description": "Calcule o adicional de insalubridade conforme o grau e percentual aplicável.",
     "icone": "⚠️",
