@@ -485,7 +485,44 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-  </style>
+  
+
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .ct-calculator-intro {
+      max-width: 780px;
+      margin: 0 0 22px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+</style>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
   <script src="/assets/js/global-layout.js" defer></script>
 </head>
@@ -493,7 +530,13 @@
   <div id="global-header"></div>
 
   <main class="container">
+    <p class="ct-calculator-eyebrow">SALÁRIO CLT 2026</p>
     <h1 class="title">Calculadora de Salário Líquido CLT 2026</h1>
+
+    <p class="ct-calculator-intro muted">
+      Use a calculadora para estimar o salário líquido CLT com descontos de INSS, IRRF e outras deduções do holerite. A simulação ajuda a conferir o valor aproximado que deve cair na conta no fim do mês.
+    </p>
+
 
     <section class="info">
       <strong>Simulação independente</strong>
@@ -683,6 +726,7 @@
   <div id="global-footer"></div>
 
 
+  <script src="/assets/js/tabelas-trabalhistas.js" defer></script>
   <script>
     const INSS_FAIXAS_2026 = [
       { ate: 1621.0, aliquota: 0.075 },
@@ -702,6 +746,7 @@
     const TETO_INSS_2026 = 8475.55;
     const DEDUCAO_DEPENDENTE_2026 = 189.59;
     const DESCONTO_SIMPLIFICADO_MENSAL_2026 = 607.2;
+    let tabelasCentralizadas = null;
 
     const els = {
       salario: document.getElementById('salarioBruto'),
@@ -737,7 +782,11 @@
       return cleaned ? Number(cleaned) / 100 : 0;
     }
 
-    function calcularINSS(salarioBruto) {
+    function arredondarLocal(value) {
+      return Math.round((Number(value) + Number.EPSILON) * 100) / 100;
+    }
+
+    function calcularINSSLegado(salarioBruto) {
       if (salarioBruto <= 0) return 0;
       const base = Math.min(salarioBruto, TETO_INSS_2026);
       let anterior = 0;
@@ -750,7 +799,7 @@
       return desconto;
     }
 
-    function calcularIRRF({ salarioBruto, inss, dependentes }) {
+    function calcularIRRFLegado({ salarioBruto, inss, dependentes }) {
       const deducaoDependentes = dependentes * DEDUCAO_DEPENDENTE_2026;
       const deducaoEscolhida = Math.max(deducaoDependentes, DESCONTO_SIMPLIFICADO_MENSAL_2026);
       const baseCalculo = Math.max(0, salarioBruto - inss - deducaoEscolhida);
@@ -770,22 +819,89 @@
       return { baseCalculo, deducaoDependentes, deducaoEscolhida, impostoBruto, redutor2026: Math.min(impostoBruto, redutor2026), impostoFinal };
     }
 
+    function calcularResultadoLegado(bruto, deps) {
+      const inss = calcularINSSLegado(bruto);
+      const irrf = calcularIRRFLegado({ salarioBruto: bruto, inss, dependentes: deps });
+      const liquido = Math.max(0, bruto - inss - irrf.impostoFinal);
+      return { inss, irrf, liquido };
+    }
+
+    function calcularResultadoCentralizado(bruto, deps) {
+      const central = window.CalculeTrabalhadorTabelas;
+      if (!central || !tabelasCentralizadas) return null;
+
+      const inss = central.calcularINSS(bruto, tabelasCentralizadas);
+      const baseIRRF = central.calcularBaseIRRF(bruto, inss, deps, 0, tabelasCentralizadas);
+      const imposto = central.calcularIRRF(baseIRRF.baseCalculo, tabelasCentralizadas);
+      const liquido = Math.max(0, bruto - inss - imposto.impostoFinal);
+
+      return {
+        inss,
+        irrf: {
+          baseCalculo: baseIRRF.baseCalculo,
+          deducaoDependentes: baseIRRF.deducaoDependentes,
+          deducaoEscolhida: baseIRRF.deducaoEscolhida,
+          impostoBruto: imposto.impostoBruto,
+          redutor2026: imposto.redutor2026,
+          impostoFinal: imposto.impostoFinal
+        },
+        liquido
+      };
+    }
+
+    function resultadosEquivalentes(centralizado, legado) {
+      if (!centralizado || !legado) return false;
+      const campos = [
+        ['inss', centralizado.inss, legado.inss],
+        ['irrf', centralizado.irrf.impostoFinal, legado.irrf.impostoFinal],
+        ['liquido', centralizado.liquido, legado.liquido],
+        ['baseIRRF', centralizado.irrf.baseCalculo, legado.irrf.baseCalculo]
+      ];
+      return campos.every(([, atual, antigo]) => Math.abs(arredondarLocal(atual) - arredondarLocal(antigo)) <= 0.01);
+    }
+
+    function calcularResultado(bruto, deps) {
+      const legado = calcularResultadoLegado(bruto, deps);
+      const centralizado = calcularResultadoCentralizado(bruto, deps);
+
+      if (centralizado && resultadosEquivalentes(centralizado, legado)) {
+        return centralizado;
+      }
+
+      if (centralizado) {
+        console.warn('[Calcule Trabalhador] Divergência entre cálculo centralizado e legado. Usando cálculo legado como fallback seguro.', { centralizado, legado });
+      }
+      return legado;
+    }
+
+    function obterFaixasInssParaRender() {
+      return tabelasCentralizadas?.inss?.faixas || INSS_FAIXAS_2026;
+    }
+
+    function obterFaixasIrrfParaRender() {
+      return (tabelasCentralizadas?.irrf?.faixas || IRRF_FAIXAS_2026).map((faixa) => ({
+        ...faixa,
+        ate: faixa.ate === null ? Infinity : faixa.ate
+      }));
+    }
+
     function renderTabelas() {
       let anterior = 0;
-      els.tabelaInss.innerHTML = INSS_FAIXAS_2026.map((f, idx) => {
+      els.tabelaInss.innerHTML = obterFaixasInssParaRender().map((f, idx) => {
         const label = idx === 0 ? `Até ${formatCurrency(f.ate)}` : `De ${formatCurrency(anterior + 0.01)} até ${formatCurrency(f.ate)}`;
         anterior = f.ate;
         return `<tr><td>${label}</td><td>${formatPercent(f.aliquota)}</td></tr>`;
       }).join('');
 
       let anteriorIr = 0;
-      els.tabelaIrrf.innerHTML = IRRF_FAIXAS_2026.map((f, idx) => {
+      els.tabelaIrrf.innerHTML = obterFaixasIrrfParaRender().map((f, idx) => {
         const label = f.ate === Infinity ? `Acima de ${formatCurrency(anteriorIr + 0.01)}` : idx === 0 ? `Até ${formatCurrency(f.ate)}` : `De ${formatCurrency(anteriorIr + 0.01)} até ${formatCurrency(f.ate)}`;
         anteriorIr = Number.isFinite(f.ate) ? f.ate : anteriorIr;
         return `<tr><td>${label}</td><td>${f.aliquota === 0 ? 'Isento' : formatPercent(f.aliquota)}</td><td>${formatCurrency(f.deducao)}</td></tr>`;
       }).join('');
 
-      els.deducaoDependente.textContent = `Dedução por dependente considerada: ${formatCurrency(DEDUCAO_DEPENDENTE_2026)}`;
+      const deducaoDependente = tabelasCentralizadas?.irrf?.descontoPorDependente || DEDUCAO_DEPENDENTE_2026;
+      els.deducaoDependente.textContent = `Dedução por dependente considerada: ${formatCurrency(deducaoDependente)}`;
     }
 
     function atualizar() {
@@ -798,9 +914,10 @@
         return;
       }
 
-      const inss = calcularINSS(bruto);
-      const irrf = calcularIRRF({ salarioBruto: bruto, inss, dependentes: deps });
-      const liquido = Math.max(0, bruto - inss - irrf.impostoFinal);
+      const resultado = calcularResultado(bruto, deps);
+      const inss = resultado.inss;
+      const irrf = resultado.irrf;
+      const liquido = resultado.liquido;
 
       els.vazio.style.display = 'none';
       els.conteudo.style.display = 'block';
@@ -813,10 +930,23 @@
       els.memBruto.textContent = formatCurrency(bruto);
       els.memInss.textContent = formatCurrency(inss);
       els.memDep.textContent = formatCurrency(irrf.deducaoDependentes);
-      els.memSimp.textContent = formatCurrency(DESCONTO_SIMPLIFICADO_MENSAL_2026);
+      els.memSimp.textContent = formatCurrency(tabelasCentralizadas?.irrf?.descontoSimplificado || DESCONTO_SIMPLIFICADO_MENSAL_2026);
       els.memAplicada.textContent = formatCurrency(irrf.deducaoEscolhida);
       els.memBrutoIr.textContent = formatCurrency(irrf.impostoBruto);
       els.memRedutor.textContent = formatCurrency(irrf.redutor2026);
+    }
+
+    async function inicializarCalculadora() {
+      try {
+        if (window.CalculeTrabalhadorTabelas) {
+          tabelasCentralizadas = await window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas();
+        }
+      } catch (error) {
+        console.warn('[Calcule Trabalhador] Tabelas centralizadas não carregadas. Usando cálculo legado como fallback.', error);
+      }
+
+      renderTabelas();
+      atualizar();
     }
 
     els.salario.addEventListener('input', (e) => {
@@ -827,8 +957,8 @@
 
     els.dependentes.addEventListener('input', atualizar);
 
-    renderTabelas();
-    atualizar();
+    inicializarCalculadora();
   </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

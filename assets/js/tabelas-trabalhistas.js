@@ -1,0 +1,574 @@
+(function () {
+  'use strict';
+
+  const DATA_URL = '/data/tabelas-trabalhistas.json';
+  let cacheTabelas = null;
+
+  function arredondarCentavos(valor) {
+    return Math.round((Number(valor) + Number.EPSILON) * 100) / 100;
+  }
+
+  function formatarMoeda(valor) {
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }).format(Number.isFinite(Number(valor)) ? Number(valor) : 0);
+  }
+
+  async function carregarTabelasTrabalhistas() {
+    if (cacheTabelas) return cacheTabelas;
+
+    const response = await fetch(DATA_URL, { cache: 'no-cache' });
+    if (!response.ok) {
+      throw new Error(`Não foi possível carregar ${DATA_URL}`);
+    }
+
+    cacheTabelas = await response.json();
+    return cacheTabelas;
+  }
+
+  function calcularINSS(salarioBruto, tabelas) {
+    const salario = Number(salarioBruto) || 0;
+    if (salario <= 0 || !tabelas || !tabelas.inss) return 0;
+
+    const teto = Number(tabelas.inss.teto) || salario;
+    const base = Math.min(salario, teto);
+    let anterior = 0;
+    let desconto = 0;
+
+    tabelas.inss.faixas.forEach((faixa) => {
+      const limite = Number(faixa.ate) || teto;
+      const baseFaixa = Math.max(0, Math.min(base, limite) - anterior);
+      desconto += baseFaixa * Number(faixa.aliquota || 0);
+      anterior = limite;
+    });
+
+    return arredondarCentavos(desconto);
+  }
+
+  function calcularBaseIRRF(salarioBruto, inss, dependentes, outrosDescontos, tabelas) {
+    const bruto = Number(salarioBruto) || 0;
+    const descontoInss = Number(inss) || 0;
+    const deps = Math.max(0, Number(dependentes) || 0);
+    const outros = Math.max(0, Number(outrosDescontos) || 0);
+    const deducaoDependentes = deps * Number(tabelas.irrf.descontoPorDependente || 0);
+    const descontoSimplificado = Number(tabelas.irrf.descontoSimplificado || 0);
+    const deducaoEscolhida = Math.max(deducaoDependentes, descontoSimplificado);
+    const baseCalculo = Math.max(0, bruto - descontoInss - outros - deducaoEscolhida);
+
+    return {
+      baseCalculo: arredondarCentavos(baseCalculo),
+      deducaoDependentes: arredondarCentavos(deducaoDependentes),
+      deducaoEscolhida: arredondarCentavos(deducaoEscolhida)
+    };
+  }
+
+  function calcularIRRF(baseIRRF, tabelas) {
+    const base = Number(baseIRRF) || 0;
+    if (base <= 0 || !tabelas || !tabelas.irrf) {
+      return { impostoBruto: 0, redutor2026: 0, impostoFinal: 0 };
+    }
+
+    const faixa = tabelas.irrf.faixas.find((item) => item.ate === null || base <= Number(item.ate));
+    const impostoBruto = Math.max(0, base * Number(faixa.aliquota || 0) - Number(faixa.deducao || 0));
+
+    let redutor = 0;
+    const redutorConfig = tabelas.irrf.redutorIsencao || {};
+    if (redutorConfig.ativo) {
+      if (base <= Number(redutorConfig.limiteIsencao || 0)) {
+        redutor = impostoBruto;
+      } else if (base <= Number(redutorConfig.limiteReducao || 0)) {
+        redutor = Math.max(0, Number(redutorConfig.parcelaBase || 0) - Number(redutorConfig.coeficiente || 0) * base);
+      }
+    }
+
+    const redutorAplicado = Math.min(impostoBruto, redutor);
+    const impostoFinal = Math.max(0, impostoBruto - redutorAplicado);
+
+    return {
+      impostoBruto: arredondarCentavos(impostoBruto),
+      redutor2026: arredondarCentavos(redutorAplicado),
+      impostoFinal: arredondarCentavos(impostoFinal)
+    };
+  }
+
+  function obterSalarioMinimo(tabelas) {
+    return Number(tabelas?.salarioMinimo?.valor) || 0;
+  }
+
+  function obterTabelaSeguroDesemprego(tabelas) {
+    return tabelas?.seguroDesemprego || null;
+  }
+
+
+  function calcularSeguroDesemprego(mediaSalarial, tabelas) {
+    const media = Number(mediaSalarial) || 0;
+    const tabela = obterTabelaSeguroDesemprego(tabelas);
+    const piso = Number(tabela?.piso) || 0;
+    const teto = Number(tabela?.teto) || Infinity;
+    const faixas = Array.isArray(tabela?.faixas) ? tabela.faixas : [];
+
+    if (!tabela || media <= 0 || !faixas.length) {
+      return {
+        media,
+        valor: 0,
+        faixa: '',
+        faixaDados: null,
+        piso,
+        teto: Number.isFinite(teto) ? teto : 0
+      };
+    }
+
+    const faixa = faixas.find((item) => item.ate === null || media <= Number(item.ate));
+    let valor = 0;
+
+    if (!faixa) {
+      valor = teto;
+    } else if (faixa.tipo === 'multiplicador') {
+      valor = media * Number(faixa.multiplicador || 0);
+    } else if (faixa.tipo === 'baseMaisExcedente') {
+      valor = Number(faixa.valorBase || 0) + ((media - Number(faixa.limiteBase || 0)) * Number(faixa.multiplicadorExcedente || 0));
+    } else if (faixa.tipo === 'teto') {
+      valor = teto;
+    }
+
+    valor = Math.max(piso, Math.min(valor, teto));
+
+    return {
+      media: arredondarCentavos(media),
+      valor: arredondarCentavos(valor),
+      faixa: faixa?.rotulo || '',
+      faixaDados: faixa || null,
+      piso,
+      teto: Number.isFinite(teto) ? teto : 0
+    };
+  }
+
+  function calcularParcelasSeguroDesemprego(tempoOuParcelas, tabelas) {
+    const valor = Number(tempoOuParcelas) || 0;
+    const tabela = obterTabelaSeguroDesemprego(tabelas);
+    const regras = Array.isArray(tabela?.parcelas?.faixas) ? tabela.parcelas.faixas : [];
+
+    if ([3, 4, 5].includes(valor)) {
+      return { parcelas: valor, regra: null };
+    }
+
+    const regra = regras.find((item) => {
+      const de = Number(item.deMeses) || 0;
+      const ate = item.ateMeses === null ? Infinity : Number(item.ateMeses);
+      return valor >= de && valor <= ate;
+    });
+
+    return {
+      parcelas: Number(regra?.parcelas) || 0,
+      regra: regra || null
+    };
+  }
+
+  function obterTabelaFGTS(tabelas) {
+    return tabelas?.fgts || null;
+  }
+
+
+  function obterTabelaSaqueAniversario(tabelas) {
+    return tabelas?.saqueAniversario || null;
+  }
+
+  function calcularSaqueAniversarioFGTS(saldoFGTS, tabelas) {
+    const saldo = Number(saldoFGTS) || 0;
+    const tabela = obterTabelaSaqueAniversario(tabelas);
+    const faixas = Array.isArray(tabela?.faixas) ? tabela.faixas : [];
+    const faixa = faixas.find((item) => item.ate === null || saldo <= Number(item.ate));
+
+    if (!faixa || saldo <= 0) {
+      return {
+        saldo,
+        faixa: null,
+        percentual: 0,
+        aliquota: 0,
+        parcelaAdicional: 0,
+        saquePermitido: 0,
+        saldoRestante: Math.max(saldo, 0)
+      };
+    }
+
+    const aliquota = Number(faixa.aliquota) || (Number(faixa.percentual) || 0) / 100;
+    const percentual = Number(faixa.percentual) || aliquota * 100;
+    const parcelaAdicional = Number(faixa.parcelaAdicional) || 0;
+    const saquePermitido = arredondarCentavos(saldo * aliquota + parcelaAdicional);
+    const saldoRestante = arredondarCentavos(Math.max(saldo - saquePermitido, 0));
+
+    return {
+      saldo,
+      faixa,
+      percentual,
+      aliquota,
+      parcelaAdicional,
+      saquePermitido,
+      saldoRestante
+    };
+  }
+
+  function obterPercentualInsalubridade(grau, tabelas) {
+    return Number(tabelas?.insalubridade?.percentuais?.[grau]) || 0;
+  }
+
+  function obterPercentualAdicionalNoturno(tabelas) {
+    return Number(tabelas?.adicionalNoturno?.percentualPadrao) || 0;
+  }
+
+
+  function obterRegraAvisoPrevio(tabelas) {
+    return tabelas?.avisoPrevio || null;
+  }
+
+  function calcularAvisoPrevio(anosCompletos, salario, tabelas) {
+    const regra = obterRegraAvisoPrevio(tabelas) || {};
+    const anos = Math.max(0, Number(anosCompletos) || 0);
+    const baseDays = Number(regra.diasBase) || 30;
+    const diasPorAno = Number(regra.diasPorAnoCompleto) || Number(regra.diasPorAno) || 3;
+    const limiteDias = Number(regra.limiteDias) || 90;
+    const rawAdditionalDays = anos * diasPorAno;
+    const totalDays = Math.min(limiteDias, baseDays + rawAdditionalDays);
+    const additionalDays = totalDays - baseDays;
+    const dailyValue = (Number(salario) || 0) / 30;
+    const estimatedValue = totalDays * dailyValue;
+
+    return {
+      baseDays,
+      rawAdditionalDays,
+      additionalDays,
+      totalDays,
+      dailyValue,
+      estimatedValue
+    };
+  }
+
+  function calcularAdicionalNoturno({ salary, monthlyHours, nightHours, percent }, tabelas) {
+    const percentualCentral = Number(percent) || (obterPercentualAdicionalNoturno(tabelas) * 100);
+    const normalHourValue = (Number(salary) || 0) / (Number(monthlyHours) || 1);
+    const additionalPerHour = normalHourValue * (percentualCentral / 100);
+    const totalValue = additionalPerHour * (Number(nightHours) || 0);
+
+    return {
+      normalHourValue,
+      percent: percentualCentral,
+      additionalPerHour,
+      nightHours: Number(nightHours) || 0,
+      totalValue
+    };
+  }
+
+  function obterPercentuaisInsalubridade(tabelas) {
+    return tabelas?.insalubridade?.percentuais || {};
+  }
+
+  function calcularInsalubridade({ minimumWage, degree }, tabelas) {
+    const percentuais = obterPercentuaisInsalubridade(tabelas);
+    const rotulos = tabelas?.insalubridade?.rotulos || {};
+    const percentDecimal = Number(percentuais?.[degree]) || 0;
+    const percent = percentDecimal * 100;
+    const monthlyValue = (Number(minimumWage) || 0) * percentDecimal;
+    const annualValue = monthlyValue * 12;
+
+    return {
+      minimumWage: Number(minimumWage) || 0,
+      degreeLabel: rotulos?.[degree] || degree,
+      percent,
+      monthlyValue,
+      annualValue
+    };
+  }
+
+  function obterRegrasHorasExtras(tabelas) {
+    return tabelas?.horasExtras || null;
+  }
+
+  function obterDivisorHorasCentral(jornadaTipo, jornadaCustom, tabelas) {
+    const regras = obterRegrasHorasExtras(tabelas) || {};
+    const divisores = regras.divisoresMensais || {};
+    if (jornadaTipo === '44') return Number(divisores['44']) || 220;
+    if (jornadaTipo === '40') return Number(divisores['40']) || 200;
+
+    const personalizada = regras.personalizada || {};
+    const semanasPorMes = Number(personalizada.semanasPorMes) || 4.33;
+    const fatorAjuste = Number(personalizada.fatorAjuste) || 1.2;
+    return (Number(jornadaCustom) || 0) * semanasPorMes * fatorAjuste;
+  }
+
+  function calcularHoraExtra({ salarioBruto, jornadaTipo, jornadaCustom, horas50, horas100 }, tabelas) {
+    const regras = obterRegrasHorasExtras(tabelas) || {};
+    const divisor = obterDivisorHorasCentral(jornadaTipo, jornadaCustom, tabelas);
+    const salario = Number(salarioBruto) || 0;
+    const qtd50 = Number(horas50) || 0;
+    const qtd100 = Number(horas100) || 0;
+    const adicional50 = Number(regras.percentualDiaUtil) || 0.50;
+    const adicional100 = Number(regras.percentualDomingoFeriado) || 1.00;
+    const valorHoraNormal = salario / divisor;
+    const valorHoraExtra50 = valorHoraNormal * (1 + adicional50);
+    const valorHoraExtra100 = valorHoraNormal * (1 + adicional100);
+    const subtotal50 = qtd50 * valorHoraExtra50;
+    const subtotal100 = qtd100 * valorHoraExtra100;
+    const totalHoras = qtd50 + qtd100;
+    const totalReceber = subtotal50 + subtotal100;
+
+    return {
+      divisor,
+      valorHoraNormal,
+      valorHoraExtra50,
+      valorHoraExtra100,
+      subtotal50,
+      subtotal100,
+      totalHoras,
+      totalReceber
+    };
+  }
+
+  function resultadosNumericosIguais(a, b, tolerancia = 0.01) {
+    return Math.abs((Number(a) || 0) - (Number(b) || 0)) <= tolerancia;
+  }
+
+
+  function calcularFGTSMensal(salarioBruto, tabelas) {
+    const salario = Number(salarioBruto) || 0;
+    const percentual = Number(tabelas?.fgts?.depositoMensal) || 0.08;
+    return arredondarCentavos(salario * percentual);
+  }
+
+  function calcularMultaFGTS(fgtsAcumulado, tabelas) {
+    const saldo = Number(fgtsAcumulado) || 0;
+    const percentual = Number(tabelas?.fgts?.multaRescisoria) || 0.4;
+    return arredondarCentavos(saldo * percentual);
+  }
+
+  function calcularSaldoSalario(salarioBruto, diasTrabalhados, diasNoMes) {
+    const salario = Number(salarioBruto) || 0;
+    const dias = Number(diasTrabalhados) || 0;
+    const totalDias = Number(diasNoMes) || 30;
+    return arredondarCentavos((salario / totalDias) * dias);
+  }
+
+  function calcularFeriasProporcionais(salarioBruto, mesesProporcionais, tabelas) {
+    const salario = Number(salarioBruto) || 0;
+    const meses = Math.max(0, Number(mesesProporcionais) || 0);
+    const mesesAno = Number(tabelas?.ferias?.mesesAno) || 12;
+    const terco = Number(tabelas?.ferias?.tercoConstitucional) || (1 / 3);
+    const base = salario * (meses / mesesAno);
+    const tercoValor = base * terco;
+    return {
+      base: arredondarCentavos(base),
+      terco: arredondarCentavos(tercoValor),
+      total: arredondarCentavos(base + tercoValor)
+    };
+  }
+
+  function calcularFeriasVencidas(salarioBruto, periodosVencidos, tabelas) {
+    const salario = Number(salarioBruto) || 0;
+    const periodos = Math.max(0, Number(periodosVencidos) || 0);
+    const terco = Number(tabelas?.ferias?.tercoConstitucional) || (1 / 3);
+    const base = salario * periodos;
+    const tercoValor = base * terco;
+    return {
+      base: arredondarCentavos(base),
+      terco: arredondarCentavos(tercoValor),
+      total: arredondarCentavos(base + tercoValor)
+    };
+  }
+
+  function calcularDecimoTerceiroProporcional(salarioBruto, mesesProporcionais, tabelas) {
+    const salario = Number(salarioBruto) || 0;
+    const meses = Math.max(0, Number(mesesProporcionais) || 0);
+    const mesesAno = Number(tabelas?.decimoTerceiro?.mesesAno) || 12;
+    return arredondarCentavos(salario * (meses / mesesAno));
+  }
+
+  function calcularRescisao(dados, tabelas) {
+    const salario = Number(dados?.salario) || 0;
+    const mesesServico = Math.max(0, Number(dados?.mesesServico) || 0);
+    const diasServico = Math.max(0, Number(dados?.diasServico) || 0);
+    const diasTrabalhadosMes = Math.max(0, Number(dados?.diasTrabalhadosMes) || 0);
+    const diasNoMes = Math.max(1, Number(dados?.diasNoMes) || 30);
+    const tipo = dados?.tipo || '';
+    const aviso = dados?.aviso || '';
+    const meses13 = Math.max(0, Number(dados?.meses13) || 0);
+    const regraAviso = obterRegraAvisoPrevio(tabelas) || {};
+    const anos = Math.floor(diasServico / 365);
+    const diasAviso = calcularAvisoPrevio(anos, salario, tabelas).totalDays || Number(regraAviso.diasBase) || 30;
+
+    const saldoSalario = calcularSaldoSalario(salario, diasTrabalhadosMes, diasNoMes);
+    const qtdFeriasVencidas = Math.floor(mesesServico / 12);
+    const feriasVencidas = calcularFeriasVencidas(salario, qtdFeriasVencidas, tabelas).total;
+    const mesesFeriasProp = mesesServico % 12;
+    const feriasProporcionais = calcularFeriasProporcionais(salario, mesesFeriasProp, tabelas).total;
+    const decimoTerceiroProp = calcularDecimoTerceiroProporcional(salario, meses13, tabelas);
+    const fgtsAcumulado = arredondarCentavos(calcularFGTSMensal(salario, tabelas) * mesesServico);
+    const multa40 = (tabelas?.rescisao?.tiposComMultaFGTS || ['sem_justa_causa']).includes(tipo) ? calcularMultaFGTS(fgtsAcumulado, tabelas) : 0;
+
+    let avisoPrevioValor = 0;
+    if (aviso === 'indenizado') {
+      const tiposPositivos = tabelas?.rescisao?.tiposComAvisoIndenizadoPositivo || ['sem_justa_causa', 'termino_contrato'];
+      if (tiposPositivos.includes(tipo)) {
+        avisoPrevioValor = arredondarCentavos((salario / 30) * diasAviso);
+      }
+    } else if (aviso === 'sem_aviso') {
+      const tiposDesconto = tabelas?.rescisao?.tiposComDescontoAviso || ['pedido_demissao'];
+      if (tiposDesconto.includes(tipo)) {
+        const diasDesconto = Number(regraAviso.diasDescontoPedidoDemissao) || 30;
+        avisoPrevioValor = -arredondarCentavos((salario / 30) * Math.min(diasAviso, diasDesconto));
+      }
+    }
+
+    let totalVerbas = saldoSalario + feriasVencidas + feriasProporcionais + decimoTerceiroProp + avisoPrevioValor;
+    if ((tabelas?.rescisao?.tiposComMultaFGTS || ['sem_justa_causa']).includes(tipo)) {
+      totalVerbas += multa40;
+    }
+
+    return {
+      saldoSalario: arredondarCentavos(saldoSalario),
+      feriasVencidas: arredondarCentavos(feriasVencidas),
+      feriasProporcionais: arredondarCentavos(feriasProporcionais),
+      decimoTerceiroProp: arredondarCentavos(decimoTerceiroProp),
+      fgtsAcumulado: arredondarCentavos(fgtsAcumulado),
+      multa40: arredondarCentavos(multa40),
+      avisoPrevioValor: arredondarCentavos(avisoPrevioValor),
+      diasAviso,
+      totalVerbas: arredondarCentavos(totalVerbas)
+    };
+  }
+
+  function calcularBeneficios(valores) {
+    return arredondarCentavos((Number(valores?.beneficios) || 0) + (Number(valores?.vaVr) || 0) + (Number(valores?.vt) || 0) + (Number(valores?.saude) || 0));
+  }
+
+  function calcularCustoCLT(dados, tabelas) {
+    const salario = Number(dados?.salario) || 0;
+    const dependentes = Number(dados?.dependentes) || 0;
+    const descontos = Number(dados?.descontos) || 0;
+    const beneficios = Number(dados?.beneficios) || 0;
+
+    const teto = Number(tabelas?.inss?.teto) || salario;
+    const baseInss = Math.min(salario, teto);
+    let anterior = 0;
+    let inss = 0;
+    (tabelas?.inss?.faixas || []).forEach((faixa) => {
+      const limite = faixa.ate === null ? teto : Number(faixa.ate);
+      const baseFaixa = Math.max(0, Math.min(baseInss, limite) - anterior);
+      inss += baseFaixa * Number(faixa.aliquota || 0);
+      anterior = limite;
+    });
+
+    const deducaoDependentes = Math.max(0, dependentes) * Number(tabelas?.irrf?.descontoPorDependente || 0);
+    const deducaoEscolhida = Math.max(deducaoDependentes, Number(tabelas?.irrf?.descontoSimplificado || 0));
+    const baseIRRF = Math.max(0, salario - inss - deducaoEscolhida);
+    const faixaIRRF = (tabelas?.irrf?.faixas || []).find((faixa) => faixa.ate === null || baseIRRF <= Number(faixa.ate)) || (tabelas?.irrf?.faixas || []).slice(-1)[0] || {};
+    const impostoBruto = Math.max(0, baseIRRF * Number(faixaIRRF.aliquota || 0) - Number(faixaIRRF.deducucao || faixaIRRF.deducao || 0));
+    let redutor = 0;
+    const redutorConfig = tabelas?.irrf?.redutorIsencao || {};
+    if (redutorConfig.ativo) {
+      if (baseIRRF <= Number(redutorConfig.limiteIsencao || 0)) {
+        redutor = impostoBruto;
+      } else if (baseIRRF <= Number(redutorConfig.limiteReducao || 0)) {
+        redutor = Math.max(0, Number(redutorConfig.parcelaBase || 0) - Number(redutorConfig.coeficiente || 0) * baseIRRF);
+      }
+    }
+    const irrf = Math.max(0, impostoBruto - Math.min(impostoBruto, redutor));
+
+    const liquido = Math.max(0, salario - inss - irrf - descontos);
+    const decimoTerceiro = salario / (Number(tabelas?.decimoTerceiro?.mesesAno) || 12);
+    const ferias = (salario + salario * (Number(tabelas?.ferias?.tercoConstitucional) || (1 / 3))) / 12;
+    const fgts = salario * (Number(tabelas?.fgts?.depositoMensal) || 0.08);
+    const total = liquido + decimoTerceiro + ferias + fgts + beneficios;
+
+    return {
+      inss,
+      irrf,
+      liquido,
+      decimoTerceiro,
+      ferias,
+      fgts,
+      beneficios,
+      total
+    };
+  }
+
+  function calcularReservaPJ(valores) {
+    return arredondarCentavos((Number(valores?.reservaFerias) || 0) + (Number(valores?.reserva13) || 0));
+  }
+
+  function calcularComparativoCltPj(dados, tabelas) {
+    const cltBeneficios = calcularBeneficios({
+      beneficios: dados?.cltBeneficios,
+      vaVr: dados?.cltVaVr,
+      vt: dados?.cltVt,
+      saude: dados?.cltSaude
+    });
+    const clt = calcularCustoCLT({
+      salario: dados?.cltSalario,
+      dependentes: dados?.cltDependentes,
+      descontos: dados?.cltDescontos,
+      beneficios: cltBeneficios
+    }, tabelas);
+    const pjValor = Number(dados?.pjValor) || 0;
+    const impostoPercentual = Math.min(100, Number(dados?.pjImposto) || 0);
+    const pjImposto = pjValor * (impostoPercentual / 100);
+    const pjCustosSemImposto = (Number(dados?.pjContabilidade) || 0) + (Number(dados?.pjBeneficios) || 0) + (Number(dados?.pjInss) || 0) + (Number(dados?.pjOutros) || 0);
+    const pjCustos = pjImposto + pjCustosSemImposto;
+    const pjReservas = calcularReservaPJ({ reservaFerias: dados?.pjReservaFerias, reserva13: dados?.pjReserva13 });
+    const pjLiquido = Math.max(0, pjValor - pjCustos);
+    const pjRealDisponivel = Math.max(0, pjValor - pjCustos - pjReservas);
+    const diferencaMensal = pjRealDisponivel - clt.total;
+    const diferencaAnual = diferencaMensal * 12;
+    const pjNecessario = clt.total + pjCustos + pjReservas;
+
+    return {
+      clt,
+      pj: {
+        bruto: arredondarCentavos(pjValor),
+        imposto: arredondarCentavos(pjImposto),
+        custos: arredondarCentavos(pjCustos),
+        reservas: arredondarCentavos(pjReservas),
+        liquido: arredondarCentavos(pjLiquido),
+        realDisponivel: arredondarCentavos(pjRealDisponivel)
+      },
+      diferencaMensal: arredondarCentavos(diferencaMensal),
+      diferencaAnual: arredondarCentavos(diferencaAnual),
+      pjNecessario: arredondarCentavos(pjNecessario)
+    };
+  }
+
+  window.CalculeTrabalhadorTabelas = {
+    carregarTabelasTrabalhistas,
+    calcularINSS,
+    calcularBaseIRRF,
+    calcularIRRF,
+    obterSalarioMinimo,
+    obterTabelaSeguroDesemprego,
+    calcularSeguroDesemprego,
+    calcularParcelasSeguroDesemprego,
+    obterTabelaFGTS,
+    obterTabelaSaqueAniversario,
+    calcularSaqueAniversarioFGTS,
+    obterPercentualInsalubridade,
+    obterPercentualAdicionalNoturno,
+    obterRegraAvisoPrevio,
+    calcularAvisoPrevio,
+    calcularAdicionalNoturno,
+    obterPercentuaisInsalubridade,
+    calcularInsalubridade,
+    obterRegrasHorasExtras,
+    calcularHoraExtra,
+    resultadosNumericosIguais,
+    calcularFGTSMensal,
+    calcularMultaFGTS,
+    calcularSaldoSalario,
+    calcularFeriasProporcionais,
+    calcularDecimoTerceiroProporcional,
+    calcularRescisao,
+    calcularBeneficios,
+    calcularCustoCLT,
+    calcularReservaPJ,
+    calcularComparativoCltPj,
+    formatarMoeda,
+    arredondarCentavos
+  };
+})();

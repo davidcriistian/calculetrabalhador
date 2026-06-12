@@ -56,11 +56,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
   <script src="/assets/js/global-layout.js" defer></script>
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl px-4 py-8">
+    <p class="ct-calculator-eyebrow">CLT OU PJ 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora CLT ou PJ</h1>
 
     <section class="mt-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -295,6 +324,7 @@
   <div id="global-footer"></div>
 
 
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
   <script>
     const INSS_FAIXAS_2026 = [
       { ate: 1621.0, aliquota: 0.075 },
@@ -314,6 +344,14 @@
     const DESCONTO_SIMPLIFICADO_MENSAL_2026 = 607.2;
 
     const byId = (id) => document.getElementById(id);
+    let tabelasCentralizadasCltPj = null;
+
+    async function carregarTabelasCltPj() {
+      if (tabelasCentralizadasCltPj) return tabelasCentralizadasCltPj;
+      if (!window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas) return null;
+      tabelasCentralizadasCltPj = await window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas();
+      return tabelasCentralizadasCltPj;
+    }
     const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
     const numberValue = (id) => Math.max(0, parseFloat(byId(id).value || '0') || 0);
 
@@ -357,7 +395,7 @@
       byId('resultadoConteudo').classList.add('hidden');
     }
 
-    function calcularComparacao() {
+    async function calcularComparacao() {
       const cltSalario = numberValue('cltSalario');
       const pjValor = numberValue('pjValor');
       const impostoPercentual = Math.min(100, numberValue('pjImposto'));
@@ -390,29 +428,115 @@
       const diferencaAnual = diferencaMensal * 12;
       const pjNecessario = cltTotal + pjCustos + pjReservas;
 
-      setMoney('resCltTotal', cltTotal);
-      setMoney('resPjDisponivel', pjRealDisponivel);
-      setMoney('resDiferencaMensal', diferencaMensal);
-      setMoney('resDiferencaAnual', diferencaAnual);
-      setMoney('resPjNecessario', pjNecessario);
-      setMoney('memCltLiquido', cltLiquido);
-      setMoney('memCltInss', cltInss);
-      setMoney('memCltIrrf', cltIrrf);
-      setMoney('memClt13', clt13);
-      setMoney('memCltFerias', cltFerias);
-      setMoney('memCltFgts', cltFgts);
-      setMoney('memCltBeneficios', cltBeneficios);
-      setMoney('memPjBruto', pjValor);
-      setMoney('memPjImposto', pjImposto);
-      setMoney('memPjCustos', pjCustos);
-      setMoney('memPjReservas', pjReservas);
-      setMoney('memPjLiquido', pjLiquido);
-      setMoney('memPjReal', pjRealDisponivel);
+      let resultadoFinal = {
+        cltTotal,
+        pjRealDisponivel,
+        diferencaMensal,
+        diferencaAnual,
+        pjNecessario,
+        cltLiquido,
+        cltInss,
+        cltIrrf,
+        clt13,
+        cltFerias,
+        cltFgts,
+        cltBeneficios,
+        pjValor,
+        pjImposto,
+        pjCustos,
+        pjReservas,
+        pjLiquido
+      };
+
+      try {
+        const tabelas = await carregarTabelasCltPj();
+        const central = window.CalculeTrabalhadorTabelas?.calcularComparativoCltPj?.({
+          cltSalario,
+          cltBeneficios: numberValue('cltBeneficios'),
+          cltVaVr: numberValue('cltVaVr'),
+          cltVt: numberValue('cltVt'),
+          cltSaude: numberValue('cltSaude'),
+          cltDependentes,
+          cltDescontos,
+          pjValor,
+          pjImposto: impostoPercentual,
+          pjContabilidade: numberValue('pjContabilidade'),
+          pjBeneficios: numberValue('pjBeneficios'),
+          pjReservaFerias: numberValue('pjReservaFerias'),
+          pjReserva13: numberValue('pjReserva13'),
+          pjInss: numberValue('pjInss'),
+          pjOutros: numberValue('pjOutros')
+        }, tabelas);
+
+        const iguais = central && [
+          [central.clt.total, cltTotal],
+          [central.pj.realDisponivel, pjRealDisponivel],
+          [central.diferencaMensal, diferencaMensal],
+          [central.diferencaAnual, diferencaAnual],
+          [central.pjNecessario, pjNecessario],
+          [central.clt.liquido, cltLiquido],
+          [central.clt.inss, cltInss],
+          [central.clt.irrf, cltIrrf],
+          [central.clt.decimoTerceiro, clt13],
+          [central.clt.ferias, cltFerias],
+          [central.clt.fgts, cltFgts],
+          [central.clt.beneficios, cltBeneficios],
+          [central.pj.imposto, pjImposto],
+          [central.pj.custos, pjCustos],
+          [central.pj.reservas, pjReservas],
+          [central.pj.liquido, pjLiquido]
+        ].every(([centralValue, legado]) => window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralValue, legado, 0.01));
+
+        if (iguais) {
+          resultadoFinal = {
+            cltTotal: central.clt.total,
+            pjRealDisponivel: central.pj.realDisponivel,
+            diferencaMensal: central.diferencaMensal,
+            diferencaAnual: central.diferencaAnual,
+            pjNecessario: central.pjNecessario,
+            cltLiquido: central.clt.liquido,
+            cltInss: central.clt.inss,
+            cltIrrf: central.clt.irrf,
+            clt13: central.clt.decimoTerceiro,
+            cltFerias: central.clt.ferias,
+            cltFgts: central.clt.fgts,
+            cltBeneficios: central.clt.beneficios,
+            pjValor: central.pj.bruto,
+            pjImposto: central.pj.imposto,
+            pjCustos: central.pj.custos,
+            pjReservas: central.pj.reservas,
+            pjLiquido: central.pj.liquido
+          };
+        } else if (central) {
+          console.warn('Cálculo centralizado CLT ou PJ divergiu do legado. Mantendo fallback legado.', { legado: resultadoFinal, central });
+        }
+      } catch (error) {
+        console.warn('Não foi possível usar cálculo centralizado CLT ou PJ. Mantendo fallback legado.', error);
+      }
+
+      setMoney('resCltTotal', resultadoFinal.cltTotal);
+      setMoney('resPjDisponivel', resultadoFinal.pjRealDisponivel);
+      setMoney('resDiferencaMensal', resultadoFinal.diferencaMensal);
+      setMoney('resDiferencaAnual', resultadoFinal.diferencaAnual);
+      setMoney('resPjNecessario', resultadoFinal.pjNecessario);
+      setMoney('memCltLiquido', resultadoFinal.cltLiquido);
+      setMoney('memCltInss', resultadoFinal.cltInss);
+      setMoney('memCltIrrf', resultadoFinal.cltIrrf);
+      setMoney('memClt13', resultadoFinal.clt13);
+      setMoney('memCltFerias', resultadoFinal.cltFerias);
+      setMoney('memCltFgts', resultadoFinal.cltFgts);
+      setMoney('memCltBeneficios', resultadoFinal.cltBeneficios);
+      setMoney('memPjBruto', resultadoFinal.pjValor);
+      setMoney('memPjImposto', resultadoFinal.pjImposto);
+      setMoney('memPjCustos', resultadoFinal.pjCustos);
+      setMoney('memPjReservas', resultadoFinal.pjReservas);
+      setMoney('memPjLiquido', resultadoFinal.pjLiquido);
+      setMoney('memPjReal', resultadoFinal.pjRealDisponivel);
 
       let interpretacao = 'Cenários próximos: analisar benefícios, riscos e estabilidade antes de decidir.';
-      if (diferencaMensal > cltTotal * 0.05) {
-        interpretacao = `PJ parece maior neste cenário. Ainda assim, confira se ${brl(pjNecessario)} cobre custos, reservas e riscos de forma adequada.`;
-      } else if (diferencaMensal < -(cltTotal * 0.05)) {
+      if (resultadoFinal.diferencaMensal > resultadoFinal.cltTotal * 0.05) {
+        interpretacao = `PJ parece maior neste cenário. Ainda assim, confira se ${brl(resultadoFinal.pjNecessario)} cobre custos, reservas e riscos de forma adequada.`;
+      } else if (resultadoFinal.diferencaMensal < -(resultadoFinal.cltTotal * 0.05)) {
         interpretacao = `CLT parece mais vantajoso neste cenário, considerando benefícios, FGTS, férias e 13º mensalizados.`;
       }
       byId('resInterpretacao').textContent = interpretacao;
@@ -423,5 +547,6 @@
     byId('btnCalcular').addEventListener('click', calcularComparacao);
     byId('btnLimpar').addEventListener('click', limpar);
   </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

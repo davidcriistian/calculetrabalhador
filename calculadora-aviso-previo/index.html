@@ -72,11 +72,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
   <script src="/assets/js/global-layout.js" defer></script>
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl px-4 py-8">
+    <p class="ct-calculator-eyebrow">AVISO PRÉVIO 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Aviso Prévio 2026</h1>
 
     <section class="mt-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -270,10 +299,16 @@
 
   <div id="global-footer"></div>
 
-  <script>
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+<script>
     const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value || 0);
 
     const byId = (id) => document.getElementById(id);
+    let tabelasTrabalhistas = null;
+
+    window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas()
+      .then((tabelas) => { tabelasTrabalhistas = tabelas; })
+      .catch((error) => console.warn('Fallback legado ativo: não foi possível carregar tabelas trabalhistas.', error));
 
     const parseDate = (value) => {
       if (!value) return null;
@@ -350,7 +385,7 @@
       const dailyValue = salary / 30;
       const estimatedValue = totalDays * dailyValue;
 
-      return {
+      const legado = {
         companyTime: formatCompanyTime(startDate, endDate),
         fullYears,
         baseDays,
@@ -359,6 +394,29 @@
         dailyValue,
         estimatedValue,
         note: getTypeNote(type, totalDays, estimatedValue)
+      };
+
+      if (!tabelasTrabalhistas || !window.CalculeTrabalhadorTabelas?.calcularAvisoPrevio) {
+        return legado;
+      }
+
+      const centralizado = window.CalculeTrabalhadorTabelas.calcularAvisoPrevio(fullYears, salary, tabelasTrabalhistas);
+      const mesmosDias = centralizado.totalDays === legado.totalDays && centralizado.additionalDays === legado.additionalDays;
+      const mesmoValor = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.estimatedValue, legado.estimatedValue);
+
+      if (!mesmosDias || !mesmoValor) {
+        console.warn('Divergência no aviso prévio centralizado. Fallback legado mantido.', { legado, centralizado });
+        return legado;
+      }
+
+      return {
+        ...legado,
+        baseDays: centralizado.baseDays,
+        additionalDays: centralizado.additionalDays,
+        totalDays: centralizado.totalDays,
+        dailyValue: centralizado.dailyValue,
+        estimatedValue: centralizado.estimatedValue,
+        note: getTypeNote(type, centralizado.totalDays, centralizado.estimatedValue)
       };
     };
 
@@ -430,5 +488,6 @@
 
     setInitialState();
   </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

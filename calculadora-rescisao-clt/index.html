@@ -96,11 +96,40 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
   <script src="/assets/js/global-layout.js" defer></script>
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl px-4 py-8">
+    <p class="ct-calculator-eyebrow">RESCISÃO CLT 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Rescisão CLT 2026</h1>
 
     <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -349,8 +378,17 @@
   <div id="global-footer"></div>
 
 
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
   <script>
     const brl = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v || 0);
+    let tabelasCentralizadasRescisao = null;
+
+    async function carregarTabelasRescisao() {
+      if (tabelasCentralizadasRescisao) return tabelasCentralizadasRescisao;
+      if (!window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas) return null;
+      tabelasCentralizadasRescisao = await window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas();
+      return tabelasCentralizadasRescisao;
+    }
 
     const toDate = (value) => {
       const d = new Date(value + 'T00:00:00');
@@ -373,7 +411,7 @@
       return Math.min(Math.max(dias, 30), 90);
     };
 
-    document.getElementById('btnCalcular').addEventListener('click', () => {
+    document.getElementById('btnCalcular').addEventListener('click', async () => {
       const salario = parseFloat(document.getElementById('salarioBruto').value || '0');
       const admissao = toDate(document.getElementById('dataAdmissao').value);
       const desligamento = toDate(document.getElementById('dataDesligamento').value);
@@ -426,15 +464,68 @@
       let totalVerbas = saldoSalario + feriasVencidas + feriasProporcionais + decimoTerceiroProp + avisoPrevioValor;
       if (tipo === 'sem_justa_causa') totalVerbas += multa40;
 
-      document.getElementById('resSaldoSalario').textContent = brl(saldoSalario);
-      document.getElementById('resFeriasVencidas').textContent = brl(feriasVencidas);
-      document.getElementById('resFeriasProporcionais').textContent = brl(feriasProporcionais);
-      document.getElementById('resDecimoTerceiro').textContent = brl(decimoTerceiroProp);
-      document.getElementById('resAvisoPrevio').textContent = brl(avisoPrevioValor);
-      document.getElementById('resFgts').textContent = brl(fgtsAcumulado);
-      document.getElementById('resMulta40').textContent = brl(multa40);
+      let resultadoFinal = {
+        saldoSalario,
+        feriasVencidas,
+        feriasProporcionais,
+        decimoTerceiroProp,
+        avisoPrevioValor,
+        fgtsAcumulado,
+        multa40,
+        totalVerbas
+      };
+
+      try {
+        const tabelas = await carregarTabelasRescisao();
+        const central = window.CalculeTrabalhadorTabelas?.calcularRescisao?.({
+          salario,
+          mesesServico,
+          diasServico,
+          diasTrabalhadosMes,
+          diasNoMes,
+          tipo,
+          aviso,
+          meses13
+        }, tabelas);
+
+        const iguais = central && [
+          ['saldoSalario', saldoSalario],
+          ['feriasVencidas', feriasVencidas],
+          ['feriasProporcionais', feriasProporcionais],
+          ['decimoTerceiroProp', decimoTerceiroProp],
+          ['avisoPrevioValor', avisoPrevioValor],
+          ['fgtsAcumulado', fgtsAcumulado],
+          ['multa40', multa40],
+          ['totalVerbas', totalVerbas]
+        ].every(([key, legado]) => window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(central[key], legado, 0.01));
+
+        if (iguais) {
+          resultadoFinal = {
+            saldoSalario: central.saldoSalario,
+            feriasVencidas: central.feriasVencidas,
+            feriasProporcionais: central.feriasProporcionais,
+            decimoTerceiroProp: central.decimoTerceiroProp,
+            avisoPrevioValor: central.avisoPrevioValor,
+            fgtsAcumulado: central.fgtsAcumulado,
+            multa40: central.multa40,
+            totalVerbas: central.totalVerbas
+          };
+        } else if (central) {
+          console.warn('Cálculo centralizado de rescisão divergiu do legado. Mantendo fallback legado.', { legado: resultadoFinal, central });
+        }
+      } catch (error) {
+        console.warn('Não foi possível usar cálculo centralizado de rescisão. Mantendo fallback legado.', error);
+      }
+
+      document.getElementById('resSaldoSalario').textContent = brl(resultadoFinal.saldoSalario);
+      document.getElementById('resFeriasVencidas').textContent = brl(resultadoFinal.feriasVencidas);
+      document.getElementById('resFeriasProporcionais').textContent = brl(resultadoFinal.feriasProporcionais);
+      document.getElementById('resDecimoTerceiro').textContent = brl(resultadoFinal.decimoTerceiroProp);
+      document.getElementById('resAvisoPrevio').textContent = brl(resultadoFinal.avisoPrevioValor);
+      document.getElementById('resFgts').textContent = brl(resultadoFinal.fgtsAcumulado);
+      document.getElementById('resMulta40').textContent = brl(resultadoFinal.multa40);
       document.getElementById('resTempoServico').textContent = `${mesesServico} meses (${diasServico} dias)`;
-      document.getElementById('resTotal').textContent = brl(totalVerbas);
+      document.getElementById('resTotal').textContent = brl(resultadoFinal.totalVerbas);
 
       const obs = [];
       if (tipo === 'pedido_demissao') {
@@ -451,5 +542,6 @@
       document.getElementById('resultado').classList.remove('hidden');
     });
   </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

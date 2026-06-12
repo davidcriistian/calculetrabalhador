@@ -1,0 +1,202 @@
+{
+  "/saque-aniversario-fgts/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Saque Anivers&aacute;rio FGTS 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/salario-liquido-clt/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Salário Líquido CLT 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-rescisao-clt/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Rescisão CLT 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-ferias-clt/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Férias CLT 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-13-salario/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de 13º Salário 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-horas-extras-clt/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Horas Extras CLT 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-seguro-desemprego/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora Seguro-Desemprego 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-aviso-previo/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Aviso Prévio 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-adicional-noturno/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Adicional Noturno 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-insalubridade/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Insalubridade 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/calculadora-clt-ou-pj/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora CLT ou PJ",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "aviso": "Resultado estimado para fins educativos."
+  },
+  "/blog/como-calcular-aviso-previo/": {
+    "tipo": "artigo",
+    "titulo": "Como Calcular Aviso Pr&eacute;vio em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/como-calcular-decimo-terceiro/": {
+    "tipo": "artigo",
+    "titulo": "Como Calcular o 13&ordm; Sal&aacute;rio Proporcional em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/como-calcular-ferias/": {
+    "tipo": "artigo",
+    "titulo": "Como Calcular F&eacute;rias CLT em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/como-funciona-adicional-noturno/": {
+    "tipo": "artigo",
+    "titulo": "Como Funciona o Adicional Noturno em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/hora-extra-ou-adicional-noturno/": {
+    "tipo": "artigo",
+    "titulo": "Diferen&ccedil;a Entre Hora Extra e Adicional Noturno em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/insalubridade-quem-tem-direito/": {
+    "tipo": "artigo",
+    "titulo": "O que &eacute; Insalubridade e Quem Tem Direito em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/rescisao-sem-justa-causa/": {
+    "tipo": "artigo",
+    "titulo": "Como Funciona a Rescis&atilde;o Sem Justa Causa em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/seguro-desemprego-quem-tem-direito/": {
+    "tipo": "artigo",
+    "titulo": "Quem Tem Direito ao Seguro-Desemprego em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/blog/clt-ou-pj/": {
+    "tipo": "artigo",
+    "titulo": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+    "publicadoEm": "2026-06-10",
+    "atualizadoEm": "2026-06-10",
+    "revisadoEm": "2026-06-10",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
+    "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  }
+}

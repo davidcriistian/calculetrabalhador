@@ -71,10 +71,39 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 <main class="mx-auto max-w-6xl space-y-6 px-4 py-8">
+    <p class="ct-calculator-eyebrow">ADICIONAL NOTURNO 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Adicional Noturno 2026</h1>
 
     <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -267,8 +296,15 @@
     </section>
   </main>
   <div id="global-footer"></div>
+<script src="/assets/js/tabelas-trabalhistas.js"></script>
 <script>
     const byId = (id) => document.getElementById(id);
+    let tabelasTrabalhistas = null;
+
+    window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas()
+      .then((tabelas) => { tabelasTrabalhistas = tabelas; })
+      .catch((error) => console.warn('Fallback legado ativo: não foi possível carregar tabelas trabalhistas.', error));
+
     const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
     const formatPercent = (value) => `${Number.isFinite(value) ? value.toFixed(2).replace('.', ',') : '0,00'}%`;
     const formatHours = (value) => `${Number.isFinite(value) ? value.toFixed(2).replace('.', ',') : '0,00'}h`;
@@ -290,6 +326,10 @@
         return Number(byId('custom-percent').value);
       }
 
+      if (tabelasTrabalhistas && window.CalculeTrabalhadorTabelas?.obterPercentualAdicionalNoturno) {
+        return window.CalculeTrabalhadorTabelas.obterPercentualAdicionalNoturno(tabelasTrabalhistas) * 100;
+      }
+
       return 20;
     };
 
@@ -299,13 +339,28 @@
       const additionalPerHour = normalHourValue * percentDecimal;
       const totalValue = additionalPerHour * nightHours;
 
-      return {
+      const legado = {
         normalHourValue,
         percent,
         additionalPerHour,
         nightHours,
         totalValue
       };
+
+      if (!tabelasTrabalhistas || !window.CalculeTrabalhadorTabelas?.calcularAdicionalNoturno) {
+        return legado;
+      }
+
+      const centralizado = window.CalculeTrabalhadorTabelas.calcularAdicionalNoturno({ salary, monthlyHours, nightHours, percent }, tabelasTrabalhistas);
+      const mesmoTotal = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.totalValue, legado.totalValue);
+      const mesmaHora = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.additionalPerHour, legado.additionalPerHour);
+
+      if (!mesmoTotal || !mesmaHora) {
+        console.warn('Divergência no adicional noturno centralizado. Fallback legado mantido.', { legado, centralizado });
+        return legado;
+      }
+
+      return centralizado;
     };
 
     const renderResult = (result) => {
@@ -359,5 +414,6 @@
     setInitialState();
   </script>
   <script src="/assets/js/global-layout.js" defer></script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

@@ -584,14 +584,57 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-  </style>
+  
+
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .ct-calculator-intro {
+      max-width: 780px;
+      margin: 0 0 22px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+</style>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
 </head>
 
 <body>
   <div id="global-header"></div>
 <main class="container">
+    <p class="ct-calculator-eyebrow">SEGURO-DESEMPREGO 2026</p>
     <h1 class="title">Calculadora Seguro-Desemprego 2026</h1>
+
+    <p class="ct-calculator-intro muted">
+      Use a calculadora para estimar o valor das parcelas do seguro-desemprego com base na média dos últimos salários e nas regras vigentes. A simulação ajuda a entender o benefício antes de solicitar oficialmente.
+    </p>
+
 
     <section class="info">
       <strong>Simulação atualizada para 2026</strong>
@@ -918,12 +961,22 @@
     </section>
   </main>
   <div id="global-footer"></div>
+<script src="/assets/js/tabelas-trabalhistas.js"></script>
 <script>
     const PISO_SEGURO_2026 = 1621.00;
     const FAIXA_1_SEGURO_2026 = 2222.17;
     const FAIXA_2_SEGURO_2026 = 3703.99;
     const VALOR_BASE_FAIXA_2_2026 = 1777.74;
     const TETO_SEGURO_2026 = 2518.65;
+    let tabelasTrabalhistas = null;
+
+    if (window.CalculeTrabalhadorTabelas) {
+      window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas()
+        .then((tabelas) => { tabelasTrabalhistas = tabelas; })
+        .catch((erro) => {
+          console.warn('Não foi possível carregar a tabela central do seguro-desemprego. Fallback legado mantido.', erro);
+        });
+    }
 
     const brl = (valor) => new Intl.NumberFormat('pt-BR', {
       style: 'currency',
@@ -950,6 +1003,19 @@
       return { valor, faixa };
     }
 
+    function calcularSeguroCentralizado(media, parcelasSelecionadas) {
+      if (!window.CalculeTrabalhadorTabelas || !tabelasTrabalhistas) return null;
+
+      const calculo = window.CalculeTrabalhadorTabelas.calcularSeguroDesemprego(media, tabelasTrabalhistas);
+      const parcelasInfo = window.CalculeTrabalhadorTabelas.calcularParcelasSeguroDesemprego(parcelasSelecionadas, tabelasTrabalhistas);
+
+      return {
+        valor: calculo.valor,
+        faixa: calculo.faixa,
+        parcelas: parcelasInfo.parcelas || parcelasSelecionadas
+      };
+    }
+
     document.getElementById('btnCalcular').addEventListener('click', () => {
       const s1 = parseFloat(document.getElementById('salario1').value || '0');
       const s2 = parseFloat(document.getElementById('salario2').value || '0');
@@ -962,20 +1028,41 @@
       }
 
       const media = (s1 + s2 + s3) / 3;
-      const calculo = calcularParcelaSeguro(media);
-      const total = calculo.valor * parcelas;
+      const legado = calcularParcelaSeguro(media);
+      const centralizado = calcularSeguroCentralizado(media, parcelas);
+      let calculo = legado;
+      let parcelasCalculadas = parcelas;
+
+      if (centralizado) {
+        const mesmoValor = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.valor, legado.valor);
+        const mesmaFaixa = centralizado.faixa === legado.faixa;
+        const mesmasParcelas = centralizado.parcelas === parcelas;
+
+        if (mesmoValor && mesmaFaixa && mesmasParcelas) {
+          calculo = { valor: centralizado.valor, faixa: centralizado.faixa };
+          parcelasCalculadas = centralizado.parcelas;
+        } else {
+          console.warn('Divergência no seguro-desemprego centralizado. Fallback legado mantido.', {
+            legado: { ...legado, parcelas },
+            centralizado
+          });
+        }
+      }
+
+      const total = calculo.valor * parcelasCalculadas;
 
       document.getElementById('resultadoVazio').style.display = 'none';
       document.getElementById('resultadoConteudo').style.display = 'block';
 
       document.getElementById('media').textContent = brl(media);
       document.getElementById('parcela').textContent = brl(calculo.valor);
-      document.getElementById('parcelas').textContent = parcelas;
+      document.getElementById('parcelas').textContent = parcelasCalculadas;
       document.getElementById('total').textContent = brl(total);
       document.getElementById('memMedia').textContent = brl(media);
       document.getElementById('memFaixa').textContent = calculo.faixa;
     });
   </script>
   <script src="/assets/js/global-layout.js" defer></script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

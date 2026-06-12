@@ -103,11 +103,40 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl space-y-6 px-4 py-8">
+    <p class="ct-calculator-eyebrow">HORAS EXTRAS 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Horas Extras CLT 2026</h1>
 
     <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -336,8 +365,15 @@
   </main>
 
   <div id="global-footer"></div>
+<script src="/assets/js/tabelas-trabalhistas.js"></script>
 <script>
     const byId = (id) => document.getElementById(id);
+    let tabelasTrabalhistas = null;
+
+    window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas()
+      .then((tabelas) => { tabelasTrabalhistas = tabelas; })
+      .catch((error) => console.warn('Fallback legado ativo: não foi possível carregar tabelas trabalhistas.', error));
+
     const brl = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(v) ? v : 0);
     const formatHours = (v) => `${Number.isFinite(v) ? v.toFixed(2).replace('.', ',') : '0,00'}h`;
 
@@ -375,18 +411,42 @@
         return;
       }
 
-      const divisor = obterDivisorHoras(jornadaTipo, jornadaCustom);
+      const divisorLegado = obterDivisorHoras(jornadaTipo, jornadaCustom);
       const jornadaExibicao = obterJornadaExibicao(jornadaTipo, jornadaCustom || 0);
 
-      const valorHoraNormal = salarioBruto / divisor;
-      const valorHoraExtra50 = valorHoraNormal * 1.5;
-      const valorHoraExtra100 = valorHoraNormal * 2;
+      const legado = {
+        divisor: divisorLegado,
+        valorHoraNormal: salarioBruto / divisorLegado,
+        valorHoraExtra50: (salarioBruto / divisorLegado) * 1.5,
+        valorHoraExtra100: (salarioBruto / divisorLegado) * 2,
+        subtotal50: horas50 * ((salarioBruto / divisorLegado) * 1.5),
+        subtotal100: horas100 * ((salarioBruto / divisorLegado) * 2),
+        totalHoras: horas50 + horas100
+      };
+      legado.totalReceber = legado.subtotal50 + legado.subtotal100;
 
-      const subtotal50 = horas50 * valorHoraExtra50;
-      const subtotal100 = horas100 * valorHoraExtra100;
+      let calculo = legado;
+      if (tabelasTrabalhistas && window.CalculeTrabalhadorTabelas?.calcularHoraExtra) {
+        const centralizado = window.CalculeTrabalhadorTabelas.calcularHoraExtra({ salarioBruto, jornadaTipo, jornadaCustom, horas50, horas100 }, tabelasTrabalhistas);
+        const mesmoTotal = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.totalReceber, legado.totalReceber);
+        const mesmaHora50 = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.valorHoraExtra50, legado.valorHoraExtra50);
+        const mesmaHora100 = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.valorHoraExtra100, legado.valorHoraExtra100);
 
-      const totalHoras = horas50 + horas100;
-      const totalReceber = subtotal50 + subtotal100;
+        if (mesmoTotal && mesmaHora50 && mesmaHora100) {
+          calculo = centralizado;
+        } else {
+          console.warn('Divergência nas horas extras centralizadas. Fallback legado mantido.', { legado, centralizado });
+        }
+      }
+
+      const divisor = calculo.divisor;
+      const valorHoraNormal = calculo.valorHoraNormal;
+      const valorHoraExtra50 = calculo.valorHoraExtra50;
+      const valorHoraExtra100 = calculo.valorHoraExtra100;
+      const subtotal50 = calculo.subtotal50;
+      const subtotal100 = calculo.subtotal100;
+      const totalHoras = calculo.totalHoras;
+      const totalReceber = calculo.totalReceber;
 
       byId('kpiHoraNormal').textContent = brl(valorHoraNormal);
       byId('kpiHora50').textContent = brl(valorHoraExtra50);
@@ -442,5 +502,6 @@
     byId('btnLimpar').addEventListener('click', limpar);
   </script>
   <script src="/assets/js/global-layout.js" defer></script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>

@@ -103,11 +103,40 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
   <main class="mx-auto max-w-6xl px-4 py-8 space-y-6">
+    <p class="ct-calculator-eyebrow">FÉRIAS CLT 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Férias CLT 2026</h1>
 
     <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -382,6 +411,8 @@
   </main>
 
   <div id="global-footer"></div>
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 <script>
     const INSS_FAIXAS_2026 = [
       { ate: 1621.0, aliquota: 0.075 },
@@ -400,9 +431,15 @@
 
     const TETO_INSS_2026 = 8475.55;
 
+    let tabelasCentralizadas = null;
+
     const byId = (id) => document.getElementById(id);
     const brl = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(v) ? v : 0);
     const pct = (v) => `${(v * 100).toFixed(1).replace('.', ',')}%`;
+    const arredondar = (v) => window.CalculeTrabalhadorTabelas?.arredondarCentavos
+      ? window.CalculeTrabalhadorTabelas.arredondarCentavos(v)
+      : Math.round((Number(v) + Number.EPSILON) * 100) / 100;
+
 
     function calcularINSS(base) {
       if (base <= 0) return 0;
@@ -436,12 +473,62 @@
       return { impostoFinal, baseCalculo, redutor2026: Math.min(impostoBruto, redutor2026) };
     }
 
+    async function carregarDadosCentralizados() {
+      if (!window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas) return null;
+
+      try {
+        tabelasCentralizadas = await window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas();
+      } catch (error) {
+        console.warn('[Calcule Trabalhador] Tabelas centralizadas indisponíveis. Usando fallback legado.', error);
+      }
+
+      return tabelasCentralizadas;
+    }
+
+    function compararResultado(nome, legado, centralizado) {
+      const legadoFinal = arredondar(legado);
+      const centralFinal = arredondar(centralizado);
+      if (Math.abs(legadoFinal - centralFinal) > 0.01) {
+        console.warn(`[Calcule Trabalhador] Divergência em ${nome}: legado=${brl(legadoFinal)} centralizado=${brl(centralFinal)}`);
+      }
+    }
+
+    function calcularINSSCentralizado(base) {
+      const legado = calcularINSS(base);
+      if (!tabelasCentralizadas || !window.CalculeTrabalhadorTabelas?.calcularINSS) return legado;
+
+      const central = window.CalculeTrabalhadorTabelas.calcularINSS(base, tabelasCentralizadas);
+      compararResultado('INSS Férias', legado, central);
+      return central;
+    }
+
+    function calcularIRRFCentralizado(valorBruto, inss) {
+      const legado = calcularIRRF(valorBruto, inss);
+      if (!tabelasCentralizadas || !window.CalculeTrabalhadorTabelas?.calcularIRRF) return legado;
+
+      const baseCalculo = Math.max(0, valorBruto - inss);
+      const central = window.CalculeTrabalhadorTabelas.calcularIRRF(baseCalculo, tabelasCentralizadas);
+      const resultado = {
+        impostoFinal: central.impostoFinal,
+        baseCalculo,
+        redutor2026: central.redutor2026
+      };
+      compararResultado('IRRF Férias', legado.impostoFinal, resultado.impostoFinal);
+      return resultado;
+    }
+
     function renderTabelas() {
       const tbodyInss = byId('tabelaInss');
       const tbodyIrrf = byId('tabelaIrrf');
 
+      const inssFaixas = tabelasCentralizadas?.inss?.faixas || INSS_FAIXAS_2026;
+      const irrfFaixas = (tabelasCentralizadas?.irrf?.faixas || IRRF_FAIXAS_2026).map((faixa) => ({
+        ...faixa,
+        ate: faixa.ate === null ? Infinity : faixa.ate
+      }));
+
       let anteriorInss = 0;
-      tbodyInss.innerHTML = INSS_FAIXAS_2026.map((faixa, idx) => {
+      tbodyInss.innerHTML = inssFaixas.map((faixa, idx) => {
         const label = idx === 0
           ? `Até ${brl(faixa.ate)}`
           : `De ${brl(anteriorInss + 0.01)} até ${brl(faixa.ate)}`;
@@ -450,7 +537,7 @@
       }).join('');
 
       let anteriorIrrf = 0;
-      tbodyIrrf.innerHTML = IRRF_FAIXAS_2026.map((faixa, idx) => {
+      tbodyIrrf.innerHTML = irrfFaixas.map((faixa, idx) => {
         const label = faixa.ate === Infinity
           ? `Acima de ${brl(anteriorIrrf + 0.01)}`
           : idx === 0
@@ -494,8 +581,8 @@
 
       const valorBrutoTotal = valorFerias + adicionalUmTerco + abonoPecuniario + adiantamento13;
 
-      const inss = calcularINSS(valorBrutoTotal);
-      const irrfCalc = calcularIRRF(valorBrutoTotal, inss);
+      const inss = calcularINSSCentralizado(valorBrutoTotal);
+      const irrfCalc = calcularIRRFCentralizado(valorBrutoTotal, inss);
       const irrf = irrfCalc.impostoFinal;
 
       const valorLiquido = Math.max(0, valorBrutoTotal - inss - irrf);
@@ -537,7 +624,7 @@
     byId('btnCalcular').addEventListener('click', calcularFerias);
     byId('btnLimpar').addEventListener('click', limpar);
 
-    renderTabelas();
+    carregarDadosCentralizados().then(renderTabelas);
   </script>
   <script src="/assets/js/global-layout.js" defer></script>
 </body>

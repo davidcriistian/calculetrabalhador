@@ -71,10 +71,39 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <style id="ct-top-standardization">
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #1d4ed8;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+
+    body .editorial-metadata-line {
+      display: block;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-bottom: 18px;
+      margin-left: 0;
+      color: #4f7df3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-style: normal;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 <main class="mx-auto max-w-6xl space-y-6 px-4 py-8">
+    <p class="ct-calculator-eyebrow">INSALUBRIDADE 2026</p>
     <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Insalubridade 2026</h1>
 
     <section class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-sm">
@@ -255,8 +284,15 @@
     </section>
   </main>
   <div id="global-footer"></div>
+<script src="/assets/js/tabelas-trabalhistas.js"></script>
 <script>
     const byId = (id) => document.getElementById(id);
+    let tabelasTrabalhistas = null;
+
+    window.CalculeTrabalhadorTabelas?.carregarTabelasTrabalhistas()
+      .then((tabelas) => { tabelasTrabalhistas = tabelas; })
+      .catch((error) => console.warn('Fallback legado ativo: não foi possível carregar tabelas trabalhistas.', error));
+
     const brl = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(Number.isFinite(value) ? value : 0);
 
     const DEGREE_RULES = {
@@ -282,13 +318,29 @@
       const monthlyValue = minimumWage * (rule.percent / 100);
       const annualValue = monthlyValue * 12;
 
-      return {
+      const legado = {
         minimumWage,
         degreeLabel: rule.label,
         percent: rule.percent,
         monthlyValue,
         annualValue
       };
+
+      if (!tabelasTrabalhistas || !window.CalculeTrabalhadorTabelas?.calcularInsalubridade) {
+        return legado;
+      }
+
+      const centralizado = window.CalculeTrabalhadorTabelas.calcularInsalubridade({ minimumWage, degree }, tabelasTrabalhistas);
+      const mesmoMensal = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.monthlyValue, legado.monthlyValue);
+      const mesmoAnual = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.annualValue, legado.annualValue);
+      const mesmoPercentual = window.CalculeTrabalhadorTabelas.resultadosNumericosIguais(centralizado.percent, legado.percent);
+
+      if (!mesmoMensal || !mesmoAnual || !mesmoPercentual) {
+        console.warn('Divergência na insalubridade centralizada. Fallback legado mantido.', { legado, centralizado });
+        return legado;
+      }
+
+      return centralizado;
     };
 
     const renderResult = (result) => {
@@ -329,5 +381,6 @@
     setInitialState();
   </script>
   <script src="/assets/js/global-layout.js" defer></script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
 </body>
 </html>
