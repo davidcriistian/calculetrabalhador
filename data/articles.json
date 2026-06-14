@@ -110,6 +110,21 @@
     "cltGuideOrder": 4
   },
   {
+    "id": "seguro-desemprego-quantas-parcelas-vou-receber",
+    "title": "Seguro-Desemprego: Quantas Parcelas Vou Receber?",
+    "slug": "/blog/seguro-desemprego-quantas-parcelas-vou-receber",
+    "url": "/blog/seguro-desemprego-quantas-parcelas-vou-receber/",
+    "category": "Seguro-Desemprego",
+    "description": "Entenda quantas parcelas de seguro-desemprego você pode receber, como o tempo trabalhado influencia o benefício e quais regras observar antes de solicitar.",
+    "relatedTool": "/calculadora-seguro-desemprego/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "rescisao-sem-justa-causa",
     "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
     "slug": "/blog/rescisao-sem-justa-causa",
