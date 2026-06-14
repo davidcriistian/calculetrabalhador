@@ -125,6 +125,21 @@
     "showOnHome": false
   },
   {
+    "id": "quem-tem-direito-ao-seguro-desemprego",
+    "title": "Quem Tem Direito ao Seguro-Desemprego?",
+    "slug": "/blog/quem-tem-direito-ao-seguro-desemprego",
+    "url": "/blog/quem-tem-direito-ao-seguro-desemprego/",
+    "category": "Seguro-Desemprego",
+    "description": "Veja quem tem direito ao seguro-desemprego, quais requisitos precisam ser cumpridos, tempo mínimo trabalhado, situações que impedem o benefício e como consultar.",
+    "relatedTool": "/calculadora-seguro-desemprego/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "rescisao-sem-justa-causa",
     "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
     "slug": "/blog/rescisao-sem-justa-causa",
