@@ -140,6 +140,21 @@
     "showOnHome": false
   },
   {
+    "id": "como-dar-entrada-no-seguro-desemprego",
+    "title": "Como Dar Entrada no Seguro-Desemprego Pela Internet",
+    "slug": "/blog/como-dar-entrada-no-seguro-desemprego",
+    "url": "/blog/como-dar-entrada-no-seguro-desemprego/",
+    "category": "Seguro-Desemprego",
+    "description": "Aprenda como solicitar o seguro-desemprego pela internet, quais documentos são necessários, como acompanhar o pedido e como receber o benefício.",
+    "relatedTool": "/calculadora-seguro-desemprego/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "rescisao-sem-justa-causa",
     "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
     "slug": "/blog/rescisao-sem-justa-causa",
