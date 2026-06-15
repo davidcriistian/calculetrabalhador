@@ -93,6 +93,21 @@
     "showOnHome": false
   },
   {
+    "id": "quem-tem-direito-as-ferias-clt",
+    "title": "Quem Tem Direito às Férias CLT?",
+    "slug": "/blog/quem-tem-direito-as-ferias-clt",
+    "url": "/blog/quem-tem-direito-as-ferias-clt/",
+    "category": "Férias CLT",
+    "description": "Entenda quem tem direito às férias CLT, como funciona o período aquisitivo, período concessivo, férias proporcionais, férias vencidas e situações que podem afetar esse direito.",
+    "relatedTool": "/calculadora-ferias-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-decimo-terceiro",
     "title": "Como Calcular o 13º Salário Proporcional em 2026",
     "slug": "/blog/como-calcular-decimo-terceiro",
