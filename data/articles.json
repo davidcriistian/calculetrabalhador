@@ -184,6 +184,21 @@
     "showOnHome": false
   },
   {
+    "id": "quem-tem-direito-ao-decimo-terceiro",
+    "title": "Quem Tem Direito ao 13º Salário? Entenda as Regras",
+    "slug": "/blog/quem-tem-direito-ao-decimo-terceiro",
+    "url": "/blog/quem-tem-direito-ao-decimo-terceiro/",
+    "category": "13º Salário",
+    "description": "Descubra quem tem direito ao 13º salário, como funciona o cálculo proporcional, quais trabalhadores recebem e em quais situações o benefício pode ser pago.",
+    "relatedTool": "/calculadora-13-salario/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
