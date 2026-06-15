@@ -123,6 +123,21 @@
     "showOnHome": false
   },
   {
+    "id": "posso-vender-10-dias-de-ferias",
+    "title": "Posso Vender 10 Dias de Férias? Entenda Como Funciona o Abono Pecuniário",
+    "slug": "/blog/posso-vender-10-dias-de-ferias",
+    "url": "/blog/posso-vender-10-dias-de-ferias/",
+    "category": "Férias CLT",
+    "description": "Entenda quando o trabalhador pode vender 10 dias de férias, como funciona o abono pecuniário, quais são os prazos e como calcular o valor a receber.",
+    "relatedTool": "/calculadora-ferias-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-decimo-terceiro",
     "title": "Como Calcular o 13º Salário Proporcional em 2026",
     "slug": "/blog/como-calcular-decimo-terceiro",
