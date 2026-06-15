@@ -189,35 +189,65 @@
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900">O que entra em cada tipo de demiss&atilde;o</h2>
-        <p class="mt-3 leading-8 text-slate-700">A primeira pergunta para conferir uma rescis&atilde;o &eacute; simples: qual foi o tipo de desligamento? A resposta muda o acerto inteiro.</p>
+        <p class="mt-3 leading-8 text-slate-700">A primeira pergunta para conferir uma rescis&atilde;o &eacute; simples: qual foi o tipo de desligamento? A resposta muda o acerto inteiro, porque cada modalidade tem regras pr&oacute;prias para aviso pr&eacute;vio, FGTS, multa rescis&oacute;ria, seguro-desemprego e parcelas proporcionais.</p>
+        <p class="mt-3 leading-8 text-slate-700">Na demiss&atilde;o sem justa causa, a empresa decide encerrar o contrato sem aplicar penalidade ao trabalhador. Por isso, costuma ser a modalidade com maior prote&ccedil;&atilde;o: pode haver aviso pr&eacute;vio, libera&ccedil;&atilde;o do FGTS, multa de 40% e possibilidade de seguro-desemprego, al&eacute;m das verbas salariais e proporcionais.</p>
+        <p class="mt-3 leading-8 text-slate-700">No pedido de demiss&atilde;o, o trabalhador toma a iniciativa de sair. Ele n&atilde;o perde automaticamente tudo, mas normalmente n&atilde;o recebe multa de 40% do FGTS, n&atilde;o saca o FGTS por rescis&atilde;o e n&atilde;o acessa seguro-desemprego. Tamb&eacute;m pode haver desconto se o aviso pr&eacute;vio n&atilde;o for cumprido e a empresa n&atilde;o dispensar o cumprimento.</p>
+        <p class="mt-3 leading-8 text-slate-700">Na demiss&atilde;o por justa causa, a empresa encerra o contrato por falta grave. Como a consequ&ecirc;ncia &eacute; severa, o acerto fica reduzido. Em regra, permanecem saldo de sal&aacute;rio e f&eacute;rias vencidas com 1/3, quando existirem, mas ficam de fora aviso pr&eacute;vio, 13&ordm; proporcional, f&eacute;rias proporcionais, multa do FGTS e seguro-desemprego.</p>
+        <p class="mt-3 leading-8 text-slate-700">Na rescis&atilde;o por acordo trabalhista, prevista na CLT, empregado e empregador encerram o contrato de comum acordo. Nessa situa&ccedil;&atilde;o, parte das verbas muda: o aviso pr&eacute;vio indenizado, quando houver, costuma ser pago pela metade, a multa do FGTS &eacute; de 20%, o trabalhador pode sacar parte do saldo do FGTS e n&atilde;o h&aacute; seguro-desemprego.</p>
         <div class="mt-5 overflow-x-auto rounded-xl border border-slate-200">
-          <table class="w-full min-w-[720px] border-collapse bg-white text-left text-sm">
+          <table class="w-full min-w-[860px] border-collapse bg-white text-left text-sm">
             <thead class="bg-slate-50 text-slate-900">
               <tr>
                 <th class="p-3 font-bold">Tipo de desligamento</th>
-                <th class="p-3 font-bold">Verbas comuns</th>
-                <th class="p-3 font-bold">O que muda</th>
+                <th class="p-3 font-bold">Aviso pr&eacute;vio</th>
+                <th class="p-3 font-bold">Multa FGTS</th>
+                <th class="p-3 font-bold">Saque FGTS</th>
+                <th class="p-3 font-bold">Seguro-desemprego</th>
+                <th class="p-3 font-bold">F&eacute;rias</th>
+                <th class="p-3 font-bold">13&ordm; proporcional</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200 text-slate-700">
               <tr>
                 <td class="p-3 font-semibold text-slate-900">Demiss&atilde;o sem justa causa</td>
-                <td class="p-3">Saldo de sal&aacute;rio, aviso pr&eacute;vio, f&eacute;rias vencidas e proporcionais com 1/3, 13&ordm; proporcional, FGTS e multa de 40%.</td>
-                <td class="p-3">Pode permitir saque do FGTS e solicita&ccedil;&atilde;o de seguro-desemprego, se os requisitos forem cumpridos.</td>
+                <td class="p-3">Trabalhado ou indenizado.</td>
+                <td class="p-3">40% sobre os dep&oacute;sitos do contrato.</td>
+                <td class="p-3">Em regra, sim, observadas as regras do FGTS.</td>
+                <td class="p-3">Pode solicitar, se cumprir os requisitos.</td>
+                <td class="p-3">Vencidas e proporcionais com 1/3, quando devidas.</td>
+                <td class="p-3">Em regra, sim.</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-slate-900">Pedido de demiss&atilde;o</td>
-                <td class="p-3">Saldo de sal&aacute;rio, f&eacute;rias vencidas e proporcionais com 1/3 e 13&ordm; proporcional.</td>
-                <td class="p-3">Em regra, n&atilde;o h&aacute; saque do FGTS, multa de 40% nem seguro-desemprego. O aviso pode ser cumprido ou descontado.</td>
+                <td class="p-3">Pode ser cumprido, dispensado ou descontado.</td>
+                <td class="p-3">N&atilde;o h&aacute; multa de 40%.</td>
+                <td class="p-3">Em regra, n&atilde;o por motivo de rescis&atilde;o.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">Vencidas e proporcionais com 1/3, quando devidas.</td>
+                <td class="p-3">Em regra, sim.</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-slate-900">Justa causa</td>
-                <td class="p-3">Saldo de sal&aacute;rio e f&eacute;rias vencidas com 1/3, se houver.</td>
-                <td class="p-3">Costuma excluir aviso pr&eacute;vio, f&eacute;rias proporcionais, 13&ordm; proporcional, multa de 40% e seguro-desemprego.</td>
+                <td class="p-3">N&atilde;o costuma ser devido.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">N&atilde;o por motivo de rescis&atilde;o.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">F&eacute;rias vencidas com 1/3, se houver.</td>
+                <td class="p-3">Em regra, n&atilde;o.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Rescis&atilde;o por acordo</td>
+                <td class="p-3">Metade do aviso indenizado, se for o caso.</td>
+                <td class="p-3">20% sobre os dep&oacute;sitos do contrato.</td>
+                <td class="p-3">Saque parcial, conforme regra aplic&aacute;vel.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">Vencidas e proporcionais com 1/3, quando devidas.</td>
+                <td class="p-3">Em regra, sim.</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="mt-3 leading-8 text-slate-700">Use essa tabela como ponto de partida, n&atilde;o como senten&ccedil;a final. Acordos coletivos, hist&oacute;rico de faltas, adicionais, comiss&otilde;es, adiantamentos, afastamentos e documentos internos podem alterar o valor final da rescis&atilde;o CLT.</p>
       </section>
 
       <section class="grid gap-6 md:grid-cols-2">
@@ -298,7 +328,61 @@
       </section>
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="text-2xl font-bold text-slate-900">Erros mais comuns</h2>
+        <h2 class="text-2xl font-bold text-slate-900">Prazo legal para pagamento da rescis&atilde;o</h2>
+        <p class="mt-3 leading-8 text-slate-700">A CLT prev&ecirc; que o pagamento das verbas rescis&oacute;rias deve ser feito em at&eacute; 10 dias contados do t&eacute;rmino do contrato. Esse prazo vale para o acerto financeiro da rescis&atilde;o e deve ser observado pela empresa mesmo quando ainda existam d&uacute;vidas sobre confer&ecirc;ncia de documentos.</p>
+        <p class="mt-3 leading-8 text-slate-700">Na pr&aacute;tica, a contagem costuma partir da data em que o contrato termina: por exemplo, o &uacute;ltimo dia efetivamente trabalhado ou a data projetada conforme o aviso pr&eacute;vio, dependendo de como a rescis&atilde;o foi formalizada. Por isso, conferir a data de desligamento no TRCT &eacute; t&atilde;o importante quanto conferir os valores.</p>
+        <p class="mt-3 leading-8 text-slate-700">Se a empresa atrasa o pagamento, pode haver multa em favor do trabalhador, conforme o artigo 477 da CLT, al&eacute;m de outras discuss&otilde;es se o atraso vier acompanhado de verbas incorretas ou documentos pendentes. O ideal &eacute; guardar comprovantes, mensagens, extratos e o termo de rescis&atilde;o para demonstrar as datas.</p>
+        <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="text-xl font-bold text-slate-900">Como conferir o prazo</h3>
+          <ul class="mt-3 space-y-2 leading-7 text-slate-700">
+            <li>Verifique a data de t&eacute;rmino do contrato informada no TRCT.</li>
+            <li>Conte 10 dias corridos a partir da data aplic&aacute;vel ao encerramento.</li>
+            <li>Compare com a data em que o dinheiro caiu na conta ou foi disponibilizado.</li>
+            <li>Guarde comprovantes de pagamento, extratos banc&aacute;rios e comunica&ccedil;&otilde;es do RH.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">O que fazer se a empresa n&atilde;o pagar a rescis&atilde;o</h2>
+        <p class="mt-3 leading-8 text-slate-700">Quando o acerto n&atilde;o &eacute; pago no prazo, o primeiro passo &eacute; organizar as informa&ccedil;&otilde;es. Anote a data de desligamento, a data prometida para pagamento, o valor informado, os documentos recebidos e o que ficou pendente. Essa organiza&ccedil;&atilde;o evita conversas confusas e ajuda caso seja necess&aacute;rio buscar apoio.</p>
+        <p class="mt-3 leading-8 text-slate-700">Em seguida, tente uma solu&ccedil;&atilde;o objetiva com o RH ou respons&aacute;vel financeiro. Pe&ccedil;a previs&atilde;o por escrito, confirme se o TRCT j&aacute; foi emitido e solicite explica&ccedil;&atilde;o clara sobre eventual atraso. Muitas situa&ccedil;&otilde;es s&atilde;o resolvidas nessa etapa, especialmente quando o problema &eacute; operacional.</p>
+        <p class="mt-3 leading-8 text-slate-700">Se a empresa n&atilde;o responde ou continua sem pagar, o trabalhador pode procurar o sindicato da categoria, canais oficiais do Minist&eacute;rio do Trabalho ou orienta&ccedil;&atilde;o jur&iacute;dica. A a&ccedil;&atilde;o trabalhista &eacute; uma alternativa quando a via administrativa n&atilde;o resolve, mas deve ser avaliada com base nos documentos e no hist&oacute;rico do caso.</p>
+        <div class="mt-5 grid gap-4 md:grid-cols-2">
+          <div class="rounded-xl bg-slate-50 p-4">
+            <h3 class="font-bold text-slate-900">Antes de escalar</h3>
+            <p class="mt-2 leading-7 text-slate-700">Pe&ccedil;a uma posi&ccedil;&atilde;o formal, confira se houve algum erro banc&aacute;rio e solicite c&oacute;pia dos documentos rescis&oacute;rios.</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <h3 class="font-bold text-slate-900">Se continuar pendente</h3>
+            <p class="mt-2 leading-7 text-slate-700">Procure sindicato, canais p&uacute;blicos de orienta&ccedil;&atilde;o ou advogado trabalhista, levando TRCT, holerites, extrato do FGTS e comprovantes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Como conferir se os c&aacute;lculos est&atilde;o corretos</h2>
+        <p class="mt-3 leading-8 text-slate-700">Conferir a rescis&atilde;o n&atilde;o significa recalcular tudo de cabe&ccedil;a. O caminho mais seguro &eacute; separar cada verba e comparar com documentos: contrato, holerites, controle de ponto, aviso pr&eacute;vio, extrato do FGTS e TRCT. Quando cada parcela &eacute; verificada isoladamente, fica mais f&aacute;cil perceber onde pode estar a diferen&ccedil;a.</p>
+        <p class="mt-3 leading-8 text-slate-700">Comece pelo saldo de sal&aacute;rio: conte os dias trabalhados no m&ecirc;s da sa&iacute;da e compare com a base salarial usada pela empresa. Depois olhe as f&eacute;rias vencidas, as f&eacute;rias proporcionais e o ter&ccedil;o constitucional. Verifique se o per&iacute;odo aquisitivo foi considerado corretamente e se houve desconto por faltas.</p>
+        <p class="mt-3 leading-8 text-slate-700">Em seguida, confira o 13&ordm; proporcional. Veja quantos meses do ano contam para o c&aacute;lculo, lembrando que, em regra, m&ecirc;s com pelo menos 15 dias trabalhados conta como 1/12. Depois analise o aviso pr&eacute;vio: ele foi trabalhado, indenizado, proporcional ao tempo de servi&ccedil;o ou descontado?</p>
+        <p class="mt-3 leading-8 text-slate-700">Por fim, confira FGTS e multa. O extrato do FGTS ajuda a identificar dep&oacute;sitos faltantes ou divergentes. A multa de 40%, quando devida, n&atilde;o &eacute; calculada sobre qualquer valor aleat&oacute;rio: ela se relaciona aos dep&oacute;sitos do contrato. Na rescis&atilde;o por acordo, a multa costuma ser de 20%.</p>
+        <div class="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-5">
+          <h3 class="text-xl font-bold text-blue-950">Checklist de confer&ecirc;ncia</h3>
+          <ul class="mt-3 grid gap-2 leading-7 text-blue-900 sm:grid-cols-2">
+            <li>☐ Saldo de sal&aacute;rio bate com os dias trabalhados.</li>
+            <li>☐ F&eacute;rias vencidas aparecem quando existirem.</li>
+            <li>☐ F&eacute;rias proporcionais usam o per&iacute;odo correto.</li>
+            <li>☐ Ter&ccedil;o constitucional foi somado &agrave;s f&eacute;rias.</li>
+            <li>☐ 13&ordm; proporcional considera os meses v&aacute;lidos.</li>
+            <li>☐ Aviso pr&eacute;vio foi tratado corretamente.</li>
+            <li>☐ FGTS foi comparado com o extrato.</li>
+            <li>☐ Multa do FGTS usa o percentual adequado.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Erros mais comuns na rescis&atilde;o</h2>
         <ul class="mt-4 space-y-3 leading-7 text-slate-700">
           <li class="rounded-xl bg-slate-50 p-4">Comparar rescis&otilde;es de tipos diferentes como se tivessem as mesmas verbas.</li>
           <li class="rounded-xl bg-slate-50 p-4">Achar que pedido de demiss&atilde;o d&aacute; direito &agrave; multa de 40% do FGTS.</li>
@@ -306,6 +390,12 @@
           <li class="rounded-xl bg-slate-50 p-4">Esquecer o ter&ccedil;o constitucional sobre f&eacute;rias vencidas ou proporcionais.</li>
           <li class="rounded-xl bg-slate-50 p-4">N&atilde;o conferir se o aviso pr&eacute;vio foi trabalhado, indenizado ou descontado.</li>
           <li class="rounded-xl bg-slate-50 p-4">Ignorar descontos, adiantamentos, faltas ou m&eacute;dias de parcelas vari&aacute;veis.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Calcular f&eacute;rias proporcionais com quantidade errada de meses, especialmente quando houve admiss&atilde;o ou sa&iacute;da no meio do per&iacute;odo aquisitivo.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Deixar de conferir f&eacute;rias vencidas antigas, que podem existir quando o trabalhador completou o per&iacute;odo aquisitivo e ainda n&atilde;o descansou.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Usar o saldo total do FGTS como base da multa sem verificar quais dep&oacute;sitos pertencem ao contrato encerrado.</li>
+          <li class="rounded-xl bg-slate-50 p-4">N&atilde;o identificar dep&oacute;sitos de FGTS em atraso, o que pode reduzir saque e multa rescis&oacute;ria.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Aceitar descontos sem entender a origem, como adiantamentos, faltas, vale-transporte, vale-alimenta&ccedil;&atilde;o ou aviso pr&eacute;vio n&atilde;o cumprido.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Esquecer adicionais habituais, comiss&otilde;es, horas extras ou m&eacute;dias vari&aacute;veis que podem influenciar algumas parcelas.</li>
         </ul>
       </section>
 
@@ -315,6 +405,34 @@
         <h2 id="cta-principal" class="text-2xl font-bold">Quer estimar sua rescis&atilde;o com mais clareza?</h2>
         <p class="mt-2 leading-7 text-blue-50">Use gratuitamente a Calculadora de Rescis&atilde;o CLT do Calcule Trabalhador.</p>
         <a href="/calculadora-rescisao-clt/" class="mt-5 inline-flex rounded-xl bg-white px-5 py-3 font-bold text-blue-800 transition hover:bg-blue-50">Abrir calculadora gratuita</a>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Quando procurar ajuda especializada</h2>
+        <p class="mt-3 leading-8 text-slate-700">Nem toda diferen&ccedil;a no c&aacute;lculo significa erro da empresa, mas algumas situa&ccedil;&otilde;es merecem apoio especializado. Procure orienta&ccedil;&atilde;o quando houver atraso no pagamento, aus&ecirc;ncia de documentos, desconto que voc&ecirc; n&atilde;o reconhece, FGTS sem dep&oacute;sitos, diverg&ecirc;ncia grande entre estimativa e TRCT ou d&uacute;vida sobre justa causa.</p>
+        <p class="mt-3 leading-8 text-slate-700">O sindicato pode ajudar a interpretar direitos da categoria, conven&ccedil;&otilde;es coletivas e pr&aacute;ticas do setor. Canais do Minist&eacute;rio do Trabalho podem orientar sobre caminhos administrativos. Um advogado trabalhista pode avaliar documentos, risco, prazo e viabilidade de uma reclama&ccedil;&atilde;o quando a conversa com a empresa n&atilde;o resolve.</p>
+        <p class="mt-3 leading-8 text-slate-700">Leve sempre documentos completos: TRCT, aviso pr&eacute;vio, holerites, extrato do FGTS, comprovantes de pagamento, comunica&ccedil;&otilde;es com a empresa, contrato, controle de ponto e eventuais acordos. Quanto mais organizado estiver o material, mais objetiva tende a ser a orienta&ccedil;&atilde;o.</p>
+      </section>
+
+      <!-- ESPACO-ADS-04 -->
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Checklist completo da rescis&atilde;o</h2>
+        <p class="mt-3 leading-8 text-slate-700">Antes de considerar o acerto encerrado, revise os pontos abaixo. A ideia n&atilde;o &eacute; transformar a confer&ecirc;ncia em uma disputa, mas garantir que voc&ecirc; saiba o que recebeu, o que foi descontado e quais documentos precisa guardar.</p>
+        <ul class="mt-5 grid gap-3 leading-7 text-slate-700 sm:grid-cols-2">
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Recebi o TRCT.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi a data de desligamento.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi saldo de sal&aacute;rio.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi f&eacute;rias vencidas e proporcionais.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi o ter&ccedil;o constitucional.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi 13&ordm; proporcional.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi aviso pr&eacute;vio.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi FGTS no extrato.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Conferi multa de 40% ou 20%, conforme o caso.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Verifiquei se posso solicitar seguro-desemprego.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Guardei comprovantes de pagamento.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">☐ Separei holerites, mensagens e documentos do contrato.</li>
+        </ul>
       </section>
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
