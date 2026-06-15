@@ -189,6 +189,7 @@
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900">Saldo do FGTS, dep&oacute;sitos do empregador e saque do FGTS</h2>
         <p class="mt-3 leading-8 text-slate-700">Um erro comum &eacute; tratar tudo como se fosse a mesma coisa. O saldo do FGTS &eacute; o valor que aparece na conta vinculada. Os dep&oacute;sitos do empregador s&atilde;o a base hist&oacute;rica ligada ao contrato. J&aacute; o saque do FGTS &eacute; a libera&ccedil;&atilde;o do dinheiro ao trabalhador em hip&oacute;teses permitidas.</p>
+        <p class="mt-3 leading-8 text-slate-700">A multa rescis&oacute;ria n&atilde;o nasce do sal&aacute;rio do m&ecirc;s, nem do valor l&iacute;quido da rescis&atilde;o. Ela se relaciona aos dep&oacute;sitos de FGTS feitos pelo empregador durante aquele contrato. Por isso, dois trabalhadores com o mesmo sal&aacute;rio atual podem ter multas diferentes se tiveram tempos de casa, adicionais, afastamentos ou hist&oacute;ricos de dep&oacute;sito diferentes.</p>
         <div class="mt-5 overflow-x-auto rounded-xl border border-slate-200">
           <table class="w-full min-w-[680px] border-collapse bg-white text-left text-sm">
             <thead class="bg-slate-50 text-slate-900">
@@ -209,18 +210,36 @@
         <p class="mt-3 leading-8 text-slate-700">Quem aderiu ao <a href="/saque-aniversario-fgts/" class="font-semibold text-blue-700 underline">Saque-Anivers&aacute;rio FGTS</a> deve ter aten&ccedil;&atilde;o extra: a modalidade pode afetar o saque do saldo em caso de demiss&atilde;o, mas a multa rescis&oacute;ria deve ser analisada separadamente.</p>
       </section>
 
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Sobre qual valor a multa de 40% &eacute; calculada</h2>
+        <p class="mt-3 leading-8 text-slate-700">A base da multa de 40% do FGTS costuma ser formada pelos dep&oacute;sitos feitos pelo empregador na conta vinculada daquele contrato. Em uma confer&ecirc;ncia simples, o trabalhador deve olhar o extrato anal&iacute;tico do FGTS e identificar os lan&ccedil;amentos ligados &agrave; empresa que est&aacute; encerrando o v&iacute;nculo.</p>
+        <p class="mt-3 leading-8 text-slate-700">Isso explica por que o valor pode parecer diferente do esperado. O aplicativo pode mostrar saldo atual, valores sacados, atualiza&ccedil;&otilde;es monet&aacute;rias, contas de contratos antigos ou bloqueios conforme a modalidade. A multa, por sua vez, precisa ser comparada com a base de dep&oacute;sitos do contrato que terminou, e n&atilde;o apenas com um n&uacute;mero isolado na tela.</p>
+        <p class="mt-3 leading-8 text-slate-700">Tamb&eacute;m &eacute; importante separar tr&ecirc;s ideias: o saldo do FGTS &eacute; o dinheiro acumulado na conta; o saque FGTS &eacute; a possibilidade de retirar esse dinheiro; e a multa rescis&oacute;ria FGTS &eacute; uma indeniza&ccedil;&atilde;o devida em determinadas modalidades de desligamento. Na demiss&atilde;o sem justa causa, essas coisas podem aparecer juntas, mas n&atilde;o s&atilde;o a mesma verba.</p>
+        <div class="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-5">
+          <h3 class="text-xl font-bold text-blue-950">Por que o valor pode n&atilde;o bater de primeira?</h3>
+          <ul class="mt-3 space-y-2 leading-7 text-blue-900">
+            <li>O trabalhador pode ter feito saques anteriores permitidos por lei.</li>
+            <li>A consulta pode misturar contas de contratos diferentes.</li>
+            <li>Podem existir dep&oacute;sitos em atraso ou lan&ccedil;amentos ainda n&atilde;o processados.</li>
+            <li>O Saque-Anivers&aacute;rio pode alterar a libera&ccedil;&atilde;o do saldo, sem significar que a multa desapareceu.</li>
+            <li>O TRCT pode apresentar a multa em campo separado do saldo do FGTS.</li>
+          </ul>
+        </div>
+      </section>
+
       <!-- ESPACO-ADS-02 -->
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900">Tabela por tipo de rescis&atilde;o</h2>
         <p class="mt-3 leading-8 text-slate-700">A multa do FGTS muda conforme o tipo de sa&iacute;da. A tabela abaixo ajuda a visualizar os cen&aacute;rios mais comuns.</p>
         <div class="mt-5 overflow-x-auto rounded-xl border border-slate-200">
-          <table class="w-full min-w-[720px] border-collapse bg-white text-left text-sm">
+          <table class="w-full min-w-[840px] border-collapse bg-white text-left text-sm">
             <thead class="bg-slate-50 text-slate-900">
               <tr>
-                <th class="p-3 font-bold">Tipo de sa&iacute;da</th>
+                <th class="p-3 font-bold">Tipo de rescis&atilde;o</th>
                 <th class="p-3 font-bold">Tem multa de 40%?</th>
                 <th class="p-3 font-bold">Pode sacar FGTS?</th>
+                <th class="p-3 font-bold">Tem seguro-desemprego?</th>
                 <th class="p-3 font-bold">Observa&ccedil;&atilde;o</th>
               </tr>
             </thead>
@@ -229,29 +248,41 @@
                 <td class="p-3 font-semibold text-slate-900">Demiss&atilde;o sem justa causa</td>
                 <td class="p-3">Sim, em regra.</td>
                 <td class="p-3">Sim, no saque-rescis&atilde;o.</td>
+                <td class="p-3">Pode ter, se cumprir os requisitos.</td>
                 <td class="p-3">Pode haver tamb&eacute;m direito ao seguro-desemprego, se cumpridos os requisitos.</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-semibold text-slate-900">Rescis&atilde;o por acordo</td>
-                <td class="p-3">N&atilde;o integral; costuma ser 20%.</td>
-                <td class="p-3">Parcial, conforme regra aplic&aacute;vel.</td>
-                <td class="p-3">Modalidade diferente da dispensa sem justa causa tradicional.</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-slate-900">Pedido de demiss&atilde;o</td>
                 <td class="p-3">N&atilde;o.</td>
                 <td class="p-3">Em regra, n&atilde;o por rescis&atilde;o.</td>
-                <td class="p-3">Pode haver aviso pr&eacute;vio a cumprir ou desconto.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">O trabalhador pediu o desligamento; pode haver aviso pr&eacute;vio a cumprir ou desconto.</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-slate-900">Justa causa</td>
                 <td class="p-3">N&atilde;o.</td>
                 <td class="p-3">Em regra, n&atilde;o.</td>
-                <td class="p-3">O acerto costuma ser bem mais restrito.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">O acerto costuma ser bem mais restrito e n&atilde;o inclui a multa rescis&oacute;ria.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Acordo trabalhista</td>
+                <td class="p-3">N&atilde;o integral; costuma ser 20%.</td>
+                <td class="p-3">Parcial, conforme regra aplic&aacute;vel.</td>
+                <td class="p-3">N&atilde;o.</td>
+                <td class="p-3">Modalidade diferente da dispensa sem justa causa tradicional.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Fim de contrato por prazo determinado</td>
+                <td class="p-3">Depende da forma de encerramento.</td>
+                <td class="p-3">Pode haver saque em hip&oacute;teses previstas.</td>
+                <td class="p-3">Depende dos requisitos e do caso concreto.</td>
+                <td class="p-3">O t&eacute;rmino normal do prazo e a rescis&atilde;o antecipada podem ter efeitos diferentes.</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="mt-3 leading-8 text-slate-700">Essa tabela serve para orientar a leitura do TRCT, mas n&atilde;o substitui a an&aacute;lise dos documentos. Se a modalidade indicada no termo de rescis&atilde;o n&atilde;o corresponde ao que aconteceu na pr&aacute;tica, vale buscar orienta&ccedil;&atilde;o antes de aceitar o c&aacute;lculo como definitivo.</p>
       </section>
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -271,6 +302,28 @@
       </section>
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Exemplos pr&aacute;ticos adicionais</h2>
+        <p class="mt-3 leading-8 text-slate-700">Os exemplos abaixo mostram como o percentual muda conforme a base e a modalidade de rescis&atilde;o. Eles s&atilde;o estimativas educativas: o documento oficial deve ser conferido no TRCT, no demonstrativo rescis&oacute;rio e no extrato anal&iacute;tico do FGTS.</p>
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <h3 class="text-xl font-bold text-slate-900">Exemplo 1</h3>
+            <p class="mt-3 leading-7 text-slate-700">Base FGTS de R$ 5.000,00 em demiss&atilde;o sem justa causa.</p>
+            <p class="mt-3 font-bold text-blue-800">R$ 5.000,00 x 40% = R$ 2.000,00</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <h3 class="text-xl font-bold text-slate-900">Exemplo 2</h3>
+            <p class="mt-3 leading-7 text-slate-700">Base FGTS de R$ 10.000,00 em demiss&atilde;o sem justa causa.</p>
+            <p class="mt-3 font-bold text-blue-800">R$ 10.000,00 x 40% = R$ 4.000,00</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <h3 class="text-xl font-bold text-slate-900">Exemplo 3</h3>
+            <p class="mt-3 leading-7 text-slate-700">Rescis&atilde;o por acordo com base FGTS de R$ 10.000,00.</p>
+            <p class="mt-3 font-bold text-blue-800">R$ 10.000,00 x 20% = R$ 2.000,00</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900">Rela&ccedil;&atilde;o com aviso pr&eacute;vio, f&eacute;rias, 13&ordm; e seguro-desemprego</h2>
         <p class="mt-3 leading-8 text-slate-700">A multa do FGTS faz parte do contexto da rescis&atilde;o, mas n&atilde;o substitui outras verbas. Em uma dispensa sem justa causa, tamb&eacute;m podem aparecer aviso pr&eacute;vio, saldo de sal&aacute;rio, f&eacute;rias vencidas e proporcionais com 1/3 e 13&ordm; proporcional.</p>
         <div class="mt-6 grid gap-4 md:grid-cols-2">
@@ -286,7 +339,19 @@
       </section>
 
       <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="text-2xl font-bold text-slate-900">Erros mais comuns</h2>
+        <h2 class="text-2xl font-bold text-slate-900">Como conferir se a multa foi paga corretamente</h2>
+        <p class="mt-3 leading-8 text-slate-700">A melhor confer&ecirc;ncia combina documentos. O TRCT mostra como a empresa registrou a rescis&atilde;o; o extrato anal&iacute;tico do FGTS mostra os dep&oacute;sitos; e o comprovante de pagamento ajuda a confirmar se a multa foi efetivamente quitada. Olhar apenas um desses itens pode esconder diferen&ccedil;as importantes.</p>
+        <ol class="mt-4 space-y-3 leading-7 text-slate-700">
+          <li class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">1. Consulte o extrato anal&iacute;tico do FGTS.</strong> Confira a conta vinculada ao empregador correto e separe os dep&oacute;sitos do contrato encerrado.</li>
+          <li class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">2. Confira os dep&oacute;sitos.</strong> Procure meses sem recolhimento, valores muito baixos ou lan&ccedil;amentos que n&atilde;o parecem corresponder ao sal&aacute;rio e &agrave;s verbas habituais.</li>
+          <li class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">3. Verifique o TRCT.</strong> Veja qual modalidade de rescis&atilde;o foi registrada e em qual campo aparece a indeniza&ccedil;&atilde;o sobre o FGTS.</li>
+          <li class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">4. Compare com um c&aacute;lculo estimado.</strong> Multiplique a base por 40% na demiss&atilde;o sem justa causa ou por 20% no acordo trabalhista, quando aplic&aacute;vel.</li>
+          <li class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">5. Guarde comprovantes.</strong> Salve extratos, recibos, mensagens do RH, comprovante banc&aacute;rio e c&oacute;pia do termo de rescis&atilde;o.</li>
+        </ol>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Erros comuns sobre a multa do FGTS</h2>
         <ul class="mt-4 space-y-3 leading-7 text-slate-700">
           <li class="rounded-xl bg-slate-50 p-4">Calcular a multa de 40% apenas sobre o saldo vis&iacute;vel no aplicativo, sem conferir a base dos dep&oacute;sitos do contrato.</li>
           <li class="rounded-xl bg-slate-50 p-4">Confundir multa de 40% com saque do FGTS.</li>
@@ -294,10 +359,36 @@
           <li class="rounded-xl bg-slate-50 p-4">Tratar rescis&atilde;o por acordo como se fosse demiss&atilde;o sem justa causa comum.</li>
           <li class="rounded-xl bg-slate-50 p-4">Ignorar o impacto do Saque-Anivers&aacute;rio no saque do saldo.</li>
           <li class="rounded-xl bg-slate-50 p-4">N&atilde;o conferir extrato anal&iacute;tico, TRCT e demonstrativo da multa.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Achar que a multa &eacute; calculada sobre o sal&aacute;rio atual, como se bastasse pegar o &uacute;ltimo contracheque e multiplicar por 40%.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Acreditar que toda demiss&atilde;o gera multa, mesmo quando houve pedido de demiss&atilde;o, justa causa ou outra modalidade sem essa indeniza&ccedil;&atilde;o integral.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Deixar de verificar dep&oacute;sitos antigos, principalmente em contratos longos, mudan&ccedil;as de sal&aacute;rio, afastamentos ou per&iacute;odos com adicionais vari&aacute;veis.</li>
+          <li class="rounded-xl bg-slate-50 p-4">Confundir Saque-Anivers&aacute;rio com saque-rescis&atilde;o e concluir, sem conferir, que a empresa n&atilde;o precisa pagar a multa.</li>
+        </ul>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">O que fazer se a empresa n&atilde;o pagar a multa</h2>
+        <p class="mt-3 leading-8 text-slate-700">Se a multa n&atilde;o apareceu no acerto, comece confirmando a modalidade de rescis&atilde;o registrada. Em uma demiss&atilde;o sem justa causa, a aus&ecirc;ncia da indeniza&ccedil;&atilde;o deve ser esclarecida rapidamente, porque ela &eacute; uma das principais verbas ligadas ao encerramento do contrato.</p>
+        <p class="mt-3 leading-8 text-slate-700">O primeiro caminho costuma ser conversar com o RH ou com o respons&aacute;vel pela folha. Pe&ccedil;a o demonstrativo da multa, confirme a base de c&aacute;lculo usada e solicite explica&ccedil;&atilde;o por escrito se houver diverg&ecirc;ncia. Muitas diferen&ccedil;as aparecem por erro de leitura do extrato, conta vinculada errada ou pagamento ainda n&atilde;o identificado.</p>
+        <p class="mt-3 leading-8 text-slate-700">Se a empresa n&atilde;o responder, se recusar a demonstrar o c&aacute;lculo ou mantiver uma diferen&ccedil;a relevante, o trabalhador pode procurar o sindicato da categoria, registrar den&uacute;ncia nos canais competentes e buscar orienta&ccedil;&atilde;o trabalhista. Leve sempre documentos: TRCT, extrato anal&iacute;tico do FGTS, comprovantes de pagamento, holerites e mensagens trocadas com a empresa.</p>
+      </section>
+
+      <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Checklist da multa do FGTS</h2>
+        <p class="mt-3 leading-8 text-slate-700">Use este checklist antes de aceitar o valor como correto. Ele ajuda a organizar a confer&ecirc;ncia e evita misturar multa, saque, saldo e seguro-desemprego.</p>
+        <ul class="mt-5 grid gap-3 leading-7 text-slate-700 sm:grid-cols-2">
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Conferi o extrato do FGTS.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Verifiquei o tipo de demiss&atilde;o.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Conferi o TRCT.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Confirmei a base de c&aacute;lculo.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Calculei a multa estimada.</li>
+          <li class="rounded-xl border border-slate-200 bg-slate-50 p-4">&#9744; Guardei comprovantes.</li>
         </ul>
       </section>
 
       <!-- ESPACO-ADS-03 -->
+
+      <!-- ESPACO-ADS-04 -->
 
       <section class="rounded-2xl border border-blue-200 bg-blue-700 p-6 text-white shadow-sm" aria-labelledby="cta-principal">
         <h2 id="cta-principal" class="text-2xl font-bold">Quer saber quanto pode receber na sua rescis&atilde;o?</h2>
