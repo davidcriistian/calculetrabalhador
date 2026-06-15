@@ -108,6 +108,21 @@
     "showOnHome": false
   },
   {
+    "id": "ferias-vencidas-o-que-acontece",
+    "title": "Férias Vencidas: O Que Acontece e Quais São os Seus Direitos?",
+    "slug": "/blog/ferias-vencidas-o-que-acontece",
+    "url": "/blog/ferias-vencidas-o-que-acontece/",
+    "category": "Férias CLT",
+    "description": "Entenda o que são férias vencidas, quando elas acontecem, como funciona o pagamento em dobro e quais são os direitos do trabalhador segundo a CLT.",
+    "relatedTool": "/calculadora-ferias-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-decimo-terceiro",
     "title": "Como Calcular o 13º Salário Proporcional em 2026",
     "slug": "/blog/como-calcular-decimo-terceiro",
