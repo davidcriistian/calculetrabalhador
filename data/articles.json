@@ -214,6 +214,21 @@
     "showOnHome": false
   },
   {
+    "id": "descontos-no-decimo-terceiro-salario",
+    "title": "Descontos no 13º Salário: Entenda INSS, IRRF e Valor Líquido",
+    "slug": "/blog/descontos-no-decimo-terceiro-salario/",
+    "url": "/blog/descontos-no-decimo-terceiro-salario/",
+    "category": "13º Salário",
+    "description": "Entenda quais descontos podem ocorrer no 13º salário, como funcionam INSS e IRRF e como calcular o valor líquido que você realmente recebe.",
+    "relatedTool": "/calculadora-13-salario/",
+    "tempo": "14 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
