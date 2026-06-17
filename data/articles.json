@@ -244,6 +244,21 @@
     "showOnHome": false
   },
   {
+    "id": "como-calcular-salario-liquido",
+    "title": "Como Calcular o Salário Líquido Passo a Passo em 2026",
+    "slug": "/blog/como-calcular-salario-liquido",
+    "url": "/blog/como-calcular-salario-liquido/",
+    "category": "Salário Líquido",
+    "description": "Aprenda como calcular o salário líquido passo a passo, entender descontos de INSS, IRRF e outros encargos para descobrir quanto realmente entra na sua conta.",
+    "relatedTool": "/salario-liquido-clt/",
+    "tempo": "14 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
