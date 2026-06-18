@@ -289,6 +289,21 @@
     "showOnHome": false
   },
   {
+    "id": "como-funciona-o-irrf-na-folha",
+    "title": "Como Funciona o IRRF na Folha de Pagamento?",
+    "slug": "/blog/como-funciona-o-irrf-na-folha",
+    "url": "/blog/como-funciona-o-irrf-na-folha/",
+    "category": "Salário Líquido",
+    "description": "Entenda como funciona o desconto do IRRF na folha de pagamento, quais são as faixas de tributação e como calcular corretamente o imposto retido na fonte.",
+    "relatedTool": "/salario-liquido-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
