@@ -304,6 +304,21 @@
     "showOnHome": false
   },
   {
+    "id": "salario-bruto-e-salario-liquido",
+    "title": "Salário Bruto e Salário Líquido: Entenda a Diferença",
+    "slug": "/blog/salario-bruto-e-salario-liquido",
+    "url": "/blog/salario-bruto-e-salario-liquido/",
+    "category": "Salário Líquido",
+    "description": "Entenda a diferença entre salário bruto e salário líquido, quais descontos são aplicados e como descobrir quanto realmente entra na sua conta.",
+    "relatedTool": "/salario-liquido-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
