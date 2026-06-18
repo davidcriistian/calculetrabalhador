@@ -484,6 +484,21 @@
     "showOnHome": false
   },
   {
+    "id": "limite-de-horas-extras-clt",
+    "title": "Qual é o Limite de Horas Extras Permitido pela CLT?",
+    "slug": "/blog/limite-de-horas-extras-clt",
+    "url": "/blog/limite-de-horas-extras-clt/",
+    "category": "Horas Extras",
+    "description": "Entenda qual é o limite de horas extras permitido pela CLT, quando a empresa pode exigir jornada adicional e quais são os direitos do trabalhador.",
+    "relatedTool": "/calculadora-horas-extras-clt/",
+    "tempo": "12 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "hora-extra-ou-adicional-noturno",
     "title": "Diferença Entre Hora Extra e Adicional Noturno em 2026",
     "slug": "/blog/hora-extra-ou-adicional-noturno",
