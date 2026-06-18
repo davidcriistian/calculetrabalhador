@@ -454,6 +454,21 @@
     "showOnHome": false
   },
   {
+    "id": "hora-extra-50-e-100-diferenca",
+    "title": "Hora Extra 50% e 100%: Entenda a Diferença",
+    "slug": "/blog/hora-extra-50-e-100-diferenca",
+    "url": "/blog/hora-extra-50-e-100-diferenca/",
+    "category": "Horas Extras",
+    "description": "Entenda a diferença entre hora extra de 50% e 100%, quando cada uma se aplica e como calcular corretamente o valor a receber.",
+    "relatedTool": "/calculadora-horas-extras-clt/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "hora-extra-ou-adicional-noturno",
     "title": "Diferença Entre Hora Extra e Adicional Noturno em 2026",
     "slug": "/blog/hora-extra-ou-adicional-noturno",
