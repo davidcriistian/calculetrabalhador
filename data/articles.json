@@ -274,6 +274,21 @@
     "showOnHome": false
   },
   {
+    "id": "tabela-inss-atualizada",
+    "title": "Tabela INSS Atualizada: Como Funciona o Desconto em 2026",
+    "slug": "/blog/tabela-inss-atualizada",
+    "url": "/blog/tabela-inss-atualizada/",
+    "category": "Salário Líquido",
+    "description": "Veja a tabela do INSS atualizada, entenda como funciona o desconto previdenciário e aprenda a calcular corretamente o valor descontado do salário.",
+    "relatedTool": "/salario-liquido-clt/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "seguro-desemprego-quem-tem-direito",
     "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
     "slug": "/blog/seguro-desemprego-quem-tem-direito",
