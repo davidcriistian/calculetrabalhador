@@ -439,6 +439,21 @@
     "showOnHome": false
   },
   {
+    "id": "qual-o-valor-da-hora-extra",
+    "title": "Qual o Valor da Hora Extra? Aprenda a Calcular",
+    "slug": "/blog/qual-o-valor-da-hora-extra",
+    "url": "/blog/qual-o-valor-da-hora-extra/",
+    "category": "Horas Extras",
+    "description": "Descubra qual é o valor da hora extra, como calcular os adicionais de 50% e 100% e como conferir se o pagamento está correto.",
+    "relatedTool": "/calculadora-horas-extras-clt/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "hora-extra-ou-adicional-noturno",
     "title": "Diferença Entre Hora Extra e Adicional Noturno em 2026",
     "slug": "/blog/hora-extra-ou-adicional-noturno",
