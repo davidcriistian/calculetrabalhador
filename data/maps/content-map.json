@@ -62,6 +62,21 @@
       "status": "published"
     },
     {
+      "id": "como-funciona-o-aviso-previo-proporcional",
+      "slug": "/blog/como-funciona-o-aviso-previo-proporcional",
+      "url": "https://calculetrabalhador.com.br/blog/como-funciona-o-aviso-previo-proporcional/",
+      "category": "Aviso Prévio",
+      "primaryTool": "calculadora-aviso-previo",
+      "clusterId": "calculadora-aviso-previo",
+      "contentType": "support",
+      "intent": "education",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["aviso-previo", "rescisao"],
+      "internalLinksRequired": ["/calculadora-aviso-previo/", "/blog/como-calcular-aviso-previo/", "/blog/aviso-previo-trabalhado-ou-indenizado/", "/blog/quantos-dias-de-aviso-previo-tenho-direito/", "/calculadora-rescisao-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "como-funciona-adicional-noturno",
       "slug": "/blog/como-funciona-adicional-noturno",
       "url": "https://calculetrabalhador.com.br/blog/como-funciona-adicional-noturno/",
