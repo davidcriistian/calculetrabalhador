@@ -105,14 +105,15 @@
     {
       "clusterId": "calculadora-aviso-previo",
       "primaryTool": "calculadora-aviso-previo",
-      "articleCount": 4,
+      "articleCount": 5,
       "articles": [
         "como-calcular-aviso-previo",
         "aviso-previo-trabalhado-ou-indenizado",
         "quantos-dias-de-aviso-previo-tenho-direito",
-        "como-funciona-o-aviso-previo-proporcional"
+        "como-funciona-o-aviso-previo-proporcional",
+        "posso-pedir-demissao-sem-cumprir-aviso-previo"
       ],
-      "status": "partial",
+      "status": "complete",
       "priority": "medium",
       "reviewFrequency": "annual"
     },

@@ -77,6 +77,21 @@
       "status": "published"
     },
     {
+      "id": "posso-pedir-demissao-sem-cumprir-aviso-previo",
+      "slug": "/blog/posso-pedir-demissao-sem-cumprir-aviso-previo",
+      "url": "https://calculetrabalhador.com.br/blog/posso-pedir-demissao-sem-cumprir-aviso-previo/",
+      "category": "Aviso Prévio",
+      "primaryTool": "calculadora-aviso-previo",
+      "clusterId": "calculadora-aviso-previo",
+      "contentType": "support",
+      "intent": "education",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["aviso-previo", "rescisao"],
+      "internalLinksRequired": ["/calculadora-aviso-previo/", "/blog/como-calcular-aviso-previo/", "/blog/aviso-previo-trabalhado-ou-indenizado/", "/blog/quantos-dias-de-aviso-previo-tenho-direito/", "/blog/como-funciona-o-aviso-previo-proporcional/", "/calculadora-rescisao-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "como-funciona-adicional-noturno",
       "slug": "/blog/como-funciona-adicional-noturno",
       "url": "https://calculetrabalhador.com.br/blog/como-funciona-adicional-noturno/",

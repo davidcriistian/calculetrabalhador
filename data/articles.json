@@ -79,6 +79,21 @@
     "showOnHome": false
   },
   {
+    "id": "posso-pedir-demissao-sem-cumprir-aviso-previo",
+    "title": "Posso Pedir Demissão Sem Cumprir Aviso Prévio? Entenda as Consequências",
+    "slug": "/blog/posso-pedir-demissao-sem-cumprir-aviso-previo",
+    "url": "https://calculetrabalhador.com.br/blog/posso-pedir-demissao-sem-cumprir-aviso-previo/",
+    "category": "Aviso Prévio",
+    "description": "Entenda se você pode pedir demissão sem cumprir aviso prévio, quando a empresa pode descontar, quando o desconto não ocorre e como calcular.",
+    "relatedTool": "/calculadora-aviso-previo/",
+    "tempo": "15 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "showOnHome": false
+  },
+  {
     "id": "como-funciona-adicional-noturno",
     "title": "Como Funciona o Adicional Noturno em 2026",
     "slug": "/blog/como-funciona-adicional-noturno",
