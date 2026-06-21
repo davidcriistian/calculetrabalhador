@@ -1,4 +1,150 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "clusterId": "salario-liquido-clt",
+      "primaryTool": "salario-liquido-clt",
+      "articleCount": 5,
+      "articles": [
+        "como-calcular-salario-liquido",
+        "descontos-do-salario-clt",
+        "tabela-inss-atualizada",
+        "como-funciona-o-irrf-na-folha",
+        "salario-bruto-e-salario-liquido"
+      ],
+      "status": "complete",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-13-salario",
+      "primaryTool": "calculadora-13-salario",
+      "articleCount": 6,
+      "articles": [
+        "como-calcular-decimo-terceiro",
+        "como-calcular-decimo-terceiro-passo-a-passo",
+        "quem-tem-direito-ao-decimo-terceiro",
+        "primeira-e-segunda-parcela-do-decimo-terceiro",
+        "descontos-no-decimo-terceiro-salario",
+        "decimo-terceiro-proporcional-como-funciona"
+      ],
+      "status": "complete",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-ferias-clt",
+      "primaryTool": "calculadora-ferias-clt",
+      "articleCount": 6,
+      "articles": [
+        "como-calcular-ferias",
+        "como-calcular-ferias-passo-a-passo",
+        "quem-tem-direito-as-ferias-clt",
+        "ferias-vencidas-o-que-acontece",
+        "posso-vender-10-dias-de-ferias",
+        "como-funciona-o-terco-constitucional-de-ferias"
+      ],
+      "status": "complete",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-horas-extras-clt",
+      "primaryTool": "calculadora-horas-extras-clt",
+      "articleCount": 6,
+      "articles": [
+        "como-calcular-horas-extras-passo-a-passo",
+        "qual-o-valor-da-hora-extra",
+        "hora-extra-50-e-100-diferenca",
+        "banco-de-horas-ou-hora-extra",
+        "limite-de-horas-extras-clt",
+        "hora-extra-ou-adicional-noturno"
+      ],
+      "status": "complete",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-seguro-desemprego",
+      "primaryTool": "calculadora-seguro-desemprego",
+      "articleCount": 4,
+      "articles": [
+        "seguro-desemprego-quem-tem-direito",
+        "seguro-desemprego-quantas-parcelas-vou-receber",
+        "quem-tem-direito-ao-seguro-desemprego",
+        "como-dar-entrada-no-seguro-desemprego"
+      ],
+      "status": "partial",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-rescisao-clt",
+      "primaryTool": "calculadora-rescisao-clt",
+      "articleCount": 3,
+      "articles": [
+        "rescisao-sem-justa-causa",
+        "verbas-rescisorias-o-que-receber-na-demissao",
+        "multa-de-40-do-fgts-como-calcular"
+      ],
+      "status": "partial",
+      "priority": "high",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "saque-aniversario-fgts",
+      "primaryTool": "saque-aniversario-fgts",
+      "articleCount": 1,
+      "articles": [
+        "saque-aniversario-fgts-2026"
+      ],
+      "status": "empty",
+      "priority": "medium",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-aviso-previo",
+      "primaryTool": "calculadora-aviso-previo",
+      "articleCount": 1,
+      "articles": [
+        "como-calcular-aviso-previo"
+      ],
+      "status": "empty",
+      "priority": "medium",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-adicional-noturno",
+      "primaryTool": "calculadora-adicional-noturno",
+      "articleCount": 1,
+      "articles": [
+        "como-funciona-adicional-noturno"
+      ],
+      "status": "empty",
+      "priority": "medium",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-insalubridade",
+      "primaryTool": "calculadora-insalubridade",
+      "articleCount": 1,
+      "articles": [
+        "insalubridade-quem-tem-direito"
+      ],
+      "status": "empty",
+      "priority": "medium",
+      "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-clt-ou-pj",
+      "primaryTool": "calculadora-clt-ou-pj",
+      "articleCount": 1,
+      "articles": [
+        "clt-ou-pj"
+      ],
+      "status": "empty",
+      "priority": "medium",
+      "reviewFrequency": "annual"
+    }
+  ]
 }
