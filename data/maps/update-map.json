@@ -1,4 +1,190 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "ruleId": "inss",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "impactedClusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedAffectedArticles": 11,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "irrf",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "impactedClusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedAffectedArticles": 11,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "salario-minimo",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-seguro-desemprego",
+        "calculadora-insalubridade"
+      ],
+      "impactedClusters": [
+        "calculadora-insalubridade",
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedAffectedArticles": 3,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "fgts",
+      "frequency": "occasional",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "saque-aniversario-fgts",
+        "calculadora-rescisao-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "impactedClusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-rescisao-clt",
+        "saque-aniversario-fgts"
+      ],
+      "estimatedAffectedArticles": 5,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "seguro-desemprego",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-seguro-desemprego"
+      ],
+      "impactedClusters": [
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedAffectedArticles": 4,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "ferias",
+      "frequency": "rare",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-rescisao-clt",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "impactedClusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedAffectedArticles": 9,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "decimo-terceiro",
+      "frequency": "rare",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-rescisao-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "impactedClusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedAffectedArticles": 11,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "horas-extras",
+      "frequency": "rare",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-horas-extras-clt"
+      ],
+      "impactedClusters": [
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedAffectedArticles": 6,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "adicional-noturno",
+      "frequency": "rare",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-adicional-noturno"
+      ],
+      "impactedClusters": [
+        "calculadora-adicional-noturno",
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedAffectedArticles": 2,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "insalubridade",
+      "frequency": "occasional",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-insalubridade"
+      ],
+      "impactedClusters": [
+        "calculadora-insalubridade"
+      ],
+      "estimatedAffectedArticles": 1,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "aviso-previo",
+      "frequency": "rare",
+      "risk": "medium",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-rescisao-clt",
+        "calculadora-aviso-previo"
+      ],
+      "impactedClusters": [
+        "calculadora-aviso-previo",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedAffectedArticles": 3,
+      "requiresValidation": true
+    }
+  ]
 }
