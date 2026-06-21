@@ -1,4 +1,189 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "saque-aniversario-fgts",
+      "slug": "/saque-aniversario-fgts/",
+      "category": "FGTS",
+      "rulesUsed": [
+        "fgts"
+      ],
+      "dependencies": [
+        "fgts"
+      ],
+      "clusterSize": 1,
+      "reviewFrequency": "annual",
+      "risk": "medium"
+    },
+    {
+      "id": "salario-liquido-clt",
+      "slug": "/salario-liquido-clt/",
+      "category": "Salário",
+      "rulesUsed": [
+        "inss",
+        "irrf"
+      ],
+      "dependencies": [
+        "inss",
+        "irrf"
+      ],
+      "clusterSize": 5,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-rescisao-clt",
+      "slug": "/calculadora-rescisao-clt/",
+      "category": "Rescisão",
+      "rulesUsed": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "dependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "clusterSize": 2,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-13-salario",
+      "slug": "/calculadora-13-salario/",
+      "category": "13º Salário",
+      "rulesUsed": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "dependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "clusterSize": 5,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-ferias-clt",
+      "slug": "/calculadora-ferias-clt/",
+      "category": "Férias",
+      "rulesUsed": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "dependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "clusterSize": 5,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-horas-extras-clt",
+      "slug": "/calculadora-horas-extras-clt/",
+      "category": "Jornada",
+      "rulesUsed": [
+        "horas-extras"
+      ],
+      "dependencies": [
+        "horas-extras"
+      ],
+      "clusterSize": 5,
+      "reviewFrequency": "annual",
+      "risk": "medium"
+    },
+    {
+      "id": "calculadora-seguro-desemprego",
+      "slug": "/calculadora-seguro-desemprego/",
+      "category": "Benefício",
+      "rulesUsed": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "dependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "clusterSize": 3,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-aviso-previo",
+      "slug": "/calculadora-aviso-previo/",
+      "category": "Rescisão",
+      "rulesUsed": [
+        "aviso-previo"
+      ],
+      "dependencies": [
+        "aviso-previo"
+      ],
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "medium"
+    },
+    {
+      "id": "calculadora-adicional-noturno",
+      "slug": "/calculadora-adicional-noturno/",
+      "category": "Jornada",
+      "rulesUsed": [
+        "adicional-noturno"
+      ],
+      "dependencies": [
+        "adicional-noturno"
+      ],
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "medium"
+    },
+    {
+      "id": "calculadora-insalubridade",
+      "slug": "/calculadora-insalubridade/",
+      "category": "Adicionais",
+      "rulesUsed": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "dependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "medium"
+    },
+    {
+      "id": "calculadora-clt-ou-pj",
+      "slug": "/calculadora-clt-ou-pj/",
+      "category": "Trabalhista",
+      "rulesUsed": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "dependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    }
+  ]
 }
