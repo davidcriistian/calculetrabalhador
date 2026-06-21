@@ -47,6 +47,21 @@
       "status": "published"
     },
     {
+      "id": "quantos-dias-de-aviso-previo-tenho-direito",
+      "slug": "/blog/quantos-dias-de-aviso-previo-tenho-direito",
+      "url": "https://calculetrabalhador.com.br/blog/quantos-dias-de-aviso-previo-tenho-direito/",
+      "category": "Aviso Prévio",
+      "primaryTool": "calculadora-aviso-previo",
+      "clusterId": "calculadora-aviso-previo",
+      "contentType": "support",
+      "intent": "calculation",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["aviso-previo", "rescisao"],
+      "internalLinksRequired": ["/calculadora-aviso-previo/", "/blog/como-calcular-aviso-previo/", "/blog/aviso-previo-trabalhado-ou-indenizado/", "/calculadora-rescisao-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "como-funciona-adicional-noturno",
       "slug": "/blog/como-funciona-adicional-noturno",
       "url": "https://calculetrabalhador.com.br/blog/como-funciona-adicional-noturno/",
