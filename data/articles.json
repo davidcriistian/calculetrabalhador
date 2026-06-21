@@ -78,6 +78,21 @@
     "showOnHome": false
   },
   {
+    "id": "adicional-noturno-valor-por-hora",
+    "title": "Adicional Noturno: Qual é o Valor por Hora e Como Calcular?",
+    "slug": "/blog/adicional-noturno-valor-por-hora",
+    "url": "/blog/adicional-noturno-valor-por-hora/",
+    "category": "Adicional Noturno",
+    "description": "Descubra quanto vale a hora noturna, como calcular o adicional noturno e veja exemplos práticos para conferir se o pagamento está correto.",
+    "relatedTool": "/calculadora-adicional-noturno/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "insalubridade-quem-tem-direito",
     "title": "O que é Insalubridade e Quem Tem Direito em 2026",
     "slug": "/blog/insalubridade-quem-tem-direito",
