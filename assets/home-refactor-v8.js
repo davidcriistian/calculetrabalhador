@@ -27,6 +27,46 @@
     return data;
   };
 
+
+  const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const animateNumber = (element, target, suffix = '') => {
+    if (!element || !Number.isFinite(target)) return;
+
+    const finalValue = Math.max(0, Math.round(target));
+
+    if (prefersReducedMotion()) {
+      element.textContent = `${finalValue}${suffix}`;
+      return;
+    }
+
+    const duration = 900;
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(finalValue * eased);
+      element.textContent = `${current}${suffix}`;
+
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    element.textContent = `0${suffix}`;
+    requestAnimationFrame(tick);
+  };
+
+  const countPublishedTools = (tools) => tools.filter((tool) => tool.published === true).length;
+  const countPublishedArticles = (articles) => articles.length;
+
+  const updateStats = (tools, articles) => {
+    const toolsStat = document.querySelector('[data-stat-counter="tools"]');
+    const articlesStat = document.querySelector('[data-stat-counter="articles"]');
+
+    animateNumber(toolsStat, countPublishedTools(tools));
+    animateNumber(articlesStat, countPublishedArticles(articles));
+  };
+
   const renderTools = (tools) => {
     const grid = $('#toolsGrid');
     const empty = $('#toolsEmpty');
@@ -175,6 +215,7 @@
 
       renderTools(homeTools);
       renderArticles(articles);
+      updateStats(tools, articles);
       setupSearch(homeTools);
       document.documentElement.dataset.homeRefactorV8 = 'ready';
     } catch (error) {
