@@ -34,6 +34,21 @@
     "cltGuideOrder": 3
   },
   {
+    "id": "aviso-previo-trabalhado-ou-indenizado",
+    "title": "Aviso Prévio Trabalhado ou Indenizado: Qual a Diferença?",
+    "slug": "/blog/aviso-previo-trabalhado-ou-indenizado",
+    "url": "https://calculetrabalhador.com.br/blog/aviso-previo-trabalhado-ou-indenizado/",
+    "category": "Aviso Prévio",
+    "description": "Entenda a diferença entre aviso prévio trabalhado e indenizado, quando cada um acontece, como calcular e o que muda na demissão ou pedido de demissão.",
+    "relatedTool": "/calculadora-aviso-previo/",
+    "tempo": "15 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "showOnHome": false
+  },
+  {
     "id": "como-funciona-adicional-noturno",
     "title": "Como Funciona o Adicional Noturno em 2026",
     "slug": "/blog/como-funciona-adicional-noturno",

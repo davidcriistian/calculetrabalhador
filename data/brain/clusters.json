@@ -105,11 +105,12 @@
     {
       "clusterId": "calculadora-aviso-previo",
       "primaryTool": "calculadora-aviso-previo",
-      "articleCount": 1,
+      "articleCount": 2,
       "articles": [
-        "como-calcular-aviso-previo"
+        "como-calcular-aviso-previo",
+        "aviso-previo-trabalhado-ou-indenizado"
       ],
-      "status": "empty",
+      "status": "partial",
       "priority": "medium",
       "reviewFrequency": "annual"
     },
