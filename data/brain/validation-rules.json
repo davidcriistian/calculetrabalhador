@@ -1,4 +1,189 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "ruleId": "tool-must-exist-in-tools-json",
+      "name": "Ferramenta deve existir em tools.json",
+      "description": "Toda ferramenta publicada ou declarada nos mapas de governanca deve possuir uma entrada correspondente em data/tools.json.",
+      "severity": "critical",
+      "category": "catalog",
+      "enabled": true
+    },
+    {
+      "ruleId": "article-must-exist-in-articles-json",
+      "name": "Artigo deve existir em articles.json",
+      "description": "Todo artigo publicado ou declarado nos mapas de governanca deve possuir uma entrada correspondente em data/articles.json.",
+      "severity": "critical",
+      "category": "catalog",
+      "enabled": true
+    },
+    {
+      "ruleId": "unique-tool-id",
+      "name": "IDs de ferramentas devem ser unicos",
+      "description": "Nenhum ID de ferramenta pode se repetir em data/tools.json ou nos mapas de ferramentas.",
+      "severity": "critical",
+      "category": "catalog",
+      "enabled": true
+    },
+    {
+      "ruleId": "unique-article-id",
+      "name": "IDs de artigos devem ser unicos",
+      "description": "Nenhum ID de artigo pode se repetir em data/articles.json ou nos mapas de conteudo.",
+      "severity": "critical",
+      "category": "catalog",
+      "enabled": true
+    },
+    {
+      "ruleId": "unique-slug",
+      "name": "Slugs devem ser unicos",
+      "description": "Slugs normalizados de ferramentas, artigos e paginas publicas nao podem gerar URLs duplicadas.",
+      "severity": "critical",
+      "category": "catalog",
+      "enabled": true
+    },
+    {
+      "ruleId": "tool-must-exist-in-tools-map",
+      "name": "Ferramenta deve existir no Tools Map",
+      "description": "Toda ferramenta publicada em data/tools.json deve possuir entrada correspondente em data/maps/tools-map.json.",
+      "severity": "high",
+      "category": "tool",
+      "enabled": true
+    },
+    {
+      "ruleId": "tool-must-have-dependencies",
+      "name": "Ferramenta deve declarar dependencias",
+      "description": "Toda ferramenta no Tools Map deve declarar suas dependencias e regras usadas, ainda que a lista seja vazia por justificativa futura.",
+      "severity": "high",
+      "category": "tool",
+      "enabled": true
+    },
+    {
+      "ruleId": "tool-must-have-review-frequency",
+      "name": "Ferramenta deve declarar frequencia de revisao",
+      "description": "Toda ferramenta no Tools Map deve informar reviewFrequency para orientar manutencoes periodicas.",
+      "severity": "medium",
+      "category": "tool",
+      "enabled": true
+    },
+    {
+      "ruleId": "article-must-have-primary-tool",
+      "name": "Artigo deve declarar ferramenta principal",
+      "description": "Todo artigo no Content Map deve possuir primaryTool apontando para uma ferramenta existente.",
+      "severity": "high",
+      "category": "content",
+      "enabled": true
+    },
+    {
+      "ruleId": "article-must-have-cluster",
+      "name": "Artigo deve declarar cluster",
+      "description": "Todo artigo no Content Map deve possuir clusterId para manter a arquitetura editorial rastreavel.",
+      "severity": "high",
+      "category": "content",
+      "enabled": true
+    },
+    {
+      "ruleId": "article-must-have-content-map-entry",
+      "name": "Artigo deve existir no Content Map",
+      "description": "Todo artigo publicado em data/articles.json deve possuir uma entrada correspondente em data/maps/content-map.json.",
+      "severity": "high",
+      "category": "content",
+      "enabled": true
+    },
+    {
+      "ruleId": "cluster-must-have-primary-tool",
+      "name": "Cluster deve possuir ferramenta principal",
+      "description": "Todo cluster em data/brain/clusters.json deve declarar primaryTool apontando para uma ferramenta existente.",
+      "severity": "high",
+      "category": "cluster",
+      "enabled": true
+    },
+    {
+      "ruleId": "cluster-article-count-must-match",
+      "name": "Contagem de artigos do cluster deve bater",
+      "description": "articleCount em data/brain/clusters.json deve ser igual ao numero de artigos listados no cluster e coerente com o Content Map.",
+      "severity": "high",
+      "category": "cluster",
+      "enabled": true
+    },
+    {
+      "ruleId": "tool-must-exist-in-sitemap",
+      "name": "Ferramenta publicada deve existir no sitemap",
+      "description": "Toda ferramenta publicada e indexavel deve possuir URL correspondente em sitemap.xml.",
+      "severity": "critical",
+      "category": "sitemap",
+      "enabled": true
+    },
+    {
+      "ruleId": "article-must-exist-in-sitemap",
+      "name": "Artigo publicado deve existir no sitemap",
+      "description": "Todo artigo publicado e indexavel deve possuir URL correspondente em sitemap.xml.",
+      "severity": "critical",
+      "category": "sitemap",
+      "enabled": true
+    },
+    {
+      "ruleId": "no-duplicate-urls-in-sitemap",
+      "name": "Sitemap nao deve conter URLs duplicadas",
+      "description": "sitemap.xml nao pode conter entradas loc duplicadas depois da normalizacao de URL.",
+      "severity": "critical",
+      "category": "sitemap",
+      "enabled": true
+    },
+    {
+      "ruleId": "rule-must-have-source",
+      "name": "Rule deve declarar fonte",
+      "description": "Toda regra oficial em data/rules deve registrar source antes de ser considerada pronta para uso.",
+      "severity": "critical",
+      "category": "rules",
+      "enabled": true
+    },
+    {
+      "ruleId": "rule-must-have-year",
+      "name": "Rule deve declarar ano",
+      "description": "Toda regra oficial em data/rules deve declarar year ou vigencia equivalente antes de ser usada em calculadoras.",
+      "severity": "critical",
+      "category": "rules",
+      "enabled": true
+    },
+    {
+      "ruleId": "rule-must-have-review-date",
+      "name": "Rule deve declarar data de revisao",
+      "description": "Toda regra oficial em data/rules deve registrar a ultima data de revisao ou campo equivalente para auditoria futura.",
+      "severity": "high",
+      "category": "rules",
+      "enabled": true
+    },
+    {
+      "ruleId": "new-tool-must-update-maps",
+      "name": "Nova ferramenta deve atualizar mapas",
+      "description": "Toda nova ferramenta deve atualizar tools.json, tools-map, dependencies, clusters quando aplicavel e update-map antes de publicacao.",
+      "severity": "critical",
+      "category": "governance",
+      "enabled": true
+    },
+    {
+      "ruleId": "new-article-must-update-maps",
+      "name": "Novo artigo deve atualizar mapas",
+      "description": "Todo novo artigo deve atualizar articles.json, content-map, clusters quando aplicavel e update-map antes de publicacao.",
+      "severity": "critical",
+      "category": "governance",
+      "enabled": true
+    },
+    {
+      "ruleId": "new-tool-must-update-sitemap",
+      "name": "Nova ferramenta deve atualizar sitemap",
+      "description": "Toda nova ferramenta publicada e indexavel deve ser adicionada ao sitemap.xml e validada contra duplicidades.",
+      "severity": "critical",
+      "category": "governance",
+      "enabled": true
+    },
+    {
+      "ruleId": "new-article-must-update-sitemap",
+      "name": "Novo artigo deve atualizar sitemap",
+      "description": "Todo novo artigo publicado e indexavel deve ser adicionado ao sitemap.xml e validado contra duplicidades.",
+      "severity": "critical",
+      "category": "governance",
+      "enabled": true
+    }
+  ]
 }
