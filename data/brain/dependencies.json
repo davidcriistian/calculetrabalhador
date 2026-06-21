@@ -1,4 +1,157 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "ruleId": "inss",
+      "tools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "high"
+    },
+    {
+      "ruleId": "irrf",
+      "tools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "high"
+    },
+    {
+      "ruleId": "salario-minimo",
+      "tools": [
+        "calculadora-seguro-desemprego",
+        "calculadora-insalubridade"
+      ],
+      "clusters": [
+        "calculadora-insalubridade",
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedArticles": 3,
+      "risk": "high"
+    },
+    {
+      "ruleId": "fgts",
+      "tools": [
+        "saque-aniversario-fgts",
+        "calculadora-rescisao-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-rescisao-clt",
+        "saque-aniversario-fgts"
+      ],
+      "estimatedArticles": 5,
+      "risk": "high"
+    },
+    {
+      "ruleId": "seguro-desemprego",
+      "tools": [
+        "calculadora-seguro-desemprego"
+      ],
+      "clusters": [
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedArticles": 4,
+      "risk": "high"
+    },
+    {
+      "ruleId": "ferias",
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 9,
+      "risk": "medium"
+    },
+    {
+      "ruleId": "decimo-terceiro",
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "medium"
+    },
+    {
+      "ruleId": "horas-extras",
+      "tools": [
+        "calculadora-horas-extras-clt"
+      ],
+      "clusters": [
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedArticles": 6,
+      "risk": "medium"
+    },
+    {
+      "ruleId": "adicional-noturno",
+      "tools": [
+        "calculadora-adicional-noturno"
+      ],
+      "clusters": [
+        "calculadora-adicional-noturno",
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedArticles": 2,
+      "risk": "medium"
+    },
+    {
+      "ruleId": "insalubridade",
+      "tools": [
+        "calculadora-insalubridade"
+      ],
+      "clusters": [
+        "calculadora-insalubridade"
+      ],
+      "estimatedArticles": 1,
+      "risk": "medium"
+    },
+    {
+      "ruleId": "aviso-previo",
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-aviso-previo"
+      ],
+      "clusters": [
+        "calculadora-aviso-previo",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 3,
+      "risk": "medium"
+    }
+  ]
 }
