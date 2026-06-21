@@ -116,10 +116,11 @@
     {
       "clusterId": "calculadora-adicional-noturno",
       "primaryTool": "calculadora-adicional-noturno",
-      "articleCount": 2,
+      "articleCount": 3,
       "articles": [
         "como-funciona-adicional-noturno",
-        "como-calcular-adicional-noturno"
+        "como-calcular-adicional-noturno",
+        "quem-tem-direito-ao-adicional-noturno"
       ],
       "status": "partial",
       "priority": "medium",

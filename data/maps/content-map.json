@@ -62,6 +62,21 @@
       "status": "published"
     },
     {
+      "id": "quem-tem-direito-ao-adicional-noturno",
+      "slug": "/blog/quem-tem-direito-ao-adicional-noturno",
+      "url": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-adicional-noturno/",
+      "category": "Adicional Noturno",
+      "primaryTool": "calculadora-adicional-noturno",
+      "clusterId": "calculadora-adicional-noturno",
+      "contentType": "support",
+      "intent": "eligibility",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["adicional-noturno"],
+      "internalLinksRequired": ["/calculadora-adicional-noturno/", "/blog/como-funciona-adicional-noturno/", "/blog/como-calcular-adicional-noturno/", "/calculadora-horas-extras-clt/", "/salario-liquido-clt/", "/calculadora-rescisao-clt/"],
+      "status": "published"
+    },
+    {
       "id": "insalubridade-quem-tem-direito",
       "slug": "/blog/insalubridade-quem-tem-direito",
       "url": "https://calculetrabalhador.com.br/blog/insalubridade-quem-tem-direito/",

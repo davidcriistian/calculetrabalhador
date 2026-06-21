@@ -63,6 +63,21 @@
     "showOnHome": false
   },
   {
+    "id": "quem-tem-direito-ao-adicional-noturno",
+    "title": "Quem Tem Direito ao Adicional Noturno? Entenda as Regras",
+    "slug": "/blog/quem-tem-direito-ao-adicional-noturno",
+    "url": "/blog/quem-tem-direito-ao-adicional-noturno/",
+    "category": "Adicional Noturno",
+    "description": "Entenda quem tem direito ao adicional noturno, quais horários contam como trabalho noturno e como conferir se o pagamento está correto.",
+    "relatedTool": "/calculadora-adicional-noturno/",
+    "tempo": "14 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "insalubridade-quem-tem-direito",
     "title": "O que é Insalubridade e Quem Tem Direito em 2026",
     "slug": "/blog/insalubridade-quem-tem-direito",
