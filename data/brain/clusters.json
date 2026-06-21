@@ -116,14 +116,15 @@
     {
       "clusterId": "calculadora-adicional-noturno",
       "primaryTool": "calculadora-adicional-noturno",
-      "articleCount": 4,
+      "articleCount": 5,
       "articles": [
         "como-funciona-adicional-noturno",
         "como-calcular-adicional-noturno",
         "quem-tem-direito-ao-adicional-noturno",
-        "adicional-noturno-valor-por-hora"
+        "adicional-noturno-valor-por-hora",
+        "adicional-noturno-e-hora-reduzida"
       ],
-      "status": "partial",
+      "status": "complete",
       "priority": "medium",
       "reviewFrequency": "annual"
     },

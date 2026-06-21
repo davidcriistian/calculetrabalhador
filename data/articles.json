@@ -93,6 +93,21 @@
     "showOnHome": false
   },
   {
+    "id": "adicional-noturno-e-hora-reduzida",
+    "title": "Adicional Noturno e Hora Reduzida: Entenda Como Funciona",
+    "slug": "/blog/adicional-noturno-e-hora-reduzida",
+    "url": "/blog/adicional-noturno-e-hora-reduzida/",
+    "category": "Adicional Noturno",
+    "description": "Entenda o que é a hora noturna reduzida, como ela funciona na prática e qual a relação com o adicional noturno previsto pela CLT.",
+    "relatedTool": "/calculadora-adicional-noturno/",
+    "tempo": "13 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "showOnHome": false
+  },
+  {
     "id": "insalubridade-quem-tem-direito",
     "title": "O que é Insalubridade e Quem Tem Direito em 2026",
     "slug": "/blog/insalubridade-quem-tem-direito",
