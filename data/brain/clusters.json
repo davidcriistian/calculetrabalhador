@@ -135,10 +135,11 @@
     {
       "clusterId": "calculadora-insalubridade",
       "primaryTool": "calculadora-insalubridade",
-      "articleCount": 2,
+      "articleCount": 3,
       "articles": [
         "insalubridade-quem-tem-direito",
-        "como-calcular-insalubridade"
+        "como-calcular-insalubridade",
+        "graus-de-insalubridade-10-20-40"
       ],
       "status": "partial",
       "priority": "medium",

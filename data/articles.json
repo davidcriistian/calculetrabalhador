@@ -197,6 +197,21 @@
     "showOnHome": false
   },
   {
+    "id": "graus-de-insalubridade-10-20-40",
+    "title": "Graus de Insalubridade: Entenda os Percentuais de 10%, 20% e 40%",
+    "slug": "/blog/graus-de-insalubridade-10-20-40",
+    "url": "https://calculetrabalhador.com.br/blog/graus-de-insalubridade-10-20-40/",
+    "category": "Insalubridade",
+    "description": "Entenda os graus de insalubridade, percentuais de 10%, 20% e 40%, quem define o grau, como funciona o laudo e veja exemplos de calculo.",
+    "relatedTool": "/calculadora-insalubridade/",
+    "tempo": "16 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-22",
+    "updatedAt": "2026-06-22",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-ferias",
     "title": "Como Calcular Férias CLT em 2026",
     "slug": "/blog/como-calcular-ferias",
