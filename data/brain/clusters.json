@@ -135,14 +135,15 @@
     {
       "clusterId": "calculadora-insalubridade",
       "primaryTool": "calculadora-insalubridade",
-      "articleCount": 4,
+      "articleCount": 5,
       "articles": [
         "insalubridade-quem-tem-direito",
         "como-calcular-insalubridade",
         "graus-de-insalubridade-10-20-40",
-        "insalubridade-incide-sobre-qual-salario"
+        "insalubridade-incide-sobre-qual-salario",
+        "quais-profissoes-tem-direito-a-insalubridade"
       ],
-      "status": "partial",
+      "status": "complete",
       "priority": "medium",
       "reviewFrequency": "annual"
     },

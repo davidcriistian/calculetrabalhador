@@ -227,6 +227,21 @@
     "showOnHome": false
   },
   {
+    "id": "quais-profissoes-tem-direito-a-insalubridade",
+    "title": "Quais Profissoes Tem Direito a Insalubridade? Veja Exemplos",
+    "slug": "/blog/quais-profissoes-tem-direito-a-insalubridade",
+    "url": "https://calculetrabalhador.com.br/blog/quais-profissoes-tem-direito-a-insalubridade/",
+    "category": "Insalubridade",
+    "description": "Veja quais profissoes podem ter direito a insalubridade, por que o cargo sozinho nao basta, como funciona o laudo, graus e exemplos praticos.",
+    "relatedTool": "/calculadora-insalubridade/",
+    "tempo": "18 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-22",
+    "updatedAt": "2026-06-22",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-ferias",
     "title": "Como Calcular Férias CLT em 2026",
     "slug": "/blog/como-calcular-ferias",

@@ -227,6 +227,21 @@
       "status": "published"
     },
     {
+      "id": "quais-profissoes-tem-direito-a-insalubridade",
+      "slug": "/blog/quais-profissoes-tem-direito-a-insalubridade",
+      "url": "https://calculetrabalhador.com.br/blog/quais-profissoes-tem-direito-a-insalubridade/",
+      "category": "Insalubridade",
+      "primaryTool": "calculadora-insalubridade",
+      "clusterId": "calculadora-insalubridade",
+      "contentType": "support",
+      "intent": "eligibility",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["insalubridade", "salario-minimo"],
+      "internalLinksRequired": ["/calculadora-insalubridade/", "/blog/insalubridade-quem-tem-direito/", "/blog/como-calcular-insalubridade/", "/blog/graus-de-insalubridade-10-20-40/", "/blog/insalubridade-incide-sobre-qual-salario/", "/salario-liquido-clt/", "/calculadora-rescisao-clt/", "/calculadora-adicional-noturno/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-ferias",
       "slug": "/blog/como-calcular-ferias",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-ferias/",
