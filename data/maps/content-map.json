@@ -182,6 +182,21 @@
       "status": "published"
     },
     {
+      "id": "como-calcular-insalubridade",
+      "slug": "/blog/como-calcular-insalubridade",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-insalubridade/",
+      "category": "Insalubridade",
+      "primaryTool": "calculadora-insalubridade",
+      "clusterId": "calculadora-insalubridade",
+      "contentType": "support",
+      "intent": "calculation",
+      "funnelStage": "bottom",
+      "requiresAnnualReview": true,
+      "dependencies": ["insalubridade", "salario-minimo"],
+      "internalLinksRequired": ["/calculadora-insalubridade/", "/blog/insalubridade-quem-tem-direito/", "/calculadora-adicional-noturno/", "/calculadora-rescisao-clt/", "/salario-liquido-clt/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-ferias",
       "slug": "/blog/como-calcular-ferias",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-ferias/",
