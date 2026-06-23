@@ -617,6 +617,21 @@
       "status": "published"
     },
     {
+      "id": "como-calcular-seguro-desemprego",
+      "slug": "/blog/como-calcular-seguro-desemprego",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-seguro-desemprego/",
+      "category": "Seguro-Desemprego",
+      "primaryTool": "calculadora-seguro-desemprego",
+      "clusterId": "calculadora-seguro-desemprego",
+      "contentType": "support",
+      "intent": "calculation",
+      "funnelStage": "bottom",
+      "requiresAnnualReview": true,
+      "dependencies": ["seguro-desemprego", "salario-minimo"],
+      "internalLinksRequired": ["/calculadora-seguro-desemprego/", "/calculadora-rescisao-clt/", "/salario-liquido-clt/", "/saque-aniversario-fgts/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "rescisao-sem-justa-causa",
       "slug": "/blog/rescisao-sem-justa-causa",
       "url": "https://calculetrabalhador.com.br/blog/rescisao-sem-justa-causa/",

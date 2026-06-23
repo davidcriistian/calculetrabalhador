@@ -67,14 +67,15 @@
     {
       "clusterId": "calculadora-seguro-desemprego",
       "primaryTool": "calculadora-seguro-desemprego",
-      "articleCount": 4,
+      "articleCount": 5,
       "articles": [
         "seguro-desemprego-quem-tem-direito",
         "seguro-desemprego-quantas-parcelas-vou-receber",
         "quem-tem-direito-ao-seguro-desemprego",
-        "como-dar-entrada-no-seguro-desemprego"
+        "como-dar-entrada-no-seguro-desemprego",
+        "como-calcular-seguro-desemprego"
       ],
-      "status": "partial",
+      "status": "complete",
       "priority": "high",
       "reviewFrequency": "annual"
     },

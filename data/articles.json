@@ -620,6 +620,21 @@
     "showOnHome": false
   },
   {
+    "id": "como-calcular-seguro-desemprego",
+    "title": "Como Calcular o Seguro-Desemprego em 2026",
+    "slug": "/blog/como-calcular-seguro-desemprego",
+    "url": "https://calculetrabalhador.com.br/blog/como-calcular-seguro-desemprego/",
+    "category": "Seguro-Desemprego",
+    "description": "Aprenda como calcular o seguro-desemprego em 2026, quem tem direito, quantidade de parcelas, valor, tempo mínimo trabalhado, tabela e exemplos.",
+    "relatedTool": "/calculadora-seguro-desemprego/",
+    "tempo": "18 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-23",
+    "updatedAt": "2026-06-23",
+    "showOnHome": false
+  },
+  {
     "id": "rescisao-sem-justa-causa",
     "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
     "slug": "/blog/rescisao-sem-justa-causa",
