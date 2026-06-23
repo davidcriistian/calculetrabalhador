@@ -63,6 +63,21 @@
     "showOnHome": false
   },
   {
+    "id": "voltar-saque-aniversario-para-saque-rescisao",
+    "title": "Posso Voltar do Saque-Aniversário para o Saque-Rescisão?",
+    "slug": "/blog/voltar-saque-aniversario-para-saque-rescisao",
+    "url": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+    "category": "FGTS",
+    "description": "Entenda se é possível voltar do saque-aniversário para o saque-rescisão, como cancelar, prazo de carência, efeitos na demissão e cuidados.",
+    "relatedTool": "/saque-aniversario-fgts/",
+    "tempo": "18 min",
+    "cor": "#166534",
+    "corBg": "#dcfce7",
+    "publishedAt": "2026-06-23",
+    "updatedAt": "2026-06-23",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-aviso-previo",
     "title": "Como Calcular Aviso Prévio em 2026",
     "slug": "/blog/como-calcular-aviso-previo",

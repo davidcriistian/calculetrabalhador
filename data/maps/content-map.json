@@ -62,6 +62,21 @@
       "status": "published"
     },
     {
+      "id": "voltar-saque-aniversario-para-saque-rescisao",
+      "slug": "/blog/voltar-saque-aniversario-para-saque-rescisao",
+      "url": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+      "category": "FGTS",
+      "primaryTool": "saque-aniversario-fgts",
+      "clusterId": "saque-aniversario-fgts",
+      "contentType": "support",
+      "intent": "education",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "rescisao", "salario-liquido"],
+      "internalLinksRequired": ["/saque-aniversario-fgts/", "/blog/como-calcular-saque-aniversario-fgts/", "/blog/quem-tem-direito-ao-saque-aniversario-fgts/", "/blog/vantagens-e-desvantagens-saque-aniversario-fgts/", "/calculadora-rescisao-clt/", "/salario-liquido-clt/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-aviso-previo",
       "slug": "/blog/como-calcular-aviso-previo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-aviso-previo/",
