@@ -17,6 +17,21 @@
       "status": "published"
     },
     {
+      "id": "como-calcular-saque-aniversario-fgts",
+      "slug": "/blog/como-calcular-saque-aniversario-fgts",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+      "category": "FGTS",
+      "primaryTool": "saque-aniversario-fgts",
+      "clusterId": "saque-aniversario-fgts",
+      "contentType": "guide",
+      "intent": "calculation",
+      "funnelStage": "bottom",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "salario-liquido", "rescisao", "ferias", "decimo-terceiro"],
+      "internalLinksRequired": ["/saque-aniversario-fgts/", "/salario-liquido-clt/", "/calculadora-rescisao-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-aviso-previo",
       "slug": "/blog/como-calcular-aviso-previo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-aviso-previo/",

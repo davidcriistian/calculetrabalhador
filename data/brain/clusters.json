@@ -94,11 +94,12 @@
     {
       "clusterId": "saque-aniversario-fgts",
       "primaryTool": "saque-aniversario-fgts",
-      "articleCount": 1,
+      "articleCount": 2,
       "articles": [
-        "saque-aniversario-fgts-2026"
+        "saque-aniversario-fgts-2026",
+        "como-calcular-saque-aniversario-fgts"
       ],
-      "status": "empty",
+      "status": "partial",
       "priority": "medium",
       "reviewFrequency": "annual"
     },
