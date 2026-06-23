@@ -94,11 +94,12 @@
     {
       "clusterId": "saque-aniversario-fgts",
       "primaryTool": "saque-aniversario-fgts",
-      "articleCount": 3,
+      "articleCount": 4,
       "articles": [
         "saque-aniversario-fgts-2026",
         "como-calcular-saque-aniversario-fgts",
-        "quem-tem-direito-ao-saque-aniversario-fgts"
+        "quem-tem-direito-ao-saque-aniversario-fgts",
+        "vantagens-e-desvantagens-saque-aniversario-fgts"
       ],
       "status": "partial",
       "priority": "medium",

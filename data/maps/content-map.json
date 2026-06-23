@@ -47,6 +47,21 @@
       "status": "published"
     },
     {
+      "id": "vantagens-e-desvantagens-saque-aniversario-fgts",
+      "slug": "/blog/vantagens-e-desvantagens-saque-aniversario-fgts",
+      "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+      "category": "FGTS",
+      "primaryTool": "saque-aniversario-fgts",
+      "clusterId": "saque-aniversario-fgts",
+      "contentType": "support",
+      "intent": "comparison",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "rescisao", "salario-liquido", "ferias"],
+      "internalLinksRequired": ["/saque-aniversario-fgts/", "/blog/como-calcular-saque-aniversario-fgts/", "/blog/quem-tem-direito-ao-saque-aniversario-fgts/", "/calculadora-rescisao-clt/", "/salario-liquido-clt/", "/calculadora-ferias-clt/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-aviso-previo",
       "slug": "/blog/como-calcular-aviso-previo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-aviso-previo/",
