@@ -32,6 +32,21 @@
       "status": "published"
     },
     {
+      "id": "quem-tem-direito-ao-saque-aniversario-fgts",
+      "slug": "/blog/quem-tem-direito-ao-saque-aniversario-fgts",
+      "url": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+      "category": "FGTS",
+      "primaryTool": "saque-aniversario-fgts",
+      "clusterId": "saque-aniversario-fgts",
+      "contentType": "guide",
+      "intent": "education",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "rescisao", "salario-liquido", "ferias", "decimo-terceiro"],
+      "internalLinksRequired": ["/saque-aniversario-fgts/", "/blog/como-calcular-saque-aniversario-fgts/", "/calculadora-rescisao-clt/", "/salario-liquido-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-aviso-previo",
       "slug": "/blog/como-calcular-aviso-previo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-aviso-previo/",
