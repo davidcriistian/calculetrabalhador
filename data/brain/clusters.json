@@ -155,14 +155,15 @@
     {
       "clusterId": "calculadora-clt-ou-pj",
       "primaryTool": "calculadora-clt-ou-pj",
-      "articleCount": 4,
+      "articleCount": 5,
       "articles": [
         "clt-ou-pj",
         "quanto-preciso-ganhar-como-pj-para-compensar-clt",
         "vantagens-e-desvantagens-clt-ou-pj",
-        "como-calcular-clt-ou-pj"
+        "como-calcular-clt-ou-pj",
+        "clt-ou-pj-vale-a-pena-em-2026"
       ],
-      "status": "partial",
+      "status": "complete",
       "priority": "medium",
       "reviewFrequency": "annual"
     }

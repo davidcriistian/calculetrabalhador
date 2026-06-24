@@ -821,5 +821,20 @@
     "publishedAt": "2026-06-24",
     "updatedAt": "2026-06-24",
     "showOnHome": false
+  },
+  {
+    "id": "clt-ou-pj-vale-a-pena-em-2026",
+    "title": "CLT ou PJ Vale a Pena em 2026?",
+    "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+    "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+    "category": "CLT",
+    "description": "Veja se CLT ou PJ vale a pena em 2026, comparando salario liquido, ferias, 13o, FGTS, beneficios, impostos, autonomia e estabilidade.",
+    "relatedTool": "/calculadora-clt-ou-pj/",
+    "tempo": "17 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-24",
+    "updatedAt": "2026-06-24",
+    "showOnHome": false
   }
 ]
