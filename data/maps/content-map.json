@@ -780,6 +780,21 @@
       "dependencies": ["inss", "irrf", "fgts", "ferias", "decimo-terceiro"],
       "internalLinksRequired": ["/calculadora-clt-ou-pj/", "/salario-liquido-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/calculadora-rescisao-clt/"],
       "status": "published"
+    },
+    {
+      "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "url": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "category": "CLT",
+      "primaryTool": "calculadora-clt-ou-pj",
+      "clusterId": "calculadora-clt-ou-pj",
+      "contentType": "support",
+      "intent": "comparison",
+      "funnelStage": "bottom",
+      "requiresAnnualReview": true,
+      "dependencies": ["inss", "irrf", "fgts", "ferias", "decimo-terceiro"],
+      "internalLinksRequired": ["/calculadora-clt-ou-pj/", "/salario-liquido-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/calculadora-rescisao-clt/"],
+      "status": "published"
     }
   ]
 }

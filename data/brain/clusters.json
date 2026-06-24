@@ -155,11 +155,12 @@
     {
       "clusterId": "calculadora-clt-ou-pj",
       "primaryTool": "calculadora-clt-ou-pj",
-      "articleCount": 1,
+      "articleCount": 2,
       "articles": [
-        "clt-ou-pj"
+        "clt-ou-pj",
+        "quanto-preciso-ganhar-como-pj-para-compensar-clt"
       ],
-      "status": "empty",
+      "status": "partial",
       "priority": "medium",
       "reviewFrequency": "annual"
     }

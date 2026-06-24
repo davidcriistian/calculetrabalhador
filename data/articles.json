@@ -776,5 +776,20 @@
     "corBg": "#dbeafe",
     "publishedAt": "2026-06-07",
     "updatedAt": "2026-06-07"
+  },
+  {
+    "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+    "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "url": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "category": "CLT",
+    "description": "Entenda quanto voce precisa faturar como PJ para compensar a CLT, considerando ferias, 13o, FGTS, INSS, beneficios, impostos e custos.",
+    "relatedTool": "/calculadora-clt-ou-pj/",
+    "tempo": "16 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-24",
+    "updatedAt": "2026-06-24",
+    "showOnHome": false
   }
 ]
