@@ -791,5 +791,20 @@
     "publishedAt": "2026-06-24",
     "updatedAt": "2026-06-24",
     "showOnHome": false
+  },
+  {
+    "id": "vantagens-e-desvantagens-clt-ou-pj",
+    "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+    "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+    "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "category": "CLT",
+    "description": "Compare vantagens e desvantagens de CLT ou PJ, incluindo salario, ferias, 13o, FGTS, estabilidade, beneficios, impostos, autonomia e aposentadoria.",
+    "relatedTool": "/calculadora-clt-ou-pj/",
+    "tempo": "17 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-24",
+    "updatedAt": "2026-06-24",
+    "showOnHome": false
   }
 ]

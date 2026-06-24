@@ -795,6 +795,21 @@
       "dependencies": ["inss", "irrf", "fgts", "ferias", "decimo-terceiro"],
       "internalLinksRequired": ["/calculadora-clt-ou-pj/", "/salario-liquido-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/calculadora-rescisao-clt/"],
       "status": "published"
+    },
+    {
+      "id": "vantagens-e-desvantagens-clt-ou-pj",
+      "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+      "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "category": "CLT",
+      "primaryTool": "calculadora-clt-ou-pj",
+      "clusterId": "calculadora-clt-ou-pj",
+      "contentType": "support",
+      "intent": "comparison",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["inss", "irrf", "fgts", "ferias", "decimo-terceiro"],
+      "internalLinksRequired": ["/calculadora-clt-ou-pj/", "/salario-liquido-clt/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/calculadora-rescisao-clt/"],
+      "status": "published"
     }
   ]
 }
