@@ -806,5 +806,20 @@
     "publishedAt": "2026-06-24",
     "updatedAt": "2026-06-24",
     "showOnHome": false
+  },
+  {
+    "id": "como-calcular-clt-ou-pj",
+    "title": "Como Calcular CLT ou PJ: Entenda a Comparacao",
+    "slug": "/blog/como-calcular-clt-ou-pj",
+    "url": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+    "category": "CLT",
+    "description": "Aprenda como calcular CLT ou PJ, comparando salario liquido, 13o, ferias, FGTS, beneficios, impostos, INSS, custos e riscos.",
+    "relatedTool": "/calculadora-clt-ou-pj/",
+    "tempo": "18 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-24",
+    "updatedAt": "2026-06-24",
+    "showOnHome": false
   }
 ]
