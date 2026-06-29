@@ -677,6 +677,21 @@
       "status": "published"
     },
     {
+      "id": "como-calcular-rescisao-clt",
+      "slug": "/blog/como-calcular-rescisao-clt",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+      "category": "Rescisao CLT",
+      "primaryTool": "calculadora-rescisao-clt",
+      "clusterId": "calculadora-rescisao-clt",
+      "contentType": "guide",
+      "intent": "calculation",
+      "funnelStage": "bottom",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "ferias", "decimo-terceiro", "aviso-previo", "seguro-desemprego"],
+      "internalLinksRequired": ["/calculadora-rescisao-clt/", "/calculadora-aviso-previo/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/saque-aniversario-fgts/", "/calculadora-seguro-desemprego/", "/blog/rescisao-sem-justa-causa/", "/blog/verbas-rescisorias-o-que-receber-na-demissao/", "/blog/multa-de-40-do-fgts-como-calcular/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-horas-extras-passo-a-passo",
       "slug": "/blog/como-calcular-horas-extras-passo-a-passo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-horas-extras-passo-a-passo/",

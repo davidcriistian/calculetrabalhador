@@ -82,11 +82,12 @@
     {
       "clusterId": "calculadora-rescisao-clt",
       "primaryTool": "calculadora-rescisao-clt",
-      "articleCount": 3,
+      "articleCount": 4,
       "articles": [
         "rescisao-sem-justa-causa",
         "verbas-rescisorias-o-que-receber-na-demissao",
-        "multa-de-40-do-fgts-como-calcular"
+        "multa-de-40-do-fgts-como-calcular",
+        "como-calcular-rescisao-clt"
       ],
       "status": "partial",
       "priority": "high",
