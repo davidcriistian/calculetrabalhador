@@ -692,6 +692,21 @@
       "status": "published"
     },
     {
+      "id": "pedido-de-demissao-quais-direitos-recebo",
+      "slug": "/blog/pedido-de-demissao-quais-direitos-recebo",
+      "url": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+      "category": "Rescisao CLT",
+      "primaryTool": "calculadora-rescisao-clt",
+      "clusterId": "calculadora-rescisao-clt",
+      "contentType": "support",
+      "intent": "informational",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["fgts", "ferias", "decimo-terceiro", "aviso-previo"],
+      "internalLinksRequired": ["/calculadora-rescisao-clt/", "/calculadora-aviso-previo/", "/calculadora-ferias-clt/", "/calculadora-13-salario/", "/saque-aniversario-fgts/", "/blog/como-calcular-rescisao-clt/", "/blog/rescisao-sem-justa-causa/", "/blog/verbas-rescisorias-o-que-receber-na-demissao/", "/blog/multa-de-40-do-fgts-como-calcular/"],
+      "status": "published"
+    },
+    {
       "id": "como-calcular-horas-extras-passo-a-passo",
       "slug": "/blog/como-calcular-horas-extras-passo-a-passo",
       "url": "https://calculetrabalhador.com.br/blog/como-calcular-horas-extras-passo-a-passo/",

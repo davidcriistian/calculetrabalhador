@@ -694,6 +694,21 @@
     "showOnHome": false
   },
   {
+    "id": "pedido-de-demissao-quais-direitos-recebo",
+    "title": "Pedido de Demissao: Quais Direitos Recebo?",
+    "slug": "/blog/pedido-de-demissao-quais-direitos-recebo",
+    "url": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+    "category": "Rescisao CLT",
+    "description": "Entenda quais direitos o trabalhador recebe ao pedir demissao, incluindo saldo de salario, ferias, 13o proporcional, aviso-previo, FGTS, multa de 40% e seguro-desemprego.",
+    "relatedTool": "/calculadora-rescisao-clt/",
+    "tempo": "18 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-06-29",
+    "updatedAt": "2026-06-29",
+    "showOnHome": false
+  },
+  {
     "id": "como-calcular-horas-extras-passo-a-passo",
     "title": "Como Calcular Horas Extras Passo a Passo em 2026",
     "slug": "/blog/como-calcular-horas-extras-passo-a-passo",
