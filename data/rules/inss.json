@@ -1,7 +1,135 @@
 {
-  "version": 1,
+  "domain": "inss",
   "status": "draft",
-  "source": null,
-  "year": null,
-  "data": {}
+  "currentYear": 2026,
+  "versions": {
+    "2026": {
+      "year": 2026,
+      "status": "draft",
+      "validFrom": "2026-01-01",
+      "validUntil": "2026-12-31",
+      "lastUpdated": "2026-06-30",
+      "currency": "BRL",
+      "locale": "pt-BR",
+      "timezone": "America/Sao_Paulo",
+      "country": "BR",
+      "officialSourceName": "Instituto Nacional do Seguro Social",
+      "officialSourceUrl": "https://www.gov.br/inss/pt-br",
+      "sourceUpdatedAt": null,
+      "consultedAt": "2026-06-30",
+      "notes": [
+        "Arquivo preparado como fonte oficial estruturada para regras de INSS no projeto Calcule Trabalhador.",
+        "Valores de 2026 registrados conforme escopo informado nesta etapa.",
+        "Enquanto status for draft, validar contra fontes oficiais antes de conectar calculadoras em produção."
+      ],
+      "minimumWage": {
+        "value": 1621.0,
+        "validFrom": "2026-01-01",
+        "sourceName": "Governo Federal",
+        "sourceUrl": "https://www.gov.br/",
+        "description": "Salário mínimo nacional usado como base mínima para contribuições previdenciárias em 2026."
+      },
+      "inssCeiling": {
+        "value": 8475.55,
+        "validFrom": "2026-01-01",
+        "sourceName": "Instituto Nacional do Seguro Social",
+        "sourceUrl": "https://www.gov.br/inss/pt-br",
+        "description": "Teto previdenciário usado como limite máximo de base para contribuição ao INSS em 2026."
+      },
+      "clt": {
+        "calculationMode": "progressive",
+        "appliesCeiling": true,
+        "progressiveTable": [
+          {
+            "order": 1,
+            "min": 0,
+            "max": 1621.0,
+            "rate": 0.075,
+            "description": "Até R$ 1.621,00"
+          },
+          {
+            "order": 2,
+            "min": 1621.0,
+            "max": 2902.84,
+            "rate": 0.09,
+            "description": "De R$ 1.621,01 até R$ 2.902,84"
+          },
+          {
+            "order": 3,
+            "min": 2902.84,
+            "max": 4354.27,
+            "rate": 0.12,
+            "description": "De R$ 2.902,85 até R$ 4.354,27"
+          },
+          {
+            "order": 4,
+            "min": 4354.27,
+            "max": 8475.55,
+            "rate": 0.14,
+            "description": "De R$ 4.354,28 até R$ 8.475,55"
+          }
+        ]
+      },
+      "individualContributor": {
+        "normal20": {
+          "rate": 0.2,
+          "minBase": 1621.0,
+          "maxBase": 8475.55,
+          "description": "Plano normal do contribuinte individual, calculado com alíquota de 20% sobre base entre o salário mínimo e o teto previdenciário."
+        },
+        "simplified11": {
+          "rate": 0.11,
+          "base": 1621.0,
+          "description": "Plano simplificado do contribuinte individual, calculado com alíquota de 11% sobre o salário mínimo."
+        }
+      },
+      "mei": {
+        "defaultInssRate": 0.05,
+        "cargoTransportInssRate": 0.12,
+        "types": {
+          "general": {
+            "inss": 81.05,
+            "icms": 0,
+            "iss": 0,
+            "total": 81.05,
+            "description": "MEI geral com contribuição previdenciária mensal."
+          },
+          "commerceIndustry": {
+            "inss": 81.05,
+            "icms": 1,
+            "iss": 0,
+            "total": 82.05,
+            "description": "MEI de comércio ou indústria com contribuição previdenciária e ICMS."
+          },
+          "services": {
+            "inss": 81.05,
+            "icms": 0,
+            "iss": 5,
+            "total": 86.05,
+            "description": "MEI prestador de serviços com contribuição previdenciária e ISS."
+          },
+          "commerceServices": {
+            "inss": 81.05,
+            "icms": 1,
+            "iss": 5,
+            "total": 87.05,
+            "description": "MEI de comércio e serviços com contribuição previdenciária, ICMS e ISS."
+          },
+          "cargoTransport": {
+            "inss": 194.52,
+            "icms": 0,
+            "iss": 0,
+            "total": 194.52,
+            "description": "MEI transportador autônomo de cargas com contribuição previdenciária diferenciada."
+          }
+        }
+      },
+      "legalNotes": [
+        "Cálculo estimativo para fins informativos.",
+        "Valores sujeitos a atualização anual ou alteração normativa.",
+        "Usar sempre fontes oficiais para confirmar regras vigentes.",
+        "Este conteúdo não substitui orientação profissional."
+      ]
+    }
+  }
 }

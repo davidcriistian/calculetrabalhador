@@ -1,0 +1,1878 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de INSS 2026 | Calcule Trabalhador</title>
+  <meta name="description" content="Prot&oacute;tipo visual do Simulador de INSS 2026 para calcular desconto no sal&aacute;rio e comparar contribui&ccedil;&otilde;es CLT, aut&ocirc;nomo e MEI." />
+  <meta name="robots" content="noindex,nofollow" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);">
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 18% 44%, rgba(255,255,255,0.07) 0%, transparent 38%), radial-gradient(circle at 86% 18%, rgba(255,255,255,0.10) 0%, transparent 36%);"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">In&iacute;cio</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <span class="text-white">INSS</span>
+        </nav>
+
+        <div class="mt-6">
+          <div class="lg:max-w-[75%]">
+            <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">INSS 2026</span>
+            <h1 class="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Simulador de INSS 2026</h1>
+            <p class="mt-4 max-w-3xl text-lg leading-8 text-blue-50">Calcule o desconto do INSS no sal&aacute;rio, compare contribui&ccedil;&otilde;es de CLT, aut&ocirc;nomo e MEI e veja uma estimativa clara com base nas regras atuais.</p>
+
+            <div class="mt-5 grid gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2 lg:max-w-3xl">
+              <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Atualizado em 2026</span>
+              <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">C&aacute;lculo gratuito</span>
+              <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Baseado em regras oficiais</span>
+              <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">N&atilde;o substitui orienta&ccedil;&atilde;o profissional</span>
+            </div>
+
+            <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-800 shadow-sm transition hover:bg-blue-50 sm:w-auto">
+              Ir para o simulador
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que voc&ecirc; vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">Uma simula&ccedil;&atilde;o preparada para decis&atilde;o r&aacute;pida</h2>
+          </div>
+          <div class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-900 ring-1 ring-blue-100 sm:w-auto">
+            Tempo estimado: menos de 1 minuto
+          </div>
+        </div>
+
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-xl bg-slate-50 p-4">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <p class="mt-3 text-sm font-bold leading-6 text-slate-950">Valor estimado do desconto</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
+            </div>
+            <p class="mt-3 text-sm font-bold leading-6 text-slate-950">Al&iacute;quota aplicada</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h5"></path></svg>
+            </div>
+            <p class="mt-3 text-sm font-bold leading-6 text-slate-950">Base usada no c&aacute;lculo</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10"></path><path d="M7 17h10"></path><path d="m9 5-2 2 2 2"></path><path d="m15 15 2 2-2 2"></path></svg>
+            </div>
+            <p class="mt-3 text-sm font-bold leading-6 text-slate-950">Compara&ccedil;&atilde;o entre contribuintes</p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-4 sm:col-span-2 lg:col-span-1">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <p class="mt-3 text-sm font-bold leading-6 text-slate-950">Mem&oacute;ria de c&aacute;lculo na pr&oacute;xima etapa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
+        <div class="min-w-0">
+          <div class="mb-6">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Prot&oacute;tipo da ferramenta</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Simulador de INSS</h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">Preencha os dados abaixo para preparar sua simula&ccedil;&atilde;o. Na pr&oacute;xima etapa, esta &aacute;rea exibir&aacute; o resultado detalhado e a mem&oacute;ria de c&aacute;lculo.</p>
+          </div>
+
+          <form class="min-w-0 space-y-6" aria-label="Prot&oacute;tipo do simulador de INSS">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+              <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Passo 1 de 3</p>
+                  <h3 class="mt-1 text-xl font-bold text-slate-950">Progresso da simula&ccedil;&atilde;o</h3>
+                  <p class="mt-1 text-sm leading-6 text-slate-600">Preencha os dados para preparar sua simula&ccedil;&atilde;o.</p>
+                </div>
+                <div class="w-full sm:max-w-xs">
+                  <div class="h-3 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-1/3 rounded-full bg-blue-700"></div>
+                  </div>
+                  <div class="mt-2 flex justify-between text-xs font-bold uppercase tracking-wide text-slate-500">
+                    <span>Tipo</span>
+                    <span>Dados</span>
+                    <span>Op&ccedil;&otilde;es</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="tipo-contribuinte">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm">
+                  <span class="font-extrabold">1</span>
+                </div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Passo 1 de 3</p>
+                  <h3 id="tipo-contribuinte" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Tipo de contribuinte</h3>
+                  <p class="mt-2 leading-7 text-slate-600">Escolha o tipo de v&iacute;nculo para que o c&aacute;lculo considere a l&oacute;gica correta de contribui&ccedil;&atilde;o.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-4 md:grid-cols-3">
+                <label data-contributor-card class="group min-h-36 cursor-pointer rounded-3xl border-2 border-blue-600 bg-gradient-to-br from-blue-50 to-white p-4 shadow-sm ring-4 ring-blue-100/70 sm:min-h-40 sm:p-5">
+                  <input class="sr-only" type="radio" name="tipo-contribuinte" value="clt" checked />
+                  <span class="flex items-center justify-between gap-3">
+                    <span data-card-icon class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect x="4" y="8" width="16" height="12" rx="2"></rect></svg>
+                    </span>
+                    <span data-card-check class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-700 text-white shadow-sm">
+                      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6"></path>
+                      </svg>
+                    </span>
+                  </span>
+                  <span data-card-title class="mt-5 block text-lg font-extrabold text-blue-950">CLT</span>
+                  <span data-card-description class="mt-2 block text-sm leading-6 text-blue-900">Desconto progressivo em folha para trabalhador empregado.</span>
+                </label>
+
+                <label data-contributor-card class="group min-h-36 cursor-pointer rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:bg-blue-50 hover:shadow-md sm:min-h-40 sm:p-5">
+                  <input class="sr-only" type="radio" name="tipo-contribuinte" value="autonomo" />
+                  <span class="flex items-center justify-between gap-3">
+                    <span data-card-icon class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-slate-600 ring-1 ring-slate-200">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Z"></path><path d="M4 20c1.6-3 4.2-4.5 8-4.5s6.4 1.5 8 4.5"></path></svg>
+                    </span>
+                    <span data-card-check class="hidden h-6 w-6 items-center justify-center rounded-full bg-blue-700 text-white shadow-sm">
+                      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6"></path>
+                      </svg>
+                    </span>
+                  </span>
+                  <span data-card-title class="mt-5 block text-lg font-extrabold text-slate-950">Aut&ocirc;nomo</span>
+                  <span data-card-description class="mt-2 block text-sm leading-6 text-slate-600">Contribuinte individual com renda mensal informada.</span>
+                </label>
+
+                <label data-contributor-card class="group min-h-36 cursor-pointer rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-blue-300 hover:bg-blue-50 hover:shadow-md sm:min-h-40 sm:p-5">
+                  <input class="sr-only" type="radio" name="tipo-contribuinte" value="mei" />
+                  <span class="flex items-center justify-between gap-3">
+                    <span data-card-icon class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-slate-600 ring-1 ring-slate-200">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9h.01"></path><path d="M9 13h.01"></path><path d="M9 17h.01"></path></svg>
+                    </span>
+                    <span data-card-check class="hidden h-6 w-6 items-center justify-center rounded-full bg-blue-700 text-white shadow-sm">
+                      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6"></path>
+                      </svg>
+                    </span>
+                  </span>
+                  <span data-card-title class="mt-5 block text-lg font-extrabold text-slate-950">MEI</span>
+                  <span data-card-description class="mt-2 block text-sm leading-6 text-slate-600">Refer&ecirc;ncia para contribui&ccedil;&atilde;o simplificada e compara&ccedil;&atilde;o futura.</span>
+                </label>
+              </div>
+
+              <div id="autonomo-options" class="hidden mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Plano do contribuinte individual</p>
+                <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="autonomo-plano" value="normal_20" checked />
+                    <span>
+                      <span class="block font-bold text-slate-950">Plano normal 20%</span>
+                      <span class="mt-1 block text-sm leading-6 text-slate-600">Usa renda entre sal&aacute;rio m&iacute;nimo e teto do INSS.</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="autonomo-plano" value="simplificado_11" />
+                    <span>
+                      <span class="block font-bold text-slate-950">Plano simplificado 11%</span>
+                      <span class="mt-1 block text-sm leading-6 text-slate-600">Contribui&ccedil;&atilde;o fixa sobre o sal&aacute;rio m&iacute;nimo.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div id="mei-options" class="hidden mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Atividade MEI</p>
+                <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="mei-atividade" value="geral" checked />
+                    <span class="font-bold text-slate-950">MEI geral</span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="mei-atividade" value="comercio_industria" />
+                    <span class="font-bold text-slate-950">Com&eacute;rcio/Ind&uacute;stria</span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="mei-atividade" value="servicos" />
+                    <span class="font-bold text-slate-950">Servi&ccedil;os</span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="mei-atividade" value="comercio_servicos" />
+                    <span class="font-bold text-slate-950">Com&eacute;rcio e Servi&ccedil;os</span>
+                  </label>
+                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 sm:col-span-2">
+                    <input class="mt-1 h-4 w-4 border-slate-300 text-blue-700" type="radio" name="mei-atividade" value="transportador_cargas" />
+                    <span class="font-bold text-slate-950">Transportador aut&ocirc;nomo de cargas</span>
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section id="dados-principais" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="dados-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm">
+                  <span class="font-extrabold">2</span>
+                </div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Passo 2 de 3</p>
+                  <h3 id="dados-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Dados principais</h3>
+                  <p class="mt-2 leading-7 text-slate-600">Use valores brutos e informe a refer&ecirc;ncia que voc&ecirc; deseja simular.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-extrabold text-slate-900">Sal&aacute;rio ou renda mensal</span>
+                  <div class="mt-2 flex min-h-14 overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-sm transition focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-100">
+                    <span class="flex items-center bg-slate-50 px-4 text-sm font-extrabold text-slate-500 ring-1 ring-inset ring-slate-100">R$</span>
+                    <input id="salario-mensal" class="w-full border-0 px-4 text-base text-slate-900 outline-none placeholder:text-slate-400" type="text" inputmode="decimal" placeholder="3.000,00" />
+                  </div>
+                  <span class="mt-2 block text-xs leading-5 text-slate-500">Informe o valor bruto antes dos descontos.</span>
+                </label>
+
+                <label class="block">
+                  <span class="text-sm font-extrabold text-slate-900">N&uacute;mero de dependentes</span>
+                  <input id="dependentes" class="mt-2 min-h-14 w-full rounded-2xl border border-slate-300 bg-white px-4 text-base text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100" type="number" min="0" placeholder="0" />
+                  <span class="mt-2 block text-xs leading-5 text-slate-500">Use zero se n&atilde;o houver dependentes declarados.</span>
+                </label>
+
+                <label class="block md:col-span-2">
+                  <span class="text-sm font-extrabold text-slate-900">M&ecirc;s/Ano de refer&ecirc;ncia</span>
+                  <input id="competencia" class="mt-2 min-h-14 w-full rounded-2xl border border-slate-300 bg-white px-4 text-base text-slate-900 shadow-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100 md:max-w-sm" type="month" value="2026-01" />
+                  <span class="mt-2 block text-xs leading-5 text-slate-500">A refer&ecirc;ncia ajuda a organizar a simula&ccedil;&atilde;o por compet&ecirc;ncia.</span>
+                </label>
+              </div>
+            </section>
+
+            <section id="opcoes-avancadas" class="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm sm:p-6" aria-labelledby="opcoes-title">
+              <details class="group" open>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                  <div>
+                    <span class="inline-flex rounded-full bg-white px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-slate-500 ring-1 ring-slate-200">Opcional</span>
+                    <p class="mt-3 text-sm font-extrabold uppercase tracking-wide text-slate-500">Passo 3 de 3</p>
+                    <h3 id="opcoes-title" class="mt-1 text-lg font-bold text-slate-950">Ajustes opcionais da simula&ccedil;&atilde;o</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Use apenas se quiser personalizar o c&aacute;lculo. Se n&atilde;o souber, pode deixar como est&aacute;.</p>
+                  </div>
+                  <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-600 transition group-open:rotate-180">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </span>
+                </summary>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                  <label id="opcao-teto-inss" class="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-700" type="checkbox" checked />
+                    <span>
+                      <span class="block font-semibold text-slate-950">Aplicar teto m&aacute;ximo do INSS</span>
+                      <span class="mt-1 block text-sm leading-6 text-slate-600">Limita a base de c&aacute;lculo ao teto oficial quando a renda ultrapassa o valor m&aacute;ximo permitido.</span>
+                    </span>
+                  </label>
+
+                  <label id="opcao-contribuicao-minima" class="hidden items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4">
+                    <input class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-700" type="checkbox" />
+                    <span>
+                      <span class="block font-semibold text-slate-950">Usar contribui&ccedil;&atilde;o m&iacute;nima permitida</span>
+                      <span class="mt-1 block text-sm leading-6 text-slate-600">Simula o menor valor de contribui&ccedil;&atilde;o dispon&iacute;vel para o tipo selecionado, quando essa op&ccedil;&atilde;o existir.</span>
+                    </span>
+                  </label>
+
+                  <label id="opcao-comparar-renda" class="hidden md:col-span-2">
+                    <span class="text-sm font-extrabold text-slate-900">Comparar com outra renda</span>
+                    <input id="comparar-renda" class="mt-2 min-h-14 w-full rounded-2xl border border-slate-300 bg-white px-4 text-base text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 md:max-w-sm" type="text" inputmode="decimal" placeholder="Ex.: 5.000,00" />
+                    <span class="mt-2 block text-xs leading-5 text-slate-500">Permite testar um segundo valor para comparar cen&aacute;rios.</span>
+                  </label>
+                </div>
+              </details>
+            </section>
+
+            <section id="proxima-etapa" class="rounded-3xl border border-blue-100 bg-blue-50 p-5 shadow-sm sm:p-7">
+              <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">&Uacute;ltima etapa</p>
+                  <h3 class="mt-1 text-xl font-extrabold text-blue-950 sm:text-2xl">Calcular meu INSS</h3>
+                  <p class="mt-2 leading-7 text-blue-900">Veja o valor estimado da sua contribui&ccedil;&atilde;o e entenda o c&aacute;lculo de forma simples.</p>
+                </div>
+                <button class="inline-flex min-h-14 w-full items-center justify-center rounded-2xl bg-blue-700 px-8 py-4 text-base font-extrabold uppercase tracking-wide text-white shadow-md shadow-blue-900/15 transition hover:bg-blue-800 lg:w-auto" type="button" onclick="prepararSimulacaoInss()">
+                  Calcular meu INSS
+                </button>
+              </div>
+            </section>
+
+            <section id="resultado" class="hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="resultado-title">
+              <div>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&eacute;via visual</p>
+                <h2 id="resultado-title" class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Resultado da simula&ccedil;&atilde;o</h2>
+                <p class="mt-3 max-w-3xl leading-8 text-slate-700">Veja uma pr&eacute;via organizada do desconto estimado, da al&iacute;quota aplicada e da base usada no c&aacute;lculo.</p>
+              </div>
+
+              <div class="mt-6 overflow-hidden rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-700 to-blue-600 p-5 text-white shadow-sm sm:p-7">
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                  <div>
+                    <p id="resultado-titulo-valor" class="text-sm font-extrabold uppercase tracking-wide text-blue-100">Valor estimado do desconto</p>
+                    <p id="resultado-desconto" class="mt-3 text-3xl font-extrabold tracking-normal sm:text-5xl">R$ 263,07</p>
+                    <p id="resultado-ajuda" class="mt-3 max-w-2xl leading-7 text-blue-50">Estimativa calculada com base nos dados informados.</p>
+                  </div>
+                  <div id="resultado-badges" class="flex flex-wrap gap-2">
+                    <span id="badge-regime" class="rounded-full bg-white/15 px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ring-white/20">INSS CLT</span>
+                    <span class="rounded-full bg-white/15 px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ring-white/20">Tabela 2026</span>
+                    <span class="rounded-full bg-white/15 px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ring-white/20">C&aacute;lculo gratuito</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p id="resumo-label-salario" class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Sal&aacute;rio informado</p>
+                  <p id="resumo-salario" class="mt-2 text-2xl font-extrabold text-slate-950">R$ 3.000,00</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p id="resumo-label-aliquota" class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Al&iacute;quota efetiva</p>
+                  <p id="resumo-aliquota" class="mt-2 text-2xl font-extrabold text-slate-950">8,77%</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p id="resumo-label-base" class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Base considerada</p>
+                  <p id="resumo-base" class="mt-2 text-2xl font-extrabold text-slate-950">R$ 3.000,00</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p id="resumo-label-competencia" class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Compet&ecirc;ncia</p>
+                  <p id="resumo-competencia" class="mt-2 text-2xl font-extrabold text-slate-950">Janeiro/2026</p>
+                </div>
+              </div>
+
+              <section id="memoria-calculo" class="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-5 sm:p-6" aria-labelledby="memoria-title">
+                <h3 id="memoria-title" class="text-2xl font-extrabold text-slate-950">Como chegamos nesse valor</h3>
+                <div id="memoria-conteudo" class="mt-5 grid gap-3 text-center md:grid-cols-[1fr_auto_1.3fr_auto_1fr] md:items-center">
+                  <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                    <p class="text-sm font-bold text-slate-600">Sal&aacute;rio bruto informado</p>
+                    <p id="memoria-salario" class="mt-2 text-xl font-extrabold text-slate-950">R$ 3.000,00</p>
+                  </div>
+                  <div class="flex justify-center text-blue-700 md:block">
+                    <span class="text-2xl font-extrabold">&darr;</span>
+                  </div>
+                  <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                    <p class="text-sm font-bold text-slate-600">Aplica&ccedil;&atilde;o da tabela progressiva do INSS</p>
+                    <p id="memoria-faixas" class="mt-2 text-sm leading-6 text-slate-500">Faixa 1, faixa 2 e faixa 3 aplicadas conforme a base.</p>
+                  </div>
+                  <div class="flex justify-center text-blue-700 md:block">
+                    <span class="text-2xl font-extrabold">&darr;</span>
+                  </div>
+                  <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                    <p class="text-sm font-bold text-slate-600">Desconto estimado</p>
+                    <p id="memoria-desconto" class="mt-2 text-xl font-extrabold text-blue-700">R$ 263,07</p>
+                  </div>
+                </div>
+                <p class="mt-4 text-sm leading-6 text-slate-600">Na vers&atilde;o final, esta mem&oacute;ria ser&aacute; calculada automaticamente conforme as faixas oficiais do INSS.</p>
+              </section>
+
+              <!-- FUTURE_PRODUCT_SLOT: bloco estratégico pós-resultado será inserido aqui quando houver produto relacionado -->
+
+              <div class="mt-6 max-w-full overflow-x-auto rounded-2xl border border-slate-200 bg-white" style="-webkit-overflow-scrolling: touch;">
+                <table class="w-full min-w-[620px] divide-y divide-slate-200 text-left text-sm">
+                  <thead class="bg-slate-50 text-slate-950">
+                    <tr>
+                      <th class="px-4 py-3 font-extrabold">Item</th>
+                      <th class="px-4 py-3 font-extrabold">Valor</th>
+                      <th class="px-4 py-3 font-extrabold">Observa&ccedil;&atilde;o</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr>
+                      <td id="tabela-label-tipo" class="px-4 py-3 font-semibold text-slate-950">Tipo de contribuinte</td>
+                      <td id="tabela-tipo" class="px-4 py-3">CLT</td>
+                      <td id="tabela-tipo-obs" class="px-4 py-3">Desconto em folha</td>
+                    </tr>
+                    <tr>
+                      <td id="tabela-label-salario" class="px-4 py-3 font-semibold text-slate-950">Sal&aacute;rio bruto</td>
+                      <td id="tabela-salario" class="px-4 py-3">R$ 3.000,00</td>
+                      <td class="px-4 py-3">Valor antes dos descontos</td>
+                    </tr>
+                    <tr>
+                      <td id="tabela-label-base" class="px-4 py-3 font-semibold text-slate-950">Base do INSS</td>
+                      <td id="tabela-base" class="px-4 py-3">R$ 3.000,00</td>
+                      <td id="tabela-base-obs" class="px-4 py-3">Limitada ao teto quando aplic&aacute;vel</td>
+                    </tr>
+                    <tr>
+                      <td id="tabela-label-desconto" class="px-4 py-3 font-semibold text-slate-950">Desconto estimado</td>
+                      <td id="tabela-desconto" class="px-4 py-3">R$ 263,07</td>
+                      <td id="tabela-desconto-obs" class="px-4 py-3">Valor aproximado</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <section id="proximos-passos" class="mt-6 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="proximos-passos-title">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&oacute;ximos passos</p>
+                  <h3 id="proximos-passos-title" class="mt-1 text-xl font-extrabold text-slate-950 sm:text-2xl">O que fazer agora?</h3>
+                  <p class="mt-2 max-w-3xl leading-7 text-slate-600">Com base na sua simula&ccedil;&atilde;o, veja pr&oacute;ximos passos &uacute;teis para entender melhor sua contribui&ccedil;&atilde;o.</p>
+                </div>
+
+                <a id="recomendacao-principal" href="/salario-liquido-clt-2026/" class="mt-5 flex flex-col gap-3 rounded-2xl border border-blue-100 bg-blue-50 p-4 transition hover:border-blue-200 hover:bg-blue-100 sm:flex-row sm:items-center sm:justify-between">
+                  <span>
+                    <span class="block text-xs font-extrabold uppercase tracking-wide text-blue-700">Recomenda&ccedil;&atilde;o principal</span>
+                    <span id="recomendacao-titulo" class="mt-1 block text-lg font-extrabold text-blue-950">Entenda tamb&eacute;m seu sal&aacute;rio l&iacute;quido</span>
+                  </span>
+                  <span class="inline-flex text-sm font-extrabold text-blue-800">Abrir recomenda&ccedil;&atilde;o</span>
+                </a>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                  <a href="#conteudo-inss" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h10.5L20 6.5V19a2 2 0 0 1-2 2H6.5A2.5 2.5 0 0 1 4 18.5"></path><path d="M8 8h6"></path><path d="M8 12h8"></path><path d="M8 16h5"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Entenda sua contribui&ccedil;&atilde;o</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Veja como o INSS funciona para trabalhadores CLT, aut&ocirc;nomos e MEI.</span>
+                  </a>
+
+                  <a href="#simulador" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10"></path><path d="M7 17h10"></path><path d="m9 5-2 2 2 2"></path><path d="m15 15 2 2-2 2"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Compare cen&aacute;rios</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Teste outro valor de renda para entender como a contribui&ccedil;&atilde;o muda.</span>
+                  </a>
+
+                  <a href="/ferramentas/" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"></path><path d="M17 7H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Planeje seus pr&oacute;ximos direitos</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Use outras ferramentas para entender sal&aacute;rio l&iacute;quido, rescis&atilde;o e benef&iacute;cios.</span>
+                  </a>
+                </div>
+              </section>
+
+              <div class="mt-5 rounded-2xl border border-slate-200 bg-white p-4">
+                <p class="text-sm font-bold text-slate-600">A&ccedil;&otilde;es secund&aacute;rias</p>
+                <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                  <button class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="baixarRelatorioInss()">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+                    Baixar relat&oacute;rio
+                  </button>
+                  <button class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="imprimirResultadoInss()">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Imprimir
+                  </button>
+                  <button class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="copiarResultadoInss(this)">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copiar resultado
+                  </button>
+                </div>
+              </div>
+
+            </section>
+
+              <section id="conteudo-inss" class="mt-8 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="conteudo-inss-title">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Conte&uacute;do essencial</p>
+                  <h3 id="conteudo-inss-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Como funciona o c&aacute;lculo do INSS?</h3>
+                  <p class="mt-3 max-w-3xl leading-8 text-slate-700">O INSS &eacute; a contribui&ccedil;&atilde;o previdenci&aacute;ria que ajuda a financiar benef&iacute;cios como aposentadoria, aux&iacute;lio-doen&ccedil;a, sal&aacute;rio-maternidade e pens&atilde;o por morte. Para quem trabalha com carteira assinada, o desconto do INSS aparece na folha de pagamento. Para aut&ocirc;nomos e MEI, a contribui&ccedil;&atilde;o segue regras pr&oacute;prias.</p>
+                </div>
+
+                <div class="mt-6 grid gap-4 md:grid-cols-2">
+                  <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                    <h4 class="text-lg font-extrabold text-blue-950">Por que existe o desconto?</h4>
+                    <p class="mt-2 leading-7 text-blue-900">A contribui&ccedil;&atilde;o forma o v&iacute;nculo previdenci&aacute;rio do trabalhador. Em troca, quando os requisitos legais s&atilde;o cumpridos, ela pode dar acesso a benef&iacute;cios pagos pela Previd&ecirc;ncia Social.</p>
+                  </div>
+                  <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <h4 class="text-lg font-extrabold text-slate-950">Quem deve contribuir?</h4>
+                    <p class="mt-2 leading-7 text-slate-600">Empregados CLT, empregados dom&eacute;sticos, contribuintes individuais, aut&ocirc;nomos, facultativos e MEI podem contribuir. A forma de recolhimento muda conforme o tipo de contribuinte.</p>
+                  </div>
+                </div>
+
+                <section class="mt-8" aria-labelledby="como-calcular-inss-title">
+                  <h4 id="como-calcular-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Como calcular o INSS passo a passo</h4>
+                  <p class="mt-3 leading-8 text-slate-700">Para calcular INSS de empregado CLT, a base &eacute; comparada com a tabela do INSS. O c&aacute;lculo usa faixas progressivas: cada parte do sal&aacute;rio entra na faixa correspondente, respeitando o teto do INSS. O resultado final gera uma al&iacute;quota efetiva, que normalmente &eacute; menor do que a maior al&iacute;quota nominal aplicada.</p>
+
+                  <div class="mt-5 grid gap-4 lg:grid-cols-5">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">1</p>
+                      <p class="mt-2 font-bold text-slate-950">Identifique a base</p>
+                      <p class="mt-1 text-sm leading-6 text-slate-600">Use o sal&aacute;rio ou renda bruta considerada para contribui&ccedil;&atilde;o.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">2</p>
+                      <p class="mt-2 font-bold text-slate-950">Aplique as faixas</p>
+                      <p class="mt-1 text-sm leading-6 text-slate-600">Cada peda&ccedil;o da base usa a al&iacute;quota da sua faixa.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">3</p>
+                      <p class="mt-2 font-bold text-slate-950">Respeite o teto</p>
+                      <p class="mt-1 text-sm leading-6 text-slate-600">Valores acima do teto n&atilde;o aumentam o desconto CLT.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">4</p>
+                      <p class="mt-2 font-bold text-slate-950">Some o desconto</p>
+                      <p class="mt-1 text-sm leading-6 text-slate-600">A soma das faixas gera o desconto do INSS.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">5</p>
+                      <p class="mt-2 font-bold text-slate-950">Veja a al&iacute;quota efetiva</p>
+                      <p class="mt-1 text-sm leading-6 text-slate-600">Divida o desconto pela base para entender o peso real.</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                    <h5 class="font-extrabold text-blue-950">Exemplo r&aacute;pido</h5>
+                    <p class="mt-2 leading-7 text-blue-900">Em uma renda CLT de R$ 3.000,00, o simulador de INSS considera a base dentro das faixas da tabela e estima desconto de R$ 263,07. A al&iacute;quota efetiva fica pr&oacute;xima de 8,77%, pois o c&aacute;lculo do INSS n&atilde;o usa uma &uacute;nica porcentagem sobre todo o sal&aacute;rio.</p>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="regimes-inss-title">
+                  <h4 id="regimes-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Diferen&ccedil;a entre INSS CLT, INSS aut&ocirc;nomo e INSS MEI</h4>
+                  <div class="mt-5 grid gap-4 md:grid-cols-3">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="text-lg font-extrabold text-slate-950">CLT</h5>
+                      <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                        <li>Desconto em folha de pagamento.</li>
+                        <li>Recolhimento feito pelo empregador.</li>
+                        <li>Usa tabela progressiva e teto do INSS.</li>
+                      </ul>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="text-lg font-extrabold text-slate-950">Aut&ocirc;nomo</h5>
+                      <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                        <li>Pode usar plano normal de 20%.</li>
+                        <li>Pode usar plano simplificado de 11% quando aplic&aacute;vel.</li>
+                        <li>A contribui&ccedil;&atilde;o depende da renda e da base escolhida.</li>
+                      </ul>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="text-lg font-extrabold text-slate-950">MEI</h5>
+                      <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+                        <li>Paga pelo DAS mensal.</li>
+                        <li>Valor fixo conforme atividade.</li>
+                        <li>D&aacute; acesso a benef&iacute;cios, mas tem limita&ccedil;&otilde;es pr&oacute;prias.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="tabela-inss-title">
+                  <h4 id="tabela-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Tabela do INSS usada no c&aacute;lculo</h4>
+                  <div class="mt-5 max-w-full overflow-x-auto rounded-2xl border border-slate-200 bg-white" style="-webkit-overflow-scrolling: touch;">
+                    <table class="w-full min-w-[620px] divide-y divide-slate-200 text-left text-sm">
+                      <thead class="bg-slate-50 text-slate-950">
+                        <tr>
+                          <th class="px-4 py-3 font-extrabold">Faixa</th>
+                          <th class="px-4 py-3 font-extrabold">Al&iacute;quota</th>
+                          <th class="px-4 py-3 font-extrabold">Forma de aplica&ccedil;&atilde;o</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-slate-100 text-slate-700">
+                        <tr>
+                          <td class="px-4 py-3 font-semibold text-slate-950">At&eacute; R$ 1.621,00</td>
+                          <td class="px-4 py-3">7,5%</td>
+                          <td class="px-4 py-3">Aplica somente sobre a primeira faixa.</td>
+                        </tr>
+                        <tr>
+                          <td class="px-4 py-3 font-semibold text-slate-950">De R$ 1.621,01 at&eacute; R$ 2.902,84</td>
+                          <td class="px-4 py-3">9%</td>
+                          <td class="px-4 py-3">Aplica apenas sobre a parte que excede R$ 1.621,00.</td>
+                        </tr>
+                        <tr>
+                          <td class="px-4 py-3 font-semibold text-slate-950">De R$ 2.902,85 at&eacute; R$ 4.354,27</td>
+                          <td class="px-4 py-3">12%</td>
+                          <td class="px-4 py-3">Aplica sobre a parcela dentro desta faixa.</td>
+                        </tr>
+                        <tr>
+                          <td class="px-4 py-3 font-semibold text-slate-950">De R$ 4.354,28 at&eacute; R$ 8.475,55</td>
+                          <td class="px-4 py-3">14%</td>
+                          <td class="px-4 py-3">Aplica at&eacute; o teto m&aacute;ximo considerado.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section class="mt-8 grid gap-4 lg:grid-cols-[1fr_1fr]" aria-labelledby="teto-inss-title">
+                  <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <h4 id="teto-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">O que &eacute; o teto do INSS?</h4>
+                    <p class="mt-3 leading-7 text-slate-600">O teto do INSS &eacute; o limite m&aacute;ximo de base usado para calcular a contribui&ccedil;&atilde;o. Quando a renda passa desse valor, a parte excedente n&atilde;o aumenta o desconto previdenci&aacute;rio do empregado CLT.</p>
+                    <p class="mt-3 leading-7 text-slate-600">Ele existe para limitar a contribui&ccedil;&atilde;o e tamb&eacute;m se relaciona ao limite dos benef&iacute;cios pagos pelo regime geral. Por isso, quem ganha acima do teto n&atilde;o paga INSS indefinidamente maior.</p>
+                  </div>
+                  <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+                    <h4 class="text-xl font-extrabold text-blue-950 sm:text-2xl">Impacto pr&aacute;tico</h4>
+                    <p class="mt-3 leading-7 text-blue-900">Se a renda informada for maior que R$ 8.475,55, o simulador limita a base a esse teto. Assim, uma renda de R$ 10.000,00 gera o mesmo desconto CLT estimado para a base m&aacute;xima: R$ 1.003,56.</p>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="exemplos-inss-title">
+                  <h4 id="exemplos-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Exemplos de c&aacute;lculo</h4>
+                  <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Sal&aacute;rio m&iacute;nimo</p>
+                      <p class="mt-2 text-xl font-extrabold text-slate-950 sm:text-2xl">R$ 121,58</p>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">Para R$ 1.621,00, aplica-se a primeira faixa.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">R$ 3.000,00</p>
+                      <p class="mt-2 text-xl font-extrabold text-slate-950 sm:text-2xl">R$ 263,07</p>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">A base atravessa as tr&ecirc;s primeiras faixas.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">R$ 5.000,00</p>
+                      <p class="mt-2 text-xl font-extrabold text-slate-950 sm:text-2xl">R$ 516,98</p>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">Parte da renda entra na faixa de 14%.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Acima do teto</p>
+                      <p class="mt-2 text-xl font-extrabold text-slate-950 sm:text-2xl">R$ 1.003,56</p>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">Rendas acima de R$ 8.475,55 usam a base m&aacute;xima.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="erros-inss-title">
+                  <h4 id="erros-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Erros mais comuns ao calcular INSS</h4>
+                  <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="font-extrabold text-slate-950">Achar que toda renda paga a mesma porcentagem</h5>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">No CLT, o c&aacute;lculo &eacute; progressivo. A maior al&iacute;quota n&atilde;o incide sobre todo o sal&aacute;rio.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="font-extrabold text-slate-950">Confundir al&iacute;quota nominal e efetiva</h5>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">A al&iacute;quota nominal &eacute; a da faixa; a efetiva mostra o peso real do desconto sobre a base.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="font-extrabold text-slate-950">Esquecer o teto</h5>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">Acima do teto, a base do INSS &eacute; limitada. Isso evita superestimar o desconto.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                      <h5 class="font-extrabold text-slate-950">Confundir INSS com IRRF</h5>
+                      <p class="mt-2 text-sm leading-6 text-slate-600">INSS &eacute; contribui&ccedil;&atilde;o previdenci&aacute;ria. IRRF &eacute; imposto de renda retido na fonte.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="quem-contribui-title">
+                  <h4 id="quem-contribui-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Quem precisa contribuir para o INSS?</h4>
+                  <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">Empregado CLT:</strong> tem desconto em folha e recolhimento feito pela empresa.</p>
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">Empregado dom&eacute;stico:</strong> segue recolhimento previdenci&aacute;rio conforme regras pr&oacute;prias.</p>
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">Aut&ocirc;nomo:</strong> contribui como contribuinte individual.</p>
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">Contribuinte individual:</strong> recolhe sobre uma base escolhida dentro dos limites.</p>
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">Facultativo:</strong> contribui sem exercer atividade remunerada obrigat&oacute;ria.</p>
+                    <p class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-600"><strong class="text-slate-950">MEI:</strong> recolhe no DAS mensal, com valor fixo conforme atividade.</p>
+                  </div>
+                </section>
+
+                <section class="mt-8" aria-labelledby="beneficios-inss-title">
+                  <h4 id="beneficios-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Benef&iacute;cios ligados &agrave; contribui&ccedil;&atilde;o previdenci&aacute;ria</h4>
+                  <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Aposentadoria</h5><p class="mt-2 text-sm leading-6 text-slate-600">Pode ser concedida quando os requisitos de idade, tempo ou regra aplic&aacute;vel s&atilde;o cumpridos.</p></div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Aux&iacute;lio-doen&ccedil;a</h5><p class="mt-2 text-sm leading-6 text-slate-600">Protege o segurado em situa&ccedil;&otilde;es de incapacidade tempor&aacute;ria, conforme avalia&ccedil;&atilde;o e requisitos.</p></div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Sal&aacute;rio-maternidade</h5><p class="mt-2 text-sm leading-6 text-slate-600">Benef&iacute;cio relacionado a maternidade, ado&ccedil;&atilde;o ou situa&ccedil;&otilde;es previstas em lei.</p></div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Pens&atilde;o por morte</h5><p class="mt-2 text-sm leading-6 text-slate-600">Pode proteger dependentes do segurado quando os requisitos forem atendidos.</p></div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Aux&iacute;lio-reclus&atilde;o</h5><p class="mt-2 text-sm leading-6 text-slate-600">Benef&iacute;cio para dependentes em situa&ccedil;&otilde;es espec&iacute;ficas previstas nas regras previdenci&aacute;rias.</p></div>
+                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h5 class="font-extrabold text-slate-950">Benef&iacute;cios para dependentes</h5><p class="mt-2 text-sm leading-6 text-slate-600">A contribui&ccedil;&atilde;o pode ajudar a manter prote&ccedil;&atilde;o previdenci&aacute;ria para a fam&iacute;lia.</p></div>
+                  </div>
+                </section>
+              </section>
+
+              <section id="faq-inss" class="mt-6 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="faq-inss-title">
+                <h4 id="faq-inss-title" class="text-xl font-extrabold text-slate-950 sm:text-2xl">Perguntas frequentes sobre INSS</h4>
+                <div class="mt-5 space-y-3">
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como calcular o INSS?</summary><p class="mt-3 leading-7 text-slate-600">Informe a renda, escolha o tipo de contribuinte e aplique a regra correspondente. Para CLT, o c&aacute;lculo usa tabela progressiva e teto.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O c&aacute;lculo muda todo ano?</summary><p class="mt-3 leading-7 text-slate-600">Pode mudar quando a tabela, o sal&aacute;rio m&iacute;nimo ou o teto previdenci&aacute;rio s&atilde;o atualizados.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O que &eacute; teto do INSS?</summary><p class="mt-3 leading-7 text-slate-600">E o limite m&aacute;ximo de base usado para calcular a contribui&ccedil;&atilde;o previdenci&aacute;ria.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem paga INSS?</summary><p class="mt-3 leading-7 text-slate-600">Empregados, dom&eacute;sticos, aut&ocirc;nomos, contribuintes individuais, facultativos e MEI podem contribuir, cada um por uma regra.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">MEI paga INSS?</summary><p class="mt-3 leading-7 text-slate-600">Sim. O MEI recolhe contribui&ccedil;&atilde;o previdenci&aacute;ria dentro do DAS mensal.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Aut&ocirc;nomo paga quanto de INSS?</summary><p class="mt-3 leading-7 text-slate-600">Depende do plano. Nesta ferramenta, o plano normal usa 20% sobre a base e o simplificado usa 11% sobre o sal&aacute;rio m&iacute;nimo.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem ganha acima do teto paga mais?</summary><p class="mt-3 leading-7 text-slate-600">No CLT, a contribui&ccedil;&atilde;o fica limitada ao teto. A parte acima do teto n&atilde;o aumenta o desconto do INSS.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">INSS &eacute; obrigat&oacute;rio?</summary><p class="mt-3 leading-7 text-slate-600">Para trabalhadores obrigat&oacute;rios, sim. Tamb&eacute;m existe contribui&ccedil;&atilde;o facultativa para quem deseja manter prote&ccedil;&atilde;o previdenci&aacute;ria.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">INSS e IRRF s&atilde;o iguais?</summary><p class="mt-3 leading-7 text-slate-600">N&atilde;o. INSS &eacute; contribui&ccedil;&atilde;o previdenci&aacute;ria; IRRF &eacute; imposto de renda retido na fonte.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como saber meu desconto?</summary><p class="mt-3 leading-7 text-slate-600">Use o simulador de INSS, informe a renda bruta e confira a base, a al&iacute;quota efetiva e a mem&oacute;ria de c&aacute;lculo.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Vale contribuir como facultativo?</summary><p class="mt-3 leading-7 text-slate-600">Pode valer para quem n&atilde;o exerce atividade obrigat&oacute;ria e quer manter cobertura previdenci&aacute;ria, mas a escolha depende do objetivo individual.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O empregador recolhe automaticamente?</summary><p class="mt-3 leading-7 text-slate-600">No emprego CLT, o desconto aparece em folha e o recolhimento &eacute; responsabilidade do empregador.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O INSS do MEI d&aacute; direito a todos os benef&iacute;cios?</summary><p class="mt-3 leading-7 text-slate-600">O MEI tem cobertura previdenci&aacute;ria, mas existem regras, car&ecirc;ncias e limita&ccedil;&otilde;es que precisam ser verificadas conforme o benef&iacute;cio.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A al&iacute;quota efetiva &eacute; igual &agrave; maior faixa?</summary><p class="mt-3 leading-7 text-slate-600">N&atilde;o. A al&iacute;quota efetiva considera o desconto total dividido pela base, por isso tende a ser menor que a maior faixa nominal.</p></details>
+                  <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso usar esta ferramenta para qualquer regime?</summary><p class="mt-3 leading-7 text-slate-600">Simule CLT, aut&ocirc;nomo e MEI separadamente. Cada tipo usa regra pr&oacute;pria e os resultados n&atilde;o devem ser misturados.</p></details>
+                </div>
+              </section>
+
+              <section id="fontes-oficiais" class="mt-6 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="fontes-oficiais-title">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Refer&ecirc;ncias</p>
+                  <h3 id="fontes-oficiais-title" class="mt-1 text-xl font-extrabold text-slate-950 sm:text-2xl">Fontes oficiais</h3>
+                  <p class="mt-2 max-w-3xl leading-7 text-slate-600">Use a simula&ccedil;&atilde;o como apoio, mas confira regras, benef&iacute;cios, car&ecirc;ncias e obriga&ccedil;&otilde;es em canais oficiais antes de tomar decis&otilde;es previdenci&aacute;rias.</p>
+                </div>
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                  <a href="https://www.gov.br/inss/pt-br" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">INSS</span>
+                    <span class="mt-2 block font-extrabold text-slate-950">Instituto Nacional do Seguro Social</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Informa&ccedil;&otilde;es sobre benef&iacute;cios, segurados e atendimento.</span>
+                  </a>
+                  <a href="https://www.gov.br/receitafederal/pt-br" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Receita Federal</span>
+                    <span class="mt-2 block font-extrabold text-slate-950">Contribui&ccedil;&otilde;es e obriga&ccedil;&otilde;es</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Refer&ecirc;ncias sobre arrecada&ccedil;&atilde;o, declara&ccedil;&otilde;es e tributos federais.</span>
+                  </a>
+                  <a href="https://www.gov.br/esocial/pt-br" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">eSocial</span>
+                    <span class="mt-2 block font-extrabold text-slate-950">Registros trabalhistas</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Canal oficial ligado a informa&ccedil;&otilde;es trabalhistas, previdenci&aacute;rias e fiscais.</span>
+                  </a>
+                </div>
+              </section>
+
+              <section id="artigos-relacionados" class="mt-6 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="artigos-relacionados-title">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Conte&uacute;do relacionado</p>
+                  <h3 id="artigos-relacionados-title" class="mt-1 text-xl font-extrabold text-slate-950 sm:text-2xl">Leia tamb&eacute;m sobre INSS</h3>
+                  <p class="mt-2 max-w-3xl leading-7 text-slate-600">Conte&uacute;dos relacionados ajudam a entender melhor descontos, contribui&ccedil;&atilde;o e direitos previdenci&aacute;rios.</p>
+                </div>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                  <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-blue-800">INSS</span>
+                      <span class="text-xs font-bold uppercase tracking-wide text-slate-500">5 min de leitura</span>
+                    </div>
+                    <h4 class="mt-4 text-lg font-extrabold text-slate-950">Como calcular o INSS</h4>
+                    <a href="/blog/como-calcular-inss/" class="mt-4 inline-flex text-sm font-extrabold text-blue-700 hover:text-blue-900">Ler artigo</a>
+                  </article>
+
+                  <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-blue-800">INSS</span>
+                      <span class="text-xs font-bold uppercase tracking-wide text-slate-500">4 min de leitura</span>
+                    </div>
+                    <h4 class="mt-4 text-lg font-extrabold text-slate-950">Tabela INSS atualizada</h4>
+                    <a href="/blog/tabela-inss-atualizada/" class="mt-4 inline-flex text-sm font-extrabold text-blue-700 hover:text-blue-900">Ler artigo</a>
+                  </article>
+
+                  <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-blue-800">INSS</span>
+                      <span class="text-xs font-bold uppercase tracking-wide text-slate-500">6 min de leitura</span>
+                    </div>
+                    <h4 class="mt-4 text-lg font-extrabold text-slate-950">INSS descontado no sal&aacute;rio</h4>
+                    <a href="/blog/inss-descontado-no-salario/" class="mt-4 inline-flex text-sm font-extrabold text-blue-700 hover:text-blue-900">Ler artigo</a>
+                  </article>
+                </div>
+              </section>
+
+              <section id="ferramentas-relacionadas" class="mt-6 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="ferramentas-relacionadas-title">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramentas relacionadas</p>
+                  <h3 id="ferramentas-relacionadas-title" class="mt-1 text-xl font-extrabold text-slate-950 sm:text-2xl">Ferramentas que tamb&eacute;m podem ajudar</h3>
+                </div>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                  <a href="/salario-liquido-clt-2026/" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Calculadora de Sal&aacute;rio L&iacute;quido</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Veja uma estimativa do valor que chega ao bolso depois dos descontos.</span>
+                    <span class="mt-4 inline-flex text-sm font-extrabold text-blue-700 group-hover:text-blue-900">Abrir ferramenta</span>
+                  </a>
+
+                  <a href="/calculadora-clt-ou-pj/" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10"></path><path d="M7 17h10"></path><path d="m9 5-2 2 2 2"></path><path d="m15 15 2 2-2 2"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Calculadora CLT ou PJ</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Compare formas de contrata&ccedil;&atilde;o e entenda diferen&ccedil;as de renda.</span>
+                    <span class="mt-4 inline-flex text-sm font-extrabold text-blue-700 group-hover:text-blue-900">Abrir ferramenta</span>
+                  </a>
+
+                  <a href="/calculadora-rescisao-clt-2026/" class="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-blue-700 ring-1 ring-blue-100">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h10.5L20 6.5V19a2 2 0 0 1-2 2H6.5A2.5 2.5 0 0 1 4 18.5"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h5"></path></svg>
+                    </span>
+                    <span class="mt-4 block text-lg font-extrabold text-slate-950">Calculadora de Rescis&atilde;o CLT</span>
+                    <span class="mt-2 block text-sm leading-6 text-slate-600">Simule verbas rescis&oacute;rias e valores ligados ao encerramento do contrato.</span>
+                    <span class="mt-4 inline-flex text-sm font-extrabold text-blue-700 group-hover:text-blue-900">Abrir ferramenta</span>
+                  </a>
+                </div>
+              </section>
+
+            <!-- Futuro TOOL_LAYOUT_V2:
+              - Resultado completo
+              - Memoria de calculo
+              - Produto recomendado
+              - Baixar relatorio
+              - Artigos relacionados
+              - Ferramentas relacionadas
+              - FAQ
+              - Fontes oficiais
+              - Disclaimer
+            -->
+          </form>
+        </div>
+
+        <aside class="hidden lg:sticky lg:top-6 lg:block">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">&Iacute;ndice da ferramenta</p>
+            <nav class="mt-4 space-y-2 text-sm font-semibold" aria-label="&Iacute;ndice da ferramenta">
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#descobrir">O que voc&ecirc; vai descobrir</a>
+              <a class="block rounded-xl bg-blue-50 px-4 py-3 text-blue-800" href="#simulador">Simulador</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#resultado">Resultado</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#memoria-calculo">Mem&oacute;ria de c&aacute;lculo</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#proximos-passos">Pr&oacute;ximos passos</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#conteudo-inss">Conte&uacute;do INSS</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#faq-inss">FAQ</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#fontes-oficiais">Fontes oficiais</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#artigos-relacionados">Artigos relacionados</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#ferramentas-relacionadas">Ferramentas relacionadas</a>
+              <a class="block rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-50 hover:text-slate-950" href="#proxima-etapa">Pr&oacute;xima etapa</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="global-footer"></div>
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+  <script>
+    const INSS_2026_CLT = [
+      { min: 0, max: 1621.00, rate: 0.075, deduction: 0, label: "Faixa 1: ate R$ 1.621,00 - 7,5%" },
+      { min: 1621.00, max: 2902.84, rate: 0.09, deduction: 24.315, label: "Faixa 2: de R$ 1.621,01 a R$ 2.902,84 - 9%" },
+      { min: 2902.84, max: 4354.27, rate: 0.12, deduction: 96.93, label: "Faixa 3: de R$ 2.902,85 a R$ 4.354,27 - 12%" },
+      { min: 4354.27, max: 8475.55, rate: 0.14, deduction: 183.017, label: "Faixa 4: de R$ 4.354,28 a R$ 8.475,55 - 14%" }
+    ];
+    const INSS_2026_MINIMUM_WAGE = 1621.00;
+    const INSS_2026_CEILING = 8475.55;
+    const MEI_2026 = {
+      geral: { label: "MEI geral", inssRate: 0.05, icms: 0, iss: 0 },
+      comercio_industria: { label: "Comercio/Industria", inssRate: 0.05, icms: 1, iss: 0 },
+      servicos: { label: "Servicos", inssRate: 0.05, icms: 0, iss: 5 },
+      comercio_servicos: { label: "Comercio e Servicos", inssRate: 0.05, icms: 1, iss: 5 },
+      transportador_cargas: { label: "Transportador autonomo de cargas", inssRate: 0.12, icms: 0, iss: 0 }
+    };
+    const LOCAL_INSS_TABLES = {
+      minimumWage: INSS_2026_MINIMUM_WAGE,
+      ceiling: INSS_2026_CEILING,
+      brackets: INSS_2026_CLT,
+      mei: MEI_2026
+    };
+    const inssTablesState = {
+      helperFound: false,
+      centralTables: null,
+      loadError: null
+    };
+    let latestInssReport = null;
+
+    function roundMoney(value) {
+      return Math.round((value + 1e-9) * 100) / 100;
+    }
+
+    function parseBrazilianMoney(value) {
+      if (!value) return 0;
+      const normalized = String(value)
+        .replace(/[^\d,.-]/g, "")
+        .replace(/\./g, "")
+        .replace(",", ".");
+      const parsed = Number.parseFloat(normalized);
+      return Number.isFinite(parsed) ? parsed : 0;
+    }
+
+    function formatMoney(value) {
+      return value.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    function formatPercent(value) {
+      return `${value.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })}%`;
+    }
+
+    function formatCompetencia(value) {
+      if (!value || !value.includes("-")) return "Janeiro/2026";
+      const [year, month] = value.split("-");
+      const date = new Date(Number(year), Number(month) - 1, 1);
+      return `${date.toLocaleDateString("pt-BR", { month: "long" })}/${year}`.replace(/^./, (letter) => letter.toUpperCase());
+    }
+
+    function buildInssLabel(index, min, max, rate) {
+      const percent = rate * 100;
+      if (index === 0) return `Faixa 1: ate ${formatMoney(max)} - ${percent.toLocaleString("pt-BR")}%`;
+      return `Faixa ${index + 1}: de ${formatMoney(min + 0.01)} a ${formatMoney(max)} - ${percent.toLocaleString("pt-BR")}%`;
+    }
+
+    function normalizeCentralInssBrackets(faixas) {
+      let previousLimit = 0;
+      let accumulatedContribution = 0;
+
+      return faixas.map((faixa, index) => {
+        const fallbackBracket = INSS_2026_CLT[index] || {};
+        const max = Number(faixa.ate) || 0;
+        const rate = Number(faixa.aliquota) || 0;
+        const min = previousLimit;
+        const deduction = typeof fallbackBracket.deduction === "number"
+          ? fallbackBracket.deduction
+          : (max * rate) - (accumulatedContribution + ((max - min) * rate));
+        accumulatedContribution += Math.max(0, max - min) * rate;
+        previousLimit = max;
+
+        return {
+          min,
+          max,
+          rate,
+          deduction,
+          label: fallbackBracket.label || buildInssLabel(index, min, max, rate)
+        };
+      });
+    }
+
+    function buildCentralInssTables(tabelas) {
+      const faixas = tabelas?.inss?.faixas;
+      if (!Array.isArray(faixas) || !faixas.length) return null;
+
+      const minimumWage = window.CalculeTrabalhadorTabelas?.obterSalarioMinimo
+        ? window.CalculeTrabalhadorTabelas.obterSalarioMinimo(tabelas)
+        : Number(tabelas?.salarioMinimo?.valor) || 0;
+      const ceiling = Number(tabelas?.inss?.teto) || 0;
+      const brackets = normalizeCentralInssBrackets(faixas);
+
+      if (!minimumWage || !ceiling || !brackets.length) return null;
+
+      return {
+        minimumWage,
+        ceiling,
+        brackets,
+        mei: MEI_2026
+      };
+    }
+
+    function getInssDataSource(options = {}) {
+      if (options.source === "fallback") return LOCAL_INSS_TABLES;
+      if (options.source === "central" && inssTablesState.centralTables) return inssTablesState.centralTables;
+      return inssTablesState.centralTables || LOCAL_INSS_TABLES;
+    }
+
+    function getInssBracket(base, options = {}) {
+      const tables = getInssDataSource(options);
+      return tables.brackets.find((bracket) => base <= bracket.max) || tables.brackets[tables.brackets.length - 1];
+    }
+
+    function getAppliedBracketLabels(base, options = {}) {
+      return getInssDataSource(options).brackets
+        .filter((bracket) => base > bracket.min)
+        .map((bracket) => bracket.label)
+        .join("; ");
+    }
+
+    async function loadCentralInssTables() {
+      const helper = window.CalculeTrabalhadorTabelas;
+      inssTablesState.helperFound = Boolean(helper?.carregarTabelasTrabalhistas);
+
+      if (!inssTablesState.helperFound) return null;
+
+      try {
+        const tabelas = await helper.carregarTabelasTrabalhistas();
+        inssTablesState.centralTables = buildCentralInssTables(tabelas);
+        return inssTablesState.centralTables;
+      } catch (error) {
+        inssTablesState.loadError = error;
+        inssTablesState.centralTables = null;
+        return null;
+      }
+    }
+
+    function calculateInssClt(salary, options = {}) {
+      const tables = getInssDataSource(options);
+      const grossSalary = Math.max(0, Number(salary) || 0);
+      const base = Math.min(grossSalary, tables.ceiling);
+      const bracket = getInssBracket(base, options);
+      const discount = roundMoney(Math.max(0, base * bracket.rate - bracket.deduction));
+      const effectiveRate = base > 0 ? roundMoney((discount / base) * 100) : 0;
+
+      return {
+        salary: grossSalary,
+        base,
+        discount,
+        effectiveRate,
+        bracket,
+        appliedBrackets: getAppliedBracketLabels(base, options)
+      };
+    }
+
+    function calculateInssAutonomo(income, plan = "normal_20", options = {}) {
+      const tables = getInssDataSource(options);
+      const grossIncome = Math.max(0, Number(income) || 0);
+
+      if (plan === "simplificado_11") {
+        const base = tables.minimumWage;
+        const contribution = roundMoney(base * 0.11);
+        return {
+          income: grossIncome,
+          plan,
+          planLabel: "Plano simplificado 11%",
+          base,
+          contribution,
+          rate: 11,
+          observation: "Plano simplificado calculado sobre o salario minimo."
+        };
+      }
+
+      const base = Math.min(Math.max(grossIncome, tables.minimumWage), tables.ceiling);
+      const contribution = roundMoney(base * 0.20);
+      let observation = "Plano normal calculado sobre a renda informada.";
+      if (grossIncome < tables.minimumWage) observation = "Base ajustada ao salario minimo.";
+      if (grossIncome > tables.ceiling) observation = "Base limitada ao teto do INSS.";
+
+      return {
+        income: grossIncome,
+        plan,
+        planLabel: "Plano normal 20%",
+        base,
+        contribution,
+        rate: 20,
+        observation
+      };
+    }
+
+    function calculateInssMei(activityType = "geral", options = {}) {
+      const tables = getInssDataSource(options);
+      const activity = tables.mei[activityType] || tables.mei.geral;
+      const inss = roundMoney(tables.minimumWage * activity.inssRate);
+      const total = roundMoney(inss + activity.icms + activity.iss);
+
+      return {
+        activityType,
+        activityLabel: activity.label,
+        inss,
+        icms: activity.icms,
+        iss: activity.iss,
+        total,
+        base: tables.minimumWage,
+        observation: "Contribuicao mensal fixa do MEI conforme atividade selecionada."
+      };
+    }
+
+    function setText(id, value) {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    }
+
+    function getCalculationDateLabel() {
+      return new Date().toLocaleString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function ensureInssReport() {
+      if (latestInssReport) return true;
+      alert("Fa\u00e7a a simula\u00e7\u00e3o primeiro.");
+      return false;
+    }
+
+    function buildReportHtml(report) {
+      const rows = [
+        ["Data do c\u00e1lculo", report.calculationDate],
+        ["Tipo de contribuinte", report.contributorType],
+        ["Sal\u00e1rio/renda informada", report.informedIncome],
+        ["Compet\u00eancia", report.competence],
+        ["Base considerada", report.base],
+        [report.rateLabel, report.rateValue],
+        ["Valor estimado da contribui\u00e7\u00e3o/desconto", report.estimatedValue],
+        ["Mem\u00f3ria de c\u00e1lculo", report.memory]
+      ];
+
+      const tableRows = rows.map(([label, value]) => `
+          <tr>
+            <th>${escapeHtml(label)}</th>
+            <td>${escapeHtml(value)}</td>
+          </tr>`).join("");
+
+      return `<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relat\u00f3rio da Simula\u00e7\u00e3o de INSS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f8fafc; color: #0f172a; font-family: Arial, sans-serif; line-height: 1.5; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 20px; }
+    .report { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px; }
+    .brand { color: #1d4ed8; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 22px; font-size: 28px; line-height: 1.2; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { border-top: 1px solid #e2e8f0; padding: 12px 0; text-align: left; vertical-align: top; }
+    th { width: 38%; color: #475569; padding-right: 18px; }
+    .note { margin-top: 22px; border-radius: 12px; background: #eff6ff; color: #1e3a8a; padding: 14px 16px; font-size: 14px; }
+    @media print {
+      body { background: #fff; }
+      main { max-width: none; padding: 0; }
+      .report { border: 0; border-radius: 0; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="report" aria-label="Relat\u00f3rio da Simula\u00e7\u00e3o de INSS">
+      <div class="brand">Calcule Trabalhador</div>
+      <h1>Relat\u00f3rio da Simula\u00e7\u00e3o de INSS</h1>
+      <table>
+        <tbody>${tableRows}
+        </tbody>
+      </table>
+      <p class="note">Este relat\u00f3rio \u00e9 uma estimativa informativa e n\u00e3o substitui orienta\u00e7\u00e3o profissional.</p>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      window.focus();
+      window.print();
+    });
+  <\/script>
+</body>
+</html>`;
+    }
+
+    function openInssReportWindow() {
+      if (!ensureInssReport()) return;
+      const reportWindow = window.open("", "_blank");
+      if (!reportWindow) {
+        alert("N\u00e3o foi poss\u00edvel abrir o relat\u00f3rio. Verifique o bloqueador de pop-ups.");
+        return;
+      }
+      reportWindow.document.open();
+      reportWindow.document.write(buildReportHtml(latestInssReport));
+      reportWindow.document.close();
+    }
+
+    function baixarRelatorioInss() {
+      openInssReportWindow();
+    }
+
+    function imprimirResultadoInss() {
+      openInssReportWindow();
+    }
+
+    function getPlainTextInssResult(report) {
+      return [
+        "Simula\u00e7\u00e3o de INSS - Calcule Trabalhador",
+        `Tipo: ${report.contributorType}`,
+        `Compet\u00eancia: ${report.competence}`,
+        `Sal\u00e1rio/renda: ${report.informedIncome}`,
+        `Base considerada: ${report.base}`,
+        `Valor estimado: ${report.estimatedValue}`,
+        `${report.rateLabel}: ${report.rateValue}`
+      ].join("\n");
+    }
+
+    function fallbackCopyText(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return copied;
+    }
+
+    function showCopyFeedback(button) {
+      if (!button) return;
+      const originalHtml = button.innerHTML;
+      button.textContent = "Copiado!";
+      window.setTimeout(() => {
+        button.innerHTML = originalHtml;
+      }, 2500);
+    }
+
+    async function copiarResultadoInss(button) {
+      if (!ensureInssReport()) return;
+      const text = getPlainTextInssResult(latestInssReport);
+
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else if (!fallbackCopyText(text)) {
+          throw new Error("copy failed");
+        }
+        showCopyFeedback(button);
+      } catch (error) {
+        if (fallbackCopyText(text)) {
+          showCopyFeedback(button);
+          return;
+        }
+        alert("N\u00e3o foi poss\u00edvel copiar o resultado.");
+      }
+    }
+
+    function updatePostResultRecommendation(regime) {
+      const recommendations = {
+        clt: {
+          title: "Entenda tambem seu salario liquido",
+          href: "/salario-liquido-clt-2026/"
+        },
+        autonomo: {
+          title: "Compare CLT e PJ antes de decidir",
+          href: "/calculadora-clt-ou-pj/"
+        },
+        mei: {
+          title: "Veja outras ferramentas para trabalhadores e empreendedores",
+          href: "/ferramentas/"
+        }
+      };
+      const recommendation = recommendations[regime] || recommendations.clt;
+      const link = document.getElementById("recomendacao-principal");
+
+      setText("recomendacao-titulo", recommendation.title);
+      if (link) link.setAttribute("href", recommendation.href);
+    }
+
+    function updateCltResult(calculation, competencia) {
+      updatePostResultRecommendation("clt");
+      setText("resultado-titulo-valor", "Valor estimado do desconto");
+      setText("resultado-desconto", formatMoney(calculation.discount));
+      setText("resultado-ajuda", "Estimativa calculada com a tabela INSS CLT 2026 informada para este prototipo.");
+      setText("badge-regime", "INSS CLT");
+      setText("resumo-label-salario", "Salario informado");
+      setText("resumo-label-aliquota", "Aliquota efetiva");
+      setText("resumo-label-base", "Base considerada");
+      setText("resumo-label-competencia", "Competencia");
+      setText("resumo-salario", formatMoney(calculation.salary));
+      setText("resumo-aliquota", formatPercent(calculation.effectiveRate));
+      setText("resumo-base", formatMoney(calculation.base));
+      setText("resumo-competencia", competencia);
+      setText("memoria-salario", formatMoney(calculation.salary));
+      setText("memoria-faixas", calculation.appliedBrackets || "Nenhuma faixa aplicada.");
+      setText("memoria-desconto", formatMoney(calculation.discount));
+      setText("tabela-label-tipo", "Tipo de contribuinte");
+      setText("tabela-tipo", "CLT");
+      setText("tabela-tipo-obs", "Desconto em folha");
+      setText("tabela-label-salario", "Salario bruto");
+      setText("tabela-salario", formatMoney(calculation.salary));
+      setText("tabela-label-base", "Base do INSS");
+      setText("tabela-base", formatMoney(calculation.base));
+      setText("tabela-base-obs", calculation.salary > calculation.base ? "Limitada ao teto do INSS" : "Base igual ao salario informado");
+      setText("tabela-label-desconto", "Desconto estimado");
+      setText("tabela-desconto", formatMoney(calculation.discount));
+      setText("tabela-desconto-obs", `${formatPercent(calculation.effectiveRate)} de aliquota efetiva`);
+      latestInssReport = {
+        calculationDate: getCalculationDateLabel(),
+        contributorType: "CLT",
+        informedIncome: formatMoney(calculation.salary),
+        competence: competencia,
+        base: formatMoney(calculation.base),
+        rateLabel: "Al\u00edquota efetiva",
+        rateValue: formatPercent(calculation.effectiveRate),
+        estimatedValue: formatMoney(calculation.discount),
+        memory: calculation.appliedBrackets || "Nenhuma faixa aplicada."
+      };
+    }
+
+    function updateAutonomoResult(calculation, competencia) {
+      updatePostResultRecommendation("autonomo");
+      setText("resultado-titulo-valor", "Contribuicao estimada");
+      setText("resultado-desconto", formatMoney(calculation.contribution));
+      setText("resultado-ajuda", `${calculation.planLabel}. ${calculation.observation}`);
+      setText("badge-regime", "Autonomo");
+      setText("resumo-label-salario", "Renda informada");
+      setText("resumo-label-aliquota", "Aliquota usada");
+      setText("resumo-label-base", "Base considerada");
+      setText("resumo-label-competencia", "Plano escolhido");
+      setText("resumo-salario", formatMoney(calculation.income));
+      setText("resumo-aliquota", formatPercent(calculation.rate));
+      setText("resumo-base", formatMoney(calculation.base));
+      setText("resumo-competencia", calculation.planLabel);
+      setText("memoria-salario", formatMoney(calculation.income));
+      setText("memoria-faixas", `${calculation.planLabel}: base ${formatMoney(calculation.base)} x ${formatPercent(calculation.rate)}. ${calculation.observation}`);
+      setText("memoria-desconto", formatMoney(calculation.contribution));
+      setText("tabela-label-tipo", "Tipo de contribuinte");
+      setText("tabela-tipo", "Autonomo");
+      setText("tabela-tipo-obs", calculation.planLabel);
+      setText("tabela-label-salario", "Renda informada");
+      setText("tabela-salario", formatMoney(calculation.income));
+      setText("tabela-label-base", "Base do INSS");
+      setText("tabela-base", formatMoney(calculation.base));
+      setText("tabela-base-obs", calculation.observation);
+      setText("tabela-label-desconto", "Contribuicao estimada");
+      setText("tabela-desconto", formatMoney(calculation.contribution));
+      setText("tabela-desconto-obs", `${formatPercent(calculation.rate)} sobre a base considerada`);
+      latestInssReport = {
+        calculationDate: getCalculationDateLabel(),
+        contributorType: "Autonomo",
+        informedIncome: formatMoney(calculation.income),
+        competence: competencia,
+        base: formatMoney(calculation.base),
+        rateLabel: "Al\u00edquota usada",
+        rateValue: formatPercent(calculation.rate),
+        estimatedValue: formatMoney(calculation.contribution),
+        memory: `${calculation.planLabel}: base ${formatMoney(calculation.base)} x ${formatPercent(calculation.rate)}. ${calculation.observation}`
+      };
+    }
+
+    function updateMeiResult(calculation, competencia) {
+      updatePostResultRecommendation("mei");
+      setText("resultado-titulo-valor", "Valor estimado do DAS/INSS");
+      setText("resultado-desconto", formatMoney(calculation.total));
+      setText("resultado-ajuda", `${calculation.activityLabel}. ${calculation.observation}`);
+      setText("badge-regime", "MEI");
+      setText("resumo-label-salario", "INSS");
+      setText("resumo-label-aliquota", "ICMS");
+      setText("resumo-label-base", "ISS");
+      setText("resumo-label-competencia", "Atividade");
+      setText("resumo-salario", formatMoney(calculation.inss));
+      setText("resumo-aliquota", formatMoney(calculation.icms));
+      setText("resumo-base", formatMoney(calculation.iss));
+      setText("resumo-competencia", calculation.activityLabel);
+      setText("memoria-salario", `${formatPercent(calculation.inss / calculation.base * 100)} do salario minimo`);
+      setText("memoria-faixas", `INSS ${formatMoney(calculation.inss)} + ICMS ${formatMoney(calculation.icms)} + ISS ${formatMoney(calculation.iss)}.`);
+      setText("memoria-desconto", formatMoney(calculation.total));
+      setText("tabela-label-tipo", "Atividade MEI");
+      setText("tabela-tipo", calculation.activityLabel);
+      setText("tabela-tipo-obs", "Contribuicao mensal fixa");
+      setText("tabela-label-salario", "INSS");
+      setText("tabela-salario", formatMoney(calculation.inss));
+      setText("tabela-label-base", "ICMS / ISS");
+      setText("tabela-base", `${formatMoney(calculation.icms)} / ${formatMoney(calculation.iss)}`);
+      setText("tabela-base-obs", "Valores somados conforme atividade");
+      setText("tabela-label-desconto", "Total estimado");
+      setText("tabela-desconto", formatMoney(calculation.total));
+      setText("tabela-desconto-obs", calculation.observation);
+      const meiRate = getInssDataSource().mei[calculation.activityType]?.inssRate || getInssDataSource().mei.geral.inssRate;
+      latestInssReport = {
+        calculationDate: getCalculationDateLabel(),
+        contributorType: "MEI",
+        informedIncome: "Nao informado",
+        competence: competencia,
+        base: formatMoney(calculation.base),
+        rateLabel: "Al\u00edquota usada",
+        rateValue: `${formatPercent(meiRate * 100)} do salario minimo`,
+        estimatedValue: formatMoney(calculation.total),
+        memory: `INSS ${formatMoney(calculation.inss)} + ICMS ${formatMoney(calculation.icms)} + ISS ${formatMoney(calculation.iss)}.`
+      };
+    }
+
+    function updateContributorOptions() {
+      const selectedRegime = document.querySelector('input[name="tipo-contribuinte"]:checked')?.value || "clt";
+      document.querySelectorAll("[data-contributor-card]").forEach((card) => {
+        const isSelected = card.querySelector('input[name="tipo-contribuinte"]')?.value === selectedRegime;
+        const icon = card.querySelector("[data-card-icon]");
+        const check = card.querySelector("[data-card-check]");
+        const title = card.querySelector("[data-card-title]");
+        const description = card.querySelector("[data-card-description]");
+
+        card.classList.toggle("border-2", isSelected);
+        card.classList.toggle("border-blue-600", isSelected);
+        card.classList.toggle("bg-gradient-to-br", isSelected);
+        card.classList.toggle("from-blue-50", isSelected);
+        card.classList.toggle("to-white", isSelected);
+        card.classList.toggle("ring-4", isSelected);
+        card.classList.toggle("ring-blue-100/70", isSelected);
+        card.classList.toggle("border", !isSelected);
+        card.classList.toggle("border-slate-200", !isSelected);
+        card.classList.toggle("bg-white", !isSelected);
+        card.classList.toggle("hover:border-blue-300", !isSelected);
+        card.classList.toggle("hover:bg-blue-50", !isSelected);
+        card.classList.toggle("hover:shadow-md", !isSelected);
+
+        icon?.classList.toggle("bg-white", isSelected);
+        icon?.classList.toggle("text-blue-700", isSelected);
+        icon?.classList.toggle("ring-blue-100", isSelected);
+        icon?.classList.toggle("bg-slate-50", !isSelected);
+        icon?.classList.toggle("text-slate-600", !isSelected);
+        icon?.classList.toggle("ring-slate-200", !isSelected);
+        check?.classList.toggle("hidden", !isSelected);
+        check?.classList.toggle("flex", isSelected);
+        title?.classList.toggle("text-blue-950", isSelected);
+        title?.classList.toggle("text-slate-950", !isSelected);
+        description?.classList.toggle("text-blue-900", isSelected);
+        description?.classList.toggle("text-slate-600", !isSelected);
+      });
+
+      document.getElementById("autonomo-options")?.classList.toggle("hidden", selectedRegime !== "autonomo");
+      document.getElementById("mei-options")?.classList.toggle("hidden", selectedRegime !== "mei");
+      document.getElementById("opcoes-avancadas")?.classList.toggle("hidden", selectedRegime === "mei");
+      document.getElementById("opcao-teto-inss")?.classList.toggle("hidden", selectedRegime !== "clt");
+      document.getElementById("opcao-contribuicao-minima")?.classList.toggle("hidden", selectedRegime !== "autonomo");
+      document.getElementById("opcao-contribuicao-minima")?.classList.toggle("flex", selectedRegime === "autonomo");
+      document.getElementById("opcao-comparar-renda")?.classList.toggle("hidden", selectedRegime !== "autonomo");
+      document.getElementById("opcao-comparar-renda")?.classList.toggle("block", selectedRegime === "autonomo");
+    }
+
+    function prepareContributorOptionListeners() {
+      document.querySelectorAll('input[name="tipo-contribuinte"]').forEach((input) => {
+        input.addEventListener("change", updateContributorOptions);
+      });
+      updateContributorOptions();
+    }
+
+    function updatePendingRegimeResult(regime, salary, competencia) {
+      const label = regime === "mei" ? "MEI" : "Autonomo";
+      setText("resultado-desconto", "Calculo em preparacao");
+      setText("resultado-ajuda", `O calculo para ${label} sera implementado em etapa futura. Nenhuma regra CLT foi aplicada a este regime.`);
+      setText("badge-regime", label);
+      setText("resumo-salario", formatMoney(salary));
+      setText("resumo-aliquota", "Em preparacao");
+      setText("resumo-base", "Em preparacao");
+      setText("resumo-competencia", competencia);
+      setText("memoria-salario", formatMoney(salary));
+      setText("memoria-faixas", `Calculo em preparacao para ${label}.`);
+      setText("memoria-desconto", "Em preparacao");
+      setText("tabela-tipo", label);
+      setText("tabela-tipo-obs", "Calculo em preparacao");
+      setText("tabela-salario", formatMoney(salary));
+      setText("tabela-base", "Em preparacao");
+      setText("tabela-base-obs", "Regra especifica sera implementada depois");
+      setText("tabela-desconto", "Em preparacao");
+      setText("tabela-desconto-obs", "Nao foi aplicado calculo CLT");
+    }
+
+    function prepararSimulacaoInss() {
+      const salaryInput = document.getElementById("salario-mensal");
+      const competenciaInput = document.getElementById("competencia");
+      const selectedRegime = document.querySelector('input[name="tipo-contribuinte"]:checked')?.value || "clt";
+      const salary = parseBrazilianMoney(salaryInput?.value || "3000");
+      const competencia = formatCompetencia(competenciaInput?.value);
+
+      if (selectedRegime === "clt") {
+        updateCltResult(calculateInssClt(salary || 3000), competencia);
+      } else if (selectedRegime === "autonomo") {
+        const plan = document.querySelector('input[name="autonomo-plano"]:checked')?.value || "normal_20";
+        updateAutonomoResult(calculateInssAutonomo(salary || 0, plan), competencia);
+      } else if (selectedRegime === "mei") {
+        const activityType = document.querySelector('input[name="mei-atividade"]:checked')?.value || "geral";
+        updateMeiResult(calculateInssMei(activityType), competencia);
+      } else {
+        updatePendingRegimeResult(selectedRegime, salary || 0, competencia);
+      }
+
+      const result = document.getElementById("resultado");
+      result.classList.remove("hidden");
+      result.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function runInssTests(options = {}) {
+      const cltCases = [
+        { salary: 1621.00, expected: 121.58 },
+        { salary: 2000.00, expected: 155.69 },
+        { salary: 3000.00, expected: 263.07 },
+        { salary: 4354.27, expected: 425.58 },
+        { salary: 5000.00, expected: 516.98 },
+        { salary: 8475.55, expected: 1003.56 },
+        { salary: 10000.00, expected: 1003.56 }
+      ];
+      const autonomoCases = [
+        { income: 1000.00, plan: "normal_20", expectedBase: 1621.00, expected: 324.20 },
+        { income: 3000.00, plan: "normal_20", expectedBase: 3000.00, expected: 600.00 },
+        { income: 10000.00, plan: "normal_20", expectedBase: 8475.55, expected: 1695.11 },
+        { income: 5000.00, plan: "simplificado_11", expectedBase: 1621.00, expected: 178.31 }
+      ];
+      const meiCases = [
+        { activityType: "geral", expected: 81.05 },
+        { activityType: "comercio_industria", expected: 82.05 },
+        { activityType: "servicos", expected: 86.05 },
+        { activityType: "comercio_servicos", expected: 87.05 },
+        { activityType: "transportador_cargas", expected: 194.52 }
+      ];
+
+      const cltResults = cltCases.map((testCase) => {
+        const actual = calculateInssClt(testCase.salary, options).discount;
+        const diff = roundMoney(actual - testCase.expected);
+        const passed = Math.abs(diff) <= 0.01;
+        const row = {
+          salary: testCase.salary,
+          expected: testCase.expected,
+          actual,
+          diff,
+          status: passed ? "PASS" : "FAIL"
+        };
+        console.log(`INSS 2026 CLT | salario ${formatMoney(testCase.salary)} | esperado ${formatMoney(testCase.expected)} | calculado ${formatMoney(actual)} | diff ${diff.toFixed(2)} | ${row.status}`);
+        return row;
+      });
+
+      const autonomoResults = autonomoCases.map((testCase) => {
+        const calculation = calculateInssAutonomo(testCase.income, testCase.plan, options);
+        const contributionDiff = roundMoney(calculation.contribution - testCase.expected);
+        const baseDiff = roundMoney(calculation.base - testCase.expectedBase);
+        const passed = Math.abs(contributionDiff) <= 0.01 && Math.abs(baseDiff) <= 0.01;
+        const row = {
+          income: testCase.income,
+          plan: testCase.plan,
+          expectedBase: testCase.expectedBase,
+          actualBase: calculation.base,
+          expected: testCase.expected,
+          actual: calculation.contribution,
+          diff: contributionDiff,
+          status: passed ? "PASS" : "FAIL"
+        };
+        console.log(`INSS 2026 Autonomo | renda ${formatMoney(testCase.income)} | plano ${testCase.plan} | base ${formatMoney(calculation.base)} | esperado ${formatMoney(testCase.expected)} | calculado ${formatMoney(calculation.contribution)} | diff ${contributionDiff.toFixed(2)} | ${row.status}`);
+        return row;
+      });
+
+      const meiResults = meiCases.map((testCase) => {
+        const calculation = calculateInssMei(testCase.activityType, options);
+        const diff = roundMoney(calculation.total - testCase.expected);
+        const passed = Math.abs(diff) <= 0.01;
+        const row = {
+          activityType: testCase.activityType,
+          expected: testCase.expected,
+          actual: calculation.total,
+          diff,
+          status: passed ? "PASS" : "FAIL"
+        };
+        console.log(`INSS 2026 MEI | atividade ${testCase.activityType} | esperado ${formatMoney(testCase.expected)} | calculado ${formatMoney(calculation.total)} | diff ${diff.toFixed(2)} | ${row.status}`);
+        return row;
+      });
+
+      const summary = {
+        clt: `${cltResults.filter((result) => result.status === "PASS").length}/${cltResults.length} PASS`,
+        autonomo: `${autonomoResults.filter((result) => result.status === "PASS").length}/${autonomoResults.length} PASS`,
+        mei: `${meiResults.filter((result) => result.status === "PASS").length}/${meiResults.length} PASS`,
+        total: `${[...cltResults, ...autonomoResults, ...meiResults].filter((result) => result.status === "PASS").length}/${cltResults.length + autonomoResults.length + meiResults.length} PASS`
+      };
+      console.log(`CLT: ${summary.clt}`);
+      console.log(`Autonomo: ${summary.autonomo}`);
+      console.log(`MEI: ${summary.mei}`);
+      console.log(`Total: ${summary.total}`);
+
+      return {
+        clt: cltResults,
+        autonomo: autonomoResults,
+        mei: meiResults,
+        summary
+      };
+    }
+
+    function valuesEqual(left, right) {
+      if (typeof left === "number" || typeof right === "number") {
+        return Math.abs((Number(left) || 0) - (Number(right) || 0)) <= 0.01;
+      }
+      return left === right;
+    }
+
+    function compareResultObjects(label, central, fallback, fields) {
+      return fields.map((field) => {
+        const pass = valuesEqual(central[field], fallback[field]);
+        return {
+          label: `${label}.${field}`,
+          central: central[field],
+          fallback: fallback[field],
+          status: pass ? "PASS" : "FAIL"
+        };
+      });
+    }
+
+    async function runInssSourceComparison() {
+      await loadCentralInssTables();
+
+      if (!inssTablesState.centralTables) {
+        console.log("Comparacao helper x fallback: FAIL");
+        console.log("Helper central indisponivel. Fallback local preservado.");
+        if (inssTablesState.loadError) console.log(`Erro do helper: ${inssTablesState.loadError.message}`);
+        return {
+          helperFound: inssTablesState.helperFound,
+          fallbackAvailable: true,
+          equivalent: false,
+          differences: []
+        };
+      }
+
+      const comparisons = [];
+      const cltCases = [1621.00, 2000.00, 3000.00, 4354.27, 5000.00, 8475.55, 10000.00];
+      const autonomoCases = [
+        { income: 1000.00, plan: "normal_20" },
+        { income: 3000.00, plan: "normal_20" },
+        { income: 10000.00, plan: "normal_20" },
+        { income: 5000.00, plan: "simplificado_11" }
+      ];
+      const meiCases = ["geral", "comercio_industria", "servicos", "comercio_servicos", "transportador_cargas"];
+
+      cltCases.forEach((salary) => {
+        comparisons.push(...compareResultObjects(
+          `CLT ${formatMoney(salary)}`,
+          calculateInssClt(salary, { source: "central" }),
+          calculateInssClt(salary, { source: "fallback" }),
+          ["salary", "base", "discount", "effectiveRate", "appliedBrackets"]
+        ));
+      });
+
+      autonomoCases.forEach((testCase) => {
+        comparisons.push(...compareResultObjects(
+          `Autonomo ${formatMoney(testCase.income)} ${testCase.plan}`,
+          calculateInssAutonomo(testCase.income, testCase.plan, { source: "central" }),
+          calculateInssAutonomo(testCase.income, testCase.plan, { source: "fallback" }),
+          ["income", "base", "contribution", "rate", "observation"]
+        ));
+      });
+
+      meiCases.forEach((activityType) => {
+        comparisons.push(...compareResultObjects(
+          `MEI ${activityType}`,
+          calculateInssMei(activityType, { source: "central" }),
+          calculateInssMei(activityType, { source: "fallback" }),
+          ["activityType", "activityLabel", "inss", "icms", "iss", "total", "base"]
+        ));
+      });
+
+      const differences = comparisons.filter((item) => item.status !== "PASS");
+      console.log(`Comparacao helper x fallback: ${differences.length ? "FAIL" : "PASS"}`);
+      differences.forEach((item) => {
+        console.log(`${item.label}: helper=${item.central} | fallback=${item.fallback}`);
+      });
+
+      return {
+        helperFound: inssTablesState.helperFound,
+        fallbackAvailable: true,
+        equivalent: differences.length === 0,
+        differences
+      };
+    }
+
+    window.calculateInssClt = calculateInssClt;
+    window.calculateInssAutonomo = calculateInssAutonomo;
+    window.calculateInssMei = calculateInssMei;
+    window.loadCentralInssTables = loadCentralInssTables;
+    window.runInssTests = runInssTests;
+    window.runInssSourceComparison = runInssSourceComparison;
+    window.inssTablesState = inssTablesState;
+    document.addEventListener("DOMContentLoaded", () => {
+      loadCentralInssTables();
+      prepareContributorOptionListeners();
+    });
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://calculetrabalhador.com.br/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Ferramentas",
+              "item": "https://calculetrabalhador.com.br/ferramentas/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Simulador de INSS 2026",
+              "item": "https://calculetrabalhador.com.br/calculadora-inss/"
+            }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Simulador de INSS 2026",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "url": "https://calculetrabalhador.com.br/calculadora-inss/",
+          "description": "Ferramenta para calcular INSS, estimar desconto do INSS e comparar contribuicao CLT, autonomo e MEI.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "Como calcular o INSS",
+          "description": "Passo a passo para calcular INSS usando base de calculo, tabela progressiva, teto do INSS e aliquota efetiva.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Informe a renda",
+              "text": "Digite o salario ou renda mensal bruta que sera usada como base de calculo."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Escolha o tipo de contribuinte",
+              "text": "Selecione CLT, autonomo ou MEI para aplicar a regra correta."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Aplique a tabela ou regra do regime",
+              "text": "Para CLT, use a tabela progressiva. Para autonomo e MEI, use as opcoes especificas do regime."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Confira o resultado",
+              "text": "Veja o desconto estimado, a base considerada, a aliquota efetiva e a memoria de calculo."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Como calcular o INSS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Informe a renda, escolha o tipo de contribuinte e aplique a regra correspondente. Para CLT, o calculo usa tabela progressiva e teto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O calculo muda todo ano?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pode mudar quando a tabela, o salario minimo ou o teto previdenciario sao atualizados."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que e teto do INSS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "E o limite maximo de base usado para calcular a contribuicao previdenciaria."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quem paga INSS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Empregados, domesticos, autonomos, contribuintes individuais, facultativos e MEI podem contribuir, cada um por uma regra."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "MEI paga INSS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. O MEI recolhe contribuicao previdenciaria dentro do DAS mensal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Autonomo paga quanto de INSS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depende do plano. Nesta ferramenta, o plano normal usa 20% sobre a base e o simplificado usa 11% sobre o salario minimo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quem ganha acima do teto paga mais?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No CLT, a contribuicao fica limitada ao teto. A parte acima do teto nao aumenta o desconto do INSS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "INSS e obrigatorio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para trabalhadores obrigatorios, sim. Tambem existe contribuicao facultativa para quem deseja manter protecao previdenciaria."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "INSS e IRRF sao iguais?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nao. INSS e contribuicao previdenciaria; IRRF e imposto de renda retido na fonte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como saber meu desconto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use o simulador de INSS, informe a renda bruta e confira a base, a aliquota efetiva e a memoria de calculo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vale contribuir como facultativo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pode valer para quem nao exerce atividade obrigatoria e quer manter cobertura previdenciaria, mas a escolha depende do objetivo individual."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O empregador recolhe automaticamente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No emprego CLT, o desconto aparece em folha e o recolhimento e responsabilidade do empregador."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O INSS do MEI da direito a todos os beneficios?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O MEI tem cobertura previdenciaria, mas existem regras, carencias e limitacoes que precisam ser verificadas conforme o beneficio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A aliquota efetiva e igual a maior faixa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nao. A aliquota efetiva considera o desconto total dividido pela base, por isso tende a ser menor que a maior faixa nominal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso usar esta ferramenta para qualquer regime?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Simule CLT, autonomo e MEI separadamente. Cada tipo usa regra propria e os resultados nao devem ser misturados."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script src="/assets/js/editorial-metadata.js"></script>
+  <script src="/assets/js/global-layout.js"></script>
+</body>
+</html>

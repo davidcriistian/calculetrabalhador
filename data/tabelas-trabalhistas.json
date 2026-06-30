@@ -8,7 +8,7 @@
   },
   "moeda": "BRL",
   "salarioMinimo": {
-    "valor": 1518.0,
+    "valor": 1621.0,
     "ano": 2026,
     "observacao": "Valor usado como referência para cálculos que dependem do salário mínimo."
   },
