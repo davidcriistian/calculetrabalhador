@@ -10,7 +10,14 @@
         "salario-liquido-clt",
         "calculadora-13-salario",
         "calculadora-ferias-clt",
-        "calculadora-clt-ou-pj"
+        "calculadora-clt-ou-pj",
+        "calculadora-inss"
+      ],
+      "updateTriggers": [
+        "teto INSS",
+        "tabela progressiva INSS",
+        "regras do MEI",
+        "regras de contribuinte individual/autonomo"
       ],
       "impactedClusters": [
         "calculadora-13-salario",
@@ -48,7 +55,11 @@
       "sourceType": "government",
       "impactedTools": [
         "calculadora-seguro-desemprego",
-        "calculadora-insalubridade"
+        "calculadora-insalubridade",
+        "calculadora-inss"
+      ],
+      "updateTriggers": [
+        "salario minimo"
       ],
       "impactedClusters": [
         "calculadora-insalubridade",

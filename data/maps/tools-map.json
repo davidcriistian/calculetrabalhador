@@ -184,6 +184,25 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-inss",
+      "slug": "/calculadora-inss/",
+      "category": "INSS / Previd\u00eancia",
+      "rulesUsed": [
+        "inss",
+        "salario-minimo"
+      ],
+      "dependencies": [
+        "inss",
+        "salario-minimo",
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }
