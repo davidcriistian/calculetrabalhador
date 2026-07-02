@@ -9,7 +9,8 @@
         "calculadora-ferias-clt",
         "calculadora-clt-ou-pj",
         "calculadora-inss",
-        "calculadora-inss-autonomo"
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei"
       ],
       "sources": [
         "data/rules/inss.json",
@@ -48,7 +49,8 @@
         "calculadora-seguro-desemprego",
         "calculadora-insalubridade",
         "calculadora-inss",
-        "calculadora-inss-autonomo"
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei"
       ],
       "sources": [
         "data/rules/inss.json",

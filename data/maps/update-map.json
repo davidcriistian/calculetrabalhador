@@ -12,7 +12,8 @@
         "calculadora-ferias-clt",
         "calculadora-clt-ou-pj",
         "calculadora-inss",
-        "calculadora-inss-autonomo"
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei"
       ],
       "updateTriggers": [
         "teto INSS",
@@ -20,7 +21,12 @@
         "regras do MEI",
         "regras de contribuinte individual/autonomo",
         "planos do contribuinte individual",
-        "atualizacao previdenciaria"
+        "atualizacao previdenciaria",
+        "DAS MEI",
+        "INSS MEI 5%",
+        "INSS MEI Caminhoneiro 12%",
+        "ICMS MEI",
+        "ISS MEI"
       ],
       "impactedClusters": [
         "calculadora-13-salario",
@@ -60,11 +66,13 @@
         "calculadora-seguro-desemprego",
         "calculadora-insalubridade",
         "calculadora-inss",
-        "calculadora-inss-autonomo"
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei"
       ],
       "updateTriggers": [
         "salario minimo",
-        "salario minimo para contribuinte individual"
+        "salario minimo para contribuinte individual",
+        "salario minimo para DAS MEI"
       ],
       "impactedClusters": [
         "calculadora-insalubridade",

@@ -168,6 +168,53 @@
       "status": "complete",
       "priority": "medium",
       "reviewFrequency": "annual"
+    },
+    {
+      "clusterId": "calculadora-inss-mei",
+      "primaryTool": "calculadora-inss-mei",
+      "articleCount": 0,
+      "articles": [],
+      "status": "planned",
+      "priority": "medium",
+      "reviewFrequency": "annual",
+      "category": "INSS",
+      "domain": "Previdenciario / MEI",
+      "keywords": [
+        "INSS MEI",
+        "DAS MEI",
+        "contribuicao MEI",
+        "MEI Caminhoneiro",
+        "ICMS MEI",
+        "ISS MEI",
+        "calcular DAS",
+        "INSS 5%",
+        "INSS 12%",
+        "salario minimo",
+        "microempreendedor"
+      ],
+      "synonyms": [
+        "calcular INSS MEI",
+        "calcular DAS",
+        "contribuicao do MEI",
+        "valor do DAS",
+        "quanto o MEI paga",
+        "INSS do microempreendedor",
+        "DAS MEI 2026",
+        "MEI Caminhoneiro INSS"
+      ],
+      "intents": [
+        "calculation",
+        "comparison",
+        "annual-estimate",
+        "mei-tax-breakdown"
+      ],
+      "relatedTools": [
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-ferias-clt",
+        "calculadora-13-salario",
+        "calculadora-rescisao-clt"
+      ]
     }
   ]
 }

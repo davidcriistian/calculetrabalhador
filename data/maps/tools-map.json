@@ -231,6 +231,84 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-inss-mei",
+      "slug": "/calculadora-inss-mei/",
+      "url": "/calculadora-inss-mei/",
+      "title": "Calculadora INSS MEI",
+      "category": "INSS",
+      "domain": "Previdenciario / MEI",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "keywords": [
+        "INSS MEI",
+        "DAS MEI",
+        "contribuicao MEI",
+        "MEI Caminhoneiro",
+        "ICMS MEI",
+        "ISS MEI",
+        "calcular DAS",
+        "INSS 5%",
+        "INSS 12%",
+        "salario minimo",
+        "microempreendedor"
+      ],
+      "synonyms": [
+        "calcular INSS MEI",
+        "calcular DAS",
+        "contribuicao do MEI",
+        "valor do DAS",
+        "quanto o MEI paga",
+        "INSS do microempreendedor",
+        "DAS MEI 2026",
+        "MEI Caminhoneiro INSS"
+      ],
+      "intents": [
+        "calcular INSS MEI",
+        "calcular DAS MEI",
+        "comparar MEI comum e MEI Caminhoneiro",
+        "estimar DAS mensal",
+        "estimar custo anual do MEI"
+      ],
+      "relatedPages": [
+        "/calculadora-inss/",
+        "/salario-liquido-clt/",
+        "/calculadora-ferias-clt/",
+        "/calculadora-13-salario/",
+        "/calculadora-rescisao-clt/"
+      ],
+      "relatedTools": [
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-ferias-clt",
+        "calculadora-13-salario",
+        "calculadora-rescisao-clt"
+      ],
+      "relatedArticles": [
+        "/blog/tabela-inss-atualizada/",
+        "/blog/como-calcular-salario-liquido/",
+        "/blog/descontos-do-salario-clt/",
+        "/blog/salario-bruto-e-salario-liquido/"
+      ],
+      "rulesUsed": [
+        "inss",
+        "salario-minimo"
+      ],
+      "dependencies": [
+        "inss",
+        "salario-minimo",
+        "mei",
+        "das-mei",
+        "icms",
+        "iss",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }

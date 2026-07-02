@@ -200,5 +200,51 @@
     ],
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-02"
+  },
+  {
+    "id": "calculadora-inss-mei",
+    "slug": "/calculadora-inss-mei/",
+    "url": "/calculadora-inss-mei/",
+    "title": "Calculadora INSS MEI",
+    "description": "Calcule quanto o MEI paga de INSS no DAS, veja os valores com ICMS e ISS, compare MEI comum e MEI Caminhoneiro e obtenha a estimativa mensal e anual.",
+    "category": "INSS",
+    "domain": "Previdenciario / MEI",
+    "keywords": [
+      "INSS MEI",
+      "DAS MEI",
+      "contribuicao MEI",
+      "MEI Caminhoneiro",
+      "ICMS MEI",
+      "ISS MEI",
+      "calcular DAS",
+      "INSS 5%",
+      "INSS 12%",
+      "salario minimo",
+      "microempreendedor"
+    ],
+    "icon": "INSS",
+    "icone": "INSS",
+    "priority": 82,
+    "relatedTools": [
+      "calculadora-inss",
+      "salario-liquido-clt",
+      "calculadora-ferias-clt",
+      "calculadora-13-salario",
+      "calculadora-rescisao-clt"
+    ],
+    "relatedArticles": [
+      "/blog/tabela-inss-atualizada/",
+      "/blog/como-calcular-salario-liquido/",
+      "/blog/descontos-do-salario-clt/",
+      "/blog/salario-bruto-e-salario-liquido/"
+    ],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-02"
   }
 ]
