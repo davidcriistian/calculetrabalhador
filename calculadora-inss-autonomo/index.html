@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de INSS para Aut&ocirc;nomo | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule a contribui&ccedil;&atilde;o do INSS como aut&ocirc;nomo no plano normal de 20% ou no plano simplificado de 11%, com base, teto, mem&oacute;ria de c&aacute;lculo e relat&oacute;rio." />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-inss-autonomo/" />
+  <meta property="og:title" content="Calculadora de INSS para Aut&ocirc;nomo" />
+  <meta property="og:description" content="Simule a contribui&ccedil;&atilde;o previdenci&aacute;ria do contribuinte individual nos planos de 20% e 11%." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-inss-autonomo/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Calculadora de INSS para Aut&ocirc;nomo" />
+  <meta name="twitter:description" content="Veja base usada, teto considerado, al&iacute;quota e valor do INSS para aut&ocirc;nomos." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .print-only { display: none; }
+    @media print {
+      #global-header, .no-print, #descobrir, #simulador, #conteudo-seo, #faq, #fontes, #relacionados, footer { display: none !important; }
+      .print-only { display: block; }
+      body { background: #fff !important; color: #0f172a !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 52%, #2563eb 100%);">
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 16% 36%, rgba(255,255,255,0.08) 0%, transparent 34%), radial-gradient(circle at 88% 16%, rgba(255,255,255,0.10) 0%, transparent 34%);"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">In&iacute;cio</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <span class="text-white">INSS Aut&ocirc;nomo</span>
+        </nav>
+
+        <div class="mt-6 lg:max-w-[78%]">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">Contribuinte individual</span>
+          <h1 class="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora de INSS para Aut&ocirc;nomo</h1>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-blue-50">Informe o sal&aacute;rio de contribui&ccedil;&atilde;o, escolha entre o plano normal de 20% e o simplificado de 11% e veja quanto recolher ao INSS como trabalhador aut&ocirc;nomo.</p>
+          <div class="mt-5 grid gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2 lg:max-w-3xl">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Usa sal&aacute;rio m&iacute;nimo e teto previdenci&aacute;rio</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Compara plano 20% e 11%</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Mem&oacute;ria de c&aacute;lculo detalhada</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Relat&oacute;rio para guardar ou imprimir</span>
+          </div>
+          <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-800 shadow-sm transition hover:bg-blue-50 sm:w-auto">Calcular contribui&ccedil;&atilde;o</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que voc&ecirc; vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">O valor mensal para recolher como aut&ocirc;nomo</h2>
+          </div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-900 ring-1 ring-blue-100 sm:w-auto">Tempo estimado: menos de 1 minuto</span>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Sal&aacute;rio informado</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Plano escolhido</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Base utilizada</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Teto previdenci&aacute;rio</p></div>
+          <div class="rounded-xl bg-slate-50 p-4 sm:col-span-2 lg:col-span-1"><p class="text-sm font-bold leading-6 text-slate-950">Valor da contribui&ccedil;&atilde;o</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <div class="mb-6">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Simulador</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Calcule o INSS do contribuinte individual</h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">Use valores mensais. A ferramenta aplica piso, teto e al&iacute;quota conforme o plano selecionado.</p>
+          </div>
+
+          <form id="inss-autonomo-form" class="min-w-0 space-y-6" aria-label="Calculadora de INSS para Autonomo">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="dados-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm"><span class="font-extrabold">1</span></div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Dados principais</p>
+                  <h3 id="dados-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Informe compet&ecirc;ncia e sal&aacute;rio</h3>
+                  <p class="mt-2 leading-7 text-slate-600">A compet&ecirc;ncia identifica o m&ecirc;s de refer&ecirc;ncia do recolhimento. O sal&aacute;rio de contribui&ccedil;&atilde;o &eacute; a renda mensal usada como base.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Compet&ecirc;ncia</span>
+                  <input id="competencia" type="month" value="2026-01" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Sal&aacute;rio de contribui&ccedil;&atilde;o</span>
+                  <input id="salario-contribuicao" type="text" inputmode="decimal" value="3000,00" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" aria-describedby="salario-ajuda" />
+                  <span id="salario-ajuda" class="mt-2 block text-sm leading-6 text-slate-500">Exemplo: 3000,00. No plano normal, a base respeita o piso e o teto do INSS.</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="plano-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm"><span class="font-extrabold">2</span></div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Plano</p>
+                  <h3 id="plano-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Escolha a al&iacute;quota</h3>
+                  <p class="mt-2 leading-7 text-slate-600">O plano normal usa 20%. O plano simplificado usa 11% sobre o sal&aacute;rio m&iacute;nimo.</p>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-4 md:grid-cols-2">
+                <label data-plan-card class="cursor-pointer rounded-3xl border-2 border-blue-600 bg-gradient-to-br from-blue-50 to-white p-5 shadow-sm ring-4 ring-blue-100/70">
+                  <input class="sr-only" type="radio" name="plano" value="normal_20" checked />
+                  <span class="block text-lg font-extrabold text-blue-950">20%</span>
+                  <span class="mt-2 block text-sm font-bold text-blue-900">Plano normal</span>
+                  <span class="mt-2 block text-sm leading-6 text-blue-900">Calcula sobre a renda informada, respeitando sal&aacute;rio m&iacute;nimo e teto previdenci&aacute;rio.</span>
+                </label>
+                <label data-plan-card class="cursor-pointer rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-300 hover:bg-blue-50">
+                  <input class="sr-only" type="radio" name="plano" value="simplificado_11" />
+                  <span class="block text-lg font-extrabold text-slate-950">11%</span>
+                  <span class="mt-2 block text-sm font-bold text-slate-700">Plano simplificado</span>
+                  <span class="mt-2 block text-sm leading-6 text-slate-600">Calcula sobre o sal&aacute;rio m&iacute;nimo. N&atilde;o usa uma base maior nesta modalidade.</span>
+                </label>
+              </div>
+            </section>
+
+            <div class="rounded-3xl border border-blue-100 bg-blue-50 p-5 shadow-sm sm:p-6">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">&Uacute;ltima etapa</p>
+              <h3 class="mt-1 text-xl font-extrabold text-blue-950">Gerar resultado</h3>
+              <p class="mt-2 leading-7 text-blue-900">O resultado mostrar&aacute; valor informado, plano, base utilizada, sal&aacute;rio m&iacute;nimo, teto, al&iacute;quota e contribui&ccedil;&atilde;o estimada.</p>
+              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-blue-800 sm:w-auto" type="submit">Calcular contribui&ccedil;&atilde;o</button>
+              <p id="form-error" class="mt-3 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700" role="alert"></p>
+            </div>
+          </form>
+
+          <section id="resultado" class="mt-8 hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="resultado-title">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Resultado</p>
+                <h2 id="resultado-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Contribui&ccedil;&atilde;o estimada</h2>
+                <p id="resultado-ajuda" class="mt-2 max-w-3xl leading-7 text-slate-600"></p>
+              </div>
+              <span id="data-source" class="inline-flex rounded-xl bg-slate-100 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-slate-600">Fonte: fallback local</span>
+            </div>
+
+            <div class="mt-6 rounded-3xl bg-blue-700 p-5 text-white sm:p-6">
+              <p class="text-sm font-bold uppercase tracking-wide text-blue-100">Valor do INSS</p>
+              <p id="valor-inss" class="mt-2 break-words text-4xl font-extrabold tracking-normal sm:text-5xl">R$ 0,00</p>
+              <p id="observacoes" class="mt-3 leading-7 text-blue-50"></p>
+            </div>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Sal&aacute;rio informado</p><p id="res-salario" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Plano escolhido</p><p id="res-plano" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Al&iacute;quota</p><p id="res-aliquota" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Base utilizada</p><p id="res-base" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Sal&aacute;rio m&iacute;nimo</p><p id="res-minimo" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Teto considerado</p><p id="res-teto" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+            </div>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memoria-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Mem&oacute;ria de c&aacute;lculo</p>
+              <h3 id="memoria-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo</h3>
+              <ol id="memoria-lista" class="mt-4 space-y-3 text-sm leading-6 text-slate-700"></ol>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="tabela-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Tabela</p>
+              <h3 id="tabela-title" class="mt-1 text-xl font-extrabold text-slate-950">Contribui&ccedil;&otilde;es comparadas</h3>
+              <div class="mt-4 overflow-x-auto">
+                <table class="w-full min-w-[620px] border-collapse text-left text-sm">
+                  <thead class="bg-slate-100 text-slate-700">
+                    <tr>
+                      <th class="px-4 py-3 font-extrabold">Plano</th>
+                      <th class="px-4 py-3 font-extrabold">Base</th>
+                      <th class="px-4 py-3 font-extrabold">Al&iacute;quota</th>
+                      <th class="px-4 py-3 font-extrabold">Direitos e uso</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200 bg-white">
+                    <tr>
+                      <td class="px-4 py-3 font-bold text-slate-950">Plano 20%</td>
+                      <td class="px-4 py-3 text-slate-700">Entre sal&aacute;rio m&iacute;nimo e teto</td>
+                      <td class="px-4 py-3 text-slate-700">20%</td>
+                      <td class="px-4 py-3 text-slate-700">Indicado para quem quer contribuir sobre base maior e manter regra ampla de contagem.</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 font-bold text-slate-950">Plano 11%</td>
+                      <td class="px-4 py-3 text-slate-700">Sal&aacute;rio m&iacute;nimo</td>
+                      <td class="px-4 py-3 text-slate-700">11%</td>
+                      <td class="px-4 py-3 text-slate-700">Op&ccedil;&atilde;o simplificada. Pode ter limita&ccedil;&otilde;es para aposentadoria por tempo de contribui&ccedil;&atilde;o.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- FUTURE_PRODUCT_SLOT -->
+
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="proximos-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&oacute;ximos passos</p>
+              <h3 id="proximos-title" class="mt-1 text-xl font-extrabold text-blue-950">Guarde a mem&oacute;ria e confira o recolhimento</h3>
+              <p class="mt-2 leading-7 text-blue-900">Depois de simular, confira se o c&oacute;digo de pagamento e a compet&ecirc;ncia est&atilde;o corretos antes de emitir ou pagar a GPS.</p>
+            </section>
+
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-white p-4">
+              <p class="text-sm font-bold text-slate-600">A&ccedil;&otilde;es secund&aacute;rias</p>
+              <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="baixarRelatorioInssAutonomo()">Baixar relat&oacute;rio</button>
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="imprimirResultadoInssAutonomo()">Imprimir</button>
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="copiarResultadoInssAutonomo(this)">Copiar resultado</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="conteudo-seo" class="mt-8 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="conteudo-title">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Conte&uacute;do essencial</p>
+            <h2 id="conteudo-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Como funciona o INSS do trabalhador aut&ocirc;nomo</h2>
+            <div class="mt-4 space-y-5 leading-8 text-slate-700">
+              <p>O trabalhador aut&ocirc;nomo costuma recolher o INSS como contribuinte individual. Isso inclui profissionais que prestam servi&ccedil;os por conta pr&oacute;pria, sem v&iacute;nculo de emprego, como diaristas, motoristas, prestadores de servi&ccedil;o, consultores, t&eacute;cnicos e outros trabalhadores que recebem renda pelo pr&oacute;prio trabalho. A contribui&ccedil;&atilde;o cria ou mant&eacute;m a qualidade de segurado e ajuda a formar hist&oacute;rico previdenci&aacute;rio.</p>
+              <p>No plano normal, a al&iacute;quota &eacute; de 20% sobre o sal&aacute;rio de contribui&ccedil;&atilde;o. Esse sal&aacute;rio n&atilde;o pode ficar abaixo do sal&aacute;rio m&iacute;nimo nem acima do teto previdenci&aacute;rio. Se a renda informada for menor que o piso, a calculadora ajusta a base para o sal&aacute;rio m&iacute;nimo. Se for maior que o teto, a parte excedente n&atilde;o aumenta a contribui&ccedil;&atilde;o.</p>
+              <p>No plano simplificado, a al&iacute;quota &eacute; de 11% sobre o sal&aacute;rio m&iacute;nimo. A principal diferen&ccedil;a &eacute; que ele reduz o valor mensal, mas pode limitar alguns objetivos previdenci&aacute;rios, especialmente quando o trabalhador pretende usar o tempo para regras que exigem complementa&ccedil;&atilde;o. Por isso, a escolha entre 20% e 11% n&atilde;o deve considerar apenas o valor do boleto.</p>
+              <p>A GPS, Guia da Previd&ecirc;ncia Social, &eacute; uma das formas tradicionais de recolhimento. Ao preencher a guia, confira compet&ecirc;ncia, identificador, c&oacute;digo de pagamento, valor e data de vencimento. Um erro comum &eacute; pagar com compet&ecirc;ncia errada ou usar um plano incompat&iacute;vel com o objetivo previdenci&aacute;rio. Outro erro frequente &eacute; recolher abaixo do m&iacute;nimo, o que pode exigir regulariza&ccedil;&atilde;o.</p>
+              <p>Contribuir ao INSS pode dar acesso a benef&iacute;cios como aposentadorias, aux&iacute;lio por incapacidade, sal&aacute;rio-maternidade e pens&atilde;o por morte para dependentes, desde que car&ecirc;ncias e requisitos sejam cumpridos. A calculadora n&atilde;o decide direito a benef&iacute;cio; ela mostra a estimativa de contribui&ccedil;&atilde;o com base nos valores vigentes carregados pela tabela trabalhista do projeto.</p>
+              <p>Use o resultado como confer&ecirc;ncia inicial. Antes de recolher, verifique sua situa&ccedil;&atilde;o no Meu INSS, confirme se voc&ecirc; deve contribuir como individual ou por outra categoria e guarde comprovantes. Se houver atraso, atividade concomitante, complementa&ccedil;&atilde;o de plano simplificado ou d&uacute;vida sobre aposentadoria, a an&aacute;lise pode exigir orienta&ccedil;&atilde;o especializada.</p>
+            </div>
+          </section>
+
+          <section id="faq" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="faq-title">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Perguntas frequentes</p>
+            <h2 id="faq-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">FAQ sobre INSS para aut&ocirc;nomo</h2>
+            <div class="mt-5 grid gap-4">
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4" open><summary class="cursor-pointer font-extrabold text-slate-950">Aut&ocirc;nomo paga INSS como contribuinte individual?</summary><p class="mt-2 leading-7 text-slate-700">Em geral, quem exerce atividade remunerada por conta pr&oacute;pria recolhe como contribuinte individual, salvo enquadramentos espec&iacute;ficos.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Qual a diferen&ccedil;a entre 20% e 11%?</summary><p class="mt-2 leading-7 text-slate-700">O plano de 20% usa base entre piso e teto. O plano de 11% &eacute; simplificado e calculado sobre o sal&aacute;rio m&iacute;nimo.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem pode usar o plano simplificado?</summary><p class="mt-2 leading-7 text-slate-700">Ele pode ser usado por contribuintes que aceitam as limita&ccedil;&otilde;es do plano. Se o objetivo depender de regra mais ampla, pode ser necess&aacute;rio complementar.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O que acontece se eu informar valor acima do teto?</summary><p class="mt-2 leading-7 text-slate-700">No plano normal, a base &eacute; limitada ao teto previdenci&aacute;rio. A contribui&ccedil;&atilde;o n&atilde;o aumenta pela parte excedente.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como recolher a contribui&ccedil;&atilde;o?</summary><p class="mt-2 leading-7 text-slate-700">O recolhimento pode ser feito por GPS ou pelos canais indicados pelo INSS, usando compet&ecirc;ncia, identificador e c&oacute;digo corretos.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A calculadora substitui an&aacute;lise previdenci&aacute;ria?</summary><p class="mt-2 leading-7 text-slate-700">N&atilde;o. Ela estima o valor de contribui&ccedil;&atilde;o. Benef&iacute;cios, car&ecirc;ncias, atrasos e complementa&ccedil;&otilde;es exigem confer&ecirc;ncia individual.</p></details>
+            </div>
+          </section>
+
+          <section id="fontes" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Fontes oficiais</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">Refer&ecirc;ncias usadas</h2>
+            <p class="mt-3 leading-8 text-slate-700">A ferramenta prioriza `assets/js/tabelas-trabalhistas.js`, que carrega `data/tabelas-trabalhistas.json`. Caso a carga falhe, usa fallback local embutido nesta pr&oacute;pria p&aacute;gina, com sal&aacute;rio m&iacute;nimo e teto previdenci&aacute;rio.</p>
+          </section>
+
+          <section id="relacionados" class="mt-8 grid gap-4 md:grid-cols-2">
+            <div class="md:col-span-2 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Artigos relacionados</p>
+              <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Leia tamb&eacute;m sobre INSS para aut&ocirc;nomos</h2>
+              <div class="mt-5 grid gap-4 md:grid-cols-3">
+                <a href="/blog/como-calcular-inss-autonomo/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                  <span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">C&aacute;lculo</span>
+                  <span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">Como calcular INSS aut&ocirc;nomo</span>
+                  <span class="mt-2 block text-sm leading-6 text-slate-600">Entenda a base de contribui&ccedil;&atilde;o, piso, teto e al&iacute;quota para contribuinte individual.</span>
+                </a>
+                <a href="/blog/inss-autonomo-plano-20-ou-11/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                  <span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">Planos</span>
+                  <span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">INSS aut&ocirc;nomo: plano 20% ou 11%?</span>
+                  <span class="mt-2 block text-sm leading-6 text-slate-600">Veja as diferen&ccedil;as pr&aacute;ticas entre o plano normal e o plano simplificado.</span>
+                </a>
+                <a href="/blog/como-pagar-gps-inss-autonomo/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50">
+                  <span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">GPS</span>
+                  <span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">Como pagar GPS do INSS como aut&ocirc;nomo</span>
+                  <span class="mt-2 block text-sm leading-6 text-slate-600">Confira cuidados com compet&ecirc;ncia, c&oacute;digo de pagamento e comprovantes.</span>
+                </a>
+              </div>
+            </div>
+
+            <a href="/calculadora-inss/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50">
+              <span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span>
+              <span class="mt-1 block text-xl font-extrabold text-slate-950">Simulador de INSS 2026</span>
+              <span class="mt-2 block leading-7 text-slate-600">Compare tamb&eacute;m CLT, aut&ocirc;nomo e MEI.</span>
+            </a>
+            <a href="/ferramentas/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50">
+              <span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Outras ferramentas</span>
+              <span class="mt-1 block text-xl font-extrabold text-slate-950">Ver calculadoras trabalhistas</span>
+              <span class="mt-2 block leading-7 text-slate-600">Acesse outras simula&ccedil;&otilde;es do Calcule Trabalhador.</span>
+            </a>
+          </section>
+        </div>
+
+        <aside class="hidden lg:sticky lg:top-6 lg:block">
+          <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Nesta p&aacute;gina</p>
+            <nav class="mt-4 grid gap-2 text-sm font-bold text-slate-600" aria-label="Navegacao da ferramenta">
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#simulador">Calculadora</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#resultado">Resultado</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#conteudo-seo">Conte&uacute;do</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#faq">FAQ</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="print-only">
+      <div id="print-report"></div>
+    </section>
+  </main>
+
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+  <script>
+    const INSS_AUTONOMO_DEFAULT_TABLES = {
+      year: 2026,
+      minimumWage: 1621.00,
+      ceiling: 8475.55
+    };
+
+    const INSS_AUTONOMO_PLANS = {
+      normal_20: {
+        label: "Plano normal 20%",
+        rate: 0.20,
+        baseMode: "income",
+        legalNote: "Plano normal do contribuinte individual, com base entre o salario minimo e o teto previdenciario."
+      },
+      simplificado_11: {
+        label: "Plano simplificado 11%",
+        rate: 0.11,
+        baseMode: "minimum",
+        legalNote: "Plano simplificado calculado sobre o salario minimo vigente."
+      }
+    };
+
+    function roundMoney(value) {
+      return Math.round((Number(value) + Number.EPSILON) * 100) / 100;
+    }
+
+    function normalizeInssAutonomoTables(tables) {
+      return {
+        year: Number(tables?.year || tables?.anoBase || tables?.inss?.ano) || INSS_AUTONOMO_DEFAULT_TABLES.year,
+        minimumWage: Number(tables?.minimumWage || tables?.salarioMinimo?.valor) || INSS_AUTONOMO_DEFAULT_TABLES.minimumWage,
+        ceiling: Number(tables?.ceiling || tables?.inss?.teto) || INSS_AUTONOMO_DEFAULT_TABLES.ceiling
+      };
+    }
+
+    function parseBrazilianMoney(value) {
+      if (value === null || value === undefined) return NaN;
+      const normalized = String(value)
+        .trim()
+        .replace(/[^\d,.-]/g, "")
+        .replace(/\./g, "")
+        .replace(",", ".");
+      if (!normalized) return NaN;
+      const parsed = Number.parseFloat(normalized);
+      return Number.isFinite(parsed) ? parsed : NaN;
+    }
+
+    function calculateInssAutonomo(input) {
+      const tables = normalizeInssAutonomoTables(input?.tables);
+      const planKey = input?.plan || "normal_20";
+      const plan = INSS_AUTONOMO_PLANS[planKey] || INSS_AUTONOMO_PLANS.normal_20;
+      const informedIncome = Number(input?.income);
+      const alerts = [];
+      const errors = [];
+
+      if (!Number.isFinite(informedIncome)) {
+        errors.push("Informe um salario de contribuicao valido.");
+      } else if (informedIncome <= 0) {
+        errors.push("Informe um salario de contribuicao maior que zero.");
+      }
+
+      if (errors.length) {
+        return {
+          ok: false,
+          errors,
+          alerts,
+          planKey,
+          planLabel: plan.label,
+          rate: plan.rate,
+          ratePercent: plan.rate * 100,
+          informedIncome: Number.isFinite(informedIncome) ? informedIncome : 0,
+          usedBase: 0,
+          contribution: 0,
+          minimumWage: tables.minimumWage,
+          ceiling: tables.ceiling,
+          legalNote: plan.legalNote,
+          memory: ""
+        };
+      }
+
+      let usedBase = informedIncome;
+      if (plan.baseMode === "minimum") {
+        usedBase = tables.minimumWage;
+      } else {
+        if (informedIncome < tables.minimumWage) {
+          usedBase = tables.minimumWage;
+          alerts.push("Valor informado abaixo do salario minimo; a memoria usa o salario minimo vigente.");
+        }
+        if (informedIncome > tables.ceiling) {
+          usedBase = tables.ceiling;
+          alerts.push("Valor informado acima do teto do INSS; a memoria limita a base ao teto vigente.");
+        }
+      }
+
+      const contribution = roundMoney(usedBase * plan.rate);
+      const ratePercent = plan.rate * 100;
+
+      return {
+        ok: true,
+        errors,
+        alerts,
+        planKey,
+        planLabel: plan.label,
+        rate: plan.rate,
+        ratePercent,
+        informedIncome: roundMoney(informedIncome),
+        usedBase: roundMoney(usedBase),
+        contribution,
+        minimumWage: tables.minimumWage,
+        ceiling: tables.ceiling,
+        legalNote: plan.legalNote,
+        memory: `Salario de contribuicao considerado x ${ratePercent.toLocaleString("pt-BR")}% = contribuicao estimada`
+      };
+    }
+
+    const state = {
+      tables: null,
+      source: "fallback local",
+      latestReport: null
+    };
+
+    function $(id) {
+      return document.getElementById(id);
+    }
+
+    function setText(id, value) {
+      const element = $(id);
+      if (element) element.textContent = value;
+    }
+
+    function formatMoney(value) {
+      return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(Number(value) || 0);
+    }
+
+    function formatPercent(value) {
+      return `${Number(value).toLocaleString("pt-BR", { maximumFractionDigits: 2 })}%`;
+    }
+
+    function formatCompetencia(value) {
+      if (!value) return "Nao informada";
+      const [year, month] = value.split("-");
+      if (!year || !month) return value;
+      return `${month}/${year}`;
+    }
+
+    async function carregarTabelasInssAutonomo() {
+      const helper = window.CalculeTrabalhadorTabelas;
+      try {
+        if (!helper?.carregarTabelasTrabalhistas) throw new Error("helper indisponivel");
+        const tabelas = await helper.carregarTabelasTrabalhistas();
+        const normalizadas = normalizeInssAutonomoTables(tabelas);
+        if (!normalizadas.minimumWage || !normalizadas.ceiling) throw new Error("dados incompletos");
+        state.tables = normalizadas;
+        state.source = "helper central";
+      } catch (error) {
+        state.tables = INSS_AUTONOMO_DEFAULT_TABLES;
+        state.source = "fallback local";
+      }
+      setText("data-source", `Fonte: ${state.source}`);
+      return state.tables;
+    }
+
+    function updatePlanCards() {
+      const selected = document.querySelector('input[name="plano"]:checked')?.value || "normal_20";
+      document.querySelectorAll("[data-plan-card]").forEach((card) => {
+        const isSelected = card.querySelector("input")?.value === selected;
+        card.classList.toggle("border-2", isSelected);
+        card.classList.toggle("border-blue-600", isSelected);
+        card.classList.toggle("bg-gradient-to-br", isSelected);
+        card.classList.toggle("from-blue-50", isSelected);
+        card.classList.toggle("to-white", isSelected);
+        card.classList.toggle("ring-4", isSelected);
+        card.classList.toggle("ring-blue-100/70", isSelected);
+        card.classList.toggle("border", !isSelected);
+        card.classList.toggle("border-slate-200", !isSelected);
+        card.classList.toggle("bg-white", !isSelected);
+        card.querySelectorAll("span").forEach((span) => {
+          span.classList.toggle("text-blue-950", isSelected && span.classList.contains("text-slate-950"));
+          span.classList.toggle("text-blue-900", isSelected && (span.classList.contains("text-slate-700") || span.classList.contains("text-slate-600")));
+        });
+      });
+    }
+
+    function buildMemory(result) {
+      const minimumApplied = result.planKey === "normal_20" && result.informedIncome < result.minimumWage;
+      const ceilingApplied = result.planKey === "normal_20" && result.informedIncome > result.ceiling;
+      return [
+        `Salario informado: ${formatMoney(result.informedIncome)}.`,
+        minimumApplied ? `Aplicacao do piso: base ajustada para o salario minimo de ${formatMoney(result.minimumWage)}.` : `Aplicacao do piso: valor informado nao ficou abaixo de ${formatMoney(result.minimumWage)}.`,
+        ceilingApplied ? `Aplicacao do teto: base limitada ao teto previdenciario de ${formatMoney(result.ceiling)}.` : `Aplicacao do teto: base nao ultrapassou ${formatMoney(result.ceiling)}.`,
+        `Aliquota: ${formatPercent(result.ratePercent)} pelo ${result.planLabel}.`,
+        `Valor final: ${formatMoney(result.usedBase)} x ${formatPercent(result.ratePercent)} = ${formatMoney(result.contribution)}.`
+      ];
+    }
+
+    function renderMemory(items) {
+      const list = $("memoria-lista");
+      if (!list) return;
+      list.innerHTML = items.map((item, index) => `<li class="rounded-2xl bg-white p-4"><span class="font-extrabold text-blue-700">${index + 1}.</span> ${item}</li>`).join("");
+    }
+
+    function getCalculationDateLabel() {
+      return new Date().toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+    }
+
+    function calcularInssAutonomoPage(event) {
+      if (event) event.preventDefault();
+      const errorBox = $("form-error");
+
+      const income = parseBrazilianMoney($("salario-contribuicao")?.value || "");
+      const plan = document.querySelector('input[name="plano"]:checked')?.value || "normal_20";
+      const result = calculateInssAutonomo({ income, plan, tables: state.tables });
+
+      if (!result.ok) {
+        if (errorBox) {
+          errorBox.textContent = result.errors.join(" ");
+          errorBox.classList.remove("hidden");
+        }
+        return result;
+      }
+
+      if (errorBox) errorBox.classList.add("hidden");
+      const alerts = result.alerts.length ? result.alerts.join(" ") : result.legalNote;
+      const competence = formatCompetencia($("competencia")?.value);
+      const memoryItems = buildMemory(result);
+
+      setText("valor-inss", formatMoney(result.contribution));
+      setText("resultado-ajuda", `${result.planLabel}. Base usada: ${formatMoney(result.usedBase)}.`);
+      setText("observacoes", alerts || "Estimativa calculada com os dados informados.");
+      setText("res-salario", formatMoney(result.informedIncome));
+      setText("res-plano", result.planLabel);
+      setText("res-aliquota", formatPercent(result.ratePercent));
+      setText("res-base", formatMoney(result.usedBase));
+      setText("res-minimo", formatMoney(result.minimumWage));
+      setText("res-teto", formatMoney(result.ceiling));
+      renderMemory(memoryItems);
+
+      state.latestReport = {
+        calculationDate: getCalculationDateLabel(),
+        competence,
+        informedIncome: formatMoney(result.informedIncome),
+        plan: result.planLabel,
+        rate: formatPercent(result.ratePercent),
+        base: formatMoney(result.usedBase),
+        minimumWage: formatMoney(result.minimumWage),
+        ceiling: formatMoney(result.ceiling),
+        contribution: formatMoney(result.contribution),
+        observations: alerts || "Sem ajuste adicional.",
+        memory: memoryItems.join(" ")
+      };
+
+      $("resultado")?.classList.remove("hidden");
+      $("resultado")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return result;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    function ensureReport() {
+      if (state.latestReport) return true;
+      alert("Calcule a contribuicao primeiro.");
+      return false;
+    }
+
+    function buildReportHtml(report) {
+      const rows = [
+        ["Data do calculo", report.calculationDate],
+        ["Competencia", report.competence],
+        ["Salario informado", report.informedIncome],
+        ["Plano escolhido", report.plan],
+        ["Aliquota", report.rate],
+        ["Base utilizada", report.base],
+        ["Salario minimo", report.minimumWage],
+        ["Teto considerado", report.ceiling],
+        ["Valor do INSS", report.contribution],
+        ["Observacoes", report.observations],
+        ["Memoria de calculo", report.memory]
+      ].map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`).join("");
+
+      return `<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Relatorio de INSS para Autonomo</title><style>*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#0f172a;font-family:Arial,sans-serif;line-height:1.5}main{max-width:780px;margin:0 auto;padding:32px 20px}.report{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px}.brand{color:#1d4ed8;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{margin:8px 0 22px;font-size:28px;line-height:1.2}table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-top:1px solid #e2e8f0;padding:12px 0;text-align:left;vertical-align:top}th{width:38%;color:#475569;padding-right:18px}.note{margin-top:22px;border-radius:12px;background:#eff6ff;color:#1e3a8a;padding:14px 16px;font-size:14px}@media print{body{background:#fff}main{max-width:none;padding:0}.report{border:0;border-radius:0;padding:0}}</style></head><body><main><section class="report" aria-label="Relatorio de INSS para Autonomo"><div class="brand">Calcule Trabalhador</div><h1>Relatorio de INSS para Autonomo</h1><table><tbody>${rows}</tbody></table><p class="note">Este relatorio e uma estimativa informativa e nao substitui orientacao profissional.</p></section></main><script>window.addEventListener("load",()=>{window.focus();window.print();});<\/script></body></html>`;
+    }
+
+    function openReportWindow() {
+      if (!ensureReport()) return;
+      const reportWindow = window.open("", "_blank");
+      if (!reportWindow) {
+        alert("Nao foi possivel abrir o relatorio. Verifique o bloqueador de pop-ups.");
+        return;
+      }
+      reportWindow.document.open();
+      reportWindow.document.write(buildReportHtml(state.latestReport));
+      reportWindow.document.close();
+    }
+
+    function baixarRelatorioInssAutonomo() {
+      openReportWindow();
+    }
+
+    function imprimirResultadoInssAutonomo() {
+      openReportWindow();
+    }
+
+    function getPlainTextResult(report) {
+      return [
+        "INSS para Autonomo - Calcule Trabalhador",
+        `Competencia: ${report.competence}`,
+        `Salario informado: ${report.informedIncome}`,
+        `Plano: ${report.plan}`,
+        `Aliquota: ${report.rate}`,
+        `Base: ${report.base}`,
+        `Teto: ${report.ceiling}`,
+        `Valor do INSS: ${report.contribution}`,
+        `Observacoes: ${report.observations}`
+      ].join("\n");
+    }
+
+    function fallbackCopyText(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return copied;
+    }
+
+    async function copiarResultadoInssAutonomo(button) {
+      if (!ensureReport()) return;
+      const original = button?.textContent || "";
+      const text = getPlainTextResult(state.latestReport);
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else if (!fallbackCopyText(text)) {
+          throw new Error("copy failed");
+        }
+        if (button) {
+          button.textContent = "Copiado!";
+          window.setTimeout(() => { button.textContent = original; }, 2200);
+        }
+      } catch (error) {
+        if (fallbackCopyText(text)) return;
+        alert("Nao foi possivel copiar o resultado.");
+      }
+    }
+
+    function runInssAutonomoTests() {
+      const tables = { year: 2026, minimumWage: 1621, ceiling: 8475.55 };
+      const cases = [
+        { name: "Plano 20%", income: 2500, plan: "normal_20", expectedBase: 2500, expectedContribution: 500 },
+        { name: "Plano 11%", income: 5000, plan: "simplificado_11", expectedBase: 1621, expectedContribution: 178.31 },
+        { name: "Piso", income: 1000, plan: "normal_20", expectedBase: 1621, expectedContribution: 324.20 },
+        { name: "Teto", income: 8475.55, plan: "normal_20", expectedBase: 8475.55, expectedContribution: 1695.11 },
+        { name: "Acima do teto", income: 10000, plan: "normal_20", expectedBase: 8475.55, expectedContribution: 1695.11 }
+      ];
+      const results = cases.map((testCase) => {
+        const result = calculateInssAutonomo({ income: testCase.income, plan: testCase.plan, tables });
+        const basePass = Math.abs(result.usedBase - testCase.expectedBase) <= 0.01;
+        const contributionPass = Math.abs(result.contribution - testCase.expectedContribution) <= 0.01;
+        const status = basePass && contributionPass ? "PASS" : "FAIL";
+        console.log(`INSS Autonomo | ${testCase.name} | base esperada ${formatMoney(testCase.expectedBase)} | base calculada ${formatMoney(result.usedBase)} | esperado ${formatMoney(testCase.expectedContribution)} | calculado ${formatMoney(result.contribution)} | ${status}`);
+        return { ...testCase, actualBase: result.usedBase, actualContribution: result.contribution, status };
+      });
+      const summary = `${results.filter((item) => item.status === "PASS").length}/${results.length} PASS`;
+      console.log(`INSS Autonomo Total: ${summary}`);
+      return { results, summary };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarTabelasInssAutonomo();
+      document.querySelectorAll('input[name="plano"]').forEach((input) => input.addEventListener("change", updatePlanCards));
+      $("inss-autonomo-form")?.addEventListener("submit", calcularInssAutonomoPage);
+      updatePlanCards();
+    });
+
+    window.calcularInssAutonomoPage = calcularInssAutonomoPage;
+    window.runInssAutonomoTests = runInssAutonomoTests;
+    window.baixarRelatorioInssAutonomo = baixarRelatorioInssAutonomo;
+    window.imprimirResultadoInssAutonomo = imprimirResultadoInssAutonomo;
+    window.copiarResultadoInssAutonomo = copiarResultadoInssAutonomo;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculetrabalhador.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://calculetrabalhador.com.br/ferramentas/" },
+            { "@type": "ListItem", "position": 3, "name": "Calculadora de INSS para Autonomo", "item": "https://calculetrabalhador.com.br/calculadora-inss-autonomo/" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Calculadora de INSS para Autonomo",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "url": "https://calculetrabalhador.com.br/calculadora-inss-autonomo/",
+          "description": "Ferramenta para calcular contribuicao previdenciaria de trabalhador autonomo nos planos de 20% e 11%.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Autonomo paga INSS como contribuinte individual?", "acceptedAnswer": { "@type": "Answer", "text": "Em geral, quem exerce atividade remunerada por conta propria recolhe como contribuinte individual, salvo enquadramentos especificos." } },
+            { "@type": "Question", "name": "Qual a diferenca entre o plano de 20% e o de 11%?", "acceptedAnswer": { "@type": "Answer", "text": "O plano de 20% usa base entre salario minimo e teto previdenciario. O plano de 11% e simplificado e calculado sobre o salario minimo." } },
+            { "@type": "Question", "name": "Quem pode usar o plano simplificado?", "acceptedAnswer": { "@type": "Answer", "text": "Pode ser usado por contribuintes que aceitam as limitacoes do plano. Dependendo do objetivo previdenciario, pode ser necessario complementar." } },
+            { "@type": "Question", "name": "O que acontece se eu informar valor acima do teto?", "acceptedAnswer": { "@type": "Answer", "text": "No plano normal, a base e limitada ao teto previdenciario. A parte excedente nao aumenta a contribuicao." } },
+            { "@type": "Question", "name": "Como recolher a contribuicao?", "acceptedAnswer": { "@type": "Answer", "text": "O recolhimento pode ser feito por GPS ou canais indicados pelo INSS, usando competencia, identificador e codigo corretos." } },
+            { "@type": "Question", "name": "A calculadora substitui analise previdenciaria?", "acceptedAnswer": { "@type": "Answer", "text": "Nao. A ferramenta estima o valor da contribuicao. Beneficios, carencias, atrasos e complementacoes exigem conferencia individual." } }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script src="/assets/js/editorial-metadata.js"></script>
+  <script src="/assets/js/global-layout.js"></script>
+</body>
+</html>

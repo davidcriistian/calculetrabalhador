@@ -8,7 +8,8 @@
         "calculadora-13-salario",
         "calculadora-ferias-clt",
         "calculadora-clt-ou-pj",
-        "calculadora-inss"
+        "calculadora-inss",
+        "calculadora-inss-autonomo"
       ],
       "sources": [
         "data/rules/inss.json",
@@ -46,13 +47,33 @@
       "tools": [
         "calculadora-seguro-desemprego",
         "calculadora-insalubridade",
-        "calculadora-inss"
+        "calculadora-inss",
+        "calculadora-inss-autonomo"
+      ],
+      "sources": [
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
       ],
       "clusters": [
         "calculadora-insalubridade",
         "calculadora-seguro-desemprego"
       ],
       "estimatedArticles": 3,
+      "risk": "high"
+    },
+    {
+      "ruleId": "tetoINSS",
+      "tools": [
+        "calculadora-inss-autonomo"
+      ],
+      "sources": [
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "clusters": [],
+      "estimatedArticles": 0,
       "risk": "high"
     },
     {

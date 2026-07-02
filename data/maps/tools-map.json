@@ -203,6 +203,34 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-inss-autonomo",
+      "slug": "/calculadora-inss-autonomo/",
+      "url": "/calculadora-inss-autonomo/",
+      "category": "Previd\u00eancia / INSS",
+      "domain": "INSS",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "relatedPages": [
+        "/calculadora-inss/"
+      ],
+      "rulesUsed": [
+        "inss",
+        "salario-minimo",
+        "tetoINSS"
+      ],
+      "dependencies": [
+        "inss",
+        "salarioMinimo",
+        "tetoINSS",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }

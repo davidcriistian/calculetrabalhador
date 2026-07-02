@@ -11,13 +11,16 @@
         "calculadora-13-salario",
         "calculadora-ferias-clt",
         "calculadora-clt-ou-pj",
-        "calculadora-inss"
+        "calculadora-inss",
+        "calculadora-inss-autonomo"
       ],
       "updateTriggers": [
         "teto INSS",
         "tabela progressiva INSS",
         "regras do MEI",
-        "regras de contribuinte individual/autonomo"
+        "regras de contribuinte individual/autonomo",
+        "planos do contribuinte individual",
+        "atualizacao previdenciaria"
       ],
       "impactedClusters": [
         "calculadora-13-salario",
@@ -56,16 +59,35 @@
       "impactedTools": [
         "calculadora-seguro-desemprego",
         "calculadora-insalubridade",
-        "calculadora-inss"
+        "calculadora-inss",
+        "calculadora-inss-autonomo"
       ],
       "updateTriggers": [
-        "salario minimo"
+        "salario minimo",
+        "salario minimo para contribuinte individual"
       ],
       "impactedClusters": [
         "calculadora-insalubridade",
         "calculadora-seguro-desemprego"
       ],
       "estimatedAffectedArticles": 3,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "tetoINSS",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-inss-autonomo"
+      ],
+      "updateTriggers": [
+        "teto INSS",
+        "atualizacao previdenciaria",
+        "planos do contribuinte individual"
+      ],
+      "impactedClusters": [],
+      "estimatedAffectedArticles": 0,
       "requiresValidation": true
     },
     {
