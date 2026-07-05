@@ -201,6 +201,22 @@
       ],
       "estimatedArticles": 0,
       "risk": "high"
+    },
+    {
+      "ruleId": "limite-faturamento-mei",
+      "tools": [
+        "calculadora-limite-faturamento-mei-2026"
+      ],
+      "sources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "clusters": [
+        "calculadora-limite-faturamento-mei-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high"
     }
   ]
 }

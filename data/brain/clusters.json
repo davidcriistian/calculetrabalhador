@@ -267,6 +267,60 @@
         "calculadora-rescisao-clt",
         "calculadora-ferias-clt"
       ]
+    },
+    {
+      "clusterId": "calculadora-limite-faturamento-mei-2026",
+      "primaryTool": "calculadora-limite-faturamento-mei-2026",
+      "articleCount": 0,
+      "articles": [],
+      "status": "planned",
+      "priority": "medium",
+      "reviewFrequency": "annual",
+      "category": "MEI",
+      "domain": "Faturamento",
+      "clusterName": "MEI → Faturamento → Limite → DAS",
+      "keywords": [
+        "limite faturamento MEI",
+        "calculadora limite MEI",
+        "simulador faturamento MEI",
+        "faturamento MEI 2026",
+        "limite proporcional MEI",
+        "desenquadramento MEI",
+        "projeção faturamento MEI",
+        "quanto posso faturar MEI",
+        "limite anual MEI",
+        "controle faturamento MEI",
+        "MEI",
+        "limite",
+        "faturamento",
+        "receita",
+        "projeção",
+        "faturamento anual"
+      ],
+      "synonyms": [
+        "simulador faturamento",
+        "limite anual",
+        "teto do MEI",
+        "faturamento máximo",
+        "receita do MEI",
+        "controle financeiro MEI"
+      ],
+      "intents": [
+        "calcular limite do MEI",
+        "quanto posso faturar",
+        "calcular faturamento do MEI",
+        "limite proporcional",
+        "desenquadramento MEI",
+        "projeção do faturamento",
+        "controle do faturamento"
+      ],
+      "relatedTools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei",
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-rescisao-clt"
+      ]
     }
   ]
 }

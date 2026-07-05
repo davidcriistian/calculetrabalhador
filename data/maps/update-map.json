@@ -257,6 +257,29 @@
       ],
       "estimatedAffectedArticles": 0,
       "requiresValidation": true
+    },
+    {
+      "ruleId": "limite-faturamento-mei",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-limite-faturamento-mei-2026"
+      ],
+      "updateTriggers": [
+        "limite faturamento MEI",
+        "faturamento MEI 2026",
+        "limite proporcional MEI",
+        "limite anual MEI",
+        "desenquadramento MEI",
+        "DAS MEI"
+      ],
+      "impactedClusters": [
+        "calculadora-limite-faturamento-mei-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedAffectedArticles": 0,
+      "requiresValidation": true
     }
   ]
 }

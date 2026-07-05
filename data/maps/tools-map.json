@@ -397,6 +397,98 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-limite-faturamento-mei-2026",
+      "slug": "/calculadora-limite-faturamento-mei-2026/",
+      "url": "/calculadora-limite-faturamento-mei-2026/",
+      "title": "Calculadora Limite de Faturamento MEI 2026",
+      "category": "MEI",
+      "domain": "Faturamento",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "keywords": [
+        "limite faturamento MEI",
+        "calculadora limite MEI",
+        "simulador faturamento MEI",
+        "faturamento MEI 2026",
+        "limite proporcional MEI",
+        "desenquadramento MEI",
+        "projeção faturamento MEI",
+        "quanto posso faturar MEI",
+        "limite anual MEI",
+        "controle faturamento MEI",
+        "MEI",
+        "limite",
+        "faturamento",
+        "receita",
+        "projeção",
+        "faturamento anual"
+      ],
+      "synonyms": [
+        "simulador faturamento",
+        "limite anual",
+        "teto do MEI",
+        "faturamento máximo",
+        "receita do MEI",
+        "controle financeiro MEI",
+        "quanto posso faturar",
+        "limite proporcional"
+      ],
+      "intents": [
+        "calcular limite do MEI",
+        "quanto posso faturar",
+        "calcular faturamento do MEI",
+        "limite proporcional",
+        "desenquadramento MEI",
+        "projeção do faturamento",
+        "controle do faturamento"
+      ],
+      "relatedPages": [
+        "/calculadora-das-mei-2026/",
+        "/calculadora-inss-mei/",
+        "/calculadora-inss/",
+        "/salario-liquido-clt/",
+        "/calculadora-rescisao-clt/"
+      ],
+      "relatedTools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei",
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "relatedArticles": [
+        "/blog/limite-faturamento-mei-2026/",
+        "/blog/limite-proporcional-mei/",
+        "/blog/desenquadramento-mei/",
+        "/blog/controle-faturamento-mei/",
+        "/blog/ultrapassar-limite-mei/"
+      ],
+      "rulesUsed": [
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "das-mei"
+      ],
+      "dependencies": [
+        "mei",
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "limite-proporcional-mei",
+        "das-mei",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "annualUpdate": [
+        "limite anual MEI",
+        "limite proporcional MEI",
+        "DAS MEI"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }
