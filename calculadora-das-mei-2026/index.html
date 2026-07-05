@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora DAS MEI 2026 | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule o DAS MEI 2026 por tipo de atividade, com INSS, ICMS, ISS, total mensal, total anual, periodo informado e memoria de calculo." />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-das-mei-2026/" />
+  <meta property="og:title" content="Calculadora DAS MEI 2026" />
+  <meta property="og:description" content="Simule o DAS do MEI comum ou MEI Caminhoneiro com INSS, ICMS, ISS, total anual e relatorio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-das-mei-2026/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Calculadora DAS MEI 2026" />
+  <meta name="twitter:description" content="Veja INSS, ICMS, ISS, DAS mensal, total no periodo e memoria de calculo para MEI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    input, select, button { -webkit-appearance: none; appearance: none; line-height: 1.35; box-sizing: border-box; }
+    select { background-image: linear-gradient(45deg, transparent 50%, #475569 50%), linear-gradient(135deg, #475569 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 2.75rem; }
+    input[type="number"], input[type="text"], select { min-height: 50px; }
+    .print-only { display: none; }
+    @media print {
+      #global-header, .no-print, #descobrir, #simulador, #conteudo-seo, #faq, #fontes, #relacionados, footer { display: none !important; }
+      .print-only { display: block; }
+      body { background: #fff !important; color: #0f172a !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 52%, #2563eb 100%);">
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 16% 36%, rgba(255,255,255,0.08) 0%, transparent 34%), radial-gradient(circle at 88% 16%, rgba(255,255,255,0.10) 0%, transparent 34%);"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">In&iacute;cio</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <span class="text-white">Calculadora DAS MEI 2026</span>
+        </nav>
+
+        <div class="mt-6 lg:max-w-[78%]">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">Previdenci&aacute;rio / MEI</span>
+          <h1 class="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora DAS MEI 2026</h1>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-blue-50">Descubra quanto pagar no DAS do MEI conforme sua atividade, incluindo INSS, ICMS e ISS.</p>
+          <div class="mt-5 grid gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2 lg:max-w-3xl">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">MEI comum: 5% do sal&aacute;rio m&iacute;nimo</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">MEI Caminhoneiro: 12%</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">ICMS e ISS no DAS</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Relat&oacute;rio para guardar ou imprimir</span>
+          </div>
+          <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-800 shadow-sm transition hover:bg-blue-50 sm:w-auto">Calcular DAS MEI</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que voc&ecirc; vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">O custo mensal e anual do DAS MEI</h2>
+          </div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-900 ring-1 ring-blue-100 sm:w-auto">Tempo estimado: menos de 1 minuto</span>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Valor do DAS</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Valor do INSS</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Valor dos impostos</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Total anual</p></div>
+          <div class="rounded-xl bg-slate-50 p-4 sm:col-span-2 lg:col-span-1"><p class="text-sm font-bold leading-6 text-slate-950">Mem&oacute;ria de c&aacute;lculo</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <div class="mb-6">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Simulador</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Calcule o DAS MEI</h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">Escolha o ano, o tipo de MEI, a atividade e a quantidade de meses. A ferramenta estima INSS, impostos fixos, total mensal e total no per&iacute;odo.</p>
+          </div>
+
+          <form id="das-mei-form" class="min-w-0 space-y-6" aria-label="Calculadora DAS MEI 2026">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="dados-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm"><span class="font-extrabold">1</span></div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Dados principais</p>
+                  <h3 id="dados-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Informe ano, tipo e atividade</h3>
+                  <p class="mt-2 leading-7 text-slate-600">O c&aacute;lculo usa o sal&aacute;rio m&iacute;nimo do ano selecionado, aplica a regra do MEI e soma os impostos informados.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Ano de refer&ecirc;ncia</span>
+                  <input id="ano-referencia" type="number" min="2026" max="2026" step="1" value="2026" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Tipo de MEI</span>
+                  <select id="tipo-mei" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4">
+                    <option value="comum">MEI comum</option>
+                    <option value="caminhoneiro">MEI Caminhoneiro</option>
+                  </select>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Tipo de atividade</span>
+                  <select id="tipo-atividade" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4">
+                    <option value="icms">Com&eacute;rcio - ICMS</option>
+                    <option value="iss">Servi&ccedil;os - ISS</option>
+                    <option value="icms_iss">Com&eacute;rcio e Servi&ccedil;os - ICMS + ISS</option>
+                    <option value="apenas_inss">Apenas INSS</option>
+                  </select>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Quantidade de meses para estimativa anual</span>
+                  <input id="quantidade-meses" type="number" min="1" max="12" step="1" value="12" class="mt-2 block w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+              </div>
+            </section>
+
+            <div class="rounded-3xl border border-blue-100 bg-blue-50 p-5 shadow-sm sm:p-6">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">&Uacute;ltima etapa</p>
+              <h3 class="mt-1 text-xl font-extrabold text-blue-950">Confira os dados antes de calcular</h3>
+              <p class="mt-2 leading-7 text-blue-900">A calculadora vai usar o sal&aacute;rio m&iacute;nimo do ano selecionado, aplicar a regra do MEI e somar os impostos informados para estimar o valor mensal do DAS.</p>
+              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-blue-800 sm:w-auto" type="submit">Calcular DAS MEI</button>
+              <p id="form-error" class="mt-3 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700" role="alert"></p>
+            </div>
+          </form>
+
+          <section id="resultado" class="mt-8 hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="resultado-title">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Resultado</p>
+                <h2 id="resultado-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">DAS mensal estimado</h2>
+                <p id="resultado-ajuda" class="mt-2 max-w-3xl leading-7 text-slate-600"></p>
+              </div>
+              <span id="data-source" class="inline-flex rounded-xl bg-slate-100 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-slate-600">Fonte: fallback local</span>
+            </div>
+
+            <div class="mt-6 rounded-3xl bg-blue-700 p-5 text-white sm:p-6">
+              <p class="text-sm font-bold uppercase tracking-wide text-blue-100">Total mensal estimado</p>
+              <p id="valor-total-mensal" class="mt-2 break-words text-4xl font-extrabold tracking-normal sm:text-5xl">R$ 0,00</p>
+              <p id="observacoes" class="mt-3 leading-7 text-blue-50"></p>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2" id="badges-resultado"></div>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Valor do INSS</p><p id="res-inss" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">ICMS</p><p id="res-icms" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">ISS</p><p id="res-iss" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Total anual</p><p id="res-anual" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Total no per&iacute;odo</p><p id="res-periodo" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Regra aplicada</p><p id="res-regra" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+            </div>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memoria-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Mem&oacute;ria de c&aacute;lculo</p>
+              <h3 id="memoria-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo</h3>
+              <ol id="memoria-lista" class="mt-4 space-y-3 text-sm leading-6 text-slate-700"></ol>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="tabela-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Tabela</p>
+              <h3 id="tabela-title" class="mt-1 text-xl font-extrabold text-slate-950">Itens do DAS estimado</h3>
+              <div class="mt-4 max-w-full overflow-x-auto" style="-webkit-overflow-scrolling: touch;">
+                <table class="w-full min-w-[620px] border-collapse text-left text-sm">
+                  <thead class="bg-slate-100 text-slate-700">
+                    <tr>
+                      <th class="px-4 py-3 font-extrabold">Item</th>
+                      <th class="px-4 py-3 font-extrabold">Regra</th>
+                      <th class="px-4 py-3 font-extrabold">Valor mensal</th>
+                    <th class="px-4 py-3 font-extrabold">Valor anual</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabela-resultado" class="divide-y divide-slate-200 bg-white"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="aviso-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-amber-700">Aviso</p>
+              <h3 id="aviso-title" class="mt-1 text-xl font-extrabold text-amber-950">C&aacute;lculo informativo</h3>
+              <p class="mt-2 leading-7 text-amber-900">Este c&aacute;lculo &eacute; informativo, n&atilde;o substitui consulta ao PGMEI/Simples Nacional e n&atilde;o confirma direito a benef&iacute;cio previdenci&aacute;rio.</p>
+            </section>
+
+            <!-- FUTURE_PRODUCT_SLOT -->
+
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="proximos-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&oacute;ximos passos</p>
+              <h3 id="proximos-title" class="mt-1 text-xl font-extrabold text-blue-950">Confira o DAS no canal oficial</h3>
+              <p class="mt-2 leading-7 text-blue-900">Depois de simular, confira a atividade cadastrada, a compet&ecirc;ncia e o valor emitido no PGMEI antes de pagar.</p>
+            </section>
+
+            <section class="mt-7 grid gap-4 md:grid-cols-2" aria-label="Relacionados pos resultado">
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Artigos relacionados</p>
+                <div class="mt-4 grid gap-2 text-sm font-bold text-slate-700">
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/o-que-e-das-mei/">O que &eacute; DAS MEI</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/como-emitir-das-mei/">Como emitir DAS MEI</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/inss-do-mei/">INSS do MEI</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/mei-caminhoneiro/">MEI Caminhoneiro</a>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramentas relacionadas</p>
+                <div class="mt-4 grid gap-2 text-sm font-bold text-slate-700">
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-inss-mei/">Calculadora INSS MEI</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-inss/">Calculadora de INSS</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/salario-liquido-clt/">Calculadora de sal&aacute;rio l&iacute;quido</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-rescisao-clt/">Calculadora de rescis&atilde;o</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-ferias-clt/">Calculadora de f&eacute;rias CLT</a>
+                </div>
+              </div>
+            </section>
+
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-white p-4">
+              <p class="text-sm font-bold text-slate-600">A&ccedil;&otilde;es secund&aacute;rias</p>
+              <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="baixarRelatorioDasMei()">Baixar relat&oacute;rio</button>
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="imprimirResultadoDasMei()">Imprimir</button>
+                <button class="inline-flex w-full items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 sm:w-auto" type="button" onclick="copiarResultadoDasMei(this)">Copiar resultado</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="conteudo-seo" class="mt-8 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="conteudo-title">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Conte&uacute;do essencial</p>
+            <h2 id="conteudo-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Como funciona o DAS MEI no pagamento mensal</h2>
+            <div class="mt-4 space-y-5 leading-8 text-slate-700">
+              <p>O DAS MEI &eacute; o Documento de Arrecada&ccedil;&atilde;o do Simples Nacional pago mensalmente pelo microempreendedor individual. Ele re&uacute;ne a contribui&ccedil;&atilde;o previdenci&aacute;ria ao INSS e, conforme a atividade cadastrada, valores fixos de ICMS e ISS. Essa guia simplifica a rotina do MEI porque concentra a obriga&ccedil;&atilde;o principal em um pagamento mensal, mas ainda exige confer&ecirc;ncia de compet&ecirc;ncia, atividade, vencimento e valor emitido no canal oficial.</p>
+              <p>Para o MEI comum, a contribui&ccedil;&atilde;o previdenci&aacute;ria usada nesta calculadora &eacute; de 5% do sal&aacute;rio m&iacute;nimo vigente. Com o sal&aacute;rio m&iacute;nimo de 2026 informado no fallback local, de R$ 1.621,00, o INSS mensal fica em R$ 81,05. Para o MEI Caminhoneiro, a regra simulada aplica 12% do sal&aacute;rio m&iacute;nimo, chegando a R$ 194,52. Como o sal&aacute;rio m&iacute;nimo pode mudar a cada ano, o valor do DAS tamb&eacute;m pode ser reajustado quando a base oficial muda.</p>
+              <p>O DAS do MEI tamb&eacute;m pode ter impostos fixos. Atividades de com&eacute;rcio costumam somar ICMS, que nesta ferramenta entra como R$ 1,00. Atividades de servi&ccedil;os somam ISS, estimado em R$ 5,00. Quando a empresa tem com&eacute;rcio e servi&ccedil;os, a simula&ccedil;&atilde;o soma os dois valores. Se a atividade escolhida for apenas INSS, o resultado mostra somente a contribui&ccedil;&atilde;o previdenci&aacute;ria, sem ICMS e sem ISS.</p>
+              <p>A f&oacute;rmula mensal &eacute; simples: sal&aacute;rio m&iacute;nimo multiplicado pelo percentual do tipo de MEI, depois soma dos impostos aplic&aacute;veis. Um MEI comum de servi&ccedil;os, por exemplo, tem R$ 81,05 de INSS e R$ 5,00 de ISS, totalizando R$ 86,05. Em 12 meses, essa estimativa chega a R$ 1.032,60. A tabela do resultado separa cada componente para deixar claro o que &eacute; previdenci&aacute;rio e o que &eacute; imposto fixo.</p>
+              <p>Quando o sal&aacute;rio m&iacute;nimo muda, a parcela de INSS muda junto, porque o percentual do MEI &eacute; aplicado sobre essa base. J&aacute; ICMS e ISS, quando mantidos como valores fixos, n&atilde;o aumentam na mesma propor&ccedil;&atilde;o do sal&aacute;rio m&iacute;nimo. Por isso, duas compet&ecirc;ncias de anos diferentes podem ter DAS diferentes mesmo quando a atividade do MEI n&atilde;o mudou.</p>
+              <p>A contribui&ccedil;&atilde;o como MEI pode ajudar a manter prote&ccedil;&atilde;o previdenci&aacute;ria e acesso a benef&iacute;cios como aposentadoria por idade, aux&iacute;lio por incapacidade, sal&aacute;rio-maternidade e pens&atilde;o por morte para dependentes, sempre respeitando car&ecirc;ncias e requisitos legais. O ponto importante &eacute; que, quando h&aacute; apenas contribui&ccedil;&atilde;o como MEI, o benef&iacute;cio tende a ficar limitado ao sal&aacute;rio m&iacute;nimo, pois a base previdenci&aacute;ria usada &eacute; o pr&oacute;prio sal&aacute;rio m&iacute;nimo.</p>
+              <p>O MEI Caminhoneiro tem tratamento previdenci&aacute;rio diferente na simula&ccedil;&atilde;o porque a parcela de INSS usa 12% do sal&aacute;rio m&iacute;nimo, n&atilde;o 5%. Com a base de 2026 usada no fallback local, isso gera R$ 194,52 antes de eventual ICMS ou ISS. A atividade continua relevante: se houver com&eacute;rcio, servi&ccedil;os ou ambos, a guia pode somar os impostos fixos indicados no formul&aacute;rio.</p>
+              <p>Para emitir a guia, o caminho pr&aacute;tico &eacute; conferir o cadastro do CNPJ MEI, acessar o PGMEI ou o ambiente oficial indicado pelo Simples Nacional, escolher a compet&ecirc;ncia e gerar o DAS. Antes de pagar, compare o valor emitido oficialmente com a mem&oacute;ria da calculadora. Se houver diverg&ecirc;ncia, prevalece a guia oficial, pois ela considera o cadastro, situa&ccedil;&atilde;o da empresa e regras vigentes no sistema.</p>
+              <p>Evitar atrasos &eacute; importante para n&atilde;o acumular multa, juros e pend&ecirc;ncias. O n&atilde;o pagamento pode prejudicar a regularidade do MEI, dificultar emiss&atilde;o de certid&otilde;es, gerar cobran&ccedil;as e afetar a contagem previdenci&aacute;ria quando os recolhimentos n&atilde;o s&atilde;o regularizados. Use a estimativa para planejar caixa, mas guarde comprovantes e acompanhe mensalmente a situa&ccedil;&atilde;o no sistema oficial.</p>
+              <p>Tamb&eacute;m &eacute; importante separar valor mensal de planejamento anual. O DAS &eacute; cobrado por compet&ecirc;ncia, mas muitos empreendedores preferem enxergar o custo acumulado para organizar caixa, precificar servi&ccedil;os e prever despesas fixas. Por isso o formul&aacute;rio permite informar de 1 a 12 meses. Se o MEI abriu ou encerrou atividade no meio do ano, a estimativa por per&iacute;odo ajuda a visualizar apenas os meses relevantes, sem transformar a simula&ccedil;&atilde;o em confirma&ccedil;&atilde;o de d&eacute;bito oficial.</p>
+              <p>A diferen&ccedil;a entre com&eacute;rcio, servi&ccedil;o e atividades mistas deve acompanhar o cadastro real do CNPJ MEI. Um prestador de servi&ccedil;os usa ISS; uma atividade de com&eacute;rcio usa ICMS; e algumas combina&ccedil;&otilde;es podem somar os dois. Quando a atividade cadastrada n&atilde;o reflete a opera&ccedil;&atilde;o atual, o valor do DAS e as obriga&ccedil;&otilde;es podem ficar desalinhados. A calculadora mostra a mec&acirc;nica do valor, mas n&atilde;o altera cadastro nem substitui a confer&ecirc;ncia no sistema oficial.</p>
+              <p>O resultado &eacute; estimativo porque a emiss&atilde;o oficial depende do cadastro do MEI, da atividade, da compet&ecirc;ncia, de eventuais altera&ccedil;&otilde;es legais e do sistema oficial. Use esta p&aacute;gina para entender a composi&ccedil;&atilde;o do DAS, conferir ordens de grandeza e guardar uma mem&oacute;ria de c&aacute;lculo. Antes de pagar, confira o valor emitido no PGMEI/Simples Nacional.</p>
+            </div>
+          </section>
+
+          <section id="faq" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="faq-title">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Perguntas frequentes</p>
+            <h2 id="faq-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">FAQ sobre DAS MEI</h2>
+            <div class="mt-5 grid gap-4">
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4" open><summary class="cursor-pointer font-extrabold text-slate-950">O que &eacute; DAS MEI?</summary><p class="mt-2 leading-7 text-slate-700">O DAS MEI &eacute; a guia mensal que re&uacute;ne INSS e, conforme a atividade, ICMS e ISS do microempreendedor individual.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quanto custa o DAS em 2026?</summary><p class="mt-2 leading-7 text-slate-700">Nesta simula&ccedil;&atilde;o, o MEI comum paga R$ 81,05 apenas de INSS. Com com&eacute;rcio fica R$ 82,05, com servi&ccedil;os R$ 86,05 e com ambos R$ 87,05.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem paga ICMS?</summary><p class="mt-2 leading-7 text-slate-700">Atividades de com&eacute;rcio ou ind&uacute;stria costumam somar ICMS fixo ao DAS. Nesta ferramenta o valor usado &eacute; R$ 1,00.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem paga ISS?</summary><p class="mt-2 leading-7 text-slate-700">Atividades de servi&ccedil;os costumam somar ISS fixo ao DAS. Nesta ferramenta o valor usado &eacute; R$ 5,00.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O Caminhoneiro paga diferente?</summary><p class="mt-2 leading-7 text-slate-700">Sim. O MEI Caminhoneiro usa 12% do sal&aacute;rio m&iacute;nimo para o INSS, enquanto o MEI comum usa 5%.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso pagar somente o INSS?</summary><p class="mt-2 leading-7 text-slate-700">A op&ccedil;&atilde;o apenas INSS serve para simula&ccedil;&atilde;o quando n&atilde;o h&aacute; ICMS nem ISS aplicados. Confira sempre a guia oficial.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como emitir o DAS?</summary><p class="mt-2 leading-7 text-slate-700">A emiss&atilde;o deve ser feita no PGMEI ou canal oficial do Simples Nacional, escolhendo a compet&ecirc;ncia correta antes do pagamento.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso pagar atrasado?</summary><p class="mt-2 leading-7 text-slate-700">Em geral, &eacute; poss&iacute;vel emitir guia em atraso com acr&eacute;scimos. Verifique multa, juros e situa&ccedil;&atilde;o do CNPJ no sistema oficial.</p></details>
+            </div>
+          </section>
+
+          <section id="fontes" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Fontes oficiais</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">Refer&ecirc;ncias usadas</h2>
+            <p class="mt-3 leading-8 text-slate-700">A ferramenta prioriza <code>assets/js/tabelas-trabalhistas.js</code>, que carrega <code>data/tabelas-trabalhistas.json</code>. Caso a carga falhe, usa fallback local 2026 com sal&aacute;rio m&iacute;nimo de R$ 1.621,00, DAS MEI de 5%, DAS MEI Caminhoneiro de 12%, ICMS de R$ 1,00 e ISS de R$ 5,00. As confer&ecirc;ncias finais devem ser feitas no PGMEI/Simples Nacional e nos canais oficiais da Previd&ecirc;ncia.</p>
+          </section>
+
+          <section id="relacionados" class="mt-8 grid gap-4 md:grid-cols-2">
+            <div class="md:col-span-2 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Artigos relacionados</p>
+              <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Leia tamb&eacute;m sobre DAS MEI</h2>
+              <div class="mt-5 grid gap-4 md:grid-cols-4">
+                <a href="/blog/o-que-e-das-mei/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50"><span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">DAS</span><span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">O que &eacute; DAS MEI</span></a>
+                <a href="/blog/como-emitir-das-mei/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50"><span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">Guia</span><span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">Como emitir DAS MEI</span></a>
+                <a href="/blog/inss-do-mei/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50"><span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">INSS</span><span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">INSS do MEI</span></a>
+                <a href="/blog/mei-caminhoneiro/" class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:border-blue-200 hover:bg-blue-50"><span class="text-xs font-extrabold uppercase tracking-wide text-blue-700">MEI</span><span class="mt-2 block text-lg font-extrabold leading-7 text-slate-950">MEI Caminhoneiro</span></a>
+              </div>
+            </div>
+
+            <a href="/calculadora-inss-mei/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50"><span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span><span class="mt-1 block text-xl font-extrabold text-slate-950">Calculadora INSS MEI</span></a>
+            <a href="/calculadora-inss/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50"><span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span><span class="mt-1 block text-xl font-extrabold text-slate-950">Calculadora de INSS</span></a>
+            <a href="/salario-liquido-clt/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50"><span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span><span class="mt-1 block text-xl font-extrabold text-slate-950">Calculadora de sal&aacute;rio l&iacute;quido</span></a>
+            <a href="/calculadora-rescisao-clt/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50"><span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span><span class="mt-1 block text-xl font-extrabold text-slate-950">Calculadora de rescis&atilde;o</span></a>
+            <a href="/calculadora-ferias-clt/" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50 md:col-span-2"><span class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramenta relacionada</span><span class="mt-1 block text-xl font-extrabold text-slate-950">Calculadora de f&eacute;rias CLT</span></a>
+          </section>
+        </div>
+
+        <aside class="hidden lg:sticky lg:top-6 lg:block">
+          <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Nesta p&aacute;gina</p>
+            <nav class="mt-4 grid gap-2 text-sm font-bold text-slate-600" aria-label="Navegacao da ferramenta">
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#simulador">Calculadora</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#resultado">Resultado</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#conteudo-seo">Conte&uacute;do</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#faq">FAQ</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="print-only">
+      <div id="print-report"></div>
+    </section>
+  </main>
+  <div id="global-footer"></div>
+
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+  <script>
+    const DAS_MEI_DEFAULT_TABLES = {
+      year: 2026,
+      salarioMinimo: 1621.00,
+      inssMeiPercentual: 0.05,
+      inssMeiCaminhoneiroPercentual: 0.12,
+      icms: 1.00,
+      iss: 5.00
+    };
+
+    const MEI_TYPES = {
+      comum: { label: "MEI comum", rateKey: "inssMeiPercentual", defaultRate: 0.05 },
+      caminhoneiro: { label: "MEI Caminhoneiro", rateKey: "inssMeiCaminhoneiroPercentual", defaultRate: 0.12 }
+    };
+
+    const ACTIVITY_TYPES = {
+      icms: { label: "Comercio - ICMS", icms: true, iss: false },
+      iss: { label: "Servicos - ISS", icms: false, iss: true },
+      icms_iss: { label: "Comercio e Servicos - ICMS + ISS", icms: true, iss: true },
+      apenas_inss: { label: "Apenas INSS", icms: false, iss: false }
+    };
+
+    const state = { tables: null, source: "fallback local", latestReport: null };
+
+    function $(id) { return document.getElementById(id); }
+    function roundMoney(value) { return Math.round((Number(value) + Number.EPSILON) * 100) / 100; }
+    function formatMoney(value) { return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(Number(value) || 0); }
+    function formatPercent(value) { return `${(Number(value) * 100).toLocaleString("pt-BR", { maximumFractionDigits: 2 })}%`; }
+    function setText(id, value) { const element = $(id); if (element) element.textContent = value; }
+
+    function normalizeDasMeiTables(tables) {
+      return {
+        year: Number(tables?.year || tables?.anoBase || tables?.salarioMinimo?.ano) || DAS_MEI_DEFAULT_TABLES.year,
+        salarioMinimo: Number(tables?.salarioMinimo?.valor || tables?.salarioMinimo || tables?.minimumWage) || DAS_MEI_DEFAULT_TABLES.salarioMinimo,
+        inssMeiPercentual: Number(tables?.inssMeiPercentual || tables?.mei?.comum?.inssRate) || DAS_MEI_DEFAULT_TABLES.inssMeiPercentual,
+        inssMeiCaminhoneiroPercentual: Number(tables?.inssMeiCaminhoneiroPercentual || tables?.mei?.caminhoneiro?.inssRate) || DAS_MEI_DEFAULT_TABLES.inssMeiCaminhoneiroPercentual,
+        icms: Number(tables?.icms || tables?.mei?.icms) || DAS_MEI_DEFAULT_TABLES.icms,
+        iss: Number(tables?.iss || tables?.mei?.iss) || DAS_MEI_DEFAULT_TABLES.iss
+      };
+    }
+
+    async function carregarTabelasDasMei() {
+      const helper = window.CalculeTrabalhadorTabelas;
+      try {
+        if (!helper?.carregarTabelasTrabalhistas) throw new Error("helper indisponivel");
+        const tabelas = await helper.carregarTabelasTrabalhistas();
+        const normalizadas = normalizeDasMeiTables(tabelas);
+        if (!normalizadas.salarioMinimo) throw new Error("dados incompletos");
+        state.tables = normalizadas;
+        state.source = "helper central";
+      } catch (error) {
+        state.tables = { ...DAS_MEI_DEFAULT_TABLES };
+        state.source = "fallback local";
+      }
+      setText("data-source", `Fonte: ${state.source}`);
+      return state.tables;
+    }
+
+    function calculateDasMei(input = {}) {
+      const tables = normalizeDasMeiTables(input.tables || state.tables || DAS_MEI_DEFAULT_TABLES);
+      const meiKey = input.tipoMei || "comum";
+      const activityKey = input.tipoAtividade || "apenas_inss";
+      const meses = Math.max(1, Math.min(12, Number(input.meses) || 12));
+      const meiType = MEI_TYPES[meiKey] || MEI_TYPES.comum;
+      const activity = ACTIVITY_TYPES[activityKey] || ACTIVITY_TYPES.apenas_inss;
+      const rate = Number(tables[meiType.rateKey]) || meiType.defaultRate;
+      const inss = roundMoney(tables.salarioMinimo * rate);
+      const icms = activity.icms ? roundMoney(tables.icms) : 0;
+      const iss = activity.iss ? roundMoney(tables.iss) : 0;
+      const totalDas = roundMoney(inss + icms + iss);
+      const diferencaImpostos = roundMoney(icms + iss);
+      const totalAnual = roundMoney(totalDas * 12);
+      const totalPeriodo = roundMoney(totalDas * meses);
+
+      return {
+        ok: true,
+        ano: Number(input.ano) || tables.year,
+        meses,
+        meiKey,
+        meiLabel: meiType.label,
+        activityKey,
+        activityLabel: activity.label,
+        salarioMinimo: roundMoney(tables.salarioMinimo),
+        rate,
+        inss,
+        icms,
+        iss,
+        totalDas,
+        diferencaImpostos,
+        totalAnual,
+        totalPeriodo,
+        regra: `${meiType.label}: ${formatPercent(rate)} do salario minimo`
+      };
+    }
+
+    function buildMemory(result) {
+      return [
+        `Dado informado: ${result.meiLabel}, ${result.activityLabel}, ${result.meses} mes(es).`,
+        `Salario minimo usado: ${formatMoney(result.salarioMinimo)}.`,
+        `Percentual aplicado: ${formatPercent(result.rate)}.`,
+        `Valor do INSS: ${formatMoney(result.salarioMinimo)} x ${formatPercent(result.rate)} = ${formatMoney(result.inss)}.`,
+        `Impostos adicionados: ICMS ${formatMoney(result.icms)} + ISS ${formatMoney(result.iss)} = ${formatMoney(result.diferencaImpostos)}.`,
+        `Total mensal: ${formatMoney(result.inss)} + ${formatMoney(result.diferencaImpostos)} = ${formatMoney(result.totalDas)}.`,
+        `Total anual: ${formatMoney(result.totalDas)} x 12 = ${formatMoney(result.totalAnual)}.`,
+        `Total no periodo informado: ${formatMoney(result.totalDas)} x ${result.meses} = ${formatMoney(result.totalPeriodo)}.`
+      ];
+    }
+
+    function renderMemory(items) {
+      const list = $("memoria-lista");
+      if (!list) return;
+      list.innerHTML = items.map((item, index) => `<li class="rounded-2xl bg-white p-4"><span class="font-extrabold text-blue-700">${index + 1}.</span> ${item}</li>`).join("");
+    }
+
+    function renderBadges(result) {
+      const badges = $("badges-resultado");
+      if (!badges) return;
+      const items = [result.meiLabel, result.activityLabel, `${result.meses} mes(es)`, `Ano ${result.ano}`];
+      badges.innerHTML = items.map((item) => `<span class="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide text-blue-800 ring-1 ring-blue-100">${item}</span>`).join("");
+    }
+
+    function renderTable(result) {
+      const rows = [
+        ["INSS", `${formatPercent(result.rate)} do salario minimo`, result.inss, result.inss * 12],
+        ["ICMS", result.icms > 0 ? "Valor fixo de comercio" : "Nao aplicado", result.icms, result.icms * 12],
+        ["ISS", result.iss > 0 ? "Valor fixo de servicos" : "Nao aplicado", result.iss, result.iss * 12],
+        ["Total DAS", "INSS + impostos do DAS", result.totalDas, result.totalAnual]
+      ];
+      const tbody = $("tabela-resultado");
+      if (!tbody) return;
+      tbody.innerHTML = rows.map(([item, regra, mensal, anual]) => `<tr><td class="px-4 py-3 font-bold text-slate-950">${item}</td><td class="px-4 py-3 text-slate-700">${regra}</td><td class="px-4 py-3 text-slate-700">${formatMoney(mensal)}</td><td class="px-4 py-3 text-slate-700">${formatMoney(anual)}</td></tr>`).join("");
+    }
+
+    function getCalculationDateLabel() {
+      return new Date().toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+    }
+
+    function calcularDasMeiPage(event) {
+      if (event) event.preventDefault();
+      const errorBox = $("form-error");
+      const ano = Number($("ano-referencia")?.value || 2026);
+      const meses = Number($("quantidade-meses")?.value || 12);
+      if (ano !== 2026 || meses < 1 || meses > 12) {
+        if (errorBox) {
+          errorBox.textContent = "Use ano 2026 e quantidade de meses entre 1 e 12.";
+          errorBox.classList.remove("hidden");
+        }
+        return { ok: false };
+      }
+      if (errorBox) errorBox.classList.add("hidden");
+
+      const result = calculateDasMei({
+        ano,
+        meses,
+        tipoMei: $("tipo-mei")?.value,
+        tipoAtividade: $("tipo-atividade")?.value,
+        tables: state.tables
+      });
+      const memoryItems = buildMemory(result);
+
+      setText("valor-total-mensal", formatMoney(result.totalDas));
+      setText("resultado-ajuda", `${result.meiLabel} em atividade ${result.activityLabel}. DAS mensal estimado: ${formatMoney(result.totalDas)}.`);
+      setText("observacoes", "Quando houver apenas contribuicao como MEI, o beneficio previdenciario tende a ficar limitado ao salario minimo.");
+      setText("res-inss", formatMoney(result.inss));
+      setText("res-icms", formatMoney(result.icms));
+      setText("res-iss", formatMoney(result.iss));
+      setText("res-anual", formatMoney(result.totalAnual));
+      setText("res-periodo", formatMoney(result.totalPeriodo));
+      setText("res-regra", result.regra);
+      renderBadges(result);
+      renderMemory(memoryItems);
+      renderTable(result);
+
+      state.latestReport = {
+        calculationDate: getCalculationDateLabel(),
+        ano: String(result.ano),
+        meses: String(result.meses),
+        tipoMei: result.meiLabel,
+        atividade: result.activityLabel,
+        salarioMinimo: formatMoney(result.salarioMinimo),
+        regra: result.regra,
+        inss: formatMoney(result.inss),
+        icms: formatMoney(result.icms),
+        iss: formatMoney(result.iss),
+        totalDas: formatMoney(result.totalDas),
+        totalAnual: formatMoney(result.totalAnual),
+        totalPeriodo: formatMoney(result.totalPeriodo),
+        memory: memoryItems.join(" "),
+        legalNote: "Calculo informativo. Nao substitui consulta ao PGMEI/Simples Nacional."
+      };
+
+      $("resultado")?.classList.remove("hidden");
+      $("resultado")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return result;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    function ensureReport() {
+      if (state.latestReport) return true;
+      alert("Calcule o DAS MEI primeiro.");
+      return false;
+    }
+
+    function buildReportHtml(report) {
+      const rows = [
+        ["Data do calculo", report.calculationDate],
+        ["Ano", report.ano],
+        ["Meses", report.meses],
+        ["Tipo de MEI", report.tipoMei],
+        ["Atividade", report.atividade],
+        ["Salario minimo usado", report.salarioMinimo],
+        ["Regra aplicada", report.regra],
+        ["Valor do INSS", report.inss],
+        ["ICMS", report.icms],
+        ["ISS", report.iss],
+        ["Total DAS mensal", report.totalDas],
+        ["Total anual", report.totalAnual],
+        ["Total no periodo informado", report.totalPeriodo],
+        ["Memoria de calculo", report.memory],
+        ["Observacao legal", report.legalNote],
+        ["Fontes oficiais", "PGMEI/Simples Nacional, Previdencia Social e tabela trabalhista central do projeto."]
+      ].map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`).join("");
+      return `<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Relatorio DAS MEI</title><style>*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#0f172a;font-family:Arial,sans-serif;line-height:1.5}main{max-width:820px;margin:0 auto;padding:32px 20px}.report{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px}.brand{color:#1d4ed8;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h2{margin:8px 0 22px;font-size:28px;line-height:1.2}table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-top:1px solid #e2e8f0;padding:12px 0;text-align:left;vertical-align:top}th{width:36%;color:#475569;padding-right:18px}.note{margin-top:22px;border-radius:12px;background:#eff6ff;color:#1e3a8a;padding:14px 16px;font-size:14px}@media print{body{background:#fff}main{max-width:none;padding:0}.report{border:0;border-radius:0;padding:0}}</style></head><body><main><section class="report" aria-label="Relatorio DAS MEI"><div class="brand">Calcule Trabalhador</div><h2>Relatorio DAS MEI</h2><table><tbody>${rows}</tbody></table><p class="note">Este relatorio nao contem produto e serve apenas como memoria informativa.</p></section></main><script>window.addEventListener("load",()=>{window.focus();window.print();});<\/script></body></html>`;
+    }
+
+    function openReportWindow() {
+      if (!ensureReport()) return;
+      const reportWindow = window.open("", "_blank");
+      if (!reportWindow) {
+        alert("Nao foi possivel abrir o relatorio. Verifique o bloqueador de pop-ups.");
+        return;
+      }
+      reportWindow.document.open();
+      reportWindow.document.write(buildReportHtml(state.latestReport));
+      reportWindow.document.close();
+    }
+
+    function baixarRelatorioDasMei() { openReportWindow(); }
+    function imprimirResultadoDasMei() { openReportWindow(); }
+
+    function getPlainTextResult(report) {
+      return [
+        "DAS MEI - Calcule Trabalhador",
+        `Ano: ${report.ano}`,
+        `Tipo de MEI: ${report.tipoMei}`,
+        `Atividade: ${report.atividade}`,
+        `INSS: ${report.inss}`,
+        `ICMS: ${report.icms}`,
+        `ISS: ${report.iss}`,
+        `Total DAS mensal: ${report.totalDas}`,
+        `Total anual: ${report.totalAnual}`,
+        `Total no periodo: ${report.totalPeriodo}`,
+        `Observacao: ${report.legalNote}`
+      ].join("\n");
+    }
+
+    function fallbackCopyText(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return copied;
+    }
+
+    async function copiarResultadoDasMei(button) {
+      if (!ensureReport()) return;
+      const original = button?.textContent || "";
+      const text = getPlainTextResult(state.latestReport);
+      try {
+        if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+        else if (!fallbackCopyText(text)) throw new Error("copy failed");
+        if (button) {
+          button.textContent = "Copiado!";
+          window.setTimeout(() => { button.textContent = original; }, 2200);
+        }
+      } catch (error) {
+        if (fallbackCopyText(text)) return;
+        alert("Nao foi possivel copiar o resultado.");
+      }
+    }
+
+    function testarCalculadoraDasMei() {
+      const tables = { ...DAS_MEI_DEFAULT_TABLES };
+      const cases = [
+        { name: "MEI comum, apenas INSS", tipoMei: "comum", tipoAtividade: "apenas_inss", meses: 12, expectedInss: 81.05, expectedTotal: 81.05 },
+        { name: "MEI comum, comercio", tipoMei: "comum", tipoAtividade: "icms", meses: 12, expectedInss: 81.05, expectedTotal: 82.05 },
+        { name: "MEI comum, servicos", tipoMei: "comum", tipoAtividade: "iss", meses: 12, expectedInss: 81.05, expectedTotal: 86.05 },
+        { name: "MEI comum, comercio e servicos", tipoMei: "comum", tipoAtividade: "icms_iss", meses: 12, expectedInss: 81.05, expectedTotal: 87.05 },
+        { name: "MEI Caminhoneiro, apenas INSS", tipoMei: "caminhoneiro", tipoAtividade: "apenas_inss", meses: 12, expectedInss: 194.52, expectedTotal: 194.52 },
+        { name: "Total anual comercio e servicos", tipoMei: "comum", tipoAtividade: "icms_iss", meses: 12, expectedInss: 81.05, expectedTotal: 87.05, expectedPeriod: 1044.60 }
+      ];
+      const results = cases.map((testCase) => {
+        const result = calculateDasMei({ ...testCase, tables });
+        const inssPass = Math.abs(result.inss - testCase.expectedInss) <= 0.01;
+        const totalPass = Math.abs(result.totalDas - testCase.expectedTotal) <= 0.01;
+        const periodPass = testCase.expectedPeriod === undefined || Math.abs(result.totalPeriodo - testCase.expectedPeriod) <= 0.01;
+        const status = inssPass && totalPass && periodPass ? "PASS" : "FAIL";
+        console.log(`DAS MEI | ${testCase.name} | INSS ${formatMoney(result.inss)} | total ${formatMoney(result.totalDas)} | periodo ${formatMoney(result.totalPeriodo)} | ${status}`);
+        return { name: testCase.name, status, result };
+      });
+      const summary = `${results.filter((item) => item.status === "PASS").length}/${results.length} PASS`;
+      console.log(`DAS MEI Total: ${summary}`);
+      return { results, summary };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarTabelasDasMei();
+      $("das-mei-form")?.addEventListener("submit", calcularDasMeiPage);
+    });
+
+    window.calculateDasMei = calculateDasMei;
+    window.calcularDasMeiPage = calcularDasMeiPage;
+    window.testarCalculadoraDasMei = testarCalculadoraDasMei;
+    window.baixarRelatorioDasMei = baixarRelatorioDasMei;
+    window.imprimirResultadoDasMei = imprimirResultadoDasMei;
+    window.copiarResultadoDasMei = copiarResultadoDasMei;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculetrabalhador.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://calculetrabalhador.com.br/ferramentas/" },
+            { "@type": "ListItem", "position": 3, "name": "Calculadora DAS MEI 2026", "item": "https://calculetrabalhador.com.br/calculadora-das-mei-2026/" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Calculadora DAS MEI 2026",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "url": "https://calculetrabalhador.com.br/calculadora-das-mei-2026/",
+          "description": "Ferramenta para calcular o DAS MEI 2026 com INSS, ICMS, ISS, total mensal, total anual e valor por periodo informado.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "O que e DAS MEI?", "acceptedAnswer": { "@type": "Answer", "text": "O DAS MEI e a guia mensal que reune INSS e, conforme a atividade, ICMS e ISS do microempreendedor individual." } },
+            { "@type": "Question", "name": "Quanto custa o DAS em 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Nesta simulacao, o MEI comum paga R$ 81,05 apenas de INSS. Com comercio fica R$ 82,05, com servicos R$ 86,05 e com ambos R$ 87,05." } },
+            { "@type": "Question", "name": "Quem paga ICMS?", "acceptedAnswer": { "@type": "Answer", "text": "Atividades de comercio costumam somar ICMS fixo ao DAS. Nesta ferramenta o valor usado e R$ 1,00." } },
+            { "@type": "Question", "name": "Quem paga ISS?", "acceptedAnswer": { "@type": "Answer", "text": "Atividades de servicos costumam somar ISS fixo ao DAS. Nesta ferramenta o valor usado e R$ 5,00." } },
+            { "@type": "Question", "name": "O Caminhoneiro paga diferente?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O MEI Caminhoneiro usa 12% do salario minimo para o INSS, enquanto o MEI comum usa 5%." } },
+            { "@type": "Question", "name": "Posso pagar somente o INSS?", "acceptedAnswer": { "@type": "Answer", "text": "A opcao apenas INSS serve para simulacao quando nao ha ICMS nem ISS aplicados. Confira sempre a guia oficial." } },
+            { "@type": "Question", "name": "Como emitir o DAS?", "acceptedAnswer": { "@type": "Answer", "text": "A emissao deve ser feita no PGMEI ou canal oficial do Simples Nacional, escolhendo a competencia correta antes do pagamento." } },
+            { "@type": "Question", "name": "Posso pagar atrasado?", "acceptedAnswer": { "@type": "Answer", "text": "Em geral, e possivel emitir guia em atraso com acrescimos. Verifique multa, juros e situacao do CNPJ no sistema oficial." } }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script src="/assets/js/editorial-metadata.js"></script>
+  <script src="/assets/js/global-layout.js"></script>
+</body>
+</html>

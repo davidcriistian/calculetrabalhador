@@ -13,7 +13,8 @@
         "calculadora-clt-ou-pj",
         "calculadora-inss",
         "calculadora-inss-autonomo",
-        "calculadora-inss-mei"
+        "calculadora-inss-mei",
+        "calculadora-das-mei-2026"
       ],
       "updateTriggers": [
         "teto INSS",
@@ -26,7 +27,10 @@
         "INSS MEI 5%",
         "INSS MEI Caminhoneiro 12%",
         "ICMS MEI",
-        "ISS MEI"
+        "ISS MEI",
+        "DAS MEI 2026",
+        "INSS MEI",
+        "MEI Caminhoneiro"
       ],
       "impactedClusters": [
         "calculadora-13-salario",
@@ -67,12 +71,14 @@
         "calculadora-insalubridade",
         "calculadora-inss",
         "calculadora-inss-autonomo",
-        "calculadora-inss-mei"
+        "calculadora-inss-mei",
+        "calculadora-das-mei-2026"
       ],
       "updateTriggers": [
         "salario minimo",
         "salario minimo para contribuinte individual",
-        "salario minimo para DAS MEI"
+        "salario minimo para DAS MEI",
+        "atualizacao anual do DAS MEI"
       ],
       "impactedClusters": [
         "calculadora-insalubridade",
@@ -225,6 +231,31 @@
         "calculadora-rescisao-clt"
       ],
       "estimatedAffectedArticles": 3,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "das-mei",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei"
+      ],
+      "updateTriggers": [
+        "DAS MEI",
+        "DAS MEI 2026",
+        "guia DAS",
+        "Simples Nacional MEI",
+        "ICMS MEI",
+        "ISS MEI",
+        "MEI Caminhoneiro"
+      ],
+      "impactedClusters": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei"
+      ],
+      "estimatedAffectedArticles": 0,
       "requiresValidation": true
     }
   ]

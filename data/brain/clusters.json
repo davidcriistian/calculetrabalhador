@@ -215,6 +215,58 @@
         "calculadora-13-salario",
         "calculadora-rescisao-clt"
       ]
+    },
+    {
+      "clusterId": "calculadora-das-mei-2026",
+      "primaryTool": "calculadora-das-mei-2026",
+      "articleCount": 0,
+      "articles": [],
+      "status": "planned",
+      "priority": "medium",
+      "reviewFrequency": "annual",
+      "category": "Tributos",
+      "domain": "MEI",
+      "clusterName": "MEI / DAS / INSS",
+      "keywords": [
+        "DAS MEI",
+        "DAS MEI 2026",
+        "calcular DAS MEI",
+        "guia DAS",
+        "INSS MEI",
+        "ICMS MEI",
+        "ISS MEI",
+        "MEI Caminhoneiro",
+        "Simples Nacional MEI",
+        "contribuicao MEI",
+        "boleto MEI",
+        "comercio",
+        "servicos"
+      ],
+      "synonyms": [
+        "guia DAS",
+        "boleto MEI",
+        "contribuicao mensal MEI",
+        "Simples Nacional MEI",
+        "imposto do MEI",
+        "DAS do microempreendedor",
+        "valor do MEI mensal",
+        "DAS caminhoneiro"
+      ],
+      "intents": [
+        "calcular DAS MEI",
+        "saber valor do DAS MEI 2026",
+        "calcular guia mensal do MEI",
+        "comparar DAS comercio e servicos",
+        "calcular MEI Caminhoneiro",
+        "entender INSS, ICMS e ISS no DAS"
+      ],
+      "relatedTools": [
+        "calculadora-inss-mei",
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-rescisao-clt",
+        "calculadora-ferias-clt"
+      ]
     }
   ]
 }

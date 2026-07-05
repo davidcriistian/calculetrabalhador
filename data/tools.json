@@ -166,8 +166,8 @@
     "id": "calculadora-inss",
     "title": "Simulador de INSS 2026",
     "slug": "/calculadora-inss/",
-    "category": "INSS / Previd\u00eancia",
-    "description": "Calcule a contribui\u00e7\u00e3o do INSS para CLT, aut\u00f4nomo e MEI com mem\u00f3ria de c\u00e1lculo, relat\u00f3rio e explica\u00e7\u00e3o simples.",
+    "category": "INSS / Previdência",
+    "description": "Calcule a contribuição do INSS para CLT, autônomo e MEI com memória de cálculo, relatório e explicação simples.",
     "icone": "INSS",
     "badge": "NOVO",
     "badgeColor": "#16a34a",
@@ -179,11 +179,11 @@
   },
   {
     "id": "calculadora-inss-autonomo",
-    "title": "Calculadora de INSS para Aut\u00f4nomo",
+    "title": "Calculadora de INSS para Autônomo",
     "slug": "/calculadora-inss-autonomo/",
     "url": "/calculadora-inss-autonomo/",
-    "category": "Previd\u00eancia / INSS",
-    "description": "Calcule a contribui\u00e7\u00e3o previdenci\u00e1ria como aut\u00f4nomo nos planos de 20% e 11%, com base, teto, al\u00edquota e mem\u00f3ria de c\u00e1lculo.",
+    "category": "Previdência / INSS",
+    "description": "Calcule a contribuição previdenciária como autônomo nos planos de 20% e 11%, com base, teto, alíquota e memória de cálculo.",
     "icone": "INSS",
     "badge": null,
     "badgeColor": null,
@@ -246,5 +246,60 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-02"
+  },
+  {
+    "id": "calculadora-das-mei-2026",
+    "slug": "/calculadora-das-mei-2026/",
+    "url": "/calculadora-das-mei-2026/",
+    "title": "Calculadora DAS MEI 2026",
+    "description": "Calcule o valor do DAS MEI 2026 com INSS, ICMS e ISS conforme o tipo de atividade e veja a estimativa mensal e anual.",
+    "category": "Tributos",
+    "domain": "MEI",
+    "keywords": [
+      "DAS MEI",
+      "DAS MEI 2026",
+      "calcular DAS MEI",
+      "guia DAS",
+      "INSS MEI",
+      "ICMS MEI",
+      "ISS MEI",
+      "MEI Caminhoneiro",
+      "Simples Nacional MEI",
+      "contribuicao MEI",
+      "boleto MEI",
+      "comercio",
+      "servicos"
+    ],
+    "icon": "DAS",
+    "icone": "DAS",
+    "priority": 84,
+    "relatedTools": [
+      "calculadora-inss-mei",
+      "calculadora-inss",
+      "salario-liquido-clt",
+      "calculadora-rescisao-clt",
+      "calculadora-ferias-clt"
+    ],
+    "relatedPages": [
+      "/calculadora-inss-mei/",
+      "/calculadora-inss/",
+      "/salario-liquido-clt/",
+      "/calculadora-rescisao-clt/",
+      "/calculadora-ferias-clt/"
+    ],
+    "relatedArticles": [
+      "/blog/o-que-e-das-mei/",
+      "/blog/como-emitir-das-mei/",
+      "/blog/inss-do-mei/",
+      "/blog/mei-caminhoneiro/"
+    ],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-05"
   }
 ]

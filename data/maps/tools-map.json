@@ -188,7 +188,7 @@
     {
       "id": "calculadora-inss",
       "slug": "/calculadora-inss/",
-      "category": "INSS / Previd\u00eancia",
+      "category": "INSS / Previdência",
       "rulesUsed": [
         "inss",
         "salario-minimo"
@@ -208,7 +208,7 @@
       "id": "calculadora-inss-autonomo",
       "slug": "/calculadora-inss-autonomo/",
       "url": "/calculadora-inss-autonomo/",
-      "category": "Previd\u00eancia / INSS",
+      "category": "Previdência / INSS",
       "domain": "INSS",
       "helper": "assets/js/tabelas-trabalhistas.js",
       "runtime": "static-html",
@@ -303,6 +303,94 @@
         "icms",
         "iss",
         "assets/js/tabelas-trabalhistas.js"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
+    },
+    {
+      "id": "calculadora-das-mei-2026",
+      "slug": "/calculadora-das-mei-2026/",
+      "url": "/calculadora-das-mei-2026/",
+      "title": "Calculadora DAS MEI 2026",
+      "category": "Tributos",
+      "domain": "MEI",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "keywords": [
+        "DAS MEI",
+        "DAS MEI 2026",
+        "calcular DAS MEI",
+        "guia DAS",
+        "INSS MEI",
+        "ICMS MEI",
+        "ISS MEI",
+        "MEI Caminhoneiro",
+        "Simples Nacional MEI",
+        "contribuicao MEI",
+        "boleto MEI",
+        "comercio",
+        "servicos"
+      ],
+      "synonyms": [
+        "guia DAS",
+        "boleto MEI",
+        "contribuicao mensal MEI",
+        "Simples Nacional MEI",
+        "imposto do MEI",
+        "DAS do microempreendedor",
+        "valor do MEI mensal",
+        "DAS caminhoneiro"
+      ],
+      "intents": [
+        "calcular DAS MEI",
+        "saber valor do DAS MEI 2026",
+        "calcular guia mensal do MEI",
+        "comparar DAS comercio e servicos",
+        "calcular MEI Caminhoneiro",
+        "entender INSS, ICMS e ISS no DAS"
+      ],
+      "relatedPages": [
+        "/calculadora-inss-mei/",
+        "/calculadora-inss/",
+        "/salario-liquido-clt/",
+        "/calculadora-rescisao-clt/",
+        "/calculadora-ferias-clt/"
+      ],
+      "relatedTools": [
+        "calculadora-inss-mei",
+        "calculadora-inss",
+        "salario-liquido-clt",
+        "calculadora-rescisao-clt",
+        "calculadora-ferias-clt"
+      ],
+      "relatedArticles": [
+        "/blog/o-que-e-das-mei/",
+        "/blog/como-emitir-das-mei/",
+        "/blog/inss-do-mei/",
+        "/blog/mei-caminhoneiro/"
+      ],
+      "rulesUsed": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss"
+      ],
+      "dependencies": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "annualUpdate": [
+        "salario-minimo",
+        "DAS MEI"
       ],
       "version": "1.0.0",
       "type": "calculator",
