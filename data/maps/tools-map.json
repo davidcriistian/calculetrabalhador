@@ -489,6 +489,102 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-das-mei-atraso-2026",
+      "slug": "/calculadora-das-mei-atraso-2026/",
+      "url": "/calculadora-das-mei-atraso-2026/",
+      "title": "Calculadora DAS MEI em Atraso 2026",
+      "category": "Tributos",
+      "domain": "MEI",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "keywords": [
+        "DAS MEI em atraso",
+        "calcular DAS atrasado",
+        "DAS vencido",
+        "multa DAS MEI",
+        "juros DAS MEI",
+        "guia DAS atualizada",
+        "pagar DAS vencido",
+        "regularizar MEI",
+        "parcelamento MEI",
+        "boleto MEI atrasado",
+        "DAS",
+        "MEI",
+        "atraso",
+        "vencido",
+        "multa",
+        "juros",
+        "guia atualizada",
+        "boleto MEI"
+      ],
+      "synonyms": [
+        "DAS vencido",
+        "boleto MEI atrasado",
+        "guia DAS vencida",
+        "DAS atrasado",
+        "divida MEI",
+        "debito MEI",
+        "guia atualizada MEI",
+        "Simples Nacional MEI em atraso"
+      ],
+      "intents": [
+        "calcular DAS MEI em atraso",
+        "calcular DAS vencido",
+        "saber multa do DAS MEI",
+        "saber juros do DAS MEI",
+        "atualizar guia DAS",
+        "pagar DAS atrasado",
+        "regularizar MEI",
+        "calcular boleto MEI vencido"
+      ],
+      "relatedPages": [
+        "/calculadora-das-mei-2026/",
+        "/calculadora-inss-mei/",
+        "/calculadora-limite-faturamento-mei-2026/",
+        "/calculadora-inss/",
+        "/calculadora-rescisao-clt/"
+      ],
+      "relatedTools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei",
+        "calculadora-limite-faturamento-mei-2026",
+        "calculadora-inss",
+        "calculadora-rescisao-clt"
+      ],
+      "relatedArticles": [
+        "/blog/das-mei-em-atraso/",
+        "/blog/como-emitir-das-atualizado/",
+        "/blog/multa-do-das-mei/",
+        "/blog/parcelamento-mei/",
+        "/blog/regularizar-mei/"
+      ],
+      "rulesUsed": [
+        "das-mei",
+        "multa-das-mei",
+        "juros-das-mei",
+        "calendario-das-mei"
+      ],
+      "dependencies": [
+        "das-mei",
+        "multa",
+        "juros",
+        "calendario",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "annualUpdate": [
+        "regras do DAS",
+        "multa DAS MEI",
+        "juros DAS MEI",
+        "calendario DAS"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }

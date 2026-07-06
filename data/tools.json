@@ -360,5 +360,66 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-05"
+  },
+  {
+    "id": "calculadora-das-mei-atraso-2026",
+    "slug": "/calculadora-das-mei-atraso-2026/",
+    "url": "/calculadora-das-mei-atraso-2026/",
+    "title": "Calculadora DAS MEI em Atraso 2026",
+    "description": "Calcule multa, juros, dias de atraso e valor atualizado do DAS MEI vencido.",
+    "category": "Tributos",
+    "domain": "MEI",
+    "keywords": [
+      "DAS MEI em atraso",
+      "calcular DAS atrasado",
+      "DAS vencido",
+      "multa DAS MEI",
+      "juros DAS MEI",
+      "guia DAS atualizada",
+      "pagar DAS vencido",
+      "regularizar MEI",
+      "parcelamento MEI",
+      "boleto MEI atrasado",
+      "DAS",
+      "MEI",
+      "atraso",
+      "vencido",
+      "multa",
+      "juros",
+      "guia atualizada",
+      "boleto MEI"
+    ],
+    "icon": "DAS",
+    "icone": "DAS",
+    "priority": 86,
+    "relatedTools": [
+      "calculadora-das-mei-2026",
+      "calculadora-inss-mei",
+      "calculadora-limite-faturamento-mei-2026",
+      "calculadora-inss",
+      "calculadora-rescisao-clt"
+    ],
+    "relatedPages": [
+      "/calculadora-das-mei-2026/",
+      "/calculadora-inss-mei/",
+      "/calculadora-limite-faturamento-mei-2026/",
+      "/calculadora-inss/",
+      "/calculadora-rescisao-clt/"
+    ],
+    "relatedArticles": [
+      "/blog/das-mei-em-atraso/",
+      "/blog/como-emitir-das-atualizado/",
+      "/blog/multa-do-das-mei/",
+      "/blog/parcelamento-mei/",
+      "/blog/regularizar-mei/"
+    ],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-05"
   }
 ]

@@ -321,6 +321,57 @@
         "salario-liquido-clt",
         "calculadora-rescisao-clt"
       ]
+    },
+    {
+      "clusterId": "calculadora-das-mei-atraso-2026",
+      "primaryTool": "calculadora-das-mei-atraso-2026",
+      "articleCount": 0,
+      "articles": [],
+      "status": "planned",
+      "priority": "medium",
+      "reviewFrequency": "annual",
+      "category": "Tributos",
+      "domain": "MEI",
+      "clusterName": "MEI → DAS → Atraso → Regularização",
+      "keywords": [
+        "DAS MEI em atraso",
+        "calcular DAS atrasado",
+        "DAS vencido",
+        "multa DAS MEI",
+        "juros DAS MEI",
+        "guia DAS atualizada",
+        "pagar DAS vencido",
+        "regularizar MEI",
+        "parcelamento MEI",
+        "boleto MEI atrasado"
+      ],
+      "synonyms": [
+        "DAS vencido",
+        "boleto MEI atrasado",
+        "guia DAS vencida",
+        "DAS atrasado",
+        "divida MEI",
+        "debito MEI",
+        "guia atualizada MEI",
+        "Simples Nacional MEI em atraso"
+      ],
+      "intents": [
+        "calcular DAS MEI em atraso",
+        "calcular DAS vencido",
+        "saber multa do DAS MEI",
+        "saber juros do DAS MEI",
+        "atualizar guia DAS",
+        "pagar DAS atrasado",
+        "regularizar MEI",
+        "calcular boleto MEI vencido"
+      ],
+      "relatedTools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei",
+        "calculadora-limite-faturamento-mei-2026",
+        "calculadora-inss",
+        "calculadora-rescisao-clt"
+      ]
     }
   ]
 }

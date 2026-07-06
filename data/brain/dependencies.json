@@ -217,6 +217,22 @@
       ],
       "estimatedArticles": 0,
       "risk": "high"
+    },
+    {
+      "ruleId": "das-mei-atraso",
+      "tools": [
+        "calculadora-das-mei-atraso-2026"
+      ],
+      "sources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "clusters": [
+        "calculadora-das-mei-atraso-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high"
     }
   ]
 }

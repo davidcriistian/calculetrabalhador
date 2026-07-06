@@ -280,6 +280,30 @@
       ],
       "estimatedAffectedArticles": 0,
       "requiresValidation": true
+    },
+    {
+      "ruleId": "das-mei-atraso",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "government",
+      "impactedTools": [
+        "calculadora-das-mei-atraso-2026"
+      ],
+      "updateTriggers": [
+        "DAS MEI em atraso",
+        "calcular DAS atrasado",
+        "multa DAS MEI",
+        "juros DAS MEI",
+        "guia DAS atualizada",
+        "calendario DAS",
+        "regras do DAS"
+      ],
+      "impactedClusters": [
+        "calculadora-das-mei-atraso-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedAffectedArticles": 0,
+      "requiresValidation": true
     }
   ]
 }
