@@ -372,6 +372,56 @@
         "calculadora-inss",
         "calculadora-rescisao-clt"
       ]
+    },
+    {
+      "clusterId": "calculadora-multa-40-fgts",
+      "primaryTool": "calculadora-multa-40-fgts",
+      "articleCount": 0,
+      "articles": [],
+      "status": "planned",
+      "priority": "high",
+      "reviewFrequency": "annual",
+      "category": "Rescisão",
+      "domain": "FGTS",
+      "clusterName": "FGTS / Rescisão / Demissão",
+      "keywords": [
+        "multa de 40% do FGTS",
+        "calcular multa FGTS",
+        "multa rescisória FGTS",
+        "multa 40 FGTS",
+        "multa 20 FGTS",
+        "acordo trabalhista FGTS",
+        "demissão sem justa causa",
+        "rescisão FGTS",
+        "base do FGTS",
+        "saldo FGTS"
+      ],
+      "synonyms": [
+        "multa FGTS",
+        "multa rescisória",
+        "40 por cento do FGTS",
+        "multa do fundo de garantia",
+        "indenização do FGTS",
+        "FGTS na rescisão",
+        "multa no acordo",
+        "multa de 20% do FGTS"
+      ],
+      "intents": [
+        "calcular multa de 40% do FGTS",
+        "saber quanto recebo de multa FGTS",
+        "calcular multa rescisória",
+        "comparar multa de 40% e 20%",
+        "calcular FGTS na demissão",
+        "saber multa no acordo trabalhista",
+        "estimar multa por salário e meses"
+      ],
+      "relatedTools": [
+        "calculadora-rescisao-clt",
+        "saque-aniversario-fgts",
+        "salario-liquido-clt",
+        "calculadora-ferias-clt",
+        "calculadora-13-salario"
+      ]
     }
   ]
 }

@@ -421,5 +421,66 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-05"
+  },
+  {
+    "id": "calculadora-multa-40-fgts",
+    "slug": "/calculadora-multa-40-fgts/",
+    "url": "/calculadora-multa-40-fgts/",
+    "title": "Calculadora Multa de 40% do FGTS",
+    "description": "Calcule a multa rescisória do FGTS em demissão sem justa causa ou acordo trabalhista.",
+    "category": "Rescisão",
+    "domain": "FGTS",
+    "keywords": [
+      "multa de 40% do FGTS",
+      "calcular multa FGTS",
+      "multa rescisória FGTS",
+      "multa 40 FGTS",
+      "multa 20 FGTS",
+      "acordo trabalhista FGTS",
+      "demissão sem justa causa",
+      "rescisão FGTS",
+      "base do FGTS",
+      "saldo FGTS",
+      "multa FGTS",
+      "multa de 40",
+      "40% FGTS",
+      "acordo trabalhista",
+      "multa de 20",
+      "rescisão",
+      "base FGTS",
+      "fundo de garantia"
+    ],
+    "icon": "FGTS",
+    "icone": "FGTS",
+    "priority": 87,
+    "relatedTools": [
+      "calculadora-rescisao-clt",
+      "saque-aniversario-fgts",
+      "salario-liquido-clt",
+      "calculadora-ferias-clt",
+      "calculadora-13-salario"
+    ],
+    "relatedPages": [
+      "/calculadora-rescisao-clt/",
+      "/saque-aniversario-fgts/",
+      "/salario-liquido-clt/",
+      "/calculadora-ferias-clt/",
+      "/calculadora-13-salario/"
+    ],
+    "relatedArticles": [
+      "/blog/multa-de-40-do-fgts-como-calcular/",
+      "/blog/rescisao-sem-justa-causa/",
+      "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+      "/blog/como-calcular-rescisao-clt/",
+      "/blog/aviso-previo-trabalhado-ou-indenizado/"
+    ],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-05"
   }
 ]

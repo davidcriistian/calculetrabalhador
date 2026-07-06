@@ -112,12 +112,14 @@
       "impactedTools": [
         "saque-aniversario-fgts",
         "calculadora-rescisao-clt",
-        "calculadora-clt-ou-pj"
+        "calculadora-clt-ou-pj",
+        "calculadora-multa-40-fgts"
       ],
       "impactedClusters": [
         "calculadora-clt-ou-pj",
         "calculadora-rescisao-clt",
-        "saque-aniversario-fgts"
+        "saque-aniversario-fgts",
+        "calculadora-multa-40-fgts"
       ],
       "estimatedAffectedArticles": 5,
       "requiresValidation": true
@@ -301,6 +303,31 @@
       "impactedClusters": [
         "calculadora-das-mei-atraso-2026",
         "calculadora-das-mei-2026"
+      ],
+      "estimatedAffectedArticles": 0,
+      "requiresValidation": true
+    },
+    {
+      "ruleId": "multa-fgts",
+      "frequency": "annual",
+      "risk": "high",
+      "sourceType": "legislation",
+      "impactedTools": [
+        "calculadora-multa-40-fgts",
+        "calculadora-rescisao-clt"
+      ],
+      "updateTriggers": [
+        "multa de 40% do FGTS",
+        "multa de 20% do FGTS",
+        "acordo trabalhista",
+        "demissão sem justa causa",
+        "regras rescisórias",
+        "regras do FGTS",
+        "legislação trabalhista aplicável"
+      ],
+      "impactedClusters": [
+        "calculadora-multa-40-fgts",
+        "calculadora-rescisao-clt"
       ],
       "estimatedAffectedArticles": 0,
       "requiresValidation": true

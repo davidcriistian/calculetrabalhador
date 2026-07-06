@@ -585,6 +585,101 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-multa-40-fgts",
+      "slug": "/calculadora-multa-40-fgts/",
+      "url": "/calculadora-multa-40-fgts/",
+      "title": "Calculadora Multa de 40% do FGTS",
+      "category": "Rescisão",
+      "domain": "FGTS",
+      "helper": "assets/js/tabelas-trabalhistas.js",
+      "runtime": "static-html",
+      "keywords": [
+        "multa de 40% do FGTS",
+        "calcular multa FGTS",
+        "multa rescisória FGTS",
+        "multa 40 FGTS",
+        "multa 20 FGTS",
+        "acordo trabalhista FGTS",
+        "demissão sem justa causa",
+        "rescisão FGTS",
+        "base do FGTS",
+        "saldo FGTS",
+        "multa FGTS",
+        "multa de 40",
+        "40% FGTS",
+        "acordo trabalhista",
+        "multa de 20",
+        "rescisão",
+        "base FGTS",
+        "fundo de garantia"
+      ],
+      "synonyms": [
+        "multa FGTS",
+        "multa rescisória",
+        "40 por cento do FGTS",
+        "multa do fundo de garantia",
+        "indenização do FGTS",
+        "FGTS na rescisão",
+        "multa no acordo",
+        "multa de 20% do FGTS"
+      ],
+      "intents": [
+        "calcular multa de 40% do FGTS",
+        "saber quanto recebo de multa FGTS",
+        "calcular multa rescisória",
+        "comparar multa de 40% e 20%",
+        "calcular FGTS na demissão",
+        "saber multa no acordo trabalhista",
+        "estimar multa por salário e meses"
+      ],
+      "relatedPages": [
+        "/calculadora-rescisao-clt/",
+        "/saque-aniversario-fgts/",
+        "/salario-liquido-clt/",
+        "/calculadora-ferias-clt/",
+        "/calculadora-13-salario/"
+      ],
+      "relatedTools": [
+        "calculadora-rescisao-clt",
+        "saque-aniversario-fgts",
+        "salario-liquido-clt",
+        "calculadora-ferias-clt",
+        "calculadora-13-salario"
+      ],
+      "relatedArticles": [
+        "/blog/multa-de-40-do-fgts-como-calcular/",
+        "/blog/rescisao-sem-justa-causa/",
+        "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+        "/blog/como-calcular-rescisao-clt/",
+        "/blog/aviso-previo-trabalhado-ou-indenizado/"
+      ],
+      "rulesUsed": [
+        "fgts",
+        "multa-fgts",
+        "rescisao"
+      ],
+      "dependencies": [
+        "fgts",
+        "saldo-fgts",
+        "base-fgts",
+        "tipo-desligamento",
+        "multa-fgts",
+        "rescisao",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "annualUpdate": [
+        "regras do FGTS",
+        "regras rescisórias",
+        "legislação trabalhista aplicável"
+      ],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "high"
     }
   ]
 }

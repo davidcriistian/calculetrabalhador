@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Multa de 40% do FGTS | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule a multa de 40% do FGTS, compare com a multa de 20% no acordo trabalhista e veja memoria de calculo da rescisao." />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-multa-40-fgts/" />
+  <meta property="og:title" content="Calculadora Multa de 40% do FGTS" />
+  <meta property="og:description" content="Simule a multa rescisoria do FGTS por saldo informado ou estimativa por salario e meses trabalhados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-multa-40-fgts/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Calculadora Multa de 40% do FGTS" />
+  <meta name="twitter:description" content="Veja multa de 40%, multa de 20%, base considerada, comparativo e relatorio." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    input, select, button { -webkit-appearance: none; appearance: none; line-height: 1.35; box-sizing: border-box; }
+    select { background-image: linear-gradient(45deg, transparent 50%, #475569 50%), linear-gradient(135deg, #475569 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 2.75rem; }
+    input[type="number"], input[type="text"], select { min-height: 50px; min-width: 0; max-width: 100%; }
+    .print-only { display: none; }
+    @media print {
+      #global-header, .no-print, #descobrir, #simulador, #conteudo-seo, #faq, #fontes, #relacionados, footer { display: none !important; }
+      .print-only { display: block; }
+      body { background: #fff !important; color: #0f172a !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 52%, #2563eb 100%);">
+      <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 16% 36%, rgba(255,255,255,0.08) 0%, transparent 34%), radial-gradient(circle at 88% 16%, rgba(255,255,255,0.10) 0%, transparent 34%);"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">In&iacute;cio</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a>
+          <span aria-hidden="true">&rsaquo;</span>
+          <span class="text-white">Calculadora Multa de 40% do FGTS</span>
+        </nav>
+
+        <div class="mt-6 lg:max-w-[78%]">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">Rescis&atilde;o / FGTS</span>
+          <h1 class="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora Multa de 40% do FGTS</h1>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-blue-50">Calcule a multa rescis&oacute;ria do FGTS em caso de demiss&atilde;o sem justa causa, acordo trabalhista ou outras situa&ccedil;&otilde;es de desligamento.</p>
+          <div class="mt-5 grid gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2 lg:max-w-3xl">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Multa de 40%</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Multa de 20%</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Base do FGTS</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Relat&oacute;rio para guardar</span>
+          </div>
+          <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-800 shadow-sm transition hover:bg-blue-50 sm:w-auto">Calcular Multa do FGTS</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que voc&ecirc; vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950">O valor estimado da multa rescis&oacute;ria do FGTS</h2>
+          </div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-900 ring-1 ring-blue-100 sm:w-auto">Tempo estimado: menos de 1 minuto</span>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Valor da multa de 40%</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Valor da multa de 20%</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Base considerada do FGTS</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="text-sm font-bold leading-6 text-slate-950">Diferen&ccedil;a entre cen&aacute;rios</p></div>
+          <div class="rounded-xl bg-slate-50 p-4 sm:col-span-2 lg:col-span-1"><p class="text-sm font-bold leading-6 text-slate-950">Explica&ccedil;&atilde;o da regra aplicada</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <div class="mb-6">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Simulador</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Calcule a multa rescis&oacute;ria do FGTS</h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">Informe o saldo ou base do FGTS do contrato. Se voc&ecirc; n&atilde;o souber o saldo, use a estimativa por sal&aacute;rio e meses trabalhados.</p>
+          </div>
+
+          <form id="multa-fgts-form" class="min-w-0 space-y-6" aria-label="Calculadora Multa de 40% do FGTS">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="dados-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm"><span class="font-extrabold">1</span></div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Dados principais</p>
+                  <h3 id="dados-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Informe a base e o desligamento</h3>
+                  <p class="mt-2 leading-7 text-slate-600">A multa &eacute; calculada sobre os dep&oacute;sitos ou reservas de FGTS do contrato, conforme a situa&ccedil;&atilde;o de desligamento.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Saldo/base do FGTS do contrato (R$)</span>
+                  <input id="base-fgts" type="number" min="0" step="0.01" value="10000" inputmode="decimal" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Tipo de desligamento</span>
+                  <select id="tipo-desligamento" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4">
+                    <option value="sem_justa_causa">Demiss&atilde;o sem justa causa</option>
+                    <option value="acordo">Acordo trabalhista</option>
+                    <option value="pedido_demissao">Pedido de demiss&atilde;o</option>
+                    <option value="justa_causa">Demiss&atilde;o por justa causa</option>
+                    <option value="prazo_determinado">T&eacute;rmino de contrato por prazo determinado</option>
+                  </select>
+                </label>
+                <label class="block md:col-span-2">
+                  <span class="text-sm font-bold text-slate-700">O saldo informado j&aacute; inclui todos os dep&oacute;sitos do contrato?</span>
+                  <select id="saldo-completo" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4">
+                    <option value="sim">Sim</option>
+                    <option value="estimativa">N&atilde;o, &eacute; apenas uma estimativa</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="estimativa-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-sm"><span class="font-extrabold">2</span></div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Estimativa opcional</p>
+                  <h3 id="estimativa-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Use sal&aacute;rio e meses se n&atilde;o souber o saldo</h3>
+                  <p class="mt-2 leading-7 text-slate-600">Quando ativada, a base estimada ser&aacute; sal&aacute;rio bruto x 8% x meses trabalhados.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block md:col-span-2">
+                  <span class="text-sm font-bold text-slate-700">Usar estimativa de FGTS por sal&aacute;rio e meses?</span>
+                  <select id="usar-estimativa" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4">
+                    <option value="nao">N&atilde;o, usar saldo/base informado</option>
+                    <option value="sim">Sim, estimar a base</option>
+                  </select>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Sal&aacute;rio bruto mensal (R$)</span>
+                  <input id="salario-bruto" type="number" min="0" step="0.01" value="3000" inputmode="decimal" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Meses trabalhados no contrato</span>
+                  <input id="meses-trabalhados" type="number" min="0" step="1" value="12" inputmode="numeric" class="mt-2 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" />
+                </label>
+              </div>
+            </section>
+
+            <div class="rounded-3xl border border-blue-100 bg-blue-50 p-5 shadow-sm sm:p-6">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">&Uacute;ltima etapa</p>
+              <h3 class="mt-1 text-xl font-extrabold text-blue-950">Confira os dados informados</h3>
+              <p class="mt-2 leading-7 text-blue-900">A calculadora vai aplicar o percentual adequado de multa sobre a base de FGTS informada ou estimada, conforme o tipo de desligamento selecionado.</p>
+              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-blue-800 sm:w-auto" type="submit">Calcular Multa do FGTS</button>
+              <p id="form-error" class="mt-3 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-700" role="alert"></p>
+            </div>
+          </form>
+
+          <section id="resultado" class="mt-8 hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="resultado-title">
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Resultado</p>
+                <h2 id="resultado-title" class="mt-1 text-2xl font-extrabold tracking-normal text-slate-950 sm:text-3xl">Multa estimada do FGTS</h2>
+                <p id="resultado-ajuda" class="mt-2 max-w-3xl leading-7 text-slate-600"></p>
+              </div>
+              <span id="data-source" class="inline-flex rounded-xl bg-slate-100 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-slate-600">Fonte: fallback local</span>
+            </div>
+
+            <div class="mt-6 rounded-3xl bg-blue-700 p-5 text-white sm:p-6">
+              <p class="text-sm font-bold uppercase tracking-wide text-blue-100">Valor estimado da multa</p>
+              <p id="valor-multa" class="mt-2 break-words text-4xl font-extrabold tracking-normal sm:text-5xl">R$ 0,00</p>
+              <p id="observacoes" class="mt-3 leading-7 text-blue-50"></p>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2" id="badges-resultado"></div>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Base considerada</p><p id="res-base" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Percentual aplicado</p><p id="res-percentual" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Multa estimada</p><p id="res-multa" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Multa de 40%</p><p id="res-multa-40" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Multa de 20%</p><p id="res-multa-20" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Diferen&ccedil;a</p><p id="res-diferenca" class="mt-1 text-lg font-extrabold text-slate-950"></p></div>
+            </div>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memoria-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Mem&oacute;ria de c&aacute;lculo</p>
+              <h3 id="memoria-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo</h3>
+              <ol id="memoria-lista" class="mt-4 space-y-3 text-sm leading-6 text-slate-700"></ol>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="tabela-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Tabela</p>
+              <h3 id="tabela-title" class="mt-1 text-xl font-extrabold text-slate-950">Resumo do c&aacute;lculo da multa</h3>
+              <div class="mt-4 max-w-full overflow-x-auto" style="-webkit-overflow-scrolling: touch;">
+                <table class="w-full min-w-[560px] border-collapse text-left text-sm">
+                  <thead class="bg-slate-100 text-slate-700">
+                    <tr>
+                      <th class="px-4 py-3 font-extrabold">Item</th>
+                      <th class="px-4 py-3 font-extrabold">Regra aplicada</th>
+                      <th class="px-4 py-3 font-extrabold">Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabela-resultado" class="divide-y divide-slate-200 bg-white"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="aviso-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-amber-700">Aviso</p>
+              <h3 id="aviso-title" class="mt-1 text-xl font-extrabold text-amber-950">C&aacute;lculo informativo</h3>
+              <p class="mt-2 leading-7 text-amber-900">A simula&ccedil;&atilde;o n&atilde;o substitui o TRCT, o c&aacute;lculo do empregador, a confer&ecirc;ncia sindical ou a orienta&ccedil;&atilde;o profissional. Use o resultado como estimativa antes de conferir os documentos oficiais da rescis&atilde;o.</p>
+            </section>
+
+            <!-- FUTURE_PRODUCT_SLOT -->
+
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="proximos-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&oacute;ximos passos</p>
+              <h3 id="proximos-title" class="mt-1 text-xl font-extrabold text-blue-950">Compare com sua rescis&atilde;o oficial</h3>
+              <p class="mt-2 leading-7 text-blue-900">Guarde o relat&oacute;rio, confira o saldo do FGTS do contrato e compare a multa estimada com os valores do termo de rescis&atilde;o.</p>
+            </section>
+
+            <section class="mt-7 grid gap-4 md:grid-cols-2" aria-label="Relacionados pos resultado">
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Artigos relacionados</p>
+                <div class="mt-4 grid gap-2 text-sm font-bold text-slate-700">
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/multa-de-40-do-fgts-como-calcular/">Multa de 40% do FGTS: como calcular</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/rescisao-sem-justa-causa/">Rescis&atilde;o sem justa causa</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/verbas-rescisorias-o-que-receber-na-demissao/">Verbas rescis&oacute;rias: o que receber</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/como-calcular-rescisao-clt/">Como calcular rescis&atilde;o CLT</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/blog/aviso-previo-trabalhado-ou-indenizado/">Aviso pr&eacute;vio trabalhado ou indenizado</a>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramentas relacionadas</p>
+                <div class="mt-4 grid gap-2 text-sm font-bold text-slate-700">
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-rescisao-clt/">Calculadora Rescis&atilde;o CLT</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/saque-aniversario-fgts/">Saque-anivers&aacute;rio FGTS</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-aviso-previo/">Calculadora Aviso Pr&eacute;vio</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/calculadora-seguro-desemprego/">Calculadora Seguro-Desemprego</a>
+                  <a class="rounded-xl bg-slate-50 px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="/salario-liquido-clt/">Calculadora Sal&aacute;rio L&iacute;quido CLT</a>
+                </div>
+              </div>
+            </section>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <button type="button" onclick="baixarRelatorioMultaFgts()" class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-extrabold uppercase tracking-wide text-white transition hover:bg-slate-800 sm:w-auto">Baixar relat&oacute;rio</button>
+              <button type="button" onclick="imprimirResultadoMultaFgts()" class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-extrabold uppercase tracking-wide text-slate-800 ring-1 ring-slate-200 transition hover:bg-slate-50 sm:w-auto">Imprimir</button>
+              <button type="button" onclick="copiarResultadoMultaFgts(this)" class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-extrabold uppercase tracking-wide text-slate-800 ring-1 ring-slate-200 transition hover:bg-slate-50 sm:w-auto">Copiar resultado</button>
+            </div>
+          </section>
+
+          <section id="conteudo-seo" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Guia completo</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950">Como funciona a multa de 40% do FGTS</h2>
+            <div class="mt-5 space-y-5 leading-8 text-slate-700">
+              <p>A multa de 40% do FGTS &eacute; uma verba rescis&oacute;ria paga pelo empregador quando o trabalhador com carteira assinada &eacute; dispensado sem justa causa. Ela existe para compensar a perda involunt&aacute;ria do emprego e &eacute; calculada sobre a base de FGTS vinculada ao contrato de trabalho. Na pr&aacute;tica, essa base costuma refletir os dep&oacute;sitos feitos pelo empregador ao longo do v&iacute;nculo, e n&atilde;o apenas o saldo que aparece dispon&iacute;vel para saque no aplicativo em determinado dia.</p>
+              <p>O trabalhador tem direito &agrave; multa de 40% quando a ruptura do contrato acontece por iniciativa do empregador e sem uma falta grave do empregado. Esse &eacute; o caso cl&aacute;ssico de demiss&atilde;o sem justa causa. No acordo trabalhista, previsto para encerramento consensual do contrato, a multa normalmente cai para 20% sobre a mesma base. J&aacute; no pedido de demiss&atilde;o e na demiss&atilde;o por justa causa, a regra geral &eacute; n&atilde;o haver multa rescis&oacute;ria do FGTS.</p>
+              <p>Para calcular a multa rescis&oacute;ria, primeiro identifique a base do FGTS do contrato. Se voc&ecirc; tem o saldo correto, informe esse valor diretamente. Depois, escolha o tipo de desligamento. Em demiss&atilde;o sem justa causa, a calculadora aplica 40%. Em acordo trabalhista, aplica 20%. Em pedido de demiss&atilde;o ou justa causa, o resultado fica zerado e a ferramenta explica que n&atilde;o h&aacute; multa pela regra geral. No contrato por prazo determinado, a p&aacute;gina n&atilde;o aplica 40% por padr&atilde;o, porque a an&aacute;lise depende da modalidade e das condi&ccedil;&otilde;es do contrato.</p>
+              <p>A diferen&ccedil;a entre multa de 40% e 20% &eacute; importante porque muda bastante o valor final da rescis&atilde;o. Sobre uma base de FGTS de R$ 10.000,00, a multa de 40% gera R$ 4.000,00. No acordo trabalhista, a multa de 20% gera R$ 2.000,00. A diferen&ccedil;a entre os cen&aacute;rios, nesse exemplo, &eacute; de R$ 2.000,00. Por isso a ferramenta mostra os dois valores, mesmo quando o tipo de desligamento escolhido aplica apenas um deles.</p>
+              <p>Quando o trabalhador n&atilde;o sabe o saldo do FGTS, a calculadora permite uma estimativa por sal&aacute;rio e meses trabalhados. Essa estimativa usa o dep&oacute;sito mensal aproximado de 8% do sal&aacute;rio bruto e multiplica pelo n&uacute;mero de meses do contrato. Por exemplo, um sal&aacute;rio de R$ 3.000,00 por 12 meses gera uma base estimada de R$ 2.880,00. Se a dispensa for sem justa causa, a multa de 40% sobre essa base ser&aacute; R$ 1.152,00. Esse caminho &eacute; &uacute;til para ter uma refer&ecirc;ncia, mas n&atilde;o substitui a confer&ecirc;ncia do extrato.</p>
+              <p>Existe uma diferen&ccedil;a entre saldo do FGTS e base da multa. O saldo vis&iacute;vel pode sofrer efeitos de saques anteriores, saque-anivers&aacute;rio, atualiza&ccedil;&otilde;es, juros, corre&ccedil;&otilde;es e movimenta&ccedil;&otilde;es. A multa, por sua vez, deve observar os dep&oacute;sitos devidos no contrato. Por isso, em situa&ccedil;&otilde;es com saques, afastamentos, dep&oacute;sitos em atraso ou v&iacute;nculos longos, vale conferir o extrato detalhado e os documentos da rescis&atilde;o antes de tomar o resultado como definitivo.</p>
+              <p>Para consultar o saldo do FGTS, o trabalhador pode usar os canais oficiais da Caixa, como o aplicativo do FGTS, internet banking quando dispon&iacute;vel ou atendimento autorizado. O ideal &eacute; conferir o extrato do contrato espec&iacute;fico, porque uma mesma pessoa pode ter contas de FGTS de v&iacute;nculos diferentes. A multa deve estar ligada ao contrato encerrado, n&atilde;o ao conjunto de todos os saldos acumulados em empregos anteriores.</p>
+              <p>A multa do FGTS tamb&eacute;m precisa ser analisada junto com as demais verbas da rescis&atilde;o CLT. Saldo de sal&aacute;rio, f&eacute;rias vencidas, f&eacute;rias proporcionais, ter&ccedil;o constitucional, d&eacute;cimo terceiro proporcional, aviso pr&eacute;vio e descontos podem aparecer no mesmo termo rescis&oacute;rio. A multa de 40% &eacute; apenas uma parte do acerto. Por isso, depois de estimar a multa, compare o valor com a calculadora de rescis&atilde;o e com o termo apresentado pela empresa.</p>
+              <p>Antes de usar o resultado para negociar, reclamar ou planejar o caixa, confira se o tipo de desligamento foi selecionado corretamente. Uma mudan&ccedil;a entre demiss&atilde;o sem justa causa e acordo trabalhista altera o percentual aplicado. Tamb&eacute;m revise se a base informada representa todos os dep&oacute;sitos do contrato. Pequenas diferen&ccedil;as na base geram diferen&ccedil;as proporcionais na multa, e documentos oficiais sempre devem prevalecer sobre uma simula&ccedil;&atilde;o.</p>
+              <p>Outro cuidado &eacute; separar a multa do FGTS de outros valores que podem aparecer na conta banc&aacute;ria. O saque do FGTS, quando liberado, n&atilde;o &eacute; a mesma coisa que a multa rescis&oacute;ria. A multa &eacute; uma indeniza&ccedil;&atilde;o calculada sobre a base do contrato; o saque &eacute; a movimenta&ccedil;&atilde;o do saldo da conta vinculada. Em algumas situa&ccedil;&otilde;es, o trabalhador pode ver valores diferentes no extrato, no termo de rescis&atilde;o e no comprovante de pagamento. A leitura correta depende de identificar a origem de cada verba.</p>
+              <p>Tamb&eacute;m &eacute; comum confundir a multa de 40% com o dep&oacute;sito mensal de 8%. O dep&oacute;sito mensal &eacute; uma obriga&ccedil;&atilde;o regular durante o contrato. A multa aparece no encerramento, quando a lei prev&ecirc; esse direito conforme o motivo do desligamento. Por isso, a estimativa por sal&aacute;rio e meses serve para aproximar a base, mas n&atilde;o garante que todos os dep&oacute;sitos foram feitos corretamente. Se houver falta de recolhimento, diferen&ccedil;a salarial, comiss&otilde;es, adicionais ou per&iacute;odos afastados, o extrato detalhado deve ser analisado com mais aten&ccedil;&atilde;o.</p>
+              <p>Na rescis&atilde;o sem justa causa, a multa de 40% costuma ser uma das maiores parcelas do acerto quando o contrato foi longo. Em contratos curtos, ela pode parecer menor, mas ainda ajuda o trabalhador a conferir se a base usada pela empresa faz sentido. No acordo trabalhista, a multa menor de 20% deve ser avaliada junto com os demais efeitos do acordo, como saque parcial do FGTS e condi&ccedil;&otilde;es do encerramento. A calculadora n&atilde;o decide se o acordo vale a pena; ela apenas mostra a diferen&ccedil;a financeira da multa.</p>
+              <p>Esta calculadora foi criada para dar clareza r&aacute;pida e uma mem&oacute;ria de c&aacute;lculo audit&aacute;vel. Ela mostra a base considerada, o percentual aplicado, o valor estimado da multa, a diferen&ccedil;a entre 40% e 20% e uma observa&ccedil;&atilde;o legal simples. O objetivo &eacute; ajudar o trabalhador a entender o n&uacute;mero antes de conferir a rescis&atilde;o oficial, sem transformar a simula&ccedil;&atilde;o em parecer jur&iacute;dico.</p>
+            </div>
+          </section>
+
+          <section id="faq" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">FAQ</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950">Perguntas frequentes sobre multa do FGTS</h2>
+            <div class="mt-5 space-y-3">
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como calcular a multa de 40% do FGTS?</summary><p class="mt-3 leading-7 text-slate-700">Multiplique a base do FGTS do contrato por 40%. Se a base for R$ 10.000,00, a multa estimada ser&aacute; R$ 4.000,00.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quem tem direito &agrave; multa de 40%?</summary><p class="mt-3 leading-7 text-slate-700">Em regra, o trabalhador dispensado sem justa causa tem direito &agrave; multa de 40% sobre a base do FGTS do contrato.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">No acordo trabalhista a multa &eacute; de 20%?</summary><p class="mt-3 leading-7 text-slate-700">Sim. No acordo trabalhista, a refer&ecirc;ncia usual &eacute; multa de 20% sobre a base do FGTS, al&eacute;m das demais regras aplic&aacute;veis ao acordo.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Pedido de demiss&atilde;o d&aacute; direito &agrave; multa do FGTS?</summary><p class="mt-3 leading-7 text-slate-700">Pela regra geral, pedido de demiss&atilde;o n&atilde;o gera multa rescis&oacute;ria do FGTS.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Justa causa d&aacute; direito &agrave; multa do FGTS?</summary><p class="mt-3 leading-7 text-slate-700">Pela regra geral, demiss&atilde;o por justa causa n&atilde;o gera multa rescis&oacute;ria do FGTS.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A multa &eacute; calculada sobre o saldo total do FGTS?</summary><p class="mt-3 leading-7 text-slate-700">Ela deve considerar a base vinculada ao contrato encerrado. O saldo vis&iacute;vel pode n&atilde;o ser igual &agrave; base se houve saques ou movimenta&ccedil;&otilde;es.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso usar o sal&aacute;rio para estimar a multa?</summary><p class="mt-3 leading-7 text-slate-700">Sim. A estimativa usa sal&aacute;rio bruto x 8% x meses trabalhados para chegar a uma base aproximada de FGTS.</p></details>
+              <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A calculadora substitui o c&aacute;lculo oficial da rescis&atilde;o?</summary><p class="mt-3 leading-7 text-slate-700">N&atilde;o. Ela &eacute; uma simula&ccedil;&atilde;o informativa. O termo de rescis&atilde;o e os documentos oficiais devem ser conferidos.</p></details>
+            </div>
+          </section>
+
+          <section id="fontes" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Fontes e observa&ccedil;&otilde;es</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-normal text-slate-950">Use como estimativa</h2>
+            <p class="mt-3 leading-8 text-slate-700">A ferramenta usa percentuais de fallback para multa rescis&oacute;ria do FGTS e tenta carregar dados pelo helper central do projeto. N&atilde;o consome arquivos de regras diretamente.</p>
+          </section>
+        </div>
+
+        <aside class="no-print lg:sticky lg:top-6">
+          <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Nesta p&aacute;gina</p>
+            <nav class="mt-4 grid gap-2 text-sm font-bold text-slate-600" aria-label="Navegacao da ferramenta">
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#simulador">Calculadora</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#resultado">Resultado</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#conteudo-seo">Conte&uacute;do</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#faq">FAQ</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="print-only">
+      <div id="print-report"></div>
+    </section>
+  </main>
+
+  <script src="/assets/js/tabelas-trabalhistas.js"></script>
+  <script>
+    const MULTA_FGTS_DEFAULT_TABLES = {
+      year: 2026,
+      fgtsDepositRate: 0.08,
+      multa40: 0.40,
+      multa20: 0.20,
+      rounding: 2,
+      rulesNote: "Fallback local com percentuais basicos de multa rescisoria do FGTS."
+    };
+
+    const state = {
+      tables: { ...MULTA_FGTS_DEFAULT_TABLES },
+      source: "fallback local",
+      latestReport: null
+    };
+
+    function $(id) { return document.getElementById(id); }
+    function roundMoney(value) { return Math.round((Number(value) || 0) * 100) / 100; }
+    function formatMoney(value) { return roundMoney(value).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }); }
+    function formatPercent(value) { return `${(Number(value || 0) * 100).toFixed(0)}%`; }
+    function setText(id, value) { const el = $(id); if (el) el.textContent = value; }
+
+    function normalizeMultaFgtsTables(data) {
+      const fgts = data?.fgts || data?.FGTS || data?.regras?.fgts || {};
+      return {
+        ...MULTA_FGTS_DEFAULT_TABLES,
+        fgtsDepositRate: Number(fgts.depositoMensal || fgts.depositRate || fgts.aliquotaDeposito || MULTA_FGTS_DEFAULT_TABLES.fgtsDepositRate),
+        multa40: Number(fgts.multa40 || fgts.multaSemJustaCausa || MULTA_FGTS_DEFAULT_TABLES.multa40),
+        multa20: Number(fgts.multa20 || fgts.multaAcordo || MULTA_FGTS_DEFAULT_TABLES.multa20)
+      };
+    }
+
+    async function carregarTabelasMultaFgts() {
+      const helper = window.CalculeTrabalhadorTabelas;
+      try {
+        if (!helper?.carregarTabelasTrabalhistas) throw new Error("helper indisponivel");
+        const tabelas = await helper.carregarTabelasTrabalhistas();
+        state.tables = normalizeMultaFgtsTables(tabelas);
+        state.source = "helper central com fallback FGTS";
+      } catch (error) {
+        state.tables = { ...MULTA_FGTS_DEFAULT_TABLES };
+        state.source = "fallback local";
+      }
+      setText("data-source", `Fonte: ${state.source}`);
+      return state.tables;
+    }
+
+    function getScenario(type, tables) {
+      const scenarios = {
+        sem_justa_causa: { label: "Demissao sem justa causa", rate: tables.multa40, badge: "Multa de 40%", badgeClass: "bg-blue-100 text-blue-800 ring-blue-200", message: "Dispensa sem justa causa: referencia de multa de 40% sobre a base do FGTS." },
+        acordo: { label: "Acordo trabalhista", rate: tables.multa20, badge: "Multa de 20%", badgeClass: "bg-yellow-100 text-yellow-800 ring-yellow-200", message: "Acordo trabalhista: referencia de multa de 20% sobre a base do FGTS." },
+        pedido_demissao: { label: "Pedido de demissao", rate: 0, badge: "Sem multa", badgeClass: "bg-slate-100 text-slate-700 ring-slate-200", message: "Pedido de demissao: pela regra geral, nao ha multa rescisoria do FGTS." },
+        justa_causa: { label: "Demissao por justa causa", rate: 0, badge: "Sem multa", badgeClass: "bg-slate-100 text-slate-700 ring-slate-200", message: "Justa causa: pela regra geral, nao ha multa rescisoria do FGTS." },
+        prazo_determinado: { label: "Termino de contrato por prazo determinado", rate: 0, badge: "Verificar contrato", badgeClass: "bg-orange-100 text-orange-800 ring-orange-200", message: "Contrato por prazo determinado: a multa depende da modalidade e das condicoes do contrato." }
+      };
+      return scenarios[type] || scenarios.sem_justa_causa;
+    }
+
+    function calculateMultaFgts(input = {}) {
+      const tables = normalizeMultaFgtsTables(input.tables || state.tables || MULTA_FGTS_DEFAULT_TABLES);
+      const useEstimate = input.usarEstimativa === true || input.usarEstimativa === "sim";
+      const salarioBruto = Math.max(0, Number(input.salarioBruto) || 0);
+      const mesesTrabalhados = Math.max(0, Math.floor(Number(input.mesesTrabalhados) || 0));
+      const baseInformada = Math.max(0, Number(input.baseFgts) || 0);
+      const baseEstimativa = roundMoney(salarioBruto * tables.fgtsDepositRate * mesesTrabalhados);
+      const baseConsiderada = roundMoney(useEstimate ? baseEstimativa : baseInformada);
+      const scenario = getScenario(input.tipoDesligamento || "sem_justa_causa", tables);
+      const multa40 = roundMoney(baseConsiderada * tables.multa40);
+      const multa20 = roundMoney(baseConsiderada * tables.multa20);
+      const diferenca = roundMoney(multa40 - multa20);
+      const multaAplicada = roundMoney(baseConsiderada * scenario.rate);
+
+      return {
+        ok: true,
+        baseInformada,
+        baseEstimativa,
+        baseConsiderada,
+        salarioBruto,
+        mesesTrabalhados,
+        useEstimate,
+        saldoCompleto: input.saldoCompleto || "sim",
+        tipoDesligamento: input.tipoDesligamento || "sem_justa_causa",
+        scenario,
+        percentualAplicado: scenario.rate,
+        multaAplicada,
+        multa40,
+        multa20,
+        diferenca,
+        rules: tables
+      };
+    }
+
+    function buildMemory(result) {
+      return [
+        `Tipo de desligamento: ${result.scenario.label}.`,
+        `Base do FGTS ${result.useEstimate ? "estimada" : "informada"}: ${formatMoney(result.baseConsiderada)}.`,
+        result.useEstimate ? `Base estimada: ${formatMoney(result.salarioBruto)} x ${formatPercent(result.rules.fgtsDepositRate)} x ${result.mesesTrabalhados} mes(es) = ${formatMoney(result.baseEstimativa)}.` : `O saldo/base informado foi usado como referencia do contrato.`,
+        `Percentual aplicavel ao cenario escolhido: ${formatPercent(result.percentualAplicado)}.`,
+        `Calculo da multa: ${formatMoney(result.baseConsiderada)} x ${formatPercent(result.percentualAplicado)} = ${formatMoney(result.multaAplicada)}.`,
+        `Observacao legal: ${result.scenario.message}`
+      ];
+    }
+
+    function renderMemory(items) {
+      const list = $("memoria-lista");
+      if (!list) return;
+      list.innerHTML = items.map((item, index) => `<li class="rounded-2xl bg-white p-4"><span class="font-extrabold text-blue-700">${index + 1}.</span> ${item}</li>`).join("");
+    }
+
+    function renderBadges(result) {
+      const badges = $("badges-resultado");
+      if (!badges) return;
+      const items = [
+        { label: result.scenario.badge, className: result.scenario.badgeClass },
+        { label: result.scenario.label, className: "bg-blue-50 text-blue-800 ring-blue-100" },
+        { label: result.useEstimate ? "Base estimada" : "Base informada", className: "bg-slate-100 text-slate-700 ring-slate-200" },
+        { label: result.saldoCompleto === "sim" ? "Saldo completo informado" : "Saldo declarado como estimativa", className: "bg-slate-100 text-slate-700 ring-slate-200" }
+      ];
+      badges.innerHTML = items.map((item) => `<span class="rounded-full px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ${item.className}">${item.label}</span>`).join("");
+    }
+
+    function renderTable(result) {
+      const rows = [
+        ["Base do FGTS", result.useEstimate ? "Salario x 8% x meses" : "Saldo/base informado", formatMoney(result.baseConsiderada)],
+        ["Percentual da multa", result.scenario.label, formatPercent(result.percentualAplicado)],
+        ["Multa estimada", "Base x percentual aplicavel", formatMoney(result.multaAplicada)],
+        ["Cenario 40%", "Demissao sem justa causa", formatMoney(result.multa40)],
+        ["Cenario 20%", "Acordo trabalhista", formatMoney(result.multa20)],
+        ["Diferenca entre cenarios", "Multa de 40% menos multa de 20%", formatMoney(result.diferenca)]
+      ];
+      const tbody = $("tabela-resultado");
+      if (!tbody) return;
+      tbody.innerHTML = rows.map(([item, regra, valor]) => `<tr><td class="px-4 py-3 font-bold text-slate-950">${item}</td><td class="px-4 py-3 text-slate-700">${regra}</td><td class="px-4 py-3 text-slate-700">${valor}</td></tr>`).join("");
+    }
+
+    function getCalculationDateLabel() {
+      return new Date().toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+    }
+
+    function calcularMultaFgtsPage(event) {
+      if (event) event.preventDefault();
+      const errorBox = $("form-error");
+      const result = calculateMultaFgts({
+        baseFgts: $("base-fgts")?.value,
+        tipoDesligamento: $("tipo-desligamento")?.value,
+        saldoCompleto: $("saldo-completo")?.value,
+        usarEstimativa: $("usar-estimativa")?.value,
+        salarioBruto: $("salario-bruto")?.value,
+        mesesTrabalhados: $("meses-trabalhados")?.value,
+        tables: state.tables
+      });
+      if (result.baseConsiderada <= 0) {
+        if (errorBox) {
+          errorBox.textContent = "Informe uma base de FGTS maior que zero ou use a estimativa por salario e meses.";
+          errorBox.classList.remove("hidden");
+        }
+        return { ok: false };
+      }
+      if (errorBox) errorBox.classList.add("hidden");
+
+      const memoryItems = buildMemory(result);
+      setText("valor-multa", formatMoney(result.multaAplicada));
+      setText("resultado-ajuda", `${result.scenario.label}: percentual aplicado de ${formatPercent(result.percentualAplicado)} sobre ${formatMoney(result.baseConsiderada)}.`);
+      setText("observacoes", result.scenario.message);
+      setText("res-base", formatMoney(result.baseConsiderada));
+      setText("res-percentual", formatPercent(result.percentualAplicado));
+      setText("res-multa", formatMoney(result.multaAplicada));
+      setText("res-multa-40", formatMoney(result.multa40));
+      setText("res-multa-20", formatMoney(result.multa20));
+      setText("res-diferenca", formatMoney(result.diferenca));
+      renderBadges(result);
+      renderMemory(memoryItems);
+      renderTable(result);
+
+      state.latestReport = {
+        calculationDate: getCalculationDateLabel(),
+        tipoDesligamento: result.scenario.label,
+        baseConsiderada: formatMoney(result.baseConsiderada),
+        baseOrigem: result.useEstimate ? "Estimativa por salario e meses" : "Saldo/base informado",
+        saldoCompleto: result.saldoCompleto === "sim" ? "Sim" : "Nao, estimativa",
+        percentualAplicado: formatPercent(result.percentualAplicado),
+        multaAplicada: formatMoney(result.multaAplicada),
+        multa40: formatMoney(result.multa40),
+        multa20: formatMoney(result.multa20),
+        diferenca: formatMoney(result.diferenca),
+        memory: memoryItems.join(" "),
+        legalNote: "Calculo informativo. Nao substitui o termo de rescisao, extrato oficial do FGTS ou orientacao profissional."
+      };
+
+      $("resultado")?.classList.remove("hidden");
+      $("resultado")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return result;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    function ensureReport() {
+      if (state.latestReport) return true;
+      alert("Calcule a multa do FGTS primeiro.");
+      return false;
+    }
+
+    function buildReportHtml(report) {
+      const rows = [
+        ["Data do calculo", report.calculationDate],
+        ["Tipo de desligamento", report.tipoDesligamento],
+        ["Base considerada", report.baseConsiderada],
+        ["Origem da base", report.baseOrigem],
+        ["Saldo completo informado", report.saldoCompleto],
+        ["Percentual aplicado", report.percentualAplicado],
+        ["Multa estimada", report.multaAplicada],
+        ["Cenario 40%", report.multa40],
+        ["Cenario 20%", report.multa20],
+        ["Diferenca entre cenarios", report.diferenca],
+        ["Memoria de calculo", report.memory],
+        ["Observacao legal", report.legalNote]
+      ].map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`).join("");
+      return `<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Relatorio Multa FGTS</title><style>*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:#0f172a;font-family:Arial,sans-serif;line-height:1.5}main{max-width:820px;margin:0 auto;padding:32px 20px}.report{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px}.brand{color:#1d4ed8;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h2{margin:8px 0 22px;font-size:28px;line-height:1.2}table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-top:1px solid #e2e8f0;padding:12px 0;text-align:left;vertical-align:top}th{width:36%;color:#475569;padding-right:18px}.note{margin-top:22px;border-radius:12px;background:#eff6ff;color:#1e3a8a;padding:14px 16px;font-size:14px}@media print{body{background:#fff}main{max-width:none;padding:0}.report{border:0;border-radius:0;padding:0}}</style></head><body><main><section class="report" aria-label="Relatorio Multa FGTS"><div class="brand">Calcule Trabalhador</div><h2>Relatorio Multa FGTS</h2><table><tbody>${rows}</tbody></table><p class="note">Este relatorio nao contem produto e serve apenas como memoria informativa.</p></section></main><script>window.addEventListener("load",()=>{window.focus();window.print();});<\/script></body></html>`;
+    }
+
+    function openReportWindow() {
+      if (!ensureReport()) return;
+      const reportWindow = window.open("", "_blank");
+      if (!reportWindow) {
+        alert("Nao foi possivel abrir o relatorio. Verifique o bloqueador de pop-ups.");
+        return;
+      }
+      reportWindow.document.open();
+      reportWindow.document.write(buildReportHtml(state.latestReport));
+      reportWindow.document.close();
+    }
+
+    function baixarRelatorioMultaFgts() { openReportWindow(); }
+    function imprimirResultadoMultaFgts() { openReportWindow(); }
+
+    function getPlainTextResult(report) {
+      return [
+        "Multa de 40% do FGTS - Calcule Trabalhador",
+        `Tipo de desligamento: ${report.tipoDesligamento}`,
+        `Base considerada: ${report.baseConsiderada}`,
+        `Percentual aplicado: ${report.percentualAplicado}`,
+        `Multa estimada: ${report.multaAplicada}`,
+        `Cenario 40%: ${report.multa40}`,
+        `Cenario 20%: ${report.multa20}`,
+        `Diferenca: ${report.diferenca}`,
+        `Observacao: ${report.legalNote}`
+      ].join("\n");
+    }
+
+    function fallbackCopyText(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      return copied;
+    }
+
+    async function copiarResultadoMultaFgts(button) {
+      if (!ensureReport()) return;
+      const original = button?.textContent || "";
+      const text = getPlainTextResult(state.latestReport);
+      try {
+        if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+        else if (!fallbackCopyText(text)) throw new Error("copy failed");
+        if (button) {
+          button.textContent = "Copiado!";
+          window.setTimeout(() => { button.textContent = original; }, 2200);
+        }
+      } catch (error) {
+        if (fallbackCopyText(text)) return;
+        alert("Nao foi possivel copiar o resultado.");
+      }
+    }
+
+    function testarCalculadoraMultaFgts() {
+      const tables = { ...MULTA_FGTS_DEFAULT_TABLES };
+      const cases = [
+        { name: "Base FGTS R$ 10.000,00 + demissao sem justa causa", input: { baseFgts: 10000, tipoDesligamento: "sem_justa_causa", tables }, assert: (r) => r.multaAplicada === 4000 },
+        { name: "Base FGTS R$ 10.000,00 + acordo trabalhista", input: { baseFgts: 10000, tipoDesligamento: "acordo", tables }, assert: (r) => r.multaAplicada === 2000 },
+        { name: "Base FGTS R$ 10.000,00 + pedido de demissao", input: { baseFgts: 10000, tipoDesligamento: "pedido_demissao", tables }, assert: (r) => r.multaAplicada === 0 },
+        { name: "Base FGTS R$ 10.000,00 + justa causa", input: { baseFgts: 10000, tipoDesligamento: "justa_causa", tables }, assert: (r) => r.multaAplicada === 0 },
+        { name: "Estimativa por salario R$ 3.000,00 por 12 meses", input: { usarEstimativa: "sim", salarioBruto: 3000, mesesTrabalhados: 12, tipoDesligamento: "sem_justa_causa", tables }, assert: (r) => r.baseEstimativa === 2880 && r.multa40 === 1152 },
+        { name: "Comparativo entre 40% e 20%", input: { baseFgts: 10000, tipoDesligamento: "sem_justa_causa", tables }, assert: (r) => r.diferenca === 2000 }
+      ];
+      const results = cases.map((testCase) => {
+        const result = calculateMultaFgts(testCase.input);
+        const status = result.ok && testCase.assert(result) ? "PASS" : "FAIL";
+        console.log(`Multa FGTS | ${testCase.name} | base ${formatMoney(result.baseConsiderada)} | multa ${formatMoney(result.multaAplicada)} | 40% ${formatMoney(result.multa40)} | 20% ${formatMoney(result.multa20)} | ${status}`);
+        return { name: testCase.name, status, result };
+      });
+      const summary = `${results.filter((item) => item.status === "PASS").length}/${results.length} PASS`;
+      console.log(`Multa FGTS Total: ${summary}`);
+      return { results, summary };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      carregarTabelasMultaFgts();
+      $("multa-fgts-form")?.addEventListener("submit", calcularMultaFgtsPage);
+    });
+
+    window.calculateMultaFgts = calculateMultaFgts;
+    window.calcularMultaFgtsPage = calcularMultaFgtsPage;
+    window.testarCalculadoraMultaFgts = testarCalculadoraMultaFgts;
+    window.baixarRelatorioMultaFgts = baixarRelatorioMultaFgts;
+    window.imprimirResultadoMultaFgts = imprimirResultadoMultaFgts;
+    window.copiarResultadoMultaFgts = copiarResultadoMultaFgts;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://calculetrabalhador.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://calculetrabalhador.com.br/ferramentas/" },
+            { "@type": "ListItem", "position": 3, "name": "Calculadora Multa de 40% do FGTS", "item": "https://calculetrabalhador.com.br/calculadora-multa-40-fgts/" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Calculadora Multa de 40% do FGTS",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "url": "https://calculetrabalhador.com.br/calculadora-multa-40-fgts/",
+          "description": "Ferramenta para estimar multa de 40% do FGTS, multa de 20% no acordo trabalhista, base considerada e memoria de calculo.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Como calcular a multa de 40% do FGTS?", "acceptedAnswer": { "@type": "Answer", "text": "Multiplique a base do FGTS do contrato por 40%. Se a base for R$ 10.000,00, a multa estimada sera R$ 4.000,00." } },
+            { "@type": "Question", "name": "Quem tem direito a multa de 40%?", "acceptedAnswer": { "@type": "Answer", "text": "Em regra, o trabalhador dispensado sem justa causa tem direito a multa de 40% sobre a base do FGTS do contrato." } },
+            { "@type": "Question", "name": "No acordo trabalhista a multa e de 20%?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. No acordo trabalhista, a referencia usual e multa de 20% sobre a base do FGTS, alem das demais regras aplicaveis ao acordo." } },
+            { "@type": "Question", "name": "Pedido de demissao da direito a multa do FGTS?", "acceptedAnswer": { "@type": "Answer", "text": "Pela regra geral, pedido de demissao nao gera multa rescisoria do FGTS." } },
+            { "@type": "Question", "name": "Justa causa da direito a multa do FGTS?", "acceptedAnswer": { "@type": "Answer", "text": "Pela regra geral, demissao por justa causa nao gera multa rescisoria do FGTS." } },
+            { "@type": "Question", "name": "A multa e calculada sobre o saldo total do FGTS?", "acceptedAnswer": { "@type": "Answer", "text": "Ela deve considerar a base vinculada ao contrato encerrado. O saldo visivel pode nao ser igual a base se houve saques ou movimentacoes." } },
+            { "@type": "Question", "name": "Posso usar o salario para estimar a multa?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A estimativa usa salario bruto x 8% x meses trabalhados para chegar a uma base aproximada de FGTS." } },
+            { "@type": "Question", "name": "A calculadora substitui o calculo oficial da rescisao?", "acceptedAnswer": { "@type": "Answer", "text": "Nao. Ela e uma simulacao informativa. O termo de rescisao e os documentos oficiais devem ser conferidos." } }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script src="/assets/js/editorial-metadata.js"></script>
+  <script src="/assets/js/global-layout.js"></script>
+</body>
+</html>
