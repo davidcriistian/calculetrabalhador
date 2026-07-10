@@ -1,0 +1,26 @@
+{
+  "id": "pos-contract-knowledge",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "name": "Knowledge Contract",
+  "objective": "Define the operational process for consulting Core knowledge without storing legal or labor knowledge inside POS.",
+  "boundary": {
+    "coreContracts": "knowledge capabilities and source-of-truth records",
+    "posContracts": "operational processes that request, route, approve or audit Core knowledge usage"
+  },
+  "scope": ["Core knowledge lookup", "source reference routing", "operational context summaries", "audit trail"],
+  "expectedInputs": ["Core concept reference", "Core source reference", "Core domain reference", "operational request status"],
+  "expectedOutputs": ["knowledge lookup record", "Core source linkage", "operational context notes"],
+  "dependencies": ["/data/pos/registry/index.json", "/data/core/index.json"],
+  "nonResponsibilities": ["store legal knowledge", "replace Core sources", "publish content", "rewrite articles", "replace official legal sources"],
+  "notes": [
+    "POS is not a source of legal or labor knowledge.",
+    "This contract represents only an operational consultation process over Core knowledge."
+  ]
+}

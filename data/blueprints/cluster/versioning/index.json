@@ -1,0 +1,34 @@
+{
+  "id": "cluster-blueprint-versioning",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/cluster/schemas/cluster-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "description": "Versioning control for Cluster Blueprint architecture.",
+  "currentClusterBlueprintVersion": "0.1.0",
+  "compatibility": {
+    "runtimeConsumesClusterBlueprints": false,
+    "calculatorsConsumeClusterBlueprints": false,
+    "articlesConsumeClusterBlueprints": false,
+    "automationConsumesClusterBlueprints": false,
+    "publishingConsumesClusterBlueprints": false
+  },
+  "items": [
+    {
+      "id": "cluster-blueprint-system-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": [
+        "Initial declarative Cluster Blueprint foundation."
+      ]
+    }
+  ],
+  "notes": [
+    "Versioning does not generate, publish or modify assets."
+  ]
+}

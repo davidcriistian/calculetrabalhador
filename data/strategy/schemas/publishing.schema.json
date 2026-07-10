@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/publishing.schema.json",
+  "title": "Strategy Publishing",
+  "allOf": [
+    { "$ref": "/data/strategy/schemas/strategy.schema.json" },
+    { "type": "object", "properties": { "workflow": { "type": "object" } } }
+  ]
+}

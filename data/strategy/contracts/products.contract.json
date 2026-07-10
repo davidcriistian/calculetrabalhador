@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-products",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Products Strategy Contract",
+  "objective": "Define logical product catalog strategy.",
+  "expectedInputs": ["product", "category", "eligible nuclei", "eligible clusters"],
+  "expectedOutputs": ["product catalog record"],
+  "dependencies": ["/data/strategy/products/index.json"],
+  "nonResponsibilities": ["render offers", "track conversions"],
+  "notes": ["Products are strategic models only."]
+}

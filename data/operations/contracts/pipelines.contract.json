@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-pipelines",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/pipeline.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Pipelines Contract",
+  "objective": "Define reusable operational pipelines.",
+  "expectedInputs": ["pipeline type", "steps"],
+  "expectedOutputs": ["pipeline definition"],
+  "dependencies": ["/data/operations/pipelines/index.json"],
+  "nonResponsibilities": ["execute pipeline"],
+  "notes": ["Pipelines are reusable operation sequences."]
+}

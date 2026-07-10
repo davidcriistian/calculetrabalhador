@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-workflows",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/workflow.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Workflows Contract",
+  "objective": "Define order and dependencies for future operations.",
+  "expectedInputs": ["operation", "pipeline", "gates"],
+  "expectedOutputs": ["workflow"],
+  "dependencies": ["/data/operations/workflows/index.json"],
+  "nonResponsibilities": ["run workflow"],
+  "notes": ["Workflows define order only."]
+}

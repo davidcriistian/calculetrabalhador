@@ -1,0 +1,248 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-tables-map",
+  "schema": null,
+  "description": "Mapa dos grupos de dados existentes em data/tabelas-trabalhistas.json.",
+  "items": [
+    {
+      "key": "anoBase",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "number",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "ultimaRevisao",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "string",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "vigencia",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "moeda",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "string",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "salarioMinimo",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "inss",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "inss"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "irrf",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "irrf"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "seguroDesemprego",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "beneficios"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "fgts",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "fgts"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "saqueAniversario",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "fgts"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "ferias",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "decimoTerceiro",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "avisoPrevio",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "adicionalNoturno",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "insalubridade",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "horasExtras",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "fontes",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "shared"
+      ],
+      "dataShape": "array",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "rescisao",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt",
+        "fgts"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    },
+    {
+      "key": "cltOuPj",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "probableCoreDomains": [
+        "clt",
+        "pj",
+        "inss",
+        "irrf",
+        "fgts"
+      ],
+      "dataShape": "object",
+      "notes": "Mapeado apenas como compatibilidade declarativa."
+    }
+  ]
+}

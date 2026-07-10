@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/core-index.schema.json",
+  "title": "Core Engine Index",
+  "allOf": [
+    { "$ref": "/data/core/schemas/shared-metadata.schema.json" },
+    {
+      "type": "object",
+      "required": ["references"],
+      "properties": {
+        "runtimeStatus": { "type": "string" },
+        "description": { "type": "string" },
+        "references": {
+          "type": "object",
+          "required": ["registry", "domains", "shared", "schemas", "history", "metadata", "versioning", "contracts", "lifecycle"],
+          "properties": {
+            "registry": { "type": "string" },
+            "domains": { "type": "string" },
+            "shared": { "type": "string" },
+            "schemas": { "type": "string" },
+            "history": { "type": "string" },
+            "metadata": { "type": "string" },
+            "versioning": { "type": "string" },
+            "contracts": { "type": "string" },
+            "lifecycle": { "type": "string" },
+            "compatibility": { "type": "string" },
+            "legislation": { "type": "string" },
+            "update": { "type": "string" }
+          }
+        }
+      }
+    }
+  ]
+}

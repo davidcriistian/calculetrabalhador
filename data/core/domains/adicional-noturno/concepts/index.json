@@ -1,0 +1,40 @@
+{
+  "id": "adicional-noturno-concepts",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "items": [
+    {
+      "id": "adicional-noturno",
+      "title": "Adicional noturno",
+      "description": "Acrescimo pago ao trabalhador que presta servico em periodo noturno."
+    },
+    {
+      "id": "hora-normal",
+      "title": "Valor da hora normal",
+      "description": "Valor obtido pela divisao do salario mensal pela jornada mensal informada."
+    },
+    {
+      "id": "percentual-adicional",
+      "title": "Percentual de adicional",
+      "description": "Percentual aplicado sobre a hora normal. A calculadora usa 20% como padrao e permite percentual personalizado."
+    },
+    {
+      "id": "hora-reduzida-noturna",
+      "title": "Hora reduzida noturna",
+      "description": "Referencia legal de 52 minutos e 30 segundos no trabalho urbano; explicada, mas nao aplicada automaticamente nesta versao."
+    },
+    {
+      "id": "horas-noturnas-informadas",
+      "title": "Horas noturnas informadas",
+      "description": "Quantidade informada pelo usuario e usada diretamente na multiplicacao final."
+    }
+  ],
+  "notes": [
+    "Conceitos extraidos da calculadora publicada e de sua documentacao textual."
+  ]
+}

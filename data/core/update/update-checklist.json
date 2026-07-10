@@ -1,0 +1,69 @@
+{
+  "id": "update-checklist",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Checklist oficial para validar planos futuros de atualizacao.",
+  "items": [
+    {
+      "id": "rules",
+      "label": "Regras",
+      "required": true,
+      "question": "As regras afetadas foram identificadas e classificadas?"
+    },
+    {
+      "id": "tables",
+      "label": "Tabelas",
+      "required": true,
+      "question": "As tabelas, faixas, valores ou vigencias afetadas foram mapeadas?"
+    },
+    {
+      "id": "calculators",
+      "label": "Calculadoras",
+      "required": true,
+      "question": "As calculadoras afetadas foram listadas e marcadas para equivalencia futura?"
+    },
+    {
+      "id": "articles",
+      "label": "Artigos",
+      "required": true,
+      "question": "Os artigos afetados foram listados para revisao futura?"
+    },
+    {
+      "id": "faqs",
+      "label": "FAQs",
+      "required": false,
+      "question": "FAQs existentes ou futuras precisam refletir a mudanca?"
+    },
+    {
+      "id": "examples",
+      "label": "Exemplos",
+      "required": false,
+      "question": "Exemplos numericos ou explicativos precisam ser revisados?"
+    },
+    {
+      "id": "sources",
+      "label": "Fontes",
+      "required": true,
+      "question": "A fonte oficial foi registrada e conferida?"
+    },
+    {
+      "id": "schema",
+      "label": "Schema",
+      "required": true,
+      "question": "O plano respeita os modelos e campos obrigatorios?"
+    },
+    {
+      "id": "documentation",
+      "label": "Documentacao",
+      "required": true,
+      "question": "A documentacao tecnica futura foi marcada se houver impacto?"
+    }
+  ],
+  "notes": [
+    "Checklist nao executa atualizacao; apenas organiza validacao futura."
+  ]
+}

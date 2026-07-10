@@ -1,0 +1,15 @@
+{
+  "id": "content-engine-contract",
+  "name": "Content Engine",
+  "version": "0.1.0",
+  "status": "future",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "objective": "Define the future contract for articles, guides, FAQs, sources and editorial context generated from Core domains.",
+  "expectedInputs": ["domain", "concepts", "references", "history", "contentIntent", "relatedTools"],
+  "expectedOutputs": ["contentBrief", "faqModel", "sourceList", "internalLinkPlan"],
+  "dependencies": ["Core Registry", "Domain Concepts", "Domain References", "Content Maps"],
+  "notes": ["Current articles remain static HTML and data/articles.json in Phase 1.1."]
+}

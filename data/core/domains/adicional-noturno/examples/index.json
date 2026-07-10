@@ -1,0 +1,153 @@
+{
+  "id": "adicional-noturno-examples",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "calculationFormula": {
+    "normalHourValue": "salary / monthlyHours",
+    "additionalPerHour": "normalHourValue * (percent / 100)",
+    "totalValue": "additionalPerHour * nightHours"
+  },
+  "displayRules": {
+    "currency": "Intl.NumberFormat pt-BR BRL",
+    "percent": "two decimal places with comma",
+    "hours": "two decimal places with comma"
+  },
+  "items": [
+    {
+      "id": "case-001-normal-20-percent",
+      "type": "normal",
+      "input": { "salary": 2200, "monthlyHours": 220, "nightHours": 10, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 10, "additionalPerHour": 2, "totalValue": 20, "displayTotal": "R$ 20,00" }
+    },
+    {
+      "id": "case-002-normal-20-hours",
+      "type": "normal",
+      "input": { "salary": 2640, "monthlyHours": 220, "nightHours": 20, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 12, "additionalPerHour": 2.4, "totalValue": 48, "displayTotal": "R$ 48,00" }
+    },
+    {
+      "id": "case-003-jornada-200",
+      "type": "normal",
+      "input": { "salary": 3000, "monthlyHours": 200, "nightHours": 15, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 15, "additionalPerHour": 3, "totalValue": 45, "displayTotal": "R$ 45,00" }
+    },
+    {
+      "id": "case-004-jornada-180",
+      "type": "normal",
+      "input": { "salary": 1800, "monthlyHours": 180, "nightHours": 30, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 10, "additionalPerHour": 2, "totalValue": 60, "displayTotal": "R$ 60,00" }
+    },
+    {
+      "id": "case-005-zero-horas-noturnas",
+      "type": "boundary",
+      "input": { "salary": 5000, "monthlyHours": 220, "nightHours": 0, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 22.7272727273, "additionalPerHour": 4.5454545455, "totalValue": 0, "displayTotal": "R$ 0,00" }
+    },
+    {
+      "id": "case-006-horas-decimais",
+      "type": "normal",
+      "input": { "salary": 1320, "monthlyHours": 220, "nightHours": 5.5, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 6, "additionalPerHour": 1.2, "totalValue": 6.6, "displayTotal": "R$ 6,60" }
+    },
+    {
+      "id": "case-007-horas-fracionadas",
+      "type": "normal",
+      "input": { "salary": 2500, "monthlyHours": 220, "nightHours": 12.75, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 11.3636363636, "additionalPerHour": 2.2727272727, "totalValue": 28.9772727273, "displayTotal": "R$ 28,98" }
+    },
+    {
+      "id": "case-008-percentual-custom-30",
+      "type": "normal",
+      "input": { "salary": 2200, "monthlyHours": 220, "nightHours": 10, "percent": 30 },
+      "expected": { "valid": true, "normalHourValue": 10, "additionalPerHour": 3, "totalValue": 30, "displayTotal": "R$ 30,00" }
+    },
+    {
+      "id": "case-009-percentual-custom-35",
+      "type": "normal",
+      "input": { "salary": 3200, "monthlyHours": 200, "nightHours": 8, "percent": 35 },
+      "expected": { "valid": true, "normalHourValue": 16, "additionalPerHour": 5.6, "totalValue": 44.8, "displayTotal": "R$ 44,80" }
+    },
+    {
+      "id": "case-010-percentual-custom-50",
+      "type": "normal",
+      "input": { "salary": 4400, "monthlyHours": 220, "nightHours": 1, "percent": 50 },
+      "expected": { "valid": true, "normalHourValue": 20, "additionalPerHour": 10, "totalValue": 10, "displayTotal": "R$ 10,00" }
+    },
+    {
+      "id": "case-011-salario-alto",
+      "type": "extreme",
+      "input": { "salary": 10000, "monthlyHours": 220, "nightHours": 160, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 45.4545454545, "additionalPerHour": 9.0909090909, "totalValue": 1454.5454545455, "displayTotal": "R$ 1.454,55" }
+    },
+    {
+      "id": "case-012-salario-minimo-fracionario",
+      "type": "extreme",
+      "input": { "salary": 1, "monthlyHours": 220, "nightHours": 1, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 0.0045454545, "additionalPerHour": 0.0009090909, "totalValue": 0.0009090909, "displayTotal": "R$ 0,00" }
+    },
+    {
+      "id": "case-013-jornada-minima",
+      "type": "extreme",
+      "input": { "salary": 2200, "monthlyHours": 1, "nightHours": 1, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 2200, "additionalPerHour": 440, "totalValue": 440, "displayTotal": "R$ 440,00" }
+    },
+    {
+      "id": "case-014-percentual-decimal",
+      "type": "boundary",
+      "input": { "salary": 3000, "monthlyHours": 220, "nightHours": 10, "percent": 22.5 },
+      "expected": { "valid": true, "normalHourValue": 13.6363636364, "additionalPerHour": 3.0681818182, "totalValue": 30.6818181818, "displayTotal": "R$ 30,68" }
+    },
+    {
+      "id": "case-015-hora-noturna-centesimal",
+      "type": "boundary",
+      "input": { "salary": 2200, "monthlyHours": 220, "nightHours": 0.01, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 10, "additionalPerHour": 2, "totalValue": 0.02, "displayTotal": "R$ 0,02" }
+    },
+    {
+      "id": "case-016-jornada-decimal",
+      "type": "boundary",
+      "input": { "salary": 3500, "monthlyHours": 150.5, "nightHours": 7.25, "percent": 20 },
+      "expected": { "valid": true, "normalHourValue": 23.2558139535, "additionalPerHour": 4.6511627907, "totalValue": 33.7209302326, "displayTotal": "R$ 33,72" }
+    },
+    {
+      "id": "case-017-salario-zero",
+      "type": "invalid",
+      "input": { "salary": 0, "monthlyHours": 220, "nightHours": 10, "percent": 20 },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-018-salario-negativo",
+      "type": "invalid",
+      "input": { "salary": -1000, "monthlyHours": 220, "nightHours": 10, "percent": 20 },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-019-jornada-zero",
+      "type": "invalid",
+      "input": { "salary": 2200, "monthlyHours": 0, "nightHours": 10, "percent": 20 },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-020-horas-negativas",
+      "type": "invalid",
+      "input": { "salary": 2200, "monthlyHours": 220, "nightHours": -1, "percent": 20 },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    }
+  ],
+  "coverage": {
+    "totalScenarios": 20,
+    "normal": 9,
+    "extreme": 3,
+    "boundary": 4,
+    "invalid": 4
+  },
+  "notes": [
+    "Cenarios calculados com a formula atual publicada.",
+    "Nenhum cenario aplica conversao automatica de hora reduzida."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "registry-partition-by-domain",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-partition.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "partition": "by-domain",
+  "description": "Partition prepared to discover assets by legal or content domain.",
+  "entries": [],
+  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "notes": ["Domain partitions reference assets only and never store legal knowledge."]
+}

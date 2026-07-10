@@ -1,0 +1,47 @@
+{
+  "id": "migration-types",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Supported declarative migration types for future phases.",
+  "items": [
+    {
+      "id": "calculator-core-migration",
+      "assetType": "calculator",
+      "description": "Future migration of calculator structure toward Core-compatible organization."
+    },
+    {
+      "id": "article-content-migration",
+      "assetType": "article",
+      "description": "Future migration of article content metadata or structure."
+    },
+    {
+      "id": "offer-injection-migration",
+      "assetType": "offer",
+      "description": "Future controlled migration for offer placement or offer metadata."
+    },
+    {
+      "id": "seo-structure-migration",
+      "assetType": "seo",
+      "description": "Future controlled migration of SEO structure with explicit SEO gates."
+    },
+    {
+      "id": "data-source-migration",
+      "assetType": "data-source",
+      "description": "Future migration of data source references after compatibility validation."
+    },
+    {
+      "id": "layout-component-migration",
+      "assetType": "layout-component",
+      "description": "Future migration of reusable layout components with visual and runtime checks."
+    }
+  ],
+  "notes": [
+    "Types are supported as protocol labels only; no migration type is implemented in Phase 2."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "registry-shared-definitions",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "description": "Shared reference definitions for partitioned registries.",
+  "entryTemplate": {
+    "id": "example-asset-id",
+    "type": "example-type",
+    "slug": "/example-slug/",
+    "status": "draft",
+    "owner": "Calcule Trabalhador",
+    "version": "0.1.0",
+    "references": {
+      "canonicalSource": "logical-component-reference",
+      "registryPartitions": []
+    }
+  },
+  "rules": [
+    "Registry entries store references only.",
+    "Registry entries must not duplicate calculators, articles, clusters or products.",
+    "Registry entries must not store legal rules, SEO source content or operational logic.",
+    "Canonical content must remain in its proper source layer."
+  ],
+  "notes": [
+    "Shared definitions are templates only and are not real assets."
+  ]
+}

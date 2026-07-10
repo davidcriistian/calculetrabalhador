@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/shared-metadata.schema.json",
+  "title": "Core Engine Shared Metadata",
+  "type": "object",
+  "required": ["id", "version", "status", "createdAt", "updatedAt", "owner", "source", "notes"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "aviso-previo-references",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "id": "calculadora-publicada-aviso-previo",
+      "title": "Calculadora de Aviso Previo publicada",
+      "url": "/calculadora-aviso-previo/",
+      "sourceType": "current-production-page",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Fonte primaria do comportamento homologado."
+      ]
+    },
+    {
+      "id": "planalto-lei-12506-2011",
+      "title": "Lei 12.506/2011",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12506.htm",
+      "sourceType": "official",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Fonte oficial para conferencia antes de migracao."
+      ]
+    },
+    {
+      "id": "runtime-tabelas-trabalhistas-aviso-previo",
+      "title": "Runtime atual - tabelas trabalhistas",
+      "url": "/data/tabelas-trabalhistas.json",
+      "sourceType": "current-runtime",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Referencia interna atual preservada."
+      ]
+    },
+    {
+      "id": "helper-tabelas-trabalhistas-aviso-previo",
+      "title": "Helper atual de tabelas trabalhistas",
+      "url": "/assets/js/tabelas-trabalhistas.js",
+      "sourceType": "current-runtime-helper",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Contem calcularAvisoPrevio e obterRegraAvisoPrevio."
+      ]
+    }
+  ],
+  "notes": [
+    "Referencias de homologacao nao alteram fontes atuais."
+  ]
+}

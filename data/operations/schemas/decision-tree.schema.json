@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/operations/schemas/decision-tree.schema.json",
+  "title": "Operation Decision Tree",
+  "type": "object",
+  "required": ["id", "firstQuestion"],
+  "properties": {
+    "id": { "type": "string" },
+    "firstQuestion": { "type": "string" },
+    "branches": { "type": "array", "items": { "type": "object" } }
+  }
+}

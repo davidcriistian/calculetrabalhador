@@ -1,0 +1,22 @@
+{
+  "id": "shadow-log-aviso-previo",
+  "version": "0.2.0",
+  "status": "passed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 5 - Shadow Mode Framework",
+  "calculator": "calculadora-aviso-previo",
+  "comparisonLog": "/data/core/shadow/comparisons/aviso-previo/index.json",
+  "summary": {
+    "totalScenarios": 60,
+    "equal": 60,
+    "divergent": 0,
+    "equivalencePercent": 100,
+    "userFacingResultSource": "legacy-runtime"
+  },
+  "notes": [
+    "Log sumarizado do piloto Shadow Mode de Aviso Previo.",
+    "Nenhuma substituicao operacional foi realizada."
+  ]
+}

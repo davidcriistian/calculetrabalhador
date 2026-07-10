@@ -1,0 +1,42 @@
+{
+  "id": "blueprint-contract-cluster",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/cluster/schemas/cluster-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "name": "Cluster Blueprint Contract",
+  "objective": "Define Cluster Blueprint as the official structural model that groups calculator, article, SEO, monetization, publishing, testing and validation models.",
+  "responsibilities": [
+    "define cluster identity",
+    "define cluster assets",
+    "reference calculator blueprint as component",
+    "reference article blueprint as component",
+    "define cluster SEO model",
+    "define publishing order and rollback requirements",
+    "define monetization slots without real products",
+    "define testing and validation expectations",
+    "define relationships between cluster components"
+  ],
+  "nonResponsibilities": [
+    "create real clusters",
+    "create calculators",
+    "create articles",
+    "generate pages",
+    "register real products",
+    "execute automation",
+    "modify production"
+  ],
+  "dependencies": [
+    "/data/blueprints/cluster/index.json",
+    "/data/blueprints/calculator/index.json",
+    "/data/blueprints/article/index.json"
+  ],
+  "notes": [
+    "Calculator Blueprint and Article Blueprint remain official models.",
+    "Cluster Blueprint orchestrates those models as components."
+  ]
+}

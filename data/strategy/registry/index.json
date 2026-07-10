@@ -1,0 +1,41 @@
+{
+  "id": "strategy-registry",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Entry point for current operational and editorial strategy.",
+  "references": {
+    "seo": "/data/strategy/seo/index.json",
+    "clusters": "/data/strategy/clusters/index.json",
+    "editorial": "/data/strategy/editorial/index.json",
+    "monetization": "/data/strategy/monetization/index.json",
+    "products": "/data/strategy/products/index.json",
+    "cta": "/data/strategy/cta/index.json",
+    "publishing": "/data/strategy/publishing/index.json",
+    "ux": "/data/strategy/ux/index.json",
+    "growth": "/data/strategy/growth/index.json",
+    "blueprints": "/data/strategy/blueprints/index.json",
+    "shared": "/data/strategy/shared/index.json",
+    "metadata": "/data/strategy/metadata/strategy.json",
+    "history": "/data/strategy/history/index.json",
+    "versioning": "/data/strategy/versioning/index.json",
+    "documentation": "/data/strategy/docs/STRATEGY.md"
+  },
+  "constitutionReference": "/data/constitution/registry/index.json",
+  "operationalBoundaries": {
+    "modifiesProduction": false,
+    "executesPublishing": false,
+    "executesAutomation": false,
+    "changesRuntime": false,
+    "changesSeo": false
+  },
+  "notes": [
+    "Strategy answers how the project operates today.",
+    "Strategy may evolve without changing the Constitution."
+  ]
+}

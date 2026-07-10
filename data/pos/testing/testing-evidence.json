@@ -1,0 +1,67 @@
+{
+  "id": "testing-evidence",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Minimum evidence types for future testing approval.",
+  "items": [
+    {
+      "id": "calculation-baseline",
+      "requiredFor": ["calculator-equivalence", "runtime-regression"],
+      "description": "Baseline of inputs, expected outputs, obtained outputs and tolerance."
+    },
+    {
+      "id": "json-output",
+      "requiredFor": ["calculator-equivalence", "runtime-regression", "automation-regression"],
+      "description": "Structured output captured for comparison."
+    },
+    {
+      "id": "html-snapshot",
+      "requiredFor": ["article-integrity", "layout-regression"],
+      "description": "HTML or rendered structure snapshot for future review."
+    },
+    {
+      "id": "seo-snapshot",
+      "requiredFor": ["seo-regression", "article-integrity"],
+      "description": "SEO metadata, canonical, indexability and URL evidence."
+    },
+    {
+      "id": "schema-snapshot",
+      "requiredFor": ["runtime-regression", "automation-regression"],
+      "description": "Schema or contract shape captured before and after change."
+    },
+    {
+      "id": "link-check",
+      "requiredFor": ["article-integrity", "seo-regression"],
+      "description": "Internal and external link status evidence."
+    },
+    {
+      "id": "performance-metric",
+      "requiredFor": ["performance-regression"],
+      "description": "Measured performance metric compared with baseline tolerance."
+    },
+    {
+      "id": "manual-review",
+      "requiredFor": ["all"],
+      "description": "Human review record required before final approval."
+    }
+  ],
+  "minimumEvidencePolicy": {
+    "calculator": ["calculation-baseline", "json-output", "manual-review"],
+    "article": ["html-snapshot", "seo-snapshot", "link-check", "manual-review"],
+    "seo": ["seo-snapshot", "link-check", "manual-review"],
+    "runtime": ["json-output", "schema-snapshot", "manual-review"],
+    "layout": ["html-snapshot", "manual-review"],
+    "performance": ["performance-metric", "manual-review"],
+    "offer": ["html-snapshot", "seo-snapshot", "manual-review"],
+    "automation": ["json-output", "schema-snapshot", "manual-review"]
+  },
+  "notes": [
+    "Evidence requirements are declarative and do not capture evidence automatically."
+  ]
+}

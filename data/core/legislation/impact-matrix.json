@@ -1,0 +1,102 @@
+{
+  "id": "legislation-impact-matrix",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Matriz declarativa de impactos possiveis para mudancas legislativas.",
+  "targets": [
+    {
+      "id": "domains",
+      "label": "Domains",
+      "path": "/data/core/domains/",
+      "impactQuestions": [
+        "Qual dominio juridico ou operacional foi afetado?",
+        "A mudanca impacta mais de um dominio?"
+      ]
+    },
+    {
+      "id": "rules",
+      "label": "Rules",
+      "path": "/data/rules/",
+      "corePath": "/data/core/domains/[domain]/rules/",
+      "impactQuestions": [
+        "Alguma regra de calculo ou elegibilidade mudou?",
+        "A regra atual possui equivalente no Core?"
+      ]
+    },
+    {
+      "id": "tables",
+      "label": "Tables",
+      "path": "/data/tabelas-trabalhistas.json",
+      "corePath": "/data/core/domains/[domain]/tables/",
+      "impactQuestions": [
+        "Algum valor, faixa, teto, piso, aliquota ou vigencia mudou?",
+        "Existe periodo de transicao?"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "path": "/data/tools.json",
+      "compatibilityPath": "/data/core/compatibility/tools-map.json",
+      "impactQuestions": [
+        "Quais calculadoras dependem das regras ou tabelas afetadas?",
+        "O impacto e numerico ou apenas informativo?"
+      ]
+    },
+    {
+      "id": "articles",
+      "label": "Articles",
+      "path": "/data/articles.json",
+      "compatibilityPath": "/data/core/compatibility/articles-map.json",
+      "impactQuestions": [
+        "Quais artigos mencionam a regra, tabela ou fonte afetada?",
+        "A revisao e editorial, legal ou numerica?"
+      ]
+    },
+    {
+      "id": "offers",
+      "label": "Offers",
+      "path": null,
+      "impactQuestions": [
+        "Alguma oferta futura deve ser pausada, revisada ou segmentada pela mudanca?"
+      ]
+    },
+    {
+      "id": "blueprints",
+      "label": "Blueprints",
+      "path": null,
+      "impactQuestions": [
+        "Algum blueprint futuro deve ser atualizado antes de gerar novas experiencias?"
+      ]
+    }
+  ],
+  "impactRules": [
+    {
+      "when": "Mudanca altera valor numerico usado por calculadora",
+      "minimumImpactLevel": "high",
+      "requiredTargets": ["tables", "rules", "tools"]
+    },
+    {
+      "when": "Mudanca altera apenas texto explicativo sem calculo",
+      "minimumImpactLevel": "low",
+      "requiredTargets": ["articles"]
+    },
+    {
+      "when": "Mudanca possui retroatividade",
+      "minimumImpactLevel": "critical",
+      "requiredTargets": ["domains", "rules", "tables", "tools", "articles"]
+    },
+    {
+      "when": "Mudanca possui periodo de transicao",
+      "minimumImpactLevel": "high",
+      "requiredTargets": ["domains", "rules", "tables", "tools", "articles"]
+    }
+  ],
+  "notes": [
+    "A matriz orienta analise futura e nao executa alteracoes."
+  ]
+}

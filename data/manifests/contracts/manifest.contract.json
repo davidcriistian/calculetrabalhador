@@ -1,0 +1,18 @@
+{
+  "id": "operational-manifest-contract-manifest",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/manifest.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "name": "Manifest Contract",
+  "objective": "Define the official contract for operation manifest records.",
+  "expectedInputs": ["operation request", "logical operation type"],
+  "expectedOutputs": ["minimum context", "required gates", "restrictions", "expected report"],
+  "dependencies": ["/data/manifests/registry/index.json"],
+  "nonResponsibilities": ["execute operations", "modify files", "validate production", "publish assets"],
+  "notes": ["Manifest records are declarative entrypoints only."]
+}

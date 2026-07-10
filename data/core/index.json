@@ -1,0 +1,30 @@
+{
+  "version": "1.1.0",
+  "schema": "/data/core/schemas/core-index.schema.json",
+  "status": "active",
+  "runtimeStatus": "parallel-only",
+  "description": "Official Core Engine entry point. Future engines must use this index instead of navigating folders directly.",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "notes": [
+    "This index is declarative and does not connect Core Engine to current calculators, articles, SEO or runtime.",
+    "Current runtime remains /data/tabelas-trabalhistas.json."
+  ],
+  "references": {
+    "registry": "/data/core/registry/domains.json",
+    "domains": "/data/core/domains/",
+    "shared": "/data/core/shared/index.json",
+    "schemas": "/data/core/schemas/",
+    "history": "/data/core/history/index.json",
+    "metadata": "/data/core/metadata/core.json",
+    "versioning": "/data/core/versioning/index.json",
+    "contracts": "/data/core/contracts/index.json",
+    "lifecycle": "/data/core/lifecycle/index.json",
+    "compatibility": "/data/core/compatibility/index.json",
+    "legislation": "/data/core/legislation/index.json",
+    "update": "/data/core/update/index.json",
+    "shadow": "/data/core/shadow/index.json"
+  }
+}

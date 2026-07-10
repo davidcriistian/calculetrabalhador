@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/operations/schemas/report.schema.json",
+  "title": "Operation Report",
+  "type": "object",
+  "required": ["reportId", "operationId", "result", "affectedFiles", "validations", "approval"],
+  "properties": {
+    "reportId": { "type": "string" },
+    "operationId": { "type": ["string", "null"] },
+    "result": { "type": "string" },
+    "time": { "type": "string" },
+    "estimatedCredits": { "type": "number" },
+    "affectedFiles": { "type": "array", "items": { "type": "string" } },
+    "validations": { "type": "array", "items": { "type": "string" } },
+    "approval": { "type": "object" }
+  }
+}

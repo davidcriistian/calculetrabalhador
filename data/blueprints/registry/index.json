@@ -1,0 +1,56 @@
+{
+  "id": "blueprint-system-registry",
+  "version": "0.2.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "description": "Master declarative registry for blueprint definitions.",
+  "notes": [
+    "This registry does not generate calculators, articles or production pages.",
+    "Blueprints are architecture models for future productivity engines.",
+    "Cluster Blueprint is now the primary structural blueprint for calculator and article ecosystems."
+  ],
+  "blueprintTypes": [
+    "cluster",
+    "calculator",
+    "article",
+    "shared-component"
+  ],
+  "registries": {
+    "clusterBlueprints": ["/data/blueprints/cluster/index.json"],
+    "calculatorBlueprints": ["/data/blueprints/calculator/index.json"],
+    "articleBlueprints": ["/data/blueprints/article/index.json"],
+    "sharedComponents": ["/data/blueprints/shared/index.json"],
+    "generatedAssets": []
+  },
+  "references": {
+    "schemas": "/data/blueprints/schemas/",
+    "contracts": "/data/blueprints/contracts/",
+    "metadata": "/data/blueprints/metadata/blueprints.json",
+    "history": "/data/blueprints/history/index.json",
+    "versioning": "/data/blueprints/versioning/index.json",
+    "documentation": "/data/blueprints/docs/BLUEPRINT_SYSTEM.md",
+    "clusterDocumentation": "/data/blueprints/docs/CLUSTER_BLUEPRINT.md"
+  },
+  "structuralModel": {
+    "primaryUnit": "cluster",
+    "calculatorBlueprintRole": "component-of-cluster",
+    "articleBlueprintRole": "component-of-cluster",
+    "calculatorBlueprintStillStandalone": true,
+    "articleBlueprintStillStandalone": true
+  },
+  "operationalBoundaries": {
+    "generatesCalculators": false,
+    "generatesArticles": false,
+    "modifiesPages": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "executesAutomation": false
+  }
+}

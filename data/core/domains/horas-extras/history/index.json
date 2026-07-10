@@ -1,0 +1,29 @@
+{
+  "id": "horas-extras-history",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "2026-07-09-homologacao-inicial",
+      "date": "2026-07-09",
+      "status": "homologation",
+      "type": "initial-homologation",
+      "description": "Criada representacao declarativa da Calculadora de Horas Extras atual no Core.",
+      "changes": [
+        "Mapeadas entradas, saidas, formulas e validacoes.",
+        "Registrados 25 cenarios de equivalencia.",
+        "Documentadas dependencias e riscos de migracao."
+      ],
+      "operationalImpact": "none"
+    }
+  ],
+  "notes": [
+    "Historico do dominio declarativo, nao do runtime de producao."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "aviso-previo-tables",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "runtimeStatus": "not-connected",
+  "compatibilityTarget": "/data/tabelas-trabalhistas.json",
+  "items": [
+    {
+      "id": "aviso-previo-parametros-atuais",
+      "year": "2026",
+      "status": "homologation",
+      "data": {
+        "baseDays": 30,
+        "additionalDaysPerCompletedYear": 3,
+        "maximumTotalDays": 90,
+        "dailyValueDivisor": 30,
+        "discountResignationDaysReference": 30
+      },
+      "notes": [
+        "Parametros espelham o runtime atual.",
+        "A calculadora publicada usa totalDays tambem para o tipo desconto."
+      ]
+    }
+  ],
+  "notes": [
+    "Tabela declarativa de homologacao sem consumo operacional."
+  ]
+}

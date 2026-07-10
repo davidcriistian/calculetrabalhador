@@ -1,0 +1,37 @@
+{
+  "id": "shadow-calculator-aviso-previo",
+  "version": "0.2.0",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 5 - Shadow Mode Framework",
+  "calculator": "calculadora-aviso-previo",
+  "domainId": "aviso-previo",
+  "mode": "shadow",
+  "userFacingResultSource": "legacy-runtime",
+  "legacySource": "/calculadora-aviso-previo/index.html",
+  "coreSource": "/data/core/domains/aviso-previo/rules/index.json",
+  "comparisonLog": "/data/core/shadow/comparisons/aviso-previo/index.json",
+  "validator": "/scripts/validate-shadow-aviso-previo.js",
+  "tolerance": 0.01,
+  "fallback": {
+    "enabled": true,
+    "onCoreError": "legacy-runtime",
+    "onDivergence": "legacy-runtime",
+    "onValidationError": "legacy-runtime",
+    "userVisibleImpact": "none"
+  },
+  "comparisonFields": [
+    "fullYears",
+    "totalDays",
+    "dailyValue",
+    "estimatedValue",
+    "resultStatus"
+  ],
+  "notes": [
+    "A pagina publicada nao consome data/core/shadow nesta Sprint.",
+    "O resultado apresentado ao usuario continua vindo exclusivamente do runtime atual.",
+    "A comparacao inclui aviso indenizado, trabalhado, desconto, limite de 90 dias e casos invalidos."
+  ]
+}

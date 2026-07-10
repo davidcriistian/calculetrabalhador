@@ -1,0 +1,41 @@
+{
+  "id": "validation-evidence",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Accepted evidence types for future validation approval.",
+  "items": [
+    { "id": "html-report", "description": "HTML structure validation evidence." },
+    { "id": "seo-report", "description": "SEO metadata and indexability evidence." },
+    { "id": "jsonld-report", "description": "JSON-LD and Schema.org validation evidence." },
+    { "id": "performance-report", "description": "Performance validation evidence." },
+    { "id": "responsive-report", "description": "Responsive behavior evidence." },
+    { "id": "accessibility-report", "description": "Accessibility review evidence." },
+    { "id": "manual-review", "description": "Human review evidence." },
+    { "id": "snapshot", "description": "Captured visual, structural or configuration snapshot." }
+  ],
+  "minimumEvidencePolicy": {
+    "seo-validation": ["seo-report", "manual-review"],
+    "html-validation": ["html-report"],
+    "jsonld-validation": ["jsonld-report"],
+    "schema-validation": ["snapshot", "manual-review"],
+    "link-validation": ["html-report", "manual-review"],
+    "navigation-validation": ["html-report", "snapshot"],
+    "layout-validation": ["snapshot", "manual-review"],
+    "responsive-validation": ["responsive-report", "snapshot"],
+    "accessibility-validation": ["accessibility-report", "manual-review"],
+    "performance-validation": ["performance-report"],
+    "runtime-validation": ["snapshot", "manual-review"],
+    "content-structure-validation": ["html-report", "seo-report", "manual-review"],
+    "calculator-structure-validation": ["html-report", "snapshot", "manual-review"],
+    "offer-placement-validation": ["snapshot", "manual-review"]
+  },
+  "notes": [
+    "Evidence requirements are declarative and do not capture evidence automatically."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/constitution/schemas/governance.schema.json",
+  "title": "Constitution Governance",
+  "allOf": [
+    { "$ref": "/data/constitution/schemas/constitution.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "ownership": { "type": "object" },
+        "versioning": { "type": "object" },
+        "approval": { "type": "object" },
+        "history": { "type": "object" },
+        "audit": { "type": "object" }
+      }
+    }
+  ]
+}

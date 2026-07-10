@@ -1,0 +1,37 @@
+{
+  "id": "testing-severity",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Declarative severity levels for future testing evidence and approval decisions.",
+  "items": [
+    {
+      "id": "low",
+      "blockingLevel": "non-blocking",
+      "description": "Minor issue with no runtime, SEO, calculation or layout impact."
+    },
+    {
+      "id": "medium",
+      "blockingLevel": "conditional",
+      "description": "Limited issue requiring review before approval."
+    },
+    {
+      "id": "high",
+      "blockingLevel": "blocking",
+      "description": "Issue that may affect behavior, migration safety or user-facing output."
+    },
+    {
+      "id": "critical",
+      "blockingLevel": "blocking",
+      "description": "Issue that affects runtime safety, calculation correctness, SEO integrity or rollback readiness."
+    }
+  ],
+  "notes": [
+    "Severity labels guide future test reports and do not execute tests."
+  ]
+}

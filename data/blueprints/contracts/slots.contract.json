@@ -1,0 +1,18 @@
+{
+  "id": "blueprint-contract-slots",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/slot.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "name": "Blueprint Slots Contract",
+  "objective": "Define how components may be placed in future blueprint structures.",
+  "expectedInputs": ["slot id", "accepted components", "placement rules"],
+  "expectedOutputs": ["slot definition", "placement constraints"],
+  "dependencies": ["/data/blueprints/schemas/slot.schema.json"],
+  "nonResponsibilities": ["render slots", "inject offers", "modify pages"],
+  "notes": ["Slots prepare placement rules for future generation."]
+}

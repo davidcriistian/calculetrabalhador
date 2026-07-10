@@ -1,0 +1,27 @@
+{
+  "id": "operation-best-practices",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/operation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Best practices for future operations.",
+  "items": [
+    "configuration-over-code",
+    "low-credit-consumption",
+    "reuse-existing-models",
+    "low-coupling",
+    "security-first",
+    "rollback-ready",
+    "standardization",
+    "small-batches",
+    "explicit-approval",
+    "report-every-operation"
+  ],
+  "notes": [
+    "Best practices are guidance and do not enforce behavior automatically."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/registry.schema.json",
+  "title": "Core Engine Registry",
+  "type": "object",
+  "required": ["version", "items"],
+  "properties": {
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "description": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "currentRuntime": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "/data/core/schemas/domain.schema.json" }
+    }
+  }
+}

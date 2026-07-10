@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/cluster.schema.json",
+  "title": "Strategy Cluster",
+  "type": "object",
+  "required": ["clusterId", "nucleus", "objective", "searchIntent"],
+  "properties": {
+    "clusterId": { "type": "string" },
+    "nucleus": { "type": "string" },
+    "objective": { "type": "string" },
+    "searchIntent": { "type": "string" },
+    "primaryCalculator": { "type": ["string", "null"] },
+    "pillarArticle": { "type": ["string", "null"] },
+    "satelliteArticles": { "type": "array", "items": { "type": "string" } },
+    "internalLinks": { "type": "array", "items": { "type": "string" } },
+    "seoStrategy": { "type": ["string", "null"] },
+    "primaryProduct": { "type": ["string", "null"] },
+    "primaryCta": { "type": ["string", "null"] },
+    "recommendedPublishingOrder": { "type": "array", "items": { "type": "string" } }
+  }
+}

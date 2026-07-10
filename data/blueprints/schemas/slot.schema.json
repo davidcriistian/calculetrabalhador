@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/slot.schema.json",
+  "title": "Blueprint Slot",
+  "type": "object",
+  "required": ["id", "acceptedComponents", "required"],
+  "properties": {
+    "id": { "type": "string" },
+    "acceptedComponents": { "type": "array", "items": { "type": "string" } },
+    "required": { "type": "boolean" },
+    "maxItems": { "type": "integer" }
+  }
+}

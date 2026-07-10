@@ -1,0 +1,41 @@
+{
+  "id": "migration-waves",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Declarative wave policy for future batch migrations.",
+  "items": [
+    {
+      "id": "wave-1-low-risk",
+      "riskLevel": "low",
+      "recommendedMaxItems": 5,
+      "description": "Small, isolated migrations with simple rollback and strong baseline evidence."
+    },
+    {
+      "id": "wave-2-medium-risk",
+      "riskLevel": "medium",
+      "recommendedMaxItems": 3,
+      "description": "Moderate migrations with dependencies or multiple evidence types."
+    },
+    {
+      "id": "wave-3-high-risk",
+      "riskLevel": "high",
+      "recommendedMaxItems": 1,
+      "description": "High-risk migrations requiring individual execution and manual approval."
+    },
+    {
+      "id": "wave-4-critical",
+      "riskLevel": "critical",
+      "recommendedMaxItems": 1,
+      "description": "Critical migrations that should not proceed without explicit governance review."
+    }
+  ],
+  "notes": [
+    "Waves guide future planning and do not execute migrations."
+  ]
+}

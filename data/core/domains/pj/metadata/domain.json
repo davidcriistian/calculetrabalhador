@@ -1,0 +1,9 @@
+{
+  "id": "pj",
+  "schema": "/data/core/schemas/domain.schema.json",
+  "status": "planned",
+  "runtimeStatus": "parallel-only",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "notes": ["Domain scaffold only. No CLT or PJ comparison behavior is changed in Phase 1."]
+}

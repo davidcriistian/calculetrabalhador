@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "schema": "/data/core/schemas/version.schema.json",
+  "description": "Versioning control for Core Engine data contracts and future migrations.",
+  "runtimeStatus": "parallel-only",
+  "currentCoreVersion": "1.0.0",
+  "compatibility": {
+    "currentRuntime": "/data/tabelas-trabalhistas.json",
+    "rulesDirectory": "/data/rules/",
+    "migrationStatus": "not-started",
+    "calculatorsConsumeCore": false,
+    "articlesConsumeCore": false
+  },
+  "items": [
+    {
+      "id": "core-engine-1.0.0",
+      "version": "1.0.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": ["Initial parallel Core Engine structure."]
+    }
+  ]
+}

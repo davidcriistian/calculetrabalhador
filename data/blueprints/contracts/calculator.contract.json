@@ -1,0 +1,18 @@
+{
+  "id": "blueprint-contract-calculator",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "name": "Calculator Blueprint Contract",
+  "objective": "Define the declarative requirements for future calculator generation.",
+  "expectedInputs": ["domain", "nucleus", "fields", "calculation model", "SEO", "testing", "validation"],
+  "expectedOutputs": ["calculator blueprint", "required components", "publishing requirements"],
+  "dependencies": ["/data/blueprints/calculator/index.json", "/data/blueprints/shared/index.json"],
+  "nonResponsibilities": ["generate calculator", "calculate values", "modify calculator pages"],
+  "notes": ["This contract prepares future calculator creation only."]
+}

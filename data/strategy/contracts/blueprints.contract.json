@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-blueprints",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Blueprint Strategy Contract",
+  "objective": "Define strategic rules for future blueprint usage.",
+  "expectedInputs": ["cluster", "asset type", "blueprint"],
+  "expectedOutputs": ["blueprint strategy decision"],
+  "dependencies": ["/data/strategy/blueprints/index.json", "/data/blueprints/registry/index.json"],
+  "nonResponsibilities": ["generate assets", "modify Blueprint System"],
+  "notes": ["Cluster Blueprint is the primary editorial unit."]
+}

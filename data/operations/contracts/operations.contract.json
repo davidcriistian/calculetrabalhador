@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-operations",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/operation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Operations Contract",
+  "objective": "Define the official structure for future platform operations.",
+  "expectedInputs": ["operation request", "constitution", "strategy", "blueprint", "approval"],
+  "expectedOutputs": ["operation plan", "report"],
+  "dependencies": ["/data/operations/registry/index.json"],
+  "nonResponsibilities": ["execute operations", "modify production"],
+  "notes": ["Operation contract is declarative."]
+}

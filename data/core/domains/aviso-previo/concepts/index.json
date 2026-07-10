@@ -1,0 +1,50 @@
+{
+  "id": "aviso-previo-concepts",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "id": "aviso-previo",
+      "title": "Aviso previo",
+      "description": "Comunicacao antecipada de encerramento do contrato de trabalho, podendo ser trabalhada ou indenizada conforme o caso."
+    },
+    {
+      "id": "aviso-previo-proporcional",
+      "title": "Aviso previo proporcional",
+      "description": "Acrescimo de dias ao aviso previo conforme tempo de servico, respeitando limite maximo aplicavel."
+    },
+    {
+      "id": "aviso-previo-indenizado",
+      "title": "Aviso previo indenizado",
+      "description": "Modalidade em que o periodo de aviso e convertido em valor indenizado."
+    },
+    {
+      "id": "aviso-previo-trabalhado",
+      "title": "Aviso previo trabalhado",
+      "description": "Modalidade em que o empregado cumpre o periodo de aviso trabalhando."
+    },
+    {
+      "id": "desconto-aviso-pedido-demissao",
+      "title": "Desconto de aviso no pedido de demissao",
+      "description": "Modalidade apresentada pela calculadora como possivel desconto quando o aviso nao e cumprido e nao ha dispensa."
+    },
+    {
+      "id": "anos-completos",
+      "title": "Anos completos",
+      "description": "Quantidade de aniversarios completos entre admissao e desligamento, usada para calcular dias adicionais."
+    },
+    {
+      "id": "valor-diario",
+      "title": "Valor diario",
+      "description": "Salario bruto mensal dividido por 30, usado para estimar valor do periodo de aviso."
+    }
+  ],
+  "notes": [
+    "Conceitos extraidos da calculadora publicada."
+  ]
+}

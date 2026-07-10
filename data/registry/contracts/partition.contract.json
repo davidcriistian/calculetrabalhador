@@ -1,0 +1,41 @@
+{
+  "id": "registry-partition-contract",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-partition.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "name": "Registry Partition Contract",
+  "objective": "Define how registry partitions should remain small, focused and reference-only.",
+  "partitionResponsibilities": [
+    "group registry entries by one discovery dimension",
+    "keep entries small",
+    "reference canonical sources",
+    "allow future sharding when a partition grows"
+  ],
+  "partitionNonResponsibilities": [
+    "be a source of truth",
+    "store copied asset content",
+    "store formulas",
+    "store legal rules",
+    "store complete SEO strategy",
+    "execute operations"
+  ],
+  "futureShardingPolicy": {
+    "allowed": true,
+    "examples": [
+      "by-type/calculator/index.json",
+      "by-domain/rescisao/index.json",
+      "by-cluster/ferias/index.json",
+      "by-status/published/index.json"
+    ],
+    "requiresMigrationInThisPhase": false
+  },
+  "dependencies": ["/data/registry/index.json"],
+  "notes": [
+    "Partitions are empty in this phase."
+  ]
+}

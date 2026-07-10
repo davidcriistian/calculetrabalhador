@@ -1,0 +1,18 @@
+{
+  "id": "constitution-contract-governance",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Governance Contract",
+  "objective": "Define ownership, approval, history, audit and responsibility requirements.",
+  "expectedInputs": ["ownership", "approval request", "audit reference"],
+  "expectedOutputs": ["governance decision model"],
+  "dependencies": ["/data/constitution/governance/index.json"],
+  "nonResponsibilities": ["authenticate users", "build admin UI"],
+  "notes": ["Governance contract is declarative."]
+}

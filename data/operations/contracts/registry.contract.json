@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-registry",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Operation Registry Contract",
+  "objective": "Define discovery of operation system modules.",
+  "expectedInputs": ["module", "reference"],
+  "expectedOutputs": ["registry reference"],
+  "dependencies": ["/data/operations/registry/index.json"],
+  "nonResponsibilities": ["execute operations"],
+  "notes": ["Registry is discovery only."]
+}

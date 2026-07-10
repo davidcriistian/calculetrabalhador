@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/example.schema.json",
+  "title": "Core Engine Example",
+  "type": "object",
+  "required": ["id", "domainId", "type", "description", "status", "version"],
+  "properties": {
+    "id": { "type": "string" },
+    "domainId": { "type": "string" },
+    "type": { "type": "string" },
+    "description": { "type": "string" },
+    "inputs": { "type": "object" },
+    "expectedOutputs": { "type": "object" },
+    "status": { "type": "string" },
+    "version": { "type": "string" }
+  }
+}

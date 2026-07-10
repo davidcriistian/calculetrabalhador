@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-runtime-map",
+  "schema": null,
+  "description": "Mapa do runtime atual preservado.",
+  "items": [
+    {
+      "id": "runtime-tabelas-json",
+      "file": "data/tabelas-trabalhistas.json",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "role": "Fonte JSON central usada pelo runtime atual para tabelas trabalhistas.",
+      "coreDomains": [
+        "shared",
+        "inss",
+        "irrf",
+        "fgts",
+        "beneficios",
+        "clt",
+        "mei",
+        "pj"
+      ],
+      "mustRemainInRuntime": true
+    },
+    {
+      "id": "runtime-tabelas-js",
+      "file": "assets/js/tabelas-trabalhistas.js",
+      "status": "current-runtime",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "role": "Helper JavaScript atual para consumo das tabelas por páginas estáticas.",
+      "coreDomains": [
+        "shared",
+        "inss",
+        "irrf",
+        "fgts",
+        "beneficios",
+        "clt",
+        "mei",
+        "pj"
+      ],
+      "mustRemainInRuntime": true
+    }
+  ],
+  "notes": [
+    "Nenhuma página deve consumir data/core nesta fase."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "update-dependencies-analyzer",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Modelo declarativo para representar dependencias entre regras, tabelas, ferramentas, artigos e engines futuras.",
+  "dependencyFlow": [
+    {
+      "from": "sourceChange",
+      "to": "rule",
+      "description": "Uma mudanca legislativa pode afetar uma regra."
+    },
+    {
+      "from": "rule",
+      "to": "table",
+      "description": "Uma regra pode depender de tabela, faixa, teto, piso, aliquota ou valor."
+    },
+    {
+      "from": "table",
+      "to": "tool",
+      "description": "Uma tabela pode afetar calculadoras que usam seus valores."
+    },
+    {
+      "from": "tool",
+      "to": "article",
+      "description": "Uma calculadora pode estar ligada a artigos explicativos ou guias."
+    },
+    {
+      "from": "article",
+      "to": "offer",
+      "description": "Conteudos futuros podem influenciar ofertas relacionadas."
+    },
+    {
+      "from": "offer",
+      "to": "blueprint",
+      "description": "Ofertas e conteudos podem alimentar blueprints futuros."
+    }
+  ],
+  "referenceMaps": {
+    "rules": "/data/core/compatibility/rules-map.json",
+    "tables": "/data/core/compatibility/tables-map.json",
+    "tools": "/data/core/compatibility/tools-map.json",
+    "articles": "/data/core/compatibility/articles-map.json",
+    "dependencies": "/data/core/compatibility/dependencies-map.json"
+  },
+  "outputModel": {
+    "affectedRules": [],
+    "affectedTables": [],
+    "affectedCalculators": [],
+    "affectedArticles": [],
+    "affectedOffers": [],
+    "affectedBlueprints": [],
+    "confidence": "unknown",
+    "notes": []
+  },
+  "notes": [
+    "Este analisador e um modelo declarativo, nao executa varredura automatica nesta fase."
+  ]
+}

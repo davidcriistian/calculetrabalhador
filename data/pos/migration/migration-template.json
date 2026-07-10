@@ -1,0 +1,96 @@
+{
+  "id": "migration-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Template for a future individual migration plan.",
+  "migration": {
+    "migrationId": "example-migration-id",
+    "type": "calculator-core-migration",
+    "phase": "planned",
+    "riskLevel": "low",
+    "reason": "Describe why this migration is needed.",
+    "targetAsset": {
+      "assetType": "calculator",
+      "assetId": "example-calculator-id",
+      "currentLocation": "/example/source/path",
+      "targetLocation": "/example/target/path"
+    },
+    "source": {
+      "system": "current-production-structure",
+      "files": []
+    },
+    "destination": {
+      "system": "future-pos-compatible-structure",
+      "files": []
+    },
+    "filePolicy": {
+      "allowedToChange": [],
+      "blockedFromChange": [
+        "/data/tabelas-trabalhistas.json",
+        "/assets/js/tabelas-trabalhistas.js",
+        "/sitemap.xml",
+        "/robots.txt"
+      ],
+      "requiresExplicitApproval": []
+    },
+    "checks": {
+      "before": [
+        "capture-baseline",
+        "confirm-current-page-loads",
+        "confirm-current-calculation-equivalence",
+        "confirm-current-seo-metadata"
+      ],
+      "after": [
+        "confirm-page-loads",
+        "confirm-calculation-equivalence",
+        "confirm-runtime-unchanged",
+        "confirm-seo-unchanged",
+        "confirm-url-unchanged"
+      ]
+    },
+    "validations": {
+      "blocking": [
+        "equivalence-pass",
+        "testing-pass",
+        "validation-pass",
+        "seo-pass",
+        "runtime-safe",
+        "rollback-ready",
+        "manual-approval"
+      ],
+      "nonBlocking": []
+    },
+    "approval": {
+      "requiredGates": [
+        "equivalence-pass",
+        "testing-pass",
+        "validation-pass",
+        "seo-pass",
+        "runtime-safe",
+        "rollback-ready",
+        "manual-approval"
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "rejectionReason": null
+    },
+    "rollback": {
+      "rollbackPlan": "/data/pos/migration/rollback-template.json",
+      "rollbackReady": false
+    },
+    "report": {
+      "reportTemplate": "/data/pos/migration/migration-report-template.json",
+      "reportLocation": null
+    }
+  },
+  "notes": [
+    "This is a model for future migration plans.",
+    "Using this template does not authorize or execute a migration."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/component.schema.json",
+  "title": "Blueprint Component",
+  "type": "object",
+  "required": ["id", "name", "slots", "fields"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "slots": { "type": "array", "items": { "type": "string" } },
+    "fields": { "type": "array", "items": { "type": "string" } },
+    "validation": { "type": "array", "items": { "type": "string" } }
+  }
+}

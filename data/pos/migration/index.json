@@ -1,0 +1,55 @@
+{
+  "id": "pos-migration-engine-index",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Declarative protocol for future safe migrations of calculators and content assets.",
+  "notes": [
+    "This Migration Engine defines protocol files only and does not execute migrations.",
+    "No calculator, article, runtime, SEO, URL, sitemap or production JavaScript consumes this folder in Phase 2."
+  ],
+  "answers": {
+    "whatWillBeMigrated": "Defined by migration-template.json targetAsset.",
+    "source": "Defined by migration-template.json source.",
+    "destination": "Defined by migration-template.json destination.",
+    "allowedFiles": "Defined by migration-template.json filePolicy.allowedToChange.",
+    "blockedFiles": "Defined by migration-template.json filePolicy.blockedFromChange.",
+    "preTests": "Defined by migration-template.json checks.before.",
+    "postTests": "Defined by migration-template.json checks.after.",
+    "blockingValidations": "Defined by migration-approval-gates.json and migration-template.json validations.",
+    "approval": "Defined by migration-approval-gates.json approval gates.",
+    "rejection": "Defined by migration-status.json and report template rejection notes.",
+    "rollback": "Defined by rollback-template.json.",
+    "reporting": "Defined by migration-report-template.json.",
+    "batchLimits": "Defined by migration-batch-template.json batch.limits.",
+    "waves": "Defined by migration-waves.json."
+  },
+  "references": {
+    "template": "/data/pos/migration/migration-template.json",
+    "status": "/data/pos/migration/migration-status.json",
+    "types": "/data/pos/migration/migration-types.json",
+    "phases": "/data/pos/migration/migration-phases.json",
+    "riskLevels": "/data/pos/migration/migration-risk-levels.json",
+    "approvalGates": "/data/pos/migration/migration-approval-gates.json",
+    "reportTemplate": "/data/pos/migration/migration-report-template.json",
+    "batchTemplate": "/data/pos/migration/migration-batch-template.json",
+    "waves": "/data/pos/migration/migration-waves.json",
+    "rollbackTemplate": "/data/pos/migration/rollback-template.json",
+    "documentation": "/data/pos/docs/MIGRATION_ENGINE.md"
+  },
+  "operationalBoundaries": {
+    "executesMigrations": false,
+    "modifiesCalculators": false,
+    "modifiesArticles": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "implementsAutomation": false
+  }
+}

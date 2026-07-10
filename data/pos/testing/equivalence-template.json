@@ -1,0 +1,32 @@
+{
+  "id": "equivalence-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Declarative model for comparing expected and obtained results.",
+  "equivalence": {
+    "equivalenceId": "example-equivalence-id",
+    "caseId": "example-case-id",
+    "input": {},
+    "expectedResult": {},
+    "obtainedResult": {},
+    "difference": {},
+    "percentage": null,
+    "tolerance": {
+      "type": "exact",
+      "value": 0,
+      "unit": "none"
+    },
+    "status": "planned",
+    "blocking": true,
+    "notes": []
+  },
+  "notes": [
+    "Equivalence records support future calculator and shadow comparisons."
+  ]
+}

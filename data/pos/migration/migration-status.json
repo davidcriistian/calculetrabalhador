@@ -1,0 +1,25 @@
+{
+  "id": "migration-status",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Official status values for future migration records.",
+  "items": [
+    { "id": "not-started", "description": "Migration record exists but has not entered the flow." },
+    { "id": "in-progress", "description": "Migration is being prepared or reviewed." },
+    { "id": "waiting-approval", "description": "Migration is blocked until approval gates pass." },
+    { "id": "approved", "description": "Migration has approval to proceed." },
+    { "id": "completed", "description": "Migration completed and post-checks passed." },
+    { "id": "failed", "description": "Migration failed and requires review or rollback." },
+    { "id": "rolled-back", "description": "Rollback was executed and confirmed." },
+    { "id": "cancelled", "description": "Migration was intentionally stopped before completion." }
+  ],
+  "notes": [
+    "Status values are declarative labels for future migration plans."
+  ]
+}

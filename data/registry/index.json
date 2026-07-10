@@ -1,0 +1,70 @@
+{
+  "id": "registry-partitioning-system",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-index.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "description": "Official partitionable registry architecture for fast asset discovery.",
+  "registryRole": "discovery-index",
+  "partitioningStatus": "ready-empty",
+  "references": {
+    "byType": "/data/registry/by-type/index.json",
+    "byDomain": "/data/registry/by-domain/index.json",
+    "byNucleus": "/data/registry/by-nucleus/index.json",
+    "byCluster": "/data/registry/by-cluster/index.json",
+    "byStatus": "/data/registry/by-status/index.json",
+    "byVersion": "/data/registry/by-version/index.json",
+    "byOwner": "/data/registry/by-owner/index.json",
+    "shared": "/data/registry/shared/index.json",
+    "schemas": "/data/registry/schemas/",
+    "contracts": "/data/registry/contracts/",
+    "metadata": "/data/registry/metadata/registry.json",
+    "history": "/data/registry/history/index.json",
+    "versioning": "/data/registry/versioning/index.json",
+    "documentation": "/data/registry/docs/REGISTRY_SYSTEM.md"
+  },
+  "supportedPartitions": [
+    "by-type",
+    "by-domain",
+    "by-nucleus",
+    "by-cluster",
+    "by-status",
+    "by-version",
+    "by-owner"
+  ],
+  "entryShape": {
+    "allowedFields": ["id", "type", "slug", "status", "owner", "version", "references"],
+    "storesFullAssets": false,
+    "storesKnowledge": false,
+    "storesLegalRules": false,
+    "storesSeoSource": false,
+    "storesOperationalLogic": false
+  },
+  "scaleTargets": {
+    "calculators": "500+",
+    "articles": "1000+",
+    "products": "200+",
+    "clusters": "hundreds",
+    "nuclei": "dozens",
+    "domains": "multiple",
+    "versions": "multiple"
+  },
+  "operationalBoundaries": {
+    "feedsRuntime": false,
+    "feedsCalculators": false,
+    "feedsArticles": false,
+    "executesAutomation": false,
+    "modifiesProduction": false,
+    "duplicatesAssets": false,
+    "storesCanonicalContent": false
+  },
+  "notes": [
+    "This registry system is an index only.",
+    "No existing registries are migrated in this phase.",
+    "Partitions are empty until a future approved population process exists."
+  ]
+}

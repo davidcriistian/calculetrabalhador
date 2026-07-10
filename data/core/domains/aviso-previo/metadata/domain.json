@@ -1,0 +1,23 @@
+{
+  "id": "aviso-previo",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "name": "Aviso Previo",
+  "description": "Representacao declarativa completa da Calculadora de Aviso Previo atual dentro do Core.",
+  "parentDomain": "clt",
+  "runtimeStatus": "shadow-mode",
+  "migrationStatus": "pilot-shadow",
+  "homologationStatus": "passed-with-notes",
+  "shadowMode": "/data/core/shadow/calculators/aviso-previo/index.json",
+  "productionCalculator": "/calculadora-aviso-previo/",
+  "notes": [
+    "Este dominio nao altera data/rules/aviso-previo.json.",
+    "Este dominio nao altera calculadoras, artigos, URLs, SEO ou runtime.",
+    "Este dominio participa apenas de Shadow Mode e nao substitui o resultado da calculadora publicada.",
+    "A representacao descreve a logica atual da pagina publicada, incluindo aviso indenizado, trabalhado e desconto."
+  ]
+}

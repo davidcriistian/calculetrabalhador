@@ -1,0 +1,70 @@
+{
+  "id": "operational-manifest-restrictions",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/restriction.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Official restrictions for future operation manifests.",
+  "globalRestrictions": [
+    {
+      "id": "no-constitution-change-during-operations",
+      "rule": "Never change Constitution during ordinary operations.",
+      "appliesTo": ["all-operations"]
+    },
+    {
+      "id": "no-runtime-direct-edit",
+      "rule": "Never edit runtime directly unless a future approved publishing or runtime operation explicitly allows it.",
+      "appliesTo": ["create-calculator", "create-article", "update-calculator", "update-article", "change-product", "change-cta", "change-campaign", "expand-cluster"]
+    },
+    {
+      "id": "no-core-change-during-content-creation",
+      "rule": "Never change Core during article or calculator creation unless the operation is explicitly update-law or update-table.",
+      "appliesTo": ["create-calculator", "create-article", "create-cluster", "expand-cluster"]
+    },
+    {
+      "id": "no-strategy-change-during-publishing",
+      "rule": "Never change Strategy during Publishing unless a separate strategy operation was approved first.",
+      "appliesTo": ["publish"]
+    },
+    {
+      "id": "no-production-change-during-validation",
+      "rule": "Validation operations are read-only by default.",
+      "appliesTo": ["validate-calculator", "validate-article"]
+    },
+    {
+      "id": "rollback-required-for-migration",
+      "rule": "Migration operations require rollback readiness before execution.",
+      "appliesTo": ["migrate-calculator", "migrate-article"]
+    },
+    {
+      "id": "approval-required-for-publishing",
+      "rule": "Publishing requires testing pass, validation pass, rollback readiness and manual approval.",
+      "appliesTo": ["publish"]
+    },
+    {
+      "id": "logical-components-only",
+      "rule": "Manifests must avoid large physical file lists and should reference logical components.",
+      "appliesTo": ["all-operations"]
+    }
+  ],
+  "blockedProductionSurfaces": [
+    "calculators",
+    "articles",
+    "runtime",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "URLs",
+    "sitemap",
+    "layout"
+  ],
+  "notes": [
+    "Restrictions are declarative and do not enforce behavior by themselves.",
+    "Future engines must treat these restrictions as gates before file changes."
+  ]
+}

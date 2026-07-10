@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "schema": "/data/core/schemas/metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "parallel-only",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "officialRuntime": "/data/tabelas-trabalhistas.json",
+  "notes": [
+    "Core Engine does not replace current calculators, rules, maps, brain files or runtime in Phase 1.",
+    "All files under data/core are declarative foundations for future integrations."
+  ]
+}

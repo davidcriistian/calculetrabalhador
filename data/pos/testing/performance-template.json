@@ -1,0 +1,41 @@
+{
+  "id": "performance-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Template for future performance regression evidence.",
+  "performance": {
+    "performanceTestId": "example-performance-test-id",
+    "assetId": "example-asset-id",
+    "metrics": [
+      {
+        "metric": "load-time-ms",
+        "baselineValue": null,
+        "obtainedValue": null,
+        "difference": null,
+        "tolerance": {
+          "type": "maximum-increase",
+          "value": 0,
+          "unit": "percent"
+        },
+        "status": "planned"
+      }
+    ],
+    "environment": {
+      "device": null,
+      "viewport": null,
+      "network": null,
+      "browser": null
+    },
+    "result": "planned",
+    "notes": []
+  },
+  "notes": [
+    "This template defines performance evidence only and does not measure performance."
+  ]
+}

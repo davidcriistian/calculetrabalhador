@@ -1,0 +1,55 @@
+{
+  "id": "legislation-workflow",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Fluxo oficial declarativo para tratar mudancas legislativas.",
+  "steps": [
+    {
+      "id": "new-law-or-event",
+      "label": "Nova lei ou evento normativo",
+      "description": "Identificar publicacao, revogacao, tabela, interpretacao ou mudanca de vigencia."
+    },
+    {
+      "id": "register-change",
+      "label": "Cadastro da mudanca",
+      "description": "Registrar a mudanca usando change-template.json."
+    },
+    {
+      "id": "validate-source",
+      "label": "Validacao",
+      "description": "Confirmar fonte oficial, datas, dominio, status e nivel de impacto."
+    },
+    {
+      "id": "approve-change",
+      "label": "Aprovacao",
+      "description": "Aprovar internamente o registro declarativo antes de qualquer acao futura."
+    },
+    {
+      "id": "impact-analysis",
+      "label": "Analise de impacto",
+      "description": "Usar impact-matrix.json e Compatibility Engine para mapear regras, tabelas, ferramentas e artigos afetados."
+    },
+    {
+      "id": "future-migration-planning",
+      "label": "Migracao futura",
+      "description": "Planejar piloto ou atualizacao futura sem alterar o runtime nesta fase."
+    },
+    {
+      "id": "future-publication",
+      "label": "Publicacao",
+      "description": "Publicacao futura somente apos validacao de equivalencia, revisao e fase especifica de integracao."
+    }
+  ],
+  "guards": [
+    "Nenhuma etapa deste workflow altera calculadoras nesta fase.",
+    "Nenhuma etapa deste workflow altera artigos nesta fase.",
+    "Nenhuma etapa deste workflow altera runtime nesta fase."
+  ],
+  "notes": [
+    "O workflow descreve governanca futura; nao e automacao executavel."
+  ]
+}

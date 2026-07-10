@@ -1,0 +1,36 @@
+{
+  "id": "baseline-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Official baseline record model for future test evidence.",
+  "baseline": {
+    "baselineId": "example-baseline-id",
+    "assetId": "example-asset-id",
+    "assetType": "calculator",
+    "version": "example-version",
+    "timestamp": null,
+    "casesExecuted": [],
+    "inputs": {},
+    "expectedOutputs": {},
+    "obtainedOutputs": {},
+    "differences": [],
+    "tolerance": {
+      "type": "exact",
+      "value": 0,
+      "unit": "none"
+    },
+    "result": "planned",
+    "checksum": null,
+    "observations": []
+  },
+  "notes": [
+    "Checksum is reserved for future integrity verification.",
+    "This template does not store live baseline data in Phase 3."
+  ]
+}

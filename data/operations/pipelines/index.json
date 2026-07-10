@@ -1,0 +1,24 @@
+{
+  "id": "operation-pipelines",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/pipeline.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Reusable pipeline catalog.",
+  "items": [
+    { "id": "calculator-pipeline", "steps": ["blueprint", "core", "testing", "validation", "publishing", "report"] },
+    { "id": "article-pipeline", "steps": ["cluster", "blueprint", "seo", "testing", "validation", "publishing", "report"] },
+    { "id": "cluster-pipeline", "steps": ["strategy", "cluster-blueprint", "editorial-plan", "validation", "report"] },
+    { "id": "migration-pipeline", "steps": ["migration-plan", "testing", "validation", "approval", "rollback-ready", "report"] },
+    { "id": "publishing-pipeline", "steps": ["pre-publishing", "testing", "validation", "approval", "post-publishing", "report"] },
+    { "id": "validation-pipeline", "steps": ["evidence", "checklist", "severity", "approval", "report"] },
+    { "id": "seo-pipeline", "steps": ["seo-policy", "metadata", "links", "json-ld", "validation", "report"] }
+  ],
+  "notes": [
+    "Pipelines are reusable sequences and do not run automatically."
+  ]
+}

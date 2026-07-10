@@ -1,0 +1,57 @@
+{
+  "id": "pos-testing-engine-index",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Declarative authority for how platform components must be tested before and after future changes.",
+  "notes": [
+    "This Testing Engine defines test protocol files only and does not run tests.",
+    "It does not fix, migrate, alter or approve production changes automatically."
+  ],
+  "answers": {
+    "whatWillBeTested": "Defined by testing-template.json target.",
+    "inputs": "Defined by testing-template.json cases.inputs.",
+    "expectedResults": "Defined by testing-template.json cases.expectedOutput.",
+    "tolerance": "Defined by baseline-template.json and equivalence-template.json tolerance.",
+    "approval": "Defined by approval-matrix.json.",
+    "rejection": "Defined by approval-matrix.json failure rules and test-report-template.json decision.",
+    "requiredTests": "Defined by test-suite-template.json requiredTests.",
+    "baseline": "Defined by baseline-template.json.",
+    "versionComparison": "Defined by equivalence-template.json and regression-template.json.",
+    "reporting": "Defined by test-report-template.json.",
+    "severity": "Defined by testing-severity.json.",
+    "evidence": "Defined by testing-evidence.json."
+  },
+  "references": {
+    "template": "/data/pos/testing/testing-template.json",
+    "status": "/data/pos/testing/testing-status.json",
+    "types": "/data/pos/testing/testing-types.json",
+    "severity": "/data/pos/testing/testing-severity.json",
+    "evidence": "/data/pos/testing/testing-evidence.json",
+    "baselineTemplate": "/data/pos/testing/baseline-template.json",
+    "equivalenceTemplate": "/data/pos/testing/equivalence-template.json",
+    "performanceTemplate": "/data/pos/testing/performance-template.json",
+    "regressionTemplate": "/data/pos/testing/regression-template.json",
+    "testSuiteTemplate": "/data/pos/testing/test-suite-template.json",
+    "testReportTemplate": "/data/pos/testing/test-report-template.json",
+    "approvalMatrix": "/data/pos/testing/approval-matrix.json",
+    "documentation": "/data/pos/docs/TESTING_ENGINE.md"
+  },
+  "operationalBoundaries": {
+    "runsTests": false,
+    "fixesFailures": false,
+    "modifiesCalculators": false,
+    "modifiesArticles": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesLayout": false,
+    "modifiesSitemap": false,
+    "executesMigrations": false
+  }
+}

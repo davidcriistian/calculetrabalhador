@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/operations/schemas/template.schema.json",
+  "title": "Operation Template",
+  "type": "object",
+  "required": ["id", "type", "fields"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "fields": { "type": "array", "items": { "type": "string" } }
+  }
+}

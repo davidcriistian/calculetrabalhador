@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/lifecycle.schema.json",
+  "title": "Core Engine Lifecycle",
+  "allOf": [
+    { "$ref": "/data/core/schemas/shared-metadata.schema.json" },
+    {
+      "type": "object",
+      "required": ["states"],
+      "properties": {
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "description"],
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

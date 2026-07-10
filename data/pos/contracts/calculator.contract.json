@@ -1,0 +1,26 @@
+{
+  "id": "pos-contract-calculator",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "name": "Calculator Contract",
+  "objective": "Define future calculator registry responsibilities without changing calculator implementation or behavior.",
+  "boundary": {
+    "coreContracts": "calculator knowledge capabilities, domains, rules and tables",
+    "posContracts": "operational lifecycle, registry, migration, testing and approval process for calculators"
+  },
+  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata"],
+  "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status"],
+  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes"],
+  "dependencies": ["/data/pos/registry/index.json"],
+  "nonResponsibilities": ["calculate values", "change calculator HTML", "change calculator JavaScript", "change URLs"],
+  "notes": [
+    "Existing calculators do not consume this contract.",
+    "POS does not own calculator legal knowledge; it orchestrates future operational handling."
+  ]
+}

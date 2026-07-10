@@ -1,0 +1,18 @@
+{
+  "id": "constitution-metadata",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Metadata for the Constitution Layer.",
+  "officialEntryPoint": "/data/constitution/registry/index.json",
+  "changeFrequency": "rare",
+  "answers": "How the project thinks.",
+  "notes": [
+    "Constitution is permanent guidance and does not modify production."
+  ]
+}

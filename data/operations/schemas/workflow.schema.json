@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/operations/schemas/workflow.schema.json",
+  "title": "Operation Workflow",
+  "type": "object",
+  "required": ["workflowId", "operationId", "steps"],
+  "properties": {
+    "workflowId": { "type": "string" },
+    "operationId": { "type": "string" },
+    "steps": { "type": "array", "items": { "type": "string" } },
+    "approvalRequired": { "type": "boolean" },
+    "rollbackRequired": { "type": "boolean" }
+  }
+}

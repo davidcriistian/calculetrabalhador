@@ -1,0 +1,27 @@
+{
+  "id": "blueprint-system-metadata",
+  "version": "0.2.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "description": "Metadata for the Calcule Trabalhador Blueprint System.",
+  "officialEntryPoint": "/data/blueprints/registry/index.json",
+  "phase": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "principle": "configuration-over-code",
+  "primaryStructuralUnit": "cluster",
+  "clusterBlueprint": "/data/blueprints/cluster/index.json",
+  "componentBlueprints": {
+    "calculator": "/data/blueprints/calculator/index.json",
+    "article": "/data/blueprints/article/index.json",
+    "shared": "/data/blueprints/shared/index.json"
+  },
+  "notes": [
+    "Blueprints define how future assets should be built.",
+    "Cluster Blueprint is the primary model for organizing calculators, articles, monetization, publishing, testing and validation.",
+    "This layer does not create or publish assets in this phase."
+  ]
+}

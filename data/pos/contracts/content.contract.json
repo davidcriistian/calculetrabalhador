@@ -1,0 +1,26 @@
+{
+  "id": "pos-contract-content",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "name": "Content Contract",
+  "objective": "Define future article and editorial asset registry responsibilities.",
+  "boundary": {
+    "coreContracts": "content knowledge capabilities, concepts, sources and domains",
+    "posContracts": "operational lifecycle, registry, migration, testing and approval process for content"
+  },
+  "scope": ["article identity", "topic clusters", "domain linkage", "editorial status", "content relationships"],
+  "expectedInputs": ["article slug", "content type", "domain reference", "status"],
+  "expectedOutputs": ["content registry record", "relationship map", "editorial metadata reference"],
+  "dependencies": ["/data/pos/registry/index.json"],
+  "nonResponsibilities": ["publish articles", "rewrite article HTML", "change SEO", "change sitemap"],
+  "notes": [
+    "Existing articles do not consume this contract.",
+    "POS does not become a source of legal content knowledge; it orchestrates future content operations."
+  ]
+}

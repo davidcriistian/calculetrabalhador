@@ -1,0 +1,37 @@
+{
+  "id": "adicional-noturno-legislation",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "clt-artigo-73-trabalho-noturno",
+      "type": "law-reference",
+      "title": "CLT - Artigo 73",
+      "summary": "Referencia legal para adicional noturno urbano, percentual minimo e hora noturna reduzida.",
+      "status": "reference",
+      "validFrom": null,
+      "validTo": null,
+      "responsibleAgency": "Presidencia da Republica",
+      "officialLinks": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+      ],
+      "mappedCalculatorBehavior": [
+        "percentual minimo urbano de 20% como padrao",
+        "hora reduzida noturna documentada como 52 minutos e 30 segundos",
+        "hora reduzida nao aplicada automaticamente no calculo atual"
+      ],
+      "notes": [
+        "Referencia declarativa para homologacao. Conferir fonte oficial antes de migracao operacional."
+      ]
+    }
+  ],
+  "notes": [
+    "Camada legislativa de homologacao, sem conexao operacional."
+  ]
+}

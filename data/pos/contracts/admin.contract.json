@@ -1,0 +1,19 @@
+{
+  "id": "pos-contract-admin",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 1 - Registry Engine",
+  "name": "Admin Contract",
+  "objective": "Define future administrative responsibilities for governance, approvals and audit metadata.",
+  "scope": ["approval policy", "ownership metadata", "status governance", "audit references"],
+  "expectedInputs": ["asset reference", "owner reference", "approval request", "status change request"],
+  "expectedOutputs": ["approval record", "owner assignment", "audit note"],
+  "dependencies": ["/data/pos/registry/index.json", "/data/pos/history/index.json"],
+  "nonResponsibilities": ["create an admin UI", "authenticate users", "change production assets", "deploy releases"],
+  "notes": ["This contract is governance metadata only."]
+}

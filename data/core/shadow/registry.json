@@ -1,0 +1,38 @@
+{
+  "id": "shadow-framework-registry",
+  "version": "0.2.0",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 5 - Shadow Mode Framework",
+  "description": "Registro reutilizavel das calculadoras em Shadow Mode.",
+  "userFacingResultSource": "legacy-runtime",
+  "items": [
+    {
+      "id": "adicional-noturno",
+      "calculator": "calculadora-adicional-noturno",
+      "domainId": "adicional-noturno",
+      "status": "active",
+      "version": "0.1.0",
+      "config": "/data/core/shadow/calculators/adicional-noturno/index.json",
+      "legacyConfig": "/data/core/shadow/adicional-noturno/index.json",
+      "comparisons": "/data/core/shadow/adicional-noturno/comparisons/index.json",
+      "validator": "/scripts/validate-shadow-adicional-noturno.js"
+    },
+    {
+      "id": "aviso-previo",
+      "calculator": "calculadora-aviso-previo",
+      "domainId": "aviso-previo",
+      "status": "active",
+      "version": "0.2.0",
+      "config": "/data/core/shadow/calculators/aviso-previo/index.json",
+      "comparisons": "/data/core/shadow/comparisons/aviso-previo/index.json",
+      "validator": "/scripts/validate-shadow-aviso-previo.js"
+    }
+  ],
+  "notes": [
+    "Adicionar novas calculadoras neste registro antes de executar validadores Shadow.",
+    "O resultado visual continua vindo exclusivamente do runtime atual."
+  ]
+}

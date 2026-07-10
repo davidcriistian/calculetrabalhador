@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/reference.schema.json",
+  "title": "Core Engine Reference",
+  "type": "object",
+  "required": ["id", "name", "url", "agency", "credibility", "lastCheckedAt", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "url": { "type": "string" },
+    "agency": { "type": "string" },
+    "credibility": { "type": "string" },
+    "lastCheckedAt": { "type": "string" },
+    "status": { "type": "string" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

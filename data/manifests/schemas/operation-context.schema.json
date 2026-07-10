@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/manifests/schemas/operation-context.schema.json",
+  "title": "Operation Context",
+  "type": "object",
+  "required": ["id", "version", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source", "contexts"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "contextPolicy": { "type": "object" },
+    "contexts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["operationId", "minimumContext"],
+        "properties": {
+          "operationId": { "type": "string" },
+          "minimumContext": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

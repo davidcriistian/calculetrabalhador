@@ -1,0 +1,93 @@
+{
+  "id": "update-impact-score",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Criterios declarativos para pontuar impacto de uma atualizacao futura.",
+  "scoreRange": {
+    "minimum": 0,
+    "maximum": 100
+  },
+  "criteria": [
+    {
+      "id": "affected-calculators-count",
+      "label": "Numero de calculadoras afetadas",
+      "weight": 20,
+      "scoring": "0 pontos se nenhuma; ate 20 pontos conforme quantidade e criticidade."
+    },
+    {
+      "id": "affected-articles-count",
+      "label": "Numero de artigos afetados",
+      "weight": 10,
+      "scoring": "0 pontos se nenhum; ate 10 pontos conforme quantidade e alcance editorial."
+    },
+    {
+      "id": "table-change",
+      "label": "Mudanca de tabela",
+      "weight": 15,
+      "scoring": "Adicionar pontos quando houver faixa, teto, piso, aliquota ou valor oficial."
+    },
+    {
+      "id": "law-change",
+      "label": "Mudanca de lei",
+      "weight": 15,
+      "scoring": "Adicionar pontos quando houver nova lei, decreto, portaria ou instrucao normativa."
+    },
+    {
+      "id": "constitutional-change",
+      "label": "Mudanca constitucional",
+      "weight": 20,
+      "scoring": "Adicionar pontuacao alta quando houver alteracao constitucional ou efeito estrutural."
+    },
+    {
+      "id": "percentage-change",
+      "label": "Mudanca de percentual",
+      "weight": 10,
+      "scoring": "Adicionar pontos quando aliquotas, percentuais ou multiplicadores mudarem."
+    },
+    {
+      "id": "validity-change",
+      "label": "Mudanca de vigencia",
+      "weight": 10,
+      "scoring": "Adicionar pontos quando houver data futura, retroatividade ou periodo de transicao."
+    }
+  ],
+  "levels": [
+    {
+      "id": "none",
+      "minimumScore": 0,
+      "maximumScore": 0
+    },
+    {
+      "id": "low",
+      "minimumScore": 1,
+      "maximumScore": 20
+    },
+    {
+      "id": "medium",
+      "minimumScore": 21,
+      "maximumScore": 45
+    },
+    {
+      "id": "high",
+      "minimumScore": 46,
+      "maximumScore": 70
+    },
+    {
+      "id": "critical",
+      "minimumScore": 71,
+      "maximumScore": 90
+    },
+    {
+      "id": "emergency",
+      "minimumScore": 91,
+      "maximumScore": 100
+    }
+  ],
+  "notes": [
+    "Pontuacao e criterio de planejamento, nao automacao executavel."
+  ]
+}

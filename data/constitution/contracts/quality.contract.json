@@ -1,0 +1,18 @@
+{
+  "id": "constitution-contract-quality",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Quality Contract",
+  "objective": "Define permanent quality gates.",
+  "expectedInputs": ["change proposal", "testing evidence", "validation evidence", "rollback reference"],
+  "expectedOutputs": ["quality gate decision"],
+  "dependencies": ["/data/constitution/quality/index.json"],
+  "nonResponsibilities": ["run tests", "run validations", "execute rollback"],
+  "notes": ["Quality gates are required for future operation."]
+}

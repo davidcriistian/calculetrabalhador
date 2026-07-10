@@ -1,0 +1,37 @@
+{
+  "id": "migration-risk-levels",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Risk levels for future migration planning.",
+  "items": [
+    {
+      "id": "low",
+      "description": "Isolated declarative or metadata change with no production path impact.",
+      "requiredEvidence": ["file scope confirmed", "runtime-safe gate"]
+    },
+    {
+      "id": "medium",
+      "description": "Limited structural change that may affect one asset and requires equivalence evidence.",
+      "requiredEvidence": ["baseline captured", "equivalence-pass", "rollback-ready"]
+    },
+    {
+      "id": "high",
+      "description": "Change touching shared structure, SEO, layout, runtime adjacency or multiple assets.",
+      "requiredEvidence": ["all approval gates", "manual approval", "batch impact review"]
+    },
+    {
+      "id": "blocked",
+      "description": "Migration cannot proceed until a blocking dependency, validation issue or approval gap is resolved.",
+      "requiredEvidence": ["blocking reason", "resolution owner"]
+    }
+  ],
+  "notes": [
+    "Risk levels guide future planning and do not authorize file changes."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "blueprint-contract-article",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "name": "Article Blueprint Contract",
+  "objective": "Define the declarative requirements for future article generation.",
+  "expectedInputs": ["topic", "domain", "nucleus", "SEO", "sections", "related assets", "testing", "validation"],
+  "expectedOutputs": ["article blueprint", "section plan", "publishing requirements"],
+  "dependencies": ["/data/blueprints/article/index.json", "/data/blueprints/shared/index.json"],
+  "nonResponsibilities": ["generate article", "publish content", "modify article pages"],
+  "notes": ["This contract prepares future article creation only."]
+}

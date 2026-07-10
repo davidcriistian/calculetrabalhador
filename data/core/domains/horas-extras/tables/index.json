@@ -1,0 +1,44 @@
+{
+  "id": "horas-extras-tables",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "runtimeStatus": "not-connected",
+  "sourceRuntimeTable": "/data/tabelas-trabalhistas.json#/horasExtras",
+  "items": [
+    {
+      "id": "percentuais-horas-extras",
+      "status": "homologation",
+      "values": {
+        "percentualDiaUtil": 0.5,
+        "percentualDomingoFeriado": 1
+      },
+      "usage": "Helper centralizado; a pagina local aplica os mesmos multiplicadores 1.5 e 2."
+    },
+    {
+      "id": "divisores-mensais",
+      "status": "homologation",
+      "values": {
+        "40": 200,
+        "44": 220
+      },
+      "usage": "Conversao de salario mensal em valor da hora normal."
+    },
+    {
+      "id": "jornada-personalizada",
+      "status": "homologation",
+      "values": {
+        "semanasPorMes": 4.33,
+        "fatorAjuste": 1.2
+      },
+      "usage": "Divisor personalizado calculado como jornadaCustom * semanasPorMes * fatorAjuste."
+    }
+  ],
+  "notes": [
+    "Tabela declarativa espelha dados atuais; nao substitui data/tabelas-trabalhistas.json."
+  ]
+}

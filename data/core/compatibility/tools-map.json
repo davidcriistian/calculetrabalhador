@@ -1,0 +1,504 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-tools-map",
+  "schema": null,
+  "description": "Mapa das ferramentas atuais de data/tools.json e suas dependências prováveis.",
+  "items": [
+    {
+      "id": "saque-aniversario-fgts",
+      "slug": "/saque-aniversario-fgts/",
+      "title": "Saque-Aniversário FGTS",
+      "category": "FGTS",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "fgts"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "fgts"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "medium",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "salario-liquido-clt",
+      "slug": "/salario-liquido-clt/",
+      "title": "Salário Líquido",
+      "category": "Salário",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-rescisao-clt",
+      "slug": "/calculadora-rescisao-clt/",
+      "title": "Rescisão CLT",
+      "category": "Rescisão",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-13-salario",
+      "slug": "/calculadora-13-salario/",
+      "title": "13º Salário",
+      "category": "13º Salário",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-ferias-clt",
+      "slug": "/calculadora-ferias-clt/",
+      "title": "Férias CLT",
+      "category": "Férias",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-horas-extras-clt",
+      "slug": "/calculadora-horas-extras-clt/",
+      "title": "Horas Extras",
+      "category": "Jornada",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "medium",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-seguro-desemprego",
+      "slug": "/calculadora-seguro-desemprego/",
+      "title": "Seguro-Desemprego",
+      "category": "Benefício",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-aviso-previo",
+      "slug": "/calculadora-aviso-previo/",
+      "title": "Aviso Prévio",
+      "category": "Rescisão",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "medium",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-adicional-noturno",
+      "slug": "/calculadora-adicional-noturno/",
+      "title": "Adicional Noturno",
+      "category": "Jornada",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "adicional-noturno"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "medium",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-insalubridade",
+      "slug": "/calculadora-insalubridade/",
+      "title": "Insalubridade",
+      "category": "Adicionais",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "medium",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-clt-ou-pj",
+      "slug": "/calculadora-clt-ou-pj/",
+      "title": "Calculadora CLT ou PJ",
+      "category": "Trabalhista",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+    },
+    {
+      "id": "calculadora-inss",
+      "slug": "/calculadora-inss/",
+      "title": "Simulador de INSS 2026",
+      "category": "INSS / Previdência",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "salario-minimo",
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "inss",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-inss-autonomo",
+      "slug": "/calculadora-inss-autonomo/",
+      "title": "Calculadora de INSS para Autônomo",
+      "category": "Previdência / INSS",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "salarioMinimo",
+        "tetoINSS",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "inss",
+        "salario-minimo",
+        "tetoINSS"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-inss-mei",
+      "slug": "/calculadora-inss-mei/",
+      "title": "Calculadora INSS MEI",
+      "category": "INSS",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "salario-minimo",
+        "mei",
+        "das-mei",
+        "icms",
+        "iss",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "inss",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-das-mei-2026",
+      "slug": "/calculadora-das-mei-2026/",
+      "title": "Calculadora DAS MEI 2026",
+      "category": "Tributos",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "shared",
+        "mei"
+      ],
+      "relatedRules": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-limite-faturamento-mei-2026",
+      "slug": "/calculadora-limite-faturamento-mei-2026/",
+      "title": "Calculadora Limite de Faturamento MEI 2026",
+      "category": "MEI",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "mei",
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "limite-proporcional-mei",
+        "das-mei",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "primaryCoreDomain": "mei",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "das-mei"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-das-mei-atraso-2026",
+      "slug": "/calculadora-das-mei-atraso-2026/",
+      "title": "Calculadora DAS MEI em Atraso 2026",
+      "category": "Tributos",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "das-mei",
+        "multa",
+        "juros",
+        "calendario",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "primaryCoreDomain": "mei",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "das-mei",
+        "multa-das-mei",
+        "juros-das-mei",
+        "calendario-das-mei"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    },
+    {
+      "id": "calculadora-multa-40-fgts",
+      "slug": "/calculadora-multa-40-fgts/",
+      "title": "Calculadora Multa de 40% do FGTS",
+      "category": "Rescisão",
+      "cluster": null,
+      "currentSource": "data/tools.json",
+      "existingDependencies": [
+        "fgts",
+        "saldo-fgts",
+        "base-fgts",
+        "tipo-desligamento",
+        "multa-fgts",
+        "rescisao",
+        "assets/js/tabelas-trabalhistas.js",
+        "data/tabelas-trabalhistas.json"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "multa-fgts",
+        "rescisao"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "risk": "high",
+      "observations": "Depende explicitamente do runtime atual; migração futura exige adapter/piloto controlado."
+    }
+  ]
+}

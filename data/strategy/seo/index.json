@@ -1,0 +1,25 @@
+{
+  "id": "strategy-seo",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/seo.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Configurable SEO policies.",
+  "policies": {
+    "minimumInternalLinks": 3,
+    "faqRecommended": true,
+    "jsonLdRequired": true,
+    "relatedContentRequired": true,
+    "headingStrategy": "single-h1-ordered-h2-h3",
+    "metaStrategy": "unique-title-and-description",
+    "internalLinking": "cluster-first",
+    "structure": ["title", "meta-description", "canonical", "breadcrumb", "headings", "faq", "related-content"]
+  },
+  "notes": [
+    "SEO strategy is declarative and does not alter existing SEO."
+  ]
+}

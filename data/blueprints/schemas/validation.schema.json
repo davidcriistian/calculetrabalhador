@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/validation.schema.json",
+  "title": "Blueprint Validation",
+  "type": "object",
+  "required": ["id", "type", "severity", "required"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "severity": { "type": "string" },
+    "required": { "type": "boolean" },
+    "evidence": { "type": "array", "items": { "type": "string" } }
+  }
+}

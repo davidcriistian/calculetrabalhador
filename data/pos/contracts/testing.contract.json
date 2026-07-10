@@ -1,0 +1,64 @@
+{
+  "id": "pos-contract-testing",
+  "version": "0.3.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "name": "Testing Contract",
+  "objective": "Define future testing responsibilities for registered assets, baselines, equivalence, regression and approval boundaries.",
+  "scope": [
+    "test inventory",
+    "test type definition",
+    "baseline model",
+    "equivalence model",
+    "regression model",
+    "performance model",
+    "test suite grouping",
+    "approval matrix",
+    "test report model",
+    "homologation references"
+  ],
+  "expectedInputs": [
+    "asset reference",
+    "test type",
+    "input values",
+    "expected behavior",
+    "expected output",
+    "obtained output",
+    "tolerance",
+    "baseline reference",
+    "risk level"
+  ],
+  "expectedOutputs": [
+    "test plan record",
+    "baseline record",
+    "equivalence record",
+    "regression record",
+    "test suite record",
+    "test report",
+    "approval matrix decision",
+    "open validation notes"
+  ],
+  "dependencies": [
+    "/data/pos/registry/index.json",
+    "/data/pos/testing/index.json"
+  ],
+  "nonResponsibilities": [
+    "run automated tests",
+    "fix failures",
+    "modify test scripts",
+    "change calculators",
+    "change articles",
+    "change runtime",
+    "change SEO",
+    "approve production releases automatically"
+  ],
+  "notes": [
+    "This contract does not add, execute or wire test runners.",
+    "Phase 3 details the official Testing Engine protocol under /data/pos/testing."
+  ]
+}

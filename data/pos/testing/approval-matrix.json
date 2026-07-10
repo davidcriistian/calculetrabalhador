@@ -1,0 +1,70 @@
+{
+  "id": "testing-approval-matrix",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Approval matrix for future technical testing decisions.",
+  "requiredApprovalItems": [
+    {
+      "id": "equivalence-pass",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Expected and obtained results must match within defined tolerance."
+    },
+    {
+      "id": "required-tests-pass",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Every required test in the suite must pass."
+    },
+    {
+      "id": "no-runtime-regression",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Runtime behavior and runtime files must remain safe."
+    },
+    {
+      "id": "no-seo-regression",
+      "required": true,
+      "blocksApproval": true,
+      "description": "SEO metadata, canonical behavior, indexability and URLs must remain safe."
+    },
+    {
+      "id": "no-layout-regression",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Layout-critical behavior must remain equivalent or approved."
+    },
+    {
+      "id": "baseline-match",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Current evidence must match the stored baseline within tolerance."
+    },
+    {
+      "id": "manual-approval",
+      "required": true,
+      "blocksApproval": true,
+      "description": "A human decision must approve the evidence."
+    }
+  ],
+  "approveWhen": "All required approval items pass and manual approval is recorded.",
+  "rejectWhen": "Any required item fails, is missing, or has unclear evidence.",
+  "governanceRequirements": {
+    "severityRequired": true,
+    "blockingLevelRequired": true,
+    "approvalOwnerRequired": true,
+    "minimumEvidenceRequired": true,
+    "evidencePolicy": "/data/pos/testing/testing-evidence.json",
+    "severityPolicy": "/data/pos/testing/testing-severity.json"
+  },
+  "notes": [
+    "No component can be considered approved without satisfying this matrix.",
+    "The matrix is declarative and does not enforce approval automatically in Phase 3."
+  ]
+}

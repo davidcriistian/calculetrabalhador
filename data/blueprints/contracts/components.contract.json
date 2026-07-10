@@ -1,0 +1,18 @@
+{
+  "id": "blueprint-contract-components",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/component.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "name": "Blueprint Components Contract",
+  "objective": "Define reusable component requirements for future blueprints.",
+  "expectedInputs": ["component id", "slots", "fields", "validation"],
+  "expectedOutputs": ["component definition", "required fields", "accepted slots"],
+  "dependencies": ["/data/blueprints/shared/index.json"],
+  "nonResponsibilities": ["render components", "modify layout", "write HTML"],
+  "notes": ["Components are declarative building blocks only."]
+}

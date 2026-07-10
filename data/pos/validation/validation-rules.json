@@ -1,0 +1,59 @@
+{
+  "id": "validation-rules",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Declarative compliance rules for future validation decisions.",
+  "rules": [
+    {
+      "id": "testing-approved-required",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Testing approval must exist before a component can be validated."
+    },
+    {
+      "id": "migration-approved-when-applicable",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Migration approval is required when the component is linked to a migration."
+    },
+    {
+      "id": "required-checklist-items-pass",
+      "required": true,
+      "blocksApproval": true,
+      "description": "All required checklist items must pass or have accepted manual review."
+    },
+    {
+      "id": "no-critical-nonconformity",
+      "required": true,
+      "blocksApproval": true,
+      "description": "No critical nonconformity may remain open."
+    },
+    {
+      "id": "manual-approval-required",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Manual approval must be recorded before approval."
+    },
+    {
+      "id": "configuration-over-code",
+      "required": true,
+      "blocksApproval": false,
+      "description": "Recurring behavior should be controlled by configuration before code."
+    },
+    {
+      "id": "pos-is-not-knowledge-source",
+      "required": true,
+      "blocksApproval": true,
+      "description": "POS records must not become the source of legal or labor knowledge."
+    }
+  ],
+  "notes": [
+    "Rules define compliance decisions and do not enforce them automatically."
+  ]
+}

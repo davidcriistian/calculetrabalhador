@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-cta",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "CTA Strategy Contract",
+  "objective": "Define CTA configuration strategy.",
+  "expectedInputs": ["cluster", "product", "placement", "priority"],
+  "expectedOutputs": ["CTA configuration"],
+  "dependencies": ["/data/strategy/cta/index.json"],
+  "nonResponsibilities": ["change CTAs", "modify pages"],
+  "notes": ["CTA strategy does not alter production."]
+}

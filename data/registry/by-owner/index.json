@@ -1,0 +1,16 @@
+{
+  "id": "registry-partition-by-owner",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-partition.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "partition": "by-owner",
+  "description": "Partition prepared to discover assets by owner.",
+  "entries": [],
+  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "notes": ["Owner partitions support Admin and governance discovery only."]
+}

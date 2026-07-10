@@ -1,0 +1,15 @@
+{
+  "id": "calculator-engine-contract",
+  "name": "Calculator Engine",
+  "version": "0.1.0",
+  "status": "future",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "objective": "Define the future contract for calculator generation, runtime compatibility and calculation data consumption.",
+  "expectedInputs": ["domain", "ruleSet", "tableVersion", "calculatorMetadata", "validationExamples"],
+  "expectedOutputs": ["calculationContract", "resultSchema", "memoryOfCalculation", "validationReport"],
+  "dependencies": ["Core Registry", "Domain Rules", "Domain Tables", "Shared Metadata", "Lifecycle"],
+  "notes": ["No calculator consumes this contract in Phase 1.1."]
+}

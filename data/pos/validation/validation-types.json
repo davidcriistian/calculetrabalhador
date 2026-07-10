@@ -1,0 +1,31 @@
+{
+  "id": "validation-types",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Supported declarative validation types for future compliance checks.",
+  "items": [
+    { "id": "seo-validation", "description": "Validates SEO requirements and metadata consistency." },
+    { "id": "html-validation", "description": "Validates HTML structure and project markup standards." },
+    { "id": "jsonld-validation", "description": "Validates JSON-LD structure and required properties." },
+    { "id": "schema-validation", "description": "Validates JSON schemas, contracts and data shape." },
+    { "id": "link-validation", "description": "Validates links, internal navigation and broken references." },
+    { "id": "navigation-validation", "description": "Validates navigational consistency and discoverability." },
+    { "id": "layout-validation", "description": "Validates layout structure and visual consistency requirements." },
+    { "id": "responsive-validation", "description": "Validates responsive behavior requirements." },
+    { "id": "accessibility-validation", "description": "Validates accessibility requirements and review evidence." },
+    { "id": "performance-validation", "description": "Validates performance evidence and thresholds." },
+    { "id": "runtime-validation", "description": "Validates runtime safety and protected file boundaries." },
+    { "id": "content-structure-validation", "description": "Validates article and content structure requirements." },
+    { "id": "calculator-structure-validation", "description": "Validates calculator structure requirements." },
+    { "id": "offer-placement-validation", "description": "Validates future offer placement boundaries and evidence." }
+  ],
+  "notes": [
+    "Types are protocol labels only; no validation runner is implemented in Phase 4."
+  ]
+}

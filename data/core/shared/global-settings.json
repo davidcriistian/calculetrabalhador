@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "description": "Global settings reserved for future Core Engine consumers.",
+  "runtimeStatus": "parallel-only",
+  "locale": "pt-BR",
+  "country": "BR",
+  "currency": "BRL",
+  "timezone": "America/Sao_Paulo",
+  "items": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "constitution-shared",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Shared constitutional vocabulary.",
+  "terms": {
+    "knowledge": "Legal, labor, domain, table, rule, concept, source and history information owned by Core.",
+    "operation": "Creation, migration, testing, validation, products, campaigns, automation and administration owned by POS.",
+    "blueprint": "Declarative construction model for future assets.",
+    "strategy": "Current operational and editorial direction that may evolve."
+  },
+  "notes": [
+    "Shared terms help prevent architectural drift."
+  ]
+}

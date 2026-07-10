@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/manifests/schemas/restriction.schema.json",
+  "title": "Manifest Restriction",
+  "type": "object",
+  "required": ["id", "version", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "globalRestrictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "rule", "appliesTo"],
+        "properties": {
+          "id": { "type": "string" },
+          "rule": { "type": "string" },
+          "appliesTo": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "blockedProductionSurfaces": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

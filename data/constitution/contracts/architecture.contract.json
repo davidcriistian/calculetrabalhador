@@ -1,0 +1,18 @@
+{
+  "id": "constitution-contract-architecture",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Architecture Contract",
+  "objective": "Define allowed and forbidden architectural dependencies.",
+  "expectedInputs": ["layer", "dependency", "responsibility"],
+  "expectedOutputs": ["architecture boundary"],
+  "dependencies": ["/data/constitution/architecture/index.json"],
+  "nonResponsibilities": ["enforce dependencies automatically"],
+  "notes": ["Architecture contract prevents strategic drift."]
+}

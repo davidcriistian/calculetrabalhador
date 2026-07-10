@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-publishing",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Publishing Strategy Contract",
+  "objective": "Define publishing workflow strategy.",
+  "expectedInputs": ["asset", "testing", "validation", "approval"],
+  "expectedOutputs": ["publishing readiness"],
+  "dependencies": ["/data/strategy/publishing/index.json"],
+  "nonResponsibilities": ["publish assets", "modify sitemap"],
+  "notes": ["Publishing strategy is declarative."]
+}

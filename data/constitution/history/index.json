@@ -1,0 +1,26 @@
+{
+  "id": "constitution-history",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "History for Constitution Layer changes.",
+  "items": [
+    {
+      "id": "constitution-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": ["Created Constitution Layer foundation."],
+      "notes": []
+    }
+  ],
+  "notes": [
+    "History records principle and governance changes only."
+  ]
+}

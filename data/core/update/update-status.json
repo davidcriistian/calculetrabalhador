@@ -1,0 +1,43 @@
+{
+  "id": "update-status",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Status oficiais para planos de atualizacao.",
+  "items": [
+    {
+      "id": "draft",
+      "description": "Plano inicial ainda incompleto ou sem revisao."
+    },
+    {
+      "id": "planned",
+      "description": "Plano estruturado e pronto para avaliacao futura."
+    },
+    {
+      "id": "in-progress",
+      "description": "Status reservado para fase futura de execucao controlada."
+    },
+    {
+      "id": "waiting-validation",
+      "description": "Plano aguardando validacao de fonte, equivalencia, impacto ou revisao."
+    },
+    {
+      "id": "approved",
+      "description": "Plano aprovado para execucao futura, sem alterar runtime nesta fase."
+    },
+    {
+      "id": "completed",
+      "description": "Status reservado para atualizacao futura concluida."
+    },
+    {
+      "id": "cancelled",
+      "description": "Plano descartado antes de execucao."
+    }
+  ],
+  "notes": [
+    "Status nao altera calculadoras, artigos, URL, SEO ou runtime."
+  ]
+}

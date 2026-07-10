@@ -1,0 +1,20 @@
+{
+  "id": "pos-schemas-index",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 1 - Registry Engine",
+  "notes": [
+    "Schemas define the declarative shape of POS foundation files.",
+    "They do not validate or transform production runtime data in Phase 1."
+  ],
+  "items": [
+    "/data/pos/schemas/shared-metadata.schema.json",
+    "/data/pos/schemas/registry.schema.json",
+    "/data/pos/schemas/contract.schema.json"
+  ]
+}

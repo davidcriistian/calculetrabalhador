@@ -1,0 +1,47 @@
+{
+  "id": "horas-extras-concepts",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "salario-bruto",
+      "name": "Salario bruto mensal",
+      "description": "Base mensal informada pelo usuario para calcular o valor da hora normal.",
+      "calculatorField": "salarioBruto"
+    },
+    {
+      "id": "divisor-mensal",
+      "name": "Divisor mensal",
+      "description": "Quantidade mensal usada para converter salario mensal em valor de hora normal.",
+      "calculatorField": "jornadaTipo",
+      "values": ["220 para jornada 44h", "200 para jornada 40h", "jornadaCustom * 4.33 * 1.2 para personalizada"]
+    },
+    {
+      "id": "hora-extra-50",
+      "name": "Hora extra 50%",
+      "description": "Hora normal acrescida de 50%, calculada como valorHoraNormal * 1.5.",
+      "calculatorField": "horas50"
+    },
+    {
+      "id": "hora-extra-100",
+      "name": "Hora extra 100%",
+      "description": "Hora normal acrescida de 100%, calculada como valorHoraNormal * 2.",
+      "calculatorField": "horas100"
+    },
+    {
+      "id": "total-a-receber",
+      "name": "Total a receber",
+      "description": "Soma dos subtotais de horas 50% e horas 100%.",
+      "calculatorField": "totalReceber"
+    }
+  ],
+  "notes": [
+    "Conceitos mapeiam nomes da calculadora atual sem alterar sua semantica."
+  ]
+}

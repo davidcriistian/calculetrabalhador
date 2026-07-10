@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-registry",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Strategy Registry Contract",
+  "objective": "Define discovery of current strategy modules.",
+  "expectedInputs": ["strategy module", "reference"],
+  "expectedOutputs": ["registry reference"],
+  "dependencies": ["/data/strategy/registry/index.json"],
+  "nonResponsibilities": ["execute strategy", "modify production"],
+  "notes": ["Registry is a discovery point only."]
+}

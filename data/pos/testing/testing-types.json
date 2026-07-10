@@ -1,0 +1,25 @@
+{
+  "id": "testing-types",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Supported declarative test types for future phases.",
+  "items": [
+    { "id": "calculator-equivalence", "assetType": "calculator", "description": "Compares calculator inputs and outputs before and after a change." },
+    { "id": "article-integrity", "assetType": "article", "description": "Checks article structure, metadata and content integrity." },
+    { "id": "seo-regression", "assetType": "seo", "description": "Checks SEO metadata, canonicals, indexability and URL stability." },
+    { "id": "runtime-regression", "assetType": "runtime", "description": "Checks runtime dependencies remain safe and unchanged unless explicitly scoped." },
+    { "id": "layout-regression", "assetType": "layout", "description": "Checks visible structure and layout-critical elements." },
+    { "id": "performance-regression", "assetType": "performance", "description": "Checks load and interaction performance against baseline tolerance." },
+    { "id": "offer-regression", "assetType": "offer", "description": "Checks offer-related placements, metadata and boundaries." },
+    { "id": "automation-regression", "assetType": "automation", "description": "Checks future automation behavior against expected boundaries." }
+  ],
+  "notes": [
+    "Types are protocol labels only; no test runner is implemented in Phase 3."
+  ]
+}

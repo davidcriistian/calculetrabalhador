@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/version.schema.json",
+  "title": "Core Engine Version",
+  "type": "object",
+  "required": ["id", "version", "date", "status", "changes"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "date": { "type": "string" },
+    "status": { "type": "string" },
+    "compatibility": { "type": "object" },
+    "changes": { "type": "array", "items": { "type": "string" } },
+    "migration": { "type": ["object", "null"] }
+  }
+}

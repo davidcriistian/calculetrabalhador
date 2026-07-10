@@ -1,0 +1,44 @@
+{
+  "id": "blueprint-system-versioning",
+  "version": "0.2.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "description": "Versioning control for blueprint architecture.",
+  "currentBlueprintSystemVersion": "0.2.0",
+  "compatibility": {
+    "runtimeConsumesBlueprints": false,
+    "calculatorsConsumeBlueprints": false,
+    "articlesConsumeBlueprints": false,
+    "automationConsumesBlueprints": false,
+    "publishingConsumesBlueprints": false
+  },
+  "items": [
+    {
+      "id": "blueprint-system-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": [
+        "Initial declarative Blueprint System foundation."
+      ]
+    },
+    {
+      "id": "cluster-blueprint-system-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": [
+        "Added Cluster Blueprint as the primary structural unit.",
+        "Updated calculator and article blueprints to declare cluster component role."
+      ]
+    }
+  ],
+  "notes": [
+    "Versioning does not generate, publish or modify assets."
+  ]
+}

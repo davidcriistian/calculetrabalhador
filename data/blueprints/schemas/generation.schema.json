@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/generation.schema.json",
+  "title": "Blueprint Generation Plan",
+  "type": "object",
+  "required": ["id", "generator", "inputs", "outputs", "approvalRequired"],
+  "properties": {
+    "id": { "type": "string" },
+    "generator": { "type": "string" },
+    "inputs": { "type": "array", "items": { "type": "string" } },
+    "outputs": { "type": "array", "items": { "type": "string" } },
+    "approvalRequired": { "type": "boolean" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

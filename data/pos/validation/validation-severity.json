@@ -1,0 +1,21 @@
+{
+  "id": "validation-severity",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Official severity levels for future validation findings.",
+  "items": [
+    { "id": "low", "blocksApproval": false, "description": "Minor issue with no compliance or user-facing risk." },
+    { "id": "medium", "blocksApproval": false, "description": "Issue requiring review but not automatically blocking." },
+    { "id": "high", "blocksApproval": true, "description": "Issue that may affect compliance, SEO, layout, runtime safety or standards." },
+    { "id": "critical", "blocksApproval": true, "description": "Issue that violates protected boundaries or breaks required compliance." }
+  ],
+  "notes": [
+    "Severity labels guide future reports and do not execute validation."
+  ]
+}

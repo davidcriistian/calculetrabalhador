@@ -1,0 +1,44 @@
+{
+  "id": "validation-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Template for a future component validation plan.",
+  "validation": {
+    "validationId": "example-validation-id",
+    "validationType": "schema-validation",
+    "status": "planned",
+    "severity": "medium",
+    "target": {
+      "assetType": "calculator",
+      "assetId": "example-asset-id",
+      "path": "/example/path"
+    },
+    "criteria": [],
+    "requiredStandards": [],
+    "acceptedEvidence": [],
+    "dependencies": {
+      "testingApproval": null,
+      "migrationApproval": null,
+      "coreReference": null,
+      "shadowEvidence": null
+    },
+    "approval": {
+      "template": "/data/pos/validation/approval-template.json",
+      "manualApprovalRequired": true,
+      "approvalOwner": "manual-review-owner"
+    },
+    "report": {
+      "template": "/data/pos/validation/validation-report-template.json",
+      "location": null
+    }
+  },
+  "notes": [
+    "This template describes validation planning only and does not execute validations."
+  ]
+}

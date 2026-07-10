@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/registry/schemas/registry-entry.schema.json",
+  "title": "Registry Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "slug": { "type": "string" },
+    "status": { "type": "string" },
+    "owner": { "type": "string" },
+    "version": { "type": "string" },
+    "references": {
+      "$ref": "/data/registry/schemas/registry-reference.schema.json"
+    }
+  }
+}

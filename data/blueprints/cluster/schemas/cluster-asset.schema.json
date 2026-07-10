@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/cluster/schemas/cluster-asset.schema.json",
+  "title": "Cluster Asset",
+  "type": "object",
+  "required": ["primaryCalculator", "pillarArticle", "satelliteArticles", "guides", "faq", "glossary", "relatedTools", "downloads"],
+  "properties": {
+    "primaryCalculator": {
+      "type": "object",
+      "required": ["required", "blueprintReference", "role", "status"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "blueprintReference": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "pillarArticle": {
+      "type": "object",
+      "required": ["required", "blueprintReference", "role", "status"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "blueprintReference": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "satelliteArticles": { "type": "array" },
+    "guides": { "type": "array" },
+    "faq": { "type": "array" },
+    "glossary": { "type": "array" },
+    "relatedTools": { "type": "array" },
+    "downloads": { "type": "array" }
+  }
+}

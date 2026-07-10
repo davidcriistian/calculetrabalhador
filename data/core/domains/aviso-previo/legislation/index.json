@@ -1,0 +1,48 @@
+{
+  "id": "aviso-previo-legislation",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "lei-12506-2011-aviso-previo-proporcional",
+      "type": "law",
+      "title": "Lei 12.506/2011 - Aviso previo proporcional",
+      "summary": "Referencia legal para proporcionalidade do aviso previo conforme tempo de servico.",
+      "status": "homologation-reference",
+      "validFrom": "2011-10-13",
+      "validTo": null,
+      "responsibleAgency": "Presidencia da Republica",
+      "officialLinks": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12506.htm"
+      ],
+      "notes": [
+        "Referencia declarativa para arquitetura. Confirmar fonte oficial antes de qualquer migracao operacional."
+      ]
+    },
+    {
+      "id": "clt-aviso-previo-referencia-geral",
+      "type": "law-reference",
+      "title": "CLT - referencia geral de aviso previo",
+      "summary": "Referencia geral usada pela pagina para contextualizar aviso previo trabalhado, indenizado e desconto.",
+      "status": "reference",
+      "validFrom": null,
+      "validTo": null,
+      "responsibleAgency": "Presidencia da Republica",
+      "officialLinks": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+      ],
+      "notes": [
+        "Referencia geral; a homologacao representa o comportamento da calculadora atual."
+      ]
+    }
+  ],
+  "notes": [
+    "Camada legislativa de homologacao; nao alimenta calculadoras nesta fase."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "adicional-noturno",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "name": "Adicional Noturno",
+  "description": "Representacao declarativa completa da Calculadora de Adicional Noturno atual dentro do Core.",
+  "parentDomain": "clt",
+  "runtimeStatus": "shadow-mode",
+  "migrationStatus": "pilot-shadow",
+  "homologationStatus": "passed",
+  "shadowMode": "/data/core/shadow/adicional-noturno/index.json",
+  "productionCalculator": "/calculadora-adicional-noturno/",
+  "notes": [
+    "Esta representacao e usada apenas em Shadow Mode e nao substitui o resultado da calculadora publicada.",
+    "A calculadora atual continua usando HTML, JavaScript da pagina e assets/js/tabelas-trabalhistas.js.",
+    "A hora reduzida noturna e documentada, mas nao aplicada automaticamente pela calculadora atual."
+  ]
+}

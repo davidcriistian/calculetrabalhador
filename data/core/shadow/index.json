@@ -1,0 +1,24 @@
+{
+  "id": "core-shadow-index",
+  "version": "0.2.0",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 5 - Shadow Mode Framework",
+  "description": "Framework declarativo de Shadow Mode para comparar runtime antigo e Core sem alterar o resultado entregue ao usuario.",
+  "runtimeStatus": "shadow-mode",
+  "userFacingResultSource": "legacy-runtime",
+  "references": {
+    "registry": "/data/core/shadow/registry.json",
+    "calculators": "/data/core/shadow/calculators/",
+    "comparisons": "/data/core/shadow/comparisons/",
+    "logs": "/data/core/shadow/logs/",
+    "legacyAdicionalNoturno": "/data/core/shadow/adicional-noturno/index.json"
+  },
+  "notes": [
+    "Shadow Mode Framework nao substitui calculadoras publicadas.",
+    "Qualquer divergencia deve manter fallback para o runtime antigo.",
+    "Nenhuma pagina deve usar o resultado Core como fonte visual nesta Sprint."
+  ]
+}

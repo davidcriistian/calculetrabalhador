@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/pos/schemas/registry.schema.json",
+  "title": "POS Registry Index",
+  "allOf": [
+    { "$ref": "/data/pos/schemas/shared-metadata.schema.json" },
+    {
+      "type": "object",
+      "required": [
+        "assetTypes",
+        "registries",
+        "references",
+        "operationalBoundaries"
+      ],
+      "properties": {
+        "assetTypes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "registries": {
+          "type": "object",
+          "properties": {
+            "calculators": { "type": "array" },
+            "articles": { "type": "array" },
+            "domains": { "type": "array" },
+            "nuclei": { "type": "array" },
+            "blueprints": { "type": "array" },
+            "products": { "type": "array" },
+            "campaigns": { "type": "array" },
+            "engines": { "type": "array" },
+            "versions": { "type": "array" },
+            "statuses": { "type": "array" },
+            "dependencies": { "type": "array" },
+            "relationships": { "type": "array" },
+            "migrations": { "type": "array" },
+            "tests": { "type": "array" },
+            "validations": { "type": "array" }
+          },
+          "additionalProperties": false
+        },
+        "references": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "operationalBoundaries": {
+          "type": "object",
+          "additionalProperties": { "type": "boolean" }
+        }
+      }
+    }
+  ]
+}

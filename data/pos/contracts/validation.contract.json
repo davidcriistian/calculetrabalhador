@@ -1,0 +1,59 @@
+{
+  "id": "pos-contract-validation",
+  "version": "0.4.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "name": "Validation Contract",
+  "objective": "Define future validation responsibilities for compliance with platform standards without executing validation or changing production behavior.",
+  "scope": [
+    "compliance criteria",
+    "official checklist",
+    "validation severity",
+    "accepted evidence",
+    "nonconformity registration",
+    "approval decision model",
+    "validation report model",
+    "schema and contract compatibility"
+  ],
+  "expectedInputs": [
+    "registry entry",
+    "schema reference",
+    "contract reference",
+    "validation rule reference",
+    "testing approval reference",
+    "migration approval reference when applicable",
+    "accepted evidence"
+  ],
+  "expectedOutputs": [
+    "validation status",
+    "validation report",
+    "validation notes",
+    "nonconformity record",
+    "approval decision",
+    "blocking issues"
+  ],
+  "dependencies": [
+    "/data/pos/schemas/index.json",
+    "/data/pos/contracts/index.json",
+    "/data/pos/validation/index.json",
+    "/data/pos/testing/index.json"
+  ],
+  "nonResponsibilities": [
+    "execute validations",
+    "enforce runtime validation",
+    "block deployments automatically",
+    "fix issues",
+    "edit source assets",
+    "execute migrations",
+    "alter pages"
+  ],
+  "notes": [
+    "This contract defines the Validation Engine protocol but does not execute validations.",
+    "Validation complements Testing by checking compliance with official project standards."
+  ]
+}

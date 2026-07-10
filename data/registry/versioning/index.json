@@ -1,0 +1,38 @@
+{
+  "id": "registry-partitioning-versioning",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-index.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "description": "Versioning policy for the Registry Partitioning System.",
+  "currentRegistrySystemVersion": "0.1.0",
+  "policy": {
+    "semanticVersioning": true,
+    "major": "Breaking changes to registry entry shape or partition rules.",
+    "minor": "New partitions, optional reference fields or supported asset types.",
+    "patch": "Documentation clarifications or non-breaking metadata updates."
+  },
+  "compatibility": {
+    "runtimeConsumesRegistry": false,
+    "existingRegistriesMigrated": false,
+    "productionConsumption": false
+  },
+  "items": [
+    {
+      "id": "registry-partitioning-system-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": [
+        "Initial partitionable registry foundation."
+      ]
+    }
+  ],
+  "notes": [
+    "Versioning does not migrate or populate registries."
+  ]
+}

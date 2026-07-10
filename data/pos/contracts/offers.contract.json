@@ -1,0 +1,26 @@
+{
+  "id": "pos-contract-offers",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "name": "Offers Contract",
+  "objective": "Define future offer and product registry responsibilities for monetization assets.",
+  "boundary": {
+    "coreContracts": "offer context capabilities informed by domains and concepts",
+    "posContracts": "operational registry, campaign process, approval and placement governance"
+  },
+  "scope": ["offer identity", "product relationship", "campaign relationship", "eligibility metadata"],
+  "expectedInputs": ["offer reference", "product reference", "campaign reference", "status"],
+  "expectedOutputs": ["offer registry record", "campaign linkage", "eligibility notes"],
+  "dependencies": ["/data/pos/registry/index.json"],
+  "nonResponsibilities": ["render offers", "change monetization placement", "track conversions", "modify pages"],
+  "notes": [
+    "This contract does not implement offer delivery.",
+    "Offers must not rewrite or become a source of legal knowledge."
+  ]
+}

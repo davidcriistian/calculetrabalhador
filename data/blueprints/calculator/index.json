@@ -1,0 +1,107 @@
+{
+  "id": "calculator-blueprint-template",
+  "version": "0.2.0",
+  "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "description": "Declarative model for future calculator construction.",
+  "blueprintType": "calculator",
+  "clusterRole": {
+    "belongsToCluster": true,
+    "role": "component-of-cluster",
+    "clusterBlueprintReference": "/data/blueprints/cluster/index.json",
+    "standaloneModelStillValid": true
+  },
+  "identity": {
+    "name": "Example Calculator",
+    "category": "example-category",
+    "nucleus": "example-nucleus",
+    "domain": "example-domain",
+    "slug": "/example-calculator/",
+    "status": "draft"
+  },
+  "seo": {
+    "title": null,
+    "metaDescription": null,
+    "canonical": null,
+    "openGraph": {},
+    "twitterCard": {},
+    "jsonLd": ["FAQPage", "BreadcrumbList", "SoftwareApplication"]
+  },
+  "structure": {
+    "visualStructure": [
+      "hero",
+      "calculator-form",
+      "result-section",
+      "cards",
+      "faq",
+      "related-content",
+      "disclaimer"
+    ],
+    "components": [
+      "hero",
+      "section",
+      "calculator-card",
+      "result-card",
+      "info-card",
+      "faq",
+      "cta",
+      "offer-slot",
+      "related-content",
+      "disclaimer",
+      "breadcrumb"
+    ],
+    "fields": [],
+    "calculations": {
+      "modelReference": null,
+      "coreDomainReference": null,
+      "runtimeReference": null,
+      "formulaNotes": []
+    },
+    "result": {
+      "resultFields": [],
+      "formattingRules": [],
+      "emptyState": null,
+      "errorState": null
+    },
+    "cards": [],
+    "faq": [],
+    "internalLinks": [],
+    "relatedTools": [],
+    "relatedArticles": []
+  },
+  "monetization": {
+    "product": null,
+    "cta": null,
+    "offerSlot": null,
+    "tracking": {
+      "events": [],
+      "parameters": []
+    }
+  },
+  "testing": {
+    "required": true,
+    "testingReference": "/data/pos/testing/index.json",
+    "requiredEvidence": ["calculation-baseline", "json-output", "manual-review"]
+  },
+  "validation": {
+    "required": true,
+    "validationReference": "/data/pos/validation/index.json",
+    "requiredTypes": ["calculator-structure-validation", "runtime-validation", "seo-validation", "jsonld-validation"]
+  },
+  "publishing": {
+    "required": true,
+    "status": "not-ready",
+    "requiresManualApproval": true,
+    "modifiesProductionInThisPhase": false
+  },
+  "notes": [
+    "This template does not generate a calculator.",
+    "Calculator Blueprint is now formally modeled as a reusable component inside Cluster Blueprint.",
+    "Future generation must pass Testing, Validation and Publishing gates."
+  ]
+}

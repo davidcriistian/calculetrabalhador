@@ -1,0 +1,26 @@
+{
+  "id": "pos-contract-automation",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "name": "Automation Contract",
+  "objective": "Define future automation responsibilities for workflows that may read POS registry records.",
+  "boundary": {
+    "coreContracts": "automation knowledge capabilities and domain context",
+    "posContracts": "operational workflow, approval, audit and execution boundaries"
+  },
+  "scope": ["workflow identity", "trigger metadata", "approval requirements", "execution boundaries"],
+  "expectedInputs": ["workflow reference", "trigger reference", "asset reference", "approval status"],
+  "expectedOutputs": ["automation record", "execution boundary notes", "audit reference"],
+  "dependencies": ["/data/pos/registry/index.json", "/data/pos/contracts/admin.contract.json"],
+  "nonResponsibilities": ["execute automation", "schedule jobs", "modify runtime", "deploy changes"],
+  "notes": [
+    "No automation is implemented in this phase.",
+    "Future automation must be configuration-led and must consume approved contracts before code execution."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/registry/schemas/registry-partition.schema.json",
+  "title": "Registry Partition",
+  "type": "object",
+  "required": ["id", "version", "schema", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source", "partition", "entries"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "partition": { "type": "string" },
+    "description": { "type": "string" },
+    "supportedTypes": { "type": "array", "items": { "type": "string" } },
+    "supportedStatuses": { "type": "array", "items": { "type": "string" } },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "/data/registry/schemas/registry-entry.schema.json"
+      }
+    },
+    "entryShape": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

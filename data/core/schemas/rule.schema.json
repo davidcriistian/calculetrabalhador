@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/rule.schema.json",
+  "title": "Core Engine Rule",
+  "type": "object",
+  "required": ["id", "domainId", "version", "status", "validFrom", "description", "source"],
+  "properties": {
+    "id": { "type": "string" },
+    "domainId": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "validFrom": { "type": "string" },
+    "validTo": { "type": ["string", "null"] },
+    "description": { "type": "string" },
+    "formula": { "type": ["string", "null"] },
+    "parameters": { "type": "object" },
+    "source": { "$ref": "/data/core/schemas/reference.schema.json" },
+    "compatibility": { "type": "object" }
+  }
+}

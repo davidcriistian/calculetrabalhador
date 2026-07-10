@@ -1,0 +1,21 @@
+{
+  "id": "strategy-growth",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/growth.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Growth strategy model.",
+  "model": {
+    "clusterExpansion": ["identify-search-intent", "define-pillar", "define-satellites", "link-internally", "assign-product"],
+    "nucleusExpansion": ["define-nucleus", "map-domains", "create-clusters", "prioritize-products"],
+    "editorialExpansion": ["pillar-first", "satellites-next", "calculator-support", "refresh-cadence"],
+    "roadmaps": []
+  },
+  "notes": [
+    "Growth strategy is declarative and does not create assets."
+  ]
+}

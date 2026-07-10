@@ -1,0 +1,26 @@
+{
+  "id": "testing-status",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Official status values for future test plans and reports.",
+  "items": [
+    { "id": "planned", "description": "Test is defined but not running." },
+    { "id": "running", "description": "Test execution is in progress in a future workflow." },
+    { "id": "passed", "description": "Test completed successfully." },
+    { "id": "failed", "description": "Test completed with a blocking failure." },
+    { "id": "cancelled", "description": "Test was intentionally stopped." },
+    { "id": "blocked", "description": "Test cannot proceed until a dependency is resolved." },
+    { "id": "baseline-created", "description": "A baseline record was captured." },
+    { "id": "awaiting-validation", "description": "Test evidence awaits validation review." },
+    { "id": "approved", "description": "Required evidence and manual approval were recorded." }
+  ],
+  "notes": [
+    "Status values are declarative labels and do not trigger execution."
+  ]
+}

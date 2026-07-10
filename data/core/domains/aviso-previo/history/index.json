@@ -1,0 +1,35 @@
+{
+  "id": "aviso-previo-history",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "id": "phase-2-8-domain-created",
+      "date": "2026-07-09",
+      "type": "architecture-reference",
+      "description": "Dominio piloto Aviso Previo criado para estabilizar infraestrutura antes da primeira homologacao.",
+      "impact": "none-runtime",
+      "notes": [
+        "Sem alteracao operacional."
+      ]
+    },
+    {
+      "id": "programa-1-sprint-2-homologacao",
+      "date": "2026-07-09",
+      "type": "homologation",
+      "description": "Dominio Aviso Previo atualizado para representar declarativamente a calculadora publicada.",
+      "impact": "none-runtime",
+      "notes": [
+        "Sem migracao, sem integracao e sem alteracao operacional."
+      ]
+    }
+  ],
+  "notes": [
+    "Historico de homologacao."
+  ]
+}

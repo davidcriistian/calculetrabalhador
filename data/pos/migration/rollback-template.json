@@ -1,0 +1,57 @@
+{
+  "id": "rollback-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Official rollback model for future migrations.",
+  "rollback": {
+    "rollbackId": "example-rollback-id",
+    "migrationId": "example-migration-id",
+    "trigger": "failed gate, failed post-check or manual decision",
+    "previousState": {
+      "baselineReference": null,
+      "filesToRestore": [],
+      "checksums": []
+    },
+    "restorePlan": {
+      "steps": [
+        "Identify every file changed by the migration.",
+        "Restore each file listed in previousState.filesToRestore from the captured baseline.",
+        "Confirm no blocked file was changed.",
+        "Run rollback verification checks.",
+        "Record rollback outcome in the migration report."
+      ],
+      "filesToRestore": [],
+      "filesNeverRestoreAutomatically": [
+        "/data/tabelas-trabalhistas.json",
+        "/assets/js/tabelas-trabalhistas.js",
+        "/sitemap.xml"
+      ]
+    },
+    "confirmation": {
+      "requiredChecks": [
+        "git diff confirms migrated files returned to baseline",
+        "pre-migration page behavior restored",
+        "runtime files unchanged",
+        "SEO and URLs unchanged",
+        "rollback report recorded"
+      ],
+      "confirmedBy": null,
+      "confirmedAt": null
+    },
+    "record": {
+      "statusAfterRollback": "rolled-back",
+      "reportLocation": null,
+      "notes": []
+    }
+  },
+  "notes": [
+    "Rollback must be ready before any future migration is approved.",
+    "This template documents rollback procedure and does not restore files automatically."
+  ]
+}

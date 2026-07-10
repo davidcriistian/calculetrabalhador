@@ -1,0 +1,26 @@
+{
+  "id": "shadow-calculator-adicional-noturno",
+  "version": "0.2.0",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 5 - Shadow Mode Framework",
+  "calculator": "calculadora-adicional-noturno",
+  "domainId": "adicional-noturno",
+  "mode": "shadow",
+  "userFacingResultSource": "legacy-runtime",
+  "legacySource": "/calculadora-adicional-noturno/index.html",
+  "coreSource": "/data/core/domains/adicional-noturno/rules/index.json",
+  "comparisonLog": "/data/core/shadow/adicional-noturno/comparisons/index.json",
+  "validator": "/scripts/validate-shadow-adicional-noturno.js",
+  "fallback": {
+    "enabled": true,
+    "onCoreError": "legacy-runtime",
+    "onDivergence": "legacy-runtime",
+    "userVisibleImpact": "none"
+  },
+  "notes": [
+    "Adaptador para o framework reutilizavel sem mover o log legado da Sprint 4."
+  ]
+}

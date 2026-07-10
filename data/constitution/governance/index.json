@@ -1,0 +1,38 @@
+{
+  "id": "constitution-governance",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/governance.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Permanent governance rules for the platform.",
+  "ownership": {
+    "constitutionOwner": "Calcule Trabalhador",
+    "strategyOwner": "Calcule Trabalhador",
+    "operationalOwner": "POS"
+  },
+  "versioning": {
+    "required": true,
+    "constitutionChanges": "rare-explicit-approval",
+    "strategyChanges": "continuous-with-history"
+  },
+  "approval": {
+    "manualApprovalRequired": true,
+    "testingRequired": true,
+    "validationRequired": true
+  },
+  "history": {
+    "required": true,
+    "fields": ["phase", "version", "date", "owner", "changes", "status", "notes"]
+  },
+  "audit": {
+    "required": true,
+    "scope": ["principles", "strategy", "blueprints", "operations", "publishing"]
+  },
+  "notes": [
+    "Governance defines responsibility but does not execute approvals."
+  ]
+}

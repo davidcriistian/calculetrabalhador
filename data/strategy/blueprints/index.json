@@ -1,0 +1,23 @@
+{
+  "id": "strategy-blueprint-rules",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/blueprint-rule.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Strategic rules for future blueprint usage.",
+  "rules": [
+    { "id": "cluster-blueprint-primary", "statement": "Cluster Blueprint is the main editorial unit.", "required": true },
+    { "id": "article-blueprint-internal", "statement": "Article Blueprint is an internal component of Cluster Blueprint.", "required": true },
+    { "id": "article-requires-cluster", "statement": "Every article must belong to a Cluster.", "required": true },
+    { "id": "calculator-requires-cluster", "statement": "Every calculator must belong to a Cluster.", "required": true },
+    { "id": "blueprint-must-respect-constitution", "statement": "Every blueprint must respect the Constitution.", "required": true }
+  ],
+  "blueprintSystemReference": "/data/blueprints/registry/index.json",
+  "notes": [
+    "Rules guide future Blueprint System use and do not generate assets."
+  ]
+}

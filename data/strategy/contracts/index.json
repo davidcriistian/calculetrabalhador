@@ -1,0 +1,24 @@
+{
+  "id": "strategy-contracts-index",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Index of Strategy contracts.",
+  "items": [
+    "/data/strategy/contracts/seo.contract.json",
+    "/data/strategy/contracts/clusters.contract.json",
+    "/data/strategy/contracts/editorial.contract.json",
+    "/data/strategy/contracts/products.contract.json",
+    "/data/strategy/contracts/cta.contract.json",
+    "/data/strategy/contracts/publishing.contract.json",
+    "/data/strategy/contracts/growth.contract.json",
+    "/data/strategy/contracts/blueprints.contract.json",
+    "/data/strategy/contracts/registry.contract.json"
+  ],
+  "notes": ["Contracts are declarative."]
+}

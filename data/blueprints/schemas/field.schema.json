@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/field.schema.json",
+  "title": "Blueprint Field",
+  "type": "object",
+  "required": ["id", "label", "type", "required"],
+  "properties": {
+    "id": { "type": "string" },
+    "label": { "type": "string" },
+    "type": { "type": "string" },
+    "required": { "type": "boolean" },
+    "validation": { "type": "array", "items": { "type": "string" } },
+    "defaultValue": {}
+  }
+}

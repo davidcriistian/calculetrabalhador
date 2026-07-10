@@ -1,0 +1,41 @@
+{
+  "id": "operation-system-registry",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Entry point for the official operation system.",
+  "references": {
+    "playbooks": "/data/operations/playbooks/index.json",
+    "workflows": "/data/operations/workflows/index.json",
+    "pipelines": "/data/operations/pipelines/index.json",
+    "templates": "/data/operations/templates/index.json",
+    "checklists": "/data/operations/checklists/index.json",
+    "decisionTrees": "/data/operations/decision-trees/index.json",
+    "promptLibrary": "/data/operations/prompt-library/index.json",
+    "bestPractices": "/data/operations/best-practices/index.json",
+    "reports": "/data/operations/reports/index.json",
+    "schemas": "/data/operations/schemas/",
+    "contracts": "/data/operations/contracts/",
+    "metadata": "/data/operations/metadata/operations.json",
+    "history": "/data/operations/history/index.json",
+    "versioning": "/data/operations/versioning/index.json",
+    "documentation": "/data/operations/docs/OPERATION_SYSTEM.md"
+  },
+  "operationalBoundaries": {
+    "executesOperations": false,
+    "modifiesProduction": false,
+    "createsCalculators": false,
+    "createsArticles": false,
+    "createsCampaigns": false,
+    "createsProducts": false,
+    "executesAutomation": false
+  },
+  "notes": [
+    "The Operation System defines how operations should be executed but does not execute them."
+  ]
+}

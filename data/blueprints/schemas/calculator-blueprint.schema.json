@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/calculator-blueprint.schema.json",
+  "title": "Calculator Blueprint",
+  "allOf": [
+    { "$ref": "/data/blueprints/schemas/blueprint.schema.json" },
+    {
+      "type": "object",
+      "required": ["blueprintType", "identity", "seo", "structure", "testing", "validation", "publishing"],
+      "properties": {
+        "blueprintType": { "const": "calculator" },
+        "identity": { "type": "object" },
+        "seo": { "type": "object" },
+        "structure": { "type": "object" },
+        "testing": { "type": "object" },
+        "validation": { "type": "object" },
+        "publishing": { "type": "object" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "migration-batch-template",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Template for future batch migrations.",
+  "batch": {
+    "batchId": "example-batch-id",
+    "type": "calculator-core-migration",
+    "overallStatus": "planned",
+    "riskLevel": "medium",
+    "wave": "wave-2-medium-risk",
+    "strategy": "ordered-individual-migrations",
+    "limits": {
+      "maxItems": 3,
+      "maxEstimatedCredits": 0,
+      "maxEstimatedTime": "not-estimated",
+      "stopOnFirstFailure": true,
+      "allowPartialRollback": true,
+      "allowFullRollback": true,
+      "manualApprovalRequired": true
+    },
+    "dependencies": [],
+    "calculators": [
+      {
+        "assetId": "example-calculator-id",
+        "order": 1,
+        "riskLevel": "low",
+        "dependencies": [],
+        "status": "planned",
+        "migrationPlan": null,
+        "report": null
+      }
+    ],
+    "articles": [],
+    "gates": [
+      "equivalence-pass",
+      "testing-pass",
+      "validation-pass",
+      "seo-pass",
+      "runtime-safe",
+      "rollback-ready",
+      "manual-approval"
+    ],
+    "batchRules": {
+      "stopOnFirstFailure": true,
+      "requireIndividualApproval": true,
+      "requireOverallApproval": true,
+      "allowParallelExecution": false,
+      "wavePolicy": "/data/pos/migration/migration-waves.json"
+    }
+  },
+  "notes": [
+    "Batch migration must still preserve individual asset evidence and approval.",
+    "This template prepares scale but does not execute migration in Phase 2."
+  ]
+}

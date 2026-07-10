@@ -1,0 +1,45 @@
+{
+  "id": "constitution-architecture",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Official constitutional architecture boundaries.",
+  "officialLayers": [
+    "constitution",
+    "strategy",
+    "core",
+    "pos",
+    "blueprints",
+    "compatibility",
+    "legislation",
+    "update",
+    "shadow"
+  ],
+  "allowedDependencies": [
+    { "from": "strategy", "to": "constitution", "type": "must-respect" },
+    { "from": "pos", "to": "core", "type": "consumes-approved-knowledge" },
+    { "from": "blueprints", "to": "strategy", "type": "uses-current-strategy" },
+    { "from": "blueprints", "to": "constitution", "type": "must-respect" },
+    { "from": "testing", "to": "shadow", "type": "may-use-evidence" },
+    { "from": "validation", "to": "testing", "type": "requires-approval" }
+  ],
+  "forbiddenDependencies": [
+    { "from": "blueprints", "to": "legal-rules", "reason": "Blueprints must not own legal knowledge." },
+    { "from": "core", "to": "operational-rules", "reason": "Core must not own operational process." },
+    { "from": "strategy", "to": "runtime", "reason": "Strategy must not modify production directly." },
+    { "from": "constitution", "to": "runtime", "reason": "Constitution is principle-only." }
+  ],
+  "flows": [
+    "Constitution -> Strategy -> Blueprint System -> Testing -> Validation -> future Publishing",
+    "Core -> POS operations -> Testing -> Validation",
+    "Legislation -> Update -> Compatibility -> Core impact planning"
+  ],
+  "notes": [
+    "This file documents architecture rules and does not enforce them automatically."
+  ]
+}

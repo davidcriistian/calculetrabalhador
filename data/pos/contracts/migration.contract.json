@@ -1,0 +1,59 @@
+{
+  "id": "pos-contract-migration",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/contract.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "name": "Migration Contract",
+  "objective": "Define future migration responsibilities for moving assets between structures through a repeatable protocol without changing production behavior.",
+  "scope": [
+    "asset mapping",
+    "source and destination mapping",
+    "allowed and blocked file policy",
+    "pre-check definition",
+    "post-check definition",
+    "approval gates",
+    "rollback metadata",
+    "batch migration planning",
+    "audit trail"
+  ],
+  "expectedInputs": [
+    "source asset reference",
+    "target asset reference",
+    "migration type",
+    "migration reason",
+    "risk level",
+    "file policy",
+    "approval status"
+  ],
+  "expectedOutputs": [
+    "migration plan record",
+    "migration report",
+    "gate decision record",
+    "impact notes",
+    "rollback reference",
+    "batch migration record"
+  ],
+  "dependencies": [
+    "/data/pos/registry/index.json",
+    "/data/pos/versioning/index.json",
+    "/data/pos/migration/index.json"
+  ],
+  "nonResponsibilities": [
+    "execute migrations",
+    "rewrite runtime files",
+    "change URLs",
+    "change calculators or articles",
+    "change SEO",
+    "change sitemap",
+    "implement batch execution"
+  ],
+  "notes": [
+    "This contract is declarative and does not execute a migration.",
+    "Phase 2 details the official Migration Engine protocol under /data/pos/migration."
+  ]
+}

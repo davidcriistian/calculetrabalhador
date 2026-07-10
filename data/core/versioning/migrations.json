@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "description": "Reserved migration registry. No migrations are active in Phase 1.",
+  "runtimeStatus": "parallel-only",
+  "items": []
+}

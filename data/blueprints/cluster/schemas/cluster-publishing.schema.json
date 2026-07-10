@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/cluster/schemas/cluster-publishing.schema.json",
+  "title": "Cluster Publishing",
+  "type": "object",
+  "required": ["required", "publishingOrder", "dependencies", "preconditions", "status", "versioning", "rollback", "modifiesProductionInThisPhase"],
+  "properties": {
+    "required": { "type": "boolean" },
+    "publishingOrder": { "type": "array", "items": { "type": "string" } },
+    "dependencies": { "type": "array", "items": { "type": "string" } },
+    "preconditions": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" },
+    "versioning": { "type": "object" },
+    "rollback": { "type": "object" },
+    "modifiesProductionInThisPhase": { "type": "boolean" }
+  }
+}

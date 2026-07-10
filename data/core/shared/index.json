@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "schema": "/data/core/schemas/domain.schema.json",
+  "description": "Shared Core Engine area for data that can be reused by multiple domains without belonging to a single domain. Shared is a global platform area, never a domain.",
+  "runtimeStatus": "parallel-only",
+  "domainStatus": "not-a-domain",
+  "items": []
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/editorial.schema.json",
+  "title": "Strategy Editorial",
+  "allOf": [
+    { "$ref": "/data/strategy/schemas/strategy.schema.json" },
+    { "type": "object", "properties": { "model": { "type": "object" } } }
+  ]
+}

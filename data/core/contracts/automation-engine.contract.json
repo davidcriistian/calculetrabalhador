@@ -1,0 +1,15 @@
+{
+  "id": "automation-engine-contract",
+  "name": "Automation Engine",
+  "version": "0.1.0",
+  "status": "future",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "objective": "Define the future contract for validation, impact detection, update routines and governance checks.",
+  "expectedInputs": ["registry", "domains", "maps", "dependencies", "rules", "versioning"],
+  "expectedOutputs": ["impactReport", "validationReport", "updatePlan", "migrationChecklist"],
+  "dependencies": ["Core Registry", "Versioning", "Lifecycle", "Current Governance Scripts"],
+  "notes": ["Existing scripts are not changed and no automation integration is created in Phase 1.1."]
+}

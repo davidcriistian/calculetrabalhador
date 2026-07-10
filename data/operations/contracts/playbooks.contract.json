@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-playbooks",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/playbook.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Playbooks Contract",
+  "objective": "Define reusable operational playbooks.",
+  "expectedInputs": ["operation type", "inputs", "constraints"],
+  "expectedOutputs": ["playbook"],
+  "dependencies": ["/data/operations/playbooks/index.json"],
+  "nonResponsibilities": ["execute playbook"],
+  "notes": ["Playbooks reduce repeated planning."]
+}

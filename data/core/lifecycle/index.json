@@ -1,0 +1,55 @@
+{
+  "id": "core-lifecycle",
+  "version": "1.1.0",
+  "schema": "/data/core/schemas/lifecycle.schema.json",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "notes": [
+    "Lifecycle states describe the maturity of Core data. They do not publish, unpublish or change current site behavior."
+  ],
+  "states": [
+    {
+      "id": "draft",
+      "name": "Draft",
+      "description": "Use when an item is being drafted and must not be consumed by production surfaces."
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "description": "Use when an item is ready for technical, legal, editorial or source review."
+    },
+    {
+      "id": "approved",
+      "name": "Approved",
+      "description": "Use when an item has passed review but is not yet the active version."
+    },
+    {
+      "id": "active",
+      "name": "Active",
+      "description": "Use when an item is the current approved version for future Core consumers."
+    },
+    {
+      "id": "deprecated",
+      "name": "Deprecated",
+      "description": "Use when an item should no longer be used for new consumers but must remain available for compatibility and history."
+    },
+    {
+      "id": "archived",
+      "name": "Archived",
+      "description": "Use when an item is historical and preserved for audit, comparison or legal history."
+    },
+    {
+      "id": "future",
+      "name": "Future",
+      "description": "Use when an item is reserved for a planned module, domain, engine or integration."
+    },
+    {
+      "id": "cancelled",
+      "name": "Cancelled",
+      "description": "Use when an item was planned but should not proceed. Keep it for decision history when relevant."
+    }
+  ]
+}

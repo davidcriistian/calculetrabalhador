@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-engine-index",
+  "schema": null,
+  "description": "Ponto de entrada declarativo da Compatibility Engine. Nenhum item deste índice é consumido pelo runtime atual.",
+  "references": {
+    "runtime-map": "/data/core/compatibility/runtime-map.json",
+    "rules-map": "/data/core/compatibility/rules-map.json",
+    "tables-map": "/data/core/compatibility/tables-map.json",
+    "tools-map": "/data/core/compatibility/tools-map.json",
+    "articles-map": "/data/core/compatibility/articles-map.json",
+    "dependencies-map": "/data/core/compatibility/dependencies-map.json",
+    "migration-readiness": "/data/core/compatibility/migration-readiness.json"
+  },
+  "protectedSources": [
+    "data/tabelas-trabalhistas.json",
+    "data/rules/",
+    "data/maps/",
+    "data/brain/",
+    "data/tools.json",
+    "data/articles.json",
+    "assets/js/tabelas-trabalhistas.js"
+  ],
+  "notes": [
+    "Camada declarativa para mapear o relacionamento entre Core e arquitetura atual.",
+    "Não implementa migração, não altera cálculo e não conecta páginas ao Core."
+  ]
+}

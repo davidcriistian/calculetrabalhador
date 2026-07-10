@@ -1,0 +1,28 @@
+{
+  "id": "migration-phases",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Official phase sequence for future migrations.",
+  "items": [
+    { "id": "planned", "order": 10, "description": "Migration intent and scope are documented." },
+    { "id": "pre-check", "order": 20, "description": "Current behavior, files and risk are checked before changes." },
+    { "id": "baseline-captured", "order": 30, "description": "Current outputs, files and rollback references are captured." },
+    { "id": "migration-draft", "order": 40, "description": "A draft change plan exists but is not approved as final." },
+    { "id": "post-check", "order": 50, "description": "Post-change checks are defined for future execution." },
+    { "id": "waiting-approval", "order": 60, "description": "Migration awaits approval gate confirmation." },
+    { "id": "approved", "order": 70, "description": "Migration gates passed and manual approval was recorded." },
+    { "id": "completed", "order": 80, "description": "Migration completed and report was recorded." },
+    { "id": "failed", "order": 90, "description": "Migration did not satisfy required checks." },
+    { "id": "rolled-back", "order": 100, "description": "Previous state was restored and confirmed." },
+    { "id": "cancelled", "order": 110, "description": "Migration was stopped by decision before completion." }
+  ],
+  "notes": [
+    "The sequence describes future process control and does not drive automation in Phase 2."
+  ]
+}

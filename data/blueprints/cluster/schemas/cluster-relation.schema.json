@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/cluster/schemas/cluster-relation.schema.json",
+  "title": "Cluster Relation",
+  "type": "object",
+  "required": ["cluster", "calculatorBlueprint", "articleBlueprint", "products", "cta", "publishing", "testing", "validation"],
+  "properties": {
+    "cluster": { "type": "object" },
+    "calculatorBlueprint": { "type": "object" },
+    "articleBlueprint": { "type": "object" },
+    "products": { "type": "object" },
+    "cta": { "type": "object" },
+    "publishing": { "type": "object" },
+    "testing": { "type": "object" },
+    "validation": { "type": "object" }
+  }
+}

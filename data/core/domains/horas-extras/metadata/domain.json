@@ -1,0 +1,21 @@
+{
+  "id": "horas-extras",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "name": "Horas Extras",
+  "description": "Representacao declarativa completa da Calculadora de Horas Extras atual dentro do Core.",
+  "parentDomain": "clt",
+  "runtimeStatus": "not-connected",
+  "migrationStatus": "not-started",
+  "homologationStatus": "passed-with-notes",
+  "productionCalculator": "/calculadora-horas-extras-clt/",
+  "notes": [
+    "Este dominio nao altera data/rules/horas-extras.json.",
+    "Este dominio nao altera calculadoras, artigos, URLs, SEO ou runtime.",
+    "A representacao descreve a logica atual da pagina publicada, incluindo divisores 220, 200 e jornada personalizada."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "operational-manifest-registry",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Official entry point for operation manifests.",
+  "manifestRole": "operation-entrypoint",
+  "references": {
+    "operations": "/data/manifests/operations/index.json",
+    "contexts": "/data/manifests/contexts/index.json",
+    "dependencies": "/data/manifests/dependencies/index.json",
+    "restrictions": "/data/manifests/restrictions/index.json",
+    "schemas": "/data/manifests/schemas/",
+    "contracts": "/data/manifests/contracts/",
+    "metadata": "/data/manifests/metadata/manifests.json",
+    "history": "/data/manifests/history/index.json",
+    "versioning": "/data/manifests/versioning/index.json",
+    "documentation": "/data/manifests/docs/MANIFEST_SYSTEM.md"
+  },
+  "supportedOperations": [
+    "create-calculator",
+    "create-cluster",
+    "create-article",
+    "update-calculator",
+    "update-article",
+    "update-law",
+    "update-table",
+    "validate-calculator",
+    "validate-article",
+    "publish",
+    "rollback",
+    "migrate-calculator",
+    "migrate-article",
+    "change-product",
+    "change-cta",
+    "change-campaign",
+    "expand-cluster"
+  ],
+  "operationalBoundaries": {
+    "executesAutomation": false,
+    "createsCalculators": false,
+    "createsArticles": false,
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "The manifest registry only identifies the minimal context required for future operations.",
+    "Manifests must point to logical components instead of large physical file lists.",
+    "This layer is not consumed by production code."
+  ]
+}

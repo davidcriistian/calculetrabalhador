@@ -1,0 +1,46 @@
+{
+  "id": "validation-report-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Template for future validation reports.",
+  "report": {
+    "reportId": "example-validation-report-id",
+    "validationId": "example-validation-id",
+    "assetId": "example-asset-id",
+    "validationType": "schema-validation",
+    "status": "planned",
+    "severity": "medium",
+    "evidence": [],
+    "checklistResults": [],
+    "rulesResults": [],
+    "nonConformities": [
+      {
+        "id": "example-nonconformity-id",
+        "severity": "low",
+        "blocking": false,
+        "description": "Describe the nonconformity.",
+        "evidence": [],
+        "status": "planned",
+        "notes": []
+      }
+    ],
+    "approval": {
+      "approvalTemplate": "/data/pos/validation/approval-template.json",
+      "approved": false,
+      "rejected": false,
+      "reason": null,
+      "approvedBy": null,
+      "approvedAt": null
+    },
+    "observations": []
+  },
+  "notes": [
+    "Reports document future compliance evidence and decisions; they do not approve automatically."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "validation-checklist",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Official declarative checklist for future compliance validation.",
+  "items": [
+    { "id": "seo", "required": true, "severity": "high", "evidence": ["seo-report", "manual-review"] },
+    { "id": "canonical", "required": true, "severity": "high", "evidence": ["seo-report"] },
+    { "id": "meta-description", "required": true, "severity": "medium", "evidence": ["seo-report"] },
+    { "id": "title", "required": true, "severity": "medium", "evidence": ["seo-report"] },
+    { "id": "open-graph", "required": true, "severity": "medium", "evidence": ["seo-report"] },
+    { "id": "twitter-card", "required": false, "severity": "low", "evidence": ["seo-report"] },
+    { "id": "json-ld", "required": true, "severity": "high", "evidence": ["jsonld-report"] },
+    { "id": "schema-org", "required": true, "severity": "high", "evidence": ["jsonld-report"] },
+    { "id": "breadcrumb", "required": true, "severity": "medium", "evidence": ["html-report", "snapshot"] },
+    { "id": "heading-hierarchy", "required": true, "severity": "medium", "evidence": ["html-report"] },
+    { "id": "internal-links", "required": true, "severity": "medium", "evidence": ["html-report"] },
+    { "id": "related-content", "required": false, "severity": "low", "evidence": ["html-report"] },
+    { "id": "responsive", "required": true, "severity": "high", "evidence": ["responsive-report", "snapshot"] },
+    { "id": "layout", "required": true, "severity": "high", "evidence": ["snapshot", "manual-review"] },
+    { "id": "performance", "required": true, "severity": "medium", "evidence": ["performance-report"] },
+    { "id": "accessibility", "required": true, "severity": "medium", "evidence": ["accessibility-report", "manual-review"] },
+    { "id": "runtime-safety", "required": true, "severity": "critical", "evidence": ["manual-review"] },
+    { "id": "configuration", "required": true, "severity": "high", "evidence": ["manual-review"] },
+    { "id": "architecture", "required": true, "severity": "high", "evidence": ["manual-review"] },
+    { "id": "project-standards", "required": true, "severity": "high", "evidence": ["manual-review"] }
+  ],
+  "notes": [
+    "Checklist items define compliance expectations and do not perform validation."
+  ]
+}

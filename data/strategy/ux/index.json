@@ -1,0 +1,21 @@
+{
+  "id": "strategy-ux",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/ux.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "UX strategy model.",
+  "model": {
+    "components": ["hero", "calculator", "result-card", "faq", "cta", "related-content", "breadcrumb", "disclaimer"],
+    "responsive": "required",
+    "hierarchy": "task-first-content-second-offer-third",
+    "experience": "clear, fast, trustworthy and accessible"
+  },
+  "notes": [
+    "UX strategy does not alter layout in this phase."
+  ]
+}

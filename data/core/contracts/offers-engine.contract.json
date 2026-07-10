@@ -1,0 +1,15 @@
+{
+  "id": "offers-engine-contract",
+  "name": "Offers Engine",
+  "version": "0.1.0",
+  "status": "future",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "objective": "Define the future contract for contextual offers without mixing monetization with legal rules.",
+  "expectedInputs": ["domain", "userContext", "toolContext", "contentContext", "offerInventory"],
+  "expectedOutputs": ["eligibleOffers", "placementRules", "disclosureMetadata"],
+  "dependencies": ["Core Registry", "Lifecycle", "Monetization Policy"],
+  "notes": ["No offer system is implemented in Phase 1.1."]
+}

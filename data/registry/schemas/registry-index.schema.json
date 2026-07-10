@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/registry/schemas/registry-index.schema.json",
+  "title": "Registry Index",
+  "type": "object",
+  "required": ["id", "version", "schema", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "registryRole": { "type": "string" },
+    "partitioningStatus": { "type": "string" },
+    "references": { "type": "object" },
+    "supportedPartitions": { "type": "array", "items": { "type": "string" } },
+    "entryShape": { "type": "object" },
+    "scaleTargets": { "type": "object" },
+    "operationalBoundaries": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

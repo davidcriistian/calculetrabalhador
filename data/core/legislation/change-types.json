@@ -1,0 +1,76 @@
+{
+  "id": "legislation-change-types",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Catalogo oficial de tipos de mudancas legislativas ou normativas.",
+  "items": [
+    {
+      "id": "new-law",
+      "label": "Nova Lei",
+      "description": "Criacao de lei com potencial impacto sobre dominios, regras, tabelas ou conteudo."
+    },
+    {
+      "id": "new-ordinance",
+      "label": "Nova Portaria",
+      "description": "Publicacao administrativa que altera valores, procedimentos, regras ou vigencias."
+    },
+    {
+      "id": "new-decree",
+      "label": "Novo Decreto",
+      "description": "Ato regulamentar que detalha ou altera aplicacao de norma."
+    },
+    {
+      "id": "new-normative-instruction",
+      "label": "Nova Instrucao Normativa",
+      "description": "Instrucao de orgao competente com orientacao operacional ou interpretativa."
+    },
+    {
+      "id": "rate-change",
+      "label": "Alteracao de Aliquota",
+      "description": "Mudanca em aliquota aplicada a calculo, contribuicao, imposto ou beneficio."
+    },
+    {
+      "id": "range-change",
+      "label": "Alteracao de Faixa",
+      "description": "Mudanca em faixas progressivas, limites, tetos, pisos ou intervalos."
+    },
+    {
+      "id": "monetary-correction",
+      "label": "Correcao Monetaria",
+      "description": "Atualizacao de valor monetario por indice, reajuste anual ou correcao oficial."
+    },
+    {
+      "id": "percentage-change",
+      "label": "Mudanca de Percentual",
+      "description": "Mudanca de percentual fixo ou variavel usado em regra trabalhista, tributaria ou previdenciaria."
+    },
+    {
+      "id": "validity-change",
+      "label": "Mudanca de Vigencia",
+      "description": "Alteracao de data inicial, final, prorrogacao, transicao ou aplicacao temporal."
+    },
+    {
+      "id": "revocation",
+      "label": "Revogacao",
+      "description": "Remocao formal de norma, regra, tabela ou criterio anterior."
+    },
+    {
+      "id": "replacement",
+      "label": "Substituicao",
+      "description": "Substituicao de regra, tabela, fonte ou criterio por nova versao."
+    },
+    {
+      "id": "technical-correction",
+      "label": "Correcao Tecnica",
+      "description": "Ajuste sem alteracao legislativa de merito, como erro de digitacao, fonte, formato ou interpretacao documentada."
+    }
+  ],
+  "notes": [
+    "Tipos podem ser combinados em uma mudanca quando a norma produzir mais de um efeito.",
+    "Novos tipos devem preservar ids estaveis em kebab-case."
+  ]
+}

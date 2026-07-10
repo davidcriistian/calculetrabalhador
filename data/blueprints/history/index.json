@@ -1,0 +1,46 @@
+{
+  "id": "blueprint-system-history",
+  "version": "0.2.0",
+  "schema": "/data/blueprints/schemas/blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "description": "Change history for Blueprint System foundation files.",
+  "items": [
+    {
+      "id": "blueprint-system-0.1.0",
+      "phase": "Productivity Layer Phase 1 - Blueprint System",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Created declarative Blueprint System structure.",
+        "Created calculator, article and shared component blueprint models.",
+        "Kept production assets disconnected from the Blueprint System."
+      ],
+      "notes": []
+    },
+    {
+      "id": "cluster-blueprint-system-0.1.0",
+      "phase": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Created Cluster Blueprint System.",
+        "Registered Cluster Blueprint as the primary structural blueprint.",
+        "Defined Calculator Blueprint and Article Blueprint as reusable cluster components.",
+        "Kept production assets disconnected from the Blueprint System."
+      ],
+      "notes": []
+    }
+  ],
+  "notes": [
+    "History records blueprint architecture changes only."
+  ]
+}

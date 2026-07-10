@@ -1,0 +1,35 @@
+{
+  "id": "registry-contract",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-index.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "name": "Registry Contract",
+  "objective": "Define registries as discovery indexes only.",
+  "responsibilities": [
+    "provide fast asset discovery",
+    "point to canonical sources through references",
+    "support partitioning by type, domain, nucleus, cluster, status, version and owner",
+    "avoid central JSON growth"
+  ],
+  "nonResponsibilities": [
+    "store full assets",
+    "duplicate calculators",
+    "duplicate articles",
+    "duplicate clusters",
+    "duplicate products",
+    "store legal knowledge",
+    "store SEO source content",
+    "store operational logic",
+    "feed runtime"
+  ],
+  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "dependencies": ["/data/registry/index.json"],
+  "notes": [
+    "This contract does not migrate or populate registries."
+  ]
+}

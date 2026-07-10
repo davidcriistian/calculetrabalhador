@@ -1,0 +1,21 @@
+{
+  "id": "core-contracts-index",
+  "version": "1.1.0",
+  "schema": "/data/core/schemas/contract.schema.json",
+  "status": "future",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "notes": [
+    "Contracts are models for future engines. No engine is implemented in Phase 1.1."
+  ],
+  "items": [
+    "/data/core/contracts/calculator-engine.contract.json",
+    "/data/core/contracts/content-engine.contract.json",
+    "/data/core/contracts/offers-engine.contract.json",
+    "/data/core/contracts/blueprint-engine.contract.json",
+    "/data/core/contracts/automation-engine.contract.json",
+    "/data/core/contracts/knowledge-engine.contract.json"
+  ]
+}

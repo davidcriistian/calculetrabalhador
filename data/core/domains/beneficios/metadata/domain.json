@@ -1,0 +1,9 @@
+{
+  "id": "beneficios",
+  "schema": "/data/core/schemas/domain.schema.json",
+  "status": "planned",
+  "runtimeStatus": "parallel-only",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "notes": ["Domain scaffold only. Current benefits runtime remains /data/tabelas-trabalhistas.json."]
+}

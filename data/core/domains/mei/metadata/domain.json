@@ -1,0 +1,9 @@
+{
+  "id": "mei",
+  "schema": "/data/core/schemas/domain.schema.json",
+  "status": "planned",
+  "runtimeStatus": "parallel-only",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "notes": ["Domain scaffold only. No MEI calculator behavior is changed in Phase 1."]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "pos-history-index",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Change history for POS foundation files.",
+  "phaseRecordTemplate": {
+    "phase": "example-phase",
+    "version": "example-version",
+    "date": "YYYY-MM-DD",
+    "owner": "Calcule Trabalhador",
+    "changes": [],
+    "status": "foundation",
+    "notes": []
+  },
+  "items": [
+    {
+      "id": "pos-phase-1-registry-engine-foundation",
+      "date": "2026-07-09",
+      "version": "0.1.0",
+      "status": "foundation",
+      "changes": [
+        "Created POS folder structure.",
+        "Created registry entry point.",
+        "Created schemas, contracts, metadata, history, versioning and architecture documentation.",
+        "Kept POS disconnected from operational runtime."
+      ]
+    }
+  ],
+  "notes": [
+    "History entries track POS foundation and governance changes only.",
+    "Every future POS phase should be recorded using phase, version, date, owner, changes, status and notes.",
+    "This file is not used by runtime code."
+  ]
+}

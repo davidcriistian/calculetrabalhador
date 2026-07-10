@@ -1,0 +1,18 @@
+{
+  "id": "operation-contract-templates",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/template.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "name": "Templates Contract",
+  "objective": "Define reusable templates for operation records.",
+  "expectedInputs": ["template type", "fields"],
+  "expectedOutputs": ["template definition"],
+  "dependencies": ["/data/operations/templates/index.json"],
+  "nonResponsibilities": ["create operation records automatically"],
+  "notes": ["Templates are not executors."]
+}

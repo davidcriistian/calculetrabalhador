@@ -1,0 +1,24 @@
+{
+  "id": "strategy-editorial",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/editorial.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Editorial strategy model.",
+  "model": {
+    "pillarArticle": "primary authority article for a cluster",
+    "satelliteArticles": "support articles connected to the pillar",
+    "creationOrder": ["cluster", "calculator", "pillar-article", "satellite-articles", "related-content"],
+    "clusterRequired": true,
+    "objectiveRequired": true,
+    "searchIntentRequired": true,
+    "topicalAuthorityRequired": true
+  },
+  "notes": [
+    "Editorial strategy does not generate articles in this phase."
+  ]
+}

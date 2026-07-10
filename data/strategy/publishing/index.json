@@ -1,0 +1,22 @@
+{
+  "id": "strategy-publishing",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/publishing.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Publishing strategy model.",
+  "workflow": {
+    "order": ["draft", "pre-publishing", "testing", "validation", "approval", "publish-ready", "post-publishing-review"],
+    "prePublishing": ["blueprint-complete", "seo-complete", "links-planned", "testing-plan-ready", "validation-plan-ready"],
+    "postPublishing": ["link-check", "seo-check", "analytics-review", "manual-review"],
+    "approval": ["manual-approval", "testing-approved", "validation-approved"],
+    "review": ["editorial-review", "technical-review", "strategy-review"]
+  },
+  "notes": [
+    "Publishing strategy does not publish assets in this phase."
+  ]
+}

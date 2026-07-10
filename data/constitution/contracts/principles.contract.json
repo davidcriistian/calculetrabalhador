@@ -1,0 +1,18 @@
+{
+  "id": "constitution-contract-principles",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Principles Contract",
+  "objective": "Define permanent principles that all layers must respect.",
+  "expectedInputs": ["principle proposal", "approval"],
+  "expectedOutputs": ["principle record"],
+  "dependencies": ["/data/constitution/principles/index.json"],
+  "nonResponsibilities": ["execute operations", "modify production"],
+  "notes": ["Principles change rarely."]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "testing-template",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Template for a future individual test plan.",
+  "testPlan": {
+    "testPlanId": "example-test-plan-id",
+    "testType": "calculator-equivalence",
+    "status": "planned",
+    "severity": "medium",
+    "blockingLevel": "blocking",
+    "approvalOwner": "manual-review-owner",
+    "minimumEvidence": [
+      "calculation-baseline",
+      "json-output",
+      "manual-review"
+    ],
+    "target": {
+      "assetType": "calculator",
+      "assetId": "example-asset-id",
+      "path": "/example/path"
+    },
+    "scope": {
+      "beforeChange": true,
+      "afterChange": true,
+      "required": true,
+      "relatedMigration": null
+    },
+    "cases": [
+      {
+        "caseId": "example-case-1",
+        "description": "Describe the scenario being tested.",
+        "inputs": {},
+        "expectedOutput": {},
+        "obtainedOutput": null,
+        "tolerance": {
+          "type": "exact",
+          "value": 0,
+          "unit": "none"
+        },
+        "result": "planned",
+        "evidence": [],
+        "notes": []
+      }
+    ],
+    "approvalRequirements": [
+      "equivalence-pass",
+      "required-tests-pass",
+      "no-runtime-regression",
+      "no-seo-regression",
+      "no-layout-regression",
+      "baseline-match",
+      "manual-approval"
+    ],
+    "report": {
+      "template": "/data/pos/testing/test-report-template.json",
+      "location": null
+    }
+  },
+  "notes": [
+    "This template describes test planning only and does not execute tests."
+  ]
+}

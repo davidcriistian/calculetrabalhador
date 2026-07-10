@@ -1,0 +1,174 @@
+{
+  "id": "cluster-blueprint-template",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/cluster/schemas/cluster-blueprint.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "description": "Declarative model for future cluster-based asset construction.",
+  "blueprintType": "cluster",
+  "identity": {
+    "clusterId": "example-cluster",
+    "name": "Example Cluster",
+    "slug": "/example-cluster/",
+    "nucleus": "example-nucleus",
+    "domain": "example-domain",
+    "category": "example-category",
+    "status": "draft",
+    "owner": "Calcule Trabalhador",
+    "version": "0.1.0"
+  },
+  "assets": {
+    "primaryCalculator": {
+      "required": true,
+      "blueprintReference": "/data/blueprints/calculator/index.json",
+      "role": "main-calculator",
+      "status": "planned"
+    },
+    "pillarArticle": {
+      "required": true,
+      "blueprintReference": "/data/blueprints/article/index.json",
+      "role": "pillar-article",
+      "status": "planned"
+    },
+    "satelliteArticles": [],
+    "guides": [],
+    "faq": [],
+    "glossary": [],
+    "relatedTools": [],
+    "downloads": []
+  },
+  "seo": {
+    "clusterTitle": null,
+    "clusterDescription": null,
+    "clusterKeywords": [],
+    "canonical": null,
+    "breadcrumb": [],
+    "schema": ["CollectionPage", "BreadcrumbList", "FAQPage"],
+    "jsonLd": [],
+    "internalLinking": {
+      "pillarToCalculator": true,
+      "calculatorToPillar": true,
+      "satellitesToPillar": true,
+      "pillarToSatellites": true,
+      "relatedClusters": []
+    },
+    "relatedClusters": []
+  },
+  "publishing": {
+    "required": true,
+    "publishingOrder": [
+      "core-domain-ready",
+      "cluster-approved",
+      "primary-calculator-draft",
+      "pillar-article-draft",
+      "satellite-assets-draft",
+      "testing-pass",
+      "validation-pass",
+      "manual-approval",
+      "publish"
+    ],
+    "dependencies": ["Core Domain", "Strategy Cluster", "Calculator Blueprint", "Article Blueprint", "Testing Engine", "Validation Engine"],
+    "preconditions": ["cluster-approved", "assets-scoped", "rollback-ready"],
+    "status": "not-ready",
+    "versioning": {
+      "draftVersion": "0.1.0",
+      "publishedVersion": null,
+      "historyRequired": true
+    },
+    "rollback": {
+      "required": true,
+      "rollbackPlanReference": "Rollback Model",
+      "restoreScope": ["cluster-assets", "internal-links", "seo-metadata", "offer-slots"]
+    },
+    "modifiesProductionInThisPhase": false
+  },
+  "monetization": {
+    "offerSlots": [
+      {
+        "slotId": "cluster-primary-offer",
+        "placement": "primary-cluster-context",
+        "status": "placeholder",
+        "priority": 1,
+        "fallback": "no-offer"
+      }
+    ],
+    "ctaSlots": [
+      {
+        "slotId": "cluster-primary-cta",
+        "placement": "pillar-and-calculator",
+        "status": "placeholder",
+        "priority": 1,
+        "fallback": "default-cta"
+      }
+    ],
+    "productSlots": [
+      {
+        "slotId": "cluster-product-slot",
+        "placement": "eligible-cluster-assets",
+        "status": "placeholder",
+        "priority": 1,
+        "fallback": "no-product"
+      }
+    ],
+    "realProductsRegistered": false
+  },
+  "testing": {
+    "required": true,
+    "testingReference": "/data/pos/testing/index.json",
+    "requiredTypes": ["equivalence", "regression", "seo", "structure", "links"],
+    "requiredEvidence": ["cluster-asset-map", "internal-link-map", "calculator-baseline", "article-structure-check"]
+  },
+  "validation": {
+    "required": true,
+    "validationReference": "/data/pos/validation/index.json",
+    "requiredTypes": ["quality", "seo", "json-ld", "accessibility", "components", "structure"],
+    "requiredEvidence": ["cluster-blueprint-review", "seo-review", "jsonld-review", "component-review"]
+  },
+  "relationships": {
+    "cluster": {
+      "owns": ["Calculator Blueprint", "Article Blueprint", "Offer Slots", "CTA Slots", "Publishing Plan", "Testing Requirements", "Validation Requirements"]
+    },
+    "calculatorBlueprint": {
+      "role": "component-of-cluster",
+      "reference": "/data/blueprints/calculator/index.json"
+    },
+    "articleBlueprint": {
+      "role": "component-of-cluster",
+      "reference": "/data/blueprints/article/index.json"
+    },
+    "products": {
+      "role": "referenced-through-product-slots",
+      "realProductsRegisteredHere": false
+    },
+    "cta": {
+      "role": "referenced-through-cta-slots"
+    },
+    "publishing": {
+      "role": "cluster-publication-plan"
+    },
+    "testing": {
+      "role": "cluster-quality-gate"
+    },
+    "validation": {
+      "role": "cluster-conformity-gate"
+    }
+  },
+  "operationalBoundaries": {
+    "createsClusters": false,
+    "createsCalculators": false,
+    "createsArticles": false,
+    "generatesPages": false,
+    "executesAutomation": false,
+    "modifiesProduction": false,
+    "registersRealProducts": false
+  },
+  "notes": [
+    "This template does not create real clusters.",
+    "Calculator Blueprint and Article Blueprint remain valid standalone models, but are now also formal components of Cluster Blueprint.",
+    "Future generation must pass Testing, Validation and Publishing gates."
+  ]
+}

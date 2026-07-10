@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-seo",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "SEO Strategy Contract",
+  "objective": "Define configurable SEO policies.",
+  "expectedInputs": ["cluster", "search intent", "content type"],
+  "expectedOutputs": ["SEO policy"],
+  "dependencies": ["/data/strategy/seo/index.json"],
+  "nonResponsibilities": ["change existing SEO", "publish pages"],
+  "notes": ["SEO strategy is declarative."]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "operation-playbooks",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/playbook.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Official operation playbook catalog.",
+  "items": [
+    "create-calculator",
+    "create-cluster",
+    "create-article",
+    "update-legal-rule",
+    "update-table",
+    "update-calculator",
+    "update-article",
+    "validate-calculator",
+    "validate-article",
+    "publish-content",
+    "publish-calculator",
+    "rollback",
+    "migrate-calculator",
+    "migrate-article",
+    "change-product",
+    "change-cta",
+    "change-campaign",
+    "update-seo",
+    "create-domain",
+    "expand-cluster"
+  ],
+  "playbookTemplate": {
+    "operationId": "example-operation",
+    "objective": "Describe the operation.",
+    "inputs": [],
+    "preconditions": [],
+    "workflow": "/data/operations/workflows/index.json",
+    "pipeline": null,
+    "checklists": [],
+    "decisionTree": null,
+    "report": "/data/operations/reports/index.json",
+    "constraints": ["do-not-modify-production-without-approval"]
+  },
+  "notes": [
+    "Playbooks describe operations only and do not execute them."
+  ]
+}

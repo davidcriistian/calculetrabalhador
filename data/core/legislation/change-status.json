@@ -1,0 +1,43 @@
+{
+  "id": "legislation-change-status",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Status oficiais para uma mudanca legislativa dentro da Legislation Engine.",
+  "items": [
+    {
+      "id": "draft",
+      "description": "Mudanca registrada como rascunho inicial, ainda incompleta ou sem revisao."
+    },
+    {
+      "id": "review",
+      "description": "Mudanca pronta para revisao de fonte, vigencia, dominio e impacto."
+    },
+    {
+      "id": "approved",
+      "description": "Mudanca aprovada internamente, mas ainda nao aplicada a nenhuma integracao."
+    },
+    {
+      "id": "scheduled",
+      "description": "Mudanca aprovada com data futura de vigencia ou janela de transicao."
+    },
+    {
+      "id": "active",
+      "description": "Mudanca vigente como referencia do Core, sem significar consumo pelo runtime atual."
+    },
+    {
+      "id": "deprecated",
+      "description": "Mudanca substituida ou nao recomendada para novos usos, mantida para historico."
+    },
+    {
+      "id": "cancelled",
+      "description": "Mudanca descartada antes de qualquer uso futuro."
+    }
+  ],
+  "notes": [
+    "Status da Legislation Engine nao altera publicacao de artigos, calculadoras ou tabelas atuais."
+  ]
+}

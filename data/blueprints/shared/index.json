@@ -1,0 +1,122 @@
+{
+  "id": "blueprint-shared-components",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/component.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "description": "Reusable declarative components for future calculator and article blueprints.",
+  "components": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "slots": ["title", "subtitle", "primary-cta", "breadcrumb"],
+      "fields": ["headline", "supportingText"],
+      "validation": ["seo-validation", "layout-validation"]
+    },
+    {
+      "id": "faq",
+      "name": "FAQ",
+      "slots": ["question-list"],
+      "fields": ["question", "answer"],
+      "validation": ["jsonld-validation", "content-structure-validation"]
+    },
+    {
+      "id": "cta",
+      "name": "CTA",
+      "slots": ["cta-label", "cta-target"],
+      "fields": ["label", "href", "trackingId"],
+      "validation": ["link-validation", "offer-placement-validation"]
+    },
+    {
+      "id": "offer-slot",
+      "name": "Offer Slot",
+      "slots": ["offer"],
+      "fields": ["placementId", "productId", "disclosure"],
+      "validation": ["offer-placement-validation"]
+    },
+    {
+      "id": "related-content",
+      "name": "Related Content",
+      "slots": ["article-list", "tool-list"],
+      "fields": ["items"],
+      "validation": ["link-validation"]
+    },
+    {
+      "id": "calculator-card",
+      "name": "Calculator Card",
+      "slots": ["title", "summary", "link"],
+      "fields": ["calculatorId", "title", "href"],
+      "validation": ["link-validation"]
+    },
+    {
+      "id": "article-card",
+      "name": "Article Card",
+      "slots": ["title", "summary", "link"],
+      "fields": ["articleId", "title", "href"],
+      "validation": ["link-validation"]
+    },
+    {
+      "id": "disclaimer",
+      "name": "Disclaimer",
+      "slots": ["text"],
+      "fields": ["body"],
+      "validation": ["content-structure-validation"]
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "slots": ["header", "rows"],
+      "fields": ["columns", "rows"],
+      "validation": ["html-validation", "responsive-validation"]
+    },
+    {
+      "id": "section",
+      "name": "Section",
+      "slots": ["heading", "body", "components"],
+      "fields": ["heading", "body"],
+      "validation": ["heading-hierarchy", "html-validation"]
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "slots": ["items"],
+      "fields": ["items"],
+      "validation": ["jsonld-validation", "navigation-validation"]
+    },
+    {
+      "id": "result-card",
+      "name": "Result Card",
+      "slots": ["label", "value", "details"],
+      "fields": ["label", "value", "format"],
+      "validation": ["calculator-structure-validation"]
+    },
+    {
+      "id": "info-card",
+      "name": "Info Card",
+      "slots": ["title", "content"],
+      "fields": ["title", "body"],
+      "validation": ["content-structure-validation"]
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "slots": ["message"],
+      "fields": ["type", "message"],
+      "validation": ["accessibility-validation"]
+    },
+    {
+      "id": "banner",
+      "name": "Banner",
+      "slots": ["content", "cta"],
+      "fields": ["title", "body", "cta"],
+      "validation": ["layout-validation", "responsive-validation"]
+    }
+  ],
+  "notes": [
+    "Shared components are blueprint definitions only and do not render UI."
+  ]
+}

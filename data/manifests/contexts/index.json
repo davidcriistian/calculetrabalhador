@@ -1,0 +1,92 @@
+{
+  "id": "operational-manifest-contexts",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/operation-context.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Minimum context catalog for official operations.",
+  "contextPolicy": {
+    "goal": "Read the smallest useful context before any future operation.",
+    "preferLogicalComponents": true,
+    "avoidFullLayerReads": true,
+    "expandContextOnlyWhenBlocked": true
+  },
+  "contexts": [
+    {
+      "operationId": "create-calculator",
+      "minimumContext": ["Constitution rules", "Strategy Cluster", "Core Domain", "Calculator Blueprint", "Create Calculator Playbook", "Testing Gates", "Validation Gates"]
+    },
+    {
+      "operationId": "create-cluster",
+      "minimumContext": ["Constitution rules", "Strategy Nucleus", "Cluster Blueprint", "Create Cluster Playbook", "Validation Gates"]
+    },
+    {
+      "operationId": "create-article",
+      "minimumContext": ["Constitution rules", "Strategy Cluster", "Core Domain", "Article Blueprint", "Create Article Playbook", "Validation Gates"]
+    },
+    {
+      "operationId": "update-calculator",
+      "minimumContext": ["Target Calculator Manifest", "Core Domain", "Existing Baseline", "Update Calculator Playbook", "Testing Gates", "Validation Gates", "Rollback Model"]
+    },
+    {
+      "operationId": "update-article",
+      "minimumContext": ["Target Article Manifest", "Strategy Cluster", "Article Blueprint", "Update Article Playbook", "Validation Gates"]
+    },
+    {
+      "operationId": "update-law",
+      "minimumContext": ["Legal Source", "Core Domain", "Affected Asset Map", "Update Law Playbook", "Testing Gates", "Validation Gates"]
+    },
+    {
+      "operationId": "update-table",
+      "minimumContext": ["Official Table Source", "Core Table", "Affected Asset Map", "Update Table Playbook", "Testing Gates", "Validation Gates"]
+    },
+    {
+      "operationId": "validate-calculator",
+      "minimumContext": ["Target Calculator", "Core Domain", "Testing Protocol", "Validation Protocol", "Shadow Baseline"]
+    },
+    {
+      "operationId": "validate-article",
+      "minimumContext": ["Target Article", "Strategy Cluster", "Article Blueprint", "Validation Protocol"]
+    },
+    {
+      "operationId": "publish",
+      "minimumContext": ["Approved Asset", "Approval Gates", "Publishing Model", "Validation Report", "Testing Report", "Rollback Model"]
+    },
+    {
+      "operationId": "rollback",
+      "minimumContext": ["Rollback Model", "Previous State", "Operation Report", "Affected Asset Map", "Testing Gates", "Validation Gates"]
+    },
+    {
+      "operationId": "migrate-calculator",
+      "minimumContext": ["Migration Protocol", "Target Calculator", "Calculator Blueprint", "Baseline", "Testing Gates", "Validation Gates", "Rollback Model"]
+    },
+    {
+      "operationId": "migrate-article",
+      "minimumContext": ["Migration Protocol", "Target Article", "Article Blueprint", "SEO Baseline", "Validation Gates", "Rollback Model"]
+    },
+    {
+      "operationId": "change-product",
+      "minimumContext": ["Product Model", "Offer Placement Model", "Strategy Cluster", "Validation Gates"]
+    },
+    {
+      "operationId": "change-cta",
+      "minimumContext": ["CTA Model", "Offer Slot Model", "Eligible Contexts", "Validation Gates"]
+    },
+    {
+      "operationId": "change-campaign",
+      "minimumContext": ["Campaign Model", "Product Model", "CTA Model", "Eligible Clusters", "Validation Gates"]
+    },
+    {
+      "operationId": "expand-cluster",
+      "minimumContext": ["Strategy Cluster", "Cluster Blueprint", "Article Blueprint", "Calculator Blueprint", "Core Domain", "Validation Gates"]
+    }
+  ],
+  "notes": [
+    "Contexts describe what to read, not what to edit.",
+    "Future agents should expand context only when the manifest cannot answer the operation safely."
+  ]
+}

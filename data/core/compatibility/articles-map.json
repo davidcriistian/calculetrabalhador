@@ -1,0 +1,1524 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-articles-map",
+  "schema": null,
+  "description": "Mapa dos artigos atuais de data/articles.json e suas dependências prováveis.",
+  "items": [
+    {
+      "id": "saque-aniversario-fgts-2026",
+      "slug": "/blog/saque-aniversario-fgts-2026",
+      "title": "Saque-Aniversário FGTS 2026: Como Funciona, Quem Tem Direito e Como Calcular",
+      "category": "FGTS",
+      "cluster": "saque-aniversario-fgts",
+      "relatedTool": "/saque-aniversario-fgts/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "fgts"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-saque-aniversario-fgts",
+      "slug": "/blog/como-calcular-saque-aniversario-fgts",
+      "title": "Como Calcular o Saque-Aniversário do FGTS em 2026",
+      "category": "FGTS",
+      "cluster": "saque-aniversario-fgts",
+      "relatedTool": "/saque-aniversario-fgts/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "salario-liquido",
+        "rescisao",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "salario-liquido",
+        "rescisao",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quem-tem-direito-ao-saque-aniversario-fgts",
+      "slug": "/blog/quem-tem-direito-ao-saque-aniversario-fgts",
+      "title": "Quem Tem Direito ao Saque-Aniversário do FGTS em 2026?",
+      "category": "FGTS",
+      "cluster": "saque-aniversario-fgts",
+      "relatedTool": "/saque-aniversario-fgts/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "rescisao",
+        "salario-liquido",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "rescisao",
+        "salario-liquido",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "vantagens-e-desvantagens-saque-aniversario-fgts",
+      "slug": "/blog/vantagens-e-desvantagens-saque-aniversario-fgts",
+      "title": "Vantagens e Desvantagens do Saque-Aniversário FGTS",
+      "category": "FGTS",
+      "cluster": "saque-aniversario-fgts",
+      "relatedTool": "/saque-aniversario-fgts/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "rescisao",
+        "salario-liquido",
+        "ferias"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "rescisao",
+        "salario-liquido",
+        "ferias"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "voltar-saque-aniversario-para-saque-rescisao",
+      "slug": "/blog/voltar-saque-aniversario-para-saque-rescisao",
+      "title": "Posso Voltar do Saque-Aniversário para o Saque-Rescisão?",
+      "category": "FGTS",
+      "cluster": "saque-aniversario-fgts",
+      "relatedTool": "/saque-aniversario-fgts/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "rescisao",
+        "salario-liquido"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "rescisao",
+        "salario-liquido"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-aviso-previo",
+      "slug": "/blog/como-calcular-aviso-previo",
+      "title": "Como Calcular Aviso Prévio em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-aviso-previo",
+      "relatedTool": "calculadora-aviso-previo",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "aviso-previo-trabalhado-ou-indenizado",
+      "slug": "/blog/aviso-previo-trabalhado-ou-indenizado",
+      "title": "Aviso Prévio Trabalhado ou Indenizado: Qual a Diferença?",
+      "category": "Aviso Prévio",
+      "cluster": "calculadora-aviso-previo",
+      "relatedTool": "/calculadora-aviso-previo/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quantos-dias-de-aviso-previo-tenho-direito",
+      "slug": "/blog/quantos-dias-de-aviso-previo-tenho-direito",
+      "title": "Quantos Dias de Aviso Prévio Tenho Direito? Entenda a Regra Atual",
+      "category": "Aviso Prévio",
+      "cluster": "calculadora-aviso-previo",
+      "relatedTool": "/calculadora-aviso-previo/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-funciona-o-aviso-previo-proporcional",
+      "slug": "/blog/como-funciona-o-aviso-previo-proporcional",
+      "title": "Como Funciona o Aviso Prévio Proporcional? Entenda a Regra Atual",
+      "category": "Aviso Prévio",
+      "cluster": "calculadora-aviso-previo",
+      "relatedTool": "/calculadora-aviso-previo/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "posso-pedir-demissao-sem-cumprir-aviso-previo",
+      "slug": "/blog/posso-pedir-demissao-sem-cumprir-aviso-previo",
+      "title": "Posso Pedir Demissão Sem Cumprir Aviso Prévio? Entenda as Consequências",
+      "category": "Aviso Prévio",
+      "cluster": "calculadora-aviso-previo",
+      "relatedTool": "/calculadora-aviso-previo/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "aviso-previo",
+        "rescisao"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-funciona-adicional-noturno",
+      "slug": "/blog/como-funciona-adicional-noturno",
+      "title": "Como Funciona o Adicional Noturno em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-adicional-noturno",
+      "relatedTool": "calculadora-adicional-noturno",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "adicional-noturno"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-adicional-noturno",
+      "slug": "/blog/como-calcular-adicional-noturno",
+      "title": "Como Calcular Adicional Noturno: Passo a Passo Completo",
+      "category": "Adicional Noturno",
+      "cluster": "calculadora-adicional-noturno",
+      "relatedTool": "/calculadora-adicional-noturno/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "adicional-noturno",
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno",
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quem-tem-direito-ao-adicional-noturno",
+      "slug": "/blog/quem-tem-direito-ao-adicional-noturno",
+      "title": "Quem Tem Direito ao Adicional Noturno? Entenda as Regras",
+      "category": "Adicional Noturno",
+      "cluster": "calculadora-adicional-noturno",
+      "relatedTool": "/calculadora-adicional-noturno/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "adicional-noturno"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "adicional-noturno-valor-por-hora",
+      "slug": "/blog/adicional-noturno-valor-por-hora",
+      "title": "Adicional Noturno: Qual é o Valor por Hora e Como Calcular?",
+      "category": "Adicional Noturno",
+      "cluster": "calculadora-adicional-noturno",
+      "relatedTool": "/calculadora-adicional-noturno/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "adicional-noturno",
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno",
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "adicional-noturno-e-hora-reduzida",
+      "slug": "/blog/adicional-noturno-e-hora-reduzida",
+      "title": "Adicional Noturno e Hora Reduzida: Entenda Como Funciona",
+      "category": "Adicional Noturno",
+      "cluster": "calculadora-adicional-noturno",
+      "relatedTool": "/calculadora-adicional-noturno/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "adicional-noturno"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "adicional-noturno"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "insalubridade-quem-tem-direito",
+      "slug": "/blog/insalubridade-quem-tem-direito",
+      "title": "O que é Insalubridade e Quem Tem Direito em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-insalubridade",
+      "relatedTool": "calculadora-insalubridade",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-insalubridade",
+      "slug": "/blog/como-calcular-insalubridade",
+      "title": "Como Calcular Insalubridade em 2026: Guia Completo com Exemplos",
+      "category": "Insalubridade",
+      "cluster": "calculadora-insalubridade",
+      "relatedTool": "/calculadora-insalubridade/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "graus-de-insalubridade-10-20-40",
+      "slug": "/blog/graus-de-insalubridade-10-20-40",
+      "title": "Graus de Insalubridade: Entenda os Percentuais de 10%, 20% e 40%",
+      "category": "Insalubridade",
+      "cluster": "calculadora-insalubridade",
+      "relatedTool": "/calculadora-insalubridade/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "insalubridade-incide-sobre-qual-salario",
+      "slug": "/blog/insalubridade-incide-sobre-qual-salario",
+      "title": "Insalubridade Incide Sobre Qual Salario? Entenda a Base de Calculo",
+      "category": "Insalubridade",
+      "cluster": "calculadora-insalubridade",
+      "relatedTool": "/calculadora-insalubridade/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quais-profissoes-tem-direito-a-insalubridade",
+      "slug": "/blog/quais-profissoes-tem-direito-a-insalubridade",
+      "title": "Quais Profissoes Tem Direito a Insalubridade? Veja Exemplos",
+      "category": "Insalubridade",
+      "cluster": "calculadora-insalubridade",
+      "relatedTool": "/calculadora-insalubridade/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-ferias",
+      "slug": "/blog/como-calcular-ferias",
+      "title": "Como Calcular Férias CLT em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "calculadora-ferias-clt",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-ferias-passo-a-passo",
+      "slug": "/blog/como-calcular-ferias-passo-a-passo",
+      "title": "Como Calcular Férias Passo a Passo",
+      "category": "Férias CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "/calculadora-ferias-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quem-tem-direito-as-ferias-clt",
+      "slug": "/blog/quem-tem-direito-as-ferias-clt",
+      "title": "Quem Tem Direito às Férias CLT?",
+      "category": "Férias CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "/calculadora-ferias-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "ferias"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "ferias-vencidas-o-que-acontece",
+      "slug": "/blog/ferias-vencidas-o-que-acontece",
+      "title": "Férias Vencidas: O Que Acontece e Quais São os Seus Direitos?",
+      "category": "Férias CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "/calculadora-ferias-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "ferias"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "posso-vender-10-dias-de-ferias",
+      "slug": "/blog/posso-vender-10-dias-de-ferias",
+      "title": "Posso Vender 10 Dias de Férias? Entenda Como Funciona o Abono Pecuniário",
+      "category": "Férias CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "/calculadora-ferias-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "ferias"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-funciona-o-terco-constitucional-de-ferias",
+      "slug": "/blog/como-funciona-o-terco-constitucional-de-ferias",
+      "title": "Como Funciona o Terço Constitucional de Férias? Entenda o Cálculo",
+      "category": "Férias CLT",
+      "cluster": "calculadora-ferias-clt",
+      "relatedTool": "/calculadora-ferias-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "ferias"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "ferias"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-decimo-terceiro",
+      "slug": "/blog/como-calcular-decimo-terceiro",
+      "title": "Como Calcular o 13º Salário Proporcional em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "calculadora-13-salario",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-decimo-terceiro-passo-a-passo",
+      "slug": "/blog/como-calcular-decimo-terceiro-passo-a-passo",
+      "title": "Como Calcular o 13º Salário Passo a Passo em 2026",
+      "category": "13º Salário",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "/calculadora-13-salario/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quem-tem-direito-ao-decimo-terceiro",
+      "slug": "/blog/quem-tem-direito-ao-decimo-terceiro",
+      "title": "Quem Tem Direito ao 13º Salário? Entenda as Regras",
+      "category": "13º Salário",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "/calculadora-13-salario/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "primeira-e-segunda-parcela-do-decimo-terceiro",
+      "slug": "/blog/primeira-e-segunda-parcela-do-decimo-terceiro",
+      "title": "Primeira e Segunda Parcela do 13º Salário: Entenda as Diferenças",
+      "category": "13º Salário",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "/calculadora-13-salario/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "descontos-no-decimo-terceiro-salario",
+      "slug": "/blog/descontos-no-decimo-terceiro-salario/",
+      "title": "Descontos no 13º Salário: Entenda INSS, IRRF e Valor Líquido",
+      "category": "13º Salário",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "/calculadora-13-salario/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [
+        "inss",
+        "irrf"
+      ],
+      "relatedRules": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "decimo-terceiro-proporcional-como-funciona",
+      "slug": "/blog/decimo-terceiro-proporcional-como-funciona/",
+      "title": "13º Salário Proporcional: Como Funciona e Como Calcular",
+      "category": "13º Salário",
+      "cluster": "calculadora-13-salario",
+      "relatedTool": "/calculadora-13-salario/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-salario-liquido",
+      "slug": "/blog/como-calcular-salario-liquido",
+      "title": "Como Calcular o Salário Líquido Passo a Passo em 2026",
+      "category": "Salário Líquido",
+      "cluster": "salario-liquido-clt",
+      "relatedTool": "/salario-liquido-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "descontos-do-salario-clt",
+      "slug": "/blog/descontos-do-salario-clt",
+      "title": "Quais Descontos Podem Ser Feitos no Salário CLT?",
+      "category": "Salário Líquido",
+      "cluster": "salario-liquido-clt",
+      "relatedTool": "/salario-liquido-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "tabela-inss-atualizada",
+      "slug": "/blog/tabela-inss-atualizada",
+      "title": "Tabela INSS Atualizada: Como Funciona o Desconto em 2026",
+      "category": "Salário Líquido",
+      "cluster": "salario-liquido-clt",
+      "relatedTool": "/salario-liquido-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "inss"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-funciona-o-irrf-na-folha",
+      "slug": "/blog/como-funciona-o-irrf-na-folha",
+      "title": "Como Funciona o IRRF na Folha de Pagamento?",
+      "category": "Salário Líquido",
+      "cluster": "salario-liquido-clt",
+      "relatedTool": "/salario-liquido-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "irrf"
+      ],
+      "primaryCoreDomain": "irrf",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "irrf"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "salario-bruto-e-salario-liquido",
+      "slug": "/blog/salario-bruto-e-salario-liquido",
+      "title": "Salário Bruto e Salário Líquido: Entenda a Diferença",
+      "category": "Salário Líquido",
+      "cluster": "salario-liquido-clt",
+      "relatedTool": "/salario-liquido-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "comparison",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "seguro-desemprego-quem-tem-direito",
+      "slug": "/blog/seguro-desemprego-quem-tem-direito",
+      "title": "Quem Tem Direito ao Seguro-Desemprego em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-seguro-desemprego",
+      "relatedTool": "calculadora-seguro-desemprego",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "seguro-desemprego-quantas-parcelas-vou-receber",
+      "slug": "/blog/seguro-desemprego-quantas-parcelas-vou-receber",
+      "title": "Seguro-Desemprego: Quantas Parcelas Vou Receber?",
+      "category": "Seguro-Desemprego",
+      "cluster": "calculadora-seguro-desemprego",
+      "relatedTool": "/calculadora-seguro-desemprego/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quem-tem-direito-ao-seguro-desemprego",
+      "slug": "/blog/quem-tem-direito-ao-seguro-desemprego",
+      "title": "Quem Tem Direito ao Seguro-Desemprego?",
+      "category": "Seguro-Desemprego",
+      "cluster": "calculadora-seguro-desemprego",
+      "relatedTool": "/calculadora-seguro-desemprego/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "seguro-desemprego"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "seguro-desemprego"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-dar-entrada-no-seguro-desemprego",
+      "slug": "/blog/como-dar-entrada-no-seguro-desemprego",
+      "title": "Como Dar Entrada no Seguro-Desemprego Pela Internet",
+      "category": "Seguro-Desemprego",
+      "cluster": "calculadora-seguro-desemprego",
+      "relatedTool": "/calculadora-seguro-desemprego/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "seguro-desemprego"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "seguro-desemprego"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-seguro-desemprego",
+      "slug": "/blog/como-calcular-seguro-desemprego",
+      "title": "Como Calcular o Seguro-Desemprego em 2026",
+      "category": "Seguro-Desemprego",
+      "cluster": "calculadora-seguro-desemprego",
+      "relatedTool": "/calculadora-seguro-desemprego/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "primaryCoreDomain": "beneficios",
+      "secondaryCoreDomains": [
+        "shared"
+      ],
+      "relatedRules": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "rescisao-sem-justa-causa",
+      "slug": "/blog/rescisao-sem-justa-causa",
+      "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-rescisao-clt",
+      "relatedTool": "calculadora-rescisao-clt",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "pillar",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "verbas-rescisorias-o-que-receber-na-demissao",
+      "slug": "/blog/verbas-rescisorias-o-que-receber-na-demissao",
+      "title": "Verbas Rescisórias: O Que Você Tem Direito a Receber na Demissão",
+      "category": "Rescisão CLT",
+      "cluster": "calculadora-rescisao-clt",
+      "relatedTool": "/calculadora-rescisao-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "multa-de-40-do-fgts-como-calcular",
+      "slug": "/blog/multa-de-40-do-fgts-como-calcular",
+      "title": "Multa de 40% do FGTS: Como Funciona e Como Calcular",
+      "category": "Rescisão CLT",
+      "cluster": "calculadora-rescisao-clt",
+      "relatedTool": "/calculadora-rescisao-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "fgts"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-rescisao-clt",
+      "slug": "/blog/como-calcular-rescisao-clt",
+      "title": "Como Calcular Rescisao CLT: Passo a Passo Completo",
+      "category": "Rescisao CLT",
+      "cluster": "calculadora-rescisao-clt",
+      "relatedTool": "/calculadora-rescisao-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo",
+        "seguro-desemprego"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt",
+        "beneficios"
+      ],
+      "relatedRules": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo",
+        "seguro-desemprego"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "pedido-de-demissao-quais-direitos-recebo",
+      "slug": "/blog/pedido-de-demissao-quais-direitos-recebo",
+      "title": "Pedido de Demissao: Quais Direitos Recebo?",
+      "category": "Rescisao CLT",
+      "cluster": "calculadora-rescisao-clt",
+      "relatedTool": "/calculadora-rescisao-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "primaryCoreDomain": "fgts",
+      "secondaryCoreDomains": [
+        "clt"
+      ],
+      "relatedRules": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-horas-extras-passo-a-passo",
+      "slug": "/blog/como-calcular-horas-extras-passo-a-passo",
+      "title": "Como Calcular Horas Extras Passo a Passo em 2026",
+      "category": "Horas Extras",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "/calculadora-horas-extras-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "qual-o-valor-da-hora-extra",
+      "slug": "/blog/qual-o-valor-da-hora-extra",
+      "title": "Qual o Valor da Hora Extra? Aprenda a Calcular",
+      "category": "Horas Extras",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "/calculadora-horas-extras-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "hora-extra-50-e-100-diferenca",
+      "slug": "/blog/hora-extra-50-e-100-diferenca",
+      "title": "Hora Extra 50% e 100%: Entenda a Diferença",
+      "category": "Horas Extras",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "/calculadora-horas-extras-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "banco-de-horas-ou-hora-extra",
+      "slug": "/blog/banco-de-horas-ou-hora-extra",
+      "title": "Banco de Horas ou Hora Extra? Qual Vale Mais a Pena",
+      "category": "Horas Extras",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "/calculadora-horas-extras-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "comparison",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "limite-de-horas-extras-clt",
+      "slug": "/blog/limite-de-horas-extras-clt",
+      "title": "Qual é o Limite de Horas Extras Permitido pela CLT?",
+      "category": "Horas Extras",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "/calculadora-horas-extras-clt/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "hora-extra-ou-adicional-noturno",
+      "slug": "/blog/hora-extra-ou-adicional-noturno",
+      "title": "Diferença Entre Hora Extra e Adicional Noturno em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-horas-extras-clt",
+      "relatedTool": "calculadora-horas-extras-clt",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "horas-extras",
+        "adicional-noturno"
+      ],
+      "primaryCoreDomain": "clt",
+      "secondaryCoreDomains": [],
+      "relatedRules": [
+        "horas-extras",
+        "adicional-noturno"
+      ],
+      "migrationReadiness": "ready",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "comparison",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "clt-ou-pj",
+      "slug": "/blog/clt-ou-pj",
+      "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+      "category": "CLT",
+      "cluster": "calculadora-clt-ou-pj",
+      "relatedTool": "calculadora-clt-ou-pj",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "comparison",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+      "category": "CLT",
+      "cluster": "calculadora-clt-ou-pj",
+      "relatedTool": "/calculadora-clt-ou-pj/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "vantagens-e-desvantagens-clt-ou-pj",
+      "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+      "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+      "category": "CLT",
+      "cluster": "calculadora-clt-ou-pj",
+      "relatedTool": "/calculadora-clt-ou-pj/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "support",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "como-calcular-clt-ou-pj",
+      "slug": "/blog/como-calcular-clt-ou-pj",
+      "title": "Como Calcular CLT ou PJ: Entenda a Comparacao",
+      "category": "CLT",
+      "cluster": "calculadora-clt-ou-pj",
+      "relatedTool": "/calculadora-clt-ou-pj/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "guide",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    },
+    {
+      "id": "clt-ou-pj-vale-a-pena-em-2026",
+      "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+      "title": "CLT ou PJ Vale a Pena em 2026?",
+      "category": "CLT",
+      "cluster": "calculadora-clt-ou-pj",
+      "relatedTool": "/calculadora-clt-ou-pj/",
+      "currentSource": "data/articles.json",
+      "existingDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "primaryCoreDomain": "inss",
+      "secondaryCoreDomains": [
+        "irrf",
+        "fgts",
+        "clt"
+      ],
+      "relatedRules": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "migrationReadiness": "partial",
+      "migrationStatus": "future",
+      "coreStatus": "not-connected",
+      "contentType": "comparison",
+      "observations": "Mapeamento declarativo derivado de data/articles.json e data/maps/content-map.json; não altera publicação nem URL."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/conventions.schema.json",
+  "title": "Core Engine Conventions",
+  "allOf": [
+    { "$ref": "/data/core/schemas/shared-metadata.schema.json" },
+    {
+      "type": "object",
+      "required": ["conventions"],
+      "properties": {
+        "conventions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

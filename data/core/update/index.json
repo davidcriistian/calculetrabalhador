@@ -1,0 +1,45 @@
+{
+  "id": "update-engine-index",
+  "version": "2.6.0",
+  "schema": null,
+  "status": "draft",
+  "engineStatus": "declarative-only",
+  "coreStatus": "isolated",
+  "runtimeStatus": "not-connected",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Ponto de entrada declarativo da Update Engine para transformar mudancas registradas em planos futuros de atualizacao.",
+  "references": {
+    "updateTemplate": "/data/core/update/update-template.json",
+    "priorityLevels": "/data/core/update/priority-levels.json",
+    "updateStatus": "/data/core/update/update-status.json",
+    "impactScore": "/data/core/update/impact-score.json",
+    "planner": "/data/core/update/planner.json",
+    "dependenciesAnalyzer": "/data/core/update/dependencies-analyzer.json",
+    "updateChecklist": "/data/core/update/update-checklist.json",
+    "updateReportTemplate": "/data/core/update/update-report-template.json"
+  },
+  "upstreamEngines": {
+    "legislation": "/data/core/legislation/index.json",
+    "compatibility": "/data/core/compatibility/index.json",
+    "core": "/data/core/index.json"
+  },
+  "integrationBoundaries": {
+    "calculators": "not-connected",
+    "articles": "not-connected",
+    "seo": "not-connected",
+    "urls": "not-connected",
+    "runtime": "not-connected",
+    "rules": "read-only-reference",
+    "maps": "read-only-reference",
+    "brain": "read-only-reference",
+    "tables": "read-only-reference"
+  },
+  "notes": [
+    "Esta Engine cria planos de atualizacao, nao executa atualizacoes.",
+    "Nenhuma calculadora, artigo, regra, mapa, tabela ou arquivo de runtime deve consumir esta Engine nesta fase.",
+    "Planos futuros devem ser validados antes de qualquer execucao operacional."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/constitution/schemas/principle.schema.json",
+  "title": "Constitution Principle",
+  "allOf": [
+    { "$ref": "/data/constitution/schemas/constitution.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "statement", "level"],
+            "properties": {
+              "id": { "type": "string" },
+              "statement": { "type": "string" },
+              "level": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

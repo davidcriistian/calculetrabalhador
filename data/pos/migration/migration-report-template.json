@@ -1,0 +1,45 @@
+{
+  "id": "migration-report-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 2 - Migration Engine",
+  "description": "Template for future migration reports.",
+  "report": {
+    "migrationId": "example-migration-id",
+    "migrationType": "calculator-core-migration",
+    "assetId": "example-asset-id",
+    "status": "waiting-approval",
+    "summary": "Describe what was planned, changed or rejected.",
+    "filesReviewed": [],
+    "filesChanged": [],
+    "filesBlockedFromChange": [],
+    "preChecks": [],
+    "postChecks": [],
+    "validationResults": [],
+    "approvalGates": [],
+    "rollbackReadiness": {
+      "ready": false,
+      "rollbackReference": "/data/pos/migration/rollback-template.json"
+    },
+    "decision": {
+      "approved": false,
+      "approvedBy": null,
+      "approvedAt": null,
+      "rejectedBy": null,
+      "rejectedAt": null,
+      "reason": null
+    },
+    "creditEfficiencyNotes": [
+      "Reuse the standard checklist instead of re-discovering migration requirements.",
+      "Record evidence once and reference it across gates."
+    ]
+  },
+  "notes": [
+    "Reports created from this template must document evidence and decision outcome."
+  ]
+}

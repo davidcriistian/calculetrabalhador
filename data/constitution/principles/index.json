@@ -1,0 +1,33 @@
+{
+  "id": "constitution-principles",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/principle.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Permanent principles of the platform.",
+  "items": [
+    { "id": "core-is-knowledge-source", "statement": "Core is the only source of legal and labor knowledge.", "level": "permanent" },
+    { "id": "pos-is-operational-layer", "statement": "POS is the only operational governance layer.", "level": "permanent" },
+    { "id": "blueprint-builds-assets", "statement": "Blueprint System only defines how assets are built.", "level": "permanent" },
+    { "id": "configuration-over-code", "statement": "Configuration must be preferred over code for recurring behavior.", "level": "permanent" },
+    { "id": "single-source-of-truth", "statement": "Every fact and decision must have a single source of truth.", "level": "permanent" },
+    { "id": "low-coupling", "statement": "Layers must remain loosely coupled.", "level": "permanent" },
+    { "id": "high-cohesion", "statement": "Each layer must own a coherent responsibility.", "level": "permanent" },
+    { "id": "scalability", "statement": "Architecture must support large asset growth without redesign.", "level": "permanent" },
+    { "id": "repeatability", "statement": "Repeated work must become a repeatable protocol.", "level": "permanent" },
+    { "id": "security", "statement": "Protected runtime and production boundaries must remain explicit.", "level": "permanent" },
+    { "id": "testing-required", "statement": "Every future change must pass Testing.", "level": "permanent" },
+    { "id": "validation-required", "statement": "Every future change must pass Validation.", "level": "permanent" },
+    { "id": "rollback-required", "statement": "Rollback must be available before operational change.", "level": "permanent" },
+    { "id": "no-legal-rule-in-blueprint", "statement": "No legal rule belongs to Blueprint System.", "level": "permanent" },
+    { "id": "no-operational-rule-in-core", "statement": "No operational rule belongs to Core.", "level": "permanent" },
+    { "id": "operations-respect-constitution", "statement": "Every operational decision must respect the Constitution.", "level": "permanent" }
+  ],
+  "notes": [
+    "Principles are stable and should change only through explicit governance."
+  ]
+}

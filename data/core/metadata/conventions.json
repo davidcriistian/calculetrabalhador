@@ -1,0 +1,24 @@
+{
+  "id": "core-conventions",
+  "version": "1.1.0",
+  "schema": "/data/core/schemas/conventions.schema.json",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Core Engine Phase 1.1",
+  "notes": [
+    "Conventions are internal Core rules. They do not affect current site behavior."
+  ],
+  "conventions": {
+    "directories": "Use lowercase kebab-case for directory names.",
+    "files": "Use lowercase kebab-case for named JSON files and index.json for collection entry points.",
+    "ids": "Use stable lowercase kebab-case identifiers. Never reuse an id for a different meaning.",
+    "slugs": "Use public URL-compatible lowercase kebab-case slugs without accents.",
+    "versions": "Use semantic versions for contracts and schemas. Use explicit year fields for legal annual tables.",
+    "dates": "Use ISO 8601 date strings in YYYY-MM-DD format for Core metadata.",
+    "owners": "Use an accountable owner string such as Calcule Trabalhador or a future team name.",
+    "status": "Use only lifecycle states declared in /data/core/lifecycle/index.json unless a schema explicitly allows another controlled status.",
+    "json": "Use valid JSON only, with explicit arrays for list-like fields and no comments."
+  }
+}

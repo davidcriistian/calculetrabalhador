@@ -1,0 +1,50 @@
+{
+  "id": "pos-versioning-index",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Versioning control for the Project Operating System foundation.",
+  "currentPosVersion": "0.3.5",
+  "phaseVersionTemplate": {
+    "phase": "example-phase",
+    "version": "example-version",
+    "date": "YYYY-MM-DD",
+    "owner": "Calcule Trabalhador",
+    "changes": [],
+    "status": "foundation",
+    "notes": []
+  },
+  "compatibility": {
+    "registryEntryPoint": "/data/pos/registry/index.json",
+    "migrationStatus": "not-started",
+    "runtimeConsumesPos": false,
+    "calculatorsConsumePos": false,
+    "articlesConsumePos": false,
+    "seoConsumesPos": false,
+    "sitemapConsumesPos": false
+  },
+  "items": [
+    {
+      "phase": "Phase 1 - Registry Engine",
+      "id": "pos-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Initial declarative POS Registry Engine foundation."
+      ],
+      "notes": []
+    }
+  ],
+  "notes": [
+    "Versioning describes POS foundation and governance evolution only.",
+    "Every future POS phase should be recorded using phase, version, date, owner, changes, status and notes.",
+    "It does not apply migrations or change production files."
+  ]
+}

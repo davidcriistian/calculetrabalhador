@@ -1,0 +1,26 @@
+{
+  "id": "strategy-history",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "History for Strategy Layer changes.",
+  "items": [
+    {
+      "id": "strategy-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": ["Created Strategy Layer foundation."],
+      "notes": []
+    }
+  ],
+  "notes": [
+    "Strategy history should track continuous strategy evolution."
+  ]
+}

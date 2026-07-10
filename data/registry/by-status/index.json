@@ -1,0 +1,17 @@
+{
+  "id": "registry-partition-by-status",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-partition.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "partition": "by-status",
+  "description": "Partition prepared to discover assets by lifecycle status.",
+  "supportedStatuses": ["draft", "planned", "in-review", "approved", "published", "deprecated", "archived"],
+  "entries": [],
+  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "notes": ["Status partitions do not replace approval or publishing workflows."]
+}

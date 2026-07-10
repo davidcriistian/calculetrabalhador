@@ -1,0 +1,87 @@
+{
+  "id": "operational-manifest-dependencies",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/dependency-map.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Logical dependency map between future operations and platform components.",
+  "dependencies": [
+    {
+      "operationId": "create-calculator",
+      "requires": ["Constitution", "Strategy Cluster", "Core Domain", "Calculator Blueprint", "Operation Playbook", "Testing Engine", "Validation Engine"]
+    },
+    {
+      "operationId": "create-cluster",
+      "requires": ["Constitution", "Strategy Nucleus", "Cluster Blueprint", "Operation Playbook", "Validation Engine"]
+    },
+    {
+      "operationId": "create-article",
+      "requires": ["Constitution", "Strategy Cluster", "Core Domain", "Article Blueprint", "Operation Playbook", "Validation Engine"]
+    },
+    {
+      "operationId": "update-calculator",
+      "requires": ["Target Asset", "Core Domain", "Testing Engine", "Validation Engine", "Rollback Model"]
+    },
+    {
+      "operationId": "update-article",
+      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Validation Engine", "Publishing Model"]
+    },
+    {
+      "operationId": "update-law",
+      "requires": ["Legal Source", "Core Domain", "Affected Asset Map", "Testing Engine", "Validation Engine"]
+    },
+    {
+      "operationId": "update-table",
+      "requires": ["Official Table Source", "Core Table", "Affected Asset Map", "Testing Engine", "Validation Engine"]
+    },
+    {
+      "operationId": "validate-calculator",
+      "requires": ["Target Asset", "Core Domain", "Testing Engine", "Validation Engine", "Shadow Baseline"]
+    },
+    {
+      "operationId": "validate-article",
+      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Validation Engine"]
+    },
+    {
+      "operationId": "publish",
+      "requires": ["Testing Pass", "Validation Pass", "Manual Approval", "Rollback Ready", "Publishing Model"]
+    },
+    {
+      "operationId": "rollback",
+      "requires": ["Previous State", "Operation Report", "Rollback Model", "Testing Engine", "Validation Engine"]
+    },
+    {
+      "operationId": "migrate-calculator",
+      "requires": ["Migration Engine", "Target Calculator", "Baseline", "Testing Engine", "Validation Engine", "Rollback Ready"]
+    },
+    {
+      "operationId": "migrate-article",
+      "requires": ["Migration Engine", "Target Article", "SEO Baseline", "Validation Engine", "Rollback Ready"]
+    },
+    {
+      "operationId": "change-product",
+      "requires": ["Product Model", "Offer Placement Model", "Strategy Cluster", "Validation Engine"]
+    },
+    {
+      "operationId": "change-cta",
+      "requires": ["CTA Model", "Offer Slot", "Eligible Contexts", "Validation Engine"]
+    },
+    {
+      "operationId": "change-campaign",
+      "requires": ["Campaign Model", "Product Model", "CTA Model", "Eligible Clusters", "Validation Engine"]
+    },
+    {
+      "operationId": "expand-cluster",
+      "requires": ["Strategy Cluster", "Cluster Blueprint", "Article Blueprint", "Calculator Blueprint", "Validation Engine"]
+    }
+  ],
+  "dependencyPrinciples": [
+    "A manifest may require a logical component without listing every physical file.",
+    "Testing and Validation are gates, not implementation engines in this layer.",
+    "Publishing and Offers are referenced as future logical models only."
+  ]
+}

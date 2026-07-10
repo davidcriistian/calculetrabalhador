@@ -1,0 +1,50 @@
+{
+  "id": "legislation-event-types",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Catalogo declarativo de eventos que podem iniciar uma analise legislativa.",
+  "items": [
+    {
+      "id": "law-published",
+      "label": "Lei publicada",
+      "description": "Publicacao de nova lei ou alteracao legal."
+    },
+    {
+      "id": "law-revoked",
+      "label": "Lei revogada",
+      "description": "Revogacao total ou parcial de norma relevante."
+    },
+    {
+      "id": "table-updated",
+      "label": "Tabela atualizada",
+      "description": "Atualizacao oficial de tabela, faixa, valor, teto, piso ou referencia."
+    },
+    {
+      "id": "rule-created",
+      "label": "Regra criada",
+      "description": "Nova regra de calculo, elegibilidade, excecao ou interpretacao."
+    },
+    {
+      "id": "rule-removed",
+      "label": "Regra removida",
+      "description": "Remocao ou encerramento de regra existente."
+    },
+    {
+      "id": "validity-changed",
+      "label": "Mudanca de vigencia",
+      "description": "Alteracao de data de inicio, fim, prorrogacao, retroatividade ou transicao."
+    },
+    {
+      "id": "interpretation-changed",
+      "label": "Mudanca de interpretacao",
+      "description": "Nova orientacao oficial, jurisprudencial ou administrativa que muda a leitura da regra."
+    }
+  ],
+  "notes": [
+    "Eventos iniciam analise. Eles nao alteram dados de producao automaticamente."
+  ]
+}

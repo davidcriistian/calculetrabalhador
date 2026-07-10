@@ -1,0 +1,63 @@
+{
+  "id": "update-planner",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Fluxo oficial declarativo para transformar mudanca legislativa em plano de atualizacao.",
+  "steps": [
+    {
+      "id": "legislative-change",
+      "label": "Mudanca legislativa",
+      "input": "/data/core/legislation/change-template.json",
+      "output": "mudanca identificada"
+    },
+    {
+      "id": "analysis",
+      "label": "Analise",
+      "input": [
+        "/data/core/legislation/impact-matrix.json",
+        "/data/core/compatibility/index.json"
+      ],
+      "output": "itens afetados e impacto estimado"
+    },
+    {
+      "id": "update-plan",
+      "label": "Plano de atualizacao",
+      "input": "/data/core/update/update-template.json",
+      "output": "plano declarativo estruturado"
+    },
+    {
+      "id": "validation",
+      "label": "Validacao",
+      "input": [
+        "/data/core/update/update-checklist.json",
+        "/data/core/update/impact-score.json"
+      ],
+      "output": "plano validado ou pendente"
+    },
+    {
+      "id": "future-execution",
+      "label": "Execucao futura",
+      "input": "plano aprovado",
+      "output": "fase futura especifica, fora do escopo atual"
+    },
+    {
+      "id": "completion",
+      "label": "Conclusao",
+      "input": "execucao futura validada",
+      "output": "relatorio de atualizacao futura"
+    }
+  ],
+  "guards": [
+    "Nao executar alteracoes nesta fase.",
+    "Nao modificar runtime nesta fase.",
+    "Nao alterar calculadoras ou artigos nesta fase.",
+    "Nao atualizar rules, maps, brain ou tabelas existentes nesta fase."
+  ],
+  "notes": [
+    "O planner descreve governanca futura e nao e um runner."
+  ]
+}

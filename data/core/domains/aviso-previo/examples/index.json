@@ -1,0 +1,153 @@
+{
+  "id": "aviso-previo-examples",
+  "version": "0.2.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "domainId": "aviso-previo",
+  "calculationFormula": {
+    "fullYears": "complete anniversaries between startDate and endDate",
+    "baseDays": 30,
+    "rawAdditionalDays": "fullYears * 3",
+    "totalDays": "min(90, baseDays + rawAdditionalDays)",
+    "additionalDays": "totalDays - baseDays",
+    "dailyValue": "salary / 30",
+    "estimatedValue": "totalDays * dailyValue"
+  },
+  "items": [
+    {
+      "id": "case-001-menos-um-ano",
+      "type": "normal",
+      "input": { "salary": 3000, "startDate": "2025-01-01", "endDate": "2025-12-31", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "11 meses, 30 dias", "fullYears": 0, "baseDays": 30, "rawAdditionalDays": 0, "additionalDays": 0, "totalDays": 30, "dailyValue": 100, "estimatedValue": 3000 }
+    },
+    {
+      "id": "case-002-um-ano-exato",
+      "type": "normal",
+      "input": { "salary": 3000, "startDate": "2024-01-01", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "1 ano", "fullYears": 1, "baseDays": 30, "rawAdditionalDays": 3, "additionalDays": 3, "totalDays": 33, "dailyValue": 100, "estimatedValue": 3300 }
+    },
+    {
+      "id": "case-003-antes-aniversario",
+      "type": "boundary",
+      "input": { "salary": 3000, "startDate": "2024-01-02", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "11 meses, 30 dias", "fullYears": 0, "baseDays": 30, "rawAdditionalDays": 0, "additionalDays": 0, "totalDays": 30, "dailyValue": 100, "estimatedValue": 3000 }
+    },
+    {
+      "id": "case-004-dois-anos-trabalhado",
+      "type": "normal",
+      "input": { "salary": 2400, "startDate": "2023-06-15", "endDate": "2025-06-15", "noticeType": "trabalhado" },
+      "expected": { "valid": true, "companyTime": "2 anos", "fullYears": 2, "baseDays": 30, "rawAdditionalDays": 6, "additionalDays": 6, "totalDays": 36, "dailyValue": 80, "estimatedValue": 2880 }
+    },
+    {
+      "id": "case-005-cinco-anos",
+      "type": "normal",
+      "input": { "salary": 5000, "startDate": "2020-03-10", "endDate": "2025-03-10", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "5 anos", "fullYears": 5, "baseDays": 30, "rawAdditionalDays": 15, "additionalDays": 15, "totalDays": 45, "dailyValue": 166.6666666667, "estimatedValue": 7500 }
+    },
+    {
+      "id": "case-006-dez-anos-desconto",
+      "type": "normal",
+      "input": { "salary": 6000, "startDate": "2015-07-09", "endDate": "2025-07-09", "noticeType": "desconto" },
+      "expected": { "valid": true, "companyTime": "10 anos", "fullYears": 10, "baseDays": 30, "rawAdditionalDays": 30, "additionalDays": 30, "totalDays": 60, "dailyValue": 200, "estimatedValue": 12000 }
+    },
+    {
+      "id": "case-007-vinte-anos-limite",
+      "type": "extreme",
+      "input": { "salary": 9000, "startDate": "2005-07-09", "endDate": "2025-07-09", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "20 anos", "fullYears": 20, "baseDays": 30, "rawAdditionalDays": 60, "additionalDays": 60, "totalDays": 90, "dailyValue": 300, "estimatedValue": 27000 }
+    },
+    {
+      "id": "case-008-vinte-cinco-anos-limite",
+      "type": "extreme",
+      "input": { "salary": 12000, "startDate": "2000-01-01", "endDate": "2025-01-01", "noticeType": "trabalhado" },
+      "expected": { "valid": true, "companyTime": "25 anos", "fullYears": 25, "baseDays": 30, "rawAdditionalDays": 75, "additionalDays": 60, "totalDays": 90, "dailyValue": 400, "estimatedValue": 36000 }
+    },
+    {
+      "id": "case-009-trinta-anos-limite-desconto",
+      "type": "extreme",
+      "input": { "salary": 15000, "startDate": "1995-01-01", "endDate": "2025-01-01", "noticeType": "desconto" },
+      "expected": { "valid": true, "companyTime": "30 anos", "fullYears": 30, "baseDays": 30, "rawAdditionalDays": 90, "additionalDays": 60, "totalDays": 90, "dailyValue": 500, "estimatedValue": 45000 }
+    },
+    {
+      "id": "case-010-salario-decimal",
+      "type": "normal",
+      "input": { "salary": 3210.55, "startDate": "2021-05-20", "endDate": "2024-05-20", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "3 anos", "fullYears": 3, "baseDays": 30, "rawAdditionalDays": 9, "additionalDays": 9, "totalDays": 39, "dailyValue": 107.0183333333, "estimatedValue": 4173.715 }
+    },
+    {
+      "id": "case-011-mes-dia-quebra",
+      "type": "boundary",
+      "input": { "salary": 2200, "startDate": "2020-12-31", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "4 anos, 1 dia", "fullYears": 4, "baseDays": 30, "rawAdditionalDays": 12, "additionalDays": 12, "totalDays": 42, "dailyValue": 73.3333333333, "estimatedValue": 3080 }
+    },
+    {
+      "id": "case-012-mesmo-dia",
+      "type": "boundary",
+      "input": { "salary": 2200, "startDate": "2025-01-01", "endDate": "2025-01-01", "noticeType": "trabalhado" },
+      "expected": { "valid": true, "companyTime": "0 dias", "fullYears": 0, "baseDays": 30, "rawAdditionalDays": 0, "additionalDays": 0, "totalDays": 30, "dailyValue": 73.3333333333, "estimatedValue": 2200 }
+    },
+    {
+      "id": "case-013-ano-bissexto-antes-aniversario",
+      "type": "boundary",
+      "input": { "salary": 2800, "startDate": "2020-02-29", "endDate": "2024-02-28", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "3 anos, 11 meses, 30 dias", "fullYears": 3, "baseDays": 30, "rawAdditionalDays": 9, "additionalDays": 9, "totalDays": 39, "dailyValue": 93.3333333333, "estimatedValue": 3640 }
+    },
+    {
+      "id": "case-014-ano-bissexto-completo",
+      "type": "boundary",
+      "input": { "salary": 2800, "startDate": "2020-02-29", "endDate": "2024-02-29", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "4 anos", "fullYears": 4, "baseDays": 30, "rawAdditionalDays": 12, "additionalDays": 12, "totalDays": 42, "dailyValue": 93.3333333333, "estimatedValue": 3920 }
+    },
+    {
+      "id": "case-015-salario-baixo",
+      "type": "extreme",
+      "input": { "salary": 1, "startDate": "2020-01-01", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": true, "companyTime": "5 anos", "fullYears": 5, "baseDays": 30, "rawAdditionalDays": 15, "additionalDays": 15, "totalDays": 45, "dailyValue": 0.0333333333, "estimatedValue": 1.5 }
+    },
+    {
+      "id": "case-016-salario-zero",
+      "type": "invalid",
+      "input": { "salary": 0, "startDate": "2020-01-01", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-017-salario-negativo",
+      "type": "invalid",
+      "input": { "salary": -1000, "startDate": "2020-01-01", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-018-data-inicial-ausente",
+      "type": "invalid",
+      "input": { "salary": 3000, "startDate": "", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-019-data-final-antes-inicial",
+      "type": "invalid",
+      "input": { "salary": 3000, "startDate": "2025-01-02", "endDate": "2025-01-01", "noticeType": "indenizado" },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    },
+    {
+      "id": "case-020-data-final-ausente",
+      "type": "invalid",
+      "input": { "salary": 3000, "startDate": "2025-01-01", "endDate": "", "noticeType": "desconto" },
+      "expected": { "valid": false, "resultStatus": "Dados incompletos" }
+    }
+  ],
+  "coverage": {
+    "totalScenarios": 20,
+    "normal": 6,
+    "extreme": 4,
+    "boundary": 5,
+    "invalid": 5,
+    "noticeTypes": ["indenizado", "trabalhado", "desconto"]
+  },
+  "notes": [
+    "Cenarios calculados com a formula atual publicada.",
+    "Valores monetarios usam aritmetica JavaScript e formatacao Intl.NumberFormat apenas na exibicao."
+  ]
+}

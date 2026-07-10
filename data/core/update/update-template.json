@@ -1,0 +1,80 @@
+{
+  "id": "update-template",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Modelo oficial para registrar um plano futuro de atualizacao.",
+  "template": {
+    "id": "update-[domain]-[yyyy]-[slug]",
+    "title": "",
+    "description": "",
+    "sourceChange": {
+      "id": "",
+      "type": "legislation-change",
+      "path": "/data/core/legislation/change-template.json"
+    },
+    "domain": "",
+    "priority": "none",
+    "status": "draft",
+    "createdAt": "",
+    "updatedAt": "",
+    "owner": "Calcule Trabalhador",
+    "affectedRules": [],
+    "affectedTables": [],
+    "affectedCalculators": [],
+    "affectedArticles": [],
+    "affectedOffers": [],
+    "affectedBlueprints": [],
+    "estimatedImpact": {
+      "level": "none",
+      "score": 0,
+      "criteria": []
+    },
+    "estimatedComplexity": {
+      "level": "unknown",
+      "drivers": []
+    },
+    "estimatedTime": {
+      "value": null,
+      "unit": "hours",
+      "confidence": "unknown"
+    },
+    "validation": {
+      "legislationReviewed": false,
+      "compatibilityReviewed": false,
+      "runtimeComparisonRequired": false,
+      "numericEquivalenceRequired": false,
+      "contentReviewRequired": false
+    },
+    "notes": []
+  },
+  "requiredFields": [
+    "id",
+    "title",
+    "description",
+    "sourceChange",
+    "domain",
+    "priority",
+    "status",
+    "createdAt",
+    "updatedAt",
+    "owner",
+    "affectedRules",
+    "affectedTables",
+    "affectedCalculators",
+    "affectedArticles",
+    "affectedOffers",
+    "affectedBlueprints",
+    "estimatedImpact",
+    "estimatedComplexity",
+    "estimatedTime",
+    "notes"
+  ],
+  "notes": [
+    "Este arquivo e modelo, nao representa atualizacao real.",
+    "Toda atualizacao futura deve apontar para uma mudanca de origem e preservar status declarativo ate validacao."
+  ]
+}

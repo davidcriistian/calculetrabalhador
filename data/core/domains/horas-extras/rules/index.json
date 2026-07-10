@@ -1,0 +1,104 @@
+{
+  "id": "horas-extras-rules",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "schema": "/data/core/schemas/rule.schema.json",
+  "compatibilityTarget": "/data/rules/horas-extras.json",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "calculo-horas-extras-atual",
+      "status": "homologation",
+      "ruleType": "calculation-equivalence",
+      "description": "Representa exatamente a formula atual da Calculadora de Horas Extras publicada.",
+      "inputs": [
+        { "id": "salarioBruto", "label": "Salario mensal bruto", "type": "number", "validation": "required; greater-than-zero" },
+        { "id": "jornadaTipo", "label": "Jornada semanal", "type": "enum", "values": ["44", "40", "custom"], "validation": "required" },
+        { "id": "jornadaCustom", "label": "Jornada semanal personalizada", "type": "number", "validation": "required-greater-than-zero-when-jornadaTipo-custom" },
+        { "id": "horas50", "label": "Horas extras 50%", "type": "number", "validation": "zero-or-greater" },
+        { "id": "horas100", "label": "Horas extras 100%", "type": "number", "validation": "zero-or-greater" }
+      ],
+      "outputs": [
+        "divisor",
+        "valorHoraNormal",
+        "valorHoraExtra50",
+        "valorHoraExtra100",
+        "subtotal50",
+        "subtotal100",
+        "totalHoras",
+        "totalReceber",
+        "jornadaExibicao"
+      ],
+      "constants": {
+        "percentualDiaUtil": 0.5,
+        "percentualDomingoFeriado": 1,
+        "divisorJornada44": 220,
+        "divisorJornada40": 200,
+        "semanasPorMesCustom": 4.33,
+        "fatorAjusteCustom": 1.2
+      },
+      "formulas": {
+        "divisor44": "220",
+        "divisor40": "200",
+        "divisorCustom": "jornadaCustom * 4.33 * 1.2",
+        "valorHoraNormal": "salarioBruto / divisor",
+        "valorHoraExtra50": "valorHoraNormal * 1.5",
+        "valorHoraExtra100": "valorHoraNormal * 2",
+        "subtotal50": "horas50 * valorHoraExtra50",
+        "subtotal100": "horas100 * valorHoraExtra100",
+        "totalHoras": "horas50 + horas100",
+        "totalReceber": "subtotal50 + subtotal100"
+      },
+      "validationBehavior": {
+        "invalidWhen": [
+          "salarioBruto is missing or <= 0",
+          "jornadaTipo is custom and jornadaCustom is missing or <= 0",
+          "horas50 < 0",
+          "horas100 < 0"
+        ],
+        "invalidResultStatus": "calculation-not-executed",
+        "invalidMessages": {
+          "salarioBruto": "Informe um salario mensal bruto valido.",
+          "jornadaCustom": "Informe uma jornada semanal personalizada valida.",
+          "horasNegativas": "As quantidades de horas extras nao podem ser negativas."
+        }
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "equivalenceTolerance": 0.01,
+        "displayCurrency": "Intl.NumberFormat pt-BR BRL",
+        "displayNumber": "toFixed(2).replace('.', ',') for hours and divisors in visible text"
+      },
+      "helperBehavior": {
+        "centralHelper": "calcularHoraExtra",
+        "helperFile": "/assets/js/tabelas-trabalhistas.js",
+        "useCondition": "A pagina usa o helper centralizado apenas quando totalReceber, valorHoraExtra50 e valorHoraExtra100 sao numericamente iguais a formula local dentro de tolerancia 0.01.",
+        "fallback": "Se houver divergencia ou erro, a pagina preserva os resultados calculados localmente."
+      },
+      "notApplied": [
+        "adicional noturno",
+        "DSR sobre horas extras",
+        "reflexos em ferias",
+        "reflexos em decimo terceiro",
+        "FGTS",
+        "INSS",
+        "IRRF",
+        "banco de horas",
+        "convencao coletiva",
+        "calendario real de domingos e feriados"
+      ],
+      "notes": [
+        "A calculadora atual possui apenas campos separados para horas 50% e horas 100%; nao ha percentual livre informado pelo usuario.",
+        "Campos numericos vazios sao tratados como zero pela leitura via parseFloat(value || '0'), exceto salario e jornada custom quando exigidos pela validacao."
+      ]
+    }
+  ],
+  "notes": [
+    "Rules de homologacao sem conexao operacional."
+  ]
+}

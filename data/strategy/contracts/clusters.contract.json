@@ -1,0 +1,18 @@
+{
+  "id": "strategy-contract-clusters",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "name": "Clusters Strategy Contract",
+  "objective": "Define clusters as the primary editorial unit.",
+  "expectedInputs": ["nucleus", "objective", "search intent", "assets"],
+  "expectedOutputs": ["cluster model", "publishing order", "link strategy"],
+  "dependencies": ["/data/strategy/clusters/index.json"],
+  "nonResponsibilities": ["create articles", "create calculators"],
+  "notes": ["Every future article and calculator must belong to a cluster."]
+}

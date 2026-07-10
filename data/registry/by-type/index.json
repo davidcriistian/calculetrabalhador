@@ -1,0 +1,17 @@
+{
+  "id": "registry-partition-by-type",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-partition.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "partition": "by-type",
+  "description": "Partition prepared to discover assets by type.",
+  "supportedTypes": ["calculator", "article", "cluster", "product", "campaign", "blueprint", "engine", "domain", "nucleus"],
+  "entries": [],
+  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
+  "notes": ["This partition is empty and does not duplicate assets."]
+}

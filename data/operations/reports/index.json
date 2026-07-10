@@ -1,0 +1,30 @@
+{
+  "id": "operation-reports",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/report.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Report models for future operations.",
+  "reportTemplate": {
+    "reportId": "example-operation-report",
+    "operationId": null,
+    "result": "planned",
+    "time": "not-estimated",
+    "estimatedCredits": 0,
+    "affectedFiles": [],
+    "validations": [],
+    "approval": {
+      "required": true,
+      "approved": false,
+      "approvedBy": null
+    },
+    "notes": []
+  },
+  "notes": [
+    "Reports document outcomes and do not execute operations."
+  ]
+}

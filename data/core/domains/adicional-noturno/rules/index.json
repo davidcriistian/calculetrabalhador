@@ -1,0 +1,92 @@
+{
+  "id": "adicional-noturno-rules",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "schema": "/data/core/schemas/rule.schema.json",
+  "compatibilityTarget": "/data/rules/adicional-noturno.json",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "calculo-adicional-noturno-atual",
+      "status": "homologation",
+      "ruleType": "calculation-equivalence",
+      "description": "Representa exatamente a formula atual da Calculadora de Adicional Noturno publicada.",
+      "inputs": [
+        {
+          "id": "salary",
+          "label": "Salario mensal",
+          "type": "number",
+          "validation": "required; greater-than-zero"
+        },
+        {
+          "id": "monthlyHours",
+          "label": "Jornada mensal",
+          "type": "number",
+          "default": 220,
+          "validation": "required; greater-than-zero"
+        },
+        {
+          "id": "nightHours",
+          "label": "Horas noturnas",
+          "type": "number",
+          "validation": "required; greater-than-or-equal-zero"
+        },
+        {
+          "id": "percent",
+          "label": "Percentual de adicional",
+          "type": "number",
+          "default": 20,
+          "validation": "required; greater-than-zero"
+        }
+      ],
+      "outputs": [
+        "normalHourValue",
+        "percent",
+        "additionalPerHour",
+        "nightHours",
+        "totalValue"
+      ],
+      "formulas": {
+        "normalHourValue": "salary / monthlyHours",
+        "percentDecimal": "percent / 100",
+        "additionalPerHour": "normalHourValue * percentDecimal",
+        "totalValue": "additionalPerHour * nightHours"
+      },
+      "validationBehavior": {
+        "invalidWhen": [
+          "salary is missing or <= 0",
+          "monthlyHours is missing or <= 0",
+          "nightHours is not finite or < 0",
+          "percent is missing or <= 0"
+        ],
+        "invalidResultStatus": "Dados incompletos",
+        "invalidMessage": "Informe salario maior que zero, jornada mensal maior que zero, horas noturnas validas e percentual positivo."
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "displayCurrency": "Intl.NumberFormat pt-BR BRL",
+        "displayPercent": "two decimal places",
+        "displayHours": "two decimal places"
+      },
+      "notApplied": [
+        "automatic conversion of 60-minute clock hours to 52m30s reduced night hours",
+        "overtime night calculation",
+        "INSS",
+        "IRRF",
+        "reflexes in vacation, 13th salary or termination"
+      ],
+      "notes": [
+        "A pagina tenta comparar com o helper centralizado e mantem fallback legado se houver divergencia.",
+        "Esta regra representa o comportamento aprovado da pagina atual, nao uma interpretacao juridica completa."
+      ]
+    }
+  ],
+  "notes": [
+    "Rules de homologacao sem conexao operacional."
+  ]
+}

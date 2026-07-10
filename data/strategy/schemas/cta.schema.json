@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/cta.schema.json",
+  "title": "Strategy CTA",
+  "type": "object",
+  "properties": {
+    "ctaId": { "type": "string" },
+    "type": { "type": "string" },
+    "priority": { "type": "string" },
+    "position": { "type": "string" },
+    "productId": { "type": ["string", "null"] },
+    "clusterId": { "type": ["string", "null"] },
+    "status": { "type": "string" }
+  }
+}

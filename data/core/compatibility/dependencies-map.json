@@ -1,0 +1,361 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-dependencies-map",
+  "schema": null,
+  "description": "Mapa entre brain/maps atuais e domínios do Core.",
+  "sources": [
+    {
+      "file": "data/brain/dependencies.json",
+      "status": "current-map",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "items": 16,
+      "version": 1
+    },
+    {
+      "file": "data/maps/update-map.json",
+      "status": "current-map",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "items": 16,
+      "version": 1
+    },
+    {
+      "file": "data/maps/content-map.json",
+      "status": "current-map",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "items": 58,
+      "version": 1
+    },
+    {
+      "file": "data/maps/tools-map.json",
+      "status": "current-map",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future",
+      "items": 18,
+      "version": 1
+    }
+  ],
+  "items": [
+    {
+      "ruleId": "inss",
+      "currentSources": [
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj",
+        "calculadora-inss",
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei",
+        "calculadora-das-mei-2026"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "high",
+      "probableCoreDomain": "inss",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "irrf",
+      "currentSources": [],
+      "tools": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "salario-liquido-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "high",
+      "probableCoreDomain": "irrf",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "salario-minimo",
+      "currentSources": [
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-seguro-desemprego",
+        "calculadora-insalubridade",
+        "calculadora-inss",
+        "calculadora-inss-autonomo",
+        "calculadora-inss-mei",
+        "calculadora-das-mei-2026"
+      ],
+      "clusters": [
+        "calculadora-insalubridade",
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedArticles": 3,
+      "risk": "high",
+      "probableCoreDomain": "shared",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "tetoINSS",
+      "currentSources": [
+        "data/rules/inss.json",
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-inss-autonomo"
+      ],
+      "clusters": [],
+      "estimatedArticles": 0,
+      "risk": "high",
+      "probableCoreDomain": "inss",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "fgts",
+      "currentSources": [],
+      "tools": [
+        "saque-aniversario-fgts",
+        "calculadora-rescisao-clt",
+        "calculadora-clt-ou-pj",
+        "calculadora-multa-40-fgts"
+      ],
+      "clusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-rescisao-clt",
+        "saque-aniversario-fgts",
+        "calculadora-multa-40-fgts"
+      ],
+      "estimatedArticles": 5,
+      "risk": "high",
+      "probableCoreDomain": "fgts",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "seguro-desemprego",
+      "currentSources": [],
+      "tools": [
+        "calculadora-seguro-desemprego"
+      ],
+      "clusters": [
+        "calculadora-seguro-desemprego"
+      ],
+      "estimatedArticles": 4,
+      "risk": "high",
+      "probableCoreDomain": "beneficios",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "ferias",
+      "currentSources": [],
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 9,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "decimo-terceiro",
+      "currentSources": [],
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj"
+      ],
+      "clusters": [
+        "calculadora-13-salario",
+        "calculadora-clt-ou-pj",
+        "calculadora-ferias-clt",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 11,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "horas-extras",
+      "currentSources": [],
+      "tools": [
+        "calculadora-horas-extras-clt"
+      ],
+      "clusters": [
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedArticles": 6,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "adicional-noturno",
+      "currentSources": [],
+      "tools": [
+        "calculadora-adicional-noturno"
+      ],
+      "clusters": [
+        "calculadora-adicional-noturno",
+        "calculadora-horas-extras-clt"
+      ],
+      "estimatedArticles": 2,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "insalubridade",
+      "currentSources": [],
+      "tools": [
+        "calculadora-insalubridade"
+      ],
+      "clusters": [
+        "calculadora-insalubridade"
+      ],
+      "estimatedArticles": 1,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "aviso-previo",
+      "currentSources": [],
+      "tools": [
+        "calculadora-rescisao-clt",
+        "calculadora-aviso-previo"
+      ],
+      "clusters": [
+        "calculadora-aviso-previo",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 3,
+      "risk": "medium",
+      "probableCoreDomain": "clt",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "das-mei",
+      "currentSources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei"
+      ],
+      "clusters": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high",
+      "probableCoreDomain": "mei",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "limite-faturamento-mei",
+      "currentSources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-limite-faturamento-mei-2026"
+      ],
+      "clusters": [
+        "calculadora-limite-faturamento-mei-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high",
+      "probableCoreDomain": "mei",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "das-mei-atraso",
+      "currentSources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-das-mei-atraso-2026"
+      ],
+      "clusters": [
+        "calculadora-das-mei-atraso-2026",
+        "calculadora-das-mei-2026"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high",
+      "probableCoreDomain": "mei",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    },
+    {
+      "ruleId": "multa-fgts",
+      "currentSources": [
+        "data/tabelas-trabalhistas.json",
+        "assets/js/tabelas-trabalhistas.js"
+      ],
+      "tools": [
+        "calculadora-multa-40-fgts",
+        "calculadora-rescisao-clt"
+      ],
+      "clusters": [
+        "calculadora-multa-40-fgts",
+        "calculadora-rescisao-clt"
+      ],
+      "estimatedArticles": 0,
+      "risk": "high",
+      "probableCoreDomain": "fgts",
+      "coreStatus": "not-connected",
+      "migrationStatus": "future"
+    }
+  ],
+  "notes": [
+    "data/maps/content-map.json e data/maps/tools-map.json continuam como mapas atuais; este arquivo apenas aponta sua compatibilidade com o Core."
+  ]
+}

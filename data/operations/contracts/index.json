@@ -1,0 +1,21 @@
+{
+  "id": "operation-contracts-index",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/operation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Index of Operation System contracts.",
+  "items": [
+    "/data/operations/contracts/operations.contract.json",
+    "/data/operations/contracts/playbooks.contract.json",
+    "/data/operations/contracts/workflows.contract.json",
+    "/data/operations/contracts/pipelines.contract.json",
+    "/data/operations/contracts/templates.contract.json",
+    "/data/operations/contracts/registry.contract.json"
+  ],
+  "notes": ["Contracts are declarative."]
+}

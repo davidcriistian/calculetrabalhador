@@ -1,0 +1,36 @@
+{
+  "id": "validation-approval-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Template for future validation approval decisions.",
+  "approval": {
+    "approvalId": "example-validation-approval-id",
+    "validationId": "example-validation-id",
+    "testingApproved": false,
+    "migrationApprovedWhenApplicable": false,
+    "allRequiredItemsPassed": false,
+    "criticalNonConformitiesOpen": 0,
+    "manualApproval": {
+      "required": true,
+      "approved": false,
+      "approvedBy": null,
+      "approvedAt": null
+    },
+    "decision": {
+      "approved": false,
+      "rejected": false,
+      "reason": null
+    }
+  },
+  "approveWhen": "Testing is approved, migration is approved when applicable, all required items pass, no critical nonconformity remains open, and manual approval is recorded.",
+  "rejectWhen": "Any required dependency is missing, any required item fails, any critical nonconformity remains open, or manual approval is rejected.",
+  "notes": [
+    "Approval records are declarative and do not approve production automatically."
+  ]
+}

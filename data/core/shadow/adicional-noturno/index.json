@@ -1,0 +1,35 @@
+{
+  "id": "shadow-adicional-noturno",
+  "version": "0.1.0",
+  "status": "active",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Sprint 4 - Migracao Piloto Controlada",
+  "calculadora": "calculadora-adicional-noturno",
+  "domainId": "adicional-noturno",
+  "mode": "shadow",
+  "userFacingResultSource": "legacy-runtime",
+  "legacySource": "/calculadora-adicional-noturno/index.html",
+  "coreSource": "/data/core/domains/adicional-noturno/rules/index.json",
+  "comparisonLog": "/data/core/shadow/adicional-noturno/comparisons/index.json",
+  "validator": "/scripts/validate-shadow-adicional-noturno.js",
+  "tolerance": 0.01,
+  "fallback": {
+    "enabled": true,
+    "onCoreError": "legacy-runtime",
+    "onDivergence": "legacy-runtime",
+    "onValidationError": "legacy-runtime",
+    "userVisibleImpact": "none"
+  },
+  "comparisonFields": [
+    "normalHourValue",
+    "additionalPerHour",
+    "totalValue"
+  ],
+  "notes": [
+    "A camada e operacionalmente isolada: a pagina publicada nao consome data/core/shadow nesta Sprint.",
+    "O resultado apresentado ao usuario continua vindo do calculo antigo.",
+    "O Core e usado como referencia paralela de validacao."
+  ]
+}

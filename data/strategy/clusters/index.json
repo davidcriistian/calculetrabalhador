@@ -1,0 +1,44 @@
+{
+  "id": "strategy-clusters",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/cluster.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Official model for editorial and calculator clusters.",
+  "clusterBlueprintPolicy": {
+    "clusterBlueprintIsPrimaryEditorialUnit": true,
+    "articleBlueprintIsInternalComponent": true,
+    "everyArticleRequiresCluster": true,
+    "everyCalculatorRequiresCluster": true
+  },
+  "clusterTemplate": {
+    "clusterId": "example-cluster",
+    "nucleus": "example-nucleus",
+    "objective": "Define the cluster objective.",
+    "searchIntent": "informational",
+    "primaryCalculator": null,
+    "pillarArticle": null,
+    "satelliteArticles": [],
+    "internalLinks": [],
+    "seoStrategy": null,
+    "primaryProduct": null,
+    "primaryCta": null,
+    "recommendedPublishingOrder": [],
+    "testing": {
+      "required": true,
+      "reference": "/data/pos/testing/index.json"
+    },
+    "validation": {
+      "required": true,
+      "reference": "/data/pos/validation/index.json"
+    }
+  },
+  "items": [],
+  "notes": [
+    "Clusters are not populated in this phase."
+  ]
+}

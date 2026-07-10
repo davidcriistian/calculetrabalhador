@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/concept.schema.json",
+  "title": "Core Engine Concept",
+  "type": "object",
+  "required": ["id", "name", "definition", "status", "version"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "definition": { "type": "string" },
+    "objective": { "type": "string" },
+    "specialCases": { "type": "array", "items": { "type": "string" } },
+    "exceptions": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" },
+    "version": { "type": "string" }
+  }
+}

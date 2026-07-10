@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/core/schemas/history.schema.json",
+  "title": "Core Engine History",
+  "type": "object",
+  "required": ["id", "type", "date", "version", "reason", "impact", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "date": { "type": "string" },
+    "version": { "type": "string" },
+    "reason": { "type": "string" },
+    "impact": { "type": "string" },
+    "affectedDomains": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "blueprint-contract-generator",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/generation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1 - Blueprint System",
+  "name": "Blueprint Generator Contract",
+  "objective": "Define future generator boundaries without implementing automation.",
+  "expectedInputs": ["approved blueprint", "generation context", "approval status"],
+  "expectedOutputs": ["planned files", "required tests", "required validations", "publishing plan"],
+  "dependencies": ["/data/blueprints/schemas/generation.schema.json"],
+  "nonResponsibilities": ["execute generation", "write files", "publish assets"],
+  "notes": ["No generator is implemented in this phase."]
+}

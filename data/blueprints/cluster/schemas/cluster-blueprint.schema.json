@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/cluster/schemas/cluster-blueprint.schema.json",
+  "title": "Cluster Blueprint",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "schema",
+    "status",
+    "runtimeStatus",
+    "createdAt",
+    "updatedAt",
+    "owner",
+    "source",
+    "blueprintType",
+    "identity",
+    "assets",
+    "seo",
+    "publishing",
+    "monetization",
+    "testing",
+    "validation",
+    "relationships"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "blueprintType": { "type": "string" },
+    "identity": {
+      "type": "object",
+      "required": ["clusterId", "name", "slug", "nucleus", "domain", "category", "status", "owner", "version"],
+      "properties": {
+        "clusterId": { "type": "string" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "nucleus": { "type": "string" },
+        "domain": { "type": "string" },
+        "category": { "type": "string" },
+        "status": { "type": "string" },
+        "owner": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "assets": { "$ref": "/data/blueprints/cluster/schemas/cluster-asset.schema.json" },
+    "seo": { "type": "object" },
+    "publishing": { "$ref": "/data/blueprints/cluster/schemas/cluster-publishing.schema.json" },
+    "monetization": { "type": "object" },
+    "testing": { "type": "object" },
+    "validation": { "type": "object" },
+    "relationships": { "$ref": "/data/blueprints/cluster/schemas/cluster-relation.schema.json" },
+    "operationalBoundaries": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

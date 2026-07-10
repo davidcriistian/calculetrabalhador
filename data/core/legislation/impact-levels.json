@@ -1,0 +1,40 @@
+{
+  "id": "legislation-impact-levels",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Niveis oficiais de impacto para mudancas legislativas.",
+  "items": [
+    {
+      "id": "none",
+      "order": 0,
+      "description": "Sem impacto esperado em regras, tabelas, ferramentas, artigos ou ofertas."
+    },
+    {
+      "id": "low",
+      "order": 1,
+      "description": "Impacto localizado, editorial ou documental, sem alteracao numerica prevista."
+    },
+    {
+      "id": "medium",
+      "order": 2,
+      "description": "Impacto em regra, tabela ou conteudo especifico, exigindo revisao controlada."
+    },
+    {
+      "id": "high",
+      "order": 3,
+      "description": "Impacto em multiplas ferramentas, artigos, regras ou tabelas, exigindo validacao ampla."
+    },
+    {
+      "id": "critical",
+      "order": 4,
+      "description": "Impacto estrutural, retroativo, urgente ou com risco alto de calculo incorreto se nao tratado."
+    }
+  ],
+  "notes": [
+    "O impacto descreve risco de alteracao futura, nao muda o comportamento atual do site."
+  ]
+}

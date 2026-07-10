@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/registry/schemas/registry-reference.schema.json",
+  "title": "Registry Reference",
+  "type": "object",
+  "properties": {
+    "canonicalSource": { "type": "string" },
+    "registryPartitions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "logicalComponents": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

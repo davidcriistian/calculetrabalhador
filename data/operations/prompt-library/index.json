@@ -1,0 +1,26 @@
+{
+  "id": "operation-prompt-library",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/prompt.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Declarative prompt library model without full prompt text.",
+  "promptTemplate": {
+    "promptId": "example-prompt",
+    "objective": null,
+    "inputs": [],
+    "outputs": [],
+    "preconditions": [],
+    "dependencies": [],
+    "constraints": [],
+    "validation": []
+  },
+  "items": [],
+  "notes": [
+    "This library models prompt metadata only and does not include full prompts."
+  ]
+}

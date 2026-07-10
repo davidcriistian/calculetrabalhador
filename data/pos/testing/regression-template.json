@@ -1,0 +1,37 @@
+{
+  "id": "regression-template",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3 - Testing Engine",
+  "description": "Template for future regression comparison across versions.",
+  "regression": {
+    "regressionTestId": "example-regression-test-id",
+    "assetId": "example-asset-id",
+    "testType": "runtime-regression",
+    "baselineReference": null,
+    "currentReference": null,
+    "versionBefore": null,
+    "versionAfter": null,
+    "checks": [
+      {
+        "checkId": "example-check-id",
+        "description": "Describe the regression check.",
+        "expected": {},
+        "obtained": {},
+        "difference": {},
+        "status": "planned",
+        "blocking": true
+      }
+    ],
+    "result": "planned",
+    "notes": []
+  },
+  "notes": [
+    "Regression records compare versions but do not execute comparisons in Phase 3."
+  ]
+}

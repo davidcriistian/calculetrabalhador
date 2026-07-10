@@ -1,0 +1,39 @@
+{
+  "id": "test-suite-template",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Template for grouping future test plans into suites.",
+  "suite": {
+    "suiteId": "example-suite-id",
+    "name": "Example Test Suite",
+    "status": "planned",
+    "severityPolicy": "/data/pos/testing/testing-severity.json",
+    "evidencePolicy": "/data/pos/testing/testing-evidence.json",
+    "approvalOwner": "manual-review-owner",
+    "requiredTests": [],
+    "optionalTests": [],
+    "testsByDomain": {},
+    "testsByCalculator": {},
+    "testsByArticle": {},
+    "testsByProduct": {},
+    "testsByEngine": {},
+    "approvalRequirements": [
+      "equivalence-pass",
+      "required-tests-pass",
+      "no-runtime-regression",
+      "no-seo-regression",
+      "no-layout-regression",
+      "baseline-match",
+      "manual-approval"
+    ]
+  },
+  "notes": [
+    "Suites group test requirements and do not run tests."
+  ]
+}

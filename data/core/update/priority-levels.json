@@ -1,0 +1,45 @@
+{
+  "id": "update-priority-levels",
+  "version": "2.6.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Update Engine Phase 2.6",
+  "description": "Prioridades oficiais para planos de atualizacao.",
+  "items": [
+    {
+      "id": "none",
+      "order": 0,
+      "description": "Sem prioridade operacional; manter apenas registro."
+    },
+    {
+      "id": "low",
+      "order": 1,
+      "description": "Atualizacao simples, sem impacto numerico esperado."
+    },
+    {
+      "id": "medium",
+      "order": 2,
+      "description": "Atualizacao relevante, com impacto localizado em regra, tabela, artigo ou calculadora."
+    },
+    {
+      "id": "high",
+      "order": 3,
+      "description": "Atualizacao importante, com impacto em multiplos itens ou risco de divergencia."
+    },
+    {
+      "id": "critical",
+      "order": 4,
+      "description": "Atualizacao critica, com impacto amplo, retroativo ou numerico sensivel."
+    },
+    {
+      "id": "emergency",
+      "order": 5,
+      "description": "Atualizacao urgente que futuramente exigiria resposta imediata e plano de contingencia."
+    }
+  ],
+  "notes": [
+    "Prioridade nao executa atualizacao; apenas orienta planejamento futuro."
+  ]
+}

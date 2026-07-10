@@ -1,0 +1,28 @@
+{
+  "id": "strategy-cta",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/cta.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "CTA strategy model.",
+  "types": ["primary", "secondary", "inline", "result", "banner", "offer"],
+  "priorities": ["low", "medium", "high", "critical"],
+  "positions": ["hero", "calculator-result", "article-inline", "after-faq", "related-content", "footer"],
+  "rules": ["cluster-context-required", "product-eligibility-required", "validation-required"],
+  "configurationTemplate": {
+    "ctaId": "example-cta",
+    "type": "primary",
+    "priority": "medium",
+    "position": "hero",
+    "productId": null,
+    "clusterId": null,
+    "status": "draft"
+  },
+  "notes": [
+    "CTA strategy does not change existing CTAs in this phase."
+  ]
+}

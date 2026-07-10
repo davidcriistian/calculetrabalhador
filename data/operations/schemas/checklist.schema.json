@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/operations/schemas/checklist.schema.json",
+  "title": "Operation Checklist",
+  "type": "object",
+  "required": ["id", "phase", "items"],
+  "properties": {
+    "id": { "type": "string" },
+    "phase": { "type": "string" },
+    "items": { "type": "array", "items": { "type": "string" } }
+  }
+}

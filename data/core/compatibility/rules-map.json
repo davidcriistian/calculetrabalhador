@@ -1,0 +1,151 @@
+{
+  "version": "2.0.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Compatibility Engine Phase 2",
+  "coreStatus": "not-connected",
+  "migrationStatus": "future",
+  "id": "compatibility-rules-map",
+  "schema": null,
+  "description": "Mapa das rules atuais e correspondência provável com domínios do Core.",
+  "items": [
+    {
+      "id": "adicional-noturno",
+      "file": "data/rules/adicional-noturno.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "aviso-previo",
+      "file": "data/rules/aviso-previo.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "decimo-terceiro",
+      "file": "data/rules/decimo-terceiro.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "ferias",
+      "file": "data/rules/ferias.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "fgts",
+      "file": "data/rules/fgts.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "fgts",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/fgts/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "horas-extras",
+      "file": "data/rules/horas-extras.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "insalubridade",
+      "file": "data/rules/insalubridade.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "clt",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/clt/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "inss",
+      "file": "data/rules/inss.json",
+      "status": "draft",
+      "currentVersion": 2026,
+      "probableCoreDomain": "inss",
+      "ruleType": "structured-rule",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/inss/rules/index.json",
+      "observations": "Regra mais estruturada; boa candidata para piloto depois de validação oficial."
+    },
+    {
+      "id": "irrf",
+      "file": "data/rules/irrf.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "irrf",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/irrf/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    },
+    {
+      "id": "salario-minimo",
+      "file": "data/rules/salario-minimo.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": null,
+      "probableCoreArea": "shared",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/shared/shared-keys.json",
+      "observations": "Placeholder atual; salario-minimo e referencia global compartilhada, nao dominio Core."
+    },
+    {
+      "id": "seguro-desemprego",
+      "file": "data/rules/seguro-desemprego.json",
+      "status": "draft",
+      "currentVersion": 1,
+      "probableCoreDomain": "beneficios",
+      "ruleType": "draft-placeholder",
+      "isDraft": true,
+      "futureCompatible": true,
+      "coreDraftPath": "/data/core/domains/beneficios/rules/index.json",
+      "observations": "Placeholder atual; requer modelagem completa antes de migração."
+    }
+  ],
+  "notes": [
+    "Este mapa descreve compatibilidade futura; não substitui data/rules."
+  ]
+}

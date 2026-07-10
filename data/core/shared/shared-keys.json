@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "description": "Shared identifiers reserved for cross-domain concepts and national values.",
+  "runtimeStatus": "parallel-only",
+  "items": [
+    { "id": "salario-minimo", "status": "reserved", "description": "National minimum wage shared by CLT, INSS, MEI and benefits." },
+    { "id": "indices-nacionais", "status": "reserved", "description": "National indexes that may affect multiple domains." },
+    { "id": "datas-nacionais", "status": "reserved", "description": "National dates, validity periods and legal calendars." },
+    { "id": "fontes-oficiais", "status": "reserved", "description": "Official source metadata shared by multiple domains." }
+  ]
+}

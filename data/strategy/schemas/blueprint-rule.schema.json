@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/blueprint-rule.schema.json",
+  "title": "Strategy Blueprint Rule",
+  "type": "object",
+  "required": ["id", "statement", "required"],
+  "properties": {
+    "id": { "type": "string" },
+    "statement": { "type": "string" },
+    "required": { "type": "boolean" }
+  }
+}

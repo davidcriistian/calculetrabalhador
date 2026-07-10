@@ -1,0 +1,29 @@
+{
+  "id": "operational-manifest-contract-registry",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "name": "Manifest Registry Contract",
+  "objective": "Define the registry as the official entry point for operation manifests.",
+  "registryResponsibilities": [
+    "list supported operations",
+    "point to operation manifests",
+    "point to context catalog",
+    "point to dependency map",
+    "point to restrictions",
+    "point to schemas and contracts"
+  ],
+  "registryNonResponsibilities": [
+    "execute operations",
+    "feed runtime",
+    "replace POS Registry",
+    "store large physical file inventories"
+  ],
+  "dependencies": ["/data/manifests/registry/index.json"],
+  "notes": ["The Manifest Registry complements POS discovery but does not replace it."]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "horas-extras-references",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "pagina-calculadora",
+      "type": "production-page",
+      "path": "/calculadora-horas-extras-clt/",
+      "usage": "Fonte da logica homologada."
+    },
+    {
+      "id": "html-calculadora",
+      "type": "production-source",
+      "path": "/calculadora-horas-extras-clt/index.html",
+      "usage": "Contem validacoes, formulas locais, renderizacao e fallback."
+    },
+    {
+      "id": "runtime-tabelas",
+      "type": "runtime-data",
+      "path": "/data/tabelas-trabalhistas.json",
+      "usage": "Contem percentuais e divisores usados pelo helper centralizado."
+    },
+    {
+      "id": "helper-centralizado",
+      "type": "runtime-helper",
+      "path": "/assets/js/tabelas-trabalhistas.js",
+      "usage": "Contem calcularHoraExtra e obterDivisorHorasCentral usados em comparacao de equivalencia pela pagina."
+    },
+    {
+      "id": "compatibility-tools-map",
+      "type": "core-compatibility",
+      "path": "/data/core/compatibility/tools-map.json",
+      "usage": "Mapeia a ferramenta calculadora-horas-extras-clt para compatibilidade futura."
+    }
+  ],
+  "notes": [
+    "Referencias sem importacao, consumo ou integracao operacional."
+  ]
+}

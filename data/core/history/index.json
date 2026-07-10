@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "schema": "/data/core/schemas/history.schema.json",
+  "description": "Global legal and architectural history reserved for future Core Engine changes.",
+  "runtimeStatus": "parallel-only",
+  "items": [
+    {
+      "id": "core-engine-foundation-2026-07-09",
+      "type": "architecture",
+      "date": "2026-07-09",
+      "version": "1.0.0",
+      "reason": "Create Core Engine foundation in parallel with the current runtime.",
+      "impact": "No impact on current calculators, articles, URLs, SEO or visual components.",
+      "affectedDomains": ["clt", "fgts", "inss", "mei", "pj", "irrf", "beneficios", "aposentadoria"],
+      "status": "recorded"
+    }
+  ]
+}

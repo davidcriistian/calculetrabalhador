@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/schemas/section.schema.json",
+  "title": "Blueprint Section",
+  "type": "object",
+  "required": ["id", "type", "required", "components"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "required": { "type": "boolean" },
+    "components": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

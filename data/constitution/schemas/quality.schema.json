@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/constitution/schemas/quality.schema.json",
+  "title": "Constitution Quality",
+  "allOf": [
+    { "$ref": "/data/constitution/schemas/constitution.schema.json" },
+    {
+      "type": "object",
+      "properties": {
+        "requirements": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  ]
+}

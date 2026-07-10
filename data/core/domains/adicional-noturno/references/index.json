@@ -1,0 +1,59 @@
+{
+  "id": "adicional-noturno-references",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "items": [
+    {
+      "id": "calculadora-publicada-adicional-noturno",
+      "title": "Calculadora de Adicional Noturno publicada",
+      "url": "/calculadora-adicional-noturno/",
+      "sourceType": "current-production-page",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Fonte primaria do comportamento de calculo homologado."
+      ]
+    },
+    {
+      "id": "runtime-tabelas-adicional-noturno",
+      "title": "Runtime atual - adicionalNoturno",
+      "url": "/data/tabelas-trabalhistas.json#adicionalNoturno",
+      "sourceType": "current-runtime",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Percentual padrao 0.2 e horaNoturnaMinutos 52.5."
+      ]
+    },
+    {
+      "id": "helper-tabelas-trabalhistas",
+      "title": "Helper atual de tabelas trabalhistas",
+      "url": "/assets/js/tabelas-trabalhistas.js",
+      "sourceType": "current-runtime-helper",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Contem calcularAdicionalNoturno e obterPercentualAdicionalNoturno."
+      ]
+    },
+    {
+      "id": "clt-artigo-73-planalto",
+      "title": "CLT - Decreto-Lei 5.452/1943",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm",
+      "sourceType": "official",
+      "status": "reference",
+      "consultedAt": "2026-07-09",
+      "notes": [
+        "Referencia oficial para adicional noturno e hora reduzida."
+      ]
+    }
+  ],
+  "notes": [
+    "Referencias nao alteram paginas ou runtime."
+  ]
+}

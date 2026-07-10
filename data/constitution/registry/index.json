@@ -1,0 +1,36 @@
+{
+  "id": "constitution-registry",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Entry point for permanent platform principles.",
+  "references": {
+    "principles": "/data/constitution/principles/index.json",
+    "architecture": "/data/constitution/architecture/index.json",
+    "governance": "/data/constitution/governance/index.json",
+    "quality": "/data/constitution/quality/index.json",
+    "shared": "/data/constitution/shared/index.json",
+    "schemas": "/data/constitution/schemas/",
+    "contracts": "/data/constitution/contracts/",
+    "metadata": "/data/constitution/metadata/constitution.json",
+    "history": "/data/constitution/history/index.json",
+    "versioning": "/data/constitution/versioning/index.json",
+    "documentation": "/data/constitution/docs/CONSTITUTION.md"
+  },
+  "operationalBoundaries": {
+    "modifiesProduction": false,
+    "executesAutomation": false,
+    "changesRuntime": false,
+    "changesSeo": false,
+    "changesUrls": false
+  },
+  "notes": [
+    "The Constitution changes rarely and defines how the project thinks.",
+    "Strategy may evolve without changing the Constitution."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "registry-partitioning-metadata",
+  "version": "0.1.0",
+  "schema": "/data/registry/schemas/registry-index.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
+  "description": "Metadata for the Registry Partitioning System.",
+  "officialEntryPoint": "/data/registry/index.json",
+  "purpose": "Prepare long-term discovery indexes without creating large central JSON files.",
+  "principles": [
+    "index-only",
+    "no-asset-duplication",
+    "no-knowledge-storage",
+    "no-runtime-consumption",
+    "partition-before-scale"
+  ],
+  "relatedLayers": ["Core", "POS", "Blueprint System", "Operation System", "Manifest System"],
+  "notes": [
+    "This metadata does not create integration with any runtime or existing registry."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "operational-manifest-metadata",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/manifest.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Shared metadata for the Operational Manifest System.",
+  "layer": "Productivity Layer",
+  "system": "Operational Manifest System",
+  "purpose": "Reduce operation context, reduce Codex credit consumption and standardize future execution.",
+  "canonicalEntryPoint": "/data/manifests/registry/index.json",
+  "operationalStatus": {
+    "automatesOperations": false,
+    "modifiesProduction": false,
+    "feedsRuntime": false,
+    "isDocumentationOnly": true
+  },
+  "relatedLayers": [
+    "Constitution",
+    "Strategy",
+    "Core",
+    "POS",
+    "Blueprint System",
+    "Operation System",
+    "Testing Engine",
+    "Validation Engine"
+  ],
+  "notes": [
+    "This metadata does not create operational consumption.",
+    "All manifests remain declarative in this phase."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "operation-decision-trees",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/decision-tree.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Decision tree catalog for future operations.",
+  "items": [
+    { "id": "create-new-asset", "firstQuestion": "Is there an approved blueprint?" },
+    { "id": "update-asset", "firstQuestion": "Is the asset registered and versioned?" },
+    { "id": "change-law", "firstQuestion": "Is the legal change registered in Core or Legislation?" },
+    { "id": "change-product", "firstQuestion": "Is the product strategy configured?" },
+    { "id": "create-campaign", "firstQuestion": "Is the campaign strategy configured?" },
+    { "id": "rollback", "firstQuestion": "Is rollback evidence available?" }
+  ],
+  "notes": [
+    "Decision trees guide choices but do not execute them."
+  ]
+}

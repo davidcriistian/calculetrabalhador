@@ -1,0 +1,79 @@
+{
+  "id": "legislation-decision-tree",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Arvore declarativa de decisoes para analisar mudancas legislativas futuras.",
+  "nodes": [
+    {
+      "id": "start",
+      "question": "A mudanca possui fonte oficial identificada?",
+      "yes": "has-effective-date",
+      "no": "block-source-validation"
+    },
+    {
+      "id": "has-effective-date",
+      "question": "A mudanca possui data de vigencia?",
+      "yes": "changed-minimum-wage",
+      "no": "block-effective-date-validation"
+    },
+    {
+      "id": "changed-minimum-wage",
+      "question": "Mudou salario minimo?",
+      "yes": "update-shared",
+      "no": "changed-rate-or-range"
+    },
+    {
+      "id": "update-shared",
+      "action": "Marcar impacto em shared, salario-minimo, tabelas relacionadas, regras dependentes, calculadoras e artigos."
+    },
+    {
+      "id": "changed-rate-or-range",
+      "question": "Mudou aliquota, faixa, teto, piso ou percentual?",
+      "yes": "mark-numeric-impact",
+      "no": "changed-validity"
+    },
+    {
+      "id": "mark-numeric-impact",
+      "action": "Marcar impacto numerico em tables, rules, tools e articles; exigir validacao de equivalencia futura."
+    },
+    {
+      "id": "changed-validity",
+      "question": "Mudou vigencia, retroatividade ou periodo de transicao?",
+      "yes": "mark-temporal-impact",
+      "no": "editorial-or-none"
+    },
+    {
+      "id": "mark-temporal-impact",
+      "action": "Registrar effectiveDate, retroactive e transitionPeriod; elevar impacto para high ou critical conforme matriz."
+    },
+    {
+      "id": "editorial-or-none",
+      "question": "A mudanca afeta apenas interpretacao ou texto explicativo?",
+      "yes": "mark-content-impact",
+      "no": "mark-no-impact"
+    },
+    {
+      "id": "mark-content-impact",
+      "action": "Marcar artigos e documentacao para revisao futura."
+    },
+    {
+      "id": "mark-no-impact",
+      "action": "Registrar impacto none ou low e manter apenas historico."
+    },
+    {
+      "id": "block-source-validation",
+      "action": "Manter status draft ate existir fonte oficial."
+    },
+    {
+      "id": "block-effective-date-validation",
+      "action": "Manter status review ate confirmar vigencia."
+    }
+  ],
+  "notes": [
+    "A arvore orienta triagem; nao executa atualizacoes."
+  ]
+}

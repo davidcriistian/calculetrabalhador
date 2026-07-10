@@ -1,0 +1,49 @@
+{
+  "id": "horas-extras-legislation",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint Horas Extras",
+  "domainId": "horas-extras",
+  "runtimeStatus": "not-connected",
+  "items": [
+    {
+      "id": "constituicao-federal-art-7-xvi",
+      "type": "constitutional-reference",
+      "status": "reference",
+      "title": "Constituicao Federal, art. 7, XVI",
+      "summary": "Remuneracao do servico extraordinario superior, no minimo, em cinquenta por cento a do normal.",
+      "calculatorUsage": "A calculadora atual usa percentual de 50% para horas em dia util.",
+      "notes": [
+        "Referencia legal usada apenas para documentar a regra atualmente representada."
+      ]
+    },
+    {
+      "id": "clt-art-59",
+      "type": "legal-reference",
+      "status": "reference",
+      "title": "CLT, art. 59",
+      "summary": "Referencia geral sobre duracao do trabalho e horas suplementares.",
+      "calculatorUsage": "A calculadora atual nao interpreta banco de horas, acordo individual ou convencao coletiva.",
+      "notes": [
+        "A homologacao representa o comportamento publicado, nao uma analise juridica completa."
+      ]
+    },
+    {
+      "id": "percentual-100-domingo-feriado",
+      "type": "practice-reference",
+      "status": "reference",
+      "title": "Hora extra 100% em domingos e feriados",
+      "summary": "A pagina atual trata horas 100% como valor da hora normal multiplicado por 2.",
+      "calculatorUsage": "Percentual fixo aplicado ao campo horas100.",
+      "notes": [
+        "A calculadora atual nao verifica calendario, escala, folga compensatoria ou feriado real."
+      ]
+    }
+  ],
+  "notes": [
+    "Legislacao registrada apenas como referencia declarativa da calculadora atual."
+  ]
+}

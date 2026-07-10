@@ -1,0 +1,22 @@
+{
+  "id": "strategy-shared",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/strategy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Shared strategy vocabulary.",
+  "terms": {
+    "cluster": "Primary editorial and operational unit for calculators and articles.",
+    "nucleus": "Thematic area that groups clusters.",
+    "pillarArticle": "Primary article for cluster authority.",
+    "satelliteArticle": "Supporting article connected to the pillar.",
+    "cta": "Configured call to action linked to product and context."
+  },
+  "notes": [
+    "Shared strategy terms prevent inconsistent operation."
+  ]
+}

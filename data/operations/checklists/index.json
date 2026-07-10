@@ -1,0 +1,38 @@
+{
+  "id": "operation-checklists",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/checklist.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2 - Operation System",
+  "description": "Official before, during and after checklists.",
+  "before": [
+    "confirm-constitution",
+    "confirm-strategy",
+    "confirm-blueprint",
+    "confirm-core-reference",
+    "confirm-testing-plan",
+    "confirm-validation-plan",
+    "confirm-rollback"
+  ],
+  "during": [
+    "follow-playbook",
+    "record-decisions",
+    "avoid-out-of-scope-files",
+    "track-estimated-credits",
+    "record-evidence"
+  ],
+  "after": [
+    "run-required-validation",
+    "prepare-report",
+    "record-files-affected",
+    "record-approval",
+    "confirm-no-unapproved-production-change"
+  ],
+  "notes": [
+    "Checklists guide future operation execution."
+  ]
+}

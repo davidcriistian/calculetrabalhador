@@ -1,0 +1,53 @@
+{
+  "id": "pos-validation-engine-index",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Declarative authority for platform compliance validation.",
+  "notes": [
+    "This Validation Engine defines compliance protocol files only and does not execute validations.",
+    "It does not migrate, alter pages, fix issues, change SEO, change URLs or modify runtime."
+  ],
+  "answers": {
+    "whatToValidate": "Defined by validation-template.json target and validation-types.json.",
+    "criteria": "Defined by validation-rules.json and validation-checklist.json.",
+    "mandatoryStandards": "Defined by validation-checklist.json required items.",
+    "acceptedEvidence": "Defined by validation-evidence.json.",
+    "approval": "Defined by approval-template.json.",
+    "rejection": "Defined by approval-template.json and validation-report-template.json.",
+    "nonConformities": "Defined by validation-report-template.json nonConformities.",
+    "reporting": "Defined by validation-report-template.json."
+  },
+  "references": {
+    "template": "/data/pos/validation/validation-template.json",
+    "status": "/data/pos/validation/validation-status.json",
+    "types": "/data/pos/validation/validation-types.json",
+    "reportTemplate": "/data/pos/validation/validation-report-template.json",
+    "checklist": "/data/pos/validation/validation-checklist.json",
+    "rules": "/data/pos/validation/validation-rules.json",
+    "severity": "/data/pos/validation/validation-severity.json",
+    "evidence": "/data/pos/validation/validation-evidence.json",
+    "approvalTemplate": "/data/pos/validation/approval-template.json",
+    "documentation": "/data/pos/docs/VALIDATION_ENGINE.md"
+  },
+  "operationalBoundaries": {
+    "executesValidations": false,
+    "fixesIssues": false,
+    "executesMigrations": false,
+    "modifiesCalculators": false,
+    "modifiesArticles": false,
+    "modifiesRuntime": false,
+    "modifiesHtml": false,
+    "modifiesCss": false,
+    "modifiesJavaScript": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "modifiesLayout": false
+  }
+}

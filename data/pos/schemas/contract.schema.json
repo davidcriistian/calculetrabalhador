@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/pos/schemas/contract.schema.json",
+  "title": "POS Contract",
+  "allOf": [
+    { "$ref": "/data/pos/schemas/shared-metadata.schema.json" },
+    {
+      "type": "object",
+      "required": [
+        "name",
+        "objective",
+        "scope",
+        "expectedInputs",
+        "expectedOutputs",
+        "dependencies",
+        "nonResponsibilities"
+      ],
+      "properties": {
+        "name": { "type": "string" },
+        "objective": { "type": "string" },
+        "scope": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "expectedInputs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "expectedOutputs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "nonResponsibilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

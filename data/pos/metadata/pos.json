@@ -1,0 +1,27 @@
+{
+  "id": "pos-metadata",
+  "version": "0.2.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 3.5 - Governance Hardening",
+  "description": "Metadata for the Project Operating System foundation.",
+  "officialEntryPoint": "/data/pos/registry/index.json",
+  "phase": "Phase 3.5 - Governance Hardening",
+  "operationalMode": "declarative-only",
+  "architectureBoundary": {
+    "core": "knowledge",
+    "pos": "operation",
+    "shadow": "bridge-layer"
+  },
+  "configurationPrinciple": "configuration-over-code",
+  "notes": [
+    "POS is the operational governance layer and must not become a source of legal or labor knowledge.",
+    "The registry must not be manually populated at scale; future engines should populate it through approved processes.",
+    "Recurring functionality should be controlled by configuration before code.",
+    "No existing runtime, calculator, article, SEO, URL, layout, HTML, CSS, JavaScript or sitemap behavior is changed."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "strategy-products",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/product.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Logical product catalog model.",
+  "catalogTemplate": {
+    "productId": "example-product",
+    "category": "example-category",
+    "eligibleNuclei": [],
+    "eligibleClusters": [],
+    "version": "0.1.0",
+    "status": "draft",
+    "notes": []
+  },
+  "items": [],
+  "notes": [
+    "Products are not created in this phase."
+  ]
+}

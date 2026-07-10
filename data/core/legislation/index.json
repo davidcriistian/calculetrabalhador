@@ -1,0 +1,39 @@
+{
+  "id": "legislation-engine-index",
+  "version": "2.5.0",
+  "schema": null,
+  "status": "draft",
+  "engineStatus": "declarative-only",
+  "coreStatus": "isolated",
+  "runtimeStatus": "not-connected",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Ponto de entrada declarativo da Legislation Engine para registrar mudancas legislativas e preparar analise futura de impacto.",
+  "references": {
+    "changeTypes": "/data/core/legislation/change-types.json",
+    "impactLevels": "/data/core/legislation/impact-levels.json",
+    "changeStatus": "/data/core/legislation/change-status.json",
+    "impactMatrix": "/data/core/legislation/impact-matrix.json",
+    "changeTemplate": "/data/core/legislation/change-template.json",
+    "workflow": "/data/core/legislation/workflow.json",
+    "decisionTree": "/data/core/legislation/decision-tree.json",
+    "eventTypes": "/data/core/legislation/event-types.json",
+    "validationRules": "/data/core/legislation/validation-rules.json"
+  },
+  "integrationBoundaries": {
+    "calculators": "not-connected",
+    "articles": "not-connected",
+    "runtime": "not-connected",
+    "currentTables": "read-only-reference",
+    "currentRules": "read-only-reference",
+    "currentMaps": "read-only-reference",
+    "compatibility": "read-only-reference"
+  },
+  "notes": [
+    "Esta Engine nao implementa automacao nesta fase.",
+    "Esta Engine nao altera rules existentes, calculadoras, artigos, tabelas ou runtime.",
+    "O objetivo e estruturar como mudancas legislativas serao interpretadas e avaliadas futuramente."
+  ]
+}

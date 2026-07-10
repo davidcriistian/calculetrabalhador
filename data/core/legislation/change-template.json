@@ -1,0 +1,70 @@
+{
+  "id": "legislation-change-template",
+  "version": "2.5.0",
+  "status": "draft",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Legislation Engine Phase 2.5",
+  "description": "Modelo oficial para registrar uma mudanca legislativa futura.",
+  "template": {
+    "id": "change-[domain]-[yyyy]-[slug]",
+    "title": "",
+    "type": "",
+    "domain": "",
+    "description": "",
+    "source": {
+      "name": "",
+      "url": "",
+      "publishedBy": "",
+      "consultedAt": ""
+    },
+    "effectiveDate": "",
+    "publishedDate": "",
+    "status": "draft",
+    "impactLevel": "unknown",
+    "retroactive": false,
+    "transitionPeriod": {
+      "exists": false,
+      "startDate": null,
+      "endDate": null,
+      "description": ""
+    },
+    "affectedTables": [],
+    "affectedRules": [],
+    "affectedDomains": [],
+    "affectedTools": [],
+    "affectedArticles": [],
+    "affectedOffers": [],
+    "affectedBlueprints": [],
+    "validation": {
+      "officialSourceChecked": false,
+      "effectiveDateChecked": false,
+      "impactReviewed": false,
+      "compatibilityReviewed": false
+    },
+    "notes": []
+  },
+  "requiredFields": [
+    "id",
+    "title",
+    "type",
+    "domain",
+    "description",
+    "source",
+    "effectiveDate",
+    "publishedDate",
+    "status",
+    "impactLevel",
+    "affectedTables",
+    "affectedRules",
+    "affectedDomains",
+    "affectedTools",
+    "affectedArticles",
+    "notes"
+  ],
+  "notes": [
+    "Este arquivo e um modelo. Ele nao representa uma mudanca real.",
+    "Registros reais futuros devem usar ids estaveis e fonte oficial."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "adicional-noturno-tables",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "runtimeStatus": "not-connected",
+  "compatibilityTarget": "/data/tabelas-trabalhistas.json",
+  "items": [
+    {
+      "id": "adicional-noturno-parametros-atuais",
+      "year": "2026",
+      "status": "homologation",
+      "data": {
+        "defaultPercentDecimal": 0.2,
+        "defaultPercentDisplay": 20,
+        "nightHourMinutes": 52.5,
+        "monthlyHoursDefault": 220,
+        "reducedNightHourAppliedAutomatically": false
+      },
+      "notes": [
+        "Parametros espelham o runtime e a pagina atual.",
+        "Hora noturna reduzida e parametro documental; a formula homologada nao converte automaticamente."
+      ]
+    }
+  ],
+  "notes": [
+    "Tabela declarativa de homologacao sem consumo operacional."
+  ]
+}

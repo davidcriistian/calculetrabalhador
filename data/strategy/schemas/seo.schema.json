@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/strategy/schemas/seo.schema.json",
+  "title": "Strategy SEO",
+  "allOf": [
+    { "$ref": "/data/strategy/schemas/strategy.schema.json" },
+    { "type": "object", "properties": { "policies": { "type": "object" } } }
+  ]
+}

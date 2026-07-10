@@ -1,0 +1,27 @@
+{
+  "id": "operational-manifest-versioning",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/manifest.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "description": "Versioning policy for operation manifests.",
+  "policy": {
+    "semanticVersioning": true,
+    "major": "Breaking changes to manifest fields, restrictions or required gates.",
+    "minor": "New operations, contexts, dependencies or optional fields.",
+    "patch": "Clarifications, typo fixes or non-breaking documentation changes."
+  },
+  "currentVersion": "0.1.0",
+  "compatibility": {
+    "runtimeCompatibility": "not-applicable",
+    "productionConsumption": false,
+    "backwardCompatibleWith": []
+  },
+  "notes": [
+    "Future operation engines must check manifest version before execution."
+  ]
+}

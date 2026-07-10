@@ -1,0 +1,20 @@
+{
+  "id": "constitution-contracts-index",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/constitution.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Index of Constitution contracts.",
+  "items": [
+    "/data/constitution/contracts/principles.contract.json",
+    "/data/constitution/contracts/architecture.contract.json",
+    "/data/constitution/contracts/governance.contract.json",
+    "/data/constitution/contracts/quality.contract.json",
+    "/data/constitution/contracts/registry.contract.json"
+  ],
+  "notes": ["Contracts are declarative."]
+}

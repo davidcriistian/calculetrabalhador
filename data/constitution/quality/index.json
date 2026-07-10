@@ -1,0 +1,22 @@
+{
+  "id": "constitution-quality",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/quality.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Permanent quality requirements.",
+  "requirements": [
+    { "id": "testing-required", "required": true },
+    { "id": "validation-required", "required": true },
+    { "id": "rollback-required", "required": true },
+    { "id": "versioning-required", "required": true },
+    { "id": "history-required", "required": true }
+  ],
+  "notes": [
+    "Quality rules are constitutional requirements for future operation."
+  ]
+}

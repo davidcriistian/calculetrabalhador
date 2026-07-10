@@ -1,0 +1,22 @@
+{
+  "id": "strategy-monetization",
+  "version": "0.1.0",
+  "schema": "/data/strategy/schemas/product.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "description": "Monetization strategy model.",
+  "model": {
+    "productTypes": ["digital-product", "service", "lead", "affiliate", "sponsored-offer"],
+    "positions": ["hero-cta", "inline-cta", "result-cta", "sidebar-slot", "end-of-content", "banner"],
+    "strategies": ["contextual", "cluster-priority", "nucleus-priority", "seasonal", "manual-priority"],
+    "priorities": ["low", "medium", "high", "critical"],
+    "rules": ["must-not-change-legal-knowledge", "must-disclose-offer", "must-pass-validation"]
+  },
+  "notes": [
+    "Monetization strategy does not render offers in this phase."
+  ]
+}

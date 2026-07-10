@@ -1,0 +1,26 @@
+{
+  "id": "validation-status",
+  "version": "0.1.0",
+  "schema": "/data/pos/schemas/shared-metadata.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Project Operating System Phase 4 - Validation Engine",
+  "description": "Official status values for future validation plans and reports.",
+  "items": [
+    { "id": "planned", "description": "Validation is defined but not running." },
+    { "id": "running", "description": "Validation execution is in progress in a future workflow." },
+    { "id": "passed", "description": "Validation completed successfully." },
+    { "id": "failed", "description": "Validation completed with blocking failures." },
+    { "id": "warning", "description": "Validation completed with non-blocking findings." },
+    { "id": "blocked", "description": "Validation cannot proceed until a dependency is resolved." },
+    { "id": "manual-review", "description": "Validation requires manual review." },
+    { "id": "approved", "description": "Validation evidence and manual approval were accepted." },
+    { "id": "rejected", "description": "Validation evidence was rejected or critical nonconformity exists." }
+  ],
+  "notes": [
+    "Status values are declarative labels and do not trigger execution."
+  ]
+}

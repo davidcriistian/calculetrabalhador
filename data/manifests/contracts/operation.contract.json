@@ -1,0 +1,29 @@
+{
+  "id": "operational-manifest-contract-operation",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/manifest.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "name": "Operation Contract",
+  "objective": "Define how future operations must consult manifests before execution.",
+  "requiredBehavior": [
+    "identify operationId",
+    "load matching manifest",
+    "load minimum context",
+    "check restrictions",
+    "check dependencies",
+    "prepare expected report"
+  ],
+  "forbiddenBehavior": [
+    "execute without manifest",
+    "load entire platform context by default",
+    "modify production without approved operation scope",
+    "ignore blocked files"
+  ],
+  "dependencies": ["/data/manifests/operations/index.json", "/data/manifests/restrictions/index.json"],
+  "notes": ["This contract describes future behavior and does not implement automation."]
+}

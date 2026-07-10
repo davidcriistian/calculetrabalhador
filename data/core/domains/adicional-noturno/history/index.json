@@ -1,0 +1,26 @@
+{
+  "id": "adicional-noturno-history",
+  "version": "0.1.0",
+  "status": "homologation",
+  "createdAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "owner": "Calcule Trabalhador",
+  "source": "Programa 1 - Homologacao da Plataforma - Sprint 1",
+  "domainId": "adicional-noturno",
+  "items": [
+    {
+      "id": "programa-1-sprint-1-homologacao",
+      "date": "2026-07-09",
+      "type": "homologation",
+      "description": "Criada representacao declarativa da Calculadora de Adicional Noturno atual no Core.",
+      "impact": "none-runtime",
+      "notes": [
+        "Sem alteracao operacional.",
+        "Sem migracao ou integracao."
+      ]
+    }
+  ],
+  "notes": [
+    "Historico de homologacao."
+  ]
+}
