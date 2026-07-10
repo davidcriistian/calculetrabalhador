@@ -30,6 +30,53 @@
     "versioning": "/data/publishing/versioning/index.json",
     "documentation": "/data/publishing/docs/PUBLISHING_MODEL.md"
   },
+  "draftEntries": [
+    {
+      "id": "publishing-draft-pj",
+      "assetId": "pj",
+      "assetType": "nucleus",
+      "status": "draft",
+      "publishingStatus": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "reference": "/data/publishing/registry/pj-draft.json"
+    },
+    {
+      "id": "publishing-draft-clt-ou-pj",
+      "assetId": "cluster:clt-ou-pj",
+      "assetType": "cluster",
+      "status": "draft",
+      "approvalStatus": "approved",
+      "relationshipStatus": "approved",
+      "publishingStatus": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "reference": "/data/publishing/registry/clt-ou-pj-draft.json"
+    },
+    {
+      "id": "publishing-draft-calculator-calculadora-multa-40-fgts",
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "assetType": "calculator",
+      "status": "draft",
+      "approvalStatus": "approved-reference",
+      "publishingStatus": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "reference": "/data/publishing/registry/calculator-calculadora-multa-40-fgts-draft.json"
+    },
+    {
+      "id": "publishing-draft-article-clt-ou-pj",
+      "assetId": "article:clt-ou-pj",
+      "assetType": "article",
+      "status": "draft",
+      "approvalStatus": "approved-reference",
+      "relationshipStatus": "approved",
+      "publishingStatus": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "reference": "/data/publishing/registry/article-clt-ou-pj-draft.json"
+    }
+  ],
   "operationalBoundaries": {
     "publishesAssets": false,
     "executesDeploy": false,

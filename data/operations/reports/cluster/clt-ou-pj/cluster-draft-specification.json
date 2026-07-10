@@ -1,0 +1,167 @@
+{
+  "id": "clt-ou-pj",
+  "type": "cluster",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/cluster/schemas/cluster-blueprint.schema.json",
+  "status": "draft",
+  "approvalStatus": "approved",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "visibility": "internal",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "blueprintReference": "/data/blueprints/cluster/index.json",
+  "nucleusReference": "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+  "identity": {
+    "assetId": "cluster:clt-ou-pj",
+    "assetType": "cluster",
+    "id": "clt-ou-pj",
+    "name": "CLT ou PJ",
+    "slug": "clt-ou-pj",
+    "primaryNucleus": "pj",
+    "primaryDomain": "pj",
+    "primaryGuide": "guide-pj",
+    "category": "comparison",
+    "searchIntent": ["informational", "calculator", "comparison"]
+  },
+  "candidateAssets": {
+    "candidatePrimaryCalculator": [
+      {
+        "id": "calculadora-clt-ou-pj",
+        "slug": "/calculadora-clt-ou-pj/",
+        "title": "Calculadora CLT ou PJ",
+        "source": "/data/tools.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      }
+    ],
+    "candidatePrimaryArticle": [
+      {
+        "id": "clt-ou-pj",
+        "slug": "/blog/clt-ou-pj",
+        "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+        "source": "/data/articles.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      }
+    ],
+    "candidateSatelliteArticles": [
+      {
+        "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+        "source": "/data/articles.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      },
+      {
+        "id": "vantagens-e-desvantagens-clt-ou-pj",
+        "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+        "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+        "source": "/data/articles.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      },
+      {
+        "id": "como-calcular-clt-ou-pj",
+        "slug": "/blog/como-calcular-clt-ou-pj",
+        "title": "Como Calcular CLT ou PJ: Entenda a Comparacao",
+        "source": "/data/articles.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      },
+      {
+        "id": "clt-ou-pj-vale-a-pena-em-2026",
+        "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+        "title": "CLT ou PJ Vale a Pena em 2026?",
+        "source": "/data/articles.json",
+        "status": "candidate",
+        "approvalStatus": "pending-approval"
+      }
+    ],
+    "candidateRelatedCalculators": [],
+    "candidateDownloads": [],
+    "candidateProducts": [],
+    "candidateCTA": []
+  },
+  "officialRelationships": {
+    "primaryCalculator": {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "publicSlug": "calculadora-clt-ou-pj",
+      "relationshipType": "primary-calculator",
+      "relationshipStatus": "approved",
+      "runtimeStatus": "not-consumed",
+      "publishingStatus": "draft"
+    },
+    "primaryArticle": {
+      "assetId": "article:clt-ou-pj",
+      "publicSlug": "clt-ou-pj",
+      "relationshipType": "pillar-article",
+      "relationshipStatus": "approved",
+      "runtimeStatus": "not-consumed",
+      "publishingStatus": "draft"
+    },
+    "satelliteArticles": [
+      {
+        "assetId": "article:como-calcular-clt-ou-pj",
+        "publicSlug": "como-calcular-clt-ou-pj",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft"
+      },
+      {
+        "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+        "publicSlug": "vantagens-e-desvantagens-clt-ou-pj",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft",
+        "pendingIssues": ["possible-final-calculator-cta-gap"]
+      },
+      {
+        "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "publicSlug": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft",
+        "pendingIssues": ["possible-final-calculator-cta-gap"]
+      },
+      {
+        "assetId": "article:clt-ou-pj-vale-a-pena-em-2026",
+        "publicSlug": "clt-ou-pj-vale-a-pena-em-2026",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft"
+      }
+    ],
+    "relatedCalculators": [],
+    "downloads": [],
+    "products": [],
+    "cta": []
+  },
+  "operationalBoundaries": {
+    "createsPublicPage": false,
+    "createsCalculator": false,
+    "createsArticle": false,
+    "createsProduct": false,
+    "createsCTA": false,
+    "modifiesExistingAssets": false,
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "Approved relationships are internal-only and not consumed by runtime.",
+    "No existing calculator or article is modified by this approval.",
+    "The cluster remains draft and not-consumed."
+  ]
+}

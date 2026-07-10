@@ -1,0 +1,54 @@
+{
+  "id": "rollback-plan-pj-create-nucleus",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "rollbackReference": "/data/publishing/rollback/index.json",
+  "rollbackType": "internal-declarative",
+  "required": true,
+  "productionRollbackRequired": false,
+  "restoreScope": {
+    "internalFilesCreated": [
+      "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+      "/data/operations/reports/nucleus/pj/guide-draft-specification.json",
+      "/data/operations/reports/nucleus/pj/relationship-map.json",
+      "/data/operations/reports/nucleus/pj/registry-draft-entry.json",
+      "/data/operations/reports/nucleus/pj/publishing-draft-entry.json",
+      "/data/operations/reports/nucleus/pj/testing-plan.json",
+      "/data/operations/reports/nucleus/pj/validation-plan.json",
+      "/data/operations/reports/nucleus/pj/rollback-plan.json",
+      "/data/operations/reports/nucleus/pj/operation-report.json",
+      "/data/operations/reports/nucleus/pj/audit-report.json",
+      "/data/registry/by-nucleus/pj.json",
+      "/data/publishing/registry/pj-draft.json"
+    ],
+    "internalFilesModified": [
+      "/data/registry/by-nucleus/index.json",
+      "/data/publishing/registry/index.json"
+    ],
+    "productionFiles": []
+  },
+  "rollbackSteps": [
+    "Remove the internal PJ registry draft entry from /data/registry/by-nucleus/index.json.",
+    "Remove the internal PJ publishing draft entry from /data/publishing/registry/index.json.",
+    "Remove the internal PJ operation draft files listed in restoreScope.internalFilesCreated.",
+    "Run JSON validation.",
+    "Run internal reference validation.",
+    "Run governance validation.",
+    "Confirm no public page, runtime, sitemap, SEO or production file changed."
+  ],
+  "verification": [
+    "pj draft entry absent from registry partitions",
+    "publishing-draft-pj absent from publishing registry",
+    "no /guias/pj/ public page exists",
+    "runtime remains unchanged",
+    "sitemap remains unchanged"
+  ],
+  "notes": [
+    "Rollback restores only internal declarative artifacts because no production artifact is created."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "publishing-draft-calculator-calculadora-multa-40-fgts",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "assetType": "calculator",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "publishingReference": "/data/publishing/registry/index.json",
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft",
+    "readyToPublish": false,
+    "published": false,
+    "deployed": false
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false
+  }
+}

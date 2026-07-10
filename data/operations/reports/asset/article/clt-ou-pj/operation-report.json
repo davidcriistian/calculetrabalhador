@@ -1,0 +1,62 @@
+{
+  "id": "operation-report-create-asset-article-clt-ou-pj",
+  "reportType": "create-asset-report",
+  "operationId": "create-asset",
+  "version": "0.1.0",
+  "status": "completed-internal-draft",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetType": "article",
+  "assetId": "article:clt-ou-pj",
+  "publicSlug": "clt-ou-pj",
+  "referenceStatus": "approved-internal-relationship",
+  "relationshipType": "pillar-article",
+  "relationshipStatus": "approved",
+  "sourceResolution": {
+    "manifest": "/data/manifests/operations/asset/index.json",
+    "operationalDefaults": "/data/operations/defaults/index.json",
+    "pam": "/data/blueprints/shared/pam/index.json",
+    "blueprint": "/data/blueprints/article/index.json",
+    "goldStandard": "/data/gold-standards/article/index.json",
+    "reference": "/data/references/articles/index.json",
+    "relationshipApproval": "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+    "registry": "/data/registry/by-type/index.json",
+    "publishing": "/data/publishing/registry/index.json",
+    "testing": "/data/pos/testing/index.json",
+    "validation": "/data/pos/validation/index.json"
+  },
+  "outputs": {
+    "articleSpecification": "/data/operations/reports/asset/article/clt-ou-pj/article-draft-specification.json",
+    "relationshipMap": "/data/operations/reports/asset/article/clt-ou-pj/relationship-map.json",
+    "registryEntry": "/data/operations/reports/asset/article/clt-ou-pj/registry-draft-entry.json",
+    "publishingEntry": "/data/operations/reports/asset/article/clt-ou-pj/publishing-draft-entry.json",
+    "testingPlan": "/data/operations/reports/asset/article/clt-ou-pj/testing-plan.json",
+    "validationPlan": "/data/operations/reports/asset/article/clt-ou-pj/validation-plan.json",
+    "rollbackPlan": "/data/operations/reports/asset/article/clt-ou-pj/rollback-plan.json",
+    "auditReport": "/data/operations/reports/asset/article/clt-ou-pj/audit-report.json"
+  },
+  "editorialObservations": [
+    "The article has calculator CTA evidence at beginning, middle and final positions.",
+    "No article content was changed."
+  ],
+  "warnings": [
+    "Reference System contains official article references for sibling CLT ou PJ articles, while this pillar article is represented through internal relationship approval evidence.",
+    "Testing and validation plans were generated but not executed."
+  ],
+  "blockingIssues": [],
+  "productionImpact": {
+    "publicArticleChanged": false,
+    "contentChanged": false,
+    "htmlChanged": false,
+    "cssChanged": false,
+    "javascriptChanged": false,
+    "seoChanged": false,
+    "urlChanged": false,
+    "sitemapChanged": false,
+    "runtimeChanged": false,
+    "publicationExecuted": false
+  }
+}

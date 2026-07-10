@@ -1,0 +1,28 @@
+{
+  "id": "publishing-draft-article-clt-ou-pj",
+  "assetId": "article:clt-ou-pj",
+  "assetType": "article",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "references": [
+    "/data/operations/reports/asset/article/clt-ou-pj/publishing-draft-entry.json",
+    "/data/operations/reports/asset/article/clt-ou-pj/rollback-plan.json"
+  ],
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft"
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "relationship-map-article-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "relationshipStatus": "approved",
+  "approvalStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "article:clt-ou-pj",
+  "assetType": "article",
+  "relationshipType": "pillar-article",
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:clt-ou-pj",
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "blueprint": "article-blueprint-template",
+    "goldStandard": "article-gold-standard"
+  },
+  "relationshipEvidence": [
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+  ],
+  "notDerived": [
+    "products",
+    "offers",
+    "commercialCtas",
+    "downloads",
+    "glossary",
+    "campaigns"
+  ]
+}

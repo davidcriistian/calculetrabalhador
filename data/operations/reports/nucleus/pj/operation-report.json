@@ -1,0 +1,198 @@
+{
+  "id": "operation-report-create-nucleus-pj",
+  "reportType": "create-nucleus-report",
+  "operationId": "create-nucleus",
+  "version": "0.1.0",
+  "status": "completed-internal-draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "inputs": {
+    "name": "PJ",
+    "id": "pj",
+    "slug": "pj",
+    "primaryDomain": "pj",
+    "guideId": "guide-pj",
+    "guideSlug": "pj",
+    "guideUrl": "/guias/pj/",
+    "objective": "Comparar contratacao PJ com outras modalidades e organizar conteudos, ferramentas e orientacoes destinadas a profissionais PJ.",
+    "targetAudience": "Profissionais, empresas e prestadores de servico.",
+    "searchIntent": "informational + calculator + comparison",
+    "owner": "core-platform",
+    "initialClusters": ["clt-ou-pj"],
+    "eligibleProducts": [],
+    "eligibleOffers": [],
+    "eligibleCTAs": [],
+    "commercialStatus": "not-configured",
+    "referenceStatus": "unavailable",
+    "manualReviewRequired": true
+  },
+  "outputs": {
+    "nucleusSpecification": "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+    "guideSpecification": "/data/operations/reports/nucleus/pj/guide-draft-specification.json",
+    "relationshipMap": "/data/operations/reports/nucleus/pj/relationship-map.json",
+    "registryDraftEntry": "/data/operations/reports/nucleus/pj/registry-draft-entry.json",
+    "publishingDraftEntry": "/data/operations/reports/nucleus/pj/publishing-draft-entry.json",
+    "testingPlan": "/data/operations/reports/nucleus/pj/testing-plan.json",
+    "validationPlan": "/data/operations/reports/nucleus/pj/validation-plan.json",
+    "rollbackPlan": "/data/operations/reports/nucleus/pj/rollback-plan.json",
+    "auditReport": "/data/operations/reports/nucleus/pj/audit-report.json"
+  },
+  "defaultResolutionReport": [
+    {
+      "field": "strategyVersion",
+      "originalValue": null,
+      "appliedValue": "0.1.0",
+      "reason": "Resolved from current Strategy registry version.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "goldStandardVersion",
+      "originalValue": null,
+      "appliedValue": "1.0",
+      "reason": "Resolved from current guide Gold Standard.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "blueprintVersion",
+      "originalValue": null,
+      "appliedValue": "0.1.0",
+      "reason": "Resolved from current Nucleus, Guide and Cluster Blueprint versions.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "reference",
+      "originalValue": null,
+      "appliedValue": null,
+      "reason": "No official guide reference is available; draft creation is allowed with warning and manual review.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "runtimeStatus",
+      "originalValue": null,
+      "appliedValue": "not-consumed",
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "visibility",
+      "originalValue": null,
+      "appliedValue": "internal",
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "publishingStatus",
+      "originalValue": null,
+      "appliedValue": "draft",
+      "reason": "Resolved by Operational Defaults Policy and operation scope.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "testingRequired",
+      "originalValue": null,
+      "appliedValue": true,
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "validationRequired",
+      "originalValue": null,
+      "appliedValue": true,
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "publishingRequired",
+      "originalValue": null,
+      "appliedValue": true,
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "rollbackRequired",
+      "originalValue": null,
+      "appliedValue": true,
+      "reason": "Resolved by Operational Defaults Policy.",
+      "resolvedByDefault": true
+    },
+    {
+      "field": "manualApprovalRequired",
+      "originalValue": true,
+      "appliedValue": true,
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    },
+    {
+      "field": "owner",
+      "originalValue": "core-platform",
+      "appliedValue": "core-platform",
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    },
+    {
+      "field": "commercialStatus",
+      "originalValue": "not-configured",
+      "appliedValue": "not-configured",
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    },
+    {
+      "field": "eligibleProducts",
+      "originalValue": [],
+      "appliedValue": [],
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    },
+    {
+      "field": "eligibleOffers",
+      "originalValue": [],
+      "appliedValue": [],
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    },
+    {
+      "field": "eligibleCTAs",
+      "originalValue": [],
+      "appliedValue": [],
+      "reason": "Provided by input and preserved.",
+      "resolvedByDefault": false
+    }
+  ],
+  "warnings": [
+    "No official guide reference is available.",
+    "The proposed guide URL /guias/pj/ is recorded as draft only and is not created.",
+    "Existing candidate calculator and article assets are not linked automatically.",
+    "Testing and validation plans were generated but not executed."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only",
+    "productionPathCheck": {
+      "publicGuidePath": "not-found",
+      "publicGuidesDirectory": "not-found"
+    },
+    "additionalChecks": {
+      "transformRules": "pass",
+      "shadowAdicionalNoturno": "pass",
+      "shadowAvisoPrevio": "pass"
+    }
+  },
+  "finalLifecycle": "draft",
+  "productionImpact": {
+    "publicPageCreated": false,
+    "htmlCreated": false,
+    "runtimeChanged": false,
+    "seoChanged": false,
+    "urlCreated": false,
+    "sitemapChanged": false,
+    "deployExecuted": false,
+    "indexNowCalled": false
+  },
+  "nextAction": "manual-review-before-validation"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "guide-pj",
+  "type": "guide",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/guide/schemas/guide-blueprint.schema.json",
+  "status": "draft",
+  "lifecycle": "draft",
+  "runtimeStatus": "not-consumed",
+  "visibility": "internal",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "blueprintReference": "/data/blueprints/guide/index.json",
+  "goldStandardReference": "/data/gold-standards/guide/index.json",
+  "identity": {
+    "id": "guide-pj",
+    "name": "Guia PJ",
+    "slug": "pj",
+    "urlPattern": "/guias/{slug}/",
+    "proposedUrl": "/guias/pj/",
+    "urlStatus": "not-created",
+    "primaryNucleus": "pj",
+    "primaryDomain": "pj",
+    "goldStandardType": "guide",
+    "goldStandardVersion": "1.0",
+    "officialReference": null,
+    "referenceStatus": "unavailable",
+    "manualReviewRequired": true
+  },
+  "structure": {
+    "requiredByGoldStandard": ["hero", "introduction", "clusters", "calculators", "articles", "faq", "navigation", "seo"],
+    "plannedClusters": ["clt-ou-pj"],
+    "plannedCalculators": [],
+    "plannedArticles": [],
+    "eligibleProducts": [],
+    "eligibleOffers": [],
+    "eligibleCTAs": []
+  },
+  "seo": {
+    "status": "draft-not-configured",
+    "title": null,
+    "metaDescription": null,
+    "canonical": null,
+    "jsonLd": [],
+    "indexingPolicy": "controlled-by-publishing",
+    "modifiesSeoNow": false
+  },
+  "publishing": {
+    "publishingStatus": "draft",
+    "maximumLifecycleAllowedInThisOperation": "draft",
+    "createsPublicPage": false,
+    "createsPreview": false,
+    "modifiesSitemap": false,
+    "callsIndexNow": false,
+    "deploys": false
+  },
+  "notes": [
+    "The proposed URL is recorded only as an internal draft value.",
+    "No public guide page exists or is created by this specification.",
+    "Publication remains blocked until future review, validation, approval and publishing gates."
+  ]
+}

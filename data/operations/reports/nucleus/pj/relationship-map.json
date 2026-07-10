@@ -1,0 +1,55 @@
+{
+  "id": "relationship-map-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "relationships": {
+    "domain": {
+      "id": "pj",
+      "authority": "/data/core/registry/domains.json",
+      "status": "planned"
+    },
+    "nucleus": {
+      "id": "pj",
+      "slug": "pj",
+      "status": "draft",
+      "specification": "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json"
+    },
+    "guide": {
+      "id": "guide-pj",
+      "slug": "pj",
+      "proposedUrl": "/guias/pj/",
+      "status": "draft",
+      "specification": "/data/operations/reports/nucleus/pj/guide-draft-specification.json"
+    },
+    "plannedClusters": [
+      {
+        "id": "clt-ou-pj",
+        "status": "planned-only",
+        "createsClusterNow": false,
+        "linksExistingAssetsNow": false
+      }
+    ],
+    "products": [],
+    "offers": [],
+    "ctas": []
+  },
+  "candidateExistingAssets": {
+    "linkedAutomatically": false,
+    "reason": "The operation scope allows only plannedClusters and forbids automatic attachment of existing calculators or articles.",
+    "requiresFutureValidation": true
+  },
+  "constraints": {
+    "noPublicPage": true,
+    "noHtml": true,
+    "noCalculator": true,
+    "noArticle": true,
+    "noProductionChange": true,
+    "noRuntimeConsumption": true
+  }
+}

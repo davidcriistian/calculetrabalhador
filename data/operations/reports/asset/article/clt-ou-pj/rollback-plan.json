@@ -1,0 +1,41 @@
+{
+  "id": "rollback-plan-article-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "rollbackType": "internal-asset-provisioning",
+  "assetId": "article:clt-ou-pj",
+  "productionRollbackRequired": false,
+  "restoreScope": {
+    "internalFilesCreated": [
+      "/data/operations/reports/asset/article/clt-ou-pj/article-draft-specification.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/relationship-map.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/registry-draft-entry.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/publishing-draft-entry.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/testing-plan.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/validation-plan.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/rollback-plan.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/operation-report.json",
+      "/data/operations/reports/asset/article/clt-ou-pj/audit-report.json",
+      "/data/registry/by-type/article-clt-ou-pj.json",
+      "/data/publishing/registry/article-clt-ou-pj-draft.json"
+    ],
+    "internalFilesModified": [
+      "/data/registry/by-type/index.json",
+      "/data/publishing/registry/index.json"
+    ],
+    "productionFiles": []
+  },
+  "rollbackSteps": [
+    "Remove internal article registry draft entry.",
+    "Remove internal article publishing draft entry.",
+    "Remove internal article provisioning reports.",
+    "Run JSON validation.",
+    "Run internal reference validation.",
+    "Run governance validation.",
+    "Confirm public article, content, SEO, URL and sitemap are unchanged."
+  ]
+}

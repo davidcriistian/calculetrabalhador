@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-restrictions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/restriction.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Official restrictions for future operation manifests.",
   "globalRestrictions": [
     {
@@ -49,6 +49,16 @@
       "id": "logical-components-only",
       "rule": "Manifests must avoid large physical file lists and should reference logical components.",
       "appliesTo": ["all-operations"]
+    },
+    {
+      "id": "no-real-nucleus-creation-in-phase-4-1",
+      "rule": "Nucleus operations in Phase 4.1 must not create real nuclei, public guides or pages.",
+      "appliesTo": ["create-nucleus", "expand-nucleus", "update-nucleus", "validate-nucleus", "publish-nucleus"]
+    },
+    {
+      "id": "no-nucleus-production-surface-change",
+      "rule": "Nucleus operations must not change public pages, runtime, SEO, URLs, sitemap, public catalogs or pending public working tree files.",
+      "appliesTo": ["create-nucleus", "expand-nucleus", "update-nucleus", "validate-nucleus", "publish-nucleus"]
     }
   ],
   "blockedProductionSurfaces": [

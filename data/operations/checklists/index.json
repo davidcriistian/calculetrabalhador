@@ -1,13 +1,13 @@
 {
   "id": "operation-checklists",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2 - Operation System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Official before, during and after checklists.",
   "before": [
     "confirm-constitution",
@@ -32,7 +32,11 @@
     "record-approval",
     "confirm-no-unapproved-production-change"
   ],
+  "partitions": {
+    "nucleus": "/data/operations/checklists/nucleus/index.json"
+  },
   "notes": [
-    "Checklists guide future operation execution."
+    "Checklists guide future operation execution.",
+    "Nucleus checklists include pre-operation, execution, post-operation, approval and rollback readiness."
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "id": "testing-plan-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "testingReference": "/data/pos/testing/index.json",
+  "executionStatus": "not-run",
+  "required": true,
+  "scope": {
+    "assetId": "pj",
+    "guideId": "guide-pj",
+    "plannedClusters": ["clt-ou-pj"],
+    "runtimeAffected": false,
+    "productionAffected": false
+  },
+  "plannedChecks": [
+    "relationship-integrity",
+    "catalog-integrity",
+    "navigation-integrity",
+    "link-integrity",
+    "content-aggregation",
+    "empty-state",
+    "duplicate-prevention",
+    "seo-regression",
+    "layout-regression"
+  ],
+  "evidenceRequired": [
+    "nucleus-draft-specification",
+    "guide-draft-specification",
+    "relationship-map",
+    "registry-draft-entry",
+    "publishing-draft-entry"
+  ],
+  "notes": [
+    "This plan is generated only; tests are not executed in this operation."
+  ]
+}

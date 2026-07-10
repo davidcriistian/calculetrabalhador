@@ -1,0 +1,69 @@
+{
+  "id": "proposed-relationship-map-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "cluster": "clt-ou-pj",
+  "approvedRecommendation": {
+    "primaryCalculator": {
+      "id": "calculadora-clt-ou-pj",
+      "classification": "primary-calculator",
+      "recommendation": "approve-with-notes",
+      "relationshipStatus": "candidate",
+      "approvalStatus": "pending-approval"
+    },
+    "pillarArticle": {
+      "id": "clt-ou-pj",
+      "classification": "pillar-article",
+      "recommendation": "approve-with-notes",
+      "relationshipStatus": "candidate",
+      "approvalStatus": "pending-approval"
+    },
+    "satelliteArticles": [
+      {
+        "id": "como-calcular-clt-ou-pj",
+        "classification": "satellite-article",
+        "recommendation": "approve"
+      },
+      {
+        "id": "vantagens-e-desvantagens-clt-ou-pj",
+        "classification": "satellite-article",
+        "recommendation": "approve"
+      },
+      {
+        "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "classification": "satellite-article",
+        "recommendation": "approve-with-notes"
+      },
+      {
+        "id": "clt-ou-pj-vale-a-pena-em-2026",
+        "classification": "satellite-article",
+        "recommendation": "approve-with-notes"
+      }
+    ]
+  },
+  "pendingManualApproval": [
+    "calculadora-clt-ou-pj",
+    "clt-ou-pj",
+    "como-calcular-clt-ou-pj",
+    "vantagens-e-desvantagens-clt-ou-pj",
+    "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "clt-ou-pj-vale-a-pena-em-2026"
+  ],
+  "rejectedCandidates": [],
+  "needsRevision": [
+    {
+      "id": "vantagens-e-desvantagens-clt-ou-pj",
+      "reason": "Possible final CTA placement review before approval."
+    },
+    {
+      "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "reason": "Possible final CTA placement review before approval."
+    }
+  ],
+  "officialRelationshipsCreated": false
+}

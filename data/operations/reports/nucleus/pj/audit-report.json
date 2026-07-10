@@ -1,0 +1,123 @@
+{
+  "id": "audit-report-create-nucleus-pj",
+  "version": "0.1.0",
+  "status": "passed-with-warnings",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "auditScope": [
+    "PAM",
+    "Nucleus Blueprint",
+    "Guide Blueprint",
+    "Cluster Blueprint",
+    "Gold Standard",
+    "Manifest",
+    "Workflow",
+    "Registry",
+    "Publishing",
+    "Testing",
+    "Validation",
+    "Strategy",
+    "Core",
+    "Domain Relationship Model"
+  ],
+  "checks": [
+    {
+      "id": "core-domain-pj",
+      "status": "pass",
+      "evidence": "/data/core/registry/domains.json"
+    },
+    {
+      "id": "pam-compatible",
+      "status": "pass",
+      "evidence": "/data/blueprints/shared/pam/index.json"
+    },
+    {
+      "id": "nucleus-blueprint-compatible",
+      "status": "pass",
+      "evidence": "/data/blueprints/nucleus/index.json"
+    },
+    {
+      "id": "guide-blueprint-compatible",
+      "status": "pass",
+      "evidence": "/data/blueprints/guide/index.json"
+    },
+    {
+      "id": "cluster-blueprint-compatible",
+      "status": "pass",
+      "evidence": "/data/blueprints/cluster/index.json"
+    },
+    {
+      "id": "gold-standard-guide",
+      "status": "pass",
+      "evidence": "/data/gold-standards/guide/index.json"
+    },
+    {
+      "id": "reference-system",
+      "status": "warning",
+      "evidence": "/data/references/guides/index.json",
+      "message": "No official guide reference is registered; manual review is required."
+    },
+    {
+      "id": "manifest-create-nucleus",
+      "status": "pass",
+      "evidence": "/data/manifests/operations/nucleus/index.json"
+    },
+    {
+      "id": "workflow-create-nucleus",
+      "status": "pass",
+      "evidence": "/data/operations/workflows/nucleus/index.json"
+    },
+    {
+      "id": "registry-draft-only",
+      "status": "pass",
+      "evidence": "/data/registry/by-nucleus/pj.json"
+    },
+    {
+      "id": "publishing-draft-only",
+      "status": "pass",
+      "evidence": "/data/publishing/registry/pj-draft.json"
+    },
+    {
+      "id": "testing-plan-only",
+      "status": "pass",
+      "evidence": "/data/operations/reports/nucleus/pj/testing-plan.json"
+    },
+    {
+      "id": "validation-plan-only",
+      "status": "pass",
+      "evidence": "/data/operations/reports/nucleus/pj/validation-plan.json"
+    },
+    {
+      "id": "production-isolation",
+      "status": "pass",
+      "evidence": "No production file is part of this operation scope."
+    }
+  ],
+  "consistency": {
+    "ids": "pass",
+    "slugs": "pass",
+    "relationships": "pass",
+    "owners": "pass",
+    "statuses": "pass",
+    "lifecycles": "pass",
+    "references": "passed-with-warning"
+  },
+  "warnings": [
+    "Reference status remains unavailable.",
+    "The guide URL is proposed only and no public route was created.",
+    "The cluster clt-ou-pj is planned only and has no automatic asset attachments.",
+    "git diff --check returned line-ending warnings only for existing working-tree files."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only",
+    "publicGuidePathCreated": false
+  },
+  "conclusion": "The PJ nucleus is provisioned as an internal draft only."
+}

@@ -1,6 +1,6 @@
 {
   "id": "constitution-history",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/constitution/schemas/constitution.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -32,6 +32,23 @@
         "Blocked new transversal models and made new layers exception-only."
       ],
       "notes": []
+    },
+    {
+      "id": "asset-identity-policy-0.1.0",
+      "version": "0.3.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "active",
+      "changes": [
+        "Created Asset Identity Policy.",
+        "Formalized typed assetId as canonical identity.",
+        "Allowed publicSlug reuse across asset types.",
+        "Declared relationship maps must use assetId instead of slug, title or URL.",
+        "Recorded normalization recommendations for future approved migration."
+      ],
+      "notes": [
+        "No public slug, URL, runtime, asset or operational relationship was modified."
+      ]
     }
   ],
   "notes": [

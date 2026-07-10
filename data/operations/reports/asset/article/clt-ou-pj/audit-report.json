@@ -1,0 +1,53 @@
+{
+  "id": "audit-report-create-asset-article-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "passed-with-warnings",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "article:clt-ou-pj",
+  "checks": [
+    {
+      "id": "asset-identity-policy",
+      "status": "pass",
+      "evidence": "/data/constitution/governance/asset-identity-policy.json"
+    },
+    {
+      "id": "create-asset-manifest",
+      "status": "pass",
+      "evidence": "/data/manifests/operations/asset/index.json"
+    },
+    {
+      "id": "article-blueprint",
+      "status": "pass",
+      "evidence": "/data/blueprints/article/index.json"
+    },
+    {
+      "id": "article-gold-standard",
+      "status": "pass",
+      "evidence": "/data/gold-standards/article/index.json"
+    },
+    {
+      "id": "relationship-approval",
+      "status": "pass",
+      "evidence": "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+    },
+    {
+      "id": "calculator-cta-observation",
+      "status": "pass",
+      "message": "CTA evidence found at beginning, middle and final positions."
+    },
+    {
+      "id": "no-production-impact",
+      "status": "pass"
+    }
+  ],
+  "warnings": [
+    "The central Reference System does not currently list /blog/clt-ou-pj/ as an official article reference item; internal relationship approval is used as reference evidence for this pillar asset.",
+    "No public file was changed."
+  ],
+  "blockingIssues": [],
+  "conclusion": "The pillar article is represented internally as a governed article asset draft."
+}

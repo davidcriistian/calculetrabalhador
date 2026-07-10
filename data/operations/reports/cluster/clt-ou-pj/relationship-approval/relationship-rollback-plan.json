@@ -1,0 +1,36 @@
+{
+  "id": "relationship-rollback-plan-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "rollbackType": "internal-relationship-approval",
+  "productionRollbackRequired": false,
+  "restoreTo": {
+    "relationshipStatus": "candidate",
+    "approvalStatus": "pending-approval",
+    "clusterDraftSpecification": "previous candidate-only relationship state",
+    "registryDraftEntry": "previous pending-approval state",
+    "publishingDraftEntry": "previous pending-approval state"
+  },
+  "restoreScope": [
+    "/data/operations/reports/cluster/clt-ou-pj/cluster-draft-specification.json",
+    "/data/operations/reports/cluster/clt-ou-pj/registry-draft-entry.json",
+    "/data/operations/reports/cluster/clt-ou-pj/publishing-draft-entry.json",
+    "/data/registry/by-cluster/clt-ou-pj.json",
+    "/data/registry/by-cluster/index.json",
+    "/data/publishing/registry/clt-ou-pj-draft.json",
+    "/data/publishing/registry/index.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/"
+  ],
+  "rollbackSteps": [
+    "Restore approvalStatus to pending-approval.",
+    "Restore relationshipStatus to candidate.",
+    "Remove approved internal relationship map from active references.",
+    "Preserve candidate-review artifacts as historical evidence unless the rollback operation explicitly removes approval records.",
+    "Run JSON validation, internal reference validation and governance validation.",
+    "Confirm no public file changed."
+  ]
+}

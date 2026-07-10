@@ -1,0 +1,28 @@
+{
+  "id": "validation-plan-article-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "article:clt-ou-pj",
+  "validationReference": "/data/pos/validation/index.json",
+  "executionStatus": "not-run",
+  "plannedValidations": [
+    "PAM",
+    "Article Blueprint",
+    "Article Gold Standard",
+    "Reference System",
+    "Asset Identity Policy",
+    "Relationship Integrity",
+    "Registry",
+    "Publishing Draft",
+    "No Production Impact"
+  ],
+  "publicationBlockersUntilResolved": [
+    "testing-not-run",
+    "validation-not-run",
+    "publishing-approval-not-requested"
+  ]
+}

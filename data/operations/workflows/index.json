@@ -1,19 +1,23 @@
 {
   "id": "operation-workflows",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2 - Operation System",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Declarative workflow model for operations.",
   "defaultWorkflow": [
     "input",
+    "resolve-defaults",
     "preconditions",
+    "pam",
     "blueprint",
-    "core",
+    "gold-standard",
+    "reference",
+    "registry",
     "testing",
     "validation",
     "publishing",
@@ -26,7 +30,13 @@
     "approvalRequired": true,
     "rollbackRequired": true
   },
+  "partitions": {
+    "asset": "/data/operations/workflows/asset/index.json",
+    "nucleus": "/data/operations/workflows/nucleus/index.json"
+  },
   "notes": [
-    "Workflows define order, not execution."
+    "Workflows define order, not execution.",
+    "Generic asset workflows define the create-asset base flow.",
+    "Nucleus workflows reuse PAM lifecycle and Publishing gates."
   ]
 }

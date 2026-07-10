@@ -191,6 +191,28 @@ O POS Registry nao e catalogo mestre de ativos. O Registry System nao armazena a
 
 Os catalogos publicos atuais continuam sendo `data/tools.json` e `data/articles.json` ate uma futura migracao aprovada. O Registry System nao substitui esses arquivos nesta fase e nao cria consumo operacional.
 
+### Asset Identity Policy
+
+A identidade canonica de qualquer ativo e definida pela Asset Identity Policy em:
+
+```text
+data/constitution/governance/asset-identity-policy.json
+```
+
+Todo ativo deve possuir `assetId`, `assetType`, `publicSlug`, `displayName`, `version`, `status` e `owner`.
+
+O `assetId` e a chave interna imutavel e deve usar identificador tipado, como `cluster:clt-ou-pj`, `article:clt-ou-pj` ou `calculator:calculadora-clt-ou-pj`.
+
+O `publicSlug` e apenas atributo publico de rota ou exibicao. Ele nao precisa ser unico globalmente e pode se repetir entre tipos diferentes. Relacionamentos internos, Registry, PAM, Publishing, Testing, Validation, Operations, Manifest e mapas de relacionamento devem usar `assetId`, nunca slug, titulo ou URL.
+
+Normalizacoes futuras recomendadas ficam em:
+
+```text
+data/constitution/governance/asset-identity-normalization-plan.json
+```
+
+Esse plano nao executa migracao e nao altera slugs, URLs, runtime ou relacionamentos operacionais existentes.
+
 ### Papel Oficial do Shadow
 
 Shadow e uma camada temporaria de evidencia tecnica e baseline. Ele existe para comparar arquitetura legada e nova, registrar equivalencia, fornecer evidencia para Testing e Validation e apoiar migracoes controladas.

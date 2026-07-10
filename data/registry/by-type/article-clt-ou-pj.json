@@ -1,0 +1,23 @@
+{
+  "id": "clt-ou-pj",
+  "assetId": "article:clt-ou-pj",
+  "type": "article",
+  "slug": "clt-ou-pj",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "references": [
+    "/data/operations/reports/asset/article/clt-ou-pj/article-draft-specification.json",
+    "/data/operations/reports/asset/article/clt-ou-pj/relationship-map.json",
+    "/data/operations/reports/asset/article/clt-ou-pj/registry-draft-entry.json",
+    "/data/operations/reports/asset/article/clt-ou-pj/publishing-draft-entry.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+  ],
+  "notes": [
+    "Internal governed representation only.",
+    "This entry does not feed runtime or public pages."
+  ]
+}

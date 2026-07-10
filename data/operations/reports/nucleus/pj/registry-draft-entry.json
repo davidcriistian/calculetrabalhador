@@ -1,0 +1,22 @@
+{
+  "id": "pj",
+  "type": "nucleus",
+  "slug": "pj",
+  "status": "draft",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "runtimeStatus": "not-consumed",
+  "references": [
+    "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+    "/data/operations/reports/nucleus/pj/guide-draft-specification.json",
+    "/data/operations/reports/nucleus/pj/relationship-map.json",
+    "/data/operations/reports/nucleus/pj/publishing-draft-entry.json"
+  ],
+  "registryRules": {
+    "storesFullAsset": false,
+    "storesKnowledge": false,
+    "storesSeoSource": false,
+    "feedsRuntime": false,
+    "modifiesProduction": false
+  }
+}

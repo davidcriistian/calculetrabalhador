@@ -1,0 +1,55 @@
+{
+  "id": "asset-operation-report-templates",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/report.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
+  "description": "Generic report templates for create-asset operations.",
+  "requiredOutputs": [
+    "assetSpecification",
+    "relationshipMap",
+    "registryEntry",
+    "publishingEntry",
+    "testingPlan",
+    "validationPlan",
+    "rollbackPlan",
+    "operationReport",
+    "auditReport"
+  ],
+  "operationReportTemplate": {
+    "operationId": "create-asset",
+    "assetType": null,
+    "assetId": null,
+    "status": "draft",
+    "runtimeStatus": "not-consumed",
+    "defaultsApplied": [],
+    "sourceResolution": {
+      "blueprint": null,
+      "goldStandard": null,
+      "reference": null,
+      "testing": null,
+      "validation": null,
+      "publishing": null
+    },
+    "outputs": [],
+    "warnings": [],
+    "blockingIssues": [],
+    "validations": []
+  },
+  "auditReportTemplate": {
+    "assetIdentityPolicyCompliance": "not-run",
+    "pamCompliance": "not-run",
+    "blueprintResolution": "not-run",
+    "registryConsistency": "not-run",
+    "publishingDraftOnly": "not-run",
+    "noProductionImpact": "not-run"
+  },
+  "notes": [
+    "These templates do not create assets.",
+    "Specific asset operations may add type-specific report sections without duplicating the generic report structure."
+  ]
+}

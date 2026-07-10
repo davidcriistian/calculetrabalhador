@@ -1,0 +1,85 @@
+{
+  "id": "clt-ou-pj",
+  "assetId": "article:clt-ou-pj",
+  "assetType": "article",
+  "type": "article",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/article-blueprint.schema.json",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "visibility": "internal",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational Capabilities Phase 5.0 - create-asset article instance",
+  "displayName": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+  "publicSlug": "clt-ou-pj",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/clt-ou-pj/",
+  "relationshipType": "pillar-article",
+  "referenceStatus": "approved-internal-relationship",
+  "referenceType": "Official Pillar Article Reference",
+  "referenceEvidence": [
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+    "/data/operations/reports/cluster/clt-ou-pj/candidate-review/pillar-comparison.json",
+    "/data/references/articles/index.json"
+  ],
+  "blueprint": {
+    "type": "article",
+    "reference": "/data/blueprints/article/index.json",
+    "version": "0.2.0"
+  },
+  "goldStandard": {
+    "type": "article",
+    "reference": "/data/gold-standards/article/index.json",
+    "version": "1.0",
+    "status": "active-foundation"
+  },
+  "sourceCatalogSnapshot": {
+    "source": "/data/articles.json",
+    "id": "clt-ou-pj",
+    "slug": "/blog/clt-ou-pj",
+    "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+    "category": "CLT",
+    "publishedAt": "2026-06-07",
+    "updatedAt": "2026-06-07"
+  },
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:clt-ou-pj",
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj"
+  },
+  "editorialObservations": [
+    {
+      "id": "calculator-cta-placement",
+      "status": "observed",
+      "expected": ["inicio", "meio", "final"],
+      "observedEvidence": ["cta-inicial", "cta-intermediario", "cta-principal"],
+      "actionTaken": "none",
+      "modifiesArticle": false
+    }
+  ],
+  "operationalBoundaries": {
+    "createsNewArticle": false,
+    "modifiesPublicArticle": false,
+    "modifiesContent": false,
+    "modifiesHtml": false,
+    "modifiesCss": false,
+    "modifiesJavascript": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "publishes": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "This is an internal governed representation of an existing public pillar article.",
+    "No article HTML, content, SEO, URL or runtime behavior is copied or modified.",
+    "The relationship to cluster:clt-ou-pj is internal-only and not consumed by runtime."
+  ]
+}

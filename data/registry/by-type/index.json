@@ -11,7 +11,28 @@
   "partition": "by-type",
   "description": "Partition prepared to discover assets by type.",
   "supportedTypes": ["calculator", "article", "cluster", "product", "campaign", "blueprint", "engine", "domain", "nucleus"],
-  "entries": [],
+  "entries": [
+    {
+      "id": "calculadora-multa-40-fgts",
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "type": "calculator",
+      "slug": "calculadora-multa-40-fgts",
+      "status": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "references": ["/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"]
+    },
+    {
+      "id": "clt-ou-pj",
+      "assetId": "article:clt-ou-pj",
+      "type": "article",
+      "slug": "clt-ou-pj",
+      "status": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "references": ["/data/registry/by-type/article-clt-ou-pj.json"]
+    }
+  ],
   "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
-  "notes": ["This partition is empty and does not duplicate assets."]
+  "notes": ["This partition stores lightweight registry references only and does not duplicate assets."]
 }

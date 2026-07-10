@@ -1,0 +1,72 @@
+{
+  "id": "calculadora-multa-40-fgts",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "assetType": "calculator",
+  "type": "calculator",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "visibility": "internal",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational Capabilities Phase 4.9 - create-asset calculator instance",
+  "displayName": "Calculadora Multa de 40% do FGTS",
+  "publicSlug": "calculadora-multa-40-fgts",
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-multa-40-fgts/",
+  "referenceStatus": "official-reference",
+  "referenceType": "Official Calculator Reference",
+  "reference": "/data/references/calculators/index.json#calculator-multa-40-fgts-reference",
+  "blueprint": {
+    "type": "calculator",
+    "reference": "/data/blueprints/calculator/index.json",
+    "version": "0.2.0"
+  },
+  "goldStandard": {
+    "type": "calculator",
+    "reference": "/data/gold-standards/calculator/index.json",
+    "version": "1.0",
+    "status": "active-foundation"
+  },
+  "sourceCatalogSnapshot": {
+    "source": "/data/tools.json",
+    "id": "calculadora-multa-40-fgts",
+    "slug": "/calculadora-multa-40-fgts/",
+    "url": "/calculadora-multa-40-fgts/",
+    "title": "Calculadora Multa de 40% do FGTS",
+    "category": "Rescisao",
+    "domain": "FGTS",
+    "published": true,
+    "status": "published"
+  },
+  "relationshipStatus": "standalone-reference",
+  "relationships": {
+    "primaryDomain": null,
+    "primaryNucleus": null,
+    "primaryGuide": null,
+    "primaryCluster": null,
+    "relatedTools": [],
+    "relatedArticles": []
+  },
+  "operationalBoundaries": {
+    "createsNewCalculator": false,
+    "modifiesPublicCalculator": false,
+    "modifiesHtml": false,
+    "modifiesCss": false,
+    "modifiesJavascript": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "publishes": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "This is an internal governed representation of an existing public reference calculator.",
+    "No calculator HTML, CSS, JavaScript, runtime logic or public URL is copied or modified.",
+    "No official cluster relationship is derived in this phase."
+  ]
+}

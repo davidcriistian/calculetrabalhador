@@ -1,0 +1,63 @@
+{
+  "id": "audit-report-create-asset-calculator-calculadora-multa-40-fgts",
+  "version": "0.1.0",
+  "status": "passed-with-warnings",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "checks": [
+    {
+      "id": "asset-identity-policy",
+      "status": "pass",
+      "evidence": "/data/constitution/governance/asset-identity-policy.json"
+    },
+    {
+      "id": "create-asset-manifest",
+      "status": "pass",
+      "evidence": "/data/manifests/operations/asset/index.json"
+    },
+    {
+      "id": "calculator-blueprint",
+      "status": "pass",
+      "evidence": "/data/blueprints/calculator/index.json"
+    },
+    {
+      "id": "calculator-gold-standard",
+      "status": "pass",
+      "evidence": "/data/gold-standards/calculator/index.json"
+    },
+    {
+      "id": "official-reference",
+      "status": "pass",
+      "evidence": "/data/references/calculators/index.json"
+    },
+    {
+      "id": "relationship-status",
+      "status": "warning",
+      "message": "No official cluster relationship exists; standalone-reference is correct."
+    },
+    {
+      "id": "no-production-impact",
+      "status": "pass"
+    }
+  ],
+  "warnings": [
+    "Standalone reference representation only.",
+    "No cluster, nucleus or guide relationship was derived.",
+    "git diff --check returned line-ending warnings only for existing working-tree files."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "transformRules": "pass",
+    "shadowAdicionalNoturno": "pass",
+    "shadowAvisoPrevio": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only"
+  },
+  "conclusion": "The official calculator reference is represented internally as a governed calculator asset draft."
+}

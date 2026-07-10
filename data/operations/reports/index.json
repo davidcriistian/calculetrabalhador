@@ -1,13 +1,13 @@
 {
   "id": "operation-reports",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/report.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2 - Operation System",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Report models for future operations.",
   "reportTemplate": {
     "reportId": "example-operation-report",
@@ -24,7 +24,13 @@
     },
     "notes": []
   },
+  "partitions": {
+    "asset": "/data/operations/reports/asset/index.json",
+    "nucleus": "/data/operations/reports/nucleus/index.json"
+  },
   "notes": [
-    "Reports document outcomes and do not execute operations."
+    "Reports document outcomes and do not execute operations.",
+    "Generic asset report templates define the base report shape for create-asset.",
+    "Nucleus report templates are declarative and do not create or publish assets."
   ]
 }

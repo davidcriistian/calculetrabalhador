@@ -1,0 +1,40 @@
+{
+  "id": "validation-plan-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "validationReference": "/data/pos/validation/index.json",
+  "executionStatus": "not-run",
+  "required": true,
+  "plannedValidations": [
+    "pam-compliance",
+    "nucleus-blueprint-compliance",
+    "guide-blueprint-compliance",
+    "cluster-blueprint-readiness",
+    "gold-standard-compliance",
+    "domain-relationship-model",
+    "registry-entry-shape",
+    "publishing-lifecycle-draft-only",
+    "reference-warning-recorded",
+    "manual-review-required",
+    "no-production-impact",
+    "no-runtime-consumption"
+  ],
+  "blockingRulesForFuturePublication": [
+    "testing-not-run",
+    "validation-not-run",
+    "reference-unavailable",
+    "manual-approval-missing",
+    "seo-not-configured",
+    "public-page-not-created",
+    "sitemap-not-ready",
+    "deploy-not-ready"
+  ],
+  "notes": [
+    "This plan is generated only; validations are not executed in this operation."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "validation-plan-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "validationReference": "/data/pos/validation/index.json",
+  "executionStatus": "not-run",
+  "required": true,
+  "plannedValidations": [
+    "cluster-blueprint-compliance",
+    "pam-relationship-compatibility",
+    "nucleus-draft-exists",
+    "candidate-status-pending-approval",
+    "no-official-asset-link-created",
+    "registry-entry-shape",
+    "publishing-lifecycle-draft-only",
+    "no-production-impact",
+    "no-runtime-consumption"
+  ],
+  "manualReviewRequired": [
+    "select-primary-calculator",
+    "select-pillar-article",
+    "approve-satellite-articles",
+    "resolve-compatibility-cluster-name-divergence",
+    "confirm-no-slug-conflict-for-future-public-path"
+  ],
+  "notes": [
+    "This plan is generated only; validations are not executed in this operation."
+  ]
+}

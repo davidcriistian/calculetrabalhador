@@ -1,0 +1,29 @@
+{
+  "id": "relationship-validation-plan-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "validationReference": "/data/pos/validation/index.json",
+  "executionStatus": "not-run",
+  "plannedValidations": [
+    "Asset Identity Policy compliance",
+    "PAM relationship compliance",
+    "Domain Relationship Model compliance",
+    "Cluster Blueprint compliance",
+    "approved relationship integrity",
+    "CTA gap tracking",
+    "Gold Standard readiness",
+    "Registry consistency",
+    "Publishing draft-only",
+    "no-production-impact"
+  ],
+  "publicationBlockersUntilResolved": [
+    "possible-final-calculator-cta-gap for article:vantagens-e-desvantagens-clt-ou-pj",
+    "possible-final-calculator-cta-gap for article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "testing-not-run",
+    "validation-not-run"
+  ]
+}

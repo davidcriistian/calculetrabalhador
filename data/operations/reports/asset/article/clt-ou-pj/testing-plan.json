@@ -1,0 +1,29 @@
+{
+  "id": "testing-plan-article-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "article:clt-ou-pj",
+  "testingReference": "/data/pos/testing/index.json",
+  "executionStatus": "not-run",
+  "plannedChecks": [
+    "editorial-structure",
+    "heading-hierarchy",
+    "internal-links",
+    "calculator-cta",
+    "layout-regression",
+    "responsive",
+    "accessibility",
+    "jsonld",
+    "canonical",
+    "breadcrumbs",
+    "reference-integrity"
+  ],
+  "notes": [
+    "This plan is generated only.",
+    "No production or article tests are executed by this provisioning operation."
+  ]
+}

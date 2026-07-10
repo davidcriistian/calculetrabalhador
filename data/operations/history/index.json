@@ -1,6 +1,6 @@
 {
   "id": "operation-system-history",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/operation.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -18,6 +18,50 @@
       "status": "foundation",
       "changes": ["Created Operation System foundation."],
       "notes": []
+    },
+    {
+      "id": "nucleus-operations-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Added nucleus playbooks.",
+        "Added nucleus workflows.",
+        "Added nucleus checklists.",
+        "Added nucleus report templates.",
+        "Kept production and public assets disconnected."
+      ],
+      "notes": []
+    },
+    {
+      "id": "operational-defaults-policy-0.1.0",
+      "version": "0.3.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Added official deterministic defaults policy inside Operation System.",
+        "Defined reporting requirements for resolvedByDefault fields.",
+        "Kept defaults disconnected from production and authoritative knowledge sources."
+      ],
+      "notes": []
+    },
+    {
+      "id": "generic-asset-provisioning-0.1.0",
+      "version": "0.4.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Added generic create-asset playbook.",
+        "Added generic create-asset workflow.",
+        "Added generic create-asset report templates.",
+        "Formalized inheritance for specific create operations."
+      ],
+      "notes": [
+        "No real asset, public page, runtime behavior or publication was created."
+      ]
     }
   ],
   "notes": [

@@ -1,0 +1,35 @@
+{
+  "id": "testing-plan-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "testingReference": "/data/pos/testing/index.json",
+  "executionStatus": "not-run",
+  "required": true,
+  "plannedChecks": [
+    "cluster-asset-map",
+    "candidate-classification",
+    "duplicate-prevention",
+    "relationship-integrity",
+    "catalog-integrity",
+    "link-integrity",
+    "seo-regression",
+    "structure",
+    "runtime-safety"
+  ],
+  "evidenceRequired": [
+    "cluster-draft-specification",
+    "relationship-map",
+    "registry-draft-entry",
+    "publishing-draft-entry",
+    "candidate-source-scan"
+  ],
+  "notes": [
+    "This plan is generated only; tests are not executed in this operation."
+  ]
+}

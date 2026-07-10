@@ -1,0 +1,124 @@
+{
+  "id": "asset-identity-policy",
+  "policy": "Asset Identity Policy",
+  "required": true,
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/policy.schema.json",
+  "status": "active",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Architecture Governance Phase 4.6 - Asset Identity Policy",
+  "objective": "Define canonical asset identity across the platform and eliminate ambiguity between internal ids, public slugs, URLs, titles and relationships.",
+  "mandatoryIdentityFields": [
+    "assetId",
+    "assetType",
+    "publicSlug",
+    "displayName",
+    "version",
+    "status",
+    "owner"
+  ],
+  "assetIdRules": {
+    "uniqueAcrossPlatform": true,
+    "immutable": true,
+    "dependsOnUrl": false,
+    "dependsOnTitle": false,
+    "dependsOnPublicSlug": false,
+    "usedBy": [
+      "Registry",
+      "PAM",
+      "Publishing",
+      "Testing",
+      "Validation",
+      "Operations",
+      "Manifest",
+      "Relationship Map",
+      "Future Automation"
+    ]
+  },
+  "officialFormat": {
+    "usesTypedIdentifiers": true,
+    "pattern": "{assetType}:{localId}",
+    "examples": [
+      "nucleus:pj",
+      "guide:guide-pj",
+      "cluster:clt-ou-pj",
+      "calculator:calculadora-clt-ou-pj",
+      "article:clt-ou-pj",
+      "faq:fgts",
+      "glossary:fgts",
+      "download:planilha-fgts",
+      "product:consultoria-pj",
+      "offer:premium",
+      "cta:simulacao"
+    ]
+  },
+  "publicSlugRules": {
+    "globallyUniqueRequired": false,
+    "mayRepeatAcrossAssetTypes": true,
+    "usedForPublicRoutingOnly": true,
+    "doesNotDefineIdentity": true,
+    "examples": [
+      {
+        "assetId": "cluster:clt-ou-pj",
+        "assetType": "cluster",
+        "publicSlug": "clt-ou-pj"
+      },
+      {
+        "assetId": "article:clt-ou-pj",
+        "assetType": "article",
+        "publicSlug": "clt-ou-pj"
+      }
+    ]
+  },
+  "relationshipRules": {
+    "internalRelationshipsMustUse": "assetId",
+    "mustNotUse": ["slug", "title", "url"],
+    "typedReferencesRequired": true,
+    "relationshipMapsUseAssetId": true
+  },
+  "registryRules": {
+    "primaryKey": "assetId",
+    "mustNotUseSlugAsPrimaryKey": true,
+    "mayStorePublicSlugAsAttribute": true,
+    "storesFullAssets": false
+  },
+  "pamRules": {
+    "canonicalIdentity": "assetId",
+    "publicSlugRole": "public attribute",
+    "assetTypeRequired": true,
+    "displayNameRequired": true
+  },
+  "compatibilityRules": {
+    "calculatorIdCannotBeClusterId": true,
+    "articleIdCannotBeGuideId": true,
+    "guideIdCannotBeNucleusId": true,
+    "relationshipsMustUseCorrectAssetType": true,
+    "legacyMappingsRequireNormalizationPlan": true
+  },
+  "normalization": {
+    "plan": "/data/constitution/governance/asset-identity-normalization-plan.json",
+    "executeMigrationNow": false,
+    "recordsRecommendationsOnly": true
+  },
+  "operationalBoundaries": {
+    "createsLayer": false,
+    "createsEngine": false,
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesPublicSlugs": false,
+    "modifiesUrls": false,
+    "modifiesCalculators": false,
+    "modifiesArticles": false,
+    "modifiesOperationalRelationships": false,
+    "executesMigration": false
+  },
+  "notes": [
+    "This policy applies to present and future assets.",
+    "Existing public slugs and URLs are not changed by this policy.",
+    "Future operations should introduce typed assetId values before promoting relationships.",
+    "Public slug collisions across asset types are allowed when assetId and assetType are explicit."
+  ]
+}

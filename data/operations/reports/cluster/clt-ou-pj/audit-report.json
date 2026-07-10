@@ -1,0 +1,97 @@
+{
+  "id": "audit-report-create-cluster-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "passed-with-warnings",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "auditQuestions": {
+    "candidatesFound": {
+      "candidatePrimaryCalculator": ["calculadora-clt-ou-pj"],
+      "candidatePrimaryArticle": ["clt-ou-pj"],
+      "candidateSatelliteArticles": [
+        "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "vantagens-e-desvantagens-clt-ou-pj",
+        "como-calcular-clt-ou-pj",
+        "clt-ou-pj-vale-a-pena-em-2026"
+      ],
+      "candidateRelatedCalculators": [],
+      "candidateDownloads": [],
+      "candidateProducts": [],
+      "candidateCTA": []
+    },
+    "insufficientInformation": [
+      "No official product candidate found in allowed sources.",
+      "No official CTA candidate found in allowed sources.",
+      "No download candidate found in allowed sources.",
+      "Candidate primary article lacks a url field in data/articles.json, although it has a slug."
+    ],
+    "manualDecisionsRequired": [
+      "Approve or reject calculadora-clt-ou-pj as primary calculator.",
+      "Approve or reject clt-ou-pj as pillar article.",
+      "Approve or reject each satellite article.",
+      "Resolve whether compatibility cluster value calculadora-clt-ou-pj should map to draft cluster clt-ou-pj.",
+      "Confirm future slug policy before any public cluster URL exists."
+    ],
+    "duplicateCandidates": [],
+    "slugConflicts": [
+      {
+        "status": "warning",
+        "message": "Cluster id clt-ou-pj matches article id clt-ou-pj. No public URL conflict was created because this operation does not create a cluster URL."
+      }
+    ],
+    "calculatorArticleInconsistencies": [
+      {
+        "status": "warning",
+        "message": "Compatibility article maps classify related articles under cluster calculadora-clt-ou-pj, while this operation provisions draft cluster clt-ou-pj."
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "nucleus-pj-draft-exists",
+      "status": "pass",
+      "evidence": "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json"
+    },
+    {
+      "id": "cluster-blueprint-compatible",
+      "status": "pass",
+      "evidence": "/data/blueprints/cluster/index.json"
+    },
+    {
+      "id": "registry-draft-only",
+      "status": "pass",
+      "evidence": "/data/registry/by-cluster/clt-ou-pj.json"
+    },
+    {
+      "id": "publishing-draft-only",
+      "status": "pass",
+      "evidence": "/data/publishing/registry/clt-ou-pj-draft.json"
+    },
+    {
+      "id": "production-isolation",
+      "status": "pass",
+      "evidence": "No production file is part of this operation scope."
+    }
+  ],
+  "warnings": [
+    "All candidates remain pending approval.",
+    "No existing asset was modified or officially linked.",
+    "No public page, URL, sitemap entry or deployment was created.",
+    "git diff --check returned line-ending warnings only for existing working-tree files."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only",
+    "transformRules": "pass",
+    "shadowAdicionalNoturno": "pass",
+    "shadowAvisoPrevio": "pass"
+  },
+  "conclusion": "The clt-ou-pj cluster is provisioned as an internal draft only."
+}

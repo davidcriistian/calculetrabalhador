@@ -1,0 +1,27 @@
+{
+  "id": "relationship-testing-plan-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "testingReference": "/data/pos/testing/index.json",
+  "executionStatus": "not-run",
+  "plannedChecks": [
+    "asset-id-integrity",
+    "relationship-cardinality",
+    "primary-calculator-uniqueness",
+    "pillar-article-uniqueness",
+    "satellite-classification",
+    "duplicate-prevention",
+    "catalog-correspondence",
+    "internal-link-plan",
+    "no-runtime-consumption",
+    "rollback-integrity"
+  ],
+  "notes": [
+    "No production tests are executed in this phase.",
+    "This plan must run before any future publication or migration."
+  ]
+}

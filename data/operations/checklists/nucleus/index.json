@@ -1,0 +1,65 @@
+{
+  "id": "nucleus-operation-checklists",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/checklist.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
+  "description": "Reusable checklists for nucleus operations.",
+  "preOperation": [
+    "confirm-architecture-evolution-policy",
+    "confirm-no-new-layer",
+    "confirm-no-new-engine",
+    "load-operation-manifest",
+    "confirm-domain-relationship-model",
+    "confirm-pam",
+    "confirm-nucleus-blueprint",
+    "confirm-guide-blueprint",
+    "confirm-gold-standard",
+    "confirm-reference-system-when-applicable",
+    "confirm-blocked-production-files"
+  ],
+  "execution": [
+    "follow-playbook",
+    "follow-workflow",
+    "record-inputs",
+    "record-decisions",
+    "preserve-canonical-relationships",
+    "preserve-lifecycle-vocabulary",
+    "avoid-hardcoded-design-or-content",
+    "track-estimated-context",
+    "track-estimated-credits",
+    "collect-evidence"
+  ],
+  "postOperation": [
+    "confirm-json-validity",
+    "confirm-references-validity",
+    "confirm-no-production-change",
+    "confirm-no-public-catalog-change",
+    "confirm-no-url-or-sitemap-change",
+    "prepare-operation-report",
+    "record-warnings-and-failures",
+    "define-next-action"
+  ],
+  "approval": [
+    "testing-pass-when-applicable",
+    "validation-pass-when-applicable",
+    "gold-standard-compliance",
+    "manual-approval-when-required",
+    "publishing-gates-when-applicable"
+  ],
+  "rollbackReadiness": [
+    "baseline-captured",
+    "affected-assets-listed",
+    "restore-scope-defined",
+    "rollback-owner-defined",
+    "post-rollback-validation-defined"
+  ],
+  "notes": [
+    "Checklists are declarative and reusable.",
+    "Validation and publishing operations may require stricter gates."
+  ]
+}

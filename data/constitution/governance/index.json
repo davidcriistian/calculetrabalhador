@@ -1,13 +1,13 @@
 {
   "id": "constitution-governance",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/constitution/schemas/governance.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Constitution Governance Rule - Architecture Evolution Policy",
+  "source": "Architecture Governance Phase 4.6 - Asset Identity Policy",
   "description": "Permanent governance rules for the platform.",
   "ownership": {
     "constitutionOwner": "Calcule Trabalhador",
@@ -33,6 +33,8 @@
     "scope": ["principles", "strategy", "blueprints", "operations", "publishing"]
   },
   "architectureEvolutionPolicy": "/data/constitution/governance/architecture-evolution-policy.json",
+  "assetIdentityPolicy": "/data/constitution/governance/asset-identity-policy.json",
+  "assetIdentityNormalizationPlan": "/data/constitution/governance/asset-identity-normalization-plan.json",
   "architectureFreeze": {
     "architectureFoundation": "frozen",
     "newTransversalModels": "blocked",

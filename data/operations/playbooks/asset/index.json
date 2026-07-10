@@ -1,0 +1,49 @@
+{
+  "id": "asset-operation-playbooks",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/playbook.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
+  "description": "Generic create-asset playbook reused by future asset creation operations.",
+  "playbooks": [
+    {
+      "operationId": "create-asset",
+      "objective": "Provision an internal draft asset using official configuration for its assetType.",
+      "minimumInputs": ["assetType", "assetId", "displayName", "owner"],
+      "preconditions": ["asset-type-supported", "typed-asset-id-valid", "asset-not-duplicated", "asset-identity-policy-loaded", "operational-defaults-loaded", "pam-loaded", "blueprint-resolved", "registry-ready", "publishing-draft-ready"],
+      "steps": [
+        "load-create-asset-manifest",
+        "validate-typed-asset-identity",
+        "resolve-operational-defaults",
+        "load-pam",
+        "resolve-blueprint-by-assetType",
+        "resolve-gold-standard-by-assetType-when-available",
+        "resolve-reference-by-assetType-when-available",
+        "prepare-asset-specification",
+        "prepare-relationship-map",
+        "prepare-registry-entry",
+        "prepare-testing-plan",
+        "prepare-validation-plan",
+        "prepare-publishing-draft",
+        "prepare-rollback-plan",
+        "generate-operation-report",
+        "generate-audit-report",
+        "keep-lifecycle-draft"
+      ],
+      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport"],
+      "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-runtime", "modify-core", "modify-blueprints", "modify-gold-standards", "publish", "deploy"]
+    }
+  ],
+  "specializationPolicy": {
+    "create-calculator": "add-calculation-specific requirements only",
+    "create-article": "add editorial and SEO-specific requirements only",
+    "create-cluster": "add relationship and candidate-review requirements only",
+    "create-guide": "add guide aggregation requirements only",
+    "create-nucleus": "add domain-guide-cluster requirements only",
+    "rule": "Specific operations must not duplicate generic create-asset flow."
+  }
+}

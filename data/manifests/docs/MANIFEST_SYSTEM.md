@@ -253,6 +253,11 @@ Os manifestos iniciais cobrem:
 - create-calculator;
 - create-cluster;
 - create-article;
+- create-nucleus;
+- expand-nucleus;
+- update-nucleus;
+- validate-nucleus;
+- publish-nucleus;
 - update-calculator;
 - update-article;
 - update-law;
@@ -267,6 +272,14 @@ Os manifestos iniciais cobrem:
 - change-cta;
 - change-campaign;
 - expand-cluster.
+
+Os manifestos detalhados de nucleo ficam particionados em:
+
+```text
+data/manifests/operations/nucleus/index.json
+```
+
+Cada operacao de nucleo deve comecar por seu manifesto. O manifesto define contexto minimo, inputs, pre-condicoes, blueprints, standards, registries, playbook, workflow, Testing, Validation, Publishing, arquivos bloqueados, saidas esperadas e tipo de relatorio.
 
 ## Limites desta fase
 
@@ -287,6 +300,8 @@ Esta fase nao:
 - altera Operation System;
 - altera Strategy;
 - altera Constitution.
+
+Nucleus Operations tambem nao criam nucleos reais, nao criam guias reais, nao alteram `data/brain/nuclei.json`, nao alteram `blog/categoria/`, nao alteram `data/tools.json`, nao alteram `data/articles.json`, nao alteram `sitemap.xml` e nao executam deploy.
 
 ## Roadmap futuro
 

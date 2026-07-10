@@ -1,0 +1,45 @@
+{
+  "id": "relationship-map-calculator-calculadora-multa-40-fgts",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "assetType": "calculator",
+  "relationshipStatus": "standalone-reference",
+  "relationships": {
+    "primaryDomain": null,
+    "primaryNucleus": null,
+    "primaryGuide": null,
+    "primaryCluster": null,
+    "officialReference": "calculator-multa-40-fgts-reference",
+    "goldStandard": "calculator-gold-standard",
+    "blueprint": "calculator-blueprint-template"
+  },
+  "safeDerivedRelationships": [
+    {
+      "type": "reference",
+      "target": "/data/references/calculators/index.json#calculator-multa-40-fgts-reference",
+      "status": "official-reference"
+    },
+    {
+      "type": "gold-standard",
+      "target": "/data/gold-standards/calculator/index.json",
+      "status": "active-foundation"
+    },
+    {
+      "type": "blueprint",
+      "target": "/data/blueprints/calculator/index.json",
+      "status": "template"
+    }
+  ],
+  "notDerived": [
+    "primaryCluster",
+    "primaryNucleus",
+    "primaryGuide"
+  ],
+  "reason": "No official approved cluster relationship exists for this calculator in the internal registry."
+}

@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-registry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/registry.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Official entry point for operation manifests.",
   "manifestRole": "operation-entrypoint",
   "references": {
@@ -21,6 +21,9 @@
     "history": "/data/manifests/history/index.json",
     "versioning": "/data/manifests/versioning/index.json",
     "documentation": "/data/manifests/docs/MANIFEST_SYSTEM.md"
+  },
+  "operationPartitions": {
+    "nucleus": "/data/manifests/operations/nucleus/index.json"
   },
   "supportedOperations": [
     "create-calculator",
@@ -39,7 +42,12 @@
     "change-product",
     "change-cta",
     "change-campaign",
-    "expand-cluster"
+    "expand-cluster",
+    "create-nucleus",
+    "expand-nucleus",
+    "update-nucleus",
+    "validate-nucleus",
+    "publish-nucleus"
   ],
   "operationalBoundaries": {
     "executesAutomation": false,
@@ -55,6 +63,7 @@
   "notes": [
     "The manifest registry only identifies the minimal context required for future operations.",
     "Manifests must point to logical components instead of large physical file lists.",
-    "This layer is not consumed by production code."
+    "This layer is not consumed by production code.",
+    "Nucleus operation manifests are declarative entry points only."
   ]
 }

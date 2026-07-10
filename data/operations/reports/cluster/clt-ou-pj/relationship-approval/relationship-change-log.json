@@ -1,0 +1,48 @@
+{
+  "id": "relationship-change-log-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "approved",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "changes": [
+    {
+      "field": "approvalStatus",
+      "from": "pending-approval",
+      "to": "approved"
+    },
+    {
+      "field": "relationshipStatus",
+      "from": "candidate",
+      "to": "approved"
+    },
+    {
+      "field": "officialRelationships.primaryCalculator",
+      "from": null,
+      "to": "calculator:calculadora-clt-ou-pj"
+    },
+    {
+      "field": "officialRelationships.primaryArticle",
+      "from": null,
+      "to": "article:clt-ou-pj"
+    },
+    {
+      "field": "officialRelationships.satelliteArticles",
+      "from": [],
+      "to": [
+        "article:como-calcular-clt-ou-pj",
+        "article:vantagens-e-desvantagens-clt-ou-pj",
+        "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "article:clt-ou-pj-vale-a-pena-em-2026"
+      ]
+    }
+  ],
+  "unchanged": [
+    "lifecycle remains draft",
+    "runtimeStatus remains not-consumed",
+    "publishingStatus remains draft",
+    "public assets remain unchanged",
+    "public catalogs remain unchanged"
+  ]
+}

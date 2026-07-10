@@ -1,0 +1,46 @@
+{
+  "id": "approval-checklist-clt-ou-pj-candidates",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "checklist": [
+    {
+      "item": "Approve calculadora-clt-ou-pj as primary calculator",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Approve clt-ou-pj as pillar article",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Approve satellite article set",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Confirm typed identifiers cluster:clt-ou-pj and article:clt-ou-pj",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Confirm canonicalClusterId clt-ou-pj",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Resolve future compatibility normalization from calculadora-clt-ou-pj cluster value to clt-ou-pj cluster id",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Review possible final CTA placement gaps",
+      "status": "pending-manual-approval"
+    },
+    {
+      "item": "Run future validation before official relationship promotion",
+      "status": "pending"
+    }
+  ],
+  "approvalOutcomeOptions": ["approved", "approved-with-revisions", "rejected"],
+  "currentRecommendation": "READY FOR MANUAL APPROVAL"
+}

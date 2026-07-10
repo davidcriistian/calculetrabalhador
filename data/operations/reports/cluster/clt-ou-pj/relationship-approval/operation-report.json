@@ -1,0 +1,93 @@
+{
+  "id": "operation-report-relationship-approval-clt-ou-pj",
+  "reportType": "relationship-approval-report",
+  "operationId": "approve-cluster-relationships",
+  "version": "0.1.0",
+  "status": "completed-internal-approval",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "approvalScope": "cluster:clt-ou-pj",
+  "approvedRelationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:clt-ou-pj",
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "primaryArticle": "article:clt-ou-pj",
+    "satelliteArticles": [
+      "article:como-calcular-clt-ou-pj",
+      "article:vantagens-e-desvantagens-clt-ou-pj",
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "editorialPendingIssues": [
+    {
+      "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+      "pendingIssue": "possible-final-calculator-cta-gap",
+      "blocksInternalRelationship": false,
+      "blocksFuturePublicationOrMigrationWithoutValidation": true
+    },
+    {
+      "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "pendingIssue": "possible-final-calculator-cta-gap",
+      "blocksInternalRelationship": false,
+      "blocksFuturePublicationOrMigrationWithoutValidation": true
+    }
+  ],
+  "createdArtifacts": [
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/relationship-approval-record.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/relationship-change-log.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/relationship-testing-plan.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/relationship-validation-plan.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/relationship-rollback-plan.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/audit-report.json"
+  ],
+  "updatedInternalArtifacts": [
+    "/data/operations/reports/cluster/clt-ou-pj/cluster-draft-specification.json",
+    "/data/operations/reports/cluster/clt-ou-pj/registry-draft-entry.json",
+    "/data/operations/reports/cluster/clt-ou-pj/publishing-draft-entry.json",
+    "/data/registry/by-cluster/clt-ou-pj.json",
+    "/data/registry/by-cluster/index.json",
+    "/data/publishing/registry/clt-ou-pj-draft.json",
+    "/data/publishing/registry/index.json"
+  ],
+  "finalLifecycle": "draft",
+  "warnings": [
+    "Approval is internal only.",
+    "Compatibility normalization debt remains unresolved.",
+    "CTA gap issues remain tracked for future validation.",
+    "git diff --check returned line-ending warnings only for existing working-tree files."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "transformRules": "pass",
+    "shadowAdicionalNoturno": "pass",
+    "shadowAvisoPrevio": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only",
+    "typedAssetIds": "pass",
+    "publicCatalogsChanged": false,
+    "publicRelationshipsChanged": false,
+    "urlsChanged": false,
+    "sitemapChanged": false,
+    "publicationExecuted": false
+  },
+  "productionImpact": {
+    "publicPageCreated": false,
+    "calculatorChanged": false,
+    "articleChanged": false,
+    "catalogChanged": false,
+    "runtimeChanged": false,
+    "seoChanged": false,
+    "urlChanged": false,
+    "sitemapChanged": false,
+    "deployExecuted": false
+  }
+}

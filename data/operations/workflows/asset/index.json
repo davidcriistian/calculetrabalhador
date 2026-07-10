@@ -1,0 +1,43 @@
+{
+  "id": "asset-operation-workflows",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/workflow.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
+  "description": "Single workflow for generic internal draft asset provisioning.",
+  "workflows": [
+    {
+      "workflowId": "create-asset-workflow",
+      "operationId": "create-asset",
+      "steps": [
+        "input",
+        "resolve-defaults",
+        "resolve-pam",
+        "resolve-blueprint",
+        "resolve-gold-standard",
+        "resolve-reference",
+        "provision-draft-specification",
+        "prepare-relationship-map",
+        "register-registry-draft",
+        "prepare-testing-plan",
+        "prepare-validation-plan",
+        "prepare-publishing-draft",
+        "prepare-rollback",
+        "generate-reports"
+      ],
+      "approvalRequired": true,
+      "rollbackRequired": true,
+      "publishingMaximumLifecycle": "draft",
+      "runtimeStatus": "not-consumed"
+    }
+  ],
+  "selectionRules": {
+    "selectBy": "assetType",
+    "usesConfiguration": "/data/manifests/operations/asset/index.json#assetTypeResolution",
+    "usesInference": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "approved-relationship-map-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "approved",
+  "approvalStatus": "approved",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational Capabilities Phase 4.7 - Relationship Approval",
+  "assetIdentityPolicy": "/data/constitution/governance/asset-identity-policy.json",
+  "domainRelationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "primaryDomain": "pj",
+  "primaryNucleus": "nucleus:pj",
+  "primaryGuide": "guide:guide-pj",
+  "primaryCluster": "cluster:clt-ou-pj",
+  "canonicalClusterAssetId": "cluster:clt-ou-pj",
+  "canonicalClusterId": "clt-ou-pj",
+  "relationships": {
+    "primaryCalculator": {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "publicSlug": "calculadora-clt-ou-pj",
+      "relationshipType": "primary-calculator",
+      "relationshipStatus": "approved",
+      "runtimeStatus": "not-consumed",
+      "publishingStatus": "draft"
+    },
+    "primaryArticle": {
+      "assetId": "article:clt-ou-pj",
+      "publicSlug": "clt-ou-pj",
+      "relationshipType": "pillar-article",
+      "relationshipStatus": "approved",
+      "runtimeStatus": "not-consumed",
+      "publishingStatus": "draft"
+    },
+    "satelliteArticles": [
+      {
+        "assetId": "article:como-calcular-clt-ou-pj",
+        "publicSlug": "como-calcular-clt-ou-pj",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft"
+      },
+      {
+        "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+        "publicSlug": "vantagens-e-desvantagens-clt-ou-pj",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft",
+        "pendingIssues": ["possible-final-calculator-cta-gap"]
+      },
+      {
+        "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "publicSlug": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft",
+        "pendingIssues": ["possible-final-calculator-cta-gap"]
+      },
+      {
+        "assetId": "article:clt-ou-pj-vale-a-pena-em-2026",
+        "publicSlug": "clt-ou-pj-vale-a-pena-em-2026",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft"
+      }
+    ],
+    "relatedCalculators": [],
+    "relatedArticles": [],
+    "products": [],
+    "offers": [],
+    "commercialCtas": [],
+    "downloads": [],
+    "glossary": [],
+    "sharedFaqs": [],
+    "campaigns": []
+  },
+  "normalizationDebt": [
+    {
+      "source": "Compatibility",
+      "currentValue": "calculadora-clt-ou-pj",
+      "currentUse": "legacy cluster hint",
+      "futureCanonicalClusterAssetId": "cluster:clt-ou-pj",
+      "futureCalculatorAssetId": "calculator:calculadora-clt-ou-pj",
+      "changesNow": false
+    }
+  ],
+  "operationalBoundaries": {
+    "internalOnly": true,
+    "modifiesPublicAssets": false,
+    "modifiesCatalogs": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "publishes": false
+  }
+}

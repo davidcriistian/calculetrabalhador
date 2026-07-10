@@ -1,13 +1,13 @@
 {
   "id": "operation-system-registry",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/registry.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2 - Operation System",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Entry point for the official operation system.",
   "references": {
     "playbooks": "/data/operations/playbooks/index.json",
@@ -16,6 +16,7 @@
     "templates": "/data/operations/templates/index.json",
     "checklists": "/data/operations/checklists/index.json",
     "decisionTrees": "/data/operations/decision-trees/index.json",
+    "defaults": "/data/operations/defaults/index.json",
     "promptLibrary": "/data/operations/prompt-library/index.json",
     "bestPractices": "/data/operations/best-practices/index.json",
     "reports": "/data/operations/reports/index.json",
@@ -24,7 +25,27 @@
     "metadata": "/data/operations/metadata/operations.json",
     "history": "/data/operations/history/index.json",
     "versioning": "/data/operations/versioning/index.json",
-    "documentation": "/data/operations/docs/OPERATION_SYSTEM.md"
+    "documentation": "/data/operations/docs/OPERATION_SYSTEM.md",
+    "defaultsDocumentation": "/data/operations/docs/OPERATIONAL_DEFAULTS_POLICY.md"
+  },
+  "operationPartitions": {
+    "asset": {
+      "playbooks": "/data/operations/playbooks/asset/index.json",
+      "workflows": "/data/operations/workflows/asset/index.json",
+      "reports": "/data/operations/reports/asset/index.json"
+    },
+    "nucleus": {
+      "playbooks": "/data/operations/playbooks/nucleus/index.json",
+      "workflows": "/data/operations/workflows/nucleus/index.json",
+      "checklists": "/data/operations/checklists/nucleus/index.json",
+      "reports": "/data/operations/reports/nucleus/index.json"
+    }
+  },
+  "defaultPolicy": {
+    "reference": "/data/operations/defaults/index.json",
+    "appliesToFutureOperations": true,
+    "resolvesOptionalMissingFieldsOnly": true,
+    "requiresReporting": true
   },
   "operationalBoundaries": {
     "executesOperations": false,
@@ -36,6 +57,9 @@
     "executesAutomation": false
   },
   "notes": [
-    "The Operation System defines how operations should be executed but does not execute them."
+    "The Operation System defines how operations should be executed but does not execute them.",
+    "Generic create-asset provisioning is the base flow for future asset creation operations.",
+    "Nucleus operations are declarative capabilities and do not create real nuclei or public pages.",
+    "Operational defaults are deterministic rules and do not infer, publish or alter authoritative sources."
   ]
 }

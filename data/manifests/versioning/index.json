@@ -1,6 +1,6 @@
 {
   "id": "operational-manifest-versioning",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -15,12 +15,28 @@
     "minor": "New operations, contexts, dependencies or optional fields.",
     "patch": "Clarifications, typo fixes or non-breaking documentation changes."
   },
-  "currentVersion": "0.1.0",
+  "currentVersion": "0.2.0",
   "compatibility": {
     "runtimeCompatibility": "not-applicable",
     "productionConsumption": false,
-    "backwardCompatibleWith": []
+    "backwardCompatibleWith": ["0.1.0"]
   },
+  "items": [
+    {
+      "id": "operational-manifest-system-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-09",
+      "status": "foundation",
+      "changes": ["Initial Operational Manifest System foundation."]
+    },
+    {
+      "id": "nucleus-operation-manifests-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": ["Added create-nucleus, expand-nucleus, update-nucleus, validate-nucleus and publish-nucleus manifests."]
+    }
+  ],
   "notes": [
     "Future operation engines must check manifest version before execution."
   ]

@@ -1,0 +1,58 @@
+{
+  "id": "relationship-map-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "relationships": {
+    "primaryDomain": {
+      "id": "pj",
+      "status": "existing-core-domain",
+      "authority": "/data/core/registry/domains.json"
+    },
+    "primaryNucleus": {
+      "id": "pj",
+      "status": "draft",
+      "reference": "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json"
+    },
+    "primaryGuide": {
+      "id": "guide-pj",
+      "status": "draft",
+      "reference": "/data/operations/reports/nucleus/pj/guide-draft-specification.json"
+    },
+    "cluster": {
+      "id": "clt-ou-pj",
+      "status": "draft",
+      "approvalStatus": "pending-approval",
+      "reference": "/data/operations/reports/cluster/clt-ou-pj/cluster-draft-specification.json"
+    },
+    "candidatePrimaryCalculator": ["calculadora-clt-ou-pj"],
+    "candidatePrimaryArticle": ["clt-ou-pj"],
+    "candidateSatelliteArticles": [
+      "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "vantagens-e-desvantagens-clt-ou-pj",
+      "como-calcular-clt-ou-pj",
+      "clt-ou-pj-vale-a-pena-em-2026"
+    ],
+    "candidateRelatedCalculators": [],
+    "candidateDownloads": [],
+    "candidateProducts": [],
+    "candidateCTA": []
+  },
+  "officialRelationshipsCreated": false,
+  "candidatePolicy": {
+    "allCandidatesRequireApproval": true,
+    "candidateStatus": "candidate",
+    "approvalStatus": "pending-approval",
+    "automaticAttachmentAllowed": false
+  },
+  "warnings": [
+    "Compatibility article maps currently use calculadora-clt-ou-pj as the cluster value for related articles.",
+    "The article id clt-ou-pj matches the proposed cluster id, but the article slug is /blog/clt-ou-pj, so it is not an official cluster slug conflict in this internal draft."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "calculator-recommendation-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "candidate": {
+    "id": "calculadora-clt-ou-pj",
+    "title": "Calculadora CLT ou PJ",
+    "slug": "/calculadora-clt-ou-pj/",
+    "source": "/data/tools.json",
+    "currentPublishedStatus": true,
+    "currentCategory": "Trabalhista"
+  },
+  "recommendation": "approve-with-notes",
+  "recommendedClassification": "primary-calculator",
+  "relationshipStatus": "candidate",
+  "approvalStatus": "pending-approval",
+  "rationale": [
+    "The calculator directly answers the cluster comparison intent.",
+    "It is already the related tool in multiple candidate articles.",
+    "It should be reviewed for future official cluster mapping before any relationship is promoted."
+  ],
+  "notes": [
+    "No calculator file was changed.",
+    "No official relationship was created."
+  ]
+}

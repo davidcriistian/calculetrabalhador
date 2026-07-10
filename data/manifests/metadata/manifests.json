@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-metadata",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Shared metadata for the Operational Manifest System.",
   "layer": "Productivity Layer",
   "system": "Operational Manifest System",
@@ -29,8 +29,12 @@
     "Testing Engine",
     "Validation Engine"
   ],
+  "operationPartitions": {
+    "nucleus": "/data/manifests/operations/nucleus/index.json"
+  },
   "notes": [
     "This metadata does not create operational consumption.",
-    "All manifests remain declarative in this phase."
+    "All manifests remain declarative in this phase.",
+    "Nucleus manifests reduce context for create, expand, update, validate and publish nucleus operations."
   ]
 }

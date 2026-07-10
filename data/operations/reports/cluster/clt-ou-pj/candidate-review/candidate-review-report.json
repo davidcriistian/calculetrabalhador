@@ -1,0 +1,126 @@
+{
+  "id": "candidate-review-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational Capabilities Phase 4.5 - Cluster Candidate Review",
+  "cluster": {
+    "id": "clt-ou-pj",
+    "nucleus": "pj",
+    "guide": "guide-pj",
+    "status": "draft",
+    "approvalStatus": "pending-approval"
+  },
+  "reviewScope": {
+    "allowedSources": ["data/tools.json", "data/articles.json", "Core", "Registry", "Compatibility", "read-only-public-files"],
+    "modifiesPublicAssets": false,
+    "officializesRelationships": false,
+    "createsUrls": false,
+    "publishes": false
+  },
+  "candidates": [
+    {
+      "id": "calculadora-clt-ou-pj",
+      "type": "calculator",
+      "title": "Calculadora CLT ou PJ",
+      "slug": "/calculadora-clt-ou-pj/",
+      "source": "/data/tools.json",
+      "currentStatus": "published",
+      "classificationRecommendation": "primary-calculator",
+      "recommendation": "approve-with-notes",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "Directly matches the cluster intent by comparing CLT and PJ scenarios with salary, benefits, costs and taxes. It should be the main tool once approved, but no official relationship is created in this phase."
+    },
+    {
+      "id": "clt-ou-pj",
+      "type": "article",
+      "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026? Guia Completo + Calculadora",
+      "slug": "/blog/clt-ou-pj",
+      "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj/",
+      "source": "/data/articles.json",
+      "classificationRecommendation": "pillar-article",
+      "recommendation": "approve-with-notes",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "Broadest editorial coverage, evergreen slug, direct calculator CTAs, comparison framing and natural cluster entry role. Title has temporal 2026 dependency, but slug is evergreen."
+    },
+    {
+      "id": "clt-ou-pj-vale-a-pena-em-2026",
+      "type": "article",
+      "title": "CLT ou PJ Vale a Pena em 2026?",
+      "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+      "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "source": "/data/articles.json",
+      "referenceStatus": "official-reference",
+      "classificationRecommendation": "satellite-article",
+      "recommendation": "approve-with-notes",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "Strong approved reference and good topical fit, but year-specific slug and title make it less suitable than /blog/clt-ou-pj as the evergreen pillar."
+    },
+    {
+      "id": "como-calcular-clt-ou-pj",
+      "type": "article",
+      "title": "Como Calcular CLT ou PJ: Entenda a Comparacao",
+      "slug": "/blog/como-calcular-clt-ou-pj",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "source": "/data/articles.json",
+      "referenceStatus": "official-reference",
+      "classificationRecommendation": "satellite-article",
+      "recommendation": "approve",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "Focused procedural intent that complements the pillar and calculator."
+    },
+    {
+      "id": "vantagens-e-desvantagens-clt-ou-pj",
+      "type": "article",
+      "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+      "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+      "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "source": "/data/articles.json",
+      "referenceStatus": "official-reference",
+      "classificationRecommendation": "satellite-article",
+      "recommendation": "approve",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "Focused comparison of pros and cons, complementary to pillar and calculator."
+    },
+    {
+      "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "type": "article",
+      "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+      "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "url": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "source": "/data/articles.json",
+      "classificationRecommendation": "satellite-article",
+      "recommendation": "approve-with-notes",
+      "status": "candidate",
+      "approvalStatus": "pending-approval",
+      "rationale": "High commercial and calculator-adjacent intent. It is deep but narrower than the pillar, so it works best as a satellite."
+    }
+  ],
+  "summary": {
+    "recommendedPrimaryCalculator": "calculadora-clt-ou-pj",
+    "recommendedPillarArticle": "clt-ou-pj",
+    "recommendedSatelliteArticles": [
+      "clt-ou-pj-vale-a-pena-em-2026",
+      "como-calcular-clt-ou-pj",
+      "vantagens-e-desvantagens-clt-ou-pj",
+      "quanto-preciso-ganhar-como-pj-para-compensar-clt"
+    ],
+    "recommendedRelatedArticles": [],
+    "recommendedExcluded": [],
+    "readyForManualApproval": true
+  },
+  "warnings": [
+    "No relationship is official in this phase.",
+    "The article id clt-ou-pj coexists with cluster id clt-ou-pj and requires typed identifiers in future operations.",
+    "Compatibility maps use calculadora-clt-ou-pj as cluster value and should be normalized in a future operation."
+  ]
+}

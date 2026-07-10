@@ -1,0 +1,196 @@
+{
+  "id": "operational-defaults-policy",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/operation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.2.2 - Operational Defaults Policy",
+  "description": "Official deterministic defaults for future platform operations when optional inputs are absent.",
+  "policyType": "operational-defaults",
+  "appliesTo": {
+    "scope": "all-future-operations",
+    "operationFamilies": ["nucleus", "cluster", "calculator", "article", "product", "offer", "cta", "campaign", "validation", "publishing", "rollback"],
+    "currentDeclarativeFamilies": ["nucleus"],
+    "entryPoint": "/data/operations/registry/index.json"
+  },
+  "principles": {
+    "defaultsAreDeterministic": true,
+    "defaultsAreInference": false,
+    "defaultsUseAi": false,
+    "defaultsCreateKnowledge": false,
+    "defaultsReplaceHumanReview": false,
+    "defaultsOverrideExistingValues": false,
+    "defaultsModifyAuthoritativeSources": false
+  },
+  "authorities": {
+    "strategyVersion": "/data/strategy/",
+    "goldStandardVersion": "/data/gold-standards/",
+    "blueprintVersion": "/data/blueprints/",
+    "reference": "/data/references/",
+    "lifecycle": "/data/blueprints/shared/pam/index.json",
+    "publishing": "/data/publishing/",
+    "testing": "/data/pos/testing/index.json",
+    "validation": "/data/pos/validation/index.json",
+    "architecturePolicy": "/data/constitution/governance/architecture-evolution-policy.json"
+  },
+  "defaults": [
+    {
+      "field": "strategyVersion",
+      "condition": "absent",
+      "value": "current-version-from-data-strategy",
+      "resolutionAuthority": "/data/strategy/",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "goldStandardVersion",
+      "condition": "absent",
+      "value": "current-version-for-asset-type",
+      "resolutionAuthority": "/data/gold-standards/",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "blueprintVersion",
+      "condition": "absent",
+      "value": "current-version-for-blueprint-type",
+      "resolutionAuthority": "/data/blueprints/",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "reference",
+      "condition": "unavailable",
+      "value": null,
+      "referenceStatus": "unavailable",
+      "warning": true,
+      "manualReviewRequired": true,
+      "blocksDraftCreation": false,
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "owner",
+      "condition": "absent",
+      "value": "core-platform",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "lifecycle",
+      "condition": "absent",
+      "value": "planned",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "runtimeStatus",
+      "condition": "absent",
+      "value": "not-consumed",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "visibility",
+      "condition": "absent",
+      "value": "internal",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "publishingStatus",
+      "condition": "absent",
+      "value": "draft",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "commercialStatus",
+      "condition": "absent",
+      "value": "not-configured",
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "eligibleProducts",
+      "condition": "absent",
+      "value": [],
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "eligibleOffers",
+      "condition": "absent",
+      "value": [],
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "eligibleCTAs",
+      "condition": "absent",
+      "value": [],
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "testingRequired",
+      "condition": "absent",
+      "value": true,
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "validationRequired",
+      "condition": "absent",
+      "value": true,
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "publishingRequired",
+      "condition": "absent",
+      "value": true,
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "rollbackRequired",
+      "condition": "absent",
+      "value": true,
+      "report": { "resolvedByDefault": true }
+    },
+    {
+      "field": "manualApprovalRequired",
+      "condition": "absent",
+      "value": true,
+      "report": { "resolvedByDefault": true }
+    }
+  ],
+  "reporting": {
+    "requiredForEveryOperation": true,
+    "fields": ["field", "originalValue", "appliedValue", "reason", "resolvedByDefault"],
+    "rules": [
+      "Every default application must be visible in the operation report.",
+      "Fields provided by the user must report resolvedByDefault as false.",
+      "Unavailable references must create a warning and require manual review.",
+      "Defaults must not hide missing required inputs."
+    ]
+  },
+  "restrictions": [
+    "Defaults must not alter Core.",
+    "Defaults must not alter Constitution.",
+    "Defaults must not alter Strategy.",
+    "Defaults must not alter Blueprint System.",
+    "Defaults must not alter Gold Standard.",
+    "Defaults must not alter Reference System.",
+    "Defaults must not replace existing data.",
+    "Defaults must not create production behavior.",
+    "Defaults must not publish assets.",
+    "Defaults must not execute automation."
+  ],
+  "operationalBoundaries": {
+    "createsLayer": false,
+    "createsEngine": false,
+    "modifiesArchitecture": false,
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesPages": false,
+    "modifiesCore": false,
+    "modifiesBlueprints": false,
+    "modifiesGoldStandard": false,
+    "executesOperations": false
+  },
+  "notes": [
+    "Defaults resolve absent optional parameters only.",
+    "Defaults are official rules, not AI inference.",
+    "Required inputs remain required unless an operation explicitly delegates them to this policy.",
+    "Draft creation may proceed without an official reference only when manual review is required and recorded."
+  ]
+}

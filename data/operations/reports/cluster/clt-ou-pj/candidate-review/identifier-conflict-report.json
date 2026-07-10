@@ -1,0 +1,34 @@
+{
+  "id": "identifier-conflict-report-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "conflict": {
+    "clusterId": "clt-ou-pj",
+    "articleId": "clt-ou-pj",
+    "conflictType": "same-raw-id-across-different-asset-types",
+    "publicUrlConflictCreated": false,
+    "severity": "low-with-typed-identifiers"
+  },
+  "recommendation": {
+    "useTypedInternalIdentifiers": true,
+    "clusterTypedId": "cluster:clt-ou-pj",
+    "articleTypedId": "article:clt-ou-pj",
+    "compatibleWithPAM": true,
+    "compatibleWithRegistry": true
+  },
+  "rationale": [
+    "PAM stores asset type separately from id.",
+    "Registry entries include type and slug.",
+    "Typed identifiers avoid ambiguity in operation reports and approval workflows without changing public slugs."
+  ],
+  "restrictions": [
+    "Do not alter article id in data/articles.json in this phase.",
+    "Do not alter cluster id in the draft registry in this phase.",
+    "Do not create or change public URLs."
+  ]
+}

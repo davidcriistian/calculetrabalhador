@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-operations",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Catalog of official operation manifests.",
   "manifestRules": {
     "useLogicalComponents": true,
@@ -15,7 +15,29 @@
     "readSmallestContextFirst": true,
     "requiresExplicitReport": true
   },
+  "partitions": {
+    "asset": "/data/manifests/operations/asset/index.json",
+    "nucleus": "/data/manifests/operations/nucleus/index.json"
+  },
   "manifests": [
+    {
+      "operationId": "create-asset",
+      "objective": "Provision any supported platform asset as an internal draft through the generic asset flow.",
+      "description": "Generic base manifest inherited by create-calculator, create-article, create-cluster, create-guide and create-nucleus.",
+      "preconditions": ["asset type supported", "typed assetId available", "PAM available", "blueprint resolution configured"],
+      "requiredLayers": ["Constitution", "Platform Architecture", "Strategy", "Core when applicable", "PAM", "Blueprint System", "Gold Standard when available", "Reference System when available", "Registry System", "Manifest System", "Operation System", "Publishing", "Testing", "Validation"],
+      "requiredFiles": ["Asset Manifest", "Operational Defaults Policy", "PAM", "Asset Blueprint Resolution", "Registry System", "Publishing Model"],
+      "optionalFiles": ["Gold Standard", "Reference System", "Core Domain"],
+      "requiredBlueprints": ["Resolved by assetType"],
+      "requiredPlaybooks": ["create-asset"],
+      "requiredTesting": ["testing-plan-only"],
+      "requiredValidation": ["validation-plan-only"],
+      "restrictions": ["no-real-asset-creation-in-this-phase", "no-production-change", "no-runtime-change", "no-publication"],
+      "blockedFiles": ["Production Runtime", "Public Pages", "Public Catalogs", "Sitemap", "Core", "Blueprints", "Gold Standards"],
+      "dependencies": ["asset-identity-policy", "operational-defaults-policy", "PAM", "registry-system", "publishing-model"],
+      "expectedResult": "Generic draft asset provisioning flow available for future operations.",
+      "expectedReport": "Generic create-asset report with source resolution, draft outputs, testing plan, validation plan, publishing draft and rollback plan."
+    },
     {
       "operationId": "create-calculator",
       "objective": "Create a new calculator from approved declarative models.",
@@ -25,13 +47,14 @@
       "requiredFiles": ["Manifest Registry", "Strategy Cluster", "Core Domain", "Calculator Blueprint", "Create Calculator Playbook"],
       "optionalFiles": ["Related Article Blueprint", "Offers Model", "Publishing Model"],
       "requiredBlueprints": ["Calculator Blueprint", "Shared Components"],
-      "requiredPlaybooks": ["create-calculator"],
+      "requiredPlaybooks": ["create-asset", "create-calculator"],
       "requiredTesting": ["calculator-equivalence", "calculation-baseline", "regression-check"],
       "requiredValidation": ["calculator-validation", "seo-validation", "json-ld-validation", "runtime-safety"],
       "restrictions": ["no-runtime-direct-edit", "no-core-change-during-asset-creation", "no-url-change-without-publishing-approval"],
       "blockedFiles": ["Production Runtime", "Existing Calculators", "Sitemap", "Global SEO"],
       "dependencies": ["calculator-blueprint", "core-domain", "testing-engine", "validation-engine"],
-      "expectedResult": "Calculator draft prepared through the official blueprint process.",
+      "inherits": "create-asset",
+      "expectedResult": "Calculator draft prepared through the official generic asset process plus calculator-specific rules.",
       "expectedReport": "Creation report with context used, files changed in future execution, tests, validations and pending approvals."
     },
     {
@@ -43,13 +66,14 @@
       "requiredFiles": ["Strategy Cluster Model", "Cluster Blueprint", "Create Cluster Playbook"],
       "optionalFiles": ["Product Model", "CTA Model", "Publishing Model"],
       "requiredBlueprints": ["Cluster Blueprint", "Article Blueprint", "Calculator Blueprint"],
-      "requiredPlaybooks": ["create-cluster"],
+      "requiredPlaybooks": ["create-asset", "create-cluster"],
       "requiredTesting": ["relationship-consistency-check"],
       "requiredValidation": ["strategy-validation", "cluster-validation"],
       "restrictions": ["no-core-change-during-cluster-creation", "no-production-page-change"],
       "blockedFiles": ["Production Pages", "Runtime", "Sitemap"],
       "dependencies": ["strategy-nucleus", "cluster-blueprint", "validation-engine"],
-      "expectedResult": "Cluster model ready for future articles, calculators and offers.",
+      "inherits": "create-asset",
+      "expectedResult": "Cluster model ready through the generic asset process plus relationship-specific rules.",
       "expectedReport": "Cluster report with nucleus, goals, assets, dependencies and governance notes."
     },
     {
@@ -61,13 +85,14 @@
       "requiredFiles": ["Strategy Cluster", "Core Domain", "Article Blueprint", "Create Article Playbook"],
       "optionalFiles": ["Related Calculator Blueprint", "Offers Model", "Publishing Model"],
       "requiredBlueprints": ["Article Blueprint", "Shared Components"],
-      "requiredPlaybooks": ["create-article"],
+      "requiredPlaybooks": ["create-asset", "create-article"],
       "requiredTesting": ["content-structure-check", "internal-link-check"],
       "requiredValidation": ["article-validation", "seo-validation", "json-ld-validation"],
       "restrictions": ["no-core-change-during-article-creation", "no-runtime-direct-edit", "no-sitemap-change-without-publishing-approval"],
       "blockedFiles": ["Runtime", "Existing Articles", "Sitemap", "Global SEO"],
       "dependencies": ["article-blueprint", "strategy-cluster", "validation-engine"],
-      "expectedResult": "Article draft prepared through the official blueprint process.",
+      "inherits": "create-asset",
+      "expectedResult": "Article draft prepared through the official generic asset process plus article-specific rules.",
       "expectedReport": "Article creation report with context, blueprint, validations and publication readiness."
     },
     {
@@ -325,6 +350,7 @@
   ],
   "notes": [
     "These manifests are declarative and do not execute operations.",
-    "Physical files must be selected by the future operation based on logical components and approved scope."
+    "Physical files must be selected by the future operation based on logical components and approved scope.",
+    "Nucleus operation manifests are partitioned to keep this catalog compact."
   ]
 }

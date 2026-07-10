@@ -1,0 +1,20 @@
+{
+  "id": "pj",
+  "type": "nucleus",
+  "slug": "pj",
+  "status": "draft",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "references": [
+    "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+    "/data/operations/reports/nucleus/pj/guide-draft-specification.json",
+    "/data/operations/reports/nucleus/pj/relationship-map.json",
+    "/data/operations/reports/nucleus/pj/registry-draft-entry.json",
+    "/data/operations/reports/nucleus/pj/publishing-draft-entry.json"
+  ],
+  "runtimeStatus": "not-consumed",
+  "notes": [
+    "Internal draft registry entry only.",
+    "This entry does not feed runtime or public pages."
+  ]
+}

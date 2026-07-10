@@ -1,0 +1,54 @@
+{
+  "id": "nucleus-operation-workflows",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/workflow.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
+  "description": "Declarative workflows for nucleus operations.",
+  "defaultWorkflow": ["manifest", "input", "canonical-relationship", "pam", "blueprints", "gold-standard", "reference-system", "registry", "testing", "validation", "publishing", "report"],
+  "workflows": [
+    {
+      "workflowId": "create-nucleus-workflow",
+      "operationId": "create-nucleus",
+      "steps": ["manifest", "input-validation", "domain-check", "slug-check", "nucleus-specification", "guide-specification", "relationship-map", "future-file-plan", "testing-plan", "validation-plan", "publishing-plan", "report"],
+      "approvalRequired": true,
+      "rollbackRequired": true
+    },
+    {
+      "workflowId": "expand-nucleus-workflow",
+      "operationId": "expand-nucleus",
+      "steps": ["manifest", "registry-discovery", "gap-classification", "expansion-type", "canonical-relationship-check", "asset-preparation", "dependency-plan", "testing-plan", "validation-plan", "publishing-plan", "report"],
+      "approvalRequired": true,
+      "rollbackRequired": true
+    },
+    {
+      "workflowId": "update-nucleus-workflow",
+      "operationId": "update-nucleus",
+      "steps": ["manifest", "baseline", "change-type", "impact-classification", "dependent-assets", "declarative-change", "rollback-plan", "testing", "validation", "publishing-plan", "changelog", "report"],
+      "approvalRequired": true,
+      "rollbackRequired": true
+    },
+    {
+      "workflowId": "validate-nucleus-workflow",
+      "operationId": "validate-nucleus",
+      "steps": ["manifest", "load-target", "pam-compliance", "relationship-integrity", "blueprint-compliance", "gold-standard-compliance", "testing-evidence", "validation-evidence", "publishing-readiness", "result-classification", "report"],
+      "approvalRequired": false,
+      "rollbackRequired": false
+    },
+    {
+      "workflowId": "publish-nucleus-workflow",
+      "operationId": "publish-nucleus",
+      "steps": ["manifest", "lifecycle-check", "gate-check", "release-specification", "deploy-plan", "sitemap-plan", "indexing-plan", "rollback-plan", "publication-log-template", "declarative-status-plan", "report"],
+      "approvalRequired": true,
+      "rollbackRequired": true
+    }
+  ],
+  "notes": [
+    "Workflows define order only.",
+    "No deploy, sitemap edit, page creation or publication happens in this phase."
+  ]
+}

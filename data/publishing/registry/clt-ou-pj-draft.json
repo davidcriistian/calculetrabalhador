@@ -1,0 +1,29 @@
+{
+  "id": "publishing-draft-clt-ou-pj",
+  "assetId": "cluster:clt-ou-pj",
+  "assetType": "cluster",
+  "nucleusId": "nucleus:pj",
+  "status": "draft",
+  "approvalStatus": "approved",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "references": [
+    "/data/operations/reports/cluster/clt-ou-pj/publishing-draft-entry.json",
+    "/data/operations/reports/cluster/clt-ou-pj/rollback-plan.json",
+    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+  ],
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft"
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "callsIndexNow": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "operation-report-create-asset-calculator-calculadora-multa-40-fgts",
+  "reportType": "create-asset-report",
+  "operationId": "create-asset",
+  "version": "0.1.0",
+  "status": "completed-internal-draft",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetType": "calculator",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "publicSlug": "calculadora-multa-40-fgts",
+  "referenceStatus": "official-reference",
+  "relationshipStatus": "standalone-reference",
+  "sourceResolution": {
+    "manifest": "/data/manifests/operations/asset/index.json",
+    "operationalDefaults": "/data/operations/defaults/index.json",
+    "pam": "/data/blueprints/shared/pam/index.json",
+    "blueprint": "/data/blueprints/calculator/index.json",
+    "goldStandard": "/data/gold-standards/calculator/index.json",
+    "reference": "/data/references/calculators/index.json",
+    "registry": "/data/registry/by-type/index.json",
+    "publishing": "/data/publishing/registry/index.json",
+    "testing": "/data/pos/testing/index.json",
+    "validation": "/data/pos/validation/index.json"
+  },
+  "outputs": {
+    "calculatorSpecification": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/calculator-draft-specification.json",
+    "relationshipMap": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/relationship-map.json",
+    "registryEntry": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/registry-draft-entry.json",
+    "publishingEntry": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/publishing-draft-entry.json",
+    "testingPlan": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/testing-plan.json",
+    "validationPlan": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/validation-plan.json",
+    "rollbackPlan": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/rollback-plan.json",
+    "auditReport": "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/audit-report.json"
+  },
+  "warnings": [
+    "No official cluster relationship exists for this calculator; relationshipStatus remains standalone-reference.",
+    "Testing and validation plans were generated but not executed.",
+    "git diff --check returned line-ending warnings only for existing working-tree files."
+  ],
+  "blockingIssues": [],
+  "validationResults": {
+    "jsonValid": "pass",
+    "internalJsonRefsValid": "pass",
+    "validateGovernance": "pass",
+    "transformRules": "pass",
+    "shadowAdicionalNoturno": "pass",
+    "shadowAvisoPrevio": "pass",
+    "gitDiffCheck": "pass-with-line-ending-warnings-only",
+    "publicCalculatorChanged": false,
+    "publicCatalogChanged": false,
+    "runtimeChanged": false,
+    "urlChanged": false,
+    "sitemapChanged": false
+  },
+  "productionImpact": {
+    "publicCalculatorChanged": false,
+    "logicChanged": false,
+    "calculationChanged": false,
+    "htmlChanged": false,
+    "cssChanged": false,
+    "javascriptChanged": false,
+    "runtimeChanged": false,
+    "urlChanged": false,
+    "seoChanged": false,
+    "sitemapChanged": false,
+    "publicationExecuted": false
+  }
+}

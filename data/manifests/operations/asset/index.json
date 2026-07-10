@@ -1,0 +1,162 @@
+{
+  "id": "asset-operation-manifests",
+  "version": "0.1.0",
+  "schema": "/data/manifests/schemas/manifest.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
+  "description": "Generic manifest for provisioning internal draft assets through a single create-asset flow.",
+  "manifestRules": {
+    "genericCreateAssetIsMandatoryBaseFlow": true,
+    "specificCreateOperationsInheritCreateAsset": true,
+    "selectionIsConfigurationDriven": true,
+    "selectionUsesInference": false,
+    "createsRealAssetsInThisPhase": false
+  },
+  "supportedAssetTypes": [
+    "calculator",
+    "article",
+    "cluster",
+    "guide",
+    "nucleus",
+    "faq",
+    "glossary",
+    "download",
+    "product",
+    "offer",
+    "cta"
+  ],
+  "assetTypeResolution": {
+    "calculator": {
+      "blueprint": "/data/blueprints/calculator/index.json",
+      "goldStandard": "/data/gold-standards/calculator/index.json",
+      "reference": "/data/references/calculators/index.json",
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "configured"
+    },
+    "article": {
+      "blueprint": "/data/blueprints/article/index.json",
+      "goldStandard": "/data/gold-standards/article/index.json",
+      "reference": "/data/references/articles/index.json",
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "configured"
+    },
+    "cluster": {
+      "blueprint": "/data/blueprints/cluster/index.json",
+      "goldStandard": "/data/gold-standards/cluster/index.json",
+      "reference": "/data/references/clusters/index.json",
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "configured"
+    },
+    "guide": {
+      "blueprint": "/data/blueprints/guide/index.json",
+      "goldStandard": "/data/gold-standards/guide/index.json",
+      "reference": "/data/references/guides/index.json",
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "configured"
+    },
+    "nucleus": {
+      "blueprint": "/data/blueprints/nucleus/index.json",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "configured-without-type-specific-gold-standard"
+    },
+    "faq": {
+      "blueprint": "/data/blueprints/shared/index.json#faq",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    },
+    "glossary": {
+      "blueprint": "/data/blueprints/shared/index.json",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    },
+    "download": {
+      "blueprint": "/data/blueprints/shared/index.json",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    },
+    "product": {
+      "blueprint": "/data/blueprints/shared/index.json",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    },
+    "offer": {
+      "blueprint": "/data/blueprints/shared/index.json#offer-slot",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    },
+    "cta": {
+      "blueprint": "/data/blueprints/shared/index.json#cta",
+      "goldStandard": null,
+      "reference": null,
+      "testing": "/data/pos/testing/index.json",
+      "validation": "/data/pos/validation/index.json",
+      "publishing": "/data/publishing/registry/index.json",
+      "resolutionStatus": "pending-specific-blueprint"
+    }
+  },
+  "manifest": {
+    "operationId": "create-asset",
+    "objective": "Provision any supported asset type as an internal draft through official configuration.",
+    "requiredInputs": ["assetType", "assetId", "displayName", "owner"],
+    "optionalInputsResolvedByDefaults": ["strategyVersion", "goldStandardVersion", "blueprintVersion", "reference", "lifecycle", "runtimeStatus", "visibility", "publishingStatus", "testingRequired", "validationRequired", "publishingRequired", "rollbackRequired", "manualApprovalRequired"],
+    "preconditions": ["asset-type-supported", "typed-asset-id-valid", "asset-not-duplicated", "pam-valid", "blueprint-resolution-valid", "registry-available", "publishing-draft-available"],
+    "flow": ["Manifest", "Operational Defaults", "PAM", "Blueprint", "Gold Standard", "Reference System", "Registry", "Testing Plan", "Validation Plan", "Publishing Draft", "Reports"],
+    "playbook": "/data/operations/playbooks/asset/index.json#create-asset",
+    "workflow": "/data/operations/workflows/asset/index.json#create-asset-workflow",
+    "reports": "/data/operations/reports/asset/index.json",
+    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport"]
+  },
+  "inheritance": {
+    "create-calculator": "inherits-create-asset",
+    "create-article": "inherits-create-asset",
+    "create-cluster": "inherits-create-asset",
+    "create-guide": "inherits-create-asset",
+    "create-nucleus": "inherits-create-asset"
+  },
+  "restrictions": [
+    "Do not create real assets in this phase.",
+    "Do not modify production.",
+    "Do not modify runtime.",
+    "Do not modify Core.",
+    "Do not modify Blueprints.",
+    "Do not modify Gold Standards.",
+    "Do not publish.",
+    "Do not infer source selection."
+  ]
+}

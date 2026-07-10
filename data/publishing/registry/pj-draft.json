@@ -1,0 +1,26 @@
+{
+  "id": "publishing-draft-pj",
+  "assetId": "pj",
+  "assetType": "nucleus",
+  "guideId": "guide-pj",
+  "status": "draft",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "references": [
+    "/data/operations/reports/nucleus/pj/publishing-draft-entry.json",
+    "/data/operations/reports/nucleus/pj/rollback-plan.json"
+  ],
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft"
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "callsIndexNow": false
+  }
+}

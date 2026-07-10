@@ -10,7 +10,17 @@
   "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
   "partition": "by-nucleus",
   "description": "Partition prepared to discover assets by nucleus.",
-  "entries": [],
+  "entries": [
+    {
+      "id": "pj",
+      "type": "nucleus",
+      "slug": "pj",
+      "status": "draft",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "references": ["/data/registry/by-nucleus/pj.json"]
+    }
+  ],
   "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
   "notes": ["Nucleus partitions support future growth without central registry bloat."]
 }

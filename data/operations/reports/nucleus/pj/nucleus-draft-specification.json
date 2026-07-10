@@ -1,0 +1,72 @@
+{
+  "id": "pj",
+  "type": "nucleus",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "draft",
+  "lifecycle": "draft",
+  "runtimeStatus": "not-consumed",
+  "visibility": "internal",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-nucleus/pj",
+  "blueprintReference": "/data/blueprints/nucleus/index.json",
+  "pamReference": "/data/blueprints/shared/pam/index.json",
+  "identity": {
+    "id": "pj",
+    "name": "PJ",
+    "slug": "pj",
+    "primaryDomain": "pj",
+    "primaryGuide": "guide-pj",
+    "objective": "Comparar contratacao PJ com outras modalidades e organizar conteudos, ferramentas e orientacoes destinadas a profissionais PJ.",
+    "targetAudience": ["Profissionais", "empresas", "prestadores de servico"],
+    "searchIntent": ["informational", "calculator", "comparison"]
+  },
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryGuide": "guide-pj",
+    "plannedClusters": ["clt-ou-pj"],
+    "activeClusters": [],
+    "plannedCalculators": [],
+    "activeCalculators": [],
+    "plannedArticles": [],
+    "activeArticles": [],
+    "eligibleProducts": [],
+    "eligibleOffers": [],
+    "eligibleCTAs": []
+  },
+  "governance": {
+    "strategyVersion": "0.1.0",
+    "blueprintVersion": "0.1.0",
+    "goldStandardType": "guide",
+    "goldStandardVersion": "1.0",
+    "referenceStatus": "unavailable",
+    "manualReviewRequired": true,
+    "commercialStatus": "not-configured",
+    "testingRequired": true,
+    "validationRequired": true,
+    "publishingRequired": true,
+    "rollbackRequired": true,
+    "manualApprovalRequired": true
+  },
+  "operationalBoundaries": {
+    "createsPublicPage": false,
+    "createsCalculator": false,
+    "createsArticle": false,
+    "createsCluster": false,
+    "createsProduct": false,
+    "createsCTA": false,
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "This draft specification is internal and declarative only.",
+    "The initial cluster clt-ou-pj is planned only; no existing assets are linked automatically.",
+    "The nucleus remains isolated from runtime and public production."
+  ]
+}

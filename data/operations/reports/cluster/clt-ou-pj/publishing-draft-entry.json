@@ -1,0 +1,32 @@
+{
+  "id": "publishing-draft-clt-ou-pj",
+  "assetId": "cluster:clt-ou-pj",
+  "assetType": "cluster",
+  "nucleusId": "nucleus:pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "approved",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "source": "Operational execution create-cluster/clt-ou-pj",
+  "publishingReference": "/data/publishing/registry/index.json",
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft",
+    "readyToPublish": false,
+    "published": false,
+    "deployed": false
+  },
+  "actions": {
+    "createsPublicPage": false,
+    "createsPreview": false,
+    "modifiesSitemap": false,
+    "callsIndexNow": false,
+    "deploys": false,
+    "publishes": false
+  }
+}

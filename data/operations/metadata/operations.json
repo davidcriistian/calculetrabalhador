@@ -1,17 +1,27 @@
 {
   "id": "operation-system-metadata",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/operation.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2 - Operation System",
+  "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Metadata for the Operation System.",
   "officialEntryPoint": "/data/operations/registry/index.json",
   "answers": "How platform operations should be executed.",
+  "activeCapabilityFamilies": {
+    "asset": "/data/operations/playbooks/asset/index.json",
+    "nucleus": "/data/operations/playbooks/nucleus/index.json"
+  },
+  "officialPolicies": {
+    "defaults": "/data/operations/defaults/index.json"
+  },
   "notes": [
-    "The Operation System defines processes but does not execute them."
+    "The Operation System defines processes but does not execute them.",
+    "Phase 4.1 adds reusable nucleus operation procedures without operational execution.",
+    "Phase 4.2.2 adds deterministic defaults for absent optional fields without creating runtime behavior.",
+    "Phase 4.8 adds generic create-asset provisioning as the base flow for future asset creation."
   ]
 }

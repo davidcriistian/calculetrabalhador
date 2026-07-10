@@ -1,6 +1,6 @@
 {
   "id": "operation-system-versioning",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/operation.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -9,7 +9,7 @@
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2 - Operation System",
   "description": "Versioning for Operation System.",
-  "currentOperationSystemVersion": "0.1.0",
+  "currentOperationSystemVersion": "0.4.0",
   "compatibility": {
     "productionConsumesOperations": false,
     "automationConsumesOperationsInFuture": true
@@ -21,6 +21,33 @@
       "date": "2026-07-09",
       "status": "foundation",
       "changes": ["Initial Operation System foundation."]
+    },
+    {
+      "id": "nucleus-operations-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Added create-nucleus, expand-nucleus, update-nucleus, validate-nucleus and publish-nucleus procedures."
+      ]
+    },
+    {
+      "id": "operational-defaults-policy-0.1.0",
+      "version": "0.3.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Added Operational Defaults Policy for absent optional operation fields."
+      ]
+    },
+    {
+      "id": "generic-asset-provisioning-0.1.0",
+      "version": "0.4.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Added create-asset as the generic base operation for future asset provisioning."
+      ]
     }
   ],
   "notes": [

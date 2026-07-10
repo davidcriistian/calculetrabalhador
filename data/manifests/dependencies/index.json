@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-dependencies",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/dependency-map.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Logical dependency map between future operations and platform components.",
   "dependencies": [
     {
@@ -77,6 +77,26 @@
     {
       "operationId": "expand-cluster",
       "requires": ["Strategy Cluster", "Cluster Blueprint", "Article Blueprint", "Calculator Blueprint", "Validation Engine"]
+    },
+    {
+      "operationId": "create-nucleus",
+      "requires": ["Architecture Evolution Policy", "Domain Relationship Model", "PAM", "Nucleus Blueprint", "Guide Blueprint", "Gold Standard", "Registry System", "Testing Engine", "Validation Engine", "Publishing Model"]
+    },
+    {
+      "operationId": "expand-nucleus",
+      "requires": ["Target Nucleus", "Primary Guide", "Registry System", "Relevant Blueprint", "Testing Engine", "Validation Engine", "Publishing Model"]
+    },
+    {
+      "operationId": "update-nucleus",
+      "requires": ["Target Nucleus", "Baseline", "PAM Lifecycle", "Domain Relationship Model", "Rollback Model", "Testing Engine", "Validation Engine", "Publishing Model"]
+    },
+    {
+      "operationId": "validate-nucleus",
+      "requires": ["Target Nucleus", "Primary Guide", "PAM", "Nucleus Blueprint", "Guide Blueprint", "Gold Standard", "Testing Engine", "Validation Engine", "Publishing Model"]
+    },
+    {
+      "operationId": "publish-nucleus",
+      "requires": ["Validate Nucleus Pass", "Testing Pass", "Validation Pass", "Manual Approval", "Rollback Ready", "Publishing Model"]
     }
   ],
   "dependencyPrinciples": [

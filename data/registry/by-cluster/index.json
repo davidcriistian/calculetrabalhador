@@ -10,7 +10,20 @@
   "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
   "partition": "by-cluster",
   "description": "Partition prepared to discover assets by cluster.",
-  "entries": [],
+  "entries": [
+    {
+      "id": "clt-ou-pj",
+      "assetId": "cluster:clt-ou-pj",
+      "type": "cluster",
+      "slug": "clt-ou-pj",
+      "status": "draft",
+      "approvalStatus": "approved",
+      "relationshipStatus": "approved",
+      "owner": "core-platform",
+      "version": "0.1.0",
+      "references": ["/data/registry/by-cluster/clt-ou-pj.json"]
+    }
+  ],
   "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
   "notes": ["Cluster partitions are discovery indexes and do not create clusters."]
 }

@@ -1,0 +1,27 @@
+{
+  "id": "validation-plan-calculator-calculadora-multa-40-fgts",
+  "version": "0.1.0",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "validationReference": "/data/pos/validation/index.json",
+  "executionStatus": "not-run",
+  "plannedValidations": [
+    "PAM",
+    "Calculator Blueprint",
+    "Calculator Gold Standard",
+    "Reference System",
+    "Asset Identity Policy",
+    "Registry",
+    "Publishing Draft",
+    "No Production Impact"
+  ],
+  "publicationBlockersUntilResolved": [
+    "testing-not-run",
+    "validation-not-run",
+    "publishing-approval-not-requested"
+  ]
+}

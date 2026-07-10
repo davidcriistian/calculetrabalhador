@@ -1,13 +1,13 @@
 {
   "id": "operational-manifest-contexts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/operation-context.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.1 - Operational Manifest System",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Minimum context catalog for official operations.",
   "contextPolicy": {
     "goal": "Read the smallest useful context before any future operation.",
@@ -83,6 +83,26 @@
     {
       "operationId": "expand-cluster",
       "minimumContext": ["Strategy Cluster", "Cluster Blueprint", "Article Blueprint", "Calculator Blueprint", "Core Domain", "Validation Gates"]
+    },
+    {
+      "operationId": "create-nucleus",
+      "minimumContext": ["Architecture Evolution Policy", "Domain Relationship Model", "PAM", "Nucleus Blueprint", "Guide Blueprint", "Gold Standard", "Registry System", "Publishing Model"]
+    },
+    {
+      "operationId": "expand-nucleus",
+      "minimumContext": ["Target Nucleus", "Primary Guide", "Domain Relationship Model", "Registry System", "Relevant Blueprint", "Publishing Model"]
+    },
+    {
+      "operationId": "update-nucleus",
+      "minimumContext": ["Target Nucleus", "Primary Guide", "Baseline", "PAM Lifecycle", "Domain Relationship Model", "Publishing Model"]
+    },
+    {
+      "operationId": "validate-nucleus",
+      "minimumContext": ["Target Nucleus", "Primary Guide", "PAM", "Domain Relationship Model", "Nucleus Blueprint", "Guide Blueprint", "Gold Standard", "Testing Evidence", "Validation Rules", "Publishing Model"]
+    },
+    {
+      "operationId": "publish-nucleus",
+      "minimumContext": ["Validated Nucleus", "Validated Guide", "Testing Pass", "Validation Pass", "Publishing Model", "Rollback Plan", "Manual Approval"]
     }
   ],
   "notes": [

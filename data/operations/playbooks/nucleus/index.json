@@ -1,0 +1,143 @@
+{
+  "id": "nucleus-operation-playbooks",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/playbook.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
+  "description": "Reusable playbooks for future nucleus operations.",
+  "architecturePolicy": "/data/constitution/governance/architecture-evolution-policy.json",
+  "authorities": {
+    "core": "legal-knowledge",
+    "strategy": "nucleus-and-cluster-strategy",
+    "pam": "base-asset-structure",
+    "blueprints": "asset-specific-structure",
+    "goldStandard": "quality-standard",
+    "referenceSystem": "approved-implementation",
+    "registry": "discovery",
+    "manifest": "minimum-context",
+    "operations": "procedure",
+    "testing": "technical-behavior",
+    "validation": "conformity",
+    "publishing": "production-entry"
+  },
+  "playbooks": [
+    {
+      "operationId": "create-nucleus",
+      "objective": "Prepare a future nucleus and its primary guide without creating real assets.",
+      "minimumInputs": ["nucleusName", "nucleusSlug", "primaryDomain", "objective", "targetAudience", "searchIntent", "owner", "initialClusters", "goldStandardVersion", "strategyVersion"],
+      "preconditions": ["existing-valid-domain", "available-slug", "nucleus-does-not-exist", "valid-nucleus-blueprint", "valid-guide-blueprint", "valid-pam", "applicable-gold-standard", "canonical-relationship-available"],
+      "steps": [
+        "validate-input",
+        "load-create-nucleus-manifest",
+        "load-domain-relationship-model",
+        "prepare-nucleus-asset-specification",
+        "prepare-guide-asset-specification",
+        "link-primaryDomain-primaryNucleus-primaryGuide",
+        "prepare-initial-clusters-when-provided",
+        "prepare-future-file-plan",
+        "prepare-future-registry-plan",
+        "prepare-testing-plan",
+        "prepare-validation-plan",
+        "prepare-publishing-plan",
+        "generate-operation-report",
+        "keep-status-draft-or-planned"
+      ],
+      "outputs": ["nucleusSpecification", "guideSpecification", "relationshipMap", "plannedAssets", "testingPlan", "validationPlan", "publishingPlan", "operationReport"],
+      "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-sitemap", "modify-runtime", "publish"]
+    },
+    {
+      "operationId": "expand-nucleus",
+      "objective": "Prepare additions to an existing nucleus without automatic publication.",
+      "expansionTypes": ["new-cluster", "new-calculator", "new-pillar-article", "new-satellite-article", "new-related-guide", "faq", "glossary", "download", "product-eligibility", "cta-eligibility"],
+      "preconditions": ["existing-nucleus", "valid-primary-guide", "intact-canonical-relationship", "new-asset-not-duplicated", "corresponding-blueprint-available"],
+      "steps": [
+        "locate-nucleus-through-registry",
+        "load-minimum-context-through-manifest",
+        "identify-editorial-or-operational-gap",
+        "classify-expansion-type",
+        "validate-canonical-relationship",
+        "prepare-new-assets",
+        "update-only-appropriate-declarative-specification",
+        "generate-dependency-plan",
+        "prepare-testing",
+        "prepare-validation",
+        "prepare-publishing",
+        "generate-expansion-report"
+      ],
+      "outputs": ["expansionScope", "newAssetSpecifications", "relationshipMap", "dependencyPlan", "testingPlan", "validationPlan", "publishingPlan", "operationReport"],
+      "forbiddenActions": ["auto-publish", "modify-runtime", "modify-public-pages", "modify-core-without-approved-operation"]
+    },
+    {
+      "operationId": "update-nucleus",
+      "objective": "Prepare controlled updates to nucleus configuration, strategy or metadata.",
+      "updateTypes": ["non-structural-identity", "objective", "target-audience", "search-intent", "priorities", "featured", "ordering", "guide-seo", "editorial-strategy", "commercial-strategy", "status", "target-gold-standard", "target-blueprint"],
+      "rules": ["do-not-change-primaryDomain-without-approved-migration", "do-not-change-primaryGuide-freely", "do-not-change-canonical-relationships-without-impact-analysis", "do-not-modify-public-pages-directly", "do-not-change-core-during-editorial-update", "do-not-change-constitution-or-architecture"],
+      "steps": [
+        "capture-baseline",
+        "identify-change-type",
+        "classify-impact",
+        "locate-dependent-assets",
+        "prepare-declarative-change",
+        "prepare-rollback",
+        "run-applicable-testing",
+        "run-applicable-validation",
+        "prepare-publishing",
+        "generate-changelog-and-report"
+      ],
+      "outputs": ["baseline", "impactClassification", "dependentAssets", "declarativeChangePlan", "rollbackPlan", "testingPlan", "validationPlan", "publishingPlan", "changeLog", "operationReport"],
+      "forbiddenActions": ["modify-core", "modify-constitution", "modify-architecture", "modify-public-pages-directly"]
+    },
+    {
+      "operationId": "validate-nucleus",
+      "objective": "Validate structural, editorial, technical and governance integrity of a nucleus and its primary guide.",
+      "requiredValidations": ["pam-compliance", "domain-relationship-model", "valid-primaryDomain", "valid-primaryGuide", "valid-primaryNucleus", "no-duplicates", "clusters-linked", "calculators-linked", "pillar-and-satellite-classification", "planned-internal-links", "gold-standard-compliance", "guide-blueprint-compliance", "nucleus-blueprint-compliance", "seo", "json-ld", "breadcrumb", "headings", "responsiveness", "accessibility", "catalog", "navigation", "empty-state", "publishing", "rollback-readiness"],
+      "results": ["passed", "passed-with-warnings", "failed", "blocked", "manual-review-required"],
+      "criticalFailures": ["invalid-canonical-relationship", "missing-domain", "missing-or-divergent-guide", "duplicate-slug", "gold-standard-non-compliant", "testing-failed", "critical-validation", "invalid-url-or-canonical", "missing-rollback"],
+      "steps": [
+        "load-validation-manifest",
+        "load-nucleus-and-guide-specifications",
+        "validate-pam-compliance",
+        "validate-canonical-relationships",
+        "validate-blueprint-compliance",
+        "validate-gold-standard",
+        "validate-testing-evidence",
+        "validate-publishing-readiness",
+        "classify-result",
+        "generate-validation-report"
+      ],
+      "outputs": ["validationStatus", "warnings", "failures", "evidence", "nextAction", "operationReport"],
+      "forbiddenActions": ["modify-production", "auto-fix-assets", "publish"]
+    },
+    {
+      "operationId": "publish-nucleus",
+      "objective": "Prepare and control future publication of a nucleus and its guide through the Publishing Model.",
+      "preconditions": ["validate-nucleus-approved", "testing-approved", "validation-approved", "gold-standard-compliant", "reference-evaluated-when-applicable", "manual-approval", "rollback-ready", "sitemap-ready", "indexing-ready", "deploy-ready"],
+      "steps": [
+        "confirm-lifecycle",
+        "confirm-gates",
+        "create-release-specification",
+        "create-deploy-plan",
+        "create-sitemap-plan",
+        "create-indexing-plan",
+        "create-rollback-plan",
+        "create-publication-log-template",
+        "change-only-allowed-declarative-status",
+        "wait-for-future-operational-execution"
+      ],
+      "outputs": ["releaseSpecification", "deployPlan", "sitemapPlan", "indexingPlan", "rollbackPlan", "publicationLogTemplate", "operationReport"],
+      "forbiddenActions": ["modify-sitemap-xml", "execute-git", "execute-deploy", "call-indexnow", "create-public-page", "publish-now"]
+    }
+  ],
+  "lifecycle": {
+    "source": "/data/blueprints/shared/pam/index.json",
+    "allowedTransitions": ["planned -> draft", "draft -> in-development", "in-development -> testing", "testing -> validation", "validation -> approved", "approved -> ready-to-publish", "ready-to-publish -> published"]
+  },
+  "notes": [
+    "These playbooks are procedures only and do not execute operations.",
+    "All nucleus operations start from their manifest."
+  ]
+}

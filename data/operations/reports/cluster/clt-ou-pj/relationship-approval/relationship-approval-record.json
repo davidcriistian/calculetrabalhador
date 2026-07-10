@@ -1,0 +1,48 @@
+{
+  "id": "relationship-approval-record-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "approved",
+  "approvalStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "approvalType": "editorial-relationship-approval",
+  "approvedBy": "platform-owner",
+  "approvalScope": "cluster:clt-ou-pj",
+  "approvedRelations": [
+    "primary-calculator",
+    "pillar-article",
+    "satellite-articles"
+  ],
+  "excludedScope": [
+    "publication",
+    "runtime",
+    "SEO modification",
+    "HTML modification",
+    "catalog modification",
+    "sitemap",
+    "deploy",
+    "products",
+    "offers",
+    "commercial CTAs",
+    "downloads",
+    "glossary",
+    "shared FAQs",
+    "campaigns"
+  ],
+  "evidence": [
+    "/data/operations/reports/cluster/clt-ou-pj/cluster-draft-specification.json",
+    "/data/operations/reports/cluster/clt-ou-pj/candidate-review/candidate-review-report.json",
+    "/data/operations/reports/cluster/clt-ou-pj/candidate-review/proposed-relationship-map.json",
+    "/data/constitution/governance/asset-identity-policy.json",
+    "/data/blueprints/cluster/index.json",
+    "/data/references/articles/index.json",
+    "/data/publishing/registry/index.json"
+  ],
+  "notes": [
+    "Approval is internal only.",
+    "No public relationship, page, runtime behavior, catalog entry or publication is changed."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "cta-gap-report-clt-ou-pj",
+  "version": "0.1.0",
+  "status": "draft",
+  "approvalStatus": "pending-approval",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "core-platform",
+  "referencePolicy": "/data/references/articles/index.json",
+  "expectedCalculatorCtaPlacement": ["inicio", "meio", "final"],
+  "articles": [
+    {
+      "id": "clt-ou-pj",
+      "slug": "/blog/clt-ou-pj",
+      "observedCalculatorCta": ["inicio", "meio", "final"],
+      "gapStatus": "no-gap",
+      "notes": ["Multiple links and CTA blocks point to /calculadora-clt-ou-pj/."]
+    },
+    {
+      "id": "clt-ou-pj-vale-a-pena-em-2026",
+      "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+      "observedCalculatorCta": ["inicio", "meio", "final"],
+      "gapStatus": "no-gap",
+      "notes": ["Registered as official article reference with approved CTA placement."]
+    },
+    {
+      "id": "como-calcular-clt-ou-pj",
+      "slug": "/blog/como-calcular-clt-ou-pj",
+      "observedCalculatorCta": ["inicio", "meio", "final"],
+      "gapStatus": "no-gap",
+      "notes": ["Registered as official article reference with approved CTA placement."]
+    },
+    {
+      "id": "vantagens-e-desvantagens-clt-ou-pj",
+      "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+      "observedCalculatorCta": ["inicio", "meio"],
+      "gapStatus": "possible-final-cta-review",
+      "notes": ["Reference metadata approves beginning, middle and final CTA placement; HTML scan found calculator links near beginning and middle. Final placement should be checked manually before approval."]
+    },
+    {
+      "id": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "slug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "observedCalculatorCta": ["inicio", "meio"],
+      "gapStatus": "possible-final-cta-review",
+      "notes": ["HTML scan found calculator links near beginning and middle. Final placement should be checked manually before approval."]
+    }
+  ],
+  "summary": {
+    "articlesWithoutObservedCalculatorCta": [],
+    "articlesNeedingManualCtaReview": [
+      "vantagens-e-desvantagens-clt-ou-pj",
+      "quanto-preciso-ganhar-como-pj-para-compensar-clt"
+    ]
+  },
+  "operationalBoundaries": {
+    "modifiesArticles": false,
+    "addsCtas": false
+  }
+}

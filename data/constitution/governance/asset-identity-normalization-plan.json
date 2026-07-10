@@ -1,0 +1,95 @@
+{
+  "id": "asset-identity-normalization-plan",
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/policy.schema.json",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Architecture Governance Phase 4.6 - Asset Identity Policy",
+  "description": "Future normalization recommendations for typed asset identity. This file does not execute migration.",
+  "policyReference": "/data/constitution/governance/asset-identity-policy.json",
+  "canonicalRules": {
+    "assetIdFormat": "{assetType}:{localId}",
+    "relationshipsUse": "assetId",
+    "registryPrimaryKey": "assetId",
+    "publicSlugIsAttributeOnly": true
+  },
+  "auditFindings": {
+    "duplicateRawIds": [
+      {
+        "rawId": "clt-ou-pj",
+        "assets": [
+          {
+            "currentId": "clt-ou-pj",
+            "recommendedAssetId": "article:clt-ou-pj",
+            "assetType": "article",
+            "source": "/data/articles.json",
+            "publicSlug": "/blog/clt-ou-pj"
+          },
+          {
+            "currentId": "clt-ou-pj",
+            "recommendedAssetId": "cluster:clt-ou-pj",
+            "assetType": "cluster",
+            "source": "/data/registry/by-cluster/clt-ou-pj.json",
+            "publicSlug": "clt-ou-pj"
+          }
+        ],
+        "status": "allowed-after-typed-identity",
+        "requiresMigrationNow": false
+      }
+    ],
+    "duplicatePublicSlugs": [],
+    "wrongTypedRelationshipPatterns": [
+      {
+        "pattern": "Compatibility maps use calculadora-clt-ou-pj as a cluster value for CLT ou PJ articles.",
+        "recommendedNormalization": "Use cluster:clt-ou-pj for cluster identity and calculator:calculadora-clt-ou-pj for calculator identity.",
+        "affectedArea": "data/core/compatibility",
+        "requiresMigrationNow": false
+      }
+    ],
+    "slugBasedRelationships": [
+      {
+        "pattern": "Public catalogs and legacy compatibility references use slugs and URLs as relationship hints.",
+        "recommendedNormalization": "Add explicit typed assetId relationships in future approved migration.",
+        "requiresMigrationNow": false
+      }
+    ]
+  },
+  "futureRecommendations": [
+    {
+      "area": "Registry System",
+      "recommendation": "Adopt assetId as the primary registry key and retain publicSlug as an attribute."
+    },
+    {
+      "area": "PAM",
+      "recommendation": "Treat assetId as canonical identity and publicSlug as public routing metadata."
+    },
+    {
+      "area": "Blueprint System",
+      "recommendation": "Require assetId, assetType, publicSlug, displayName, version, status and owner in future concrete asset specs."
+    },
+    {
+      "area": "Operations",
+      "recommendation": "Use typed assetId values in relationship maps, approvals, rollback plans and reports."
+    },
+    {
+      "area": "Compatibility",
+      "recommendation": "Separate cluster ids, calculator ids, article ids, guide ids and nucleus ids in future compatibility normalization."
+    },
+    {
+      "area": "Publishing",
+      "recommendation": "Use assetId for publishing entries and publicSlug only for route/canonical planning."
+    }
+  ],
+  "restrictions": [
+    "Do not change existing public slugs.",
+    "Do not change existing URLs.",
+    "Do not alter runtime.",
+    "Do not alter calculators.",
+    "Do not alter articles.",
+    "Do not promote relationships.",
+    "Do not execute migration in this phase."
+  ]
+}

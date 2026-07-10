@@ -1,0 +1,22 @@
+{
+  "id": "calculadora-multa-40-fgts",
+  "assetId": "calculator:calculadora-multa-40-fgts",
+  "type": "calculator",
+  "slug": "calculadora-multa-40-fgts",
+  "status": "draft",
+  "approvalStatus": "approved-reference",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "references": [
+    "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/calculator-draft-specification.json",
+    "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/relationship-map.json",
+    "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/registry-draft-entry.json",
+    "/data/operations/reports/asset/calculator/calculadora-multa-40-fgts/publishing-draft-entry.json",
+    "/data/references/calculators/index.json"
+  ],
+  "notes": [
+    "Internal governed representation only.",
+    "This entry does not feed runtime or public pages."
+  ]
+}

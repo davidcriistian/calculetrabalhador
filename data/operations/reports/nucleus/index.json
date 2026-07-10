@@ -1,0 +1,48 @@
+{
+  "id": "nucleus-operation-report-templates",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/report.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
+  "description": "Report templates for nucleus operations.",
+  "commonFields": ["operationId", "nucleusId", "guideId", "status", "inputs", "assetsAffected", "relationships", "gates", "testing", "validation", "publishing", "warnings", "failures", "evidence", "nextAction", "estimatedContext", "estimatedCredits", "timestamps"],
+  "reports": [
+    {
+      "reportType": "create-nucleus-report",
+      "operationId": "create-nucleus",
+      "status": "planned",
+      "requiredSections": ["nucleusSpecification", "guideSpecification", "relationshipMap", "plannedAssets", "testingPlan", "validationPlan", "publishingPlan"]
+    },
+    {
+      "reportType": "expand-nucleus-report",
+      "operationId": "expand-nucleus",
+      "status": "planned",
+      "requiredSections": ["expansionType", "gapAnalysis", "newAssetSpecifications", "dependencyPlan", "testingPlan", "validationPlan", "publishingPlan"]
+    },
+    {
+      "reportType": "update-nucleus-report",
+      "operationId": "update-nucleus",
+      "status": "planned",
+      "requiredSections": ["baseline", "changeType", "impactClassification", "dependentAssets", "rollbackPlan", "changelog"]
+    },
+    {
+      "reportType": "validate-nucleus-report",
+      "operationId": "validate-nucleus",
+      "status": "planned",
+      "requiredSections": ["validationStatus", "warnings", "failures", "criticalFailures", "evidence", "nextAction"]
+    },
+    {
+      "reportType": "publish-nucleus-report",
+      "operationId": "publish-nucleus",
+      "status": "planned",
+      "requiredSections": ["releaseSpecification", "deployPlan", "sitemapPlan", "indexingPlan", "rollbackPlan", "publicationLogTemplate"]
+    }
+  ],
+  "notes": [
+    "Reports document plans and outcomes; they do not create assets or publish pages."
+  ]
+}
