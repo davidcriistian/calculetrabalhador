@@ -1,0 +1,151 @@
+{
+  "id": "architecture-evolution-policy",
+  "policy": "Architecture Evolution Policy",
+  "required": true,
+  "version": "0.1.0",
+  "schema": "/data/constitution/schemas/policy.schema.json",
+  "status": "active",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Constitution Governance Rule - Architecture Evolution Policy",
+  "objective": "Prevent uncontrolled architecture growth by requiring reuse before expansion.",
+  "fundamentalPrinciple": "Architecture evolves by reuse before expansion.",
+  "decisionFlow": [
+    {
+      "step": 1,
+      "name": "reuse",
+      "mandatoryQuestion": "Can the need be solved using an existing structure?",
+      "requiredChecks": [
+        "Constitution",
+        "Strategy",
+        "Core",
+        "POS",
+        "Registry",
+        "Blueprint System",
+        "Platform Asset Model",
+        "Gold Standard",
+        "Reference System",
+        "Operation System",
+        "Manifest System",
+        "Migration",
+        "Testing",
+        "Validation",
+        "Publishing"
+      ],
+      "ifYes": [
+        "use-existing-structure",
+        "do-not-create-new-layer",
+        "do-not-create-new-model",
+        "do-not-create-new-engine"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "extension",
+      "mandatoryQuestion": "Can the existing structure be extended while preserving its responsibility?",
+      "ifYes": [
+        "extend-existing-structure",
+        "record-evolution",
+        "do-not-create-parallel-structure"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "justification",
+      "requiredOnlyWhen": "reuse-and-extension-are-insufficient",
+      "mandatoryQuestions": [
+        "What problem does it solve?",
+        "Why does no existing structure solve it?",
+        "Which new responsibilities appear?",
+        "What is the architectural impact?",
+        "Which alternatives were rejected?",
+        "Which layer will be affected?",
+        "How does it avoid duplication?"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "audit",
+      "mandatoryQuestions": [
+        "Is there overlap?",
+        "Is there duplication?",
+        "Is there conflict?",
+        "Is there circular dependency?",
+        "Does it break the Architecture Freeze?",
+        "Is there operational impact?"
+      ]
+    },
+    {
+      "step": 5,
+      "name": "approval",
+      "requiredCriteria": [
+        "proven-need",
+        "approved-audit",
+        "exclusive-responsibility",
+        "no-duplication",
+        "no-conflict",
+        "compatible-with-constitution",
+        "compatible-with-platform-architecture"
+      ]
+    }
+  ],
+  "mandatoryRules": [
+    "Do not create a new layer only to organize files.",
+    "Do not create a new Engine for convenience.",
+    "Do not duplicate responsibilities.",
+    "Do not create multiple sources of truth.",
+    "Do not break the Domain Relationship Model.",
+    "Do not redefine ownership of another layer.",
+    "Do not alter PAM responsibilities."
+  ],
+  "hierarchy": [
+    "Constitution",
+    "Strategy",
+    "Platform Architecture",
+    "Core",
+    "Gold Standards",
+    "Reference System",
+    "Platform Asset Model",
+    "Blueprint System",
+    "Registry",
+    "Operations",
+    "Manifest",
+    "Migration",
+    "Testing",
+    "Validation",
+    "Publishing"
+  ],
+  "freeze": {
+    "architectureFoundation": "frozen",
+    "newTransversalModels": "blocked",
+    "newLayers": "exception-only",
+    "operationalCapabilities": "active-development"
+  },
+  "futurePriority": [
+    "create",
+    "update",
+    "expand",
+    "validate",
+    "publish",
+    "rollback",
+    "automation",
+    "admin"
+  ],
+  "operationalBoundaries": {
+    "modifiesProduction": false,
+    "modifiesRuntime": false,
+    "modifiesCalculators": false,
+    "modifiesArticles": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "createsEngine": false,
+    "createsLayer": false
+  },
+  "notes": [
+    "This policy is permanent and applies to humans, AI, Codex and any development process.",
+    "Lower layers never redefine higher layers.",
+    "Future platform work should prefer operational capabilities over new foundation models."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "id": "constitution-history",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/constitution/schemas/constitution.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -17,6 +17,20 @@
       "owner": "Calcule Trabalhador",
       "status": "foundation",
       "changes": ["Created Constitution Layer foundation."],
+      "notes": []
+    },
+    {
+      "id": "architecture-evolution-policy-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "active",
+      "changes": [
+        "Added Architecture Evolution Policy.",
+        "Formalized reuse before expansion.",
+        "Declared Architecture Foundation frozen.",
+        "Blocked new transversal models and made new layers exception-only."
+      ],
       "notes": []
     }
   ],

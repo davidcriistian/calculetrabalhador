@@ -1,6 +1,6 @@
 {
   "id": "constitution-versioning",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/constitution/schemas/constitution.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -9,7 +9,7 @@
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
   "description": "Versioning for Constitution Layer.",
-  "currentConstitutionVersion": "0.1.0",
+  "currentConstitutionVersion": "0.2.0",
   "compatibility": {
     "strategyMustRespectConstitution": true,
     "productionConsumesConstitution": false
@@ -21,6 +21,15 @@
       "date": "2026-07-09",
       "status": "foundation",
       "changes": ["Initial Constitution Layer."]
+    },
+    {
+      "id": "architecture-evolution-policy-0.1.0",
+      "version": "0.2.0",
+      "date": "2026-07-10",
+      "status": "active",
+      "changes": [
+        "Added permanent governance policy for architecture evolution."
+      ]
     }
   ],
   "notes": [

@@ -34,12 +34,15 @@ Playbooks descrevem operacoes repetiveis como criar calculadora, criar cluster, 
 
 Eles reduzem improviso e consumo de creditos.
 
+Playbooks que envolvem dominio, nucleo, guia, cluster, calculadora, artigo, produto ou CTA devem seguir o Domain Relationship Model em `/docs/PLATFORM_ARCHITECTURE.md`.
+
 ## Workflows
 
 Workflows definem a ordem declarativa:
 
 ```text
 Entrada
+-> Relacao canonica
 -> Pre-condicoes
 -> Blueprint
 -> Core

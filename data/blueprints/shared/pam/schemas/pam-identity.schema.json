@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-identity.schema.json",
+  "title": "PAM Identity",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "slug",
+    "title",
+    "owner",
+    "status",
+    "version",
+    "createdAt",
+    "updatedAt",
+    "createdBy",
+    "updatedBy"
+  ],
+  "properties": {
+    "id": { "type": ["string", "null"] },
+    "type": { "type": ["string", "null"] },
+    "slug": { "type": ["string", "null"] },
+    "title": { "type": ["string", "null"] },
+    "owner": { "type": ["string", "null"] },
+    "status": { "type": "string" },
+    "version": { "type": ["string", "null"] },
+    "createdAt": { "type": ["string", "null"] },
+    "updatedAt": { "type": ["string", "null"] },
+    "createdBy": { "type": ["string", "null"] },
+    "updatedBy": { "type": ["string", "null"] }
+  }
+}

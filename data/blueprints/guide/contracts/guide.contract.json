@@ -1,0 +1,40 @@
+{
+  "id": "blueprint-contract-guide",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/guide/schemas/guide-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "name": "Guide Blueprint Contract",
+  "objective": "Define the declarative boundary for future public nucleus guide pages.",
+  "responsibilities": [
+    "define guide identity",
+    "declare primaryDomain and primaryNucleus",
+    "model visual structure without HTML or CSS",
+    "model SEO requirements without changing current SEO",
+    "model dynamic content aggregation by configuration",
+    "model ordering, featured content, filters, fallback and limits",
+    "model Testing, Validation and Publishing expectations"
+  ],
+  "nonResponsibilities": [
+    "create public pages",
+    "copy existing pages",
+    "modify existing guides",
+    "modify URLs",
+    "modify sitemap",
+    "modify public catalogs",
+    "execute automation",
+    "redefine the Domain Relationship Model"
+  ],
+  "dependencies": [
+    "/docs/PLATFORM_ARCHITECTURE.md",
+    "/data/blueprints/nucleus/index.json"
+  ],
+  "notes": [
+    "Guide Blueprint receives future assets by configuration after approved integration.",
+    "Ordering and featured content must never be hardcoded in HTML."
+  ]
+}

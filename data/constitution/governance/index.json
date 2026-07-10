@@ -1,13 +1,13 @@
 {
   "id": "constitution-governance",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/constitution/schemas/governance.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "source": "Constitution Governance Rule - Architecture Evolution Policy",
   "description": "Permanent governance rules for the platform.",
   "ownership": {
     "constitutionOwner": "Calcule Trabalhador",
@@ -32,7 +32,15 @@
     "required": true,
     "scope": ["principles", "strategy", "blueprints", "operations", "publishing"]
   },
+  "architectureEvolutionPolicy": "/data/constitution/governance/architecture-evolution-policy.json",
+  "architectureFreeze": {
+    "architectureFoundation": "frozen",
+    "newTransversalModels": "blocked",
+    "newLayers": "exception-only",
+    "operationalCapabilities": "active-development"
+  },
   "notes": [
-    "Governance defines responsibility but does not execute approvals."
+    "Governance defines responsibility but does not execute approvals.",
+    "Architecture must evolve by reuse before expansion."
   ]
 }

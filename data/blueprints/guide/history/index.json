@@ -1,0 +1,29 @@
+{
+  "id": "guide-blueprint-history",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/guide/schemas/guide-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Change history for the Guide Blueprint model.",
+  "items": [
+    {
+      "id": "guide-blueprint-0.1.0",
+      "phase": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Created declarative Guide Blueprint model.",
+        "Declared dynamic content, ordering, SEO, Testing, Validation and Publishing models.",
+        "Kept real guide pages, URLs, SEO and catalogs disconnected."
+      ]
+    }
+  ],
+  "notes": [
+    "History records blueprint model changes only."
+  ]
+}

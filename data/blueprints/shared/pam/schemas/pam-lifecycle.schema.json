@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-lifecycle.schema.json",
+  "title": "PAM Lifecycle",
+  "type": "object",
+  "required": [
+    "states",
+    "allowedTransitions",
+    "blockingStates",
+    "finalStates"
+  ],
+  "properties": {
+    "states": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "planned",
+          "draft",
+          "in-development",
+          "testing",
+          "validation",
+          "approved",
+          "ready-to-publish",
+          "published",
+          "deprecated",
+          "archived",
+          "cancelled"
+        ]
+      }
+    },
+    "allowedTransitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" }
+        }
+      }
+    },
+    "blockingStates": { "type": "array", "items": { "type": "string" } },
+    "finalStates": { "type": "array", "items": { "type": "string" } }
+  }
+}

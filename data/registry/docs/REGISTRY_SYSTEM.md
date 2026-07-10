@@ -173,6 +173,8 @@ O Registry System complementa descoberta rapida e particionamento. Ele nao subst
 
 O POS Registry governa operacoes, gates, aprovacoes, status operacionais e processos. O Registry System apenas aponta para ativos minimos por particao.
 
+Relacionamentos como `primaryDomain`, `primaryNucleus`, `primaryGuide`, `primaryCluster`, relacoes secundarias e produtos elegiveis seguem o Domain Relationship Model em `/docs/PLATFORM_ARCHITECTURE.md`. O Registry System pode indexar esses ponteiros, mas nao redefine ownership.
+
 ## Relacao com Blueprint System
 
 Blueprint System define como ativos devem ser construidos.

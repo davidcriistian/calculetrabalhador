@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/nucleus/schemas/nucleus-growth.schema.json",
+  "title": "Nucleus Growth Model",
+  "type": "object",
+  "required": [
+    "plannedClusters",
+    "activeClusters",
+    "plannedCalculators",
+    "activeCalculators",
+    "plannedArticles",
+    "activeArticles",
+    "contentGaps",
+    "toolGaps",
+    "commercialGaps",
+    "priority",
+    "roadmap"
+  ],
+  "properties": {
+    "plannedClusters": { "type": "array" },
+    "activeClusters": { "type": "array" },
+    "plannedCalculators": { "type": "array" },
+    "activeCalculators": { "type": "array" },
+    "plannedArticles": { "type": "array" },
+    "activeArticles": { "type": "array" },
+    "contentGaps": { "type": "array" },
+    "toolGaps": { "type": "array" },
+    "commercialGaps": { "type": "array" },
+    "priority": { "type": "string" },
+    "roadmap": { "type": "array" }
+  }
+}

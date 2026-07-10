@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-relationships.schema.json",
+  "title": "PAM Relationships",
+  "type": "object",
+  "required": [
+    "primaryDomain",
+    "primaryNucleus",
+    "primaryGuide",
+    "primaryCluster",
+    "secondaryRelations",
+    "relatedAssets",
+    "parentAsset",
+    "childrenAssets",
+    "ownership"
+  ],
+  "properties": {
+    "primaryDomain": { "type": ["string", "null"] },
+    "primaryNucleus": { "type": ["string", "null"] },
+    "primaryGuide": { "type": ["string", "null"] },
+    "primaryCluster": { "type": ["string", "null"] },
+    "secondaryRelations": { "type": "array" },
+    "relatedAssets": { "type": "array" },
+    "parentAsset": { "type": ["string", "null"] },
+    "childrenAssets": { "type": "array" },
+    "ownership": { "type": ["string", "null"] }
+  }
+}

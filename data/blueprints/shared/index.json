@@ -1,14 +1,15 @@
 {
   "id": "blueprint-shared-components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/blueprints/schemas/component.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 1 - Blueprint System",
-  "description": "Reusable declarative components for future calculator and article blueprints.",
+  "source": "Platform Asset Model foundation",
+  "description": "Reusable declarative components and shared base models for future blueprints.",
+  "platformAssetModel": "/data/blueprints/shared/pam/index.json",
   "components": [
     {
       "id": "hero",
@@ -117,6 +118,7 @@
     }
   ],
   "notes": [
-    "Shared components are blueprint definitions only and do not render UI."
+    "Shared components are blueprint definitions only and do not render UI.",
+    "Platform Asset Model defines common asset structure only and does not replace Blueprints."
   ]
 }

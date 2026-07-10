@@ -227,3 +227,234 @@ Shadow deve entrar em sunset por ativo quando todos os criterios abaixo estivere
 | Validation | Gate de conformidade | `data/pos/validation/` | Constitution, Gold, Blueprint, Testing, Operations | Checklists, severidade, evidencias e aprovacao de conformidade | Runtime e publicacao direta | Versionado | Operacoes que exigem conformidade | Conformidade |
 | Publishing | Entrada em producao | `data/publishing/` | Testing, Validation, Operations, Manifest, Registry | Planos, gates, rollback e logs de publicacao | Conhecimento Core e ativos sem processo aprovado | Condicional por release | Qualquer entrada em producao | Publicacao |
 | Automation futura | Execucao aprovada | A definir em fase propria | Manifest, Operations, Registry, Testing, Validation, Publishing | Execucao de processos aprovados | Regras, publicacao e runtime fora dos gates | Futura | Somente apos aprovacao explicita | Execucao |
+
+## Domain Relationship Model
+
+Este documento tambem e a autoridade canonica para a linguagem de relacionamento entre ativos. Nenhuma camada deve redefinir dominio, nucleo, guia, cluster, calculadora, artigo, FAQ, glossario, download, produto, oferta ou CTA com outro significado.
+
+### Hierarquia Canonica
+
+```text
+Dominio
+  -> contem Nucleos
+
+Nucleo
+  -> pertence a um Dominio principal
+  -> possui um Guia principal
+  -> contem Clusters
+
+Guia
+  -> representa publicamente um unico Nucleo
+  -> agrega Clusters, Calculadoras e Artigos do Nucleo
+
+Cluster
+  -> pertence a um Nucleo principal
+  -> pertence a um Dominio principal
+  -> pode ter uma Calculadora principal
+  -> deve ter um Artigo pilar quando aplicavel
+  -> pode ter Artigos satelites
+  -> pode ter FAQ, Glossario, Downloads, Produtos elegiveis e CTAs configuraveis
+
+Calculadora
+  -> pertence a um Dominio principal
+  -> pertence a um Nucleo principal
+  -> pertence a pelo menos um Cluster canonico
+  -> pode apoiar outros Clusters secundarios
+  -> possui uma relacao principal unica
+
+Artigo
+  -> pertence a um Nucleo principal
+  -> pertence a um Cluster canonico
+  -> possui funcao `pillar` ou `satellite`
+  -> pode apoiar calculadoras e clusters secundarios
+  -> possui uma relacao principal unica
+
+Produto
+  -> nao pertence estruturalmente ao Cluster
+  -> e elegivel por configuracao para Nucleo, Cluster, Calculadora, Artigo ou Slot
+
+CTA
+  -> e selecionado por configuracao
+  -> aponta para Calculadora, Produto, Guia ou outro destino autorizado
+  -> nunca deve ser hardcoded como regra arquitetural
+```
+
+### Cardinalidades
+
+- Um Dominio pode possuir varios Nucleos.
+- Um Nucleo pertence a um Dominio principal.
+- Um Nucleo possui um Guia principal.
+- Um Guia representa um unico Nucleo.
+- Um Nucleo pode possuir varios Clusters.
+- Um Cluster pertence a um Nucleo principal.
+- Um Cluster pertence a um Dominio principal.
+- Um Cluster pode possuir zero ou uma Calculadora principal.
+- Um Cluster pode possuir zero ou um Artigo pilar.
+- Um Cluster pode possuir varios Artigos satelites.
+- Uma Calculadora possui um Cluster principal.
+- Um Artigo possui um Cluster principal.
+- Produtos e CTAs sao relacoes configuraveis, nao ownership estrutural.
+
+### Relacao Canonica e Relacoes Secundarias
+
+Cada ativo deve declarar uma relacao canonica principal. Arrays genericos nao substituem a relacao principal.
+
+Campos canonicos recomendados:
+
+- `primaryDomain`;
+- `primaryNucleus`;
+- `primaryGuide`;
+- `primaryCluster`;
+- `primaryCalculator`;
+- `primaryArticle`.
+
+Relacoes adicionais devem ser declaradas separadamente:
+
+- `secondaryClusters`;
+- `relatedCalculators`;
+- `relatedArticles`;
+- `relatedGuides`;
+- `eligibleProducts`.
+
+A relacao canonica responde "onde este ativo pertence". Relacoes secundarias respondem "onde este ativo tambem apoia, aparece ou pode ser recomendado".
+
+### Ownership por Camada
+
+| Relacao | Autoridade | Limite |
+| --- | --- | --- |
+| Dominio e conhecimento juridico | Core | Strategy pode priorizar, mas nao redefine regra juridica. |
+| Nucleos, clusters e prioridade editorial | Strategy | Nao altera conhecimento Core nem publicacao direta. |
+| Estrutura de ativos | Blueprint System | Nao decide sozinho SEO final, runtime ou publicacao. |
+| Descoberta compacta | Registry System | Nao armazena ativo completo nem ownership operacional. |
+| Status e governanca operacional | POS Registry | Nao substitui catalogos publicos nem Core. |
+| Passos de criacao e atualizacao | Operation System | Nao executa sem gates aplicaveis. |
+| Contexto minimo da operacao | Manifest System | Nao vira inventario completo. |
+| Padrao de qualidade | Gold Standard | Nao publica nem altera runtime. |
+| Exemplos aprovados | Reference System | Nao substitui blueprint nem Core. |
+| Comportamento e regressao | Testing | Nao aprova conformidade sozinho. |
+| Conformidade | Validation | Nao publica sozinha. |
+| Entrada em producao | Publishing | Controla entrada, mas nao redefine conhecimento, design ou relacoes. |
+
+Nenhuma camada deve redefinir ownership de outra. Quando houver conflito, a matriz acima prevalece.
+
+### Fluxos Oficiais de Relacionamento
+
+CREATE NUCLEUS:
+
+```text
+input
+-> verificar Domain
+-> definir Nucleus
+-> definir Guide
+-> registrar Clusters iniciais
+-> aplicar Blueprint
+-> aplicar Gold Standard
+-> Testing
+-> Validation
+-> Publishing
+```
+
+CREATE CLUSTER:
+
+```text
+input
+-> verificar Nucleus
+-> definir intencao e objetivo
+-> definir Calculator principal, quando aplicavel
+-> definir Pillar Article
+-> definir Satellite Articles
+-> definir relacoes
+-> Testing
+-> Validation
+-> Publishing
+```
+
+CREATE CALCULATOR:
+
+```text
+input
+-> identificar Domain
+-> identificar Nucleus
+-> identificar primaryCluster
+-> aplicar Calculator Blueprint
+-> aplicar Gold Standard
+-> registrar relacoes
+-> atualizar catalogos atuais quando aprovado
+-> Testing
+-> Validation
+-> Publishing
+```
+
+CREATE ARTICLE:
+
+```text
+input
+-> identificar Nucleus
+-> identificar primaryCluster
+-> definir role: pillar ou satellite
+-> aplicar Article Blueprint
+-> aplicar CTA de calculadora no inicio, meio e final quando aplicavel
+-> registrar relacoes
+-> atualizar catalogos atuais quando aprovado
+-> Testing
+-> Validation
+-> Publishing
+```
+
+UPDATE ASSET:
+
+```text
+input
+-> localizar relacao canonica
+-> localizar dependencias
+-> identificar impacto
+-> atualizar configuracao
+-> Testing
+-> Validation
+-> Publishing
+```
+
+### Preservacao de Design e Logica
+
+- Design vem de Gold Standard, Blueprint System e Reference System.
+- Logica juridica vem do Core.
+- Relacoes vem deste modelo canonico.
+- Operacao vem de Manifest System e Operation System.
+- Aprovacao vem de Testing, Validation e Publishing.
+
+Codex nao deve inferir livremente design, logica juridica, relacoes, operacao ou aprovacao. Cada decisao deve apontar para a autoridade correspondente.
+
+## Platform Asset Model
+
+O Platform Asset Model, ou PAM, fica em `/data/blueprints/shared/pam/`.
+
+PAM e o modelo base compartilhado por Nucleus, Guide, Cluster, Calculator e Article Blueprints. Futuramente, Product, Offer, CTA e Campaign podem usar o mesmo vocabulario comum.
+
+PAM define apenas:
+
+- identity;
+- relationships;
+- lifecycle;
+- governance;
+- metadata;
+- audit.
+
+PAM nao define SEO, layout, componentes, calculos, conteudo, produtos, CTA, campanhas ou publicacao. Essas responsabilidades permanecem nas camadas ja definidas.
+
+PAM nao substitui Blueprints, Registry ou POS. Ele apenas impede que ativos redefinam conceitos basicos de identidade, relacionamento, lifecycle, governanca e auditoria.
+
+Esta e a ultima modelagem transversal da fundacao. Depois dela, a evolucao arquitetural deve priorizar capacidades operacionais como create, update, validate e publish.
+
+## Architecture Evolution Policy
+
+A autoridade permanente para evolucao arquitetural e `/data/constitution/governance/architecture-evolution-policy.json`.
+
+Regra central:
+
+```text
+reutilizar -> estender -> justificar -> auditar -> aprovar
+```
+
+Architecture Foundation esta `FROZEN`; novas modelagens transversais estao `BLOCKED`; novas camadas sao `EXCEPTION ONLY`; capacidades operacionais estao em `ACTIVE DEVELOPMENT`.
+
+Este documento referencia a politica, mas nao substitui a Constitution.

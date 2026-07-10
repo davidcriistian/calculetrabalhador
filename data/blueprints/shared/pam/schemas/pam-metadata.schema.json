@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-metadata.schema.json",
+  "title": "PAM Metadata",
+  "type": "object",
+  "required": [
+    "featured",
+    "priority",
+    "visibility",
+    "language",
+    "tags",
+    "labels",
+    "searchKeywords",
+    "notes",
+    "customMetadata"
+  ],
+  "properties": {
+    "featured": { "type": "boolean" },
+    "priority": { "type": ["string", "number", "null"] },
+    "visibility": { "type": "string" },
+    "language": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "labels": { "type": "array", "items": { "type": "string" } },
+    "searchKeywords": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "customMetadata": { "type": "object" }
+  }
+}

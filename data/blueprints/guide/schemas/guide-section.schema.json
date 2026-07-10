@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/guide/schemas/guide-section.schema.json",
+  "title": "Guide Section",
+  "type": "object",
+  "required": [
+    "sectionId",
+    "sectionType",
+    "status",
+    "displayOrder",
+    "showOnGuide",
+    "source",
+    "fallback"
+  ],
+  "properties": {
+    "sectionId": { "type": "string" },
+    "sectionType": { "type": "string" },
+    "status": { "type": "string" },
+    "displayOrder": { "type": "integer" },
+    "showOnGuide": { "type": "boolean" },
+    "source": { "type": "string" },
+    "filter": { "type": "object" },
+    "limit": { "type": "integer" },
+    "fallback": { "type": "string" }
+  }
+}

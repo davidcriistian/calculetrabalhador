@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-governance.schema.json",
+  "title": "PAM Governance",
+  "type": "object",
+  "required": [
+    "constitutionVersion",
+    "strategyVersion",
+    "blueprintVersion",
+    "goldStandardVersion",
+    "referenceVersion",
+    "testingVersion",
+    "validationVersion",
+    "publishingVersion"
+  ],
+  "properties": {
+    "constitutionVersion": { "type": ["string", "null"] },
+    "strategyVersion": { "type": ["string", "null"] },
+    "blueprintVersion": { "type": ["string", "null"] },
+    "goldStandardVersion": { "type": ["string", "null"] },
+    "referenceVersion": { "type": ["string", "null"] },
+    "testingVersion": { "type": ["string", "null"] },
+    "validationVersion": { "type": ["string", "null"] },
+    "publishingVersion": { "type": ["string", "null"] }
+  }
+}

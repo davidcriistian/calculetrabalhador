@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/nucleus/schemas/nucleus-relation.schema.json",
+  "title": "Nucleus Relationship Model",
+  "type": "object",
+  "required": [
+    "primaryDomain",
+    "primaryGuide",
+    "clusters",
+    "calculators",
+    "pillarArticles",
+    "satelliteArticles",
+    "relatedGuides",
+    "eligibleProducts",
+    "eligibleOffers",
+    "eligibleCtas",
+    "downloads",
+    "glossary",
+    "faqs"
+  ],
+  "properties": {
+    "primaryDomain": { "type": "string" },
+    "primaryGuide": { "type": "string" },
+    "clusters": { "type": "array", "items": { "type": "string" } },
+    "calculators": { "type": "array", "items": { "type": "string" } },
+    "pillarArticles": { "type": "array", "items": { "type": "string" } },
+    "satelliteArticles": { "type": "array", "items": { "type": "string" } },
+    "relatedGuides": { "type": "array", "items": { "type": "string" } },
+    "eligibleProducts": { "type": "array", "items": { "type": "string" } },
+    "eligibleOffers": { "type": "array", "items": { "type": "string" } },
+    "eligibleCtas": { "type": "array", "items": { "type": "string" } },
+    "downloads": { "type": "array", "items": { "type": "string" } },
+    "glossary": { "type": "array", "items": { "type": "string" } },
+    "faqs": { "type": "array", "items": { "type": "string" } }
+  }
+}

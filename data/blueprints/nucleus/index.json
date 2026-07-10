@@ -1,0 +1,129 @@
+{
+  "id": "nucleus-blueprint-template",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Declarative model for future nucleus organization without creating real nuclei.",
+  "blueprintType": "nucleus",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "identity": {
+    "id": "example-nucleus",
+    "name": "Example Nucleus",
+    "slug": "example-nucleus",
+    "status": "template",
+    "version": "0.1.0",
+    "owner": "Calcule Trabalhador",
+    "primaryDomain": "example-domain",
+    "primaryGuide": "example-guide",
+    "description": null,
+    "objective": null,
+    "targetAudience": [],
+    "searchIntent": [],
+    "editorialPositioning": null,
+    "commercialPositioning": null,
+    "growthStatus": "not-started",
+    "createdAt": "2026-07-10",
+    "updatedAt": "2026-07-10"
+  },
+  "relationships": {
+    "primaryDomain": "example-domain",
+    "primaryGuide": "example-guide",
+    "clusters": [],
+    "calculators": [],
+    "pillarArticles": [],
+    "satelliteArticles": [],
+    "relatedGuides": [],
+    "eligibleProducts": [],
+    "eligibleOffers": [],
+    "eligibleCtas": [],
+    "downloads": [],
+    "glossary": [],
+    "faqs": []
+  },
+  "governance": {
+    "lifecycle": "draft",
+    "status": "template",
+    "approval": "not-requested",
+    "version": "0.1.0",
+    "history": "/data/blueprints/nucleus/history/index.json",
+    "owner": "Calcule Trabalhador",
+    "publishingStatus": "not-ready",
+    "goldStandardVersion": null,
+    "strategyVersion": null,
+    "blueprintVersion": "0.1.0",
+    "testingStatus": "not-run",
+    "validationStatus": "not-run"
+  },
+  "growth": {
+    "plannedClusters": [],
+    "activeClusters": [],
+    "plannedCalculators": [],
+    "activeCalculators": [],
+    "plannedArticles": [],
+    "activeArticles": [],
+    "contentGaps": [],
+    "toolGaps": [],
+    "commercialGaps": [],
+    "priority": "not-set",
+    "roadmap": []
+  },
+  "testing": {
+    "required": true,
+    "requiredTypes": [
+      "relationship-integrity",
+      "catalog-integrity",
+      "navigation-integrity",
+      "link-integrity",
+      "content-aggregation",
+      "empty-state",
+      "duplicate-prevention"
+    ],
+    "reference": "/data/pos/testing/index.json"
+  },
+  "validation": {
+    "required": true,
+    "requiredTypes": [
+      "gold-standard-compliance",
+      "structure",
+      "relationship-nucleus-guide",
+      "links",
+      "components"
+    ],
+    "reference": "/data/pos/validation/index.json"
+  },
+  "publishing": {
+    "required": true,
+    "states": [
+      "draft",
+      "preview",
+      "review",
+      "approval",
+      "ready-to-publish",
+      "published",
+      "rollback"
+    ],
+    "sitemap": "controlled-by-publishing",
+    "indexing": "controlled-by-publishing",
+    "publicationLog": []
+  },
+  "operationalBoundaries": {
+    "createsNuclei": false,
+    "createsGuides": false,
+    "createsPages": false,
+    "modifiesProduction": false,
+    "modifiesCatalogs": false,
+    "modifiesSitemap": false,
+    "modifiesUrls": false,
+    "executesAutomation": false
+  },
+  "notes": [
+    "This template does not create CLT, FGTS, INSS, MEI, PJ, IRRF, Benefits or Retirement nuclei.",
+    "Use identifiers and references only; do not store complete assets here.",
+    "Domain Relationship Model remains authoritative in /docs/PLATFORM_ARCHITECTURE.md."
+  ]
+}

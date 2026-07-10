@@ -1,18 +1,19 @@
 {
   "id": "constitution-registry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/constitution/schemas/registry.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 1.5 - Constitution + Strategy",
+  "source": "Constitution Governance Rule - Architecture Evolution Policy",
   "description": "Entry point for permanent platform principles.",
   "references": {
     "principles": "/data/constitution/principles/index.json",
     "architecture": "/data/constitution/architecture/index.json",
     "governance": "/data/constitution/governance/index.json",
+    "architectureEvolutionPolicy": "/data/constitution/governance/architecture-evolution-policy.json",
     "quality": "/data/constitution/quality/index.json",
     "shared": "/data/constitution/shared/index.json",
     "schemas": "/data/constitution/schemas/",
@@ -31,6 +32,7 @@
   },
   "notes": [
     "The Constitution changes rarely and defines how the project thinks.",
-    "Strategy may evolve without changing the Constitution."
+    "Strategy may evolve without changing the Constitution.",
+    "Architecture Evolution Policy is the permanent rule for future architecture changes."
   ]
 }

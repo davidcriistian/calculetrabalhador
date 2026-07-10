@@ -1,0 +1,37 @@
+{
+  "id": "blueprint-contract-nucleus",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "name": "Nucleus Blueprint Contract",
+  "objective": "Define the declarative boundary for future nucleus organization.",
+  "responsibilities": [
+    "define nucleus identity",
+    "declare primaryDomain and primaryGuide",
+    "reference clusters, calculators, articles, downloads, glossary, FAQs, products, offers and CTAs by identifier",
+    "model lifecycle, approval, publishing, testing and validation status",
+    "model growth planning without real counts"
+  ],
+  "nonResponsibilities": [
+    "create real nuclei",
+    "create public guide pages",
+    "modify existing guides",
+    "modify production",
+    "modify public catalogs",
+    "execute automation",
+    "redefine the Domain Relationship Model"
+  ],
+  "dependencies": [
+    "/docs/PLATFORM_ARCHITECTURE.md",
+    "/data/blueprints/guide/index.json"
+  ],
+  "notes": [
+    "Nucleus Blueprint references assets by id only.",
+    "Guide Blueprint represents the future public page model for the nucleus."
+  ]
+}

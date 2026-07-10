@@ -101,6 +101,8 @@ Os manifestos nao devem conter inventarios fisicos extensos. Eles devem apontar 
 
 O objetivo e impedir que uma tarefa simples exija leitura de toda a plataforma.
 
+Quando a operacao envolver dominio, nucleo, guia, cluster, calculadora, artigo, produto ou CTA, o manifesto deve carregar a relacao canonica definida em `/docs/PLATFORM_ARCHITECTURE.md` e separar relacoes secundarias do ownership principal.
+
 Um agente futuro deve:
 
 1. identificar o `operationId`;

@@ -1,0 +1,150 @@
+{
+  "id": "platform-asset-model",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/shared/pam/schemas/platform-asset-model.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Platform Asset Model foundation",
+  "description": "Shared minimum structure for platform assets used by Blueprint models.",
+  "modelType": "shared-base-model",
+  "architectureAuthority": "/docs/PLATFORM_ARCHITECTURE.md",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "identity": {
+    "id": null,
+    "type": null,
+    "slug": null,
+    "title": null,
+    "owner": null,
+    "status": "planned",
+    "version": null,
+    "createdAt": null,
+    "updatedAt": null,
+    "createdBy": null,
+    "updatedBy": null
+  },
+  "relationships": {
+    "primaryDomain": null,
+    "primaryNucleus": null,
+    "primaryGuide": null,
+    "primaryCluster": null,
+    "secondaryRelations": [],
+    "relatedAssets": [],
+    "parentAsset": null,
+    "childrenAssets": [],
+    "ownership": null
+  },
+  "lifecycle": {
+    "states": [
+      "planned",
+      "draft",
+      "in-development",
+      "testing",
+      "validation",
+      "approved",
+      "ready-to-publish",
+      "published",
+      "deprecated",
+      "archived",
+      "cancelled"
+    ],
+    "allowedTransitions": [
+      { "from": "planned", "to": "draft" },
+      { "from": "planned", "to": "cancelled" },
+      { "from": "draft", "to": "in-development" },
+      { "from": "draft", "to": "cancelled" },
+      { "from": "in-development", "to": "testing" },
+      { "from": "testing", "to": "in-development" },
+      { "from": "testing", "to": "validation" },
+      { "from": "validation", "to": "in-development" },
+      { "from": "validation", "to": "approved" },
+      { "from": "approved", "to": "ready-to-publish" },
+      { "from": "ready-to-publish", "to": "published" },
+      { "from": "published", "to": "deprecated" },
+      { "from": "published", "to": "archived" },
+      { "from": "deprecated", "to": "archived" }
+    ],
+    "blockingStates": [
+      "testing",
+      "validation",
+      "cancelled"
+    ],
+    "finalStates": [
+      "published",
+      "archived",
+      "cancelled"
+    ]
+  },
+  "governance": {
+    "constitutionVersion": null,
+    "strategyVersion": null,
+    "blueprintVersion": null,
+    "goldStandardVersion": null,
+    "referenceVersion": null,
+    "testingVersion": null,
+    "validationVersion": null,
+    "publishingVersion": null
+  },
+  "metadata": {
+    "featured": false,
+    "priority": null,
+    "visibility": "not-set",
+    "language": "pt-BR",
+    "tags": [],
+    "labels": [],
+    "searchKeywords": [],
+    "notes": [],
+    "customMetadata": {}
+  },
+  "audit": {
+    "history": [],
+    "approvals": [],
+    "reviews": [],
+    "lastValidation": null,
+    "lastTesting": null,
+    "lastPublishing": null,
+    "changeLog": [],
+    "revision": null
+  },
+  "inheritance": {
+    "usedBy": [
+      "/data/blueprints/nucleus/index.json",
+      "/data/blueprints/guide/index.json",
+      "/data/blueprints/cluster/index.json",
+      "/data/blueprints/calculator/index.json",
+      "/data/blueprints/article/index.json"
+    ],
+    "rule": "Each Blueprint uses PAM as shared base and adds only type-specific fields."
+  },
+  "nonResponsibilities": [
+    "seo",
+    "layout",
+    "components",
+    "calculations",
+    "content",
+    "products",
+    "cta",
+    "campaigns",
+    "publishing"
+  ],
+  "operationalBoundaries": {
+    "createsAssets": false,
+    "modifiesProduction": false,
+    "modifiesPages": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesCatalogs": false,
+    "executesAutomation": false,
+    "replacesBlueprints": false,
+    "replacesRegistry": false,
+    "replacesPos": false
+  },
+  "notes": [
+    "PAM is the final transversal foundation model before operational capabilities.",
+    "PAM defines shared vocabulary only.",
+    "PAM must not contain calculator, article, guide, product, CTA or campaign-specific fields."
+  ]
+}

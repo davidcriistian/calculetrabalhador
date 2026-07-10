@@ -1,0 +1,48 @@
+{
+  "id": "blueprint-contract-platform-asset-model",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/shared/pam/schemas/platform-asset-model.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Platform Asset Model foundation",
+  "name": "Platform Asset Model Contract",
+  "objective": "Define the shared minimum structure for platform assets without replacing Blueprints, Registry or POS.",
+  "responsibilities": [
+    "define common identity vocabulary",
+    "define common relationship vocabulary",
+    "define common lifecycle vocabulary",
+    "define common governance references",
+    "define common metadata fields",
+    "define common audit structure"
+  ],
+  "nonResponsibilities": [
+    "define SEO",
+    "define layout",
+    "define components",
+    "define calculations",
+    "define content",
+    "define products",
+    "define CTA",
+    "define campaigns",
+    "define publishing behavior",
+    "create assets",
+    "execute operations",
+    "replace Blueprints",
+    "replace Registry",
+    "replace POS"
+  ],
+  "usedBy": [
+    "/data/blueprints/nucleus/index.json",
+    "/data/blueprints/guide/index.json",
+    "/data/blueprints/cluster/index.json",
+    "/data/blueprints/calculator/index.json",
+    "/data/blueprints/article/index.json"
+  ],
+  "notes": [
+    "PAM is a shared base model inside Blueprint System.",
+    "Each Blueprint adds only fields specific to its asset type."
+  ]
+}

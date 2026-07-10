@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-history",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -36,6 +36,35 @@
         "Registered Cluster Blueprint as the primary structural blueprint.",
         "Defined Calculator Blueprint and Article Blueprint as reusable cluster components.",
         "Kept production assets disconnected from the Blueprint System."
+      ],
+      "notes": []
+    },
+    {
+      "id": "nucleus-guide-blueprint-system-0.1.0",
+      "phase": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+      "version": "0.3.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Created Nucleus Blueprint model.",
+        "Created Guide Blueprint model.",
+        "Registered both models in Blueprint System indexes.",
+        "Kept production assets, public catalogs, URLs, sitemap and runtime disconnected."
+      ],
+      "notes": []
+    },
+    {
+      "id": "platform-asset-model-0.1.0",
+      "phase": "Platform Asset Model foundation",
+      "version": "0.4.0",
+      "date": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "status": "foundation",
+      "changes": [
+        "Created Platform Asset Model inside Blueprint System shared models.",
+        "Defined common identity, relationships, lifecycle, governance, metadata and audit blocks.",
+        "Declared PAM as the last transversal foundation model before operational capabilities."
       ],
       "notes": []
     }

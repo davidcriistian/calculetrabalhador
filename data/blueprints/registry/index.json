@@ -1,26 +1,32 @@
 {
   "id": "blueprint-system-registry",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "source": "Platform Asset Model foundation",
   "description": "Master declarative registry for blueprint definitions.",
   "notes": [
     "This registry does not generate calculators, articles or production pages.",
     "Blueprints are architecture models for future productivity engines.",
-    "Cluster Blueprint is now the primary structural blueprint for calculator and article ecosystems."
+    "Cluster Blueprint is now the primary structural blueprint for calculator and article ecosystems.",
+    "Nucleus Blueprint and Guide Blueprint model future nucleus organization and public guide pages without creating real assets.",
+    "Platform Asset Model defines the shared base structure inherited by asset blueprints."
   ],
   "blueprintTypes": [
+    "nucleus",
+    "guide",
     "cluster",
     "calculator",
     "article",
     "shared-component"
   ],
   "registries": {
+    "nucleusBlueprints": ["/data/blueprints/nucleus/index.json"],
+    "guideBlueprints": ["/data/blueprints/guide/index.json"],
     "clusterBlueprints": ["/data/blueprints/cluster/index.json"],
     "calculatorBlueprints": ["/data/blueprints/calculator/index.json"],
     "articleBlueprints": ["/data/blueprints/article/index.json"],
@@ -34,10 +40,16 @@
     "history": "/data/blueprints/history/index.json",
     "versioning": "/data/blueprints/versioning/index.json",
     "documentation": "/data/blueprints/docs/BLUEPRINT_SYSTEM.md",
-    "clusterDocumentation": "/data/blueprints/docs/CLUSTER_BLUEPRINT.md"
+    "clusterDocumentation": "/data/blueprints/docs/CLUSTER_BLUEPRINT.md",
+    "nucleusDocumentation": "/data/blueprints/nucleus/docs/NUCLEUS_BLUEPRINT.md",
+    "guideDocumentation": "/data/blueprints/guide/docs/GUIDE_BLUEPRINT.md",
+    "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+    "platformAssetModel": "/data/blueprints/shared/pam/index.json"
   },
   "structuralModel": {
     "primaryUnit": "cluster",
+    "nucleusBlueprintRole": "strategic-organization",
+    "guideBlueprintRole": "public-nucleus-page-model",
     "calculatorBlueprintRole": "component-of-cluster",
     "articleBlueprintRole": "component-of-cluster",
     "calculatorBlueprintStillStandalone": true,

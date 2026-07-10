@@ -1,0 +1,32 @@
+{
+  "id": "platform-asset-model-versioning",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/shared/pam/schemas/platform-asset-model.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Platform Asset Model foundation",
+  "description": "Versioning control for the Platform Asset Model.",
+  "currentVersion": "0.1.0",
+  "compatibility": {
+    "runtimeConsumesPam": false,
+    "pagesConsumePam": false,
+    "catalogsConsumePam": false,
+    "registryConsumesPam": false,
+    "automationConsumesPam": false,
+    "publishingConsumesPam": false
+  },
+  "items": [
+    {
+      "id": "platform-asset-model-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Initial PAM foundation."
+      ]
+    }
+  ]
+}

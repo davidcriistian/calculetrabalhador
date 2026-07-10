@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-versioning",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -9,7 +9,7 @@
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 1 - Blueprint System",
   "description": "Versioning control for blueprint architecture.",
-  "currentBlueprintSystemVersion": "0.2.0",
+  "currentBlueprintSystemVersion": "0.4.0",
   "compatibility": {
     "runtimeConsumesBlueprints": false,
     "calculatorsConsumeBlueprints": false,
@@ -35,6 +35,27 @@
       "changes": [
         "Added Cluster Blueprint as the primary structural unit.",
         "Updated calculator and article blueprints to declare cluster component role."
+      ]
+    },
+    {
+      "id": "nucleus-guide-blueprint-system-0.1.0",
+      "version": "0.3.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Added Nucleus Blueprint for strategic nucleus organization.",
+        "Added Guide Blueprint for future public nucleus guide pages.",
+        "Registered canonical relationship authority from Platform Architecture."
+      ]
+    },
+    {
+      "id": "platform-asset-model-0.1.0",
+      "version": "0.4.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Added Platform Asset Model as shared base model.",
+        "Declared inheritance for Nucleus, Guide, Cluster, Calculator and Article blueprints."
       ]
     }
   ],

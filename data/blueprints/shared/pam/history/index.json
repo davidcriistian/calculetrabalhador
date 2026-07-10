@@ -1,0 +1,25 @@
+{
+  "id": "platform-asset-model-history",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/shared/pam/schemas/platform-asset-model.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Platform Asset Model foundation",
+  "description": "Change history for the Platform Asset Model.",
+  "items": [
+    {
+      "id": "platform-asset-model-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Created PAM as shared base model inside Blueprint System.",
+        "Defined identity, relationships, lifecycle, governance, metadata and audit blocks.",
+        "Kept production, runtime, pages, URLs, SEO and public catalogs disconnected."
+      ]
+    }
+  ]
+}

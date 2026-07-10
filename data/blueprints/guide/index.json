@@ -1,0 +1,176 @@
+{
+  "id": "guide-blueprint-template",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/guide/schemas/guide-blueprint.schema.json",
+  "status": "template",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Declarative model for future public nucleus guide pages without creating pages.",
+  "blueprintType": "guide",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "identity": {
+    "id": "example-guide",
+    "name": "Example Guide",
+    "slug": "example-guide",
+    "urlPattern": "/guias/{slug}/",
+    "status": "template",
+    "version": "0.1.0",
+    "owner": "Calcule Trabalhador",
+    "primaryNucleus": "example-nucleus",
+    "primaryDomain": "example-domain",
+    "goldStandardType": "guide",
+    "goldStandardVersion": null,
+    "referenceVersion": null,
+    "officialReference": null,
+    "blueprintVersion": "0.1.0",
+    "strategyVersion": null
+  },
+  "visualStructure": {
+    "header": {},
+    "breadcrumb": {},
+    "hero": {},
+    "introduction": {},
+    "featuredClusters": {},
+    "featuredCalculators": {},
+    "featuredArticles": {},
+    "allClusters": {},
+    "allCalculators": {},
+    "allArticles": {},
+    "faq": {},
+    "glossary": {},
+    "downloads": {},
+    "relatedGuides": {},
+    "offerSlots": [],
+    "ctaSlots": [],
+    "disclaimer": {},
+    "footer": {}
+  },
+  "seo": {
+    "title": null,
+    "metaDescription": null,
+    "canonical": null,
+    "openGraph": {},
+    "twitterCard": {},
+    "breadcrumb": [],
+    "headings": [],
+    "jsonLd": [],
+    "schema": [
+      "CollectionPage",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "internalLinks": [],
+    "relatedContent": [],
+    "indexingPolicy": "controlled-by-publishing"
+  },
+  "dynamicContent": {
+    "receivesAssetsByConfiguration": true,
+    "catalogDriven": true,
+    "manualPageEditingRequired": false,
+    "eligibleAssetTypes": [
+      "clusters",
+      "calculators",
+      "articles",
+      "products",
+      "ctas"
+    ],
+    "filters": {
+      "primaryNucleus": "example-nucleus",
+      "published": true
+    },
+    "notes": [
+      "Future assets with matching primaryNucleus may appear according to filters, priority and publishing rules.",
+      "No integration is implemented in this phase."
+    ]
+  },
+  "ordering": {
+    "featured": [],
+    "displayOrder": [],
+    "priority": "configuration",
+    "showOnGuide": "configuration",
+    "section": "configuration",
+    "limit": "configuration",
+    "filter": "configuration",
+    "fallback": "configuration",
+    "hardcodedInHtml": false
+  },
+  "relationships": {
+    "primaryDomain": "example-domain",
+    "primaryNucleus": "example-nucleus",
+    "featuredClusters": [],
+    "featuredCalculators": [],
+    "featuredArticles": [],
+    "allClusters": [],
+    "allCalculators": [],
+    "allArticles": [],
+    "relatedGuides": [],
+    "eligibleProducts": [],
+    "eligibleOffers": [],
+    "eligibleCtas": []
+  },
+  "testing": {
+    "required": true,
+    "requiredTypes": [
+      "relationship-integrity",
+      "catalog-integrity",
+      "navigation-integrity",
+      "link-integrity",
+      "seo-regression",
+      "layout-regression",
+      "content-aggregation",
+      "empty-state",
+      "duplicate-prevention"
+    ],
+    "reference": "/data/pos/testing/index.json"
+  },
+  "validation": {
+    "required": true,
+    "requiredTypes": [
+      "gold-standard-compliance",
+      "seo",
+      "json-ld",
+      "breadcrumb",
+      "headings",
+      "responsiveness",
+      "accessibility",
+      "links",
+      "components",
+      "structure",
+      "nucleus-guide-relationship"
+    ],
+    "reference": "/data/pos/validation/index.json"
+  },
+  "publishing": {
+    "required": true,
+    "states": [
+      "draft",
+      "preview",
+      "review",
+      "approval",
+      "ready-to-publish",
+      "published",
+      "rollback"
+    ],
+    "sitemap": "controlled-by-publishing",
+    "indexing": "controlled-by-publishing",
+    "publicationLog": []
+  },
+  "operationalBoundaries": {
+    "createsGuidePages": false,
+    "modifiesExistingGuides": false,
+    "modifiesProduction": false,
+    "modifiesSeo": false,
+    "modifiesUrls": false,
+    "modifiesSitemap": false,
+    "modifiesCatalogs": false,
+    "executesAutomation": false
+  },
+  "notes": [
+    "This template does not create public guide pages.",
+    "Ordering and featured content must come from configuration.",
+    "Guide Blueprint receives future assets by configuration and catalogs only after approved integration."
+  ]
+}

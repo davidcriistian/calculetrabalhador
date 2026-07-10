@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/shared/pam/schemas/pam-audit.schema.json",
+  "title": "PAM Audit",
+  "type": "object",
+  "required": [
+    "history",
+    "approvals",
+    "reviews",
+    "lastValidation",
+    "lastTesting",
+    "lastPublishing",
+    "changeLog",
+    "revision"
+  ],
+  "properties": {
+    "history": { "type": "array" },
+    "approvals": { "type": "array" },
+    "reviews": { "type": "array" },
+    "lastValidation": { "type": ["object", "null"] },
+    "lastTesting": { "type": ["object", "null"] },
+    "lastPublishing": { "type": ["object", "null"] },
+    "changeLog": { "type": "array" },
+    "revision": { "type": ["string", "number", "null"] }
+  }
+}

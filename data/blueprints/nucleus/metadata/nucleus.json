@@ -1,0 +1,26 @@
+{
+  "id": "nucleus-blueprint-metadata",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Metadata for the Nucleus Blueprint model.",
+  "officialEntryPoint": "/data/blueprints/nucleus/index.json",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "purpose": "Model future nucleus organization declaratively without creating real nuclei.",
+  "principles": [
+    "configuration-over-code",
+    "canonical-relationship-first",
+    "references-only",
+    "no-public-page-creation",
+    "not-consumed"
+  ],
+  "notes": [
+    "Nucleus Blueprint prepares create-nucleus, expand-nucleus and update-nucleus operations.",
+    "No production catalog is modified by this metadata."
+  ]
+}

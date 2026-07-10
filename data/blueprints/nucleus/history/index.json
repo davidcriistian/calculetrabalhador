@@ -1,0 +1,29 @@
+{
+  "id": "nucleus-blueprint-history",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Change history for the Nucleus Blueprint model.",
+  "items": [
+    {
+      "id": "nucleus-blueprint-0.1.0",
+      "phase": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Created declarative Nucleus Blueprint model.",
+        "Declared canonical relationship with Guide Blueprint.",
+        "Kept real nuclei, public pages and catalogs disconnected."
+      ]
+    }
+  ],
+  "notes": [
+    "History records blueprint model changes only."
+  ]
+}

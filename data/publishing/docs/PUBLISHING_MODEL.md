@@ -372,6 +372,8 @@ As fronteiras oficiais entre camadas estao em `/docs/PLATFORM_ARCHITECTURE.md`.
 
 Publishing e o controlador unico de entrada em producao. Constitution, Strategy, Core, Gold Standard, Reference System, Blueprint, Registry, Manifest, Operations, Migration, Shadow, Testing e Validation podem informar ou bloquear uma publicacao, mas nao publicam diretamente.
 
+Quando uma publicacao envolver dominio, nucleo, guia, cluster, calculadora, artigo, produto ou CTA, Publishing deve conferir o Domain Relationship Model em `/docs/PLATFORM_ARCHITECTURE.md` antes de aprovar entrada em producao.
+
 Nesta fase, Publishing continua declarativo e `not-consumed`; nenhuma integracao operacional, deploy, alteracao de pagina, sitemap, SEO, URL ou runtime e criada.
 
 ## Limites Desta Fase

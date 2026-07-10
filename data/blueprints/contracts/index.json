@@ -1,16 +1,19 @@
 {
   "id": "blueprint-contracts-index",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
+  "source": "Platform Asset Model foundation",
   "description": "Index of Blueprint System contracts.",
   "items": [
     "/data/blueprints/contracts/registry.contract.json",
+    "/data/blueprints/shared/pam/contracts/pam.contract.json",
+    "/data/blueprints/nucleus/contracts/nucleus.contract.json",
+    "/data/blueprints/guide/contracts/guide.contract.json",
     "/data/blueprints/cluster/contracts/cluster.contract.json",
     "/data/blueprints/contracts/calculator.contract.json",
     "/data/blueprints/contracts/article.contract.json",
@@ -19,6 +22,8 @@
     "/data/blueprints/contracts/slots.contract.json"
   ],
   "notes": [
-    "Contracts define future generation boundaries only."
+    "Contracts define future generation boundaries only.",
+    "Nucleus and Guide contracts do not create nuclei, pages, URLs or production changes.",
+    "PAM contract defines shared structure only and does not replace type-specific Blueprint contracts."
   ]
 }

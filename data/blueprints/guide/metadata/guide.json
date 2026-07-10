@@ -1,0 +1,26 @@
+{
+  "id": "guide-blueprint-metadata",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/guide/schemas/guide-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Metadata for the Guide Blueprint model.",
+  "officialEntryPoint": "/data/blueprints/guide/index.json",
+  "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "purpose": "Model future nucleus guide pages declaratively without creating pages.",
+  "principles": [
+    "configuration-over-code",
+    "catalog-driven-content",
+    "no-html-copy",
+    "no-public-page-creation",
+    "not-consumed"
+  ],
+  "notes": [
+    "Guide Blueprint prepares future guide generation and aggregation behavior.",
+    "No guide page or public URL is created in this phase."
+  ]
+}

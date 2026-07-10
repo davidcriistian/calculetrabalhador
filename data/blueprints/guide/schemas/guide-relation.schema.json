@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/blueprints/guide/schemas/guide-relation.schema.json",
+  "title": "Guide Relationship Model",
+  "type": "object",
+  "required": [
+    "primaryDomain",
+    "primaryNucleus",
+    "featuredClusters",
+    "featuredCalculators",
+    "featuredArticles",
+    "allClusters",
+    "allCalculators",
+    "allArticles",
+    "relatedGuides",
+    "eligibleProducts",
+    "eligibleOffers",
+    "eligibleCtas"
+  ],
+  "properties": {
+    "primaryDomain": { "type": "string" },
+    "primaryNucleus": { "type": "string" },
+    "featuredClusters": { "type": "array", "items": { "type": "string" } },
+    "featuredCalculators": { "type": "array", "items": { "type": "string" } },
+    "featuredArticles": { "type": "array", "items": { "type": "string" } },
+    "allClusters": { "type": "array", "items": { "type": "string" } },
+    "allCalculators": { "type": "array", "items": { "type": "string" } },
+    "allArticles": { "type": "array", "items": { "type": "string" } },
+    "relatedGuides": { "type": "array", "items": { "type": "string" } },
+    "eligibleProducts": { "type": "array", "items": { "type": "string" } },
+    "eligibleOffers": { "type": "array", "items": { "type": "string" } },
+    "eligibleCtas": { "type": "array", "items": { "type": "string" } }
+  }
+}

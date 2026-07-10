@@ -1,0 +1,31 @@
+{
+  "id": "nucleus-blueprint-versioning",
+  "version": "0.1.0",
+  "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
+  "description": "Versioning control for Nucleus Blueprint.",
+  "currentVersion": "0.1.0",
+  "compatibility": {
+    "runtimeConsumesBlueprint": false,
+    "guidesConsumeBlueprint": false,
+    "catalogsConsumeBlueprint": false,
+    "automationConsumesBlueprint": false,
+    "publishingConsumesBlueprint": false
+  },
+  "items": [
+    {
+      "id": "nucleus-blueprint-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Initial Nucleus Blueprint foundation."
+      ]
+    }
+  ]
+}
