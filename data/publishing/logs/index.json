@@ -1,0 +1,27 @@
+{
+  "id": "publishing-log-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-log.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative publication log model.",
+  "logTemplate": {
+    "logId": "example-log-id",
+    "timestamp": null,
+    "operation": "publish",
+    "assetId": null,
+    "assetType": null,
+    "version": null,
+    "actor": null,
+    "status": "planned",
+    "filesAffected": [],
+    "gates": [],
+    "evidence": [],
+    "notes": []
+  },
+  "items": []
+}

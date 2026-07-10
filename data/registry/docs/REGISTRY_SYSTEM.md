@@ -8,6 +8,8 @@ O objetivo e preparar a plataforma para crescer por muitos anos sem transformar 
 
 Esta fase nao migra registries existentes, nao popula ativos, nao cria integracao operacional e nao altera producao.
 
+As fronteiras oficiais entre camadas estao em `/docs/PLATFORM_ARCHITECTURE.md`. Este documento detalha apenas o Registry System e nao redefine a autoridade geral da plataforma.
+
 ## Filosofia
 
 Registries sao indices.
@@ -15,6 +17,8 @@ Registries sao indices.
 Eles servem para descoberta rapida, nao para conhecimento, regras, SEO, operacao ou conteudo canonico.
 
 Um registry pode dizer que um ativo existe e apontar para sua fonte correta. Ele nao deve copiar esse ativo.
+
+Os catalogos publicos atuais continuam sendo `data/tools.json` e `data/articles.json` ate futura migracao aprovada. O Registry System nao substitui esses arquivos nesta fase.
 
 Principios:
 
@@ -165,7 +169,9 @@ O Registry System pode apontar para um dominio, regra, tabela ou conceito do Cor
 
 POS continua sendo a camada de governanca operacional.
 
-O Registry System complementa descoberta rapida e particionamento. Ele nao substitui o POS Registry nem executa Migration, Testing ou Validation.
+O Registry System complementa descoberta rapida e particionamento. Ele nao substitui o POS Registry nem executa Migration, Testing, Validation ou Publishing.
+
+O POS Registry governa operacoes, gates, aprovacoes, status operacionais e processos. O Registry System apenas aponta para ativos minimos por particao.
 
 ## Relacao com Blueprint System
 

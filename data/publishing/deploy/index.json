@@ -1,0 +1,30 @@
+{
+  "id": "publishing-deploy-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-deploy.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative deploy model for future publishing workflows.",
+  "environments": ["local", "development", "staging", "production"],
+  "deployTemplate": {
+    "deployId": "example-deploy-id",
+    "releaseId": "example-release-id",
+    "environment": "staging",
+    "branch": null,
+    "commitHash": null,
+    "startedAt": null,
+    "completedAt": null,
+    "status": "not-started",
+    "filesAffected": [],
+    "rollbackPlan": null,
+    "evidence": [],
+    "notes": []
+  },
+  "operationalBoundaries": {
+    "executesDeployInThisPhase": false
+  }
+}

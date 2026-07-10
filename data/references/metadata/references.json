@@ -1,0 +1,26 @@
+{
+  "id": "reference-system-metadata",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "description": "Metadata for the Reference System.",
+  "officialEntryPoint": "/data/references/registry/index.json",
+  "purpose": "Register approved real assets as implementation references for future platform work.",
+  "relatedLayers": ["Gold Standard System", "Blueprint System", "Validation", "Publishing", "Automation", "Admin"],
+  "operationalBoundaries": {
+    "definesStandards": false,
+    "copiesContent": false,
+    "copiesHtml": false,
+    "modifiesProduction": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "Reference assets may change without changing Gold Standards.",
+    "This layer stores metadata and URLs only."
+  ]
+}

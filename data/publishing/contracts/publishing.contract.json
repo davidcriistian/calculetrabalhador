@@ -1,0 +1,15 @@
+{
+  "id": "publishing-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Publishing Contract",
+  "objective": "Define Publishing as the future governance model for safe production entry.",
+  "responsibilities": ["control lifecycle", "check gates", "require approvals", "model release, deploy, sitemap, indexing, rollback and logs"],
+  "nonResponsibilities": ["define quality", "execute testing", "execute validation", "create assets", "execute automation", "publish in this phase"]
+}

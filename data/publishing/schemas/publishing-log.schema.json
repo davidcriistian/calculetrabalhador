@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-log.schema.json",
+  "title": "Publishing Log",
+  "type": "object",
+  "required": ["id", "version", "logTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "logTemplate": { "type": "object" },
+    "items": { "type": "array" }
+  },
+  "additionalProperties": true
+}

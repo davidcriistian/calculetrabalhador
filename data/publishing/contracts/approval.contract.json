@@ -1,0 +1,15 @@
+{
+  "id": "publishing-approval-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-approval.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Approval Contract",
+  "objective": "Define manual approval requirements for future publishing.",
+  "reference": "/data/publishing/approval/index.json",
+  "nonResponsibilities": ["grant approval automatically", "bypass gates"]
+}

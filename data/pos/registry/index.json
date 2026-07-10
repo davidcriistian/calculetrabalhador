@@ -8,13 +8,16 @@
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 4 - Validation Engine",
-  "description": "Master declarative index for Project Operating System assets.",
+  "description": "Operational discovery and governance index for Project Operating System processes, gates, approvals and engine references.",
   "notes": [
     "This registry is a foundation only and is not consumed by calculators, articles, SEO, sitemap or runtime.",
     "Assets are intentionally empty in Phase 1. Future phases may populate them through approved governance flows.",
     "Phase 2 adds a declarative Migration Engine protocol without operational consumption.",
     "Phase 3 adds a declarative Testing Engine protocol without operational consumption.",
     "Phase 3.5 formalizes Core as knowledge, POS as operation, and Registry as operational discovery only.",
+    "Architecture Freeze hardening confirms that POS Registry is not the master asset catalog.",
+    "Partitioned asset discovery belongs to /data/registry/.",
+    "Current public catalogs remain data/tools.json and data/articles.json until a future approved migration.",
     "The Registry must not be manually populated at scale; future engines should populate it through approved processes.",
     "Phase 4 adds a declarative Validation Engine protocol without operational consumption."
   ],
@@ -70,7 +73,13 @@
     "core": "knowledge",
     "pos": "operation",
     "registryRole": "operational-discovery",
+    "assetCatalogRole": "not-master-asset-catalog",
     "knowledgeSource": "/data/core/index.json",
+    "partitionedAssetRegistry": "/data/registry/index.json",
+    "currentPublicCatalogs": [
+      "/data/tools.json",
+      "/data/articles.json"
+    ],
     "manualScalePopulationAllowed": false,
     "futurePopulationEngines": [
       "Calculator Engine",

@@ -1,0 +1,47 @@
+{
+  "id": "calculator-references",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "description": "Approved calculator reference assets.",
+  "items": [
+    {
+      "id": "calculator-multa-40-fgts-reference",
+      "name": "Calculadora de Multa de 40% do FGTS",
+      "type": "calculator",
+      "url": "https://calculetrabalhador.com.br/calculadora-multa-40-fgts/",
+      "slug": "/calculadora-multa-40-fgts/",
+      "status": "official-reference",
+      "goldStandardType": "calculator",
+      "goldStandardVersion": "1.0",
+      "approved": true,
+      "approvedDate": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "description": "Implementacao oficial aprovada do Calculator Gold Standard v1.",
+      "referenceCriteria": [
+        "approved-layout",
+        "approved-ux",
+        "approved-seo",
+        "approved-structure",
+        "approved-navigation",
+        "approved-components",
+        "approved-jsonld",
+        "approved-accessibility",
+        "approved-conversion",
+        "approved-internal-links",
+        "approved-cta-placement"
+      ],
+      "notes": [
+        "Reference metadata only.",
+        "No calculator HTML, content or runtime is copied into this system."
+      ],
+      "supersedes": null,
+      "supersededBy": null
+    }
+  ]
+}

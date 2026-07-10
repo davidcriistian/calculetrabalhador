@@ -1,0 +1,15 @@
+{
+  "id": "publishing-rollback-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-rollback.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Rollback Contract",
+  "objective": "Define rollback metadata and supported rollback scopes.",
+  "reference": "/data/publishing/rollback/index.json",
+  "nonResponsibilities": ["execute rollback", "restore files in this phase"]
+}

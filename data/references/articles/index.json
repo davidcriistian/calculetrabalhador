@@ -1,0 +1,120 @@
+{
+  "id": "article-references",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "description": "Approved article reference assets.",
+  "articleReferencePolicy": {
+    "approvedCalculatorCtaPlacement": ["inicio", "meio", "final"],
+    "notes": [
+      "CTA da calculadora no inicio, meio e final passa a ser posicionamento oficial esperado para futuros artigos.",
+      "This is recorded declaratively only and does not alter any existing article."
+    ]
+  },
+  "items": [
+    {
+      "id": "article-clt-ou-pj-vale-a-pena-2026-reference",
+      "name": "CLT ou PJ vale a pena em 2026",
+      "type": "article",
+      "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "slug": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "status": "official-reference",
+      "goldStandardType": "article",
+      "goldStandardVersion": "1.0",
+      "approved": true,
+      "approvedDate": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "description": "Implementacao oficial aprovada do Article Gold Standard v1.",
+      "referenceCriteria": [
+        "approved-layout",
+        "approved-ux",
+        "approved-seo",
+        "approved-structure",
+        "approved-navigation",
+        "approved-components",
+        "approved-jsonld",
+        "approved-accessibility",
+        "approved-conversion",
+        "approved-internal-links",
+        "approved-cta-placement"
+      ],
+      "notes": [
+        "CTA da calculadora aprovado nas posicoes: inicio, meio e final.",
+        "Reference metadata only; no article content is copied."
+      ],
+      "supersedes": null,
+      "supersededBy": null
+    },
+    {
+      "id": "article-como-calcular-clt-ou-pj-reference",
+      "name": "Como calcular CLT ou PJ",
+      "type": "article",
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "slug": "/blog/como-calcular-clt-ou-pj/",
+      "status": "official-reference",
+      "goldStandardType": "article",
+      "goldStandardVersion": "1.0",
+      "approved": true,
+      "approvedDate": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "description": "Implementacao oficial aprovada do Article Gold Standard v1.",
+      "referenceCriteria": [
+        "approved-layout",
+        "approved-ux",
+        "approved-seo",
+        "approved-structure",
+        "approved-navigation",
+        "approved-components",
+        "approved-jsonld",
+        "approved-accessibility",
+        "approved-conversion",
+        "approved-internal-links",
+        "approved-cta-placement"
+      ],
+      "notes": [
+        "CTA da calculadora aprovado nas posicoes: inicio, meio e final.",
+        "Reference metadata only; no article content is copied."
+      ],
+      "supersedes": null,
+      "supersededBy": null
+    },
+    {
+      "id": "article-vantagens-desvantagens-clt-ou-pj-reference",
+      "name": "Vantagens e desvantagens CLT ou PJ",
+      "type": "article",
+      "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "slug": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "status": "official-reference",
+      "goldStandardType": "article",
+      "goldStandardVersion": "1.0",
+      "approved": true,
+      "approvedDate": "2026-07-10",
+      "owner": "Calcule Trabalhador",
+      "description": "Implementacao oficial aprovada do Article Gold Standard v1.",
+      "referenceCriteria": [
+        "approved-layout",
+        "approved-ux",
+        "approved-seo",
+        "approved-structure",
+        "approved-navigation",
+        "approved-components",
+        "approved-jsonld",
+        "approved-accessibility",
+        "approved-conversion",
+        "approved-internal-links",
+        "approved-cta-placement"
+      ],
+      "notes": [
+        "CTA da calculadora aprovado nas posicoes: inicio, meio e final.",
+        "Reference metadata only; no article content is copied."
+      ],
+      "supersedes": null,
+      "supersededBy": null
+    }
+  ]
+}

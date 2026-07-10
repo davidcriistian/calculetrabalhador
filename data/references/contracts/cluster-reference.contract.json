@@ -1,0 +1,15 @@
+{
+  "id": "cluster-reference-contract",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "name": "Cluster Reference Contract",
+  "objective": "Define how official cluster references will be registered in future phases.",
+  "referenceCatalog": "/data/references/clusters/index.json",
+  "nonResponsibilities": ["create clusters", "copy cluster content", "publish cluster pages"]
+}

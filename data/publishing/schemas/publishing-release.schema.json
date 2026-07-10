@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-release.schema.json",
+  "title": "Publishing Release",
+  "type": "object",
+  "required": ["id", "version", "releaseTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "releaseTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

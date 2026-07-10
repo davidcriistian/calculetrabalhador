@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-indexing.schema.json",
+  "title": "Publishing Indexing",
+  "type": "object",
+  "required": ["id", "version", "providers", "indexingTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "providers": { "type": "array", "items": { "type": "string" } },
+    "indexingTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

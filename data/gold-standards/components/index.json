@@ -1,0 +1,29 @@
+{
+  "id": "component-gold-standard",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard-component.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "description": "Reusable component standards for future assets.",
+  "components": [
+    { "id": "hero", "name": "Hero", "requiredQualities": ["clear-purpose", "asset-context", "accessible-heading"] },
+    { "id": "summary", "name": "Summary", "requiredQualities": ["brief", "scannable", "matches-intent"] },
+    { "id": "field-group", "name": "Field Group", "requiredQualities": ["clear-labels", "validation-ready", "accessible-inputs"] },
+    { "id": "result-card", "name": "Result Card", "requiredQualities": ["clear-result", "explainable", "empty-and-error-states"] },
+    { "id": "info-card", "name": "Info Card", "requiredQualities": ["contextual", "non-duplicative", "readable"] },
+    { "id": "faq", "name": "FAQ", "requiredQualities": ["real-questions", "concise-answers", "jsonld-ready"] },
+    { "id": "cta", "name": "CTA", "requiredQualities": ["contextual", "non-intrusive", "disclosure-ready"] },
+    { "id": "product-card", "name": "Product Card", "requiredQualities": ["eligible-context", "fallback-ready", "disclosure-ready"] },
+    { "id": "notice", "name": "Notice", "requiredQualities": ["clear", "useful", "not-alarming"] },
+    { "id": "warning", "name": "Warning", "requiredQualities": ["specific", "actionable", "not-overused"] },
+    { "id": "related-links", "name": "Related Links", "requiredQualities": ["cluster-aligned", "useful", "not-spammy"] }
+  ],
+  "notes": [
+    "Component standards describe quality expectations only.",
+    "They do not define HTML implementations."
+  ]
+}

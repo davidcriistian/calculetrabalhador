@@ -1,0 +1,15 @@
+{
+  "id": "publishing-lifecycle-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-lifecycle.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Lifecycle Contract",
+  "objective": "Define official publishing states and allowed transitions.",
+  "reference": "/data/publishing/lifecycle/index.json",
+  "nonResponsibilities": ["execute transitions", "publish assets"]
+}

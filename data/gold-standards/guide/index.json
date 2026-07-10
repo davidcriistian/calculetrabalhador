@@ -1,0 +1,42 @@
+{
+  "id": "guide-gold-standard",
+  "name": "Guide Standard",
+  "type": "guide",
+  "version": "1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "active-foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "description": "Declarative quality standard for future guide assets.",
+  "mandatoryStructure": ["hero", "introduction", "clusters", "calculators", "articles", "faq", "navigation", "seo"],
+  "optionalStructure": ["products", "cta", "downloads", "glossary", "comparison"],
+  "mandatoryComponents": ["Hero", "Summary", "Cluster Card", "Calculator Card", "Article Card", "FAQ", "Navigation"],
+  "optionalComponents": ["CTA", "Product Card", "Notice", "Warning", "Table"],
+  "mandatorySeo": ["title", "description", "canonical", "headings", "internal-links", "open-graph"],
+  "mandatoryJsonLd": ["CollectionPage", "BreadcrumbList", "FAQPage"],
+  "mandatoryTesting": ["link-check", "structure-check", "seo-snapshot"],
+  "mandatoryValidation": ["guide-structure", "seo", "json-ld", "accessibility", "component-compliance"],
+  "mandatoryPublishing": ["manual-approval", "rollback-ready", "navigation-check"],
+  "restrictions": [
+    "must-not-copy-existing-page-html",
+    "must-not-duplicate-cluster-content",
+    "must-not-use-unversioned-standard"
+  ],
+  "acceptanceCriteria": [
+    "guide purpose is clear",
+    "navigation is complete",
+    "clusters and assets are intentionally grouped",
+    "SEO metadata is complete",
+    "publishing gates are declared"
+  ],
+  "migrationNotes": [
+    "Guide v1.0 establishes the first guide quality baseline."
+  ],
+  "supersedes": null,
+  "supersededBy": null,
+  "availableVersions": {
+    "1.0": "Initial guide quality standard."
+  }
+}

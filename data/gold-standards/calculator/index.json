@@ -1,0 +1,47 @@
+{
+  "id": "calculator-gold-standard",
+  "name": "Calculator Standard",
+  "type": "calculator",
+  "version": "1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "active-foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "description": "Declarative quality standard for future calculator assets.",
+  "mandatoryStructure": ["hero", "summary", "field-groups", "result", "cards", "explanation", "faq", "related-calculators", "related-articles", "footer"],
+  "optionalStructure": ["product-context", "cta-context", "downloads", "advanced-examples", "legal-notice"],
+  "mandatoryComponents": ["Hero", "Summary", "Field Group", "Result Card", "Info Card", "FAQ", "Related Links", "Notice"],
+  "optionalComponents": ["CTA", "Product Card", "Warning", "Table", "Banner"],
+  "mandatorySeo": ["title", "description", "canonical", "headings", "internal-links", "open-graph"],
+  "mandatoryJsonLd": ["SoftwareApplication", "FAQPage", "BreadcrumbList"],
+  "mandatoryTesting": ["calculation-equivalence", "baseline-scenarios", "regression", "empty-state", "error-state"],
+  "mandatoryValidation": ["structure", "seo", "json-ld", "accessibility", "runtime-safety", "component-compliance"],
+  "mandatoryPublishing": ["manual-approval", "rollback-ready", "sitemap-policy-check", "canonical-check"],
+  "restrictions": [
+    "must-not-store-legal-source-outside-core",
+    "must-not-copy-existing-calculator-html",
+    "must-not-publish-without-testing-and-validation",
+    "must-not-use-unversioned-standard"
+  ],
+  "acceptanceCriteria": [
+    "all mandatory sections present",
+    "calculation behavior has evidence",
+    "result states are defined",
+    "SEO and JSON-LD are complete",
+    "related content is intentional",
+    "publishing gates are declared"
+  ],
+  "migrationNotes": [
+    "Assets on v1.0 may migrate to v1.1 for improved evidence requirements.",
+    "Assets on v1.x may migrate to v2.0 only through Migration, Testing and Validation gates."
+  ],
+  "supersedes": null,
+  "supersededBy": null,
+  "availableVersions": {
+    "1.0": "Initial calculator quality standard.",
+    "1.1": "Reserved for stricter evidence and accessibility expectations.",
+    "2.0": "Reserved for future layout, publishing and monetization quality changes."
+  }
+}

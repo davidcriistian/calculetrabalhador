@@ -1,0 +1,30 @@
+{
+  "id": "publishing-release-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-release.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative release model for future published asset versions.",
+  "releaseTemplate": {
+    "releaseId": "example-release-id",
+    "assetId": "example-asset-id",
+    "assetType": "article",
+    "draftVersion": "0.1.0",
+    "publishedVersion": null,
+    "goldStandardVersion": null,
+    "blueprintVersion": null,
+    "strategyVersion": null,
+    "coreVersion": null,
+    "createdAt": null,
+    "approvedAt": null,
+    "publishedAt": null,
+    "status": "draft",
+    "checksum": null,
+    "changelog": [],
+    "dependencies": []
+  }
+}

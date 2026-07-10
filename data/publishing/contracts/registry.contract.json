@@ -1,0 +1,15 @@
+{
+  "id": "publishing-registry-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Publishing Registry Contract",
+  "objective": "Define the publishing registry as the entry point to publication governance models.",
+  "reference": "/data/publishing/registry/index.json",
+  "nonResponsibilities": ["feed runtime", "replace POS Registry", "replace Registry System"]
+}

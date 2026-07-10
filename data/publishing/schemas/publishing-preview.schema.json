@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-preview.schema.json",
+  "title": "Publishing Preview",
+  "type": "object",
+  "required": ["id", "version", "previewTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "supportedAssetTypes": { "type": "array", "items": { "type": "string" } },
+    "previewTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

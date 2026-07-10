@@ -14,6 +14,8 @@ Shadow Mode compara a calculadora publicada com a representacao homologada no Co
 
 O usuario continua recebendo exclusivamente o resultado do runtime atual.
 
+As fronteiras oficiais entre camadas estao em `/docs/PLATFORM_ARCHITECTURE.md`. Este documento detalha apenas Shadow Mode e nao redefine a autoridade geral da plataforma.
+
 ## Papel Arquitetural
 
 Shadow e oficialmente uma Bridge Layer.
@@ -26,7 +28,9 @@ Core <-> POS Testing
 
 para produzir evidencia tecnica de comparacao e equivalencia.
 
-Shadow nao e conhecimento puro, nao e runtime e nao altera producao. Ele deve permanecer como camada de evidencia tecnica ate que uma fase futura aprove outro desenho.
+Shadow e uma camada temporaria de evidencia tecnica e baseline. Ele serve para comparar arquitetura legada e nova, registrar equivalencia, fornecer evidencia para Testing e Validation e apoiar migracoes controladas.
+
+Shadow nao e conhecimento puro, nao e runtime, nao e fonte de resultado para usuario, nao e fonte juridica, nao e catalogo, nao e camada permanente de execucao e nao altera producao. Ele tambem nao substitui Testing nem Validation.
 
 ## Fluxo
 
@@ -141,6 +145,20 @@ Shadow Mode so pode ser desligado para uma calculadora quando:
 - houver revisao tecnica dos registros;
 - houver plano de rollback;
 - houver aprovacao explicita para migracao definitiva.
+
+## Sunset Oficial
+
+Shadow deve entrar em sunset por ativo quando:
+
+- equivalencia aprovada;
+- Testing aprovado;
+- Validation aprovado;
+- migracao concluida;
+- periodo de observacao encerrado;
+- rollback validado;
+- aprovacao manual registrada.
+
+O sunset nao apaga historico automaticamente. Evidencias e logs devem permanecer auditaveis conforme a politica de versionamento da plataforma.
 
 ## Criterios Para Migracao Definitiva
 

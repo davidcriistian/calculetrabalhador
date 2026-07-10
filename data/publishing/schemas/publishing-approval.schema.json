@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-approval.schema.json",
+  "title": "Publishing Approval",
+  "type": "object",
+  "required": ["id", "version", "manualApprovalRequired", "approvalTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "manualApprovalRequired": { "type": "boolean" },
+    "approvalTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/references/schemas/reference.schema.json",
+  "title": "Reference Catalog",
+  "type": "object",
+  "required": ["id", "version", "schema", "status", "runtimeStatus", "createdAt", "updatedAt", "owner"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "/data/references/schemas/reference-asset.schema.json" }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

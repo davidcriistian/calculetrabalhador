@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/gold-standards/schemas/gold-standard-validation.schema.json",
+  "title": "Gold Standard Validation",
+  "type": "object",
+  "required": ["id", "version", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "complianceConcept", "statuses"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "complianceConcept": { "type": "string" },
+    "statuses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "meaning"],
+        "properties": {
+          "id": { "type": "string" },
+          "meaning": { "type": "string" }
+        }
+      }
+    },
+    "futureValidationIntegration": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

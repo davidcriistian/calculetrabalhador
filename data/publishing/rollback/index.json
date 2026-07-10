@@ -1,0 +1,31 @@
+{
+  "id": "publishing-rollback-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-rollback.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative rollback model for future publishing workflows.",
+  "supportedRollbackTypes": ["partial", "complete", "content", "calculation", "seo", "product-cta"],
+  "rollbackTemplate": {
+    "rollbackId": "example-rollback-id",
+    "releaseId": "example-release-id",
+    "sourceVersion": null,
+    "targetVersion": null,
+    "reason": null,
+    "requestedBy": null,
+    "approvedBy": null,
+    "filesToRestore": [],
+    "registryChanges": [],
+    "sitemapChanges": [],
+    "indexingChanges": [],
+    "startedAt": null,
+    "completedAt": null,
+    "status": "not-started",
+    "verification": [],
+    "notes": []
+  }
+}

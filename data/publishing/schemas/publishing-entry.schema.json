@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-entry.schema.json",
+  "title": "Publishing Entry",
+  "type": "object",
+  "required": ["assetId", "assetType", "status", "version"],
+  "properties": {
+    "assetId": { "type": "string" },
+    "assetType": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "gates": { "type": "array", "items": { "type": "string" } },
+    "evidence": { "type": "array" }
+  },
+  "additionalProperties": true
+}

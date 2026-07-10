@@ -1,0 +1,45 @@
+{
+  "id": "article-gold-standard",
+  "name": "Article Standard",
+  "type": "article",
+  "version": "1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "active-foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "description": "Declarative quality standard for future article assets.",
+  "mandatoryStructure": ["hero", "summary", "introduction", "table-of-contents", "content", "faq", "related-calculator", "internal-links", "breadcrumb"],
+  "optionalStructure": ["product-context", "cta-context", "comparison-table", "download", "author-note"],
+  "mandatoryComponents": ["Hero", "Summary", "Section", "FAQ", "Breadcrumb", "Related Links", "Notice"],
+  "optionalComponents": ["CTA", "Product Card", "Warning", "Table", "Info Card"],
+  "mandatorySeo": ["title", "description", "canonical", "headings", "internal-links", "open-graph", "twitter-card"],
+  "mandatoryJsonLd": ["Article", "FAQPage", "BreadcrumbList"],
+  "mandatoryTesting": ["content-structure-check", "link-check", "seo-snapshot", "schema-check"],
+  "mandatoryValidation": ["structure", "seo", "json-ld", "accessibility", "component-compliance", "content-quality"],
+  "mandatoryPublishing": ["manual-approval", "rollback-ready", "canonical-check", "sitemap-policy-check"],
+  "restrictions": [
+    "must-not-copy-existing-article-html",
+    "must-not-store-legal-source-outside-core",
+    "must-not-change-url-without-publishing-approval",
+    "must-not-use-unversioned-standard"
+  ],
+  "acceptanceCriteria": [
+    "article intent is clear",
+    "mandatory content blocks exist",
+    "SEO metadata is complete",
+    "JSON-LD is valid",
+    "internal links support the cluster",
+    "publishing gates are declared"
+  ],
+  "migrationNotes": [
+    "Assets on v1.0 may migrate to v2.0 when editorial, UX or SEO requirements evolve."
+  ],
+  "supersedes": null,
+  "supersededBy": null,
+  "availableVersions": {
+    "1.0": "Initial article quality standard.",
+    "2.0": "Reserved for future editorial, SEO and publishing quality changes."
+  }
+}

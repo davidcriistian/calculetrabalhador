@@ -1,0 +1,15 @@
+{
+  "id": "article-standard-contract",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "name": "Article Standard Contract",
+  "objective": "Define mandatory quality requirements for future articles.",
+  "standardReference": "/data/gold-standards/article/index.json",
+  "nonResponsibilities": ["create articles", "modify article pages", "copy article HTML"]
+}

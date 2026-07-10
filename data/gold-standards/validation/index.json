@@ -1,0 +1,28 @@
+{
+  "id": "gold-standard-validation",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard-validation.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "description": "Declarative compliance model for Gold Standard validation.",
+  "complianceConcept": "Gold Standard Compliance",
+  "statuses": [
+    { "id": "compliant", "meaning": "Asset satisfies all mandatory Gold Standard requirements for its declared version." },
+    { "id": "partial", "meaning": "Asset satisfies some mandatory requirements but has non-blocking or pending gaps." },
+    { "id": "non-compliant", "meaning": "Asset fails one or more blocking mandatory requirements." }
+  ],
+  "futureValidationIntegration": {
+    "validationEngineReference": "Validation Engine",
+    "createdInThisPhase": false,
+    "expectedInputs": ["asset-type", "declared-standard-version", "asset-evidence"],
+    "expectedOutputs": ["compliance-status", "gaps", "blockers", "migration-notes"]
+  },
+  "notes": [
+    "This file does not execute validation.",
+    "Future Validation Engine may use this model as compliance vocabulary."
+  ]
+}

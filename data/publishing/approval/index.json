@@ -1,0 +1,25 @@
+{
+  "id": "publishing-approval-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-approval.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative approval model for future publishing workflows.",
+  "manualApprovalRequired": true,
+  "approvalTemplate": {
+    "approvalId": "example-approval-id",
+    "assetId": "example-asset-id",
+    "approvedBy": null,
+    "approvedAt": null,
+    "approvalType": "manual",
+    "scope": [],
+    "gatesPassed": [],
+    "exceptions": [],
+    "status": "pending",
+    "notes": []
+  }
+}

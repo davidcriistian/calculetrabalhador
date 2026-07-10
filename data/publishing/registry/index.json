@@ -1,0 +1,46 @@
+{
+  "id": "publishing-model-registry",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Official entry point for the declarative publishing model.",
+  "publishingRole": "publication-governance-model",
+  "references": {
+    "lifecycle": "/data/publishing/lifecycle/index.json",
+    "gates": "/data/publishing/gates/index.json",
+    "preview": "/data/publishing/preview/index.json",
+    "review": "/data/publishing/review/index.json",
+    "approval": "/data/publishing/approval/index.json",
+    "release": "/data/publishing/release/index.json",
+    "deploy": "/data/publishing/deploy/index.json",
+    "sitemap": "/data/publishing/sitemap/index.json",
+    "indexing": "/data/publishing/indexing/index.json",
+    "rollback": "/data/publishing/rollback/index.json",
+    "logs": "/data/publishing/logs/index.json",
+    "shared": "/data/publishing/shared/index.json",
+    "schemas": "/data/publishing/schemas/",
+    "contracts": "/data/publishing/contracts/",
+    "metadata": "/data/publishing/metadata/publishing.json",
+    "history": "/data/publishing/history/index.json",
+    "versioning": "/data/publishing/versioning/index.json",
+    "documentation": "/data/publishing/docs/PUBLISHING_MODEL.md"
+  },
+  "operationalBoundaries": {
+    "publishesAssets": false,
+    "executesDeploy": false,
+    "modifiesSitemap": false,
+    "callsIndexNow": false,
+    "callsExternalServices": false,
+    "modifiesProduction": false,
+    "feedsRuntime": false
+  },
+  "notes": [
+    "Publishing controls future production entry through gates and lifecycle.",
+    "This phase creates no publication, deploy, sitemap update or external indexing request."
+  ]
+}

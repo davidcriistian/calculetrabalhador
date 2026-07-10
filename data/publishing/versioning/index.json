@@ -1,0 +1,23 @@
+{
+  "id": "publishing-model-versioning",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Versioning policy for the Publishing Model.",
+  "policy": {
+    "semanticVersioning": true,
+    "major": "Breaking changes to lifecycle, gates or release/rollback models.",
+    "minor": "New gates, states, providers, environments or optional fields.",
+    "patch": "Clarifications and non-breaking metadata updates."
+  },
+  "currentVersion": "0.1.0",
+  "compatibility": {
+    "runtimeConsumesPublishing": false,
+    "productionConsumption": false
+  }
+}

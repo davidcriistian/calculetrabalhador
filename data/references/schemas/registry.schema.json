@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/references/schemas/registry.schema.json",
+  "title": "Reference Registry",
+  "type": "object",
+  "required": ["id", "version", "schema", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source", "references"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "referenceRole": { "type": "string" },
+    "references": { "type": "object" },
+    "assetTypes": { "type": "array", "items": { "type": "string" } },
+    "approvedStatuses": { "type": "array", "items": { "type": "string" } },
+    "operationalBoundaries": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

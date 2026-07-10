@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-deploy.schema.json",
+  "title": "Publishing Deploy",
+  "type": "object",
+  "required": ["id", "version", "environments", "deployTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "environments": { "type": "array", "items": { "type": "string" } },
+    "deployTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

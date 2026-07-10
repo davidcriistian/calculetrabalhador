@@ -1,0 +1,52 @@
+{
+  "id": "gold-standard-registry",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "description": "Official registry for platform quality standards.",
+  "standardRole": "quality-authority",
+  "references": {
+    "calculator": "/data/gold-standards/calculator/index.json",
+    "article": "/data/gold-standards/article/index.json",
+    "cluster": "/data/gold-standards/cluster/index.json",
+    "guide": "/data/gold-standards/guide/index.json",
+    "seo": "/data/gold-standards/seo/index.json",
+    "components": "/data/gold-standards/components/index.json",
+    "validation": "/data/gold-standards/validation/index.json",
+    "shared": "/data/gold-standards/shared/index.json",
+    "schemas": "/data/gold-standards/schemas/",
+    "contracts": "/data/gold-standards/contracts/",
+    "metadata": "/data/gold-standards/metadata/gold-standards.json",
+    "history": "/data/gold-standards/history/index.json",
+    "versioning": "/data/gold-standards/versioning/index.json",
+    "documentation": "/data/gold-standards/docs/GOLD_STANDARD_SYSTEM.md"
+  },
+  "standardTypes": ["calculator", "article", "cluster", "guide", "seo", "component", "validation"],
+  "versionedStandards": [
+    { "type": "calculator", "versions": ["1.0", "1.1", "2.0"], "current": "1.0" },
+    { "type": "article", "versions": ["1.0", "2.0"], "current": "1.0" },
+    { "type": "guide", "versions": ["1.0"], "current": "1.0" },
+    { "type": "cluster", "versions": ["1.0"], "current": "1.0" },
+    { "type": "seo", "versions": ["1.0"], "current": "1.0" }
+  ],
+  "operationalBoundaries": {
+    "isExampleAsset": false,
+    "copiesRealPages": false,
+    "copiesHtml": false,
+    "modifiesProduction": false,
+    "feedsRuntime": false,
+    "executesValidation": false,
+    "executesPublishing": false,
+    "executesAutomation": false
+  },
+  "notes": [
+    "Gold Standards define ideal quality requirements, not implementations.",
+    "Blueprints may reference Gold Standards in future phases, but no integration is created here.",
+    "This system is versioned independently from Constitution."
+  ]
+}

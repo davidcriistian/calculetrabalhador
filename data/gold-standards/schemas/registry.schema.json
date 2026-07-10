@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/gold-standards/schemas/registry.schema.json",
+  "title": "Gold Standard Registry",
+  "type": "object",
+  "required": ["id", "version", "schema", "status", "runtimeStatus", "createdAt", "updatedAt", "owner", "source", "references"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "schema": { "type": "string" },
+    "status": { "type": "string" },
+    "runtimeStatus": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "owner": { "type": "string" },
+    "source": { "type": "string" },
+    "description": { "type": "string" },
+    "standardRole": { "type": "string" },
+    "references": { "type": "object" },
+    "standardTypes": { "type": "array", "items": { "type": "string" } },
+    "versionedStandards": { "type": "array" },
+    "operationalBoundaries": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "publishing-sitemap-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-sitemap.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Sitemap Contract",
+  "objective": "Define sitemap governance for future publication flows.",
+  "reference": "/data/publishing/sitemap/index.json",
+  "nonResponsibilities": ["modify sitemap.xml", "submit sitemap"]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-lifecycle.schema.json",
+  "title": "Publishing Lifecycle",
+  "type": "object",
+  "required": ["id", "version", "states", "allowedTransitions"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "states": { "type": "array", "items": { "type": "string" } },
+    "allowedTransitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

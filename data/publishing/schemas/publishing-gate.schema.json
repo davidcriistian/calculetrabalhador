@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-gate.schema.json",
+  "title": "Publishing Gate",
+  "type": "object",
+  "required": ["id", "version", "requiredGates", "blockingRules"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "requiredGates": { "type": "array", "items": { "type": "string" } },
+    "blockingRules": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

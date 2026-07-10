@@ -1,0 +1,22 @@
+{
+  "id": "publishing-shared",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Shared publishing rules and concepts.",
+  "rules": [
+    "publishing-does-not-define-quality",
+    "gold-standard-defines-quality",
+    "publishing-requires-testing-pass",
+    "publishing-requires-validation-pass",
+    "publishing-requires-manual-approval",
+    "publishing-requires-rollback-ready",
+    "publishing-does-not-create-assets",
+    "publishing-does-not-execute-automation-in-this-phase"
+  ]
+}

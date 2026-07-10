@@ -1,0 +1,58 @@
+{
+  "id": "publishing-lifecycle",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-lifecycle.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Official publishing lifecycle states and allowed transitions.",
+  "states": [
+    "draft",
+    "preview-ready",
+    "in-review",
+    "changes-requested",
+    "approved",
+    "ready-to-publish",
+    "publishing",
+    "published",
+    "deploying",
+    "deployed",
+    "failed",
+    "rollback-requested",
+    "rolling-back",
+    "rolled-back",
+    "archived",
+    "cancelled"
+  ],
+  "allowedTransitions": [
+    { "from": "draft", "to": "preview-ready" },
+    { "from": "preview-ready", "to": "in-review" },
+    { "from": "in-review", "to": "changes-requested" },
+    { "from": "changes-requested", "to": "draft" },
+    { "from": "in-review", "to": "approved" },
+    { "from": "approved", "to": "ready-to-publish" },
+    { "from": "ready-to-publish", "to": "publishing" },
+    { "from": "publishing", "to": "published" },
+    { "from": "published", "to": "deploying" },
+    { "from": "deploying", "to": "deployed" },
+    { "from": "deployed", "to": "rollback-requested" },
+    { "from": "rollback-requested", "to": "rolling-back" },
+    { "from": "rolling-back", "to": "rolled-back" },
+    { "from": "deployed", "to": "archived" },
+    { "from": "draft", "to": "cancelled" },
+    { "from": "preview-ready", "to": "cancelled" },
+    { "from": "in-review", "to": "cancelled" }
+  ],
+  "failureTransitions": {
+    "fromAnyOperationalStateTo": "failed",
+    "operationalStates": ["preview-ready", "in-review", "approved", "ready-to-publish", "publishing", "published", "deploying", "rollback-requested", "rolling-back"]
+  },
+  "transitionPolicy": {
+    "allowArbitraryTransitions": false,
+    "requiresGateCheckBeforeReadyToPublish": true,
+    "requiresManualApprovalBeforePublishing": true
+  }
+}

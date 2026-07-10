@@ -1,0 +1,53 @@
+{
+  "id": "publishing-gates",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-gate.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative publishing gates and blocking rules.",
+  "requiredGates": [
+    "gold-standard-compliance",
+    "reference-alignment",
+    "testing-pass",
+    "validation-pass",
+    "seo-pass",
+    "runtime-safe",
+    "links-pass",
+    "jsonld-pass",
+    "responsive-pass",
+    "accessibility-pass",
+    "performance-pass",
+    "rollback-ready",
+    "manual-approval",
+    "sitemap-ready",
+    "indexing-ready",
+    "deploy-ready"
+  ],
+  "blockingRules": [
+    "critical-failure",
+    "testing-failed",
+    "validation-failed",
+    "gold-standard-non-compliant",
+    "rollback-missing",
+    "manual-approval-missing",
+    "canonical-invalid",
+    "url-invalid",
+    "sitemap-inconsistent",
+    "dependency-missing",
+    "reference-broken",
+    "jsonld-error",
+    "runtime-unsafe"
+  ],
+  "gatePolicy": {
+    "publishingDefinesQuality": false,
+    "goldStandardDefinesQuality": true,
+    "publishingExecutesTesting": false,
+    "publishingRequiresTestingPass": true,
+    "publishingExecutesValidation": false,
+    "publishingRequiresValidationPass": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "reference-system-registry",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/registry.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "description": "Official registry for approved platform reference assets.",
+  "referenceRole": "approved-implementation-index",
+  "references": {
+    "calculators": "/data/references/calculators/index.json",
+    "articles": "/data/references/articles/index.json",
+    "clusters": "/data/references/clusters/index.json",
+    "guides": "/data/references/guides/index.json",
+    "components": "/data/references/components/index.json",
+    "metadata": "/data/references/metadata/references.json",
+    "history": "/data/references/history/index.json",
+    "versioning": "/data/references/versioning/index.json",
+    "schemas": "/data/references/schemas/",
+    "contracts": "/data/references/contracts/",
+    "documentation": "/data/references/docs/REFERENCE_SYSTEM.md"
+  },
+  "assetTypes": ["calculator", "article", "cluster", "guide", "component"],
+  "approvedStatuses": ["official-reference", "candidate-reference", "deprecated-reference"],
+  "operationalBoundaries": {
+    "definesStandards": false,
+    "copiesHtml": false,
+    "copiesContent": false,
+    "importsPages": false,
+    "modifiesProduction": false,
+    "feedsRuntime": false,
+    "executesValidation": false,
+    "executesPublishing": false,
+    "executesAutomation": false
+  },
+  "notes": [
+    "Gold Standard defines quality standards.",
+    "Reference System points to approved real implementations.",
+    "References may change without changing the Gold Standard."
+  ]
+}

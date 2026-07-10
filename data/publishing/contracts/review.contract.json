@@ -1,0 +1,15 @@
+{
+  "id": "publishing-review-contract",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-review.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "name": "Review Contract",
+  "objective": "Define review metadata for future publishing review flows.",
+  "reference": "/data/publishing/review/index.json",
+  "nonResponsibilities": ["perform review", "approve publication"]
+}

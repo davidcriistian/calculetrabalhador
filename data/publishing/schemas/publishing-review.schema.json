@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-review.schema.json",
+  "title": "Publishing Review",
+  "type": "object",
+  "required": ["id", "version", "reviewTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "reviewTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

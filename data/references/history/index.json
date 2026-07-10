@@ -1,0 +1,26 @@
+{
+  "id": "reference-system-history",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "description": "Change history for Reference System.",
+  "items": [
+    {
+      "id": "reference-system-0.1.0",
+      "version": "0.1.0",
+      "date": "2026-07-10",
+      "status": "foundation",
+      "changes": [
+        "Created Reference System foundation.",
+        "Registered official calculator reference metadata.",
+        "Registered official article reference metadata.",
+        "Kept production assets, HTML and content untouched."
+      ]
+    }
+  ]
+}

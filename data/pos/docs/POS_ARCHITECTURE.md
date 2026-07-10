@@ -2,9 +2,11 @@
 
 ## Objetivo
 
-O Project Operating System, ou POS, sera a camada mestre de organizacao da plataforma Calcule Trabalhador.
+O Project Operating System, ou POS, sera a camada de organizacao operacional da plataforma Calcule Trabalhador.
 
-Na Fase 1, o POS cria apenas o Registry Engine: um indice declarativo para registrar, classificar e relacionar ativos da plataforma. Ele nao executa calculos, nao publica conteudo, nao altera paginas e nao alimenta nenhum runtime.
+Na Fase 1, o POS cria apenas o Registry Engine: um indice declarativo para registrar, classificar e relacionar referencias operacionais da plataforma. Ele nao executa calculos, nao publica conteudo, nao altera paginas e nao alimenta nenhum runtime.
+
+As fronteiras oficiais entre camadas estao em `/docs/PLATFORM_ARCHITECTURE.md`. Este documento detalha apenas a camada POS e nao redefine a autoridade geral da plataforma.
 
 ## Filosofia
 
@@ -57,6 +59,10 @@ O Registry Engine e responsavel por organizar estruturas para:
 - status;
 - dependencias;
 - relacionamentos.
+
+No POS Registry, esses registros representam descoberta e governanca operacional: status, gates, aprovacoes, processos, migracoes, testes, validacoes e referencias para engines operacionais.
+
+O POS Registry nao e catalogo mestre de ativos da plataforma. A descoberta particionada de calculadoras, artigos, clusters, nucleos, dominios e futuros produtos pertence ao Registry System em `/data/registry/`.
 
 Na Fase 1, essas listas ficam vazias por desenho. O objetivo e criar a forma oficial de registro, nao alimentar dados automaticamente.
 
@@ -164,7 +170,8 @@ Cada contrato descreve objetivo, escopo, entradas esperadas, saidas esperadas, d
 
 Para evoluir o POS:
 
-- manter o Registry como fonte mestre declarativa;
+- manter o POS Registry como fonte de descoberta e governanca operacional;
+- manter o Registry System em `/data/registry/` como indice particionado de ativos;
 - registrar ativos com identificadores estaveis;
 - separar metadados de execucao operacional;
 - controlar funcionalidade recorrente por configuracao antes de codigo;
@@ -213,3 +220,5 @@ Somente com aprovacao explicita, implementar engines operacionais que consumam o
 O POS esta em modo `foundation` e `not-consumed`.
 
 Nenhuma funcionalidade existente deve depender do POS nesta fase.
+
+Os catalogos publicos atuais continuam sendo `data/tools.json` e `data/articles.json` ate futura migracao aprovada. O POS Registry nao substitui esses catalogos e nao cria consumo operacional.

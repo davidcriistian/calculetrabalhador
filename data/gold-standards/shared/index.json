@@ -1,0 +1,42 @@
+{
+  "id": "gold-standard-shared",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "description": "Shared concepts for all Gold Standards.",
+  "sharedRules": [
+    "standards must be versioned",
+    "assets must declare the standard version they follow in future phases",
+    "standards must not copy production pages",
+    "standards must not store legal source content",
+    "standards must be used as quality requirements, not implementation templates"
+  ],
+  "standardEntryShape": [
+    "id",
+    "name",
+    "type",
+    "version",
+    "status",
+    "owner",
+    "description",
+    "mandatoryStructure",
+    "optionalStructure",
+    "mandatoryComponents",
+    "optionalComponents",
+    "mandatorySeo",
+    "mandatoryJsonLd",
+    "mandatoryTesting",
+    "mandatoryValidation",
+    "mandatoryPublishing",
+    "restrictions",
+    "acceptanceCriteria",
+    "migrationNotes",
+    "supersedes",
+    "supersededBy"
+  ]
+}

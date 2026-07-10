@@ -1,0 +1,26 @@
+{
+  "id": "publishing-review-model",
+  "version": "0.1.0",
+  "schema": "/data/publishing/schemas/publishing-review.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.6 - Publishing Model",
+  "description": "Declarative review model for future publishing workflows.",
+  "reviewTemplate": {
+    "reviewId": "example-review-id",
+    "assetId": "example-asset-id",
+    "reviewer": null,
+    "reviewType": "editorial",
+    "startedAt": null,
+    "completedAt": null,
+    "findings": [],
+    "severity": "none",
+    "decision": "pending",
+    "requestedChanges": [],
+    "evidence": [],
+    "notes": []
+  }
+}

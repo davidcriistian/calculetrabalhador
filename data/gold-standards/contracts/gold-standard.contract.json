@@ -1,0 +1,16 @@
+{
+  "id": "gold-standard-contract",
+  "version": "0.1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.4 - Gold Standard System",
+  "name": "Gold Standard Contract",
+  "objective": "Define Gold Standards as versioned quality authorities for future assets.",
+  "responsibilities": ["define quality requirements", "define acceptance criteria", "define versioning", "define migration notes"],
+  "nonResponsibilities": ["implement assets", "copy real pages", "execute validation", "publish content", "modify production"],
+  "notes": ["Gold Standards are specifications, not examples."]
+}

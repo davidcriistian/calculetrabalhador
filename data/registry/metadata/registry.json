@@ -11,6 +11,20 @@
   "description": "Metadata for the Registry Partitioning System.",
   "officialEntryPoint": "/data/registry/index.json",
   "purpose": "Prepare long-term discovery indexes without creating large central JSON files.",
+  "authority": "partitioned-asset-discovery",
+  "notAuthorityFor": [
+    "operational-governance",
+    "legal-knowledge",
+    "runtime",
+    "seo-source",
+    "public-catalog-replacement",
+    "publishing-control"
+  ],
+  "currentPublicCatalogs": [
+    "/data/tools.json",
+    "/data/articles.json"
+  ],
+  "posRegistry": "/data/pos/registry/index.json",
   "principles": [
     "index-only",
     "no-asset-duplication",
@@ -20,6 +34,8 @@
   ],
   "relatedLayers": ["Core", "POS", "Blueprint System", "Operation System", "Manifest System"],
   "notes": [
-    "This metadata does not create integration with any runtime or existing registry."
+    "This metadata does not create integration with any runtime or existing registry.",
+    "Registry System does not replace data/tools.json or data/articles.json in this phase.",
+    "POS Registry remains the authority for operational discovery and governance."
   ]
 }

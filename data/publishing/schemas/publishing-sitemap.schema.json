@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-sitemap.schema.json",
+  "title": "Publishing Sitemap",
+  "type": "object",
+  "required": ["id", "version", "supportedActions", "blockingRules"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "supportedActions": { "type": "array", "items": { "type": "string" } },
+    "blockingRules": { "type": "array", "items": { "type": "string" } },
+    "sitemapChangeTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

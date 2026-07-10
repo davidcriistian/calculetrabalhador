@@ -1,0 +1,42 @@
+{
+  "id": "seo-gold-standard",
+  "name": "SEO Standard",
+  "type": "seo",
+  "version": "1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "active-foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "description": "Declarative quality standard for future SEO requirements.",
+  "mandatoryStructure": ["title", "description", "canonical", "open-graph", "twitter-card", "schema-org", "json-ld", "breadcrumb", "headings", "internal-links"],
+  "optionalStructure": ["hreflang", "image-metadata", "indexing-hints", "faq-expansion"],
+  "mandatoryComponents": ["SEO Metadata", "Breadcrumb", "Heading Plan", "Internal Link Plan"],
+  "optionalComponents": ["FAQ Schema", "HowTo Schema", "Product Snippet"],
+  "mandatorySeo": ["title", "description", "canonical", "open-graph", "twitter-card", "headings", "internal-links"],
+  "mandatoryJsonLd": ["BreadcrumbList"],
+  "mandatoryTesting": ["seo-snapshot", "link-check", "canonical-check"],
+  "mandatoryValidation": ["seo-validation", "json-ld-validation", "heading-validation", "link-validation"],
+  "mandatoryPublishing": ["canonical-check", "sitemap-policy-check", "manual-approval"],
+  "restrictions": [
+    "must-not-change-url-without-publishing-approval",
+    "must-not-duplicate-canonical-source",
+    "must-not-use-unversioned-standard"
+  ],
+  "acceptanceCriteria": [
+    "metadata is complete",
+    "canonical is intentional",
+    "headings follow hierarchy",
+    "internal links support cluster strategy",
+    "JSON-LD is valid"
+  ],
+  "migrationNotes": [
+    "SEO v1.0 establishes baseline metadata and structured data expectations."
+  ],
+  "supersedes": null,
+  "supersededBy": null,
+  "availableVersions": {
+    "1.0": "Initial SEO quality standard."
+  }
+}

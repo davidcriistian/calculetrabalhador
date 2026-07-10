@@ -1,0 +1,32 @@
+{
+  "id": "reference-contract",
+  "version": "0.1.0",
+  "schema": "/data/references/schemas/reference.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "source": "Productivity Layer Phase 2.5 - Reference System",
+  "name": "Reference Contract",
+  "objective": "Define Reference System as the official registry of approved real implementation references.",
+  "responsibilities": [
+    "register approved reference metadata",
+    "connect references to Gold Standard type and version",
+    "record approval status and date",
+    "record criteria that make the asset a reference",
+    "support future replacement through supersedes and supersededBy"
+  ],
+  "nonResponsibilities": [
+    "define standards",
+    "copy HTML",
+    "copy content",
+    "import pages",
+    "modify production",
+    "execute validation",
+    "execute publishing"
+  ],
+  "notes": [
+    "Gold Standard defines the standard; Reference System points to the approved implementation."
+  ]
+}

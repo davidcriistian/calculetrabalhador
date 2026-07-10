@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/publishing/schemas/publishing-rollback.schema.json",
+  "title": "Publishing Rollback",
+  "type": "object",
+  "required": ["id", "version", "supportedRollbackTypes", "rollbackTemplate"],
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "supportedRollbackTypes": { "type": "array", "items": { "type": "string" } },
+    "rollbackTemplate": { "type": "object" }
+  },
+  "additionalProperties": true
+}

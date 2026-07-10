@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/data/references/schemas/reference-criteria.schema.json",
+  "title": "Reference Criteria",
+  "type": "string",
+  "enum": [
+    "approved-layout",
+    "approved-ux",
+    "approved-seo",
+    "approved-structure",
+    "approved-navigation",
+    "approved-components",
+    "approved-jsonld",
+    "approved-accessibility",
+    "approved-conversion",
+    "approved-cluster-structure",
+    "approved-internal-links",
+    "approved-cta-placement"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "cluster-gold-standard",
+  "name": "Cluster Standard",
+  "type": "cluster",
+  "version": "1.0",
+  "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
+  "status": "active-foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "owner": "Calcule Trabalhador",
+  "description": "Declarative quality standard for future cluster ecosystems.",
+  "mandatoryStructure": ["primary-calculator", "pillar-article", "satellites", "faq", "tools", "seo", "relationships"],
+  "optionalStructure": ["downloads", "products", "cta", "guides", "glossary"],
+  "mandatoryComponents": ["Cluster Map", "Calculator Reference", "Article Reference", "FAQ", "Related Links"],
+  "optionalComponents": ["CTA", "Product Card", "Download", "Guide Card"],
+  "mandatorySeo": ["cluster-title", "cluster-description", "canonical", "breadcrumb", "internal-linking", "related-clusters"],
+  "mandatoryJsonLd": ["CollectionPage", "BreadcrumbList", "FAQPage"],
+  "mandatoryTesting": ["relationship-consistency", "internal-link-check", "calculator-baseline", "article-structure-check"],
+  "mandatoryValidation": ["cluster-structure", "seo", "json-ld", "accessibility", "component-compliance"],
+  "mandatoryPublishing": ["publication-order", "dependencies", "manual-approval", "rollback-ready"],
+  "restrictions": [
+    "must-not-create-real-assets-in-standard",
+    "must-not-register-real-products",
+    "must-not-publish-without-cluster-validation",
+    "must-not-use-unversioned-standard"
+  ],
+  "acceptanceCriteria": [
+    "primary calculator is defined",
+    "pillar article is defined",
+    "satellite logic is defined",
+    "internal linking is intentional",
+    "publishing order is declared",
+    "testing and validation gates are declared"
+  ],
+  "migrationNotes": [
+    "Cluster v1.0 establishes the first cluster quality baseline."
+  ],
+  "supersedes": null,
+  "supersededBy": null,
+  "availableVersions": {
+    "1.0": "Initial cluster quality standard."
+  }
+}
