@@ -1,0 +1,27 @@
+{
+    "id":  "preview-validation-plan",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "executionStatus":  "not-run",
+    "validationReference":  "/data/pos/validation/index.json",
+    "plannedValidations":  [
+                               "PAM",
+                               "Blueprints",
+                               "Gold Standards",
+                               "Guide Composition",
+                               "Site Composition",
+                               "Asset Identity",
+                               "Registry",
+                               "Publishing Draft",
+                               "Preview Consistency",
+                               "No Production Impact"
+                           ]
+}

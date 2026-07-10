@@ -1,0 +1,41 @@
+{
+    "id":  "operation-report-create-asset-article-vantagens-e-desvantagens-clt-ou-pj",
+    "reportType":  "create-asset-report",
+    "operationId":  "create-asset",
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "version":  "0.1.0",
+    "status":  "completed-with-warnings",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+    "relationshipType":  "satellite-article",
+    "referenceStatus":  "official-reference",
+    "ctaAnalysis":  {
+                        "ctaBeginning":  "present",
+                        "ctaMiddle":  "present",
+                        "ctaEnd":  "absent",
+                        "ctaComplianceStatus":  "warning",
+                        "ctaGap":  "possible-final-calculator-cta-gap-confirmed",
+                        "inspectionMode":  "read-only",
+                        "actionTaken":  "none"
+                    },
+    "warnings":  [
+                     "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicArticleChanged":  false,
+                             "contentChanged":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "seoChanged":  false,
+                             "urlChanged":  false,
+                             "sitemapChanged":  false,
+                             "runtimeChanged":  false,
+                             "publicationExecuted":  false
+                         }
+}

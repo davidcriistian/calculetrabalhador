@@ -1,0 +1,103 @@
+{
+    "id":  "preview-publication-summary",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "ifPublishedToday":  {
+                             "guidesAppearing":  [
+                                                     "guide:guide-pj"
+                                                 ],
+                             "clustersAppearing":  [
+                                                       "cluster:clt-ou-pj"
+                                                   ],
+                             "categoriesAppearing":  [
+                                                         "pj"
+                                                     ],
+                             "toolsAppearing":  [
+                                                    "calculator:calculadora-clt-ou-pj",
+                                                    "calculator:calculadora-multa-40-fgts"
+                                                ],
+                             "newCards":  [
+                                              "Guide PJ",
+                                              "Cluster CLT ou PJ",
+                                              "Calculadora CLT ou PJ",
+                                              "Artigo pilar CLT ou PJ",
+                                              "4 artigos satelites"
+                                          ],
+                             "newBreadcrumbs":  [
+                                                    {
+                                                        "assetId":  "guide:guide-pj",
+                                                        "trail":  [
+                                                                      "Home",
+                                                                      "Guias",
+                                                                      "PJ"
+                                                                  ],
+                                                        "status":  "preview"
+                                                    },
+                                                    {
+                                                        "assetId":  "cluster:clt-ou-pj",
+                                                        "trail":  [
+                                                                      "Home",
+                                                                      "Guias",
+                                                                      "PJ",
+                                                                      "CLT ou PJ"
+                                                                  ],
+                                                        "status":  "preview"
+                                                    },
+                                                    {
+                                                        "assetId":  "calculator:calculadora-clt-ou-pj",
+                                                        "trail":  [
+                                                                      "Home",
+                                                                      "Guias",
+                                                                      "PJ",
+                                                                      "CLT ou PJ",
+                                                                      "Calculadora CLT ou PJ"
+                                                                  ],
+                                                        "status":  "preview"
+                                                    },
+                                                    {
+                                                        "assetId":  "article:clt-ou-pj",
+                                                        "trail":  [
+                                                                      "Home",
+                                                                      "Guias",
+                                                                      "PJ",
+                                                                      "CLT ou PJ",
+                                                                      "CLT ou PJ"
+                                                                  ],
+                                                        "status":  "preview"
+                                                    },
+                                                    {
+                                                        "assetId":  "article:como-calcular-clt-ou-pj",
+                                                        "trail":  [
+                                                                      "Home",
+                                                                      "Guias",
+                                                                      "PJ",
+                                                                      "CLT ou PJ",
+                                                                      "Como Calcular CLT ou PJ"
+                                                                  ],
+                                                        "status":  "preview"
+                                                    }
+                                                ],
+                             "emptyModules":  [
+                                                  "FAQ",
+                                                  "Glossario",
+                                                  "Downloads",
+                                                  "Produtos",
+                                                  "CTAs"
+                                              ]
+                         },
+    "realChanges":  {
+                        "publicPagesCreated":  false,
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "sitemapChanged":  false,
+                        "urlCreated":  false
+                    }
+}

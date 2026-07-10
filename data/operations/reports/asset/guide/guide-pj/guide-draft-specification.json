@@ -1,0 +1,91 @@
+{
+    "id":  "guide-pj",
+    "assetId":  "guide:guide-pj",
+    "assetType":  "guide",
+    "type":  "guide",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "lifecycle":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "visibility":  "internal",
+    "createdAt":  "2026-07-10",
+    "updatedAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "source":  "Operational Capabilities Phase 5.3.1 - guide asset provisioning",
+    "publicSlug":  "pj",
+    "proposedUrl":  "/guias/pj/",
+    "urlStatus":  "not-created",
+    "primaryDomain":  "pj",
+    "primaryNucleus":  "nucleus:pj",
+    "referenceStatus":  "unavailable",
+    "manualReviewRequired":  true,
+    "blueprint":  {
+                      "type":  "guide",
+                      "reference":  "/data/blueprints/guide/index.json",
+                      "version":  "0.1.0",
+                      "resolvedBy":  "/data/operations/defaults/index.json"
+                  },
+    "goldStandard":  {
+                         "type":  "guide",
+                         "reference":  "/data/gold-standards/guide/index.json",
+                         "version":  "1.0",
+                         "status":  "active-foundation",
+                         "resolvedBy":  "/data/operations/defaults/index.json"
+                     },
+    "compositionReference":  "/data/operations/reports/guide/pj/composition/guide-composition-specification.json",
+    "sections":  [
+                     "hero",
+                     "introduction",
+                     "featuredClusters",
+                     "featuredCalculator",
+                     "featuredArticle",
+                     "satelliteArticles",
+                     "faq",
+                     "downloads",
+                     "glossary",
+                     "products",
+                     "offers",
+                     "ctaSlots",
+                     "footer"
+                 ],
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+                          "primaryArticle":  "article:clt-ou-pj",
+                          "satellites":  [
+                                             "article:como-calcular-clt-ou-pj",
+                                             "article:vantagens-e-desvantagens-clt-ou-pj",
+                                             "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                             "article:clt-ou-pj-vale-a-pena-em-2026"
+                                         ],
+                          "relationshipStatus":  "approved"
+                      },
+    "relationshipEvidence":  [
+                                 "/data/operations/reports/guide/pj/composition/guide-composition-specification.json",
+                                 "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                             ],
+    "operationalBoundaries":  {
+                                  "createsPublicPage":  false,
+                                  "createsHtml":  false,
+                                  "createsCss":  false,
+                                  "createsJavascript":  false,
+                                  "createsUrl":  false,
+                                  "publishes":  false,
+                                  "modifiesHome":  false,
+                                  "modifiesBlog":  false,
+                                  "modifiesCategories":  false,
+                                  "modifiesTools":  false,
+                                  "modifiesSitemap":  false,
+                                  "modifiesRuntime":  false,
+                                  "modifiesArticlesCatalog":  false,
+                                  "modifiesToolsCatalog":  false,
+                                  "feedsRuntime":  false
+                              },
+    "notes":  [
+                  "Internal governed representation of the draft Guide PJ asset.",
+                  "No public guide page, URL, HTML, sitemap entry or runtime behavior is created."
+              ]
+}

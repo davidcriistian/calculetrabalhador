@@ -1,0 +1,21 @@
+{
+    "id":  "site-composition-testing-plan",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "executionStatus":  "not-run",
+    "testingReference":  "/data/pos/testing/index.json",
+    "plannedChecks":  [
+                          "composition-integrity",
+                          "registry-discovery",
+                          "navigation-integrity",
+                          "breadcrumb-integrity",
+                          "cross-guide-isolation",
+                          "duplicate-prevention",
+                          "publication-impact",
+                          "empty-state",
+                          "runtime-safety"
+                      ],
+    "notes":  [
+                  "Plan only; no public tests executed."
+              ]
+}

@@ -1,0 +1,43 @@
+{
+    "id":  "affected-pages",
+    "status":  "draft",
+    "pages":  [
+                  {
+                      "page":  "Home",
+                      "assetResponsible":  "guide:guide-pj",
+                      "impact":  "guide card/module would appear",
+                      "modifiedNow":  false
+                  },
+                  {
+                      "page":  "Guia PJ",
+                      "assetResponsible":  "guide:guide-pj",
+                      "impact":  "new guide page would be created in future publishing",
+                      "modifiedNow":  false
+                  },
+                  {
+                      "page":  "Categoria PJ",
+                      "assetResponsible":  "cluster:clt-ou-pj",
+                      "impact":  "category would include cluster and article cards",
+                      "modifiedNow":  false
+                  },
+                  {
+                      "page":  "Calculadora CLT ou PJ",
+                      "assetResponsible":  "calculator:calculadora-clt-ou-pj",
+                      "impact":  "breadcrumbs, navigation and related links would be updated",
+                      "modifiedNow":  false
+                  },
+                  {
+                      "page":  "Artigo Pilar CLT ou PJ",
+                      "assetResponsible":  "article:clt-ou-pj",
+                      "impact":  "breadcrumbs and satellite navigation would be updated",
+                      "modifiedNow":  false
+                  },
+                  {
+                      "page":  "Artigos Satelites CLT ou PJ",
+                      "assetResponsible":  "cluster:clt-ou-pj",
+                      "impact":  "breadcrumbs and calculator links would be represented",
+                      "modifiedNow":  false
+                  }
+              ],
+    "modifiedNow":  false
+}

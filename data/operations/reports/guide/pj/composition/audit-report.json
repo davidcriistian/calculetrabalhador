@@ -1,0 +1,72 @@
+{
+    "id":  "audit-report-guide-pj-composition",
+    "assetId":  "guide:guide-pj",
+    "status":  "passed-with-warnings",
+    "result":  "COMPOSITION PASSED WITH WARNINGS",
+    "checks":  [
+                   {
+                       "id":  "guide-discovered-approved-cluster",
+                       "status":  "pass",
+                       "evidence":  "cluster:clt-ou-pj"
+                   },
+                   {
+                       "id":  "primary-calculator-located",
+                       "status":  "pass",
+                       "evidence":  "calculator:calculadora-clt-ou-pj"
+                   },
+                   {
+                       "id":  "pillar-article-located",
+                       "status":  "pass",
+                       "evidence":  "article:clt-ou-pj"
+                   },
+                   {
+                       "id":  "four-satellites-located",
+                       "status":  "pass",
+                       "evidence":  [
+                                        "article:como-calcular-clt-ou-pj",
+                                        "article:vantagens-e-desvantagens-clt-ou-pj",
+                                        "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                        "article:clt-ou-pj-vale-a-pena-em-2026"
+                                    ]
+                   },
+                   {
+                       "id":  "no-extra-candidates-included",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "cross-nucleus-isolation",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "empty-commercial-state-supported",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "gaps-recorded-without-blocking",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "manual-list-not-source-of-truth",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "Final calculator CTA absent or not confirmed.",
+                     "Final calculator CTA absent or not confirmed.",
+                     "Reference System unavailable; manual review required.",
+                     "FAQ not configured for guide composition.",
+                     "Glossary not configured for guide composition.",
+                     "Downloads not configured for guide composition.",
+                     "Products, offers and commercial CTAs are not configured.",
+                     "Primary calculator is approved in the relationship map but does not have an individual by-type registry entry yet.",
+                     "No explicit featured, priority, displayOrder or section configuration was found; proposed order requires manual approval."
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "Guide PJ composition is available as an internal draft configuration only."
+}

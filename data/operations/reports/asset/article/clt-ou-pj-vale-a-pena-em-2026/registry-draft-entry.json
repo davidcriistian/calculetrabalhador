@@ -1,0 +1,17 @@
+{
+    "id":  "clt-ou-pj-vale-a-pena-em-2026",
+    "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+    "type":  "article",
+    "slug":  "clt-ou-pj-vale-a-pena-em-2026",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "reference":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json",
+    "notes":  [
+                  "Internal registry draft only.",
+                  "Does not duplicate article content and does not feed runtime."
+              ]
+}

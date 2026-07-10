@@ -1,0 +1,43 @@
+{
+    "id":  "preview-rollback-plan",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "rollbackType":  "internal-preview-artifacts",
+    "productionRollbackRequired":  false,
+    "restoreScope":  {
+                         "internalFilesCreated":  [
+                                                      "preview-model.json",
+                                                      "preview-home.json",
+                                                      "preview-guides.json",
+                                                      "preview-guide-pj.json",
+                                                      "preview-cluster-clt-ou-pj.json",
+                                                      "preview-tools.json",
+                                                      "preview-categories.json",
+                                                      "preview-breadcrumbs.json",
+                                                      "preview-navigation.json",
+                                                      "preview-publication-summary.json",
+                                                      "preview-gap-report.json",
+                                                      "preview-testing-plan.json",
+                                                      "preview-validation-plan.json",
+                                                      "preview-rollback-plan.json",
+                                                      "operation-report.json",
+                                                      "audit-report.json"
+                                                  ],
+                         "publicFiles":  [
+
+                                         ]
+                     },
+    "rollbackSteps":  [
+                          "Remove internal preview artifacts.",
+                          "Run JSON validation.",
+                          "Confirm no public pages, HTML, runtime, URLs or sitemap changed."
+                      ]
+}

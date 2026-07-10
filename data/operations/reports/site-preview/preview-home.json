@@ -1,0 +1,57 @@
+{
+    "id":  "preview-home",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "sections":  {
+                     "guidesArea":  {
+                                        "cards":  [
+                                                      {
+                                                          "assetId":  "future-guide-clt",
+                                                          "label":  "CLT",
+                                                          "status":  "future",
+                                                          "visibility":  "internal",
+                                                          "featured":  false,
+                                                          "displayOrder":  1,
+                                                          "publicationStatus":  "not-configured"
+                                                      },
+                                                      {
+                                                          "assetId":  "future-guide-mei",
+                                                          "label":  "MEI",
+                                                          "status":  "future",
+                                                          "visibility":  "internal",
+                                                          "featured":  false,
+                                                          "displayOrder":  2,
+                                                          "publicationStatus":  "not-configured"
+                                                      },
+                                                      {
+                                                          "assetId":  "guide:guide-pj",
+                                                          "label":  "PJ",
+                                                          "status":  "draft",
+                                                          "visibility":  "internal",
+                                                          "featured":  false,
+                                                          "displayOrder":  3,
+                                                          "publicationStatus":  "draft",
+                                                          "source":  "/data/registry/by-type/guide-guide-pj.json"
+                                                      },
+                                                      {
+                                                          "assetId":  "future-guide-inss",
+                                                          "label":  "INSS",
+                                                          "status":  "future",
+                                                          "visibility":  "internal",
+                                                          "featured":  false,
+                                                          "displayOrder":  4,
+                                                          "publicationStatus":  "not-configured"
+                                                      }
+                                                  ]
+                                    }
+                 },
+    "modifiesHome":  false
+}

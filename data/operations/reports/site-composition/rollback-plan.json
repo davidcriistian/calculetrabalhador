@@ -1,0 +1,34 @@
+{
+    "id":  "site-composition-rollback-plan",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "rollbackType":  "internal-site-composition",
+    "productionRollbackRequired":  false,
+    "restoreScope":  {
+                         "internalFilesCreated":  [
+                                                      "site-composition-report.json",
+                                                      "site-navigation-map.json",
+                                                      "site-home-composition.json",
+                                                      "site-guides-composition.json",
+                                                      "site-categories-composition.json",
+                                                      "site-tools-composition.json",
+                                                      "site-breadcrumb-map.json",
+                                                      "site-internal-links.json",
+                                                      "site-publication-impact.json",
+                                                      "site-gap-report.json",
+                                                      "testing-plan.json",
+                                                      "validation-plan.json",
+                                                      "rollback-plan.json",
+                                                      "operation-report.json",
+                                                      "audit-report.json"
+                                                  ],
+                         "publicFiles":  [
+
+                                         ]
+                     },
+    "rollbackSteps":  [
+                          "Remove internal site composition artifacts.",
+                          "Run JSON validation.",
+                          "Confirm public pages, catalogs, sitemap, URLs and runtime remain unchanged."
+                      ]
+}

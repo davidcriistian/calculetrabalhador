@@ -1,0 +1,59 @@
+{
+    "id":  "execution-risk-report",
+    "status":  "passed-with-warnings",
+    "risks":  [
+                  {
+                      "id":  "orphan-asset",
+                      "assetId":  "calculator:calculadora-multa-40-fgts",
+                      "risk":  "asset without guide/cluster assignment",
+                      "severity":  "medium",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "missing-reference-guide",
+                      "assetId":  "guide:guide-pj",
+                      "risk":  "guide reference unavailable",
+                      "severity":  "low",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "missing-reference-calculator",
+                      "assetId":  "calculator:calculadora-clt-ou-pj",
+                      "risk":  "calculator reference unavailable",
+                      "severity":  "low",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "missing-reference-article",
+                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                      "risk":  "article reference unavailable",
+                      "severity":  "low",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "missing-cta",
+                      "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                      "risk":  "final calculator CTA gap",
+                      "severity":  "low",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "missing-cta-quanto",
+                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                      "risk":  "final calculator CTA gap",
+                      "severity":  "low",
+                      "autoResolved":  false
+                  },
+                  {
+                      "id":  "cross-guide-leak",
+                      "assetId":  "guide:guide-pj",
+                      "risk":  "future assets could leak across guide if filters are not enforced",
+                      "severity":  "medium",
+                      "autoResolved":  false
+                  }
+              ],
+    "autoResolved":  false,
+    "blockingIssues":  [
+
+                       ]
+}

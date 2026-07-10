@@ -1,0 +1,31 @@
+{
+    "id":  "relationship-map-como-calcular-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "approvalStatus":  "approved",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "article:como-calcular-clt-ou-pj",
+    "assetType":  "article",
+    "relationshipType":  "satellite-article",
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryGuide":  "guide:guide-pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+                          "primaryArticle":  "article:clt-ou-pj"
+                      },
+    "relationshipEvidence":  [
+                                 "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                             ],
+    "notDerived":  [
+                       "products",
+                       "offers",
+                       "commercialCtas",
+                       "downloads",
+                       "campaigns"
+                   ]
+}

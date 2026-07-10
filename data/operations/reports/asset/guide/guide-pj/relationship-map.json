@@ -1,0 +1,37 @@
+{
+    "id":  "relationship-map-guide-guide-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "approvalStatus":  "approved",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "guide:guide-pj",
+    "assetType":  "guide",
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+                          "primaryArticle":  "article:clt-ou-pj",
+                          "satellites":  [
+                                             "article:como-calcular-clt-ou-pj",
+                                             "article:vantagens-e-desvantagens-clt-ou-pj",
+                                             "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                             "article:clt-ou-pj-vale-a-pena-em-2026"
+                                         ],
+                          "relationshipStatus":  "approved"
+                      },
+    "relationshipEvidence":  [
+                                 "/data/operations/reports/guide/pj/composition/guide-composition-specification.json",
+                                 "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                             ],
+    "notCreated":  [
+                       "public-page",
+                       "url",
+                       "html",
+                       "sitemap-entry",
+                       "runtime-consumption"
+                   ]
+}

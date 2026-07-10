@@ -1,0 +1,14 @@
+{
+    "id":  "runtime-mapping-validation-plan",
+    "status":  "draft",
+    "executionStatus":  "not-run",
+    "validationReference":  "/data/pos/validation/index.json",
+    "plannedValidations":  [
+                               "Runtime Mapping Integrity",
+                               "Registry Integrity",
+                               "Preview Consistency",
+                               "Publishing Readiness",
+                               "Blueprint Consistency",
+                               "No Production Impact"
+                           ]
+}

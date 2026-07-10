@@ -1,0 +1,187 @@
+{
+    "id":  "guide-composition-pj",
+    "assetId":  "guide:guide-pj",
+    "primaryDomain":  "pj",
+    "primaryNucleus":  "nucleus:pj",
+    "status":  "draft",
+    "lifecycle":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "visibility":  "internal",
+    "createdAt":  "2026-07-10",
+    "updatedAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "goldStandardVersion":  "1.0",
+    "blueprintVersion":  "0.1.0",
+    "blueprintReference":  "/data/blueprints/guide/index.json",
+    "goldStandardReference":  "/data/gold-standards/guide/index.json",
+    "compositionSource":  "registry",
+    "compositionMode":  "configuration-driven",
+    "manualAssetList":  false,
+    "publicSlug":  "pj",
+    "proposedUrl":  "/guias/pj/",
+    "urlStatus":  "not-created",
+    "commercialStatus":  "not-configured",
+    "eligibleProducts":  [
+
+                         ],
+    "eligibleOffers":  [
+
+                       ],
+    "eligibleCTAs":  [
+
+                     ],
+    "discoveryFilters":  {
+                             "acceptedPrimaryGuide":  "guide:guide-pj",
+                             "acceptedPrimaryNucleus":  "nucleus:pj",
+                             "relationshipStatus":  "approved",
+                             "runtimeStatus":  "not-consumed",
+                             "publishingStatus":  "draft",
+                             "includeCandidates":  false,
+                             "includeOtherNuclei":  false
+                         },
+    "sections":  [
+                     "hero",
+                     "introduction",
+                     "featuredClusters",
+                     "featuredCalculators",
+                     "featuredArticles",
+                     "allClusters",
+                     "allCalculators",
+                     "allArticles",
+                     "faq",
+                     "glossary",
+                     "downloads",
+                     "relatedGuides",
+                     "offerSlots",
+                     "ctaSlots",
+                     "disclaimer",
+                     "footer"
+                 ],
+    "composedAssets":  {
+                           "nucleus":  "nucleus:pj",
+                           "guide":  "guide:guide-pj",
+                           "clusters":  [
+                                            {
+                                                "assetId":  "cluster:clt-ou-pj",
+                                                "publicSlug":  "clt-ou-pj",
+                                                "relationshipStatus":  "approved",
+                                                "runtimeStatus":  "not-consumed",
+                                                "publishingStatus":  "draft",
+                                                "source":  "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                                            }
+                                        ],
+                           "featuredCalculators":  [
+                                                       {
+                                                           "assetId":  "calculator:calculadora-clt-ou-pj",
+                                                           "publicSlug":  "calculadora-clt-ou-pj",
+                                                           "relationshipType":  "primary-calculator",
+                                                           "relationshipStatus":  "approved",
+                                                           "runtimeStatus":  "not-consumed",
+                                                           "publishingStatus":  "draft",
+                                                           "registryGranularity":  "relationship-map-only",
+                                                           "source":  "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                                                       }
+                                                   ],
+                           "featuredArticles":  [
+                                                    {
+                                                        "assetId":  "article:clt-ou-pj",
+                                                        "publicSlug":  "clt-ou-pj",
+                                                        "relationshipType":  "pillar-article",
+                                                        "relationshipStatus":  "approved",
+                                                        "runtimeStatus":  "not-consumed",
+                                                        "publishingStatus":  "draft",
+                                                        "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                                    }
+                                                ],
+                           "satelliteArticles":  [
+                                                     {
+                                                         "assetId":  "article:como-calcular-clt-ou-pj",
+                                                         "publicSlug":  "como-calcular-clt-ou-pj",
+                                                         "relationshipType":  "satellite-article",
+                                                         "relationshipStatus":  "approved",
+                                                         "runtimeStatus":  "not-consumed",
+                                                         "publishingStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json",
+                                                         "ctaComplianceStatus":  "pass",
+                                                         "referenceStatus":  "official-reference"
+                                                     },
+                                                     {
+                                                         "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                         "publicSlug":  "vantagens-e-desvantagens-clt-ou-pj",
+                                                         "relationshipType":  "satellite-article",
+                                                         "relationshipStatus":  "approved",
+                                                         "runtimeStatus":  "not-consumed",
+                                                         "publishingStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json",
+                                                         "ctaComplianceStatus":  "warning",
+                                                         "referenceStatus":  "official-reference",
+                                                         "gaps":  [
+                                                                      "possible-final-calculator-cta-gap-confirmed"
+                                                                  ]
+                                                     },
+                                                     {
+                                                         "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                         "publicSlug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                         "relationshipType":  "satellite-article",
+                                                         "relationshipStatus":  "approved",
+                                                         "runtimeStatus":  "not-consumed",
+                                                         "publishingStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json",
+                                                         "ctaComplianceStatus":  "warning",
+                                                         "referenceStatus":  "unavailable",
+                                                         "manualReviewRequired":  true,
+                                                         "gaps":  [
+                                                                      "possible-final-calculator-cta-gap-confirmed",
+                                                                      "official-reference-unavailable"
+                                                                  ]
+                                                     },
+                                                     {
+                                                         "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                         "publicSlug":  "clt-ou-pj-vale-a-pena-em-2026",
+                                                         "relationshipType":  "satellite-article",
+                                                         "relationshipStatus":  "approved",
+                                                         "runtimeStatus":  "not-consumed",
+                                                         "publishingStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json",
+                                                         "ctaComplianceStatus":  "pass",
+                                                         "referenceStatus":  "official-reference"
+                                                     }
+                                                 ],
+                           "products":  [
+
+                                        ],
+                           "offers":  [
+
+                                      ],
+                           "ctas":  [
+
+                                    ],
+                           "faq":  [
+
+                                   ],
+                           "glossary":  [
+
+                                        ],
+                           "downloads":  [
+
+                                         ],
+                           "relatedGuides":  [
+
+                                             ]
+                       },
+    "operationalBoundaries":  {
+                                  "createsPublicPage":  false,
+                                  "createsHtml":  false,
+                                  "modifiesCss":  false,
+                                  "modifiesJavascript":  false,
+                                  "modifiesHome":  false,
+                                  "modifiesBlog":  false,
+                                  "modifiesToolsPage":  false,
+                                  "modifiesCatalogs":  false,
+                                  "modifiesSitemap":  false,
+                                  "createsUrl":  false,
+                                  "publishes":  false,
+                                  "feedsRuntime":  false
+                              }
+}

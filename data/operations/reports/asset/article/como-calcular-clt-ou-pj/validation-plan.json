@@ -1,0 +1,29 @@
+{
+    "id":  "validation-plan-como-calcular-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "assetId":  "article:como-calcular-clt-ou-pj",
+    "validationReference":  "/data/pos/validation/index.json",
+    "executionStatus":  "not-run",
+    "plannedValidations":  [
+                               "Asset Identity Policy compliance",
+                               "PAM compliance",
+                               "Article Blueprint compliance",
+                               "Article Gold Standard compliance",
+                               "relationship integrity",
+                               "cluster membership",
+                               "pillar linkage",
+                               "calculator linkage",
+                               "CTA compliance",
+                               "Registry consistency",
+                               "Publishing draft-only",
+                               "no-production-impact"
+                           ],
+    "publicationBlockersUntilResolved":  [
+                                             "testing-not-run",
+                                             "validation-not-run",
+                                             "publishing-approval-not-requested"
+                                         ]
+}

@@ -1,0 +1,32 @@
+{
+    "id":  "affected-search",
+    "status":  "draft",
+    "search":  [
+                   {
+                       "assetId":  "guide:guide-pj",
+                       "indexableIfPublished":  true,
+                       "indexedNow":  false
+                   },
+                   {
+                       "assetId":  "cluster:clt-ou-pj",
+                       "indexableIfPublished":  true,
+                       "indexedNow":  false
+                   },
+                   {
+                       "assetId":  "calculator:calculadora-clt-ou-pj",
+                       "indexableIfPublished":  true,
+                       "indexedNow":  false
+                   },
+                   {
+                       "assetId":  "article:clt-ou-pj",
+                       "indexableIfPublished":  true,
+                       "indexedNow":  false
+                   },
+                   {
+                       "assetId":  "article:como-calcular-clt-ou-pj",
+                       "indexableIfPublished":  true,
+                       "indexedNow":  false
+                   }
+               ],
+    "indexingExecuted":  false
+}

@@ -1,0 +1,76 @@
+{
+    "id":  "preview-categories",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "categories":  [
+                       {
+                           "id":  "pj",
+                           "label":  "PJ",
+                           "status":  "draft",
+                           "cluster":  {
+                                           "assetId":  "cluster:clt-ou-pj",
+                                           "label":  "CLT ou PJ",
+                                           "status":  "draft",
+                                           "relationshipStatus":  "approved",
+                                           "publicationStatus":  "draft",
+                                           "source":  "/data/registry/by-cluster/clt-ou-pj.json"
+                                       },
+                           "pillarArticle":  {
+                                                 "assetId":  "article:clt-ou-pj",
+                                                 "label":  "CLT ou PJ",
+                                                 "role":  "pillar-article",
+                                                 "status":  "draft",
+                                                 "publicationStatus":  "draft",
+                                                 "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                             },
+                           "satelliteArticles":  [
+                                                     {
+                                                         "assetId":  "article:como-calcular-clt-ou-pj",
+                                                         "label":  "Como Calcular CLT ou PJ",
+                                                         "role":  "satellite-article",
+                                                         "status":  "draft",
+                                                         "publicationStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json"
+                                                     },
+                                                     {
+                                                         "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                         "label":  "Vantagens e Desvantagens CLT ou PJ",
+                                                         "role":  "satellite-article",
+                                                         "status":  "draft",
+                                                         "publicationStatus":  "draft",
+                                                         "gap":  "final-calculator-cta-gap",
+                                                         "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json"
+                                                     },
+                                                     {
+                                                         "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                         "label":  "Quanto Preciso Ganhar Como PJ",
+                                                         "role":  "satellite-article",
+                                                         "status":  "draft",
+                                                         "publicationStatus":  "draft",
+                                                         "gaps":  [
+                                                                      "final-calculator-cta-gap",
+                                                                      "official-reference-unavailable"
+                                                                  ],
+                                                         "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json"
+                                                     },
+                                                     {
+                                                         "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                         "label":  "CLT ou PJ Vale a Pena em 2026",
+                                                         "role":  "satellite-article",
+                                                         "status":  "draft",
+                                                         "publicationStatus":  "draft",
+                                                         "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json"
+                                                     }
+                                                 ]
+                       }
+                   ],
+    "modifiesCategories":  false
+}

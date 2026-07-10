@@ -1,0 +1,52 @@
+{
+    "id":  "audit-report-runtime-mapping",
+    "status":  "passed-with-warnings",
+    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
+    "checks":  [
+                   {
+                       "id":  "impacts-derived-from-registry",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-html-decision-source",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-files-altered",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "affected-pages-identified",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "affected-components-identified",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "execution-order-complete",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "rollback-impact-complete",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "orphan-asset",
+                     "missing-reference-guide",
+                     "missing-reference-calculator",
+                     "missing-reference-article",
+                     "missing-cta",
+                     "missing-cta-quanto",
+                     "cross-guide-leak"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "Runtime Mapping is available as an internal execution plan only."
+}

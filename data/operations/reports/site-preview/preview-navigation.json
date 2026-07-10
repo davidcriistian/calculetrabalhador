@@ -1,0 +1,51 @@
+{
+    "id":  "preview-navigation",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "graph":  [
+                  {
+                      "from":  "guide:guide-pj",
+                      "to":  "cluster:clt-ou-pj",
+                      "relationship":  "guide-to-cluster"
+                  },
+                  {
+                      "from":  "cluster:clt-ou-pj",
+                      "to":  "calculator:calculadora-clt-ou-pj",
+                      "relationship":  "cluster-to-calculator"
+                  },
+                  {
+                      "from":  "cluster:clt-ou-pj",
+                      "to":  "article:clt-ou-pj",
+                      "relationship":  "cluster-to-pillar"
+                  },
+                  {
+                      "from":  "article:clt-ou-pj",
+                      "to":  [
+                                 "article:como-calcular-clt-ou-pj",
+                                 "article:vantagens-e-desvantagens-clt-ou-pj",
+                                 "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                 "article:clt-ou-pj-vale-a-pena-em-2026"
+                             ],
+                      "relationship":  "pillar-to-satellites"
+                  },
+                  {
+                      "from":  [
+                                   "article:como-calcular-clt-ou-pj",
+                                   "article:vantagens-e-desvantagens-clt-ou-pj",
+                                   "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                   "article:clt-ou-pj-vale-a-pena-em-2026"
+                               ],
+                      "to":  "calculator:calculadora-clt-ou-pj",
+                      "relationship":  "satellites-to-calculator"
+                  }
+              ],
+    "modifiesNavigation":  false
+}

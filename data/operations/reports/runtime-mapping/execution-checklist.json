@@ -1,0 +1,124 @@
+{
+    "id":  "execution-checklist",
+    "status":  "draft",
+    "checklist":  [
+                      {
+                          "step":  1,
+                          "name":  "Registry",
+                          "status":  "planned",
+                          "gate":  "registry-integrity",
+                          "preconditions":  [
+
+                                            ],
+                          "postconditions":  [
+                                                 "registry-integrity"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  2,
+                          "name":  "Runtime Mapping",
+                          "status":  "completed-internal-draft",
+                          "gate":  "runtime-impact-reviewed",
+                          "preconditions":  [
+                                                "Registry",
+                                                "Preview Model"
+                                            ],
+                          "postconditions":  [
+                                                 "runtime-impact-reviewed"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  3,
+                          "name":  "Testing",
+                          "status":  "planned",
+                          "gate":  "testing-pass",
+                          "preconditions":  [
+                                                "Runtime Mapping"
+                                            ],
+                          "postconditions":  [
+                                                 "testing-pass"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  4,
+                          "name":  "Validation",
+                          "status":  "planned",
+                          "gate":  "validation-pass",
+                          "preconditions":  [
+                                                "Testing"
+                                            ],
+                          "postconditions":  [
+                                                 "validation-pass"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  5,
+                          "name":  "Preview Approval",
+                          "status":  "planned",
+                          "gate":  "manual-preview-approval",
+                          "preconditions":  [
+                                                "Validation"
+                                            ],
+                          "postconditions":  [
+                                                 "manual-preview-approval"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  6,
+                          "name":  "Publishing",
+                          "status":  "planned",
+                          "gate":  "publishing-approval",
+                          "preconditions":  [
+                                                "Preview Approval"
+                                            ],
+                          "postconditions":  [
+                                                 "publishing-approval"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  7,
+                          "name":  "Sitemap",
+                          "status":  "planned",
+                          "gate":  "sitemap-check",
+                          "preconditions":  [
+                                                "Publishing"
+                                            ],
+                          "postconditions":  [
+                                                 "sitemap-check"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  8,
+                          "name":  "Indexing",
+                          "status":  "planned",
+                          "gate":  "indexing-check",
+                          "preconditions":  [
+                                                "Sitemap"
+                                            ],
+                          "postconditions":  [
+                                                 "indexing-check"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      },
+                      {
+                          "step":  9,
+                          "name":  "Final Validation",
+                          "status":  "planned",
+                          "gate":  "final-validation-pass",
+                          "preconditions":  [
+                                                "Indexing"
+                                            ],
+                          "postconditions":  [
+                                                 "final-validation-pass"
+                                             ],
+                          "rollback":  "use rollback-impact.json if this or later step changes production"
+                      }
+                  ]
+}

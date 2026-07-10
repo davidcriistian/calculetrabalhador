@@ -1,0 +1,43 @@
+{
+    "id":  "operation-report-create-asset-calculator-calculadora-clt-ou-pj",
+    "reportType":  "create-asset-report",
+    "operationId":  "create-asset",
+    "version":  "0.1.0",
+    "status":  "completed-with-warnings",
+    "result":  "CALCULATOR ASSET PROVISIONED WITH WARNINGS",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "relationshipType":  "primary-calculator",
+    "referenceStatus":  "unavailable",
+    "warnings":  [
+                     "calculator-not-official-reference"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "outputs":  {
+                    "calculatorSpecification":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/calculator-draft-specification.json",
+                    "relationshipMap":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/relationship-map.json",
+                    "registryEntry":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/registry-draft-entry.json",
+                    "publishingEntry":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/publishing-draft-entry.json",
+                    "testingPlan":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/testing-plan.json",
+                    "validationPlan":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/validation-plan.json",
+                    "rollbackPlan":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/rollback-plan.json",
+                    "auditReport":  "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/audit-report.json"
+                },
+    "productionImpact":  {
+                             "publicCalculatorChanged":  false,
+                             "calculationChanged":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "runtimeChanged":  false,
+                             "seoChanged":  false,
+                             "urlChanged":  false,
+                             "sitemapChanged":  false,
+                             "toolsCatalogChanged":  false,
+                             "publicationExecuted":  false
+                         }
+}

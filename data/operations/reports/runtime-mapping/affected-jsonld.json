@@ -1,0 +1,46 @@
+{
+    "id":  "affected-jsonld",
+    "status":  "draft",
+    "jsonld":  [
+                   {
+                       "page":  "Guia PJ",
+                       "requiredSchemas":  [
+                                               "CollectionPage",
+                                               "BreadcrumbList",
+                                               "FAQPage"
+                                           ],
+                       "assetId":  "guide:guide-pj",
+                       "generatedNow":  false
+                   },
+                   {
+                       "page":  "Cluster CLT ou PJ",
+                       "requiredSchemas":  [
+                                               "CollectionPage",
+                                               "BreadcrumbList"
+                                           ],
+                       "assetId":  "cluster:clt-ou-pj",
+                       "generatedNow":  false
+                   },
+                   {
+                       "page":  "Calculadora CLT ou PJ",
+                       "requiredSchemas":  [
+                                               "SoftwareApplication",
+                                               "FAQPage",
+                                               "BreadcrumbList"
+                                           ],
+                       "assetId":  "calculator:calculadora-clt-ou-pj",
+                       "generatedNow":  false
+                   },
+                   {
+                       "page":  "Artigo Pilar e Satelites",
+                       "requiredSchemas":  [
+                                               "Article",
+                                               "FAQPage",
+                                               "BreadcrumbList"
+                                           ],
+                       "assetId":  "cluster:clt-ou-pj",
+                       "generatedNow":  false
+                   }
+               ],
+    "generatedNow":  false
+}

@@ -1,0 +1,26 @@
+{
+    "id":  "validation-plan-calculator-calculadora-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "validationReference":  "/data/pos/validation/index.json",
+    "executionStatus":  "not-run",
+    "plannedValidations":  [
+                               "Asset Identity Policy compliance",
+                               "PAM compliance",
+                               "Calculator Blueprint compliance",
+                               "Calculator Gold Standard compliance",
+                               "approved relationship integrity",
+                               "primary-calculator uniqueness",
+                               "Registry consistency",
+                               "Publishing draft-only",
+                               "no-production-impact"
+                           ],
+    "publicationBlockersUntilResolved":  [
+                                             "testing-not-run",
+                                             "validation-not-run",
+                                             "publishing-approval-not-requested"
+                                         ]
+}

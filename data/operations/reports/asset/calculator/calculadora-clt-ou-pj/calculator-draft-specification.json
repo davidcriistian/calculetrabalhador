@@ -1,0 +1,82 @@
+{
+    "id":  "calculadora-clt-ou-pj",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "assetType":  "calculator",
+    "type":  "calculator",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "lifecycle":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "visibility":  "internal",
+    "createdAt":  "2026-07-10",
+    "updatedAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "source":  "Operational Capabilities Phase 5.2.1 - create-asset primary calculator",
+    "displayName":  "Calculadora CLT ou PJ",
+    "publicSlug":  "calculadora-clt-ou-pj",
+    "publicUrl":  "https://calculetrabalhador.com.br/calculadora-clt-ou-pj/",
+    "relationshipType":  "primary-calculator",
+    "referenceStatus":  "unavailable",
+    "manualReviewRequired":  true,
+    "warning":  "calculator-not-official-reference",
+    "blueprint":  {
+                      "type":  "calculator",
+                      "reference":  "/data/blueprints/calculator/index.json",
+                      "version":  "0.2.0",
+                      "resolvedBy":  "/data/operations/defaults/index.json"
+                  },
+    "goldStandard":  {
+                         "type":  "calculator",
+                         "reference":  "/data/gold-standards/calculator/index.json",
+                         "version":  "1.0",
+                         "status":  "active-foundation",
+                         "resolvedBy":  "/data/operations/defaults/index.json"
+                     },
+    "sourceCatalogSnapshot":  {
+                                  "source":  "/data/tools.json",
+                                  "id":  "calculadora-clt-ou-pj",
+                                  "slug":  "/calculadora-clt-ou-pj/",
+                                  "title":  "Calculadora CLT ou PJ",
+                                  "published":  true,
+                                  "updatedAt":  "2026-06-07"
+                              },
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryGuide":  "guide:guide-pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "relatedPillarArticle":  "article:clt-ou-pj",
+                          "relatedSatelliteArticles":  [
+                                                           "article:como-calcular-clt-ou-pj",
+                                                           "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                           "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                           "article:clt-ou-pj-vale-a-pena-em-2026"
+                                                       ]
+                      },
+    "relationshipEvidence":  [
+                                 "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                             ],
+    "operationalBoundaries":  {
+                                  "createsNewCalculator":  false,
+                                  "modifiesPublicCalculator":  false,
+                                  "modifiesCalculation":  false,
+                                  "modifiesHtml":  false,
+                                  "modifiesCss":  false,
+                                  "modifiesJavascript":  false,
+                                  "modifiesRuntime":  false,
+                                  "modifiesSeo":  false,
+                                  "modifiesUrls":  false,
+                                  "modifiesSitemap":  false,
+                                  "modifiesToolsCatalog":  false,
+                                  "publishes":  false,
+                                  "feedsRuntime":  false
+                              },
+    "notes":  [
+                  "Internal governed representation of an existing public calculator.",
+                  "No calculator HTML, runtime, calculation logic, SEO, URL or tools catalog is modified.",
+                  "Draft is allowed without official reference because Calculator Gold Standard v1.0 is available."
+              ]
+}

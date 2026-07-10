@@ -1,0 +1,40 @@
+{
+    "id":  "rollback-plan-calculator-calculadora-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "rollbackType":  "internal-asset-provisioning",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "productionRollbackRequired":  false,
+    "restoreScope":  {
+                         "internalFilesCreated":  [
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/calculator-draft-specification.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/relationship-map.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/registry-draft-entry.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/publishing-draft-entry.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/testing-plan.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/validation-plan.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/rollback-plan.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/operation-report.json",
+                                                      "/data/operations/reports/asset/calculator/calculadora-clt-ou-pj/audit-report.json",
+                                                      "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json",
+                                                      "/data/publishing/registry/calculator-calculadora-clt-ou-pj-draft.json"
+                                                  ],
+                         "internalFilesModified":  [
+                                                       "/data/registry/by-type/index.json",
+                                                       "/data/publishing/registry/index.json"
+                                                   ],
+                         "productionFiles":  [
+
+                                             ]
+                     },
+    "rollbackSteps":  [
+                          "Remove internal calculator registry draft entry.",
+                          "Remove internal calculator publishing draft entry.",
+                          "Remove internal calculator provisioning reports.",
+                          "Remove references added to internal indexes.",
+                          "Run JSON validation.",
+                          "Confirm public calculator, calculation logic, runtime, SEO, URL and sitemap are unchanged."
+                      ]
+}

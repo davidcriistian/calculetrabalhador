@@ -1,0 +1,28 @@
+{
+    "id":  "testing-plan-como-calcular-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "assetId":  "article:como-calcular-clt-ou-pj",
+    "testingReference":  "/data/pos/testing/index.json",
+    "executionStatus":  "not-run",
+    "plannedChecks":  [
+                          "editorial-structure",
+                          "heading-hierarchy",
+                          "internal-links",
+                          "calculator-cta",
+                          "canonical",
+                          "jsonld",
+                          "breadcrumb",
+                          "layout-regression",
+                          "responsive",
+                          "accessibility",
+                          "reference-integrity",
+                          "no-runtime-consumption"
+                      ],
+    "notes":  [
+                  "Plan generated only.",
+                  "No production tests are executed by this provisioning operation."
+              ]
+}

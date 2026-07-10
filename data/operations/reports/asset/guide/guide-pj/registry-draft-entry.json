@@ -1,0 +1,17 @@
+{
+    "id":  "guide-pj",
+    "assetId":  "guide:guide-pj",
+    "type":  "guide",
+    "slug":  "pj",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "reference":  "/data/registry/by-type/guide-guide-pj.json",
+    "notes":  [
+                  "Internal registry draft only.",
+                  "Does not create a public guide page and does not feed runtime."
+              ]
+}

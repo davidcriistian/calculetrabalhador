@@ -1,0 +1,129 @@
+{
+    "id":  "site-guides-composition",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "modifiesGuides":  false,
+    "guides":  [
+                   {
+                       "guide":  {
+                                     "assetId":  "guide:guide-pj",
+                                     "nucleus":  "nucleus:pj",
+                                     "domain":  "pj",
+                                     "publicSlug":  "pj",
+                                     "proposedUrl":  "/guias/pj/",
+                                     "status":  "draft",
+                                     "lifecycle":  "draft",
+                                     "runtimeStatus":  "not-consumed",
+                                     "publishingStatus":  "draft",
+                                     "guideExists":  true,
+                                     "guidePublished":  false,
+                                     "guideDraft":  true,
+                                     "source":  "/data/operations/reports/guide/pj/composition/guide-composition-specification.json"
+                                 },
+                       "clusters":  [
+                                        {
+                                            "assetId":  "cluster:clt-ou-pj",
+                                            "slug":  "clt-ou-pj",
+                                            "status":  "draft",
+                                            "relationshipStatus":  "approved",
+                                            "runtimeStatus":  "not-consumed",
+                                            "publishingStatus":  "draft",
+                                            "source":  "/data/registry/by-cluster/clt-ou-pj.json"
+                                        }
+                                    ],
+                       "calculators":  [
+                                           {
+                                               "assetId":  "calculator:calculadora-clt-ou-pj",
+                                               "slug":  "calculadora-clt-ou-pj",
+                                               "guide":  "guide:guide-pj",
+                                               "cluster":  "cluster:clt-ou-pj",
+                                               "category":  "PJ",
+                                               "position":  "primary-calculator",
+                                               "featured":  true,
+                                               "status":  "draft",
+                                               "runtimeStatus":  "not-consumed",
+                                               "publishingStatus":  "draft",
+                                               "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                                           }
+                                       ],
+                       "pillarArticles":  [
+                                              {
+                                                  "assetId":  "article:clt-ou-pj",
+                                                  "slug":  "clt-ou-pj",
+                                                  "role":  "pillar-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                              }
+                                          ],
+                       "satelliteArticles":  [
+                                                 {
+                                                     "assetId":  "article:como-calcular-clt-ou-pj",
+                                                     "slug":  "como-calcular-clt-ou-pj",
+                                                     "role":  "satellite-article",
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json"
+                                                 },
+                                                 {
+                                                     "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                     "slug":  "vantagens-e-desvantagens-clt-ou-pj",
+                                                     "role":  "satellite-article",
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json",
+                                                     "gaps":  [
+                                                                  "final-calculator-cta-gap"
+                                                              ]
+                                                 },
+                                                 {
+                                                     "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                     "slug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                     "role":  "satellite-article",
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json",
+                                                     "gaps":  [
+                                                                  "final-calculator-cta-gap",
+                                                                  "official-reference-unavailable"
+                                                              ]
+                                                 },
+                                                 {
+                                                     "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                     "slug":  "clt-ou-pj-vale-a-pena-em-2026",
+                                                     "role":  "satellite-article",
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json"
+                                                 }
+                                             ],
+                       "faq":  [
+
+                               ],
+                       "downloads":  [
+
+                                     ],
+                       "glossary":  [
+
+                                    ],
+                       "products":  [
+
+                                    ],
+                       "ctas":  [
+
+                                ],
+                       "gaps":  [
+                                    "faq-absent",
+                                    "downloads-absent",
+                                    "glossary-absent",
+                                    "products-absent",
+                                    "ctas-absent"
+                                ]
+                   }
+               ]
+}

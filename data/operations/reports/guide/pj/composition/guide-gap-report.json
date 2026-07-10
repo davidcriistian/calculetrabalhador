@@ -1,0 +1,78 @@
+{
+    "id":  "guide-gap-report-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "passed-with-warnings",
+    "gaps":  [
+                 {
+                     "id":  "article-vantagens-final-cta",
+                     "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                     "type":  "editorial",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Final calculator CTA absent or not confirmed."
+                 },
+                 {
+                     "id":  "article-quanto-final-cta",
+                     "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                     "type":  "editorial",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Final calculator CTA absent or not confirmed."
+                 },
+                 {
+                     "id":  "article-quanto-reference",
+                     "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                     "type":  "reference",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Reference System unavailable; manual review required."
+                 },
+                 {
+                     "id":  "faq-empty",
+                     "type":  "guide-content",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "FAQ not configured for guide composition."
+                 },
+                 {
+                     "id":  "glossary-empty",
+                     "type":  "guide-content",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Glossary not configured for guide composition."
+                 },
+                 {
+                     "id":  "downloads-empty",
+                     "type":  "guide-content",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Downloads not configured for guide composition."
+                 },
+                 {
+                     "id":  "commercial-empty",
+                     "type":  "commercial",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Products, offers and commercial CTAs are not configured."
+                 },
+                 {
+                     "id":  "calculator-registry-entry-missing",
+                     "assetId":  "calculator:calculadora-clt-ou-pj",
+                     "type":  "registry-granularity",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "Primary calculator is approved in the relationship map but does not have an individual by-type registry entry yet."
+                 },
+                 {
+                     "id":  "content-order-manual-required",
+                     "type":  "ordering",
+                     "status":  "warning",
+                     "blocksDraft":  false,
+                     "description":  "No explicit featured, priority, displayOrder or section configuration was found; proposed order requires manual approval."
+                 }
+             ],
+    "blockingIssues":  [
+
+                       ],
+    "draftCompositionAllowed":  true
+}

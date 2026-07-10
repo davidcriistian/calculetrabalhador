@@ -1,0 +1,17 @@
+{
+    "id":  "como-calcular-clt-ou-pj",
+    "assetId":  "article:como-calcular-clt-ou-pj",
+    "type":  "article",
+    "slug":  "como-calcular-clt-ou-pj",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "reference":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json",
+    "notes":  [
+                  "Internal registry draft only.",
+                  "Does not duplicate article content and does not feed runtime."
+              ]
+}

@@ -1,0 +1,15 @@
+{
+    "id":  "runtime-mapping-testing-plan",
+    "status":  "draft",
+    "executionStatus":  "not-run",
+    "testingReference":  "/data/pos/testing/index.json",
+    "plannedChecks":  [
+                          "runtime-impact",
+                          "execution-order",
+                          "component-integrity",
+                          "navigation-impact",
+                          "jsonld-impact",
+                          "sitemap-impact",
+                          "rollback-impact"
+                      ]
+}

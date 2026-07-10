@@ -1,0 +1,128 @@
+{
+    "id":  "guide-asset-discovery-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "passed-with-warnings",
+    "discoveryMode":  "configuration-driven",
+    "manualAssetList":  false,
+    "sources":  [
+                    "/data/operations/reports/nucleus/pj/guide-draft-specification.json",
+                    "/data/operations/reports/nucleus/pj/nucleus-draft-specification.json",
+                    "/data/registry/by-nucleus/pj.json",
+                    "/data/registry/by-cluster/clt-ou-pj.json",
+                    "/data/registry/by-type/index.json",
+                    "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+                    "/data/publishing/registry/index.json"
+                ],
+    "filters":  {
+                    "acceptedPrimaryGuide":  "guide:guide-pj",
+                    "acceptedPrimaryNucleus":  "nucleus:pj",
+                    "relationshipStatus":  "approved",
+                    "runtimeStatus":  "not-consumed",
+                    "publishingStatus":  "draft",
+                    "includeCandidates":  false,
+                    "includeOtherNuclei":  false
+                },
+    "discovered":  {
+                       "nucleus":  [
+                                       "nucleus:pj"
+                                   ],
+                       "guide":  [
+                                     "guide:guide-pj"
+                                 ],
+                       "clusters":  [
+                                        {
+                                            "assetId":  "cluster:clt-ou-pj",
+                                            "publicSlug":  "clt-ou-pj",
+                                            "relationshipStatus":  "approved",
+                                            "runtimeStatus":  "not-consumed",
+                                            "publishingStatus":  "draft",
+                                            "source":  "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                                        }
+                                    ],
+                       "primaryCalculator":  {
+                                                 "assetId":  "calculator:calculadora-clt-ou-pj",
+                                                 "publicSlug":  "calculadora-clt-ou-pj",
+                                                 "relationshipType":  "primary-calculator",
+                                                 "relationshipStatus":  "approved",
+                                                 "runtimeStatus":  "not-consumed",
+                                                 "publishingStatus":  "draft",
+                                                 "registryGranularity":  "relationship-map-only",
+                                                 "source":  "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                                             },
+                       "pillarArticle":  {
+                                             "assetId":  "article:clt-ou-pj",
+                                             "publicSlug":  "clt-ou-pj",
+                                             "relationshipType":  "pillar-article",
+                                             "relationshipStatus":  "approved",
+                                             "runtimeStatus":  "not-consumed",
+                                             "publishingStatus":  "draft",
+                                             "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                         },
+                       "satelliteArticles":  [
+                                                 {
+                                                     "assetId":  "article:como-calcular-clt-ou-pj",
+                                                     "publicSlug":  "como-calcular-clt-ou-pj",
+                                                     "relationshipType":  "satellite-article",
+                                                     "relationshipStatus":  "approved",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json",
+                                                     "ctaComplianceStatus":  "pass",
+                                                     "referenceStatus":  "official-reference"
+                                                 },
+                                                 {
+                                                     "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                     "publicSlug":  "vantagens-e-desvantagens-clt-ou-pj",
+                                                     "relationshipType":  "satellite-article",
+                                                     "relationshipStatus":  "approved",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json",
+                                                     "ctaComplianceStatus":  "warning",
+                                                     "referenceStatus":  "official-reference",
+                                                     "gaps":  [
+                                                                  "possible-final-calculator-cta-gap-confirmed"
+                                                              ]
+                                                 },
+                                                 {
+                                                     "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                     "publicSlug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                     "relationshipType":  "satellite-article",
+                                                     "relationshipStatus":  "approved",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json",
+                                                     "ctaComplianceStatus":  "warning",
+                                                     "referenceStatus":  "unavailable",
+                                                     "manualReviewRequired":  true,
+                                                     "gaps":  [
+                                                                  "possible-final-calculator-cta-gap-confirmed",
+                                                                  "official-reference-unavailable"
+                                                              ]
+                                                 },
+                                                 {
+                                                     "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                     "publicSlug":  "clt-ou-pj-vale-a-pena-em-2026",
+                                                     "relationshipType":  "satellite-article",
+                                                     "relationshipStatus":  "approved",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json",
+                                                     "ctaComplianceStatus":  "pass",
+                                                     "referenceStatus":  "official-reference"
+                                                 }
+                                             ]
+                   },
+    "ignoredAssets":  [
+                          {
+                              "assetId":  "calculator:calculadora-multa-40-fgts",
+                              "reason":  "not linked to guide:guide-pj or nucleus:pj by approved relationship map"
+                          }
+                      ],
+    "warnings":  [
+                     "Primary calculator lacks individual by-type registry entry; discovered through approved relationship map."
+                 ],
+    "blockingIssues":  [
+
+                       ]
+}

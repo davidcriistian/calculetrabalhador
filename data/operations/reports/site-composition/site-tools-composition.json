@@ -1,0 +1,37 @@
+{
+    "id":  "site-tools-composition",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "modifiesToolsPage":  false,
+    "calculators":  [
+                        {
+                            "assetId":  "calculator:calculadora-clt-ou-pj",
+                            "slug":  "calculadora-clt-ou-pj",
+                            "guide":  "guide:guide-pj",
+                            "cluster":  "cluster:clt-ou-pj",
+                            "category":  "PJ",
+                            "position":  "primary-calculator",
+                            "featured":  true,
+                            "status":  "draft",
+                            "runtimeStatus":  "not-consumed",
+                            "publishingStatus":  "draft",
+                            "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                        },
+                        {
+                            "assetId":  "calculator:calculadora-multa-40-fgts",
+                            "slug":  "calculadora-multa-40-fgts",
+                            "guide":  null,
+                            "cluster":  null,
+                            "category":  "unassigned",
+                            "position":  "unassigned",
+                            "featured":  false,
+                            "status":  "draft",
+                            "runtimeStatus":  "not-consumed",
+                            "publishingStatus":  "draft",
+                            "source":  "/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"
+                        }
+                    ],
+    "warnings":  [
+                     "calculator:calculadora-multa-40-fgts has no guide or cluster assignment in current governed registry composition."
+                 ]
+}

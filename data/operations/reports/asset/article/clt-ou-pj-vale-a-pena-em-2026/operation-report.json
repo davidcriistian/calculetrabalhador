@@ -1,0 +1,41 @@
+{
+    "id":  "operation-report-create-asset-article-clt-ou-pj-vale-a-pena-em-2026",
+    "reportType":  "create-asset-report",
+    "operationId":  "create-asset",
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "version":  "0.1.0",
+    "status":  "completed",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+    "relationshipType":  "satellite-article",
+    "referenceStatus":  "official-reference",
+    "ctaAnalysis":  {
+                        "ctaBeginning":  "present",
+                        "ctaMiddle":  "present",
+                        "ctaEnd":  "present",
+                        "ctaComplianceStatus":  "pass",
+                        "ctaGap":  null,
+                        "inspectionMode":  "read-only",
+                        "actionTaken":  "none"
+                    },
+    "warnings":  [
+
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicArticleChanged":  false,
+                             "contentChanged":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "seoChanged":  false,
+                             "urlChanged":  false,
+                             "sitemapChanged":  false,
+                             "runtimeChanged":  false,
+                             "publicationExecuted":  false
+                         }
+}

@@ -1,0 +1,78 @@
+{
+    "id":  "clt-ou-pj-vale-a-pena-em-2026",
+    "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+    "assetType":  "article",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "lifecycle":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "visibility":  "internal",
+    "createdAt":  "2026-07-10",
+    "updatedAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "source":  "Operational Capabilities Phase 5.1 - batch create-asset satellite articles",
+    "displayName":  "CLT ou PJ Vale a Pena em 2026?",
+    "publicSlug":  "clt-ou-pj-vale-a-pena-em-2026",
+    "publicUrl":  "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+    "relationshipType":  "satellite-article",
+    "referenceStatus":  "official-reference",
+    "referenceId":  "article-clt-ou-pj-vale-a-pena-2026-reference",
+    "manualReviewRequired":  false,
+    "blueprint":  {
+                      "type":  "article",
+                      "reference":  "/data/blueprints/article/index.json",
+                      "version":  "0.2.0",
+                      "resolvedBy":  "/data/operations/defaults/index.json"
+                  },
+    "goldStandard":  {
+                         "type":  "article",
+                         "reference":  "/data/gold-standards/article/index.json",
+                         "version":  "1.0",
+                         "status":  "active-foundation",
+                         "resolvedBy":  "/data/operations/defaults/index.json"
+                     },
+    "sourceCatalogSnapshot":  {
+                                  "source":  "/data/articles.json",
+                                  "id":  "clt-ou-pj-vale-a-pena-em-2026",
+                                  "url":  "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+                                  "title":  "CLT ou PJ Vale a Pena em 2026?",
+                                  "relatedTool":  "/calculadora-clt-ou-pj/"
+                              },
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryGuide":  "guide:guide-pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+                          "primaryArticle":  "article:clt-ou-pj"
+                      },
+    "ctaAnalysis":  {
+                        "ctaBeginning":  "present",
+                        "ctaMiddle":  "present",
+                        "ctaEnd":  "present",
+                        "ctaComplianceStatus":  "pass",
+                        "ctaGap":  null,
+                        "inspectionMode":  "read-only",
+                        "actionTaken":  "none"
+                    },
+    "warnings":  [
+
+                 ],
+    "operationalBoundaries":  {
+                                  "createsNewArticle":  false,
+                                  "modifiesPublicArticle":  false,
+                                  "modifiesContent":  false,
+                                  "modifiesHtml":  false,
+                                  "modifiesCss":  false,
+                                  "modifiesJavascript":  false,
+                                  "modifiesRuntime":  false,
+                                  "modifiesSeo":  false,
+                                  "modifiesUrls":  false,
+                                  "modifiesSitemap":  false,
+                                  "publishes":  false,
+                                  "feedsRuntime":  false
+                              }
+}

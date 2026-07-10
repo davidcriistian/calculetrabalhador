@@ -1,38 +1,135 @@
 {
-  "id": "registry-partition-by-type",
-  "version": "0.1.0",
-  "schema": "/data/registry/schemas/registry-partition.schema.json",
-  "status": "foundation",
-  "runtimeStatus": "not-consumed",
-  "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
-  "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.3 - Registry Partitioning System",
-  "partition": "by-type",
-  "description": "Partition prepared to discover assets by type.",
-  "supportedTypes": ["calculator", "article", "cluster", "product", "campaign", "blueprint", "engine", "domain", "nucleus"],
-  "entries": [
-    {
-      "id": "calculadora-multa-40-fgts",
-      "assetId": "calculator:calculadora-multa-40-fgts",
-      "type": "calculator",
-      "slug": "calculadora-multa-40-fgts",
-      "status": "draft",
-      "owner": "core-platform",
-      "version": "0.1.0",
-      "references": ["/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"]
-    },
-    {
-      "id": "clt-ou-pj",
-      "assetId": "article:clt-ou-pj",
-      "type": "article",
-      "slug": "clt-ou-pj",
-      "status": "draft",
-      "owner": "core-platform",
-      "version": "0.1.0",
-      "references": ["/data/registry/by-type/article-clt-ou-pj.json"]
-    }
-  ],
-  "entryShape": ["id", "type", "slug", "status", "owner", "version", "references"],
-  "notes": ["This partition stores lightweight registry references only and does not duplicate assets."]
+    "id":  "registry-partition-by-type",
+    "version":  "0.1.0",
+    "schema":  "/data/registry/schemas/registry-partition.schema.json",
+    "status":  "foundation",
+    "runtimeStatus":  "not-consumed",
+    "createdAt":  "2026-07-09",
+    "updatedAt":  "2026-07-09",
+    "owner":  "Calcule Trabalhador",
+    "source":  "Productivity Layer Phase 2.3 - Registry Partitioning System",
+    "partition":  "by-type",
+    "description":  "Partition prepared to discover assets by type.",
+    "supportedTypes":  [
+                           "calculator",
+                           "article",
+                           "cluster",
+                           "product",
+                           "campaign",
+                           "blueprint",
+                           "engine",
+                           "domain",
+                           "nucleus",
+                           "guide"
+                       ],
+    "entries":  [
+                    {
+                        "id":  "calculadora-multa-40-fgts",
+                        "assetId":  "calculator:calculadora-multa-40-fgts",
+                        "type":  "calculator",
+                        "slug":  "calculadora-multa-40-fgts",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"
+                                       ]
+                    },
+                    {
+                        "id":  "clt-ou-pj",
+                        "assetId":  "article:clt-ou-pj",
+                        "type":  "article",
+                        "slug":  "clt-ou-pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-clt-ou-pj.json"
+                                       ]
+                    },
+                    {
+                        "id":  "como-calcular-clt-ou-pj",
+                        "assetId":  "article:como-calcular-clt-ou-pj",
+                        "type":  "article",
+                        "slug":  "como-calcular-clt-ou-pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-como-calcular-clt-ou-pj.json"
+                                       ]
+                    },
+                    {
+                        "id":  "vantagens-e-desvantagens-clt-ou-pj",
+                        "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                        "type":  "article",
+                        "slug":  "vantagens-e-desvantagens-clt-ou-pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json"
+                                       ]
+                    },
+                    {
+                        "id":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                        "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                        "type":  "article",
+                        "slug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json"
+                                       ]
+                    },
+                    {
+                        "id":  "clt-ou-pj-vale-a-pena-em-2026",
+                        "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                        "type":  "article",
+                        "slug":  "clt-ou-pj-vale-a-pena-em-2026",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json"
+                                       ]
+                    },
+                    {
+                        "id":  "calculadora-clt-ou-pj",
+                        "assetId":  "calculator:calculadora-clt-ou-pj",
+                        "type":  "calculator",
+                        "slug":  "calculadora-clt-ou-pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                                       ]
+                    },
+                    {
+                        "id":  "guide-pj",
+                        "assetId":  "guide:guide-pj",
+                        "type":  "guide",
+                        "slug":  "pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/guide-guide-pj.json"
+                                       ]
+                    }
+                ],
+    "entryShape":  [
+                       "id",
+                       "type",
+                       "slug",
+                       "status",
+                       "owner",
+                       "version",
+                       "references"
+                   ],
+    "notes":  [
+                  "This partition stores lightweight registry references only and does not duplicate assets."
+              ]
 }

@@ -1,0 +1,17 @@
+{
+    "id":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "type":  "article",
+    "slug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "reference":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json",
+    "notes":  [
+                  "Internal registry draft only.",
+                  "Does not duplicate article content and does not feed runtime."
+              ]
+}

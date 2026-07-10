@@ -1,0 +1,40 @@
+{
+    "id":  "integrated-preview-model",
+    "previewVersion":  "0.1.0",
+    "generatedAt":  "2026-07-10",
+    "generatedFrom":  [
+                          "/data/registry/by-type/index.json",
+                          "/data/publishing/registry/index.json",
+                          "/data/operations/reports/site-composition/site-composition-report.json",
+                          "/data/operations/reports/asset/guide/guide-pj/guide-draft-specification.json"
+                      ],
+    "compositionVersion":  "0.1.0",
+    "registryVersion":  "0.1.0",
+    "blueprintVersions":  {
+                              "guide":  "0.1.0",
+                              "cluster":  "0.1.0",
+                              "article":  "0.2.0",
+                              "calculator":  "0.2.0"
+                          },
+    "goldStandardVersions":  {
+                                 "guide":  "1.0",
+                                 "article":  "1.0",
+                                 "calculator":  "1.0"
+                             },
+    "publishingVersion":  "0.1.0",
+    "previewMode":  "internal",
+    "publicationMode":  "simulation",
+    "htmlGenerated":  false,
+    "runtimeAffected":  false,
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "result":  "PREVIEW PASSED WITH WARNINGS"
+}

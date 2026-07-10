@@ -1,0 +1,36 @@
+{
+    "id":  "preview-tools",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "tools":  [
+                  {
+                      "assetId":  "calculator:calculadora-clt-ou-pj",
+                      "label":  "Calculadora CLT ou PJ",
+                      "status":  "draft",
+                      "publicationStatus":  "draft",
+                      "guide":  "guide:guide-pj",
+                      "cluster":  "cluster:clt-ou-pj",
+                      "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                  },
+                  {
+                      "assetId":  "calculator:calculadora-multa-40-fgts",
+                      "label":  "Calculadora Multa FGTS",
+                      "status":  "draft",
+                      "publicationStatus":  "draft",
+                      "guide":  null,
+                      "cluster":  null,
+                      "mode":  "standalone",
+                      "gap":  "without-guide-and-cluster",
+                      "source":  "/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"
+                  }
+              ],
+    "modifiesToolsPage":  false
+}

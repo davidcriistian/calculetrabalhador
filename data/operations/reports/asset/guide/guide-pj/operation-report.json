@@ -1,0 +1,45 @@
+{
+    "id":  "operation-report-create-asset-guide-guide-pj",
+    "reportType":  "create-asset-report",
+    "operationId":  "create-asset",
+    "version":  "0.1.0",
+    "status":  "completed-with-warnings",
+    "result":  "GUIDE ASSET PROVISIONED WITH WARNINGS",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "guide:guide-pj",
+    "referenceStatus":  "unavailable",
+    "warnings":  [
+                     "guide-reference-unavailable"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "outputs":  {
+                    "guideSpecification":  "/data/operations/reports/asset/guide/guide-pj/guide-draft-specification.json",
+                    "relationshipMap":  "/data/operations/reports/asset/guide/guide-pj/relationship-map.json",
+                    "registryEntry":  "/data/operations/reports/asset/guide/guide-pj/registry-draft-entry.json",
+                    "publishingEntry":  "/data/operations/reports/asset/guide/guide-pj/publishing-draft-entry.json",
+                    "testingPlan":  "/data/operations/reports/asset/guide/guide-pj/testing-plan.json",
+                    "validationPlan":  "/data/operations/reports/asset/guide/guide-pj/validation-plan.json",
+                    "rollbackPlan":  "/data/operations/reports/asset/guide/guide-pj/rollback-plan.json",
+                    "auditReport":  "/data/operations/reports/asset/guide/guide-pj/audit-report.json"
+                },
+    "productionImpact":  {
+                             "publicPageCreated":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "urlCreated":  false,
+                             "sitemapChanged":  false,
+                             "homeChanged":  false,
+                             "blogChanged":  false,
+                             "categoriesChanged":  false,
+                             "toolsChanged":  false,
+                             "runtimeChanged":  false,
+                             "articlesCatalogChanged":  false,
+                             "toolsCatalogChanged":  false,
+                             "publicationExecuted":  false
+                         }
+}

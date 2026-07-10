@@ -1,0 +1,38 @@
+{
+    "id":  "guide-rollback-plan-pj-composition",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "rollbackType":  "internal-guide-composition",
+    "productionRollbackRequired":  false,
+    "restoreScope":  {
+                         "internalFilesCreated":  [
+                                                      "guide-composition-specification.json",
+                                                      "guide-asset-discovery-report.json",
+                                                      "guide-section-map.json",
+                                                      "guide-navigation-map.json",
+                                                      "guide-content-order.json",
+                                                      "guide-gap-report.json",
+                                                      "guide-testing-plan.json",
+                                                      "guide-validation-plan.json",
+                                                      "guide-publishing-plan.json",
+                                                      "guide-rollback-plan.json",
+                                                      "operation-report.json",
+                                                      "audit-report.json"
+                                                  ],
+                         "internalRegistryChanges":  [
+
+                                                     ],
+                         "internalPublishingChanges":  [
+
+                                                       ],
+                         "productionFiles":  [
+
+                                             ]
+                     },
+    "rollbackSteps":  [
+                          "Remove internal guide composition artifacts.",
+                          "Remove future guide draft references if they are added later.",
+                          "Run JSON and internal reference validation.",
+                          "Confirm no public page, URL, sitemap or runtime file changed."
+                      ]
+}

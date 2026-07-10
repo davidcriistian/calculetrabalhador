@@ -1,0 +1,66 @@
+{
+    "id":  "site-home-composition",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "modifiesHome":  false,
+    "sections":  {
+                     "guides":  [
+                                    {
+                                        "assetId":  "guide:guide-pj",
+                                        "status":  "draft",
+                                        "featured":  false,
+                                        "displayOrder":  null,
+                                        "source":  "/data/operations/reports/guide/pj/composition/guide-composition-specification.json",
+                                        "guideExists":  true,
+                                        "guidePublished":  false,
+                                        "guideDraft":  true
+                                    }
+                                ],
+                     "clusters":  [
+                                      {
+                                          "assetId":  "cluster:clt-ou-pj",
+                                          "slug":  "clt-ou-pj",
+                                          "status":  "draft",
+                                          "relationshipStatus":  "approved",
+                                          "runtimeStatus":  "not-consumed",
+                                          "publishingStatus":  "draft",
+                                          "source":  "/data/registry/by-cluster/clt-ou-pj.json"
+                                      }
+                                  ],
+                     "calculators":  [
+                                         {
+                                             "assetId":  "calculator:calculadora-clt-ou-pj",
+                                             "slug":  "calculadora-clt-ou-pj",
+                                             "guide":  "guide:guide-pj",
+                                             "cluster":  "cluster:clt-ou-pj",
+                                             "category":  "PJ",
+                                             "position":  "primary-calculator",
+                                             "featured":  true,
+                                             "status":  "draft",
+                                             "runtimeStatus":  "not-consumed",
+                                             "publishingStatus":  "draft",
+                                             "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                                         }
+                                     ],
+                     "articles":  [
+                                      {
+                                          "assetId":  "article:clt-ou-pj",
+                                          "slug":  "clt-ou-pj",
+                                          "role":  "pillar-article",
+                                          "status":  "draft",
+                                          "runtimeStatus":  "not-consumed",
+                                          "publishingStatus":  "draft",
+                                          "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                      }
+                                  ]
+                 },
+    "unavailableGuideSlots":  [
+                                  "clt",
+                                  "mei",
+                                  "inss"
+                              ],
+    "notes":  [
+                  "Only guide:guide-pj is discoverable as a governed guide draft today.",
+                  "Unavailable guide slots are not created and are recorded only as empty future capacity."
+              ]
+}

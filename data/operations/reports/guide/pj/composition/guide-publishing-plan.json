@@ -1,0 +1,30 @@
+{
+    "id":  "guide-publishing-plan-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "publishingStatus":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "maximumLifecycleAllowed":  "draft",
+    "forbiddenStatesInThisPhase":  [
+                                       "preview-ready",
+                                       "in-review",
+                                       "approved",
+                                       "ready-to-publish",
+                                       "published",
+                                       "deployed"
+                                   ],
+    "futurePreviewRequirements":  [
+                                      "complete validation",
+                                      "manual order approval",
+                                      "editorial gap review",
+                                      "publishing review"
+                                  ],
+    "actions":  {
+                    "createsPublicPage":  false,
+                    "createsUrl":  false,
+                    "modifiesSitemap":  false,
+                    "callsIndexNow":  false,
+                    "deploys":  false,
+                    "publishes":  false
+                }
+}

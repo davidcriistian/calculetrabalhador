@@ -1,0 +1,135 @@
+{
+    "id":  "site-publication-impact",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "publicationExecuted":  false,
+    "ifPublishedToday":  {
+                             "pagesThatWouldChange":  [
+                                                          "Home guide module",
+                                                          "Guides index",
+                                                          "PJ guide",
+                                                          "PJ category view",
+                                                          "Tools composition",
+                                                          "Breadcrumb structures",
+                                                          "Internal link graph"
+                                                      ],
+                             "cardsThatWouldAppear":  [
+                                                          "Guide PJ card",
+                                                          "Cluster CLT ou PJ card",
+                                                          "Calculadora CLT ou PJ card",
+                                                          "CLT ou PJ pillar article card",
+                                                          "Four satellite article cards"
+                                                      ],
+                             "menusThatWouldChange":  [
+                                                          "Guides navigation may include PJ"
+                                                      ],
+                             "categoriesThatWouldChange":  [
+                                                               "PJ category would receive cluster CLT ou PJ"
+                                                           ],
+                             "breadcrumbsThatWouldChange":  [
+                                                                {
+                                                                    "assetId":  "guide:guide-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "cluster:clt-ou-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "calculator:calculadora-clt-ou-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "Calculadora CLT ou PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "article:clt-ou-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "CLT ou PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "article:como-calcular-clt-ou-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "Como calcular CLT ou PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "Vantagens e desvantagens CLT ou PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "Quanto preciso ganhar como PJ"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                },
+                                                                {
+                                                                    "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                                    "trail":  [
+                                                                                  "Home",
+                                                                                  "Guias",
+                                                                                  "PJ",
+                                                                                  "CLT ou PJ",
+                                                                                  "CLT ou PJ vale a pena em 2026"
+                                                                              ],
+                                                                    "status":  "virtual"
+                                                                }
+                                                            ],
+                             "pagesThatRemainSame":  [
+                                                         "Public calculator pages",
+                                                         "Public article pages",
+                                                         "Existing blog index",
+                                                         "Existing sitemap",
+                                                         "Runtime calculators"
+                                                     ]
+                         },
+    "productionImpact":  {
+                             "createsPublicPage":  false,
+                             "createsUrl":  false,
+                             "modifiesHome":  false,
+                             "modifiesBlog":  false,
+                             "modifiesCategories":  false,
+                             "modifiesGuides":  false,
+                             "modifiesTools":  false,
+                             "modifiesSitemap":  false,
+                             "deploys":  false
+                         }
+}

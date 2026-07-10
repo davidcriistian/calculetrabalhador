@@ -1,0 +1,63 @@
+{
+    "id":  "audit-report-site-composition",
+    "status":  "passed-with-warnings",
+    "result":  "SITE COMPOSITION PASSED WITH WARNINGS",
+    "checks":  [
+                   {
+                       "id":  "assets-discovered-by-registry",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-hardcoded-source-of-truth",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "home-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "guides-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "categories-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "tools-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "breadcrumbs-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "internal-links-composable",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "publication-impact-calculated",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "asset-without-guide-calculadora-multa-40-fgts",
+                     "asset-without-cluster-calculadora-multa-40-fgts",
+                     "guide-not-indexed-by-type",
+                     "faq-absent-guide-pj",
+                     "glossary-absent-guide-pj",
+                     "downloads-absent-guide-pj",
+                     "products-absent-guide-pj",
+                     "ctas-absent-guide-pj",
+                     "reference-unavailable-calculadora-clt-ou-pj",
+                     "reference-unavailable-artigo-quanto"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "Virtual site composition is available as internal draft reports only."
+}

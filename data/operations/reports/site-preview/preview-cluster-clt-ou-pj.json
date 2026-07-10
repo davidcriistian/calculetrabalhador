@@ -1,0 +1,119 @@
+{
+    "id":  "preview-cluster-clt-ou-pj",
+    "assetId":  "cluster:clt-ou-pj",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "structure":  [
+                      "hero",
+                      "calculator",
+                      "pillarArticle",
+                      "satellites",
+                      "internalLinks",
+                      "cta-empty",
+                      "footer"
+                  ],
+    "calculator":  {
+                       "assetId":  "calculator:calculadora-clt-ou-pj",
+                       "label":  "Calculadora CLT ou PJ",
+                       "status":  "draft",
+                       "publicationStatus":  "draft",
+                       "guide":  "guide:guide-pj",
+                       "cluster":  "cluster:clt-ou-pj",
+                       "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                   },
+    "pillarArticle":  {
+                          "assetId":  "article:clt-ou-pj",
+                          "label":  "CLT ou PJ",
+                          "role":  "pillar-article",
+                          "status":  "draft",
+                          "publicationStatus":  "draft",
+                          "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                      },
+    "satelliteArticles":  [
+                              {
+                                  "assetId":  "article:como-calcular-clt-ou-pj",
+                                  "label":  "Como Calcular CLT ou PJ",
+                                  "role":  "satellite-article",
+                                  "status":  "draft",
+                                  "publicationStatus":  "draft",
+                                  "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json"
+                              },
+                              {
+                                  "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                  "label":  "Vantagens e Desvantagens CLT ou PJ",
+                                  "role":  "satellite-article",
+                                  "status":  "draft",
+                                  "publicationStatus":  "draft",
+                                  "gap":  "final-calculator-cta-gap",
+                                  "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json"
+                              },
+                              {
+                                  "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                  "label":  "Quanto Preciso Ganhar Como PJ",
+                                  "role":  "satellite-article",
+                                  "status":  "draft",
+                                  "publicationStatus":  "draft",
+                                  "gaps":  [
+                                               "final-calculator-cta-gap",
+                                               "official-reference-unavailable"
+                                           ],
+                                  "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json"
+                              },
+                              {
+                                  "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                  "label":  "CLT ou PJ Vale a Pena em 2026",
+                                  "role":  "satellite-article",
+                                  "status":  "draft",
+                                  "publicationStatus":  "draft",
+                                  "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json"
+                              }
+                          ],
+    "internalLinks":  [
+                          {
+                              "from":  "guide:guide-pj",
+                              "to":  "cluster:clt-ou-pj",
+                              "relationship":  "guide-to-cluster"
+                          },
+                          {
+                              "from":  "cluster:clt-ou-pj",
+                              "to":  "calculator:calculadora-clt-ou-pj",
+                              "relationship":  "cluster-to-calculator"
+                          },
+                          {
+                              "from":  "cluster:clt-ou-pj",
+                              "to":  "article:clt-ou-pj",
+                              "relationship":  "cluster-to-pillar"
+                          },
+                          {
+                              "from":  "article:clt-ou-pj",
+                              "to":  [
+                                         "article:como-calcular-clt-ou-pj",
+                                         "article:vantagens-e-desvantagens-clt-ou-pj",
+                                         "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                         "article:clt-ou-pj-vale-a-pena-em-2026"
+                                     ],
+                              "relationship":  "pillar-to-satellites"
+                          },
+                          {
+                              "from":  [
+                                           "article:como-calcular-clt-ou-pj",
+                                           "article:vantagens-e-desvantagens-clt-ou-pj",
+                                           "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                           "article:clt-ou-pj-vale-a-pena-em-2026"
+                                       ],
+                              "to":  "calculator:calculadora-clt-ou-pj",
+                              "relationship":  "satellites-to-calculator"
+                          }
+                      ],
+    "emptyStates":  [
+                        "cta"
+                    ]
+}

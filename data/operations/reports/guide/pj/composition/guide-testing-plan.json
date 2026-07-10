@@ -1,0 +1,23 @@
+{
+    "id":  "guide-testing-plan-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "executionStatus":  "not-run",
+    "testingReference":  "/data/pos/testing/index.json",
+    "plannedChecks":  [
+                          "registry-discovery",
+                          "relationship-integrity",
+                          "guide-cluster-composition",
+                          "content-order",
+                          "empty-state",
+                          "duplicate-prevention",
+                          "cross-nucleus-isolation",
+                          "navigation-map",
+                          "broken-reference-detection",
+                          "no-runtime-consumption"
+                      ],
+    "notes":  [
+                  "Plan only; no public tests executed."
+              ]
+}

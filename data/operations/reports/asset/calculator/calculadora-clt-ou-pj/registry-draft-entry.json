@@ -1,0 +1,17 @@
+{
+    "id":  "calculadora-clt-ou-pj",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "type":  "calculator",
+    "slug":  "calculadora-clt-ou-pj",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "reference":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json",
+    "notes":  [
+                  "Internal registry draft only.",
+                  "Does not duplicate calculator code and does not feed runtime."
+              ]
+}

@@ -1,0 +1,62 @@
+{
+    "id":  "affected-components",
+    "status":  "draft",
+    "components":  [
+                       {
+                           "component":  "Guide Cards",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Cluster Cards",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Calculator Cards",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Article Cards",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Featured Blocks",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Breadcrumb Component",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Navigation Component",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "CTA Component",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "JSON-LD Component",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Search Index Component",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       },
+                       {
+                           "component":  "Sitemap Writer",
+                           "impactStatus":  "would-update-on-publish",
+                           "modifiedNow":  false
+                       }
+                   ],
+    "modifiedNow":  false
+}

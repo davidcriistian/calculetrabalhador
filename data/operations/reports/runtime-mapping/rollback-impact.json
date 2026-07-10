@@ -1,0 +1,34 @@
+{
+    "id":  "rollback-impact",
+    "status":  "draft",
+    "impact":  {
+                   "filesWouldRevert":  [
+                                            "index.html",
+                                            "guias/pj/index.html",
+                                            "categoria/pj/index.html",
+                                            "ferramentas/index.html",
+                                            "sitemap.xml",
+                                            "search-index",
+                                            "breadcrumb-data",
+                                            "jsonld-data"
+                                        ],
+                   "componentsWouldRevert":  [
+                                                 "Guide Cards",
+                                                 "Cluster Cards",
+                                                 "Calculator Cards",
+                                                 "Article Cards",
+                                                 "Breadcrumb Component",
+                                                 "Navigation Component",
+                                                 "JSON-LD Component",
+                                                 "Sitemap Writer",
+                                                 "Search Index Component"
+                                             ],
+                   "registriesRemainIntact":  [
+                                                  "/data/registry/by-type/index.json",
+                                                  "/data/registry/by-cluster/index.json",
+                                                  "/data/registry/by-nucleus/index.json",
+                                                  "/data/publishing/registry/index.json"
+                                              ],
+                   "rollbackExecuted":  false
+               }
+}

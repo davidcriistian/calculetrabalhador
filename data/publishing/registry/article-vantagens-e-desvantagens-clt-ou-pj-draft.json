@@ -1,0 +1,24 @@
+{
+  "id": "publishing-draft-article-vantagens-e-desvantagens-clt-ou-pj",
+  "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+  "assetType": "article",
+  "status": "draft",
+  "approvalStatus": "approved-relationship",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "draft"
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false
+  }
+}

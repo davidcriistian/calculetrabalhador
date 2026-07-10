@@ -1,0 +1,31 @@
+{
+    "id":  "affected-sitemap",
+    "status":  "draft",
+    "sitemap":  [
+                    {
+                        "url":  "/guias/pj/",
+                        "assetId":  "guide:guide-pj",
+                        "urlStatus":  "not-created",
+                        "actionIfPublished":  "add",
+                        "lastmodExpected":  "publication-date",
+                        "modifiedNow":  false
+                    },
+                    {
+                        "url":  "/calculadora-clt-ou-pj/",
+                        "assetId":  "calculator:calculadora-clt-ou-pj",
+                        "urlStatus":  "existing",
+                        "actionIfPublished":  "review-lastmod-if-page-changes",
+                        "lastmodExpected":  "only-if-public-page-updated",
+                        "modifiedNow":  false
+                    },
+                    {
+                        "url":  "/blog/clt-ou-pj/",
+                        "assetId":  "article:clt-ou-pj",
+                        "urlStatus":  "existing",
+                        "actionIfPublished":  "review-lastmod-if-page-changes",
+                        "lastmodExpected":  "only-if-public-page-updated",
+                        "modifiedNow":  false
+                    }
+                ],
+    "sitemapXmlModified":  false
+}

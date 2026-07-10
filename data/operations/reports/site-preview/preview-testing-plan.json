@@ -1,0 +1,25 @@
+{
+    "id":  "preview-testing-plan",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "executionStatus":  "not-run",
+    "testingReference":  "/data/pos/testing/index.json",
+    "plannedChecks":  [
+                          "preview-integrity",
+                          "preview-registry",
+                          "preview-navigation",
+                          "preview-breadcrumb",
+                          "preview-layout-model",
+                          "preview-empty-state",
+                          "preview-publication-impact",
+                          "no-runtime-impact"
+                      ]
+}

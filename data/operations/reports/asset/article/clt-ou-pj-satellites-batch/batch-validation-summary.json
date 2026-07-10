@@ -1,0 +1,22 @@
+{
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "status":  "passed-with-warnings",
+    "jsonValid":  "passed",
+    "internalReferencesValid":  "passed-after-utf8-normalization",
+    "assetIdsTypedAndUnique":  true,
+    "noProductionImpact":  true,
+    "noPublicCatalogChanged":  true,
+    "noUrlChanged":  true,
+    "noSitemapChanged":  true,
+    "noDeployExecuted":  true,
+    "warnings":  [
+                     "Two assets have confirmed final calculator CTA gap warnings.",
+                     "One asset has unavailable official reference and requires manual review."
+                 ],
+    "governanceValidation":  "passed",
+    "transformRules":  "passed",
+    "validationUpdatedAt":  "2026-07-10",
+    "shadowAdicionalNoturno":  "passed",
+    "shadowAvisoPrevio":  "passed",
+    "gitDiffCheck":  "passed-with-lf-crlf-warnings-only"
+}

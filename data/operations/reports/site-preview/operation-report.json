@@ -1,0 +1,62 @@
+{
+    "id":  "operation-report-integrated-preview",
+    "operationId":  "integrated-preview-model",
+    "status":  "completed-with-warnings",
+    "result":  "PREVIEW PASSED WITH WARNINGS",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "previewMode":  "internal",
+                        "publicationMode":  "simulation",
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "publicFilesChanged":  false
+                    },
+    "outputs":  [
+                    "preview-model.json",
+                    "preview-home.json",
+                    "preview-guides.json",
+                    "preview-guide-pj.json",
+                    "preview-cluster-clt-ou-pj.json",
+                    "preview-tools.json",
+                    "preview-categories.json",
+                    "preview-breadcrumbs.json",
+                    "preview-navigation.json",
+                    "preview-publication-summary.json",
+                    "preview-gap-report.json",
+                    "preview-testing-plan.json",
+                    "preview-validation-plan.json",
+                    "preview-rollback-plan.json",
+                    "audit-report.json"
+                ],
+    "warnings":  [
+                     "orphan-calculator-multa-40-fgts",
+                     "faq-absent-guide-pj",
+                     "glossary-absent-guide-pj",
+                     "downloads-absent-guide-pj",
+                     "products-absent-guide-pj",
+                     "ctas-absent-guide-pj",
+                     "reference-unavailable-guide-pj",
+                     "reference-unavailable-calculadora-clt-ou-pj",
+                     "reference-unavailable-artigo-quanto",
+                     "ordering-pending-manual-approval"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicPageCreated":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "runtimeChanged":  false,
+                             "seoChanged":  false,
+                             "urlCreated":  false,
+                             "sitemapChanged":  false,
+                             "homeChanged":  false,
+                             "blogChanged":  false,
+                             "categoryChanged":  false,
+                             "toolsChanged":  false
+                         }
+}

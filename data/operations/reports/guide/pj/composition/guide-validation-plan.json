@@ -1,0 +1,28 @@
+{
+    "id":  "guide-validation-plan-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "executionStatus":  "not-run",
+    "validationReference":  "/data/pos/validation/index.json",
+    "plannedValidations":  [
+                               "PAM compliance",
+                               "Guide Blueprint compliance",
+                               "Guide Gold Standard compliance",
+                               "Domain Relationship Model",
+                               "approved-assets-only",
+                               "Asset Identity Policy",
+                               "cluster completeness",
+                               "navigation integrity",
+                               "editorial gap tracking",
+                               "Registry consistency",
+                               "Publishing draft-only",
+                               "no-production-impact"
+                           ],
+    "publicationBlockersUntilResolved":  [
+                                             "testing-not-run",
+                                             "validation-not-run",
+                                             "manual-order-approval-not-complete",
+                                             "publishing-approval-not-requested"
+                                         ]
+}

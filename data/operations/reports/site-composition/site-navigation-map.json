@@ -1,0 +1,61 @@
+{
+    "id":  "site-navigation-map",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "modifiesPublicNavigation":  false,
+    "navigation":  [
+                       {
+                           "from":  "home",
+                           "to":  "guides",
+                           "relationship":  "home-to-guides-index",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  "guides",
+                           "to":  "guide:guide-pj",
+                           "relationship":  "guides-index-to-guide",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  "guide:guide-pj",
+                           "to":  "cluster:clt-ou-pj",
+                           "relationship":  "guide-to-cluster",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  "cluster:clt-ou-pj",
+                           "to":  "calculator:calculadora-clt-ou-pj",
+                           "relationship":  "cluster-to-primary-calculator",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  "cluster:clt-ou-pj",
+                           "to":  "article:clt-ou-pj",
+                           "relationship":  "cluster-to-pillar-article",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  "article:clt-ou-pj",
+                           "to":  [
+                                      "article:como-calcular-clt-ou-pj",
+                                      "article:vantagens-e-desvantagens-clt-ou-pj",
+                                      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                      "article:clt-ou-pj-vale-a-pena-em-2026"
+                                  ],
+                           "relationship":  "pillar-to-satellite-articles",
+                           "status":  "virtual"
+                       },
+                       {
+                           "from":  [
+                                        "article:como-calcular-clt-ou-pj",
+                                        "article:vantagens-e-desvantagens-clt-ou-pj",
+                                        "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                        "article:clt-ou-pj-vale-a-pena-em-2026"
+                                    ],
+                           "to":  "calculator:calculadora-clt-ou-pj",
+                           "relationship":  "satellite-to-calculator",
+                           "status":  "virtual"
+                       }
+                   ],
+    "source":  "/data/operations/reports/guide/pj/composition/guide-navigation-map.json"
+}

@@ -1,0 +1,26 @@
+{
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "status":  "draft",
+    "rollbackType":  "internal-batch-asset-provisioning",
+    "productionRollbackRequired":  false,
+    "rollbackScope":  [
+                          "internal article provisioning reports",
+                          "internal Registry by-type entries",
+                          "internal Publishing draft entries",
+                          "references added to internal indexes"
+                      ],
+    "individualRollbackPlans":  [
+                                    "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/rollback-plan.json",
+                                    "/data/operations/reports/asset/article/vantagens-e-desvantagens-clt-ou-pj/rollback-plan.json",
+                                    "/data/operations/reports/asset/article/quanto-preciso-ganhar-como-pj-para-compensar-clt/rollback-plan.json",
+                                    "/data/operations/reports/asset/article/clt-ou-pj-vale-a-pena-em-2026/rollback-plan.json"
+                                ],
+    "rollbackSteps":  [
+                          "Remove four internal Registry draft files and index entries.",
+                          "Remove four internal Publishing draft files and index entries.",
+                          "Remove four article provisioning report directories.",
+                          "Remove consolidated batch report directory.",
+                          "Run JSON and governance validations.",
+                          "Confirm production files remain unchanged."
+                      ]
+}

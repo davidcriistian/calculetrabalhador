@@ -1,0 +1,89 @@
+{
+    "id":  "execution-order",
+    "status":  "draft",
+    "order":  [
+                  {
+                      "step":  1,
+                      "name":  "Registry",
+                      "dependencies":  [
+
+                                       ],
+                      "gate":  "registry-integrity",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  2,
+                      "name":  "Runtime Mapping",
+                      "dependencies":  [
+                                           "Registry",
+                                           "Preview Model"
+                                       ],
+                      "gate":  "runtime-impact-reviewed",
+                      "status":  "completed-internal-draft"
+                  },
+                  {
+                      "step":  3,
+                      "name":  "Testing",
+                      "dependencies":  [
+                                           "Runtime Mapping"
+                                       ],
+                      "gate":  "testing-pass",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  4,
+                      "name":  "Validation",
+                      "dependencies":  [
+                                           "Testing"
+                                       ],
+                      "gate":  "validation-pass",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  5,
+                      "name":  "Preview Approval",
+                      "dependencies":  [
+                                           "Validation"
+                                       ],
+                      "gate":  "manual-preview-approval",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  6,
+                      "name":  "Publishing",
+                      "dependencies":  [
+                                           "Preview Approval"
+                                       ],
+                      "gate":  "publishing-approval",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  7,
+                      "name":  "Sitemap",
+                      "dependencies":  [
+                                           "Publishing"
+                                       ],
+                      "gate":  "sitemap-check",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  8,
+                      "name":  "Indexing",
+                      "dependencies":  [
+                                           "Sitemap"
+                                       ],
+                      "gate":  "indexing-check",
+                      "status":  "planned"
+                  },
+                  {
+                      "step":  9,
+                      "name":  "Final Validation",
+                      "dependencies":  [
+                                           "Indexing"
+                                       ],
+                      "gate":  "final-validation-pass",
+                      "status":  "planned"
+                  }
+              ],
+    "complete":  true
+}

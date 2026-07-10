@@ -1,0 +1,23 @@
+{
+    "id":  "guide-pj",
+    "assetId":  "guide:guide-pj",
+    "type":  "guide",
+    "slug":  "pj",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "references":  [
+                       "/data/operations/reports/asset/guide/guide-pj/guide-draft-specification.json",
+                       "/data/operations/reports/asset/guide/guide-pj/relationship-map.json",
+                       "/data/operations/reports/asset/guide/guide-pj/registry-draft-entry.json",
+                       "/data/operations/reports/asset/guide/guide-pj/publishing-draft-entry.json",
+                       "/data/operations/reports/guide/pj/composition/guide-composition-specification.json"
+                   ],
+    "notes":  [
+                  "Internal governed representation only.",
+                  "This entry does not create or feed a public guide page."
+              ]
+}

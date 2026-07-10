@@ -1,0 +1,43 @@
+{
+    "id":  "affected-navigation",
+    "status":  "draft",
+    "navigation":  [
+                       {
+                           "type":  "new-menu",
+                           "from":  "Guides navigation",
+                           "to":  "guide:guide-pj",
+                           "status":  "planned"
+                       },
+                       {
+                           "type":  "new-link",
+                           "from":  "guide:guide-pj",
+                           "to":  "cluster:clt-ou-pj",
+                           "status":  "planned"
+                       },
+                       {
+                           "type":  "new-link",
+                           "from":  "cluster:clt-ou-pj",
+                           "to":  "calculator:calculadora-clt-ou-pj",
+                           "status":  "planned"
+                       },
+                       {
+                           "type":  "new-link",
+                           "from":  "cluster:clt-ou-pj",
+                           "to":  "article:clt-ou-pj",
+                           "status":  "planned"
+                       },
+                       {
+                           "type":  "new-card",
+                           "from":  "Home guide module",
+                           "to":  "guide:guide-pj",
+                           "status":  "planned"
+                       },
+                       {
+                           "type":  "new-card",
+                           "from":  "PJ category",
+                           "to":  "cluster:clt-ou-pj",
+                           "status":  "planned"
+                       }
+                   ],
+    "modifiedNow":  false
+}

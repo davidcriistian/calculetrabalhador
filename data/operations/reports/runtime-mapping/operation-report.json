@@ -1,0 +1,58 @@
+{
+    "id":  "operation-report-runtime-mapping",
+    "operationId":  "runtime-mapping",
+    "status":  "completed-with-warnings",
+    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "mappingMode":  "execution-plan",
+                        "publicationExecuted":  false,
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "productionFilesChanged":  false
+                    },
+    "outputs":  [
+                    "runtime-mapping-report.json",
+                    "affected-files.json",
+                    "affected-pages.json",
+                    "affected-components.json",
+                    "affected-navigation.json",
+                    "affected-breadcrumbs.json",
+                    "affected-jsonld.json",
+                    "affected-sitemap.json",
+                    "affected-search.json",
+                    "execution-order.json",
+                    "execution-checklist.json",
+                    "execution-risk-report.json",
+                    "rollback-impact.json",
+                    "testing-plan.json",
+                    "validation-plan.json",
+                    "audit-report.json"
+                ],
+    "warnings":  [
+                     "orphan-asset",
+                     "missing-reference-guide",
+                     "missing-reference-calculator",
+                     "missing-reference-article",
+                     "missing-cta",
+                     "missing-cta-quanto",
+                     "cross-guide-leak"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "homeChanged":  false,
+                             "blogChanged":  false,
+                             "categoryChanged":  false,
+                             "sitemapChanged":  false,
+                             "urlCreated":  false,
+                             "runtimeChanged":  false,
+                             "productionFilesChanged":  false
+                         }
+}

@@ -1,0 +1,80 @@
+{
+    "id":  "preview-gap-report",
+    "status":  "passed-with-warnings",
+    "gaps":  [
+                 {
+                     "id":  "orphan-calculator-multa-40-fgts",
+                     "type":  "asset-orphan",
+                     "assetId":  "calculator:calculadora-multa-40-fgts",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "faq-absent-guide-pj",
+                     "type":  "faq-absent",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "glossary-absent-guide-pj",
+                     "type":  "glossary-absent",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "downloads-absent-guide-pj",
+                     "type":  "downloads-absent",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "products-absent-guide-pj",
+                     "type":  "products-absent",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "ctas-absent-guide-pj",
+                     "type":  "ctas-absent",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "reference-unavailable-guide-pj",
+                     "type":  "reference-unavailable",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "reference-unavailable-calculadora-clt-ou-pj",
+                     "type":  "reference-unavailable",
+                     "assetId":  "calculator:calculadora-clt-ou-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "reference-unavailable-artigo-quanto",
+                     "type":  "reference-unavailable",
+                     "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 },
+                 {
+                     "id":  "ordering-pending-manual-approval",
+                     "type":  "manual-approval",
+                     "assetId":  "guide:guide-pj",
+                     "status":  "warning",
+                     "blocksPreview":  false
+                 }
+             ],
+    "blockingIssues":  [
+
+                       ],
+    "previewAllowed":  true
+}

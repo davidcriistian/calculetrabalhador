@@ -1,0 +1,19 @@
+{
+  "id": "como-calcular-clt-ou-pj",
+  "assetId": "article:como-calcular-clt-ou-pj",
+  "type": "article",
+  "slug": "como-calcular-clt-ou-pj",
+  "status": "draft",
+  "approvalStatus": "approved-relationship",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "references": [
+    "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/article-draft-specification.json",
+    "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/relationship-map.json",
+    "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/registry-draft-entry.json",
+    "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/publishing-draft-entry.json"
+  ],
+  "notes": ["Internal governed representation only."]
+}

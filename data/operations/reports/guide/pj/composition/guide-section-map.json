@@ -1,0 +1,111 @@
+{
+    "id":  "guide-section-map-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "sections":  [
+                     {
+                         "id":  "hero",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "introduction",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "featuredClusters",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "featuredCalculators",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "featuredArticles",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "allClusters",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "allCalculators",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "allArticles",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "faq",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "glossary",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "downloads",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "relatedGuides",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "offerSlots",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "ctaSlots",
+                         "status":  "empty-state",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "disclaimer",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     },
+                     {
+                         "id":  "footer",
+                         "status":  "configured-draft",
+                         "source":  "configuration",
+                         "createsContent":  false
+                     }
+                 ],
+    "emptyStates":  [
+                        "faq",
+                        "glossary",
+                        "downloads",
+                        "relatedGuides",
+                        "offerSlots",
+                        "ctaSlots"
+                    ]
+}

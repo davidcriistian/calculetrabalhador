@@ -1,0 +1,42 @@
+{
+    "id":  "guide-content-order-pj",
+    "assetId":  "guide:guide-pj",
+    "status":  "draft",
+    "orderingStatus":  "manual-configuration-required",
+    "officialConfigurationFound":  false,
+    "noEditorialOrderInvented":  true,
+    "proposedOrderStatus":  "proposed",
+    "approvalStatus":  "pending-manual-approval",
+    "orderSources":  [
+                         "approved relationship map",
+                         "asset role"
+                     ],
+    "proposedOrder":  {
+                          "featuredClusters":  [
+                                                   "cluster:clt-ou-pj"
+                                               ],
+                          "featuredCalculators":  [
+                                                      "calculator:calculadora-clt-ou-pj"
+                                                  ],
+                          "featuredArticles":  [
+                                                   "article:clt-ou-pj"
+                                               ],
+                          "allClusters":  [
+                                              "cluster:clt-ou-pj"
+                                          ],
+                          "allCalculators":  [
+                                                 "calculator:calculadora-clt-ou-pj"
+                                             ],
+                          "allArticles":  [
+                                              "article:clt-ou-pj",
+                                              "article:como-calcular-clt-ou-pj",
+                                              "article:vantagens-e-desvantagens-clt-ou-pj",
+                                              "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                              "article:clt-ou-pj-vale-a-pena-em-2026"
+                                          ]
+                      },
+    "notes":  [
+                  "Order is a proposal based on approved relationship roles only.",
+                  "Future featured, priority, displayOrder and section configuration must approve final ordering."
+              ]
+}

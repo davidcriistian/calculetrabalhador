@@ -1,0 +1,46 @@
+{
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "status":  "passed-with-warnings",
+    "checks":  [
+                   {
+                       "id":  "batch-order-deterministic",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "approved-relationship-map",
+                       "status":  "pass",
+                       "evidence":  "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                   },
+                   {
+                       "id":  "article-blueprint",
+                       "status":  "pass",
+                       "evidence":  "/data/blueprints/article/index.json"
+                   },
+                   {
+                       "id":  "article-gold-standard",
+                       "status":  "pass",
+                       "evidence":  "/data/gold-standards/article/index.json"
+                   },
+                   {
+                       "id":  "registry-draft-only",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "publishing-draft-only",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "article:quanto-preciso-ganhar-como-pj-para-compensar-clt has unavailable official reference.",
+                     "article:vantagens-e-desvantagens-clt-ou-pj has confirmed final calculator CTA gap.",
+                     "article:quanto-preciso-ganhar-como-pj-para-compensar-clt has confirmed final calculator CTA gap."
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "Batch asset provisioning completed as internal draft representations only."
+}

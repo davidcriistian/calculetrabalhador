@@ -1,0 +1,63 @@
+{
+    "id":  "audit-report-integrated-preview",
+    "status":  "passed-with-warnings",
+    "result":  "PREVIEW PASSED WITH WARNINGS",
+    "checks":  [
+                   {
+                       "id":  "preview-built-from-registry",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-html-read",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-site-dependency",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "home-represented",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "guides-represented",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "categories-represented",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "tools-represented",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "breadcrumbs-represented",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "publication-summary-calculated",
+                       "status":  "pass"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "orphan-calculator-multa-40-fgts",
+                     "faq-absent-guide-pj",
+                     "glossary-absent-guide-pj",
+                     "downloads-absent-guide-pj",
+                     "products-absent-guide-pj",
+                     "ctas-absent-guide-pj",
+                     "reference-unavailable-guide-pj",
+                     "reference-unavailable-calculadora-clt-ou-pj",
+                     "reference-unavailable-artigo-quanto",
+                     "ordering-pending-manual-approval"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "Integrated preview is available as internal declarative simulation only."
+}

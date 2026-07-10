@@ -1,0 +1,25 @@
+{
+    "id":  "publishing-draft-guide-guide-pj",
+    "assetId":  "guide:guide-pj",
+    "assetType":  "guide",
+    "status":  "draft",
+    "approvalStatus":  "approved-relationship",
+    "relationshipStatus":  "approved",
+    "publishingStatus":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "version":  "0.1.0",
+    "lifecycle":  {
+                      "current":  "draft",
+                      "maximumAllowedInThisOperation":  "draft"
+                  },
+    "actions":  {
+                    "publishes":  false,
+                    "deploys":  false,
+                    "modifiesSitemap":  false,
+                    "createsPublicPage":  false,
+                    "createsUrl":  false,
+                    "modifiesExistingPage":  false,
+                    "callsIndexNow":  false
+                }
+}

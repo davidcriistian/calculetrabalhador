@@ -1,0 +1,36 @@
+{
+    "id":  "relationship-map-calculator-calculadora-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "approvalStatus":  "approved",
+    "relationshipStatus":  "approved",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "assetType":  "calculator",
+    "relationshipType":  "primary-calculator",
+    "relationships":  {
+                          "primaryDomain":  "pj",
+                          "primaryNucleus":  "nucleus:pj",
+                          "primaryGuide":  "guide:guide-pj",
+                          "primaryCluster":  "cluster:clt-ou-pj",
+                          "relatedPillarArticle":  "article:clt-ou-pj",
+                          "relatedSatelliteArticles":  [
+                                                           "article:como-calcular-clt-ou-pj",
+                                                           "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                           "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                           "article:clt-ou-pj-vale-a-pena-em-2026"
+                                                       ]
+                      },
+    "relationshipEvidence":  [
+                                 "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+                             ],
+    "notDerived":  [
+                       "products",
+                       "offers",
+                       "commercialCtas",
+                       "downloads",
+                       "campaigns"
+                   ]
+}

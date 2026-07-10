@@ -1,0 +1,223 @@
+{
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "operationId":  "create-asset",
+    "assetType":  "article",
+    "status":  "draft",
+    "relationshipType":  "satellite-article",
+    "primaryDomain":  "pj",
+    "primaryNucleus":  "nucleus:pj",
+    "primaryGuide":  "guide:guide-pj",
+    "primaryCluster":  "cluster:clt-ou-pj",
+    "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+    "primaryArticle":  "article:clt-ou-pj",
+    "assets":  [
+                   {
+                       "assetId":  "article:como-calcular-clt-ou-pj",
+                       "publicSlug":  "como-calcular-clt-ou-pj",
+                       "order":  1,
+                       "status":  "draft",
+                       "runtimeStatus":  "not-consumed",
+                       "approvalStatus":  "approved-relationship",
+                       "publishingStatus":  "draft",
+                       "referenceStatus":  "official-reference",
+                       "ctaComplianceStatus":  "pass",
+                       "warnings":  [
+
+                                    ]
+                   },
+                   {
+                       "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                       "publicSlug":  "vantagens-e-desvantagens-clt-ou-pj",
+                       "order":  2,
+                       "status":  "draft",
+                       "runtimeStatus":  "not-consumed",
+                       "approvalStatus":  "approved-relationship",
+                       "publishingStatus":  "draft",
+                       "referenceStatus":  "official-reference",
+                       "ctaComplianceStatus":  "warning",
+                       "warnings":  [
+                                        "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                                    ]
+                   },
+                   {
+                       "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                       "publicSlug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                       "order":  3,
+                       "status":  "draft",
+                       "runtimeStatus":  "not-consumed",
+                       "approvalStatus":  "approved-relationship",
+                       "publishingStatus":  "draft",
+                       "referenceStatus":  "unavailable",
+                       "ctaComplianceStatus":  "warning",
+                       "warnings":  [
+                                        "Official article reference unavailable; manual review required but draft is not blocked because Article Gold Standard v1.0 is available.",
+                                        "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                                    ]
+                   },
+                   {
+                       "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                       "publicSlug":  "clt-ou-pj-vale-a-pena-em-2026",
+                       "order":  4,
+                       "status":  "draft",
+                       "runtimeStatus":  "not-consumed",
+                       "approvalStatus":  "approved-relationship",
+                       "publishingStatus":  "draft",
+                       "referenceStatus":  "official-reference",
+                       "ctaComplianceStatus":  "pass",
+                       "warnings":  [
+
+                                    ]
+                   }
+               ],
+    "order":  [
+                  "como-calcular-clt-ou-pj",
+                  "vantagens-e-desvantagens-clt-ou-pj",
+                  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                  "clt-ou-pj-vale-a-pena-em-2026"
+              ],
+    "startedAt":  "2026-07-10",
+    "completedAt":  "2026-07-10",
+    "overallStatus":  "passed-with-warnings",
+    "statusByAsset":  [
+                          {
+                              "assetId":  "article:como-calcular-clt-ou-pj",
+                              "status":  "draft",
+                              "runtimeStatus":  "not-consumed",
+                              "publishingStatus":  "draft"
+                          },
+                          {
+                              "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                              "status":  "draft",
+                              "runtimeStatus":  "not-consumed",
+                              "publishingStatus":  "draft"
+                          },
+                          {
+                              "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                              "status":  "draft",
+                              "runtimeStatus":  "not-consumed",
+                              "publishingStatus":  "draft"
+                          },
+                          {
+                              "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                              "status":  "draft",
+                              "runtimeStatus":  "not-consumed",
+                              "publishingStatus":  "draft"
+                          }
+                      ],
+    "warningsByAsset":  [
+                            {
+                                "assetId":  "article:como-calcular-clt-ou-pj",
+                                "warnings":  [
+
+                                             ]
+                            },
+                            {
+                                "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                "warnings":  [
+                                                 "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                                             ]
+                            },
+                            {
+                                "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                "warnings":  [
+                                                 "Official article reference unavailable; manual review required but draft is not blocked because Article Gold Standard v1.0 is available.",
+                                                 "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                                             ]
+                            },
+                            {
+                                "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                "warnings":  [
+
+                                             ]
+                            }
+                        ],
+    "failuresByAsset":  [
+
+                        ],
+    "testingPlanByAsset":  [
+                               {
+                                   "assetId":  "article:como-calcular-clt-ou-pj",
+                                   "reference":  "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/testing-plan.json",
+                                   "executionStatus":  "not-run"
+                               },
+                               {
+                                   "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                   "reference":  "/data/operations/reports/asset/article/vantagens-e-desvantagens-clt-ou-pj/testing-plan.json",
+                                   "executionStatus":  "not-run"
+                               },
+                               {
+                                   "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                   "reference":  "/data/operations/reports/asset/article/quanto-preciso-ganhar-como-pj-para-compensar-clt/testing-plan.json",
+                                   "executionStatus":  "not-run"
+                               },
+                               {
+                                   "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                   "reference":  "/data/operations/reports/asset/article/clt-ou-pj-vale-a-pena-em-2026/testing-plan.json",
+                                   "executionStatus":  "not-run"
+                               }
+                           ],
+    "validationPlanByAsset":  [
+                                  {
+                                      "assetId":  "article:como-calcular-clt-ou-pj",
+                                      "reference":  "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/validation-plan.json",
+                                      "executionStatus":  "not-run"
+                                  },
+                                  {
+                                      "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                      "reference":  "/data/operations/reports/asset/article/vantagens-e-desvantagens-clt-ou-pj/validation-plan.json",
+                                      "executionStatus":  "not-run"
+                                  },
+                                  {
+                                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                      "reference":  "/data/operations/reports/asset/article/quanto-preciso-ganhar-como-pj-para-compensar-clt/validation-plan.json",
+                                      "executionStatus":  "not-run"
+                                  },
+                                  {
+                                      "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                      "reference":  "/data/operations/reports/asset/article/clt-ou-pj-vale-a-pena-em-2026/validation-plan.json",
+                                      "executionStatus":  "not-run"
+                                  }
+                              ],
+    "publishingStatusByAsset":  [
+                                    {
+                                        "assetId":  "article:como-calcular-clt-ou-pj",
+                                        "publishingStatus":  "draft"
+                                    },
+                                    {
+                                        "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                        "publishingStatus":  "draft"
+                                    },
+                                    {
+                                        "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                        "publishingStatus":  "draft"
+                                    },
+                                    {
+                                        "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                        "publishingStatus":  "draft"
+                                    }
+                                ],
+    "rollbackStatusByAsset":  [
+                                  {
+                                      "assetId":  "article:como-calcular-clt-ou-pj",
+                                      "reference":  "/data/operations/reports/asset/article/como-calcular-clt-ou-pj/rollback-plan.json",
+                                      "rollbackStatus":  "ready-internal"
+                                  },
+                                  {
+                                      "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                      "reference":  "/data/operations/reports/asset/article/vantagens-e-desvantagens-clt-ou-pj/rollback-plan.json",
+                                      "rollbackStatus":  "ready-internal"
+                                  },
+                                  {
+                                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                      "reference":  "/data/operations/reports/asset/article/quanto-preciso-ganhar-como-pj-para-compensar-clt/rollback-plan.json",
+                                      "rollbackStatus":  "ready-internal"
+                                  },
+                                  {
+                                      "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                      "reference":  "/data/operations/reports/asset/article/clt-ou-pj-vale-a-pena-em-2026/rollback-plan.json",
+                                      "rollbackStatus":  "ready-internal"
+                                  }
+                              ],
+    "estimatedContext":  "low",
+    "estimatedCredits":  "low"
+}

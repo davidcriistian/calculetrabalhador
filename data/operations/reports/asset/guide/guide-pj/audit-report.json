@@ -1,0 +1,59 @@
+{
+    "id":  "audit-report-create-asset-guide-guide-pj",
+    "version":  "0.1.0",
+    "status":  "passed-with-warnings",
+    "result":  "GUIDE ASSET PROVISIONED WITH WARNINGS",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "guide:guide-pj",
+    "checks":  [
+                   {
+                       "id":  "asset-identity-policy",
+                       "status":  "pass",
+                       "evidence":  "/data/constitution/governance/asset-identity-policy.json"
+                   },
+                   {
+                       "id":  "guide-blueprint",
+                       "status":  "pass",
+                       "evidence":  "/data/blueprints/guide/index.json"
+                   },
+                   {
+                       "id":  "guide-gold-standard",
+                       "status":  "pass",
+                       "evidence":  "/data/gold-standards/guide/index.json"
+                   },
+                   {
+                       "id":  "guide-composition",
+                       "status":  "pass",
+                       "evidence":  "/data/operations/reports/guide/pj/composition/guide-composition-specification.json"
+                   },
+                   {
+                       "id":  "reference-system",
+                       "status":  "warning",
+                       "evidence":  "/data/references/guides/index.json",
+                       "message":  "guide-reference-unavailable"
+                   },
+                   {
+                       "id":  "registry-individual-entry",
+                       "status":  "pass",
+                       "evidence":  "/data/registry/by-type/guide-guide-pj.json"
+                   },
+                   {
+                       "id":  "publishing-draft-entry",
+                       "status":  "pass",
+                       "evidence":  "/data/publishing/registry/guide-guide-pj-draft.json"
+                   },
+                   {
+                       "id":  "no-production-impact",
+                       "status":  "pass"
+                   }
+               ],
+    "warnings":  [
+                     "guide-reference-unavailable"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "conclusion":  "The Guide PJ is represented internally as a governed draft asset."
+}

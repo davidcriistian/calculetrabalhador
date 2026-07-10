@@ -1,0 +1,42 @@
+{
+    "id":  "operation-report-create-asset-article-quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "reportType":  "create-asset-report",
+    "operationId":  "create-asset",
+    "batchId":  "batch-create-asset-clt-ou-pj-satellite-articles",
+    "version":  "0.1.0",
+    "status":  "completed-with-warnings",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "owner":  "core-platform",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "relationshipType":  "satellite-article",
+    "referenceStatus":  "unavailable",
+    "ctaAnalysis":  {
+                        "ctaBeginning":  "present",
+                        "ctaMiddle":  "present",
+                        "ctaEnd":  "absent",
+                        "ctaComplianceStatus":  "warning",
+                        "ctaGap":  "possible-final-calculator-cta-gap-confirmed",
+                        "inspectionMode":  "read-only",
+                        "actionTaken":  "none"
+                    },
+    "warnings":  [
+                     "Official article reference unavailable; manual review required but draft is not blocked because Article Gold Standard v1.0 is available.",
+                     "Final calculator CTA card or final calculator CTA link was not found in read-only inspection."
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicArticleChanged":  false,
+                             "contentChanged":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "seoChanged":  false,
+                             "urlChanged":  false,
+                             "sitemapChanged":  false,
+                             "runtimeChanged":  false,
+                             "publicationExecuted":  false
+                         }
+}

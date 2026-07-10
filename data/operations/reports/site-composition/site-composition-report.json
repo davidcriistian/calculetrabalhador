@@ -1,0 +1,162 @@
+{
+    "id":  "site-composition-report",
+    "version":  "0.1.0",
+    "source":  "Operational Capabilities Phase 5.3 - Virtual Site Composition",
+    "createdAt":  "2026-07-10",
+    "updatedAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "overallStatus":  "passed-with-warnings",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "publishingStatus":  "draft",
+                        "compositionMode":  "virtual",
+                        "createsPublicFiles":  false,
+                        "modifiesProduction":  false
+                    },
+    "compositionSources":  [
+                               "/data/registry/by-type/index.json",
+                               "/data/registry/by-nucleus/index.json",
+                               "/data/registry/by-cluster/index.json",
+                               "/data/publishing/registry/index.json",
+                               "/data/operations/reports/guide/pj/composition/guide-composition-specification.json"
+                           ],
+    "discoveredAssets":  {
+                             "guides":  [
+                                            {
+                                                "assetId":  "guide:guide-pj",
+                                                "nucleus":  "nucleus:pj",
+                                                "domain":  "pj",
+                                                "publicSlug":  "pj",
+                                                "proposedUrl":  "/guias/pj/",
+                                                "status":  "draft",
+                                                "lifecycle":  "draft",
+                                                "runtimeStatus":  "not-consumed",
+                                                "publishingStatus":  "draft",
+                                                "guideExists":  true,
+                                                "guidePublished":  false,
+                                                "guideDraft":  true,
+                                                "source":  "/data/operations/reports/guide/pj/composition/guide-composition-specification.json"
+                                            }
+                                        ],
+                             "clusters":  [
+                                              {
+                                                  "assetId":  "cluster:clt-ou-pj",
+                                                  "slug":  "clt-ou-pj",
+                                                  "status":  "draft",
+                                                  "relationshipStatus":  "approved",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-cluster/clt-ou-pj.json"
+                                              }
+                                          ],
+                             "calculators":  [
+                                                 {
+                                                     "assetId":  "calculator:calculadora-clt-ou-pj",
+                                                     "slug":  "calculadora-clt-ou-pj",
+                                                     "guide":  "guide:guide-pj",
+                                                     "cluster":  "cluster:clt-ou-pj",
+                                                     "category":  "PJ",
+                                                     "position":  "primary-calculator",
+                                                     "featured":  true,
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/calculator-calculadora-clt-ou-pj.json"
+                                                 },
+                                                 {
+                                                     "assetId":  "calculator:calculadora-multa-40-fgts",
+                                                     "slug":  "calculadora-multa-40-fgts",
+                                                     "guide":  null,
+                                                     "cluster":  null,
+                                                     "category":  "unassigned",
+                                                     "position":  "unassigned",
+                                                     "featured":  false,
+                                                     "status":  "draft",
+                                                     "runtimeStatus":  "not-consumed",
+                                                     "publishingStatus":  "draft",
+                                                     "source":  "/data/registry/by-type/calculator-calculadora-multa-40-fgts.json"
+                                                 }
+                                             ],
+                             "articles":  [
+                                              {
+                                                  "assetId":  "article:clt-ou-pj",
+                                                  "slug":  "clt-ou-pj",
+                                                  "role":  "pillar-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-clt-ou-pj.json"
+                                              },
+                                              {
+                                                  "assetId":  "article:como-calcular-clt-ou-pj",
+                                                  "slug":  "como-calcular-clt-ou-pj",
+                                                  "role":  "satellite-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-como-calcular-clt-ou-pj.json"
+                                              },
+                                              {
+                                                  "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                  "slug":  "vantagens-e-desvantagens-clt-ou-pj",
+                                                  "role":  "satellite-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-vantagens-e-desvantagens-clt-ou-pj.json",
+                                                  "gaps":  [
+                                                               "final-calculator-cta-gap"
+                                                           ]
+                                              },
+                                              {
+                                                  "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                  "slug":  "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                  "role":  "satellite-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-quanto-preciso-ganhar-como-pj-para-compensar-clt.json",
+                                                  "gaps":  [
+                                                               "final-calculator-cta-gap",
+                                                               "official-reference-unavailable"
+                                                           ]
+                                              },
+                                              {
+                                                  "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                                                  "slug":  "clt-ou-pj-vale-a-pena-em-2026",
+                                                  "role":  "satellite-article",
+                                                  "status":  "draft",
+                                                  "runtimeStatus":  "not-consumed",
+                                                  "publishingStatus":  "draft",
+                                                  "source":  "/data/registry/by-type/article-clt-ou-pj-vale-a-pena-em-2026.json"
+                                              }
+                                          ]
+                         },
+    "composition":  {
+                        "home":  "/data/operations/reports/site-composition/site-home-composition.json",
+                        "guides":  "/data/operations/reports/site-composition/site-guides-composition.json",
+                        "categories":  "/data/operations/reports/site-composition/site-categories-composition.json",
+                        "tools":  "/data/operations/reports/site-composition/site-tools-composition.json",
+                        "breadcrumbs":  "/data/operations/reports/site-composition/site-breadcrumb-map.json",
+                        "internalLinks":  "/data/operations/reports/site-composition/site-internal-links.json",
+                        "publicationImpact":  "/data/operations/reports/site-composition/site-publication-impact.json"
+                    },
+    "warnings":  [
+                     "asset-without-guide-calculadora-multa-40-fgts",
+                     "asset-without-cluster-calculadora-multa-40-fgts",
+                     "guide-not-indexed-by-type",
+                     "faq-absent-guide-pj",
+                     "glossary-absent-guide-pj",
+                     "downloads-absent-guide-pj",
+                     "products-absent-guide-pj",
+                     "ctas-absent-guide-pj",
+                     "reference-unavailable-calculadora-clt-ou-pj",
+                     "reference-unavailable-artigo-quanto"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "result":  "SITE COMPOSITION PASSED WITH WARNINGS"
+}

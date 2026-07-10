@@ -1,0 +1,28 @@
+{
+    "id":  "testing-plan-calculator-calculadora-clt-ou-pj",
+    "version":  "0.1.0",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "owner":  "core-platform",
+    "assetId":  "calculator:calculadora-clt-ou-pj",
+    "testingReference":  "/data/pos/testing/index.json",
+    "executionStatus":  "not-run",
+    "plannedChecks":  [
+                          "calculation-baseline",
+                          "calculation-regression",
+                          "input-validation",
+                          "result-integrity",
+                          "layout-regression",
+                          "responsive",
+                          "accessibility",
+                          "jsonld",
+                          "canonical",
+                          "runtime-safety",
+                          "relationship-integrity",
+                          "no-runtime-consumption"
+                      ],
+    "notes":  [
+                  "Plan generated only.",
+                  "No production calculator tests or runtime changes are executed by this provisioning operation."
+              ]
+}

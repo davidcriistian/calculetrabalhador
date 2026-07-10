@@ -1,0 +1,59 @@
+{
+    "id":  "affected-breadcrumbs",
+    "status":  "draft",
+    "breadcrumbs":  [
+                        {
+                            "assetId":  "guide:guide-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ"
+                                      ],
+                            "modifiedNow":  false
+                        },
+                        {
+                            "assetId":  "cluster:clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ"
+                                      ],
+                            "modifiedNow":  false
+                        },
+                        {
+                            "assetId":  "calculator:calculadora-clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Calculadora CLT ou PJ"
+                                      ],
+                            "modifiedNow":  false
+                        },
+                        {
+                            "assetId":  "article:clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "CLT ou PJ"
+                                      ],
+                            "modifiedNow":  false
+                        },
+                        {
+                            "assetId":  "article:como-calcular-clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Como Calcular CLT ou PJ"
+                                      ],
+                            "modifiedNow":  false
+                        }
+                    ],
+    "modifiedNow":  false
+}

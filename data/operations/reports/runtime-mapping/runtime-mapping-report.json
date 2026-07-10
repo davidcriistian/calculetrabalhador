@@ -1,0 +1,55 @@
+{
+    "id":  "runtime-mapping-report",
+    "version":  "0.1.0",
+    "createdAt":  "2026-07-10",
+    "source":  "Operational Capabilities Phase 5.5 - Runtime Mapping",
+    "status":  "passed-with-warnings",
+    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
+    "commonState":  {
+                        "status":  "draft",
+                        "visibility":  "internal",
+                        "runtimeStatus":  "not-consumed",
+                        "mappingMode":  "execution-plan",
+                        "publicationExecuted":  false,
+                        "htmlGenerated":  false,
+                        "runtimeAffected":  false,
+                        "productionFilesChanged":  false
+                    },
+    "derivedFrom":  [
+                        "/data/operations/reports/site-preview/preview-model.json",
+                        "/data/operations/reports/site-composition/site-composition-report.json",
+                        "/data/registry/by-type/index.json",
+                        "/data/publishing/registry/index.json"
+                    ],
+    "scope":  {
+                  "guide":  "guide:guide-pj",
+                  "cluster":  "cluster:clt-ou-pj",
+                  "calculator":  "calculator:calculadora-clt-ou-pj",
+                  "pillar":  "article:clt-ou-pj",
+                  "satellites":  [
+                                     "article:como-calcular-clt-ou-pj",
+                                     "article:vantagens-e-desvantagens-clt-ou-pj",
+                                     "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                     "article:clt-ou-pj-vale-a-pena-em-2026"
+                                 ]
+              },
+    "summary":  {
+                    "affectedFilesCount":  9,
+                    "affectedPagesCount":  6,
+                    "affectedComponentsCount":  11,
+                    "risksCount":  7,
+                    "productionFilesModifiedNow":  0
+                },
+    "warnings":  [
+                     "orphan-asset",
+                     "missing-reference-guide",
+                     "missing-reference-calculator",
+                     "missing-reference-article",
+                     "missing-cta",
+                     "missing-cta-quanto",
+                     "cross-guide-leak"
+                 ],
+    "blockingIssues":  [
+
+                       ]
+}

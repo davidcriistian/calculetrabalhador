@@ -1,0 +1,54 @@
+{
+    "id":  "operation-report-site-composition",
+    "operationId":  "virtual-site-composition",
+    "status":  "completed-with-warnings",
+    "result":  "SITE COMPOSITION PASSED WITH WARNINGS",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "createdAt":  "2026-07-10",
+    "owner":  "core-platform",
+    "outputs":  [
+                    "site-composition-report.json",
+                    "site-navigation-map.json",
+                    "site-home-composition.json",
+                    "site-guides-composition.json",
+                    "site-categories-composition.json",
+                    "site-tools-composition.json",
+                    "site-breadcrumb-map.json",
+                    "site-internal-links.json",
+                    "site-publication-impact.json",
+                    "site-gap-report.json",
+                    "testing-plan.json",
+                    "validation-plan.json",
+                    "rollback-plan.json",
+                    "audit-report.json"
+                ],
+    "warnings":  [
+                     "asset-without-guide-calculadora-multa-40-fgts",
+                     "asset-without-cluster-calculadora-multa-40-fgts",
+                     "guide-not-indexed-by-type",
+                     "faq-absent-guide-pj",
+                     "glossary-absent-guide-pj",
+                     "downloads-absent-guide-pj",
+                     "products-absent-guide-pj",
+                     "ctas-absent-guide-pj",
+                     "reference-unavailable-calculadora-clt-ou-pj",
+                     "reference-unavailable-artigo-quanto"
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicPageCreated":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "runtimeChanged":  false,
+                             "seoChanged":  false,
+                             "urlChanged":  false,
+                             "sitemapChanged":  false,
+                             "toolsCatalogChanged":  false,
+                             "articlesCatalogChanged":  false,
+                             "deployExecuted":  false
+                         }
+}

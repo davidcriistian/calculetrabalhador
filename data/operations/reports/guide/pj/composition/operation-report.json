@@ -1,0 +1,66 @@
+{
+    "id":  "operation-report-guide-pj-composition",
+    "operationId":  "compose-guide",
+    "assetId":  "guide:guide-pj",
+    "status":  "completed-with-warnings",
+    "result":  "COMPOSITION PASSED WITH WARNINGS",
+    "runtimeStatus":  "not-consumed",
+    "publishingStatus":  "draft",
+    "compositionSource":  "registry",
+    "compositionMode":  "configuration-driven",
+    "outputs":  [
+                    "guide-composition-specification.json",
+                    "guide-asset-discovery-report.json",
+                    "guide-section-map.json",
+                    "guide-navigation-map.json",
+                    "guide-content-order.json",
+                    "guide-gap-report.json",
+                    "guide-testing-plan.json",
+                    "guide-validation-plan.json",
+                    "guide-publishing-plan.json",
+                    "guide-rollback-plan.json",
+                    "audit-report.json"
+                ],
+    "discoveredAssets":  {
+                             "clusters":  [
+                                              "cluster:clt-ou-pj"
+                                          ],
+                             "primaryCalculator":  "calculator:calculadora-clt-ou-pj",
+                             "pillarArticle":  "article:clt-ou-pj",
+                             "satelliteArticles":  [
+                                                       "article:como-calcular-clt-ou-pj",
+                                                       "article:vantagens-e-desvantagens-clt-ou-pj",
+                                                       "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                                       "article:clt-ou-pj-vale-a-pena-em-2026"
+                                                   ]
+                         },
+    "warnings":  [
+                     "Final calculator CTA absent or not confirmed.",
+                     "Final calculator CTA absent or not confirmed.",
+                     "Reference System unavailable; manual review required.",
+                     "FAQ not configured for guide composition.",
+                     "Glossary not configured for guide composition.",
+                     "Downloads not configured for guide composition.",
+                     "Products, offers and commercial CTAs are not configured.",
+                     "Primary calculator is approved in the relationship map but does not have an individual by-type registry entry yet.",
+                     "No explicit featured, priority, displayOrder or section configuration was found; proposed order requires manual approval."
+                 ],
+    "blockingIssues":  [
+
+                       ],
+    "productionImpact":  {
+                             "publicPageCreated":  false,
+                             "htmlChanged":  false,
+                             "cssChanged":  false,
+                             "javascriptChanged":  false,
+                             "homeChanged":  false,
+                             "blogChanged":  false,
+                             "toolsPageChanged":  false,
+                             "toolsCatalogChanged":  false,
+                             "articlesCatalogChanged":  false,
+                             "sitemapChanged":  false,
+                             "urlCreated":  false,
+                             "published":  false,
+                             "runtimeChanged":  false
+                         }
+}

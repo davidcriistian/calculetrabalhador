@@ -1,0 +1,93 @@
+{
+    "id":  "site-breadcrumb-map",
+    "status":  "draft",
+    "runtimeStatus":  "not-consumed",
+    "modifiesBreadcrumbs":  false,
+    "breadcrumbs":  [
+                        {
+                            "assetId":  "guide:guide-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "cluster:clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "calculator:calculadora-clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Calculadora CLT ou PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "article:clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "CLT ou PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "article:como-calcular-clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Como calcular CLT ou PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Vantagens e desvantagens CLT ou PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "Quanto preciso ganhar como PJ"
+                                      ],
+                            "status":  "virtual"
+                        },
+                        {
+                            "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                            "trail":  [
+                                          "Home",
+                                          "Guias",
+                                          "PJ",
+                                          "CLT ou PJ",
+                                          "CLT ou PJ vale a pena em 2026"
+                                      ],
+                            "status":  "virtual"
+                        }
+                    ]
+}
