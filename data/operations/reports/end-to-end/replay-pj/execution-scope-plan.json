@@ -1,0 +1,21 @@
+{
+    "operation":  "deliver-asset-end-to-end",
+    "mode":  "VALIDATE_ONLY",
+    "capabilities":  {
+                         "requestIntake":  "REQUIRED",
+                         "preflight":  "REQUIRED",
+                         "scopeResolution":  "REQUIRED",
+                         "governanceResolution":  "REQUIRED",
+                         "reuseOrCreateDecision":  "REQUIRED",
+                         "relationshipResolution":  "REQUIRED",
+                         "assetProvisioning":  "NOT_APPLICABLE",
+                         "physicalExecution":  "NOT_APPLICABLE",
+                         "publicCatalogUpdate":  "NOT_APPLICABLE",
+                         "publicDistribution":  "NOT_APPLICABLE",
+                         "sitemapExecution":  "NOT_APPLICABLE",
+                         "indexNowDryRun":  "NOT_APPLICABLE",
+                         "optionalIndexNowSend":  "NOT_APPLICABLE",
+                         "publicationConfirmation":  "NOT_APPLICABLE",
+                         "rollbackAvailable":  "REQUIRED"
+                     }
+}

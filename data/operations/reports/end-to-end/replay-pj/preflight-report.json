@@ -1,0 +1,51 @@
+{
+    "branch":  "main",
+    "head":  "972796e74ef42805222949e8d7e4630da9c6827e",
+    "originMain":  "972796e74ef42805222949e8d7e4630da9c6827e",
+    "statusBefore":  [
+                         "## main...origin/main",
+                         " M data/manifests/operations/index.json",
+                         " M data/operations/checklists/index.json",
+                         " M data/operations/playbooks/index.json",
+                         " M data/operations/reports/index.json",
+                         " M data/operations/workflows/index.json",
+                         "?? data/manifests/operations/end-to-end/",
+                         "?? data/operations/checklists/end-to-end/",
+                         "?? data/operations/playbooks/end-to-end/",
+                         "?? data/operations/reports/end-to-end/",
+                         "?? data/operations/workflows/end-to-end/"
+                     ],
+    "diffStatBefore":  [
+                           "warning: in the working copy of \u0027data/manifests/operations/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                           "warning: in the working copy of \u0027data/operations/checklists/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                           "warning: in the working copy of \u0027data/operations/playbooks/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                           "warning: in the working copy of \u0027data/operations/reports/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                           "warning: in the working copy of \u0027data/operations/workflows/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                           " data/manifests/operations/index.json  | 1 +",
+                           " data/operations/checklists/index.json | 1 +",
+                           " data/operations/playbooks/index.json  | 4 +++-",
+                           " data/operations/reports/index.json    | 1 +",
+                           " data/operations/workflows/index.json  | 1 +",
+                           " 5 files changed, 7 insertions(+), 1 deletion(-)"
+                       ],
+    "diffNameStatusBefore":  [
+                                 "warning: in the working copy of \u0027data/manifests/operations/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                                 "warning: in the working copy of \u0027data/operations/checklists/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                                 "warning: in the working copy of \u0027data/operations/playbooks/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                                 "warning: in the working copy of \u0027data/operations/reports/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                                 "warning: in the working copy of \u0027data/operations/workflows/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                                 "M\tdata/manifests/operations/index.json",
+                                 "M\tdata/operations/checklists/index.json",
+                                 "M\tdata/operations/playbooks/index.json",
+                                 "M\tdata/operations/reports/index.json",
+                                 "M\tdata/operations/workflows/index.json"
+                             ],
+    "diffCheckBefore":  [
+                            "warning: in the working copy of \u0027data/manifests/operations/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                            "warning: in the working copy of \u0027data/operations/checklists/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                            "warning: in the working copy of \u0027data/operations/playbooks/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                            "warning: in the working copy of \u0027data/operations/reports/index.json\u0027, LF will be replaced by CRLF the next time Git touches it",
+                            "warning: in the working copy of \u0027data/operations/workflows/index.json\u0027, LF will be replaced by CRLF the next time Git touches it"
+                        ],
+    "preExistingChanges":  "Phase 5.16 local workflow files and indexes"
+}

@@ -1,0 +1,16 @@
+{
+    "statusAfter":  [
+                        "## main...origin/main",
+                        " M data/manifests/operations/index.json",
+                        " M data/operations/checklists/index.json",
+                        " M data/operations/playbooks/index.json",
+                        " M data/operations/reports/index.json",
+                        " M data/operations/workflows/index.json",
+                        "?? data/manifests/operations/end-to-end/",
+                        "?? data/operations/checklists/end-to-end/",
+                        "?? data/operations/playbooks/end-to-end/",
+                        "?? data/operations/reports/end-to-end/",
+                        "?? data/operations/workflows/end-to-end/"
+                    ],
+    "note":  "New files limited to replay-pj plus pre-existing Phase 5.16 local changes."
+}

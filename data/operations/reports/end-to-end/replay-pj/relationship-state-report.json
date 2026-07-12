@@ -1,0 +1,15 @@
+{
+    "status":  "PASS_WITH_WARNINGS",
+    "pjArticleFilter":  [
+                            "clt-ou-pj",
+                            "como-calcular-clt-ou-pj",
+                            "vantagens-e-desvantagens-clt-ou-pj",
+                            "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                            "clt-ou-pj-vale-a-pena-em-2026"
+                        ],
+    "approvedRelationshipEvidence":  [
+                                         "data/brain/nuclei.json articleFilter",
+                                         "pilot operation reports"
+                                     ],
+    "changed":  false
+}

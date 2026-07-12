@@ -33,6 +33,7 @@
     "confirm-no-unapproved-production-change"
   ],
   "partitions": {
+    "end-to-end": "/data/operations/checklists/end-to-end/index.json",
     "nucleus": "/data/operations/checklists/nucleus/index.json"
   },
   "notes": [

@@ -1,0 +1,274 @@
+{
+  "id": "end-to-end-operation-workflows",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/workflow.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
+  "description": "Official ordered workflow for deliver-asset-end-to-end. It defines orchestration states only and does not execute operations.",
+  "workflows": [
+    {
+      "workflowId": "deliver-asset-end-to-end-workflow",
+      "operationId": "deliver-asset-end-to-end",
+      "defaultMode": "DRY_RUN",
+      "approvalRequired": true,
+      "rollbackRequired": true,
+      "runtimeStatus": "not-consumed",
+      "steps": [
+        {
+          "id": "REQUEST_INTAKE",
+          "input": ["manifest", "user-request"],
+          "output": ["normalized-request"],
+          "preconditions": ["request-type-supported"],
+          "gates": ["required-fields-present"],
+          "stopConditions": ["unsupported-request-type"],
+          "rollback": "none",
+          "nextStates": ["PREFLIGHT"]
+        },
+        {
+          "id": "PREFLIGHT",
+          "input": ["normalized-request"],
+          "output": ["preflight-report"],
+          "preconditions": ["git-status-readable"],
+          "gates": ["working-tree-audit", "secret-scan", "json-valid", "internal-json-refs-valid"],
+          "stopConditions": ["working-tree-collision", "secret-detected", "json-invalid", "refs-invalid"],
+          "rollback": "none",
+          "nextStates": ["SCOPE_RESOLUTION"]
+        },
+        {
+          "id": "SCOPE_RESOLUTION",
+          "input": ["normalized-request", "preflight-report"],
+          "output": ["execution-scope-plan"],
+          "preconditions": ["preflight-pass-or-warning"],
+          "gates": ["required-vs-not-applicable-classified"],
+          "stopConditions": ["scope-ambiguous"],
+          "rollback": "none",
+          "nextStates": ["GOVERNANCE_RESOLUTION"]
+        },
+        {
+          "id": "GOVERNANCE_RESOLUTION",
+          "input": ["execution-scope-plan"],
+          "output": ["governance-resolution"],
+          "preconditions": ["typed-identity-policy-loaded"],
+          "gates": ["assetId", "assetType", "blueprint", "gold-standard", "reference", "owner"],
+          "stopConditions": ["identity-missing", "blueprint-missing", "gold-standard-missing", "reference-critical-missing"],
+          "rollback": "none",
+          "nextStates": ["REUSE_OR_CREATE_DECISION"]
+        },
+        {
+          "id": "REUSE_OR_CREATE_DECISION",
+          "input": ["governance-resolution"],
+          "output": ["reuse-create-decision"],
+          "preconditions": ["registries-readable", "catalogs-readable"],
+          "gates": ["duplicates-checked", "physical-destination-checked"],
+          "stopConditions": ["duplicate-identity", "slug-conflict", "url-conflict"],
+          "rollback": "none",
+          "nextStates": ["RELATIONSHIP_RESOLUTION"]
+        },
+        {
+          "id": "RELATIONSHIP_RESOLUTION",
+          "input": ["reuse-create-decision"],
+          "output": ["relationship-plan"],
+          "preconditions": ["typed-asset-ids-available"],
+          "gates": ["candidate-review-approval-flow"],
+          "stopConditions": ["unapproved-relationship"],
+          "rollback": "remove-unapproved-candidates-from-plan",
+          "nextStates": ["ASSET_PROVISIONING"]
+        },
+        {
+          "id": "ASSET_PROVISIONING",
+          "input": ["relationship-plan"],
+          "output": ["asset-provisioning-plan"],
+          "preconditions": ["create-asset-manifest-available"],
+          "gates": ["registry-draft", "publishing-draft", "testing-plan", "validation-plan"],
+          "stopConditions": ["provisioning-plan-invalid"],
+          "rollback": "discard-internal-draft-artifacts",
+          "nextStates": ["PHYSICAL_PLAN"]
+        },
+        {
+          "id": "PHYSICAL_PLAN",
+          "input": ["asset-provisioning-plan"],
+          "output": ["physical-plan"],
+          "preconditions": ["allowed-files-resolved"],
+          "gates": ["physical-destination", "visual-pattern", "expected-diff", "rollback-plan"],
+          "stopConditions": ["unknown-destination", "unresolved-pattern", "public-file-not-allowed"],
+          "rollback": "none",
+          "nextStates": ["SNAPSHOT"]
+        },
+        {
+          "id": "SNAPSHOT",
+          "input": ["physical-plan"],
+          "output": ["snapshot-record"],
+          "preconditions": ["target-files-readable"],
+          "gates": ["checksum-captured"],
+          "stopConditions": ["snapshot-failed"],
+          "rollback": "restore-from-snapshot-record-only-when-approved",
+          "nextStates": ["PHYSICAL_EXECUTION"]
+        },
+        {
+          "id": "PHYSICAL_EXECUTION",
+          "input": ["snapshot-record", "physical-plan"],
+          "output": ["physical-diff"],
+          "preconditions": ["execution-mode-allows-write", "manual-approval-when-required"],
+          "gates": ["diff-minimal", "allowed-files-only"],
+          "stopConditions": ["dry-run", "approval-missing", "unexpected-diff"],
+          "rollback": "file-level-rollback-from-snapshot",
+          "nextStates": ["PUBLIC_CATALOG_UPDATE"]
+        },
+        {
+          "id": "PUBLIC_CATALOG_UPDATE",
+          "input": ["physical-diff"],
+          "output": ["catalog-change-plan"],
+          "preconditions": ["catalog-update-applicable"],
+          "gates": ["catalog-format-preserved", "no-duplicates"],
+          "stopConditions": ["catalog-conflict"],
+          "rollback": "catalog-entry-rollback",
+          "nextStates": ["PUBLIC_DISTRIBUTION"]
+        },
+        {
+          "id": "PUBLIC_DISTRIBUTION",
+          "input": ["catalog-change-plan"],
+          "output": ["distribution-plan"],
+          "preconditions": ["distribution-applicable"],
+          "gates": ["home", "blog", "tools", "category", "guide"],
+          "stopConditions": ["distribution-approval-missing"],
+          "rollback": "runtime-projection-rollback",
+          "nextStates": ["LINKS_AND_METADATA"]
+        },
+        {
+          "id": "LINKS_AND_METADATA",
+          "input": ["distribution-plan"],
+          "output": ["links-metadata-plan"],
+          "preconditions": ["relationships-approved"],
+          "gates": ["cta-no-duplicates", "json-ld-valid", "canonical-valid", "breadcrumb-valid"],
+          "stopConditions": ["metadata-invalid", "cta-duplicate"],
+          "rollback": "links-and-metadata-rollback",
+          "nextStates": ["SITEMAP_PLAN"]
+        },
+        {
+          "id": "SITEMAP_PLAN",
+          "input": ["links-metadata-plan"],
+          "output": ["sitemap-plan"],
+          "preconditions": ["physical-page-and-canonical-valid"],
+          "gates": ["no-duplicate-url", "lastmod-evidence"],
+          "stopConditions": ["sitemap-conflict"],
+          "rollback": "sitemap-entry-rollback",
+          "nextStates": ["TESTING"]
+        },
+        {
+          "id": "TESTING",
+          "input": ["sitemap-plan"],
+          "output": ["testing-report"],
+          "preconditions": ["tests-selected-by-scope"],
+          "gates": ["critical-tests-pass-or-not-applicable"],
+          "stopConditions": ["critical-test-failed"],
+          "rollback": "none",
+          "nextStates": ["VALIDATION"]
+        },
+        {
+          "id": "VALIDATION",
+          "input": ["testing-report"],
+          "output": ["validation-report"],
+          "preconditions": ["validation-selected-by-scope"],
+          "gates": ["critical-validations-pass-or-not-applicable"],
+          "stopConditions": ["critical-validation-failed"],
+          "rollback": "none",
+          "nextStates": ["PREVIEW"]
+        },
+        {
+          "id": "PREVIEW",
+          "input": ["validation-report"],
+          "output": ["preview-or-diff-evidence"],
+          "preconditions": ["preview-required-when-public-impact"],
+          "gates": ["reviewable-output"],
+          "stopConditions": ["preview-unavailable-for-public-impact"],
+          "rollback": "none",
+          "nextStates": ["MANUAL_APPROVAL"]
+        },
+        {
+          "id": "MANUAL_APPROVAL",
+          "input": ["preview-or-diff-evidence"],
+          "output": ["approval-record"],
+          "preconditions": ["approval-required-by-scope"],
+          "gates": ["approvedBy", "approvedScope", "approvedFiles", "approvedUrls", "approvedAt"],
+          "stopConditions": ["approval-missing"],
+          "rollback": "none",
+          "nextStates": ["PUBLICATION_CONFIRMATION"]
+        },
+        {
+          "id": "PUBLICATION_CONFIRMATION",
+          "input": ["approval-record"],
+          "output": ["publication-confirmation"],
+          "preconditions": ["all-gates-pass"],
+          "gates": ["rollback-ready"],
+          "stopConditions": ["rollback-unavailable"],
+          "rollback": "none",
+          "nextStates": ["SITEMAP_EXECUTION"]
+        },
+        {
+          "id": "SITEMAP_EXECUTION",
+          "input": ["publication-confirmation", "sitemap-plan"],
+          "output": ["sitemap-change-report"],
+          "preconditions": ["execution-mode-allows-publication"],
+          "gates": ["xml-valid", "canonical-valid"],
+          "stopConditions": ["dry-run", "sitemap-execution-not-approved"],
+          "rollback": "sitemap-entry-rollback",
+          "nextStates": ["INDEXNOW_DRY_RUN"]
+        },
+        {
+          "id": "INDEXNOW_DRY_RUN",
+          "input": ["sitemap-change-report"],
+          "output": ["indexnow-dry-run-report"],
+          "preconditions": ["published-url-valid"],
+          "gates": ["dry-run-success"],
+          "stopConditions": ["indexnow-dry-run-failed"],
+          "rollback": "none",
+          "nextStates": ["OPTIONAL_INDEXNOW_SEND"]
+        },
+        {
+          "id": "OPTIONAL_INDEXNOW_SEND",
+          "input": ["indexnow-dry-run-report"],
+          "output": ["indexnow-send-report"],
+          "preconditions": ["explicit-indexnow-send-approval"],
+          "gates": ["send-response-recorded"],
+          "stopConditions": ["approval-missing"],
+          "rollback": "none",
+          "nextStates": ["FINAL_VALIDATION"]
+        },
+        {
+          "id": "FINAL_VALIDATION",
+          "input": ["operation-evidence"],
+          "output": ["final-validation-report"],
+          "preconditions": ["all-applicable-reports-available"],
+          "gates": ["end-to-end-pass-or-warning"],
+          "stopConditions": ["final-validation-failed"],
+          "rollback": "operation-scope-rollback",
+          "nextStates": ["PUBLICATION_LOG"]
+        },
+        {
+          "id": "PUBLICATION_LOG",
+          "input": ["final-validation-report"],
+          "output": ["publication-log"],
+          "preconditions": ["final-status-known"],
+          "gates": ["affected-files-recorded", "checksums-recorded"],
+          "stopConditions": ["log-write-unavailable"],
+          "rollback": "none",
+          "nextStates": ["ROLLBACK_AVAILABLE"]
+        },
+        {
+          "id": "ROLLBACK_AVAILABLE",
+          "input": ["publication-log"],
+          "output": ["rollback-record"],
+          "preconditions": ["rollback-required"],
+          "gates": ["rollback-by-asset", "rollback-by-file", "rollback-by-operation", "rollback-full-batch"],
+          "stopConditions": ["rollback-unavailable"],
+          "rollback": "available",
+          "nextStates": []
+        }
+      ]
+    }
+  ]
+}

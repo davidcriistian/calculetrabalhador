@@ -1,0 +1,65 @@
+{
+    "status":  "PASS",
+    "files":  [
+                  {
+                      "file":  "index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "guias/pj/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/categoria/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "assets/home-refactor-v8.js",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "assets/js/nuclei.js",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "data/brain/nuclei.json",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "data/tools.json",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "data/articles.json",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "sitemap.xml",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "calculadora-clt-ou-pj/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/como-calcular-clt-ou-pj/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+                      "status":  "ALREADY_EXISTS"
+                  }
+              ]
+}

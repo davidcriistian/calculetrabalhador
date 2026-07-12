@@ -26,6 +26,7 @@
   },
   "partitions": {
     "asset": "/data/operations/reports/asset/index.json",
+    "end-to-end": "/data/operations/reports/end-to-end/index.json",
     "nucleus": "/data/operations/reports/nucleus/index.json"
   },
   "notes": [

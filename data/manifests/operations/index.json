@@ -17,6 +17,7 @@
   },
   "partitions": {
     "asset": "/data/manifests/operations/asset/index.json",
+    "end-to-end": "/data/manifests/operations/end-to-end/index.json",
     "nucleus": "/data/manifests/operations/nucleus/index.json"
   },
   "manifests": [

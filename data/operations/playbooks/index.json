@@ -35,10 +35,12 @@
     "expand-nucleus",
     "update-nucleus",
     "validate-nucleus",
-    "publish-nucleus"
+    "publish-nucleus",
+    "deliver-asset-end-to-end"
   ],
   "partitions": {
     "asset": "/data/operations/playbooks/asset/index.json",
+    "end-to-end": "/data/operations/playbooks/end-to-end/index.json",
     "nucleus": "/data/operations/playbooks/nucleus/index.json"
   },
   "playbookTemplate": {

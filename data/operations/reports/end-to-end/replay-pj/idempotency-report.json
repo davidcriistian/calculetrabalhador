@@ -1,0 +1,52 @@
+{
+    "status":  "PASS",
+    "items":  [
+                  {
+                      "item":  "nucleus:pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "guide:guide-pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "calculator:calculadora-clt-ou-pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "home-guide-card",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "sitemap:/guias/pj/",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "sitemap:/blog/categoria/pj/",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "article:clt-ou-pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "article:como-calcular-clt-ou-pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  },
+                  {
+                      "item":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                      "risk":  "DUPLICATION_RISK_NONE"
+                  }
+              ],
+    "createDecisionsDetected":  [
+
+                                ]
+}

@@ -1,0 +1,41 @@
+{
+    "status":  "PASS",
+    "publicMutationCount":  0,
+    "before":  {
+                   "blog/vantagens-e-desvantagens-clt-ou-pj/index.html":  "961f47e9834a3453b5c2d0f1d7c3371de88b4a69884deb8b755f35153df559f0",
+                   "guias/pj/index.html":  "fed92abe551f283c047bc062f365806a84e45de5ae39a515f18eb5a288deafde",
+                   "data/articles.json":  "5c6fabfc8349d60e4233f343c27abbbbe97a9eca9fa517d3907bc1d699b5f8c8",
+                   "assets/home-refactor-v8.js":  "005c247a153ca09ed8958ac75ff47954a1769d948a9b41af906d0863935247e5",
+                   "data/brain/nuclei.json":  "8b02dece26e9b5b5ab0a391f86390cddc11b5204ad15394675d16718269f586f",
+                   "data/tools.json":  "1a7ea393087b521736ce0faabe9a69793b30bc3dcf6306e32a6695ecd29a8b90",
+                   "blog/clt-ou-pj-vale-a-pena-em-2026/index.html":  "364acac2af1eadce27ef4b887c2f13298d8a6596e789d9882ea6edabd1e0ec01",
+                   "assets/js/nuclei.js":  "a7f7bf3d7d554afa9dc805b64e58ed1607fbaeec6240b0532c2d43a9052e0b43",
+                   "blog/clt-ou-pj/index.html":  "9750121d78777be23f187f7d1456181a19fb171b5dde99ca170561a902ccf29f",
+                   "calculadora-clt-ou-pj/index.html":  "4d893381403194022460919569d20629b40efff4fa1f3da99aab7b21549f9f56",
+                   "sitemap.xml":  "aef301dc7565fe814a388a7a6a6617a880641439641f53e1532c83f669d11474",
+                   "blog/categoria/index.html":  "bd6db547311407252818d03eca1d19a225794ae183422173b67b26db711ee512",
+                   "blog/como-calcular-clt-ou-pj/index.html":  "aecfb053701e66f16326212b61b4db35d964eb10c905f65539ff26c9deae8597",
+                   "index.html":  "4bc313745e4274fb4f3a9c3a8f1df4b3c354d7fa387ea05f5200246d4ccad53f",
+                   "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html":  "e751dda95408861bf7015ddc248820dd119af816bcd684dc48a7bc687bfe35c2"
+               },
+    "after":  {
+                  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html":  "961f47e9834a3453b5c2d0f1d7c3371de88b4a69884deb8b755f35153df559f0",
+                  "guias/pj/index.html":  "fed92abe551f283c047bc062f365806a84e45de5ae39a515f18eb5a288deafde",
+                  "data/articles.json":  "5c6fabfc8349d60e4233f343c27abbbbe97a9eca9fa517d3907bc1d699b5f8c8",
+                  "assets/home-refactor-v8.js":  "005c247a153ca09ed8958ac75ff47954a1769d948a9b41af906d0863935247e5",
+                  "data/brain/nuclei.json":  "8b02dece26e9b5b5ab0a391f86390cddc11b5204ad15394675d16718269f586f",
+                  "data/tools.json":  "1a7ea393087b521736ce0faabe9a69793b30bc3dcf6306e32a6695ecd29a8b90",
+                  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html":  "364acac2af1eadce27ef4b887c2f13298d8a6596e789d9882ea6edabd1e0ec01",
+                  "assets/js/nuclei.js":  "a7f7bf3d7d554afa9dc805b64e58ed1607fbaeec6240b0532c2d43a9052e0b43",
+                  "blog/clt-ou-pj/index.html":  "9750121d78777be23f187f7d1456181a19fb171b5dde99ca170561a902ccf29f",
+                  "calculadora-clt-ou-pj/index.html":  "4d893381403194022460919569d20629b40efff4fa1f3da99aab7b21549f9f56",
+                  "sitemap.xml":  "aef301dc7565fe814a388a7a6a6617a880641439641f53e1532c83f669d11474",
+                  "blog/categoria/index.html":  "bd6db547311407252818d03eca1d19a225794ae183422173b67b26db711ee512",
+                  "blog/como-calcular-clt-ou-pj/index.html":  "aecfb053701e66f16326212b61b4db35d964eb10c905f65539ff26c9deae8597",
+                  "index.html":  "4bc313745e4274fb4f3a9c3a8f1df4b3c354d7fa387ea05f5200246d4ccad53f",
+                  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html":  "e751dda95408861bf7015ddc248820dd119af816bcd684dc48a7bc687bfe35c2"
+              },
+    "mutations":  [
+
+                  ]
+}

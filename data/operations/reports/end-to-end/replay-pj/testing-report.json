@@ -1,0 +1,35 @@
+{
+    "status":  "PASS_WITH_WARNINGS",
+    "executed":  [
+                     "JSON_VALID",
+                     "INTERNAL_JSON_REFS_VALID",
+                     "node --check assets/home-refactor-v8.js",
+                     "node --check assets/js/nuclei.js",
+                     "validate-governance",
+                     "transform-rules",
+                     "shadow validators",
+                     "git diff --check",
+                     "identity-integrity",
+                     "relationship-integrity",
+                     "physical-asset-existence",
+                     "home-integration",
+                     "category-integration",
+                     "catalog-integrity",
+                     "sitemap-integrity",
+                     "cta-integrity",
+                     "cross-nucleus-isolation",
+                     "mutation-guard",
+                     "idempotency-analysis"
+                 ],
+    "notAvailable":  [
+                         "browser-rendering"
+                     ],
+    "warnings":  [
+                     "Browser rendering was not executed; replay used static/runtime configuration inspection",
+                     "git diff --check emitted LF/CRLF warnings only",
+                     "Phase 5.16 workflow files are present as local uncommitted changes"
+                 ],
+    "blockers":  [
+
+                 ]
+}

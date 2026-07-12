@@ -1,0 +1,169 @@
+{
+  "id": "end-to-end-operation-playbooks",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/playbook.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
+  "description": "Playbook for deliver-asset-end-to-end. It coordinates existing capabilities and stops when scope, governance or approval is missing.",
+  "playbooks": [
+    {
+      "operationId": "deliver-asset-end-to-end",
+      "objective": "Convert a user request into a governed, deterministic, reversible execution plan and execute only approved applicable phases.",
+      "minimumInputs": [
+        "operationId",
+        "requestType",
+        "objective",
+        "assetScope",
+        "assetTypes",
+        "manualApprovalRequired",
+        "rollbackRequired",
+        "dryRun"
+      ],
+      "defaultMode": "DRY_RUN",
+      "preconditions": [
+        "working-tree-audited",
+        "secret-scan-pass",
+        "json-valid",
+        "internal-json-refs-valid",
+        "request-type-supported",
+        "operation-permissions-resolved",
+        "rollback-required"
+      ],
+      "decisionSequence": [
+        "classify-request-type",
+        "resolve-scope-plan",
+        "resolve-governance-for-each-asset",
+        "check-reuse-before-create",
+        "classify-relationships",
+        "select-existing-operation-capabilities",
+        "select-physical-change-type",
+        "select-public-distribution-targets",
+        "select-testing-layers",
+        "select-validation-layers",
+        "select-approval-gates",
+        "select-rollback-shape"
+      ],
+      "physicalChangeTypes": [
+        "EXISTING_PAGE_CONTROLLED_UPDATE",
+        "NEW_PAGE_GENERATION",
+        "CATALOG_ONLY_UPDATE",
+        "CONFIGURATION_ONLY_UPDATE",
+        "NO_PUBLIC_CHANGE_REQUIRED",
+        "MANUAL_DECISION_REQUIRED"
+      ],
+      "publicCatalogRules": {
+        "calculator": "Use data/tools.json only when a calculator page is approved for catalog publication.",
+        "article": "Use data/articles.json only when an article page is approved for catalog publication.",
+        "guideOrNucleus": "Use data/brain/nuclei.json only when the current runtime projection requires it.",
+        "rule": "Do not copy PAM into public catalogs."
+      },
+      "distributionRules": {
+        "tools": "Tools page follows data/tools.json; Home exposure requires explicit showOnHome approval.",
+        "blog": "Blog follows data/articles.json; category exposure requires approved projection.",
+        "guide": "Guide page generation and Home exposure require governed Guide/Nucleus projection.",
+        "category": "Use deterministic articleFilter; do not use title keyword heuristics.",
+        "sitemap": "Add URL only after physical page and canonical are valid.",
+        "indexnow": "Dry-run first; send only after explicit approval."
+      },
+      "linkAndCtaRules": {
+        "calculator": "Use contextual links only when approved.",
+        "pillarArticle": "CTA to calculator and satellite links only when approved.",
+        "satelliteArticle": "CTA to calculator at approved beginning, middle and final positions without duplicates.",
+        "guide": "Links to calculator, pillar and satellites only when relationships are approved."
+      },
+      "schemaRules": {
+        "calculator": ["SoftwareApplication when applicable", "FAQPage only with real FAQ", "BreadcrumbList"],
+        "article": ["Article", "FAQPage only with real FAQ", "BreadcrumbList"],
+        "guide": ["CollectionPage", "FAQPage only with real FAQ", "BreadcrumbList"],
+        "category": ["CollectionPage", "BreadcrumbList"],
+        "prohibited": ["empty schema", "nonexistent URL", "canonical mismatch", "FAQPage without FAQ", "broken breadcrumb"]
+      },
+      "testingPolicy": {
+        "statuses": ["PASS", "FAIL", "WARNING", "NOT_APPLICABLE", "NOT_AVAILABLE"],
+        "rule": "Do not mark a test PASS when it was not executed."
+      },
+      "approvalPolicy": {
+        "requiresManualApprovalFor": [
+          "new-page",
+          "visual-change",
+          "new-url",
+          "seo-change",
+          "calculation-change",
+          "legal-change",
+          "home-change",
+          "category-change",
+          "sitemap-change",
+          "indexnow-send",
+          "batch-migration"
+        ],
+        "approvalFields": [
+          "approvedBy",
+          "approvedScope",
+          "approvedFiles",
+          "approvedUrls",
+          "approvedAt",
+          "excludedScope"
+        ]
+      },
+      "idempotencyRules": [
+        "Check current state before creating.",
+        "Do not duplicate asset, card, catalog entry, relationship, CTA, sitemap URL or publication report.",
+        "Return SKIPPED_ALREADY_COMPLIANT when the requested state already exists."
+      ],
+      "stopConditions": [
+        "working-tree-collision",
+        "duplicate-identity",
+        "slug-conflict",
+        "url-conflict",
+        "unapproved-relationship",
+        "unknown-destination",
+        "unresolved-pattern",
+        "unvalidated-calculation",
+        "missing-critical-reference",
+        "missing-blueprint",
+        "missing-gold-standard",
+        "critical-test-failed",
+        "critical-validation-failed",
+        "rollback-unavailable",
+        "required-human-decision-missing"
+      ],
+      "forbiddenActions": [
+        "blindly-run-all-phases",
+        "create-new-engine",
+        "duplicate-create-asset-logic",
+        "hardcode-home-card",
+        "keyword-based-category-filter",
+        "format-entire-public-file",
+        "modify-global-css-js-without-scope",
+        "publish-without-approval",
+        "indexnow-send-without-approval"
+      ],
+      "outputs": [
+        "executionScopePlan",
+        "governanceResolution",
+        "reuseCreateDecision",
+        "relationshipPlan",
+        "physicalPlan",
+        "testingPlan",
+        "validationPlan",
+        "approvalRecord",
+        "rollbackPlan",
+        "consolidatedReport"
+      ]
+    }
+  ],
+  "duplicationAudit": {
+    "createAsset": "referenced-not-duplicated",
+    "nucleusOperations": "referenced-not-duplicated",
+    "manifestSystem": "extended-by-partition",
+    "publishing": "referenced-not-reimplemented",
+    "testing": "referenced-not-reimplemented",
+    "validation": "referenced-not-reimplemented",
+    "rollback": "report-template-only",
+    "runtimeMapping": "uses-existing-evidence-and-contracts"
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "status":  "RESOLVED_WITH_WARNINGS",
+    "assets":  [
+                   {
+                       "assetId":  "domain:pj",
+                       "assetType":  "domain",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "nucleus:pj",
+                       "assetType":  "nucleus",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "guide:guide-pj",
+                       "assetType":  "guide",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "cluster:clt-ou-pj",
+                       "assetType":  "cluster",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "calculator:calculadora-clt-ou-pj",
+                       "assetType":  "calculator",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "article:clt-ou-pj",
+                       "assetType":  "article",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "article:como-calcular-clt-ou-pj",
+                       "assetType":  "article",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                       "assetType":  "article",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                       "assetType":  "article",
+                       "status":  "REUSE"
+                   },
+                   {
+                       "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                       "assetType":  "article",
+                       "status":  "REUSE"
+                   }
+               ],
+    "workflowSources":  [
+                            "data/manifests/operations/end-to-end/index.json",
+                            "data/operations/playbooks/end-to-end/index.json",
+                            "data/operations/workflows/end-to-end/index.json",
+                            "data/operations/checklists/end-to-end/index.json"
+                        ]
+}

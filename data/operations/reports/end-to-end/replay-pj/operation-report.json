@@ -1,0 +1,21 @@
+{
+    "result":  "SUCCESS_WITH_WARNINGS",
+    "operation":  "deliver-asset-end-to-end",
+    "requestType":  "VALIDATE_ONLY",
+    "executionMode":  "VALIDATE_ONLY",
+    "publicMutationCount":  0,
+    "indexNowExecuted":  false,
+    "publicationExecuted":  false,
+    "assetsDiscovered":  10,
+    "reuseDecisions":  10,
+    "noChangeDecisions":  2,
+    "createDecisions":  0,
+    "warnings":  [
+                     "Browser rendering was not executed; replay used static/runtime configuration inspection",
+                     "git diff --check emitted LF/CRLF warnings only",
+                     "Phase 5.16 workflow files are present as local uncommitted changes"
+                 ],
+    "blockers":  [
+
+                 ]
+}

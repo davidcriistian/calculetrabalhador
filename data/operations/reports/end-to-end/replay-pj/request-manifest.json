@@ -1,0 +1,22 @@
+{
+    "operation":  "deliver-asset-end-to-end",
+    "requestType":  "VALIDATE_ONLY",
+    "executionMode":  "VALIDATE_ONLY",
+    "publicationIntent":  "NONE",
+    "indexingIntent":  "NONE",
+    "dryRunBehavior":  "READ_ONLY",
+    "target":  {
+                   "domain":  "pj",
+                   "pillar":  "article:clt-ou-pj",
+                   "satellites":  [
+                                      "como-calcular-clt-ou-pj",
+                                      "vantagens-e-desvantagens-clt-ou-pj",
+                                      "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                                      "clt-ou-pj-vale-a-pena-em-2026"
+                                  ],
+                   "guide":  "guide:guide-pj",
+                   "cluster":  "cluster:clt-ou-pj",
+                   "calculator":  "calculator:calculadora-clt-ou-pj",
+                   "nucleus":  "nucleus:pj"
+               }
+}

@@ -1,0 +1,53 @@
+{
+    "status":  "PASS",
+    "decisions":  [
+                      {
+                          "assetId":  "domain:pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "nucleus:pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "guide:guide-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "cluster:clt-ou-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "calculator:calculadora-clt-ou-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "article:clt-ou-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "article:como-calcular-clt-ou-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "article:clt-ou-pj-vale-a-pena-em-2026",
+                          "decision":  "REUSE"
+                      },
+                      {
+                          "assetId":  "catalog:data/tools.json",
+                          "decision":  "NO_CHANGE_REQUIRED"
+                      },
+                      {
+                          "assetId":  "catalog:data/articles.json",
+                          "decision":  "NO_CHANGE_REQUIRED"
+                      }
+                  ]
+}

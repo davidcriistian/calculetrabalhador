@@ -1,0 +1,40 @@
+{
+    "status":  "PASS_WITH_WARNINGS",
+    "links":  [
+                  {
+                      "file":  "guias/pj/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  2
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  6,
+                      "finalCtaCount":  0
+                  },
+                  {
+                      "file":  "blog/como-calcular-clt-ou-pj/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  3,
+                      "finalCtaCount":  0
+                  },
+                  {
+                      "file":  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  4,
+                      "finalCtaCount":  1
+                  },
+                  {
+                      "file":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  4,
+                      "finalCtaCount":  1
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+                      "target":  "/calculadora-clt-ou-pj/",
+                      "count":  3,
+                      "finalCtaCount":  0
+                  }
+              ]
+}

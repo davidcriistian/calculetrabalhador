@@ -1,0 +1,77 @@
+{
+    "status":  "PASS_WITH_WARNINGS",
+    "pages":  [
+                  {
+                      "file":  "guias/pj/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  1,
+                      "articleSchemaCount":  0,
+                      "collectionPageCount":  1,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  0
+                  },
+                  {
+                      "file":  "calculadora-clt-ou-pj/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  0,
+                      "articleSchemaCount":  0,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  0,
+                      "articleSchemaCount":  0,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/como-calcular-clt-ou-pj/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  1,
+                      "articleSchemaCount":  1,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  1,
+                      "articleSchemaCount":  1,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  1,
+                      "articleSchemaCount":  1,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  1,
+                      "articleSchemaCount":  1,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  1
+                  },
+                  {
+                      "file":  "blog/categoria/index.html",
+                      "canonicalCount":  1,
+                      "breadcrumbListCount":  0,
+                      "articleSchemaCount":  0,
+                      "collectionPageCount":  0,
+                      "softwareApplicationCount":  0,
+                      "faqPageCount":  0
+                  }
+              ]
+}

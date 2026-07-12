@@ -32,6 +32,7 @@
   },
   "partitions": {
     "asset": "/data/operations/workflows/asset/index.json",
+    "end-to-end": "/data/operations/workflows/end-to-end/index.json",
     "nucleus": "/data/operations/workflows/nucleus/index.json"
   },
   "notes": [

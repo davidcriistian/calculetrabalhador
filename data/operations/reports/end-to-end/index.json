@@ -1,0 +1,71 @@
+{
+  "id": "end-to-end-operation-reports",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/report.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
+  "description": "Consolidated report template and dry-run evidence for deliver-asset-end-to-end.",
+  "reportTemplateId": "consolidated-report-template",
+  "reportTemplate": {
+    "operationId": null,
+    "request": {},
+    "scope": {
+      "requestType": null,
+      "executionMode": "DRY_RUN",
+      "capabilities": []
+    },
+    "assets": [],
+    "reusedAssets": [],
+    "createdAssets": [],
+    "updatedAssets": [],
+    "skippedAssets": [],
+    "governanceResolved": [],
+    "relationships": [],
+    "physicalFiles": [],
+    "publicCatalogChanges": [],
+    "runtimeProjectionChanges": [],
+    "homeImpact": "NOT_APPLICABLE",
+    "blogImpact": "NOT_APPLICABLE",
+    "toolsImpact": "NOT_APPLICABLE",
+    "categoryImpact": "NOT_APPLICABLE",
+    "guideImpact": "NOT_APPLICABLE",
+    "sitemapImpact": "NOT_APPLICABLE",
+    "indexnowImpact": "NOT_APPLICABLE",
+    "testing": {
+      "status": "NOT_APPLICABLE",
+      "reports": []
+    },
+    "validation": {
+      "status": "NOT_APPLICABLE",
+      "reports": []
+    },
+    "manualDecisions": [],
+    "warnings": [],
+    "blockers": [],
+    "rollback": {
+      "byAsset": [],
+      "byFile": [],
+      "byOperation": [],
+      "fullBatch": null
+    },
+    "finalStatus": null
+  },
+  "statusValues": [
+    "SUCCESS_NO_PUBLIC_CHANGE",
+    "SUCCESS_INTERNAL_ONLY",
+    "SUCCESS_CONTROLLED_EXECUTION",
+    "SUCCESS_PUBLISHED",
+    "SUCCESS_WITH_WARNINGS",
+    "MANUAL_DECISION_REQUIRED",
+    "BLOCKED",
+    "FAILED",
+    "FAILED_AND_ROLLED_BACK"
+  ],
+  "dryRunEvidence": {
+    "hypotheticalAutonomoPrevidencia": "/data/operations/reports/end-to-end/dry-run-autonomo-previdencia.json"
+  }
+}

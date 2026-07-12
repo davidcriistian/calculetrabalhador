@@ -1,0 +1,10 @@
+{
+    "status":  "SUCCESS_WITH_WARNINGS",
+    "writeScope":  "data/operations/reports/end-to-end/replay-pj only",
+    "publicFilesAltered":  false,
+    "assetsCreated":  false,
+    "relationshipsChanged":  false,
+    "sitemapChanged":  false,
+    "indexNowExecuted":  false,
+    "gitAddCommitPushExecuted":  false
+}

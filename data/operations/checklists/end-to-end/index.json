@@ -1,0 +1,90 @@
+{
+  "id": "end-to-end-operation-checklists",
+  "version": "0.1.0",
+  "schema": "/data/operations/schemas/checklist.schema.json",
+  "status": "foundation",
+  "runtimeStatus": "not-consumed",
+  "createdAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "owner": "Calcule Trabalhador",
+  "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
+  "description": "Checklist for scoped end-to-end asset delivery. Items are declarative and do not execute operations.",
+  "before": [
+    "confirm-request-type",
+    "confirm-execution-mode-defaults-to-dry-run",
+    "run-git-working-tree-audit",
+    "classify-modified-files-and-collisions",
+    "scan-for-secrets-and-unsafe-files",
+    "validate-json",
+    "validate-internal-json-references",
+    "confirm-source-of-truth-files",
+    "confirm-typed-asset-identity",
+    "confirm-slug-url-and-physical-destination",
+    "confirm-rollback-requirements"
+  ],
+  "scope": [
+    "classify-each-capability-as-required-optional-not-applicable-blocked-or-manual-decision",
+    "reuse-before-create-for-domain-nucleus-guide-cluster-calculator-article-product-cta-page-catalog-relationship-sitemap",
+    "block-when-required-governance-is-missing",
+    "do-not-run-unnecessary-phases"
+  ],
+  "during": [
+    "use-create-asset-for-asset-provisioning",
+    "use-approved-relationship-flow",
+    "touch-only-allowed-files",
+    "generate-snapshot-before-public-change",
+    "preserve-public-catalog-shape",
+    "preserve-canonical-jsonld-breadcrumb-unless-in-scope",
+    "avoid-hardcoded-home-cards",
+    "avoid-keyword-category-filters",
+    "dry-run-indexnow-before-send"
+  ],
+  "testing": [
+    "pre-change-working-tree-identity-registry-destination-snapshot",
+    "asset-structure-logic-links-seo-accessibility-responsiveness",
+    "runtime-consumers-catalogs-home-blog-category-tools",
+    "integration-navigation-cross-nucleus-duplicates-sitemap-fail-safe",
+    "post-change-diff-checksum-rollback-final-validation",
+    "mark-unexecuted-tests-not-available-or-not-applicable"
+  ],
+  "validation": [
+    "constitution",
+    "architecture-evolution-policy",
+    "platform-architecture",
+    "asset-identity-policy",
+    "pam",
+    "blueprints",
+    "gold-standards",
+    "references",
+    "registry",
+    "domain-relationship-model",
+    "publishing",
+    "seo",
+    "accessibility",
+    "responsiveness",
+    "runtime",
+    "rollback"
+  ],
+  "after": [
+    "record-consolidated-report",
+    "record-created-updated-reused-skipped-assets",
+    "record-public-catalog-runtime-sitemap-indexnow-impact",
+    "record-manual-decisions-warnings-blockers",
+    "confirm-rollback-by-asset-file-operation-and-batch",
+    "confirm-no-unapproved-public-change"
+  ],
+  "blockedWhen": [
+    "working-tree-collision",
+    "secret-detected",
+    "identity-duplicate",
+    "slug-url-conflict",
+    "unapproved-relationship",
+    "missing-required-blueprint",
+    "missing-required-gold-standard",
+    "missing-critical-reference",
+    "critical-test-failed",
+    "critical-validation-failed",
+    "rollback-unavailable",
+    "manual-decision-required-and-not-provided"
+  ]
+}
