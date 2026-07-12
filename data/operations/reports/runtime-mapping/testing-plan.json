@@ -1,15 +1,26 @@
 {
-    "id":  "runtime-mapping-testing-plan",
-    "status":  "draft",
-    "executionStatus":  "not-run",
-    "testingReference":  "/data/pos/testing/index.json",
-    "plannedChecks":  [
-                          "runtime-impact",
-                          "execution-order",
-                          "component-integrity",
-                          "navigation-impact",
-                          "jsonld-impact",
-                          "sitemap-impact",
-                          "rollback-impact"
-                      ]
+  "id": "runtime-mapping-testing-plan",
+  "status": "draft",
+  "executionStatus": "not-run",
+  "reconciledAt": "2026-07-11",
+  "testingReference": "/data/pos/testing/index.json",
+  "plannedChecks": [
+    "working-tree-guard",
+    "runtime-physical-file-existence",
+    "catalog-rendering-home-tools",
+    "catalog-rendering-tools-page",
+    "catalog-rendering-blog-page",
+    "article-page-existence",
+    "category-runtime-pending-state",
+    "guide-page-generation-requirement",
+    "breadcrumb-page-level-generation",
+    "jsonld-page-level-generation",
+    "sitemap-manual-update",
+    "indexnow-dry-run-before-send",
+    "rollback-impact"
+  ],
+  "removedChecks": [
+    "component-integrity-for-nonexistent-abstractions",
+    "search-index-update"
+  ]
 }

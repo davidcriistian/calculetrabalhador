@@ -1,0 +1,16 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "decision": "execute-controlled-generation",
+  "reason": "Target does not exist, approved relationships point to existing physical assets, and required empty modules can be omitted without expanding scope.",
+  "manualDecisionsRetained": [
+    "official guide reference unavailable",
+    "future public discovery integration",
+    "future sitemap integration",
+    "future /guias/ index creation"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "change-report-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "completed",
+  "publicChangeApplied": true,
+  "changedFiles": ["blog/vantagens-e-desvantagens-clt-ou-pj/index.html"],
+  "changedRegion": "after the concluding paragraph of 'Como transformar a decisão em números' and before FAQ",
+  "changeType": "minimal-controlled-html-insert",
+  "insertedBlock": "CTA_CARD_V1_Final",
+  "targetUrl": "/calculadora-clt-ou-pj/",
+  "linesAdded": 28,
+  "linesRemoved": 0,
+  "sha256After": "961F47E9834A3453B5C2D0F1D7C3371DE88B4A69884DEB8B755F35153DF559F0",
+  "unrelatedChanges": false,
+  "seoChanged": false,
+  "jsonLdChanged": false,
+  "scriptsChanged": false,
+  "footerChanged": false,
+  "catalogChanged": false,
+  "sitemapChanged": false
+}

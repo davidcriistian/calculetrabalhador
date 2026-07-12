@@ -1,0 +1,92 @@
+{
+  "id": "physical-publication-contract-pj",
+  "version": "1.0.0",
+  "createdAt": "2026-07-11",
+  "phase": "5.6",
+  "status": "draft",
+  "result": "PHYSICAL_PUBLICATION_CONTRACT_READY_WITH_MANUAL_DECISIONS",
+  "runtimeStatus": "not-consumed",
+  "publicationExecuted": false,
+  "publicFilesChanged": false,
+  "objective": "Define the exact physical publication contract between governed PJ assets and the current public runtime files.",
+  "scope": {
+    "nucleus": "nucleus:pj",
+    "guide": "guide:guide-pj",
+    "cluster": "cluster:clt-ou-pj",
+    "calculator": "calculator:calculadora-clt-ou-pj",
+    "articles": [
+      "article:clt-ou-pj",
+      "article:como-calcular-clt-ou-pj",
+      "article:vantagens-e-desvantagens-clt-ou-pj",
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "authorities": [
+    "Constitution",
+    "Platform Architecture",
+    "Asset Identity Policy",
+    "PAM",
+    "Blueprints",
+    "Gold Standards",
+    "Reference System",
+    "Registry",
+    "Publishing",
+    "Relationship Approval",
+    "Site Composition",
+    "Preview",
+    "Runtime Mapping Reconciled",
+    "physical repository"
+  ],
+  "contractFiles": [
+    "asset-to-runtime-map.json",
+    "calculator-publication-contract.json",
+    "article-publication-contract.json",
+    "guide-publication-contract.json",
+    "category-publication-contract.json",
+    "home-publication-contract.json",
+    "catalog-publication-contract.json",
+    "metadata-publication-contract.json",
+    "internal-links-publication-contract.json",
+    "sitemap-publication-contract.json",
+    "indexnow-publication-contract.json",
+    "working-tree-preconditions.json",
+    "execution-gates.json",
+    "rollback-contract.json",
+    "testing-contract.json",
+    "validation-contract.json",
+    "operation-report.json",
+    "audit-report.json"
+  ],
+  "nonResponsibilities": [
+    "publish",
+    "modify public files",
+    "generate pages",
+    "change runtime",
+    "deploy",
+    "change sitemap.xml",
+    "execute IndexNow",
+    "create new architecture",
+    "create new layer",
+    "create new engine"
+  ],
+  "successCriteria": [
+    "each asset has a known physical destination or GENERATION_REQUIRED status",
+    "all real catalogs and consumers are identified",
+    "no nonexistent abstraction is used as a physical target",
+    "required catalog fields are documented",
+    "working tree guards are complete",
+    "execution gates are complete",
+    "rollback is complete",
+    "no public change is executed"
+  ],
+  "manualDecisionsRequired": [
+    "final Guide PJ Home card order",
+    "public title and description for Guide PJ",
+    "final SEO role separation between /guias/pj/ and /blog/categoria/pj/",
+    "approval of missing final CTAs",
+    "treatment of unavailable references",
+    "destination of local pending files",
+    "final publication authorization"
+  ]
+}

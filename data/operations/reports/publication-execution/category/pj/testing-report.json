@@ -1,0 +1,46 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "passed-with-warnings",
+    "tests":  {
+                  "category-route-resolution":  "PASS",
+                  "category-slug-resolution":  "PASS",
+                  "category-config-valid":  "PASS",
+                  "article-filter-deterministic":  "PASS",
+                  "expected-articles-found":  "PASS",
+                  "no-cross-nucleus-leak":  "PASS",
+                  "no-duplicate-cards":  "PASS",
+                  "article-links-valid":  "PASS",
+                  "guide-category-role-separation":  "PASS",
+                  "canonical-correct":  "PASS",
+                  "title-description-H1-distinct-from-guide":  "PASS",
+                  "breadcrumb-correct":  "PASS",
+                  "JSON-LD-compatible":  "PASS - no schema added",
+                  "empty-state-safe":  "PASS",
+                  "blog-main-preserved":  "PASS",
+                  "article-pages-preserved":  "PASS",
+                  "home-preserved":  "PASS",
+                  "guide-pj-preserved":  "PASS",
+                  "sitemap-entry-unique":  "PASS",
+                  "no-out-of-scope-change":  "PASS",
+                  "rollback-readiness":  "PASS"
+              },
+    "commands":  [
+                     "CATEGORY_PJ_RUNTIME_PASS",
+                     "JSON_VALID",
+                     "INTERNAL_JSON_REFS_VALID",
+                     "node --check assets/js/nuclei.js",
+                     "validate-governance",
+                     "transform-rules",
+                     "validate-shadow-adicional-noturno",
+                     "validate-shadow-aviso-previo",
+                     "git diff --check"
+                 ],
+    "warnings":  [
+                     "git diff --check emitted LF/CRLF warnings only.",
+                     "No browser visual validation was run."
+                 ]
+}

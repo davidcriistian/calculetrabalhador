@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "file": "index.html",
+      "exists": true
+    },
+    {
+      "file": "guias/pj/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/categoria/index.html",
+      "exists": true
+    },
+    {
+      "file": "calculadora-clt-ou-pj/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/clt-ou-pj/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/como-calcular-clt-ou-pj/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+      "exists": true
+    },
+    {
+      "file": "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+      "exists": true
+    },
+    {
+      "file": "sitemap.xml",
+      "exists": true
+    },
+    {
+      "file": "assets/home-refactor-v8.js",
+      "exists": true
+    },
+    {
+      "file": "assets/js/nuclei.js",
+      "exists": true
+    },
+    {
+      "file": "data/brain/nuclei.json",
+      "exists": true
+    },
+    {
+      "file": "data/tools.json",
+      "exists": true
+    },
+    {
+      "file": "data/articles.json",
+      "exists": true
+    }
+  ]
+}

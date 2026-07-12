@@ -1,0 +1,123 @@
+{
+    "operationId":  "integrated-public-flow-validation-guide-pj",
+    "phase":  "5.11",
+    "createdAt":  "2026-07-11T23:14:10.8414541Z",
+    "result":  "INTEGRATED PUBLIC FLOW PASSED WITH WARNINGS",
+    "summary":  {
+                    "home":  "PASS",
+                    "guidePj":  "PASS",
+                    "guideLinks":  "PASS",
+                    "calculator":  "PASS",
+                    "pillarArticle":  "PASS",
+                    "satelliteArticles":  "PASS_WITH_WARNING",
+                    "navigationGraph":  "PASS",
+                    "crossGuideLeak":  "PASS",
+                    "failSafe":  "PASS",
+                    "runtime":  "PASS_WITH_BROWSER_WARNING",
+                    "catalogs":  "CATALOGS_PRESERVED",
+                    "sitemap":  "PENDING_PUBLICATION_INTEGRATION",
+                    "indexNow":  "NOT_EXECUTED",
+                    "categoryPj":  "NOT_ALTERED"
+                },
+    "filesCompared":  [
+                          {
+                              "path":  "index.html",
+                              "baselineSha256":  "4BC313745E4274FB4F3A9C3A8F1DF4B3C354D7FA387EA05F5200246D4CCAD53F",
+                              "finalSha256":  "4BC313745E4274FB4F3A9C3A8F1DF4B3C354D7FA387EA05F5200246D4CCAD53F",
+                              "preserved":  true,
+                              "status":  "M index.html"
+                          },
+                          {
+                              "path":  "assets/home-refactor-v8.js",
+                              "baselineSha256":  "005C247A153CA09ED8958AC75FF47954A1769D948A9B41AF906D0863935247E5",
+                              "finalSha256":  "005C247A153CA09ED8958AC75FF47954A1769D948A9B41AF906D0863935247E5",
+                              "preserved":  true,
+                              "status":  "M assets/home-refactor-v8.js"
+                          },
+                          {
+                              "path":  "assets/js/nuclei.js",
+                              "baselineSha256":  "196748B59433EC34A81FF67859FE7FF6070873A3D4EF095D3EF676567CC8E5F8",
+                              "finalSha256":  "196748B59433EC34A81FF67859FE7FF6070873A3D4EF095D3EF676567CC8E5F8",
+                              "preserved":  true,
+                              "status":  "?? assets/js/nuclei.js"
+                          },
+                          {
+                              "path":  "data/brain/nuclei.json",
+                              "baselineSha256":  "697D0BBFAD7807FD8C6F3CC26A1EE9DD857135E928A688639B2EFF7DC7D147A7",
+                              "finalSha256":  "697D0BBFAD7807FD8C6F3CC26A1EE9DD857135E928A688639B2EFF7DC7D147A7",
+                              "preserved":  true,
+                              "status":  "?? data/brain/nuclei.json"
+                          },
+                          {
+                              "path":  "guias/pj/index.html",
+                              "baselineSha256":  "FED92ABE551F283C047BC062F365806A84E45DE5AE39A515F18EB5A288DEAFDE",
+                              "finalSha256":  "FED92ABE551F283C047BC062F365806A84E45DE5AE39A515F18EB5A288DEAFDE",
+                              "preserved":  true,
+                              "status":  "?? guias/pj/index.html"
+                          },
+                          {
+                              "path":  "calculadora-clt-ou-pj/index.html",
+                              "baselineSha256":  "4D893381403194022460919569D20629B40EFFF4FA1F3DA99AAB7B21549F9F56",
+                              "finalSha256":  "4D893381403194022460919569D20629B40EFFF4FA1F3DA99AAB7B21549F9F56",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "blog/clt-ou-pj/index.html",
+                              "baselineSha256":  "9750121D78777BE23F187F7D1456181A19FB171B5DDE99CA170561A902CCF29F",
+                              "finalSha256":  "9750121D78777BE23F187F7D1456181A19FB171B5DDE99CA170561A902CCF29F",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "blog/como-calcular-clt-ou-pj/index.html",
+                              "baselineSha256":  "AECFB053701E66F16326212B61B4DB35D964EB10C905F65539FF26C9DEAE8597",
+                              "finalSha256":  "AECFB053701E66F16326212B61B4DB35D964EB10C905F65539FF26C9DEAE8597",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                              "baselineSha256":  "961F47E9834A3453B5C2D0F1D7C3371DE88B4A69884DEB8B755F35153DF559F0",
+                              "finalSha256":  "961F47E9834A3453B5C2D0F1D7C3371DE88B4A69884DEB8B755F35153DF559F0",
+                              "preserved":  true,
+                              "status":  "M blog/vantagens-e-desvantagens-clt-ou-pj/index.html"
+                          },
+                          {
+                              "path":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+                              "baselineSha256":  "A4B03AF1F13604E437E3970331C5639F37DD46DFFB8AC00FDC5F4AE06C6E1E7F",
+                              "finalSha256":  "A4B03AF1F13604E437E3970331C5639F37DD46DFFB8AC00FDC5F4AE06C6E1E7F",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+                              "baselineSha256":  "364ACAC2AF1EADCE27EF4B887C2F13298D8A6596E789D9882EA6EDABD1E0EC01",
+                              "finalSha256":  "364ACAC2AF1EADCE27EF4B887C2F13298D8A6596E789D9882EA6EDABD1E0EC01",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "data/tools.json",
+                              "baselineSha256":  "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+                              "finalSha256":  "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+                              "preserved":  true,
+                              "status":  ""
+                          },
+                          {
+                              "path":  "data/articles.json",
+                              "baselineSha256":  "5C6FABFC8349D60E4233F343C27ABBBBE97A9ECA9FA517D3907BC1D699B5F8C8",
+                              "finalSha256":  "5C6FABFC8349D60E4233F343C27ABBBBE97A9ECA9FA517D3907BC1D699B5F8C8",
+                              "preserved":  true,
+                              "status":  ""
+                          }
+                      ],
+    "blockers":  [
+
+                 ],
+    "warnings":  [
+                     "Visual browser validation unavailable.",
+                     "Quanto article CTA gap remains a separate operational decision.",
+                     "Existing working tree contains pending changes from earlier phases."
+                 ]
+}

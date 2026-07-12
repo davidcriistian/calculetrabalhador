@@ -1,0 +1,13 @@
+{
+  "id": "testing-contract-pj-publication",
+  "status": "draft",
+  "executionStatus": "not-run",
+  "tests": {
+    "calculator": ["calculation baseline", "input validation", "result correctness", "visual regression", "responsiveness", "links", "SEO", "JSON-LD"],
+    "article": ["structure", "headings", "CTAs", "links", "canonical", "JSON-LD", "responsiveness"],
+    "guide": ["composition", "nucleus isolation", "cards", "empty states", "navigation", "breadcrumb", "JSON-LD"],
+    "site": ["Home", "Ferramentas", "Blog", "Categoria", "sitemap", "no broken links"]
+  },
+  "requiredBeforePublication": ["testing plan approved", "test scope matches changed files", "failures block publication"],
+  "testsExecutedNow": false
+}

@@ -1,0 +1,36 @@
+{
+  "id": "sitemap-publication-contract-pj",
+  "status": "draft",
+  "file": "sitemap.xml",
+  "process": "manual-today",
+  "rules": [
+    "add new URL only after physical page exists and canonical is valid",
+    "update lastmod only when public page changes",
+    "prevent duplicate loc entries",
+    "remove operation-owned URL on rollback",
+    "validate canonical before inclusion"
+  ],
+  "pilotUrls": [
+    {
+      "url": "/guias/pj/",
+      "action": "add only after real page creation and approval",
+      "status": "not-created"
+    },
+    {
+      "url": "/calculadora-clt-ou-pj/",
+      "action": "update lastmod only if page changes",
+      "status": "existing"
+    },
+    {
+      "url": "/blog/clt-ou-pj/",
+      "action": "update lastmod only if page changes",
+      "status": "existing"
+    },
+    {
+      "url": "/blog/categoria/pj/",
+      "action": "add or preserve only after local pending category runtime is approved",
+      "status": "local-pending-not-official"
+    }
+  ],
+  "publicFilesChangedNow": false
+}

@@ -12,6 +12,10 @@
 	RewriteRule ^calculadora-aviso-previo-2026/?$ /calculadora-aviso-previo/ [R=301,L]
 	RewriteRule ^calculadora-adicional-noturno-2026/?$ /calculadora-adicional-noturno/ [R=301,L]
 	RewriteRule ^calculadora-insalubridade-2026/?$ /calculadora-insalubridade/ [R=301,L]
+
+	# Template unico para paginas de categoria do blog
+	RewriteRule ^blog/categoria/([a-z0-9-]+)/?$ /blog/categoria/index.html [L]
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^ index.html [L]

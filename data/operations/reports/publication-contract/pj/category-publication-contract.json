@@ -1,0 +1,26 @@
+{
+  "id": "category-publication-contract-pj",
+  "status": "draft",
+  "assetId": "cluster:clt-ou-pj",
+  "publicPattern": "/blog/categoria/{slug}/",
+  "pjUrl": "/blog/categoria/pj/",
+  "classification": "READY_WITH_GUARDS_LOCAL_PENDING_NOT_OFFICIAL",
+  "localPendingFiles": [
+    "blog/categoria/",
+    "assets/js/nuclei.js",
+    "data/brain/nuclei.json",
+    ".htaccess",
+    "blog/index.html",
+    "sitemap.xml"
+  ],
+  "blockingRule": "Do not change category runtime until local pending files are reviewed, classified and formally approved.",
+  "futureInputs": ["data/brain/nuclei.json", "data/articles.json", "assets/js/nuclei.js", ".htaccess rewrite"],
+  "validationRules": [
+    "slug pj must resolve to nucleus pj",
+    "category page must not be treated as guide page",
+    "canonical must match /blog/categoria/pj/ only after approval",
+    "sitemap inclusion requires approved category runtime",
+    "preserve pre-existing working tree changes"
+  ],
+  "publicFilesChangedNow": false
+}

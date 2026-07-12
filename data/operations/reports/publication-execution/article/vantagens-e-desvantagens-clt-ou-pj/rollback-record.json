@@ -1,0 +1,15 @@
+{
+  "id": "rollback-record-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "ready-not-executed",
+  "rollbackRequired": false,
+  "rollbackExecuted": false,
+  "rollbackTriggerConditions": [
+    "testing failure",
+    "validation failure",
+    "diff larger than expected",
+    "out-of-scope file changed",
+    "explicit abort decision"
+  ],
+  "exactRollbackAction": "remove only the inserted CTA_CARD_V1_Final block from blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+  "postRollbackChecks": ["target diff cleared for operation block", "JSON_VALID", "target page sanity", "git diff review"]
+}

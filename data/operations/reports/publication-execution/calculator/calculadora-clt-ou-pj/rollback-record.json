@@ -1,0 +1,16 @@
+{
+  "id": "rollback-record-calculadora-clt-ou-pj-public-catalog",
+  "status": "not-required",
+  "reason": "No public catalog change was applied.",
+  "file": "data/tools.json",
+  "sha256Before": "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+  "sha256After": "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+  "rollbackRequired": false,
+  "rollbackExecuted": false,
+  "rollbackIfFutureChangeFails": [
+    "restore previous entry fields",
+    "preserve original JSON structure",
+    "confirm expected checksum after restoration",
+    "rerun JSON and governance validations"
+  ]
+}

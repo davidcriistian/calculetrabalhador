@@ -1,0 +1,17 @@
+{
+  "id": "gap-confirmation-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "completed",
+  "warningAudited": "possible-final-calculator-cta-gap",
+  "answers": {
+    "ctaBeginningExists": true,
+    "ctaMiddleExists": true,
+    "ctaNearFinalConclusionExists": false,
+    "finalCtaActuallyAbsent": true,
+    "textualLinkOnlyNearFinal": false,
+    "visualCtaMissedByPreviousDetector": false,
+    "ctaDestinationCorrectWhenPresent": true,
+    "excessiveDuplicationRisk": false
+  },
+  "classification": "CONFIRMED_GAP",
+  "targetUrl": "/calculadora-clt-ou-pj/"
+}

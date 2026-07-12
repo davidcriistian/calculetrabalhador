@@ -1,0 +1,31 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "audited",
+    "classification":  "REUSABLE_WITH_MINIMAL_FIXES",
+    "implementation":  {
+                           "route":  ".htaccess rewrites /blog/categoria/{slug}/ to /blog/categoria/index.html",
+                           "pageType":  "single dynamic category template",
+                           "slugResolution":  "window.location.pathname split around categoria",
+                           "categorySource":  "data/brain/nuclei.json",
+                           "articleSource":  "data/articles.json",
+                           "consumer":  "blog/categoria/index.html with assets/js/nuclei.js",
+                           "cards":  "article-card structure inside category template",
+                           "emptyState":  "built-in emptyState",
+                           "blogIntegration":  "blog/index.html has pending nuclei links section"
+                       },
+    "gapsFound":  [
+                      "PJ used Guide title/description for category SEO role.",
+                      "PJ could not find articles deterministically because data/articles.json has only CLT category for CLT ou PJ cluster articles."
+                  ],
+    "minimalFixes":  [
+                         "Added categoryTitle/categoryDescription/categoryUrl/guideUrl to PJ projection.",
+                         "Added explicit articleFilter.slugs for the approved PJ editorial set.",
+                         "Updated CTNuclei.articleMatchesNucleus to honor articleFilter.slugs before fallback category matching.",
+                         "Updated category template to use category-specific metadata and Home -\u003e Blog -\u003e PJ breadcrumb."
+                     ],
+    "risk":  "No new architecture or parallel source created."
+}

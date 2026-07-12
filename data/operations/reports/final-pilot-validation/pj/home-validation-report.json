@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "guideCardCount": 1,
+  "guideHref": true,
+  "hrefHashCount": 0,
+  "nonEligibleGuidesRendered": [],
+  "toolsPreserved": true,
+  "articlesPreserved": true,
+  "countersReady": true,
+  "failSafe": {
+    "ready": "ready",
+    "guideCards": 0,
+    "articleSections": 2,
+    "toolCards": 27
+  }
+}

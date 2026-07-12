@@ -1,0 +1,25 @@
+{
+  "id": "snapshot-calculadora-clt-ou-pj-tools-json",
+  "status": "logical-snapshot-only",
+  "createdAt": "2026-07-11",
+  "assetId": "calculator:calculadora-clt-ou-pj",
+  "file": "data/tools.json",
+  "sha256Before": "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+  "sha256After": "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+  "entryBefore": {
+    "id": "calculadora-clt-ou-pj",
+    "title": "Calculadora CLT ou PJ",
+    "slug": "/calculadora-clt-ou-pj/",
+    "category": "Trabalhista",
+    "description": "Compare uma proposta CLT com PJ, estimando salário líquido, benefícios, FGTS, férias, 13º, impostos e custos.",
+    "icone": "CT",
+    "badge": null,
+    "badgeColor": null,
+    "published": true,
+    "featured": false,
+    "showOnHome": false,
+    "updatedAt": "2026-06-07"
+  },
+  "plannedChange": null,
+  "rollbackExactAction": "NOT_REQUIRED because no public catalog change was applied"
+}

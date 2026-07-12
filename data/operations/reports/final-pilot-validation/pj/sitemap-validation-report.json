@@ -1,0 +1,55 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "guideCount": 1,
+  "categoryCount": 1,
+  "duplicatePilotUrls": [],
+  "pilotUrls": [
+    {
+      "url": "https://calculetrabalhador.com.br/guias/pj/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/categoria/pj/",
+      "inSitemap": true,
+      "physicalExists": true,
+      "runtimeMapped": true,
+      "runtimeFile": "blog/categoria/index.html",
+      "rewriteRule": "^blog/categoria/([a-z0-9-]+)/?$ /blog/categoria/index.html [L]"
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/calculadora-clt-ou-pj/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "inSitemap": true,
+      "physicalExists": true
+    },
+    {
+      "url": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "inSitemap": true,
+      "physicalExists": true
+    }
+  ],
+  "lastmodValid": true,
+  "warnings": [
+    "Category PJ is a routed runtime URL backed by blog/categoria/index.html, not a physical blog/categoria/pj/index.html directory."
+  ]
+}

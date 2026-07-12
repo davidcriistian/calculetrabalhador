@@ -1,0 +1,99 @@
+{
+    "operationId":  "integrated-public-flow-validation-guide-pj",
+    "phase":  "5.11",
+    "mode":  "validate-first",
+    "createdAt":  "2026-07-11T23:10:13.8478234Z",
+    "files":  [
+                  {
+                      "path":  "index.html",
+                      "exists":  true,
+                      "sha256":  "4BC313745E4274FB4F3A9C3A8F1DF4B3C354D7FA387EA05F5200246D4CCAD53F",
+                      "length":  7067,
+                      "status":  "M index.html"
+                  },
+                  {
+                      "path":  "assets/home-refactor-v8.js",
+                      "exists":  true,
+                      "sha256":  "005C247A153CA09ED8958AC75FF47954A1769D948A9B41AF906D0863935247E5",
+                      "length":  9755,
+                      "status":  "M assets/home-refactor-v8.js"
+                  },
+                  {
+                      "path":  "assets/js/nuclei.js",
+                      "exists":  true,
+                      "sha256":  "196748B59433EC34A81FF67859FE7FF6070873A3D4EF095D3EF676567CC8E5F8",
+                      "length":  2814,
+                      "status":  "?? assets/js/nuclei.js"
+                  },
+                  {
+                      "path":  "data/brain/nuclei.json",
+                      "exists":  true,
+                      "sha256":  "697D0BBFAD7807FD8C6F3CC26A1EE9DD857135E928A688639B2EFF7DC7D147A7",
+                      "length":  3744,
+                      "status":  "?? data/brain/nuclei.json"
+                  },
+                  {
+                      "path":  "guias/pj/index.html",
+                      "exists":  true,
+                      "sha256":  "FED92ABE551F283C047BC062F365806A84E45DE5AE39A515F18EB5A288DEAFDE",
+                      "length":  15321,
+                      "status":  "?? guias/pj/index.html"
+                  },
+                  {
+                      "path":  "calculadora-clt-ou-pj/index.html",
+                      "exists":  true,
+                      "sha256":  "4D893381403194022460919569D20629B40EFFF4FA1F3DA99AAB7B21549F9F56",
+                      "length":  45110,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "blog/clt-ou-pj/index.html",
+                      "exists":  true,
+                      "sha256":  "9750121D78777BE23F187F7D1456181A19FB171B5DDE99CA170561A902CCF29F",
+                      "length":  33281,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "blog/como-calcular-clt-ou-pj/index.html",
+                      "exists":  true,
+                      "sha256":  "AECFB053701E66F16326212B61B4DB35D964EB10C905F65539FF26C9DEAE8597",
+                      "length":  39424,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                      "exists":  true,
+                      "sha256":  "961F47E9834A3453B5C2D0F1D7C3371DE88B4A69884DEB8B755F35153DF559F0",
+                      "length":  41153,
+                      "status":  "M blog/vantagens-e-desvantagens-clt-ou-pj/index.html"
+                  },
+                  {
+                      "path":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+                      "exists":  true,
+                      "sha256":  "A4B03AF1F13604E437E3970331C5639F37DD46DFFB8AC00FDC5F4AE06C6E1E7F",
+                      "length":  43880,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+                      "exists":  true,
+                      "sha256":  "364ACAC2AF1EADCE27EF4B887C2F13298D8A6596E789D9882EA6EDABD1E0EC01",
+                      "length":  39472,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "data/tools.json",
+                      "exists":  true,
+                      "sha256":  "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+                      "length":  14052,
+                      "status":  ""
+                  },
+                  {
+                      "path":  "data/articles.json",
+                      "exists":  true,
+                      "sha256":  "5C6FABFC8349D60E4233F343C27ABBBBE97A9ECA9FA517D3907BC1D699B5F8C8",
+                      "length":  37951,
+                      "status":  ""
+                  }
+              ]
+}

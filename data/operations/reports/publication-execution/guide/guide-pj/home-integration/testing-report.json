@@ -1,0 +1,41 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "passed",
+    "tests":  {
+                  "guideConfigJsonValid":  "PASS",
+                  "guideAssetIdValid":  "PASS",
+                  "guideUrlExists":  "PASS",
+                  "guidePageExists":  "PASS",
+                  "showOnHomeEligibility":  "PASS",
+                  "homeOrderValid":  "PASS",
+                  "uniqueGuideCard":  "PASS",
+                  "noHardcodedGeneratedDuplication":  "PASS",
+                  "noCrossGuideLeak":  "PASS",
+                  "noCategoryGuideConfusion":  "PASS",
+                  "homeConsumerLoad":  "PASS",
+                  "fetchFailureSafety":  "PASS",
+                  "existingHomeToolsPreserved":  "PASS",
+                  "existingHomeArticlesPreserved":  "PASS",
+                  "existingHomeCountersPreserved":  "PASS",
+                  "linkIntegrity":  "PASS",
+                  "accessibilityBasics":  "PASS",
+                  "responsiveStructure":  "PASS - reused existing responsive card/grid classes",
+                  "noOutOfScopeChange":  "PASS",
+                  "rollbackReadiness":  "PASS"
+              },
+    "commands":  [
+                     "node --check assets/js/nuclei.js",
+                     "node --check assets/home-refactor-v8.js",
+                     "HOME_GUIDE_INTEGRATION_LOGIC_PASS",
+                     "all data JSON parse",
+                     "validate-governance",
+                     "transform-rules",
+                     "validate-shadow-adicional-noturno",
+                     "validate-shadow-aviso-previo",
+                     "git diff --check"
+                 ]
+}

@@ -1,0 +1,22 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "passed-with-warnings",
+    "validations":  {
+                        "scope":  "Only guias/pj/index.html and internal execution reports were created for this operation.",
+                        "json":  "All JSON files under data parsed successfully with ConvertFrom-Json.",
+                        "publicRuntime":  "No global runtime, sitemap, catalog, category or existing page was modified.",
+                        "seo":  "Title, meta description, canonical, robots, Open Graph, one H1, CollectionPage and BreadcrumbList are present.",
+                        "links":  "Only approved physically existing public links were rendered.",
+                        "html":  "HTML SEO/link inspection passed: title, description, robots, canonical, one H1, JSON-LD parseable, approved links exist physically, no placeholder href.",
+                        "governance":  "validate-governance, transform-rules and shadow validations passed."
+                    },
+    "warnings":  [
+                     "Guide official reference remains unavailable and under manual review.",
+                     "Public discovery intentionally remains not integrated."
+                 ]
+}

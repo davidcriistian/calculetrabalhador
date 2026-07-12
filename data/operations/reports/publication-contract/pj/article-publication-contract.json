@@ -1,0 +1,79 @@
+{
+  "id": "article-publication-contract-clt-ou-pj-cluster",
+  "status": "draft",
+  "publicCatalog": "data/articles.json",
+  "consumer": "blog/index.html inline script",
+  "requiredCatalogFieldsObserved": ["id", "title", "slug", "category", "description", "tempo", "cor", "corBg", "publishedAt", "updatedAt", "showOnHome"],
+  "optionalCatalogFieldsObserved": ["url", "relatedTool", "featured", "homeOrder", "showOnCltGuide", "cltGuideOrder"],
+  "articles": [
+    {
+      "assetId": "article:clt-ou-pj",
+      "page": "blog/clt-ou-pj/index.html",
+      "publicSlug": "clt-ou-pj",
+      "catalogSlug": "/blog/clt-ou-pj",
+      "pageExists": true,
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "requiresGeneration": false,
+      "snapshotRequired": true
+    },
+    {
+      "assetId": "article:como-calcular-clt-ou-pj",
+      "page": "blog/como-calcular-clt-ou-pj/index.html",
+      "publicSlug": "como-calcular-clt-ou-pj",
+      "catalogSlug": "/blog/como-calcular-clt-ou-pj",
+      "pageExists": true,
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "requiresGeneration": false,
+      "snapshotRequired": true
+    },
+    {
+      "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+      "page": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+      "publicSlug": "vantagens-e-desvantagens-clt-ou-pj",
+      "catalogSlug": "/blog/vantagens-e-desvantagens-clt-ou-pj",
+      "pageExists": true,
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "requiresGeneration": false,
+      "snapshotRequired": true,
+      "warning": "final calculator CTA requires manual approval"
+    },
+    {
+      "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "page": "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+      "publicSlug": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "catalogSlug": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "pageExists": true,
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "requiresGeneration": false,
+      "snapshotRequired": true,
+      "warning": "reference unavailable and final calculator CTA requires manual approval"
+    },
+    {
+      "assetId": "article:clt-ou-pj-vale-a-pena-em-2026",
+      "page": "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+      "publicSlug": "clt-ou-pj-vale-a-pena-em-2026",
+      "catalogSlug": "/blog/clt-ou-pj-vale-a-pena-em-2026",
+      "pageExists": true,
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "requiresGeneration": false,
+      "snapshotRequired": true
+    }
+  ],
+  "existingPageRules": [
+    "capture snapshot before edit",
+    "allow only approved diff",
+    "preserve unrelated content",
+    "preserve canonical unless explicit approval changes it",
+    "validate headings, links, CTAs, JSON-LD and responsive behavior"
+  ],
+  "newPageRules": [
+    "generate from Article Blueprint",
+    "apply Article Gold Standard",
+    "include calculator CTA at beginning, middle and end when approved",
+    "include breadcrumb",
+    "include JSON-LD",
+    "include internal links",
+    "include related content only when approved"
+  ],
+  "publicFilesChangedNow": false
+}

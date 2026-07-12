@@ -1,0 +1,51 @@
+{
+  "id": "operation-report-publication-contract-pj",
+  "operationId": "physical-publication-contract-pj",
+  "status": "completed-with-manual-decisions",
+  "result": "PHYSICAL PUBLICATION CONTRACT READY WITH MANUAL DECISIONS",
+  "createdAt": "2026-07-11",
+  "outputs": [
+    "publication-contract.json",
+    "asset-to-runtime-map.json",
+    "calculator-publication-contract.json",
+    "article-publication-contract.json",
+    "guide-publication-contract.json",
+    "category-publication-contract.json",
+    "home-publication-contract.json",
+    "catalog-publication-contract.json",
+    "metadata-publication-contract.json",
+    "internal-links-publication-contract.json",
+    "sitemap-publication-contract.json",
+    "indexnow-publication-contract.json",
+    "working-tree-preconditions.json",
+    "execution-gates.json",
+    "rollback-contract.json",
+    "testing-contract.json",
+    "validation-contract.json",
+    "audit-report.json"
+  ],
+  "manualDecisionsRequired": [
+    "final Guide PJ Home card order",
+    "public title and description for Guide PJ",
+    "final SEO role of Guide PJ versus Category PJ",
+    "approval of missing final CTAs",
+    "treatment of unavailable references",
+    "destination of local pending files",
+    "final publication authorization"
+  ],
+  "warnings": [
+    "working-tree-collision-risk",
+    "guide-page-generation-required",
+    "category-runtime-local-pending-not-official",
+    "manual-sitemap-update",
+    "manual-decisions-required"
+  ],
+  "blockingIssues": [],
+  "productionImpact": {
+    "publicFilesChanged": false,
+    "runtimeChanged": false,
+    "sitemapChanged": false,
+    "indexNowExecuted": false,
+    "deployExecuted": false
+  }
+}

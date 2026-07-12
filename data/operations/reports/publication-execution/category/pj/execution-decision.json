@@ -1,0 +1,15 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "decision":  "MINIMAL CONSOLIDATION",
+    "reason":  "Existing category implementation was reusable but PJ lacked category-specific SEO fields and deterministic approved-article filtering.",
+    "filesAllowedAndTouched":  [
+                                   "blog/categoria/index.html",
+                                   "assets/js/nuclei.js",
+                                   "data/brain/nuclei.json"
+                               ],
+    "blocked":  false
+}

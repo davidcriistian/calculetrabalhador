@@ -1,0 +1,22 @@
+{
+    "operationId":  "integrated-public-flow-validation-guide-pj",
+    "phase":  "5.11",
+    "createdAt":  "2026-07-11T23:14:10.8414541Z",
+    "status":  "CATALOGS_PRESERVED",
+    "tools":  {
+                  "path":  "data/tools.json",
+                  "baselineSha256":  "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+                  "finalSha256":  "1A7EA393087B521736CE0FAABE9A69793B30BC3DCF6306E32A6695ECD29A8B90",
+                  "preserved":  true,
+                  "status":  ""
+              },
+    "articles":  {
+                     "path":  "data/articles.json",
+                     "baselineSha256":  "5C6FABFC8349D60E4233F343C27ABBBBE97A9ECA9FA517D3907BC1D699B5F8C8",
+                     "finalSha256":  "5C6FABFC8349D60E4233F343C27ABBBBE97A9ECA9FA517D3907BC1D699B5F8C8",
+                     "preserved":  true,
+                     "status":  ""
+                 },
+    "dataToolsChangedByThisPhase":  false,
+    "dataArticlesChangedByThisPhase":  false
+}

@@ -1,0 +1,19 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "executed",
+    "strategy":  "STRATEGY B - MINIMAL EXTENSION",
+    "steps":  [
+                  "audit existing Home runtime",
+                  "reuse existing nuclei projection",
+                  "add strict eligibility in nuclei.js",
+                  "load nuclei.js before home runtime",
+                  "fetch data/brain/nuclei.json as optional projection",
+                  "render eligible guides using existing article card classes",
+                  "do not alter sitemap, IndexNow, blog categories, tools or articles catalogs"
+              ],
+    "finalPosition":  "Before Blog and Guias CLT sections inside articlesMount, using runtime order from data/brain/nuclei.json."
+}

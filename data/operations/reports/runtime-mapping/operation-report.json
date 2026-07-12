@@ -1,58 +1,71 @@
 {
-    "id":  "operation-report-runtime-mapping",
-    "operationId":  "runtime-mapping",
-    "status":  "completed-with-warnings",
-    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
-    "commonState":  {
-                        "status":  "draft",
-                        "visibility":  "internal",
-                        "runtimeStatus":  "not-consumed",
-                        "mappingMode":  "execution-plan",
-                        "publicationExecuted":  false,
-                        "htmlGenerated":  false,
-                        "runtimeAffected":  false,
-                        "productionFilesChanged":  false
-                    },
-    "outputs":  [
-                    "runtime-mapping-report.json",
-                    "affected-files.json",
-                    "affected-pages.json",
-                    "affected-components.json",
-                    "affected-navigation.json",
-                    "affected-breadcrumbs.json",
-                    "affected-jsonld.json",
-                    "affected-sitemap.json",
-                    "affected-search.json",
-                    "execution-order.json",
-                    "execution-checklist.json",
-                    "execution-risk-report.json",
-                    "rollback-impact.json",
-                    "testing-plan.json",
-                    "validation-plan.json",
-                    "audit-report.json"
-                ],
-    "warnings":  [
-                     "orphan-asset",
-                     "missing-reference-guide",
-                     "missing-reference-calculator",
-                     "missing-reference-article",
-                     "missing-cta",
-                     "missing-cta-quanto",
-                     "cross-guide-leak"
-                 ],
-    "blockingIssues":  [
-
-                       ],
-    "productionImpact":  {
-                             "htmlChanged":  false,
-                             "cssChanged":  false,
-                             "javascriptChanged":  false,
-                             "homeChanged":  false,
-                             "blogChanged":  false,
-                             "categoryChanged":  false,
-                             "sitemapChanged":  false,
-                             "urlCreated":  false,
-                             "runtimeChanged":  false,
-                             "productionFilesChanged":  false
-                         }
+  "id": "operation-report-runtime-mapping",
+  "operationId": "runtime-mapping-reconciliation",
+  "status": "completed-with-warnings",
+  "result": "RUNTIME MAPPING RECONCILED WITH WARNINGS",
+  "reconciledAt": "2026-07-11",
+  "commonState": {
+    "status": "draft",
+    "visibility": "internal",
+    "runtimeStatus": "not-consumed",
+    "mappingMode": "physical-execution-plan",
+    "publicationExecuted": false,
+    "htmlGenerated": false,
+    "runtimeAffected": false,
+    "productionFilesChanged": false
+  },
+  "outputs": [
+    "runtime-mapping-report.json",
+    "affected-files.json",
+    "affected-pages.json",
+    "affected-components.json",
+    "affected-navigation.json",
+    "affected-breadcrumbs.json",
+    "affected-jsonld.json",
+    "affected-sitemap.json",
+    "affected-search.json",
+    "execution-order.json",
+    "execution-checklist.json",
+    "execution-risk-report.json",
+    "rollback-impact.json",
+    "testing-plan.json",
+    "validation-plan.json",
+    "audit-report.json"
+  ],
+  "hypothesesCorrected": [
+    "Guide Cards is not a standalone physical Home component",
+    "categoria/pj/index.html was replaced by /blog/categoria/{slug}/ local pending pattern",
+    "guias/pj/index.html is proposed and not created",
+    "component:breadcrumb is not a physical component",
+    "component:jsonld is not a physical component",
+    "component:search-index is not implemented",
+    "Sitemap Writer is not implemented",
+    "sitemap.xml and lastmod are manual today",
+    "IndexNow exists as manual script and sends only with --send"
+  ],
+  "warnings": [
+    "working-tree-collision",
+    "nonexistent-runtime-abstraction",
+    "guide-runtime-not-implemented",
+    "category-runtime-pending",
+    "manual-sitemap-update",
+    "page-generation-required",
+    "breadcrumb-generation-required",
+    "jsonld-generation-required",
+    "cross-guide-leak",
+    "seo-cannibalization-guide-vs-category"
+  ],
+  "blockingIssues": [],
+  "productionImpact": {
+    "htmlChanged": false,
+    "cssChanged": false,
+    "javascriptChanged": false,
+    "homeChanged": false,
+    "blogChanged": false,
+    "categoryChanged": false,
+    "sitemapChanged": false,
+    "urlCreated": false,
+    "runtimeChanged": false,
+    "productionFilesChanged": false
+  }
 }

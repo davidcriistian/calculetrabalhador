@@ -1,0 +1,101 @@
+{
+  "status": "PASS_WITH_WARNING",
+  "articles": [
+    {
+      "asset": "article:clt-ou-pj",
+      "role": "pillar",
+      "url": "/blog/clt-ou-pj/",
+      "file": "blog/clt-ou-pj/index.html",
+      "status": "PASS",
+      "exists": true,
+      "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026? Guia Completo + Calculadora",
+      "canonical": "https://calculetrabalhador.com.br/blog/clt-ou-pj/",
+      "h1Count": 1,
+      "calculatorLinkCount": 6,
+      "finalCtaCount": 0,
+      "jsonLdPresent": true,
+      "scriptCount": 4
+    },
+    {
+      "asset": "article:como-calcular-clt-ou-pj",
+      "role": "satellite",
+      "url": "/blog/como-calcular-clt-ou-pj/",
+      "file": "blog/como-calcular-clt-ou-pj/index.html",
+      "status": "PASS",
+      "exists": true,
+      "title": "Como Calcular CLT ou PJ: Entenda a Compara&ccedil;&atilde;o",
+      "canonical": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "h1Count": 1,
+      "calculatorLinkCount": 3,
+      "finalCtaCount": 0,
+      "jsonLdPresent": true,
+      "scriptCount": 4
+    },
+    {
+      "asset": "article:vantagens-e-desvantagens-clt-ou-pj",
+      "role": "satellite",
+      "url": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "file": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+      "status": "PASS",
+      "exists": true,
+      "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+      "canonical": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "h1Count": 1,
+      "calculatorLinkCount": 4,
+      "finalCtaCount": 1,
+      "jsonLdPresent": true,
+      "scriptCount": 4
+    },
+    {
+      "asset": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "role": "satellite",
+      "url": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "file": "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+      "status": "PASS",
+      "exists": true,
+      "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+      "canonical": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "h1Count": 1,
+      "calculatorLinkCount": 3,
+      "finalCtaCount": 0,
+      "jsonLdPresent": true,
+      "scriptCount": 4
+    },
+    {
+      "asset": "article:clt-ou-pj-vale-a-pena-em-2026",
+      "role": "satellite",
+      "url": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "file": "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+      "status": "PASS",
+      "exists": true,
+      "title": "CLT ou PJ Vale a Pena em 2026?",
+      "canonical": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "h1Count": 1,
+      "calculatorLinkCount": 3,
+      "finalCtaCount": 0,
+      "jsonLdPresent": true,
+      "scriptCount": 4
+    }
+  ],
+  "vantagensFinalCta": {
+    "asset": "article:vantagens-e-desvantagens-clt-ou-pj",
+    "role": "satellite",
+    "url": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "file": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+    "status": "PASS",
+    "exists": true,
+    "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+    "canonical": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "h1Count": 1,
+    "calculatorLinkCount": 4,
+    "finalCtaCount": 1,
+    "jsonLdPresent": true,
+    "scriptCount": 4
+  },
+  "quantoPendingCtaGap": {
+    "status": "CONFIRMED_WARNING",
+    "url": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "calculatorLinkCount": 3,
+    "note": "Gap remains an operational decision; not corrected in phase 5.11."
+  }
+}

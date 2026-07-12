@@ -1,14 +1,21 @@
 {
-    "id":  "runtime-mapping-validation-plan",
-    "status":  "draft",
-    "executionStatus":  "not-run",
-    "validationReference":  "/data/pos/validation/index.json",
-    "plannedValidations":  [
-                               "Runtime Mapping Integrity",
-                               "Registry Integrity",
-                               "Preview Consistency",
-                               "Publishing Readiness",
-                               "Blueprint Consistency",
-                               "No Production Impact"
-                           ]
+  "id": "runtime-mapping-validation-plan",
+  "status": "draft",
+  "executionStatus": "not-run",
+  "reconciledAt": "2026-07-11",
+  "validationReference": "/data/pos/validation/index.json",
+  "plannedValidations": [
+    "Runtime Mapping Physical Accuracy",
+    "Working Tree Guard",
+    "Registry Integrity",
+    "Relationship Integrity",
+    "Public Catalog Consistency",
+    "Page Existence Before Catalog Publication",
+    "Category Pending State Review",
+    "Guide Runtime Not Implemented Acknowledgement",
+    "No Nonexistent Abstractions Referenced As Physical Files",
+    "Manual Sitemap Review",
+    "Publishing Readiness",
+    "No Production Impact In This Phase"
+  ]
 }

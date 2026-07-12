@@ -1,0 +1,26 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "status":  "passed-with-warnings",
+    "scope":  {
+                  "onlyPublicFileAlteredByThisPhase":  "sitemap.xml",
+                  "homeAltered":  false,
+                  "articlesAltered":  false,
+                  "calculatorsAltered":  false,
+                  "categoriesAltered":  false,
+                  "htaccessAltered":  false,
+                  "dataToolsAltered":  false,
+                  "dataArticlesAltered":  false,
+                  "cssAltered":  false,
+                  "javascriptAltered":  false,
+                  "runtimeAltered":  false
+              },
+    "finalWorkingTree":  "## main...origin/main\r\n M .htaccess\r\n M assets/home-refactor-v8.js\r\n M blog/index.html\r\n M blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html\r\n M blog/vantagens-e-desvantagens-clt-ou-pj/index.html\r\n M data/operations/reports/runtime-mapping/affected-breadcrumbs.json\r\n M data/operations/reports/runtime-mapping/affected-components.json\r\n M data/operations/reports/runtime-mapping/affected-files.json\r\n M data/operations/reports/runtime-mapping/affected-jsonld.json\r\n M data/operations/reports/runtime-mapping/affected-navigation.json\r\n M data/operations/reports/runtime-mapping/affected-pages.json\r\n M data/operations/reports/runtime-mapping/affected-search.json\r\n M data/operations/reports/runtime-mapping/affected-sitemap.json\r\n M data/operations/reports/runtime-mapping/audit-report.json\r\n M data/operations/reports/runtime-mapping/execution-checklist.json\r\n M data/operations/reports/runtime-mapping/execution-order.json\r\n M data/operations/reports/runtime-mapping/execution-risk-report.json\r\n M data/operations/reports/runtime-mapping/operation-report.json\r\n M data/operations/reports/runtime-mapping/rollback-impact.json\r\n M data/operations/reports/runtime-mapping/runtime-mapping-report.json\r\n M data/operations/reports/runtime-mapping/testing-plan.json\r\n M data/operations/reports/runtime-mapping/validation-plan.json\r\n M index.html\r\n M sitemap.xml\r\n?? assets/js/nuclei.js\r\n?? blog/categoria/\r\n?? data/brain/nuclei.json\r\n?? data/operations/reports/integrated-validation/\r\n?? data/operations/reports/publication-contract/\r\n?? data/operations/reports/publication-execution/\r\n?? data/operations/reports/publication-finalization/\r\n?? guias/",
+    "warnings":  [
+                     "Working tree contains unrelated pending changes from earlier phases.",
+                     "sitemap.xml had pre-existing category entries before this phase."
+                 ]
+}

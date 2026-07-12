@@ -1,0 +1,31 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "passed-with-warnings",
+    "validations":  {
+                        "constitution":  "PASS",
+                        "architectureEvolutionPolicy":  "PASS - reused existing projection/runtime, no new architecture",
+                        "assetIdentityPolicy":  "PASS - guide:guide-pj preserved",
+                        "pam":  "PASS",
+                        "registry":  "PASS - registry remains governed authority",
+                        "guideAsset":  "PASS",
+                        "nucleusAsset":  "PASS",
+                        "guideBlueprint":  "PASS",
+                        "guideGoldStandard":  "PASS",
+                        "siteComposition":  "PASS",
+                        "runtimeMapping":  "PASS - Home runtime physical reality respected",
+                        "physicalPublicationContract":  "PASS",
+                        "noDuplicateSourceOfTruth":  "PASS",
+                        "runtimeProjectionSemantics":  "PASS",
+                        "homeIntegration":  "PASS",
+                        "rollbackReadiness":  "PASS"
+                    },
+    "warnings":  [
+                     "data/brain/nuclei.json remains an untracked pending runtime projection from prior local work.",
+                     "Only Guide PJ is eligible now; other nuclei remain non-rendered until they receive physical URLs and publication eligibility.",
+                     "git diff --check emitted LF/CRLF warnings only, no whitespace errors."
+                 ]
+}

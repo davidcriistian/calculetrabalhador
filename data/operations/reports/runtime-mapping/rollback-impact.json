@@ -1,34 +1,45 @@
 {
-    "id":  "rollback-impact",
-    "status":  "draft",
-    "impact":  {
-                   "filesWouldRevert":  [
-                                            "index.html",
-                                            "guias/pj/index.html",
-                                            "categoria/pj/index.html",
-                                            "ferramentas/index.html",
-                                            "sitemap.xml",
-                                            "search-index",
-                                            "breadcrumb-data",
-                                            "jsonld-data"
-                                        ],
-                   "componentsWouldRevert":  [
-                                                 "Guide Cards",
-                                                 "Cluster Cards",
-                                                 "Calculator Cards",
-                                                 "Article Cards",
-                                                 "Breadcrumb Component",
-                                                 "Navigation Component",
-                                                 "JSON-LD Component",
-                                                 "Sitemap Writer",
-                                                 "Search Index Component"
-                                             ],
-                   "registriesRemainIntact":  [
-                                                  "/data/registry/by-type/index.json",
-                                                  "/data/registry/by-cluster/index.json",
-                                                  "/data/registry/by-nucleus/index.json",
-                                                  "/data/publishing/registry/index.json"
-                                              ],
-                   "rollbackExecuted":  false
-               }
+  "id": "rollback-impact",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "impact": {
+    "workingTreeGuard": "future rollback must restore only operation-owned changes and preserve pre-existing local pending changes",
+    "filesWouldRevertIfTouchedByFutureOperation": [
+      "index.html",
+      "assets/home-refactor-v8.js",
+      "ferramentas/index.html",
+      "blog/index.html",
+      "data/tools.json",
+      "data/articles.json",
+      "calculadora-clt-ou-pj/index.html",
+      "blog/clt-ou-pj/index.html",
+      "guias/pj/index.html",
+      "blog/categoria/",
+      "assets/js/nuclei.js",
+      "data/brain/nuclei.json",
+      ".htaccess",
+      "sitemap.xml"
+    ],
+    "manualRollbackItems": [
+      "remove generated Guide PJ page if created",
+      "revert operation-owned catalog entries",
+      "restore page-level breadcrumb and JSON-LD edits",
+      "restore page-level internal links",
+      "remove operation-owned sitemap entries and lastmod changes",
+      "record rollback result"
+    ],
+    "notPhysicalRollbackTargets": [
+      "component:breadcrumb",
+      "component:jsonld",
+      "component:search-index",
+      "Sitemap Writer"
+    ],
+    "registriesRemainIntactUnlessExplicitlyInScope": [
+      "/data/registry/by-type/index.json",
+      "/data/registry/by-cluster/index.json",
+      "/data/registry/by-nucleus/index.json",
+      "/data/publishing/registry/index.json"
+    ],
+    "rollbackExecuted": false
+  }
 }

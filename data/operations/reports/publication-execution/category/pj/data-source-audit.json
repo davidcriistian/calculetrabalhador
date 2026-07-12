@@ -1,0 +1,16 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "passed",
+    "governedSource":  "internal assets, nucleus, Guide, Cluster and approved article relationships",
+    "publicRuntimeSources":  [
+                                 "data/articles.json",
+                                 "data/brain/nuclei.json"
+                             ],
+    "dataBrainSemantics":  "operational runtime projection only",
+    "dataArticlesChanged":  false,
+    "noCompetingSource":  true
+}

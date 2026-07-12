@@ -1,0 +1,22 @@
+{
+  "id": "audit-report-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "passed",
+  "result": "CONTROLLED PAGE UPDATE PASSED",
+  "checks": [
+    { "id": "working-tree-guard-executed", "status": "pass" },
+    { "id": "target-page-had-no-pre-existing-diff", "status": "pass" },
+    { "id": "physical-page-audited", "status": "pass" },
+    { "id": "gap-confirmed", "status": "pass" },
+    { "id": "pattern-resolved-from-same-page", "status": "pass" },
+    { "id": "snapshot-captured-before-edit", "status": "pass" },
+    { "id": "minimal-controlled-update-applied", "status": "pass" },
+    { "id": "diff-review-completed", "status": "pass" },
+    { "id": "testing-passed", "status": "pass" },
+    { "id": "validation-passed", "status": "pass" },
+    { "id": "rollback-ready", "status": "pass" },
+    { "id": "no-out-of-scope-public-file-changed-by-operation", "status": "pass" }
+  ],
+  "warnings": ["known pending files outside the operation remain in the working tree"],
+  "blockingIssues": [],
+  "conclusion": "The final calculator CTA gap was confirmed and resolved with a minimal same-page CTA pattern insertion."
+}

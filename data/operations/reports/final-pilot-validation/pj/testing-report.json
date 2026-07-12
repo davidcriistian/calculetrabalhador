@@ -1,0 +1,32 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "scope": "final-end-to-end-pilot-validation-pj",
+  "executedChecks": [
+    "physical-assets",
+    "home-discovery",
+    "guide-pj",
+    "category-pj-runtime",
+    "calculator-clt-ou-pj",
+    "pillar-article",
+    "satellite-articles",
+    "navigation-graph",
+    "seo-role-separation",
+    "sitemap-presence",
+    "data-integrity",
+    "runtime-safety",
+    "cross-nucleus-leak",
+    "regression-scope",
+    "rollback-readiness"
+  ],
+  "notExecuted": [
+    {
+      "check": "visual-browser-validation",
+      "reason": "Browser automation dependency was not available in the local environment."
+    }
+  ],
+  "warnings": [
+    "Category PJ is served by blog/categoria/index.html through routing.",
+    "Working tree already contains pending changes from earlier approved phases."
+  ],
+  "blockers": []
+}

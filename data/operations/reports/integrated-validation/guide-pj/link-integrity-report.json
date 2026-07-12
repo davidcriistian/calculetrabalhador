@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "links": [
+    {
+      "url": "/",
+      "physicalPath": "index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/calculadora-clt-ou-pj/",
+      "physicalPath": "calculadora-clt-ou-pj/index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/blog/clt-ou-pj/",
+      "physicalPath": "blog/clt-ou-pj/index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/blog/como-calcular-clt-ou-pj/",
+      "physicalPath": "blog/como-calcular-clt-ou-pj/index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "physicalPath": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "physicalPath": "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+      "classification": "VALID"
+    },
+    {
+      "url": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "physicalPath": "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+      "classification": "VALID"
+    }
+  ]
+}

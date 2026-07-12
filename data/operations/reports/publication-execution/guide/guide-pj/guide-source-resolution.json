@@ -1,0 +1,44 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "resolved-with-warnings",
+  "sources": {
+    "assetSpecification": "/data/operations/reports/asset/guide/guide-pj/guide-draft-specification.json",
+    "composition": "/data/operations/reports/guide/pj/composition/guide-composition-specification.json",
+    "sectionMap": "/data/operations/reports/guide/pj/composition/guide-section-map.json",
+    "contentOrder": "/data/operations/reports/guide/pj/composition/guide-content-order.json",
+    "relationshipMap": "/data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+    "guideBlueprint": "/data/blueprints/guide/index.json",
+    "guideGoldStandard": "/data/gold-standards/guide/index.json"
+  },
+  "resolvedAsset": {
+    "assetId": "guide:guide-pj",
+    "slug": "pj",
+    "url": "/guias/pj/",
+    "domain": "pj",
+    "nucleus": "nucleus:pj",
+    "cluster": "cluster:clt-ou-pj"
+  },
+  "approvedRelationships": {
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "primaryArticle": "article:clt-ou-pj",
+    "satelliteArticles": [
+      "article:como-calcular-clt-ou-pj",
+      "article:vantagens-e-desvantagens-clt-ou-pj",
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "emptyModules": [
+    "faq",
+    "glossary",
+    "downloads",
+    "products",
+    "offers",
+    "ctaSlots"
+  ]
+}

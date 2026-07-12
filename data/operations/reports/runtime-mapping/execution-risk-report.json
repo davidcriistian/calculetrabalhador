@@ -1,59 +1,136 @@
 {
-    "id":  "execution-risk-report",
-    "status":  "passed-with-warnings",
-    "risks":  [
-                  {
-                      "id":  "orphan-asset",
-                      "assetId":  "calculator:calculadora-multa-40-fgts",
-                      "risk":  "asset without guide/cluster assignment",
-                      "severity":  "medium",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "missing-reference-guide",
-                      "assetId":  "guide:guide-pj",
-                      "risk":  "guide reference unavailable",
-                      "severity":  "low",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "missing-reference-calculator",
-                      "assetId":  "calculator:calculadora-clt-ou-pj",
-                      "risk":  "calculator reference unavailable",
-                      "severity":  "low",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "missing-reference-article",
-                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
-                      "risk":  "article reference unavailable",
-                      "severity":  "low",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "missing-cta",
-                      "assetId":  "article:vantagens-e-desvantagens-clt-ou-pj",
-                      "risk":  "final calculator CTA gap",
-                      "severity":  "low",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "missing-cta-quanto",
-                      "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
-                      "risk":  "final calculator CTA gap",
-                      "severity":  "low",
-                      "autoResolved":  false
-                  },
-                  {
-                      "id":  "cross-guide-leak",
-                      "assetId":  "guide:guide-pj",
-                      "risk":  "future assets could leak across guide if filters are not enforced",
-                      "severity":  "medium",
-                      "autoResolved":  false
-                  }
-              ],
-    "autoResolved":  false,
-    "blockingIssues":  [
-
-                       ]
+  "id": "execution-risk-report",
+  "status": "passed-with-warnings",
+  "reconciledAt": "2026-07-11",
+  "risks": [
+    {
+      "id": "working-tree-collision",
+      "assetId": "runtime:public-files",
+      "risk": "future execution could overwrite pre-existing local pending changes in public files",
+      "severity": "high",
+      "autoResolved": false
+    },
+    {
+      "id": "nonexistent-runtime-abstraction",
+      "assetId": "runtime-mapping",
+      "risk": "previous mapping referenced breadcrumb, JSON-LD, search-index and sitemap writer abstractions that do not exist physically",
+      "severity": "high",
+      "autoResolved": false
+    },
+    {
+      "id": "guide-runtime-not-implemented",
+      "assetId": "guide:guide-pj",
+      "risk": "Guide PJ exists only as governed internal asset; no public guide runtime or page exists",
+      "severity": "high",
+      "autoResolved": false
+    },
+    {
+      "id": "category-runtime-pending",
+      "assetId": "cluster:clt-ou-pj",
+      "risk": "category runtime exists only as local pending working tree implementation and is not official baseline",
+      "severity": "high",
+      "autoResolved": false
+    },
+    {
+      "id": "manual-sitemap-update",
+      "assetId": "sitemap.xml",
+      "risk": "sitemap and lastmod are manual today; no sitemap writer exists",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "page-generation-required",
+      "assetId": "guide:guide-pj",
+      "risk": "new guide and new individual article pages require physical page generation or controlled edit",
+      "severity": "high",
+      "autoResolved": false
+    },
+    {
+      "id": "breadcrumb-generation-required",
+      "assetId": "runtime:breadcrumbs",
+      "risk": "breadcrumbs are page-specific and require generated or controlled updates per page type",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "jsonld-generation-required",
+      "assetId": "runtime:jsonld",
+      "risk": "JSON-LD is embedded per page and requires page-level generation or edits",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "cross-guide-leak",
+      "assetId": "guide:guide-pj",
+      "risk": "future assets could leak across guide or category surfaces if filters are not enforced",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "seo-cannibalization-guide-vs-category",
+      "assetId": "guide:guide-pj",
+      "risk": "/guias/pj/ and /blog/categoria/pj/ could compete if SEO roles are not separated",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "orphan-asset",
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "risk": "asset without guide/cluster assignment remains outside this PJ runtime scope",
+      "severity": "medium",
+      "autoResolved": false
+    },
+    {
+      "id": "missing-reference-guide",
+      "assetId": "guide:guide-pj",
+      "risk": "guide reference unavailable",
+      "severity": "low",
+      "autoResolved": false
+    },
+    {
+      "id": "missing-reference-calculator",
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "risk": "calculator reference unavailable",
+      "severity": "low",
+      "autoResolved": false
+    },
+    {
+      "id": "missing-reference-article",
+      "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "risk": "article reference unavailable",
+      "severity": "low",
+      "autoResolved": false
+    },
+    {
+      "id": "missing-cta",
+      "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+      "risk": "final calculator CTA gap",
+      "severity": "low",
+      "autoResolved": false
+    },
+    {
+      "id": "missing-cta-quanto",
+      "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "risk": "final calculator CTA gap",
+      "severity": "low",
+      "autoResolved": false
+    }
+  ],
+  "seoRoleSeparation": {
+    "/guias/pj/": [
+      "broad PJ nucleus view",
+      "structural navigation",
+      "access to clusters",
+      "access to main tools",
+      "general orientation content"
+    ],
+    "/blog/categoria/pj/": [
+      "editorial archive",
+      "article listing",
+      "chronological or thematic content discovery"
+    ],
+    "requirement": "The two pages must not target the same primary intent. SEO implementation is not performed in this phase."
+  },
+  "autoResolved": false,
+  "blockingIssues": []
 }

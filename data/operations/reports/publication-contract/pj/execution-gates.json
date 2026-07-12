@@ -1,0 +1,27 @@
+{
+  "id": "execution-gates-pj-publication",
+  "status": "draft",
+  "blockingGates": [
+    "registry-integrity",
+    "approved-relationships",
+    "blueprint-resolved",
+    "gold-standard-resolved",
+    "physical-destination-known",
+    "catalog-and-fields-known",
+    "working-tree-no-conflict",
+    "snapshot-created",
+    "rollback-ready",
+    "testing-plan-approved",
+    "validation-plan-approved",
+    "manual-preview-approved",
+    "sitemap-plan-ready",
+    "manual-publication-authorized"
+  ],
+  "gateOutcomes": {
+    "pass": "execution may proceed to next gate",
+    "warning": "manual review required before continuing",
+    "fail": "execution blocked"
+  },
+  "nonBypassable": ["working-tree-no-conflict", "rollback-ready", "manual-publication-authorized"],
+  "publicFilesChangedNow": false
+}

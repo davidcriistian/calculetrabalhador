@@ -1,31 +1,58 @@
 {
-    "id":  "affected-sitemap",
-    "status":  "draft",
-    "sitemap":  [
-                    {
-                        "url":  "/guias/pj/",
-                        "assetId":  "guide:guide-pj",
-                        "urlStatus":  "not-created",
-                        "actionIfPublished":  "add",
-                        "lastmodExpected":  "publication-date",
-                        "modifiedNow":  false
-                    },
-                    {
-                        "url":  "/calculadora-clt-ou-pj/",
-                        "assetId":  "calculator:calculadora-clt-ou-pj",
-                        "urlStatus":  "existing",
-                        "actionIfPublished":  "review-lastmod-if-page-changes",
-                        "lastmodExpected":  "only-if-public-page-updated",
-                        "modifiedNow":  false
-                    },
-                    {
-                        "url":  "/blog/clt-ou-pj/",
-                        "assetId":  "article:clt-ou-pj",
-                        "urlStatus":  "existing",
-                        "actionIfPublished":  "review-lastmod-if-page-changes",
-                        "lastmodExpected":  "only-if-public-page-updated",
-                        "modifiedNow":  false
-                    }
-                ],
-    "sitemapXmlModified":  false
+  "id": "affected-sitemap",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "physicalImplementation": {
+    "file": "sitemap.xml",
+    "updateMode": "manual-currently",
+    "lastmodMode": "manual-currently",
+    "sitemapWriterFound": false,
+    "classification": "MANUAL_TODAY"
+  },
+  "indexing": {
+    "indexNowScript": "scripts/indexnow.js",
+    "indexNowSendMode": "manual with --send only",
+    "indexNowClassification": "READY_WITH_GUARDS",
+    "searchConsoleAutomationFound": false,
+    "searchConsoleClassification": "NOT_IMPLEMENTED"
+  },
+  "sitemap": [
+    {
+      "url": "/guias/pj/",
+      "assetId": "guide:guide-pj",
+      "urlStatus": "not-created",
+      "actionIfPublished": "add manually after generation and approval",
+      "lastmodExpected": "publication-date",
+      "classification": "GENERATION_REQUIRED",
+      "modifiedNow": false
+    },
+    {
+      "url": "/blog/categoria/pj/",
+      "assetId": "cluster:clt-ou-pj",
+      "urlStatus": "local-pending-not-official",
+      "actionIfPublished": "preserve pending ownership and validate before sitemap approval",
+      "lastmodExpected": "only after local implementation is resolved and approved",
+      "classification": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "url": "/calculadora-clt-ou-pj/",
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "urlStatus": "existing",
+      "actionIfPublished": "review lastmod only if public page changes",
+      "lastmodExpected": "only-if-public-page-updated",
+      "classification": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "url": "/blog/clt-ou-pj/",
+      "assetId": "article:clt-ou-pj",
+      "urlStatus": "existing",
+      "actionIfPublished": "review lastmod only if public page changes",
+      "lastmodExpected": "only-if-public-page-updated",
+      "classification": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    }
+  ],
+  "sitemapXmlModified": false
 }

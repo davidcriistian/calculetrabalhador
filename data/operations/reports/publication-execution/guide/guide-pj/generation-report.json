@@ -1,0 +1,44 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "generated",
+    "createdFiles":  [
+                         "guias/pj/index.html"
+                     ],
+    "alteredFiles":  [
+
+                     ],
+    "removedFiles":  [
+
+                     ],
+    "renderedSections":  [
+                             "global header placeholder",
+                             "breadcrumb",
+                             "hero",
+                             "introduction",
+                             "cluster clt-ou-pj",
+                             "primary calculator",
+                             "pillar article",
+                             "satellite articles",
+                             "recommended flow",
+                             "disclaimer",
+                             "global footer placeholder"
+                         ],
+    "omittedModules":  [
+                           "faq",
+                           "glossary",
+                           "downloads",
+                           "products",
+                           "offers",
+                           "commercial cta slots"
+                       ],
+    "publicDiscoveryStatus":  "not-integrated",
+    "homeStatus":  "not-integrated",
+    "sitemapStatus":  "not-integrated",
+    "indexingStatus":  "not-requested",
+    "categoryStatus":  "not-integrated"
+}

@@ -1,0 +1,16 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "resolved",
+    "governedSourceOfTruth":  [
+                                  "/data/operations/reports/asset/guide/guide-pj/guide-draft-specification.json",
+                                  "/data/registry/by-type/guide-guide-pj.json"
+                              ],
+    "runtimeProjection":  "/data/brain/nuclei.json",
+    "runtimeConsumer":  "/assets/home-refactor-v8.js with /assets/js/nuclei.js",
+    "semantics":  "data/brain/nuclei.json is a public runtime projection, not a replacement for governed registry or asset authority.",
+    "noDuplicateSourceOfTruth":  true
+}

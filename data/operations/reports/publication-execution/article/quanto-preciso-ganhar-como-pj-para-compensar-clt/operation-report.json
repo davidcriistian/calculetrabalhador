@@ -1,0 +1,14 @@
+{
+    "operationId":  "controlled-existing-page-update-quanto-pj-cta-final",
+    "phase":  "5.12",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "target":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+    "createdAt":  "2026-07-11T23:24:17.7590639Z",
+    "result":  "CONTROLLED PAGE UPDATE PASSED",
+    "publicFileAltered":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+    "ctaPosition":  "after checklist/conclusion paragraphs, before FAQ",
+    "ctaPattern":  "CTA_CARD_V1_Final reused from approved cluster article pattern",
+    "destination":  "/calculadora-clt-ou-pj/",
+    "correctionsPerformed":  true,
+    "noPublicFilesOutsideScopeChangedByThisPhase":  true
+}

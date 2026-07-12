@@ -1,0 +1,21 @@
+{
+  "id": "testing-report-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "passed",
+  "executionStatus": "completed",
+  "tests": [
+    { "id": "target-file-integrity", "status": "pass", "evidence": "target file exists and diff is limited to CTA block" },
+    { "id": "target-url-exists", "status": "pass", "evidence": "calculadora-clt-ou-pj/index.html exists" },
+    { "id": "calculator-link-validity", "status": "pass", "evidence": "final CTA href is /calculadora-clt-ou-pj/" },
+    { "id": "cta-count-and-position", "status": "pass", "evidence": "three CTA_CARD_V1 markers; final appears before FAQ" },
+    { "id": "duplicate-cta-prevention", "status": "pass", "evidence": "only one final CTA inserted; no side-by-side duplication" },
+    { "id": "html-structure-sanity", "status": "pass", "evidence": "inserted block is closed before FAQ section" },
+    { "id": "link-integrity-basic", "status": "pass", "evidence": "all calculator CTA links target approved calculator URL" },
+    { "id": "seo-regression", "status": "pass", "evidence": "title, description and canonical unchanged" },
+    { "id": "json-ld-regression", "status": "pass", "evidence": "JSON-LD hash unchanged" },
+    { "id": "breadcrumb-regression", "status": "pass", "evidence": "JSON-LD BreadcrumbList unchanged" },
+    { "id": "script-integrity", "status": "pass", "evidence": "script tags unchanged" },
+    { "id": "no-out-of-scope-public-change", "status": "pass" },
+    { "id": "rollback-readiness", "status": "pass", "evidence": "remove CTA_CARD_V1_Final block only" }
+  ],
+  "testsInvented": false
+}

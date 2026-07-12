@@ -1,0 +1,10 @@
+{
+  "status": "PASS_WITH_BROWSER_WARNING",
+  "home": "PASS",
+  "ferramentas": "PASS - data/tools consumed in simulation and catalog parseable",
+  "blogPrincipal": "PASS - audited through existing dynamic runtime and no fatal syntax checks",
+  "calculator": "PASS",
+  "articles": "PASS",
+  "globalScripts": "PASS syntax checks for pilot runtime",
+  "visualBrowserValidation": "VISUAL_BROWSER_VALIDATION_NOT_AVAILABLE"
+}

@@ -1,6 +1,7 @@
 (function () {
   const TOOLS_URL = '/data/tools.json';
   const ARTICLES_URL = '/data/articles.json';
+  const NUCLEI_URL = '/data/brain/nuclei.json';
   const LIMIT_HOME_TOOLS = 9;
   const LIMIT_ARTICLES = 6;
 
@@ -25,6 +26,13 @@
     const data = await response.json();
     if (!Array.isArray(data)) throw new Error(`${url} nao retornou lista`);
     return data;
+  };
+
+  const fetchJsonItems = async (url) => {
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Falha ao carregar ${url}`);
+    const data = await response.json();
+    return Array.isArray(data) ? data : Array.isArray(data.items) ? data.items : [];
   };
 
 
@@ -127,7 +135,39 @@
     </section>
   `;
 
-  const renderArticles = (articles) => {
+  const renderGuideCard = (guide) => `
+    <a class="ct-article-anchor" href="${escapeHtml(normalizeHref(guide.url))}">
+      <article class="ct-article-card" data-guide-asset-id="${escapeHtml(guide.assetId || guide.id || '')}">
+        <div class="ct-article-meta">
+          <span class="ct-article-category">Guia</span>
+          <span class="ct-article-time">${escapeHtml(guide.name || guide.slug || '')}</span>
+        </div>
+        <h3>${escapeHtml(guide.title)}</h3>
+        <p>${escapeHtml(guide.description)}</p>
+        <span class="ct-article-read">Abrir guia &rarr;</span>
+      </article>
+    </a>
+  `;
+
+  const renderGuideSection = (guides) => {
+    if (!guides.length) return '';
+
+    return `
+      <section class="ct-article-section" aria-labelledby="home-guides-title">
+        <div class="ct-article-heading">
+          <div>
+            <p class="ct-article-eyebrow">Guias</p>
+            <h2 class="ct-article-title" id="home-guides-title">Guias por tema</h2>
+          </div>
+        </div>
+        <div class="ct-article-grid">
+          ${guides.map(renderGuideCard).join('')}
+        </div>
+      </section>
+    `;
+  };
+
+  const renderArticles = (articles, guides = []) => {
     const mount = $('#articlesMount');
     if (!mount) return;
 
@@ -142,9 +182,10 @@
       .slice(0, LIMIT_ARTICLES);
 
     const sections = [
+      renderGuideSection(guides),
       renderArticleSection({ eyebrow: 'Blog', title: 'Últimos Artigos', articles: latest }),
       renderArticleSection({ eyebrow: 'Guias CLT', title: 'Guias CLT', articles: cltGuides })
-    ];
+    ].filter(Boolean);
 
     mount.innerHTML = sections.join('');
   };
@@ -199,13 +240,26 @@
     });
   };
 
+  const loadHomeGuides = async () => {
+    if (!window.CTNuclei) return [];
+
+    try {
+      const nuclei = await fetchJsonItems(NUCLEI_URL);
+      return window.CTNuclei.getHomeGuides(nuclei);
+    } catch (error) {
+      console.warn('Nao foi possivel carregar os guias da Home.', error);
+      return [];
+    }
+  };
+
   const init = async () => {
     setupMenu();
 
     try {
-      const [tools, articles] = await Promise.all([
+      const [tools, articles, guides] = await Promise.all([
         fetchJson(TOOLS_URL),
-        fetchJson(ARTICLES_URL)
+        fetchJson(ARTICLES_URL),
+        loadHomeGuides()
       ]);
 
       const homeTools = tools
@@ -214,7 +268,7 @@
         .slice(0, LIMIT_HOME_TOOLS);
 
       renderTools(homeTools);
-      renderArticles(articles);
+      renderArticles(articles, guides);
       updateStats(tools, articles);
       setupSearch(homeTools);
       document.documentElement.dataset.homeRefactorV8 = 'ready';

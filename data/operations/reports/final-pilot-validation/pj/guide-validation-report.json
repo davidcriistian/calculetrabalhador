@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "title": "Guia PJ: compare CLT ou PJ com calculadora e artigos | Calcule Trabalhador",
+  "description": "Guia PJ para comparar contratacao CLT ou PJ, acessar a calculadora CLT ou PJ e navegar por artigos sobre custos, beneficios, riscos e decisao profissional.",
+  "canonical": "https://calculetrabalhador.com.br/guias/pj/",
+  "h1Count": 1,
+  "robots": "index,follow",
+  "jsonLd": {
+    "blocks": 1,
+    "errors": [],
+    "hasCollectionPage": true,
+    "hasBreadcrumbList": true
+  },
+  "links": [
+    "/",
+    "/calculadora-clt-ou-pj/",
+    "/blog/clt-ou-pj/",
+    "/blog/como-calcular-clt-ou-pj/",
+    "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "/blog/clt-ou-pj-vale-a-pena-em-2026/"
+  ],
+  "missingLinks": [],
+  "hasCalculator": true,
+  "hasPillar": true,
+  "satellites": [
+    {
+      "url": "/blog/como-calcular-clt-ou-pj/",
+      "linked": true
+    },
+    {
+      "url": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "linked": true
+    },
+    {
+      "url": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "linked": true
+    },
+    {
+      "url": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "linked": true
+    }
+  ],
+  "hasClusterUrl": false
+}

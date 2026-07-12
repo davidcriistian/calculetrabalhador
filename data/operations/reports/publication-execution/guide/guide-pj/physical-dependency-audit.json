@@ -1,0 +1,25 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "passed",
+  "physicalDependencies": {
+    "globalLayoutCss": "/assets/css/global-layout.css",
+    "globalLayoutJs": "/assets/js/global-layout.js",
+    "calculator": "/calculadora-clt-ou-pj/",
+    "pillarArticle": "/blog/clt-ou-pj/",
+    "satelliteArticles": [
+      "/blog/como-calcular-clt-ou-pj/",
+      "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "/blog/clt-ou-pj-vale-a-pena-em-2026/"
+    ]
+  },
+  "nonCreatedDependencies": [
+    "/guias/ index page"
+  ],
+  "breadcrumbPolicy": "Home is linked, Guias is rendered as non-clickable text, PJ is current page."
+}

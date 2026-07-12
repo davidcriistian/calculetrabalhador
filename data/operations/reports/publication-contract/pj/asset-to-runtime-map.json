@@ -1,0 +1,86 @@
+{
+  "id": "asset-to-runtime-map-pj",
+  "status": "draft",
+  "runtimeStatus": "not-consumed",
+  "assets": [
+    {
+      "assetId": "nucleus:pj",
+      "physicalDestination": "none-direct",
+      "publicUrl": null,
+      "classification": "GOVERNED_INTERNAL_ASSET",
+      "consumers": ["future guide", "future category", "registry", "publishing registry"],
+      "publicationAction": "no direct public file"
+    },
+    {
+      "assetId": "guide:guide-pj",
+      "physicalDestination": "guias/pj/index.html",
+      "publicUrl": "/guias/pj/",
+      "classification": "GENERATION_REQUIRED",
+      "consumers": ["future Home integration", "sitemap.xml after creation", "IndexNow after publication"],
+      "publicationAction": "generate controlled guide page after approval"
+    },
+    {
+      "assetId": "cluster:clt-ou-pj",
+      "physicalDestination": "/blog/categoria/pj/ via local pending category runtime",
+      "publicUrl": "/blog/categoria/pj/",
+      "classification": "READY_WITH_GUARDS_LOCAL_PENDING_NOT_OFFICIAL",
+      "consumers": ["blog/categoria/index.html", "assets/js/nuclei.js", "data/brain/nuclei.json"],
+      "publicationAction": "blocked until local pending implementation is reviewed and approved"
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "physicalDestination": "calculadora-clt-ou-pj/index.html",
+      "publicCatalog": "data/tools.json",
+      "publicUrl": "/calculadora-clt-ou-pj/",
+      "classification": "READY_WITH_GUARDS",
+      "consumers": ["ferramentas/index.html", "index.html via assets/home-refactor-v8.js when showOnHome is true"],
+      "publicationAction": "catalog update or controlled page update only if approved"
+    },
+    {
+      "assetId": "article:clt-ou-pj",
+      "physicalDestination": "blog/clt-ou-pj/index.html",
+      "publicCatalog": "data/articles.json",
+      "publicUrl": "/blog/clt-ou-pj/",
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "consumers": ["blog/index.html"],
+      "publicationAction": "controlled update with snapshot if content changes"
+    },
+    {
+      "assetId": "article:como-calcular-clt-ou-pj",
+      "physicalDestination": "blog/como-calcular-clt-ou-pj/index.html",
+      "publicCatalog": "data/articles.json",
+      "publicUrl": "/blog/como-calcular-clt-ou-pj/",
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "consumers": ["blog/index.html"],
+      "publicationAction": "controlled update with snapshot if content changes"
+    },
+    {
+      "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+      "physicalDestination": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+      "publicCatalog": "data/articles.json",
+      "publicUrl": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "consumers": ["blog/index.html"],
+      "publicationAction": "controlled update with snapshot if content changes"
+    },
+    {
+      "assetId": "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "physicalDestination": "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+      "publicCatalog": "data/articles.json",
+      "publicUrl": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "consumers": ["blog/index.html"],
+      "publicationAction": "controlled update with snapshot if content changes"
+    },
+    {
+      "assetId": "article:clt-ou-pj-vale-a-pena-em-2026",
+      "physicalDestination": "blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+      "publicCatalog": "data/articles.json",
+      "publicUrl": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "classification": "EXISTING_PAGE_CONTROLLED_UPDATE",
+      "consumers": ["blog/index.html"],
+      "publicationAction": "controlled update with snapshot if content changes"
+    }
+  ],
+  "nonexistentPhysicalTargets": ["component:breadcrumb", "component:jsonld", "component:search-index", "Sitemap Writer"]
+}

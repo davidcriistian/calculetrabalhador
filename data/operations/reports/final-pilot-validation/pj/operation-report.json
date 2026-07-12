@@ -1,0 +1,24 @@
+{
+  "result": "PILOT PJ END-TO-END PASSED WITH WARNINGS",
+  "phase": "5.15",
+  "createdAt": "2026-07-12T03:37:50.973Z",
+  "correctionsApplied": false,
+  "summary": {
+    "home": "PASS",
+    "guide": "PASS",
+    "category": "PASS",
+    "calculator": "PASS",
+    "articles": "PASS",
+    "nav": "PASS",
+    "seo": "SEO_ROLE_SEPARATION_PASS",
+    "sitemap": "PASS_WITH_WARNINGS",
+    "cross": "CROSS_NUCLEUS_LEAK_PASS"
+  },
+  "warnings": [
+    "VISUAL_BROWSER_VALIDATION_NOT_AVAILABLE",
+    "Category metadata is client-side in current runtime",
+    "Working tree contains pending changes from prior phases",
+    "Category PJ sitemap URL is runtime-mapped to blog/categoria/index.html"
+  ],
+  "blockers": []
+}

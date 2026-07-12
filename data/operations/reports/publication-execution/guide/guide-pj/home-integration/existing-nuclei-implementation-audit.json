@@ -1,0 +1,36 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "audited",
+    "classification":  "REUSABLE_WITH_MINIMAL_FIXES",
+    "files":  [
+                  "assets/js/nuclei.js",
+                  "data/brain/nuclei.json"
+              ],
+    "findings":  {
+                     "nucleiJs":  "Existing helper exposed normalization, sorting, visibility and article grouping utilities but was not loaded by Home.",
+                     "nucleiJson":  "Existing projection listed CLT, MEI, INSS, PJ and other nuclei with showOnHome/order fields.",
+                     "guidePjBefore":  "PJ existed as coming-soon, without URL, assetId, type or published flag.",
+                     "risksBefore":  [
+                                         "getVisibleOnHome did not enforce status/url eligibility",
+                                         "coming-soon items could be selected by naive consumers",
+                                         "Home did not consume the projection"
+                                     ],
+                     "reusableParts":  [
+                                           "items array projection",
+                                           "showOnHome flag",
+                                           "order field",
+                                           "slug/title/description fields",
+                                           "nuclei.js utility namespace"
+                                       ],
+                     "minimalFixesApplied":  [
+                                                 "guide:guide-pj identity and URL added to PJ projection",
+                                                 "published/status eligibility added",
+                                                 "getHomeGuides and isHomeEligible added",
+                                                 "Home consumes only eligible guides"
+                                             ]
+                 }
+}

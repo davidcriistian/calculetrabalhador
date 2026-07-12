@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "nucleiJsonFail": {
+    "ready": "ready",
+    "guideCards": 0,
+    "articleSections": 2,
+    "toolsCards": 27
+  },
+  "emptyJson": {
+    "ready": "ready",
+    "guideCards": 0
+  },
+  "showOnHomeFalse": {
+    "ready": "ready",
+    "guideCards": 0
+  },
+  "missingUrl": {
+    "ready": "ready",
+    "guideCards": 0
+  }
+}

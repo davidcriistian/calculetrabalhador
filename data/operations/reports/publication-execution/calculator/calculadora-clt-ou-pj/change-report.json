@@ -1,0 +1,15 @@
+{
+  "id": "change-report-calculadora-clt-ou-pj-public-catalog",
+  "status": "completed",
+  "publicChangeApplied": false,
+  "changedFiles": [],
+  "unchangedPublicScopeFile": "data/tools.json",
+  "reason": "No semantic or operational difference requiring a safe public catalog update was found.",
+  "prohibitedArtificialChangesAvoided": [
+    "no updatedAt bump",
+    "no showOnHome change",
+    "no homeOrder addition",
+    "no field injection from PAM or Registry",
+    "no formatting-only rewrite"
+  ]
+}

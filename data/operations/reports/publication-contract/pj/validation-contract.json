@@ -1,0 +1,33 @@
+{
+  "id": "validation-contract-pj-publication",
+  "status": "draft",
+  "executionStatus": "not-run",
+  "requiredConformance": [
+    "PAM",
+    "Asset Identity Policy",
+    "Domain Relationship Model",
+    "Blueprints",
+    "Gold Standards",
+    "References when available",
+    "Registry",
+    "Publishing",
+    "SEO",
+    "accessibility",
+    "responsiveness",
+    "no cross-guide leak",
+    "no orphan asset",
+    "rollback readiness"
+  ],
+  "blockingValidations": [
+    "unknown physical destination",
+    "duplicate catalog id or slug",
+    "missing physical page for published catalog entry",
+    "canonical divergence",
+    "empty FAQPage",
+    "schema incompatibility",
+    "unapproved sitemap change",
+    "working tree collision",
+    "rollback not ready"
+  ],
+  "validationsExecutedNow": false
+}

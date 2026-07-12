@@ -1,0 +1,10 @@
+{
+    "operationId":  "controlled-existing-page-update-quanto-pj-cta-final",
+    "phase":  "5.12",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "target":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+    "createdAt":  "2026-07-11T23:24:17.7590639Z",
+    "decision":  "execute-controlled-page-update",
+    "reason":  "Target page was clean, principal and secondary CTAs existed, final CTA was absent, and the approved cluster CTA_CARD_V1_Final pattern could be reused without layout or script changes.",
+    "blocked":  false
+}

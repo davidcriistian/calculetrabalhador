@@ -1,0 +1,31 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:57:31.8568716Z",
+    "status":  "passed-with-warnings",
+    "initialWorkingTree":  "## main...origin/main\r\n M .htaccess\r\n M blog/index.html\r\n M blog/vantagens-e-desvantagens-clt-ou-pj/index.html\r\n M data/operations/reports/runtime-mapping/affected-breadcrumbs.json\r\n M data/operations/reports/runtime-mapping/affected-components.json\r\n M data/operations/reports/runtime-mapping/affected-files.json\r\n M data/operations/reports/runtime-mapping/affected-jsonld.json\r\n M data/operations/reports/runtime-mapping/affected-navigation.json\r\n M data/operations/reports/runtime-mapping/affected-pages.json\r\n M data/operations/reports/runtime-mapping/affected-search.json\r\n M data/operations/reports/runtime-mapping/affected-sitemap.json\r\n M data/operations/reports/runtime-mapping/audit-report.json\r\n M data/operations/reports/runtime-mapping/execution-checklist.json\r\n M data/operations/reports/runtime-mapping/execution-order.json\r\n M data/operations/reports/runtime-mapping/execution-risk-report.json\r\n M data/operations/reports/runtime-mapping/operation-report.json\r\n M data/operations/reports/runtime-mapping/rollback-impact.json\r\n M data/operations/reports/runtime-mapping/runtime-mapping-report.json\r\n M data/operations/reports/runtime-mapping/testing-plan.json\r\n M data/operations/reports/runtime-mapping/validation-plan.json\r\n M sitemap.xml\r\n?? assets/js/nuclei.js\r\n?? blog/categoria/\r\n?? data/brain/nuclei.json\r\n?? data/operations/reports/publication-contract/\r\n?? data/operations/reports/publication-execution/\r\n?? guias/",
+    "targetStatus":  "?? assets/js/nuclei.js\r\n?? data/brain/nuclei.json\r\n?? guias/pj/index.html",
+    "knownPendingFiles":  [
+                              ".htaccess",
+                              "blog/index.html",
+                              "sitemap.xml",
+                              "assets/js/nuclei.js",
+                              "blog/categoria/",
+                              "data/brain/nuclei.json",
+                              "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+                              "guias/pj/index.html",
+                              "internal reports"
+                          ],
+    "forbiddenActions":  [
+                             "git add",
+                             "git commit",
+                             "git push",
+                             "git restore",
+                             "git reset",
+                             "git checkout",
+                             "sitemap update",
+                             "IndexNow"
+                         ]
+}

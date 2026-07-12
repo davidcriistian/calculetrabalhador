@@ -1,0 +1,16 @@
+{
+  "id": "indexnow-publication-contract-pj",
+  "status": "draft",
+  "script": "scripts/indexnow.js",
+  "realSendMode": "--send only",
+  "rules": [
+    "dry-run is mandatory first",
+    "real send only after publication and final validation",
+    "URL list must be explicit",
+    "response must be recorded",
+    "retry must be controlled and documented",
+    "never send unpublished URLs"
+  ],
+  "executionNow": false,
+  "classification": "READY_WITH_GUARDS"
+}

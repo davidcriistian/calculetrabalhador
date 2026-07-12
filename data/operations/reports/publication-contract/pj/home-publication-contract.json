@@ -1,0 +1,33 @@
+{
+  "id": "home-publication-contract-guide-pj",
+  "status": "draft",
+  "homeFile": "index.html",
+  "consumerScript": "assets/home-refactor-v8.js",
+  "currentSources": ["data/tools.json", "data/articles.json"],
+  "currentAutomaticCapabilities": [
+    "published tools count",
+    "article count",
+    "tools rendered from data/tools.json when published and showOnHome are true",
+    "article sections rendered from data/articles.json using showOnHome and showOnCltGuide"
+  ],
+  "guidePjCurrentIntegration": "not-implemented",
+  "guidePjClassification": "REQUIRES_IMPLEMENTATION",
+  "futureMinimumChangeNeeded": "Add an approved source and rendering path for governed guide cards without inventing a new runtime layer.",
+  "options": [
+    {
+      "id": "extend-existing-source",
+      "description": "Extend an existing public source consumed by Home with guide-compatible fields.",
+      "benefit": "small runtime surface",
+      "risk": "could mix article/tool semantics with guide semantics"
+    },
+    {
+      "id": "consume-existing-official-configuration",
+      "description": "Consume an already governed and appropriate catalog/configuration once formally approved for public runtime use.",
+      "benefit": "better separation of guide semantics while reusing current governance",
+      "risk": "requires explicit approval of the chosen source before runtime consumption"
+    }
+  ],
+  "recommendation": "Prefer consuming an existing official governed configuration if one is approved for public runtime use; otherwise keep Guide PJ out of Home until implementation is approved.",
+  "manualDecisionsRequired": ["final Home card order", "public card title", "public card description", "source choice"],
+  "publicFilesChangedNow": false
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "gitWriteCommandsExecuted": false,
+  "codeFilesAlteredByThisPhase": [],
+  "reportsCreatedDirectory": "data/operations/reports/final-pilot-validation/pj",
+  "finalWorkingTree": "captured separately by terminal",
+  "validationScope": "end-to-end public pilot PJ",
+  "notes": [
+    "No public/code files were changed by phase 5.15.",
+    "Sitemap category URL is valid through the existing category runtime route."
+  ]
+}

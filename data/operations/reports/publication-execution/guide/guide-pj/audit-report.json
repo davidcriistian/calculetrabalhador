@@ -1,0 +1,41 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "passed-with-warnings",
+    "scopeAudit":  {
+                       "allowedPublicCreation":  [
+                                                     "guias/pj/index.html"
+                                                 ],
+                       "publicFilesNotTouched":  [
+                                                     ".htaccess",
+                                                     "index.html",
+                                                     "assets/home-refactor-v8.js",
+                                                     "sitemap.xml",
+                                                     "blog/index.html",
+                                                     "data/articles.json",
+                                                     "data/tools.json",
+                                                     "existing article pages",
+                                                     "existing calculator pages",
+                                                     "global CSS/JS"
+                                                 ],
+                       "internalReportsDirectory":  "data/operations/reports/publication-execution/guide/guide-pj"
+                   },
+    "relationshipAudit":  {
+                              "officialRelationshipsCreated":  false,
+                              "relationshipsRenderedAsLinks":  true,
+                              "clusterUrlCreated":  false,
+                              "productsRendered":  false,
+                              "offersRendered":  false,
+                              "commercialCtasRendered":  false
+                          },
+    "finalState":  {
+                       "draftRepresentationPreserved":  true,
+                       "physicalPageStatus":  "generated",
+                       "publicDiscoveryStatus":  "not-integrated",
+                       "indexingStatus":  "not-requested"
+                   }
+}

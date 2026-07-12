@@ -1,0 +1,45 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "createdAt":  "2026-07-12T00:04:47.1114101Z",
+    "status":  "captured",
+    "files":  [
+                  {
+                      "path":  "blog/categoria/index.html",
+                      "exists":  true,
+                      "sha256":  "2FF5F7B92E210F92909C78E28B8AE396D4C997D33835E361BC2F3D8B2940AF46",
+                      "status":  "?? blog/categoria/index.html"
+                  },
+                  {
+                      "path":  "assets/js/nuclei.js",
+                      "exists":  true,
+                      "sha256":  "196748B59433EC34A81FF67859FE7FF6070873A3D4EF095D3EF676567CC8E5F8",
+                      "status":  "?? assets/js/nuclei.js"
+                  },
+                  {
+                      "path":  "data/brain/nuclei.json",
+                      "exists":  true,
+                      "sha256":  "697D0BBFAD7807FD8C6F3CC26A1EE9DD857135E928A688639B2EFF7DC7D147A7",
+                      "status":  "?? data/brain/nuclei.json"
+                  },
+                  {
+                      "path":  ".htaccess",
+                      "exists":  true,
+                      "sha256":  "A4D3E15F242DDBF4CCDD49A742629AE9A813C61BC576496E178FF403454B4916",
+                      "status":  "M .htaccess"
+                  },
+                  {
+                      "path":  "blog/index.html",
+                      "exists":  true,
+                      "sha256":  "8B788CAAFEEBA210F01B49815DDD63DEA89C693E5FAF2515E9B679F555A455FA",
+                      "status":  "M blog/index.html"
+                  },
+                  {
+                      "path":  "sitemap.xml",
+                      "exists":  true,
+                      "sha256":  "AEF301DC7565FE814A388A7A6A6617A880641439641F53E1532C83F669D11474",
+                      "status":  "M sitemap.xml"
+                  }
+              ],
+    "rollbackPolicy":  "surgical per file and block"
+}

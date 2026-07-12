@@ -1,0 +1,32 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "passed",
+    "rule":  "data/brain/nuclei.json -\u003e pj.articleFilter.slugs, matched against CTNuclei.articleKey(article)",
+    "deterministic":  true,
+    "expectedArticles":  [
+                             "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                             "vantagens-e-desvantagens-clt-ou-pj",
+                             "como-calcular-clt-ou-pj",
+                             "clt-ou-pj-vale-a-pena-em-2026",
+                             "clt-ou-pj"
+                         ],
+    "foundArticles":  [
+                          "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                          "vantagens-e-desvantagens-clt-ou-pj",
+                          "como-calcular-clt-ou-pj",
+                          "clt-ou-pj-vale-a-pena-em-2026",
+                          "clt-ou-pj"
+                      ],
+    "excludedExamples":  [
+                             "FGTS articles",
+                             "INSS articles",
+                             "MEI articles",
+                             "CLT articles outside approved CLT ou PJ set"
+                         ],
+    "textHeuristicUsed":  false,
+    "ordering":  "publishedAt/updatedAt descending from CTNuclei.getArticlesByNucleus"
+}

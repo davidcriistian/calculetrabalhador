@@ -1,52 +1,76 @@
 {
-    "id":  "audit-report-runtime-mapping",
-    "status":  "passed-with-warnings",
-    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
-    "checks":  [
-                   {
-                       "id":  "impacts-derived-from-registry",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "no-html-decision-source",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "no-files-altered",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "affected-pages-identified",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "affected-components-identified",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "execution-order-complete",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "rollback-impact-complete",
-                       "status":  "pass"
-                   },
-                   {
-                       "id":  "no-production-impact",
-                       "status":  "pass"
-                   }
-               ],
-    "warnings":  [
-                     "orphan-asset",
-                     "missing-reference-guide",
-                     "missing-reference-calculator",
-                     "missing-reference-article",
-                     "missing-cta",
-                     "missing-cta-quanto",
-                     "cross-guide-leak"
-                 ],
-    "blockingIssues":  [
-
-                       ],
-    "conclusion":  "Runtime Mapping is available as an internal execution plan only."
+  "id": "audit-report-runtime-mapping",
+  "status": "passed-with-warnings",
+  "result": "RUNTIME MAPPING RECONCILED WITH WARNINGS",
+  "reconciledAt": "2026-07-11",
+  "checks": [
+    {
+      "id": "physical-runtime-authority-applied",
+      "status": "pass"
+    },
+    {
+      "id": "home-implementation-reconciled",
+      "status": "pass"
+    },
+    {
+      "id": "tools-implementation-reconciled",
+      "status": "pass"
+    },
+    {
+      "id": "blog-implementation-reconciled",
+      "status": "pass"
+    },
+    {
+      "id": "category-path-corrected-to-blog-categoria-slug",
+      "status": "pass"
+    },
+    {
+      "id": "guide-runtime-marked-not-implemented",
+      "status": "pass"
+    },
+    {
+      "id": "nonexistent-breadcrumb-component-removed",
+      "status": "pass"
+    },
+    {
+      "id": "nonexistent-jsonld-component-removed",
+      "status": "pass"
+    },
+    {
+      "id": "nonexistent-search-index-removed",
+      "status": "pass"
+    },
+    {
+      "id": "sitemap-writer-marked-not-implemented",
+      "status": "pass"
+    },
+    {
+      "id": "working-tree-guard-added",
+      "status": "pass"
+    },
+    {
+      "id": "execution-order-reconciled",
+      "status": "pass"
+    },
+    {
+      "id": "seo-role-separation-recorded",
+      "status": "pass"
+    },
+    {
+      "id": "no-production-impact",
+      "status": "pass"
+    }
+  ],
+  "warnings": [
+    "working-tree-collision",
+    "guide-runtime-not-implemented",
+    "category-runtime-pending",
+    "manual-sitemap-update",
+    "page-generation-required",
+    "breadcrumb-generation-required",
+    "jsonld-generation-required",
+    "seo-cannibalization-guide-vs-category"
+  ],
+  "blockingIssues": [],
+  "conclusion": "Runtime Mapping now reflects the current physical runtime and remains an internal execution plan only."
 }

@@ -1,0 +1,24 @@
+{
+  "id": "physical-page-audit-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "completed",
+  "targetFile": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+  "structure": {
+    "header": "global-header mount plus hero section",
+    "main": "main element contains hero, initial CTA, article body, FAQ, sources, disclaimer",
+    "article": "article.mx-auto max-w-3xl contains main content",
+    "headings": ["h1", "multiple h2 sections", "FAQ h2"],
+    "ctaInitial": "CTA_CARD_V1_Principal before article body",
+    "ctaMiddle": "CTA_CARD_V1_Secundario after Desvantagens do PJ",
+    "ctaFinal": "absent before FAQ/sources/disclaimer",
+    "jsonLd": "embedded @graph with BreadcrumbList, Article and FAQPage",
+    "canonical": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "scripts": ["assets/js/editorial-metadata.js", "assets/js/global-layout.js"],
+    "footer": "global-footer mount"
+  },
+  "calculatorLinksFound": [
+    "initial CTA card",
+    "intro text link",
+    "middle CTA card"
+  ],
+  "publicFilesChangedNow": false
+}

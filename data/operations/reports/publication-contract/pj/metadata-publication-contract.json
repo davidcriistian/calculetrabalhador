@@ -1,0 +1,28 @@
+{
+  "id": "metadata-publication-contract-pj",
+  "status": "draft",
+  "physicalReality": "metadata and editorial dates are currently page-level and catalog-level, with assets/js/editorial-metadata.js used where pages include it.",
+  "metadataTargets": [
+    {
+      "target": "calculator page metadata",
+      "files": ["calculadora-clt-ou-pj/index.html", "data/tools.json"],
+      "required": ["title", "description", "canonical", "updatedAt"],
+      "classification": "CONTROLLED_UPDATE_IF_CHANGED"
+    },
+    {
+      "target": "article metadata",
+      "files": ["blog/{slug}/index.html", "data/articles.json"],
+      "required": ["title", "description", "canonical", "publishedAt", "updatedAt"],
+      "classification": "CONTROLLED_UPDATE_IF_CHANGED"
+    },
+    {
+      "target": "Guide PJ metadata",
+      "files": ["guias/pj/index.html"],
+      "required": ["title", "description", "canonical", "robots", "OpenGraph"],
+      "classification": "GENERATION_REQUIRED"
+    }
+  ],
+  "forbiddenInference": ["canonical", "public title", "public description", "SEO primary intent", "lastmod"],
+  "validationRules": ["canonical must match final URL", "robots must be explicit", "metadata must not contradict catalog", "no divergent title/description without approval"],
+  "publicFilesChangedNow": false
+}

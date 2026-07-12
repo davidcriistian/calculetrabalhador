@@ -1,0 +1,33 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "completed",
+    "alteredFiles":  [
+                         "index.html",
+                         "assets/home-refactor-v8.js",
+                         "assets/js/nuclei.js",
+                         "data/brain/nuclei.json"
+                     ],
+    "createdFiles":  [
+                         "data/operations/reports/publication-execution/guide/guide-pj/home-integration/*.json"
+                     ],
+    "publicFilesNotAltered":  [
+                                  "sitemap.xml",
+                                  ".htaccess",
+                                  "blog/index.html",
+                                  "blog/categoria/",
+                                  "data/tools.json",
+                                  "data/articles.json",
+                                  "article pages",
+                                  "calculator pages"
+                              ],
+    "summary":  [
+                    "index.html now loads /assets/js/nuclei.js before the Home runtime",
+                    "Home runtime optionally loads /data/brain/nuclei.json",
+                    "Guide PJ is rendered from runtime projection when eligible",
+                    "No card was hardcoded in static Home HTML"
+                ]
+}

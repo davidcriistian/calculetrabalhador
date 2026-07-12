@@ -1,124 +1,170 @@
 {
-    "id":  "execution-checklist",
-    "status":  "draft",
-    "checklist":  [
-                      {
-                          "step":  1,
-                          "name":  "Registry",
-                          "status":  "planned",
-                          "gate":  "registry-integrity",
-                          "preconditions":  [
-
-                                            ],
-                          "postconditions":  [
-                                                 "registry-integrity"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  2,
-                          "name":  "Runtime Mapping",
-                          "status":  "completed-internal-draft",
-                          "gate":  "runtime-impact-reviewed",
-                          "preconditions":  [
-                                                "Registry",
-                                                "Preview Model"
-                                            ],
-                          "postconditions":  [
-                                                 "runtime-impact-reviewed"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  3,
-                          "name":  "Testing",
-                          "status":  "planned",
-                          "gate":  "testing-pass",
-                          "preconditions":  [
-                                                "Runtime Mapping"
-                                            ],
-                          "postconditions":  [
-                                                 "testing-pass"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  4,
-                          "name":  "Validation",
-                          "status":  "planned",
-                          "gate":  "validation-pass",
-                          "preconditions":  [
-                                                "Testing"
-                                            ],
-                          "postconditions":  [
-                                                 "validation-pass"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  5,
-                          "name":  "Preview Approval",
-                          "status":  "planned",
-                          "gate":  "manual-preview-approval",
-                          "preconditions":  [
-                                                "Validation"
-                                            ],
-                          "postconditions":  [
-                                                 "manual-preview-approval"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  6,
-                          "name":  "Publishing",
-                          "status":  "planned",
-                          "gate":  "publishing-approval",
-                          "preconditions":  [
-                                                "Preview Approval"
-                                            ],
-                          "postconditions":  [
-                                                 "publishing-approval"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  7,
-                          "name":  "Sitemap",
-                          "status":  "planned",
-                          "gate":  "sitemap-check",
-                          "preconditions":  [
-                                                "Publishing"
-                                            ],
-                          "postconditions":  [
-                                                 "sitemap-check"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  8,
-                          "name":  "Indexing",
-                          "status":  "planned",
-                          "gate":  "indexing-check",
-                          "preconditions":  [
-                                                "Sitemap"
-                                            ],
-                          "postconditions":  [
-                                                 "indexing-check"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      },
-                      {
-                          "step":  9,
-                          "name":  "Final Validation",
-                          "status":  "planned",
-                          "gate":  "final-validation-pass",
-                          "preconditions":  [
-                                                "Indexing"
-                                            ],
-                          "postconditions":  [
-                                                 "final-validation-pass"
-                                             ],
-                          "rollback":  "use rollback-impact.json if this or later step changes production"
-                      }
-                  ]
+  "id": "execution-checklist",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "workingTreeGuard": {
+    "mandatoryBeforePublicFileChange": true,
+    "rules": [
+      "identify pre-existing changes before editing public files",
+      "do not overwrite unrelated changes",
+      "do not assume ownership of local pending files",
+      "block execution when scope conflicts are found",
+      "capture snapshot or diff for every file that will be altered",
+      "define rollback for every file touched by the operation"
+    ],
+    "protectedPendingFiles": [
+      ".htaccess",
+      "blog/index.html",
+      "sitemap.xml",
+      "assets/js/nuclei.js",
+      "blog/categoria/",
+      "data/brain/nuclei.json"
+    ]
+  },
+  "checklist": [
+    {
+      "step": 1,
+      "name": "Resolve Working Tree Preconditions",
+      "status": "planned",
+      "gate": "working-tree-guard",
+      "preconditions": ["git status reviewed", "pre-existing pending files classified", "operation ownership boundaries declared"],
+      "postconditions": ["no scope collision", "rollback snapshots planned"],
+      "rollback": "do not start public edits if guard fails"
+    },
+    {
+      "step": 2,
+      "name": "Registry and Relationship Verification",
+      "status": "planned",
+      "gate": "registry-integrity",
+      "preconditions": ["working-tree-guard"],
+      "postconditions": ["registry assets and governed relationships confirmed"],
+      "rollback": "no public rollback needed if verification only"
+    },
+    {
+      "step": 3,
+      "name": "Runtime Mapping Verification",
+      "status": "completed-internal-draft",
+      "gate": "runtime-impact-reviewed",
+      "preconditions": ["registry-integrity"],
+      "postconditions": ["physical files, pending local files and missing abstractions reviewed"],
+      "rollback": "no public rollback needed if verification only"
+    },
+    {
+      "step": 4,
+      "name": "Asset Page Generation or Controlled Update",
+      "status": "planned",
+      "gate": "generation-or-update-plan-approved",
+      "preconditions": ["page existence checked", "snapshots captured", "generation requirements approved"],
+      "postconditions": ["only approved pages generated or updated"],
+      "rollback": "restore operation-owned page snapshots or remove generated pages"
+    },
+    {
+      "step": 5,
+      "name": "Public Catalog Update",
+      "status": "planned",
+      "gate": "catalog-integrity",
+      "preconditions": ["physical page exists", "slug validated", "published flag approved"],
+      "postconditions": ["data/tools.json and/or data/articles.json valid"],
+      "rollback": "revert operation-owned catalog entries"
+    },
+    {
+      "step": 6,
+      "name": "Public Composition Update",
+      "status": "planned",
+      "gate": "composition-impact-reviewed",
+      "preconditions": ["Home, Blog, Tools and Category impact classified"],
+      "postconditions": ["composition changes match physical runtime"],
+      "rollback": "restore operation-owned public composition diffs"
+    },
+    {
+      "step": 7,
+      "name": "Breadcrumb and JSON-LD Generation or Update",
+      "status": "planned",
+      "gate": "structured-data-and-breadcrumb-check",
+      "preconditions": ["page-type schema plan approved", "no central component assumed"],
+      "postconditions": ["page-level breadcrumbs and JSON-LD validated"],
+      "rollback": "restore page snapshots"
+    },
+    {
+      "step": 8,
+      "name": "Internal Link Update",
+      "status": "planned",
+      "gate": "internal-link-check",
+      "preconditions": ["link graph approved", "relatedTool usage reviewed"],
+      "postconditions": ["no broken internal links introduced"],
+      "rollback": "restore page or catalog diffs"
+    },
+    {
+      "step": 9,
+      "name": "Sitemap Update",
+      "status": "planned",
+      "gate": "sitemap-ready",
+      "preconditions": ["published URLs exist", "lastmod decided", "duplicate URL check passed"],
+      "postconditions": ["sitemap.xml valid and manually reviewed"],
+      "rollback": "remove operation-owned sitemap entries and restore previous lastmod values"
+    },
+    {
+      "step": 10,
+      "name": "Testing",
+      "status": "planned",
+      "gate": "testing-pass",
+      "preconditions": ["public file changes completed in approved scope"],
+      "postconditions": ["testing-pass"],
+      "rollback": "use operation rollback plan if tests fail after edits"
+    },
+    {
+      "step": 11,
+      "name": "Validation",
+      "status": "planned",
+      "gate": "validation-pass",
+      "preconditions": ["testing-pass"],
+      "postconditions": ["validation-pass"],
+      "rollback": "use operation rollback plan if validation fails"
+    },
+    {
+      "step": 12,
+      "name": "Preview and Manual Approval",
+      "status": "planned",
+      "gate": "manual-preview-approval",
+      "preconditions": ["validation-pass"],
+      "postconditions": ["manual-preview-approval"],
+      "rollback": "do not publish without approval"
+    },
+    {
+      "step": 13,
+      "name": "Publishing Confirmation",
+      "status": "planned",
+      "gate": "publishing-approval",
+      "preconditions": ["manual-preview-approval", "Publishing Model gates satisfied"],
+      "postconditions": ["publication approved"],
+      "rollback": "activate approved rollback plan if publication is reverted"
+    },
+    {
+      "step": 14,
+      "name": "IndexNow Optional Send",
+      "status": "optional-planned",
+      "gate": "explicit-indexnow-approval",
+      "preconditions": ["publication approved", "dry-run reviewed", "explicit --send approval"],
+      "postconditions": ["IndexNow result recorded when executed"],
+      "rollback": "external indexing call cannot be undone; use only after approval"
+    },
+    {
+      "step": 15,
+      "name": "Final Validation",
+      "status": "planned",
+      "gate": "final-validation-pass",
+      "preconditions": ["publication approved"],
+      "postconditions": ["final-validation-pass"],
+      "rollback": "use operation rollback plan if final validation fails"
+    },
+    {
+      "step": 16,
+      "name": "Publication Log",
+      "status": "planned",
+      "gate": "publication-log-recorded",
+      "preconditions": ["final-validation-pass"],
+      "postconditions": ["publication log includes changed files, validations, sitemap and indexing impact"],
+      "rollback": "log rollback event if rollback is executed"
+    }
+  ]
 }

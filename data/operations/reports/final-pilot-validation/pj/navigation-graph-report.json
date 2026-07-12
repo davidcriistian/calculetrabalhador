@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "edges": [
+    {
+      "from": "Home",
+      "to": "/guias/pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/blog/clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/blog/como-calcular-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Guide PJ",
+      "to": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Category PJ",
+      "to": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Category PJ",
+      "to": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Category PJ",
+      "to": "/blog/como-calcular-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Category PJ",
+      "to": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "Category PJ",
+      "to": "/blog/clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "/blog/clt-ou-pj/",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "/blog/como-calcular-clt-ou-pj/",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    },
+    {
+      "from": "/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "to": "/calculadora-clt-ou-pj/",
+      "exists": true,
+      "linked": true,
+      "status": "PASS"
+    }
+  ],
+  "hrefHashGuide": 0,
+  "hrefHashCategoryTemplate": 0
+}

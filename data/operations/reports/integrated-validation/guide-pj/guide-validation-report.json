@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "exists": true,
+  "title": "Guia PJ: compare CLT ou PJ com calculadora e artigos | Calcule Trabalhador",
+  "metaDescription": true,
+  "viewport": true,
+  "canonical": "https://calculetrabalhador.com.br/guias/pj/",
+  "h1Count": 1,
+  "breadcrumb": true,
+  "collectionPage": true,
+  "breadcrumbList": true,
+  "jsonLdErrors": [],
+  "faqPagePresent": false,
+  "guidesIndexHrefPresent": false,
+  "clusterPageHrefPresent": false,
+  "commercialLeak": true,
+  "internalLinks": [
+    "/",
+    "/calculadora-clt-ou-pj/",
+    "/blog/clt-ou-pj/",
+    "/blog/como-calcular-clt-ou-pj/",
+    "/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "/blog/clt-ou-pj-vale-a-pena-em-2026/"
+  ],
+  "missingGuideLinks": []
+}

@@ -1,43 +1,62 @@
 {
-    "id":  "affected-navigation",
-    "status":  "draft",
-    "navigation":  [
-                       {
-                           "type":  "new-menu",
-                           "from":  "Guides navigation",
-                           "to":  "guide:guide-pj",
-                           "status":  "planned"
-                       },
-                       {
-                           "type":  "new-link",
-                           "from":  "guide:guide-pj",
-                           "to":  "cluster:clt-ou-pj",
-                           "status":  "planned"
-                       },
-                       {
-                           "type":  "new-link",
-                           "from":  "cluster:clt-ou-pj",
-                           "to":  "calculator:calculadora-clt-ou-pj",
-                           "status":  "planned"
-                       },
-                       {
-                           "type":  "new-link",
-                           "from":  "cluster:clt-ou-pj",
-                           "to":  "article:clt-ou-pj",
-                           "status":  "planned"
-                       },
-                       {
-                           "type":  "new-card",
-                           "from":  "Home guide module",
-                           "to":  "guide:guide-pj",
-                           "status":  "planned"
-                       },
-                       {
-                           "type":  "new-card",
-                           "from":  "PJ category",
-                           "to":  "cluster:clt-ou-pj",
-                           "status":  "planned"
-                       }
-                   ],
-    "modifiedNow":  false
+  "id": "affected-navigation",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "navigation": [
+    {
+      "type": "catalog-rendered-tool-card",
+      "from": "ferramentas/index.html",
+      "to": "calculator:calculadora-clt-ou-pj",
+      "physicalSource": "data/tools.json",
+      "consumer": "inline script in ferramentas/index.html",
+      "classification": "CONFIGURATION_ONLY",
+      "status": "existing-runtime-capability"
+    },
+    {
+      "type": "catalog-rendered-home-tool-card",
+      "from": "index.html",
+      "to": "calculator:calculadora-clt-ou-pj",
+      "physicalSource": "data/tools.json",
+      "consumer": "assets/home-refactor-v8.js",
+      "classification": "CONFIGURATION_ONLY",
+      "status": "conditional-on-showOnHome"
+    },
+    {
+      "type": "catalog-rendered-blog-card",
+      "from": "blog/index.html",
+      "to": "article:clt-ou-pj",
+      "physicalSource": "data/articles.json",
+      "consumer": "inline script in blog/index.html",
+      "classification": "CONFIGURATION_ONLY",
+      "status": "existing-runtime-capability"
+    },
+    {
+      "type": "local-pending-category-link",
+      "from": "blog/index.html",
+      "to": "/blog/categoria/pj/",
+      "physicalSource": "data/brain/nuclei.json",
+      "consumer": "local pending blog/index.html category section",
+      "classification": "READY_WITH_GUARDS",
+      "status": "local-pending-not-official"
+    },
+    {
+      "type": "proposed-guide-navigation",
+      "from": "future Guide PJ page",
+      "to": "cluster:clt-ou-pj",
+      "physicalSource": "none identified",
+      "consumer": "none identified",
+      "classification": "GENERATION_REQUIRED",
+      "status": "not-implemented"
+    },
+    {
+      "type": "internal-links",
+      "from": "individual pages",
+      "to": "related calculator and article URLs",
+      "physicalSource": "page-local HTML and optional relatedTool catalog field",
+      "consumer": "browser",
+      "classification": "GENERATION_REQUIRED",
+      "status": "manual-today"
+    }
+  ],
+  "modifiedNow": false
 }

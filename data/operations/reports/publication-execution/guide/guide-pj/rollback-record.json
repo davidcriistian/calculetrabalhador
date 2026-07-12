@@ -1,0 +1,35 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "ready",
+    "rollbackType":  "delete-created-file-and-reports-if-operation-is-reverted",
+    "createdPublicFiles":  [
+                               "guias/pj/index.html"
+                           ],
+    "createdInternalReports":  [
+                                   "data/operations/reports/publication-execution/guide/guide-pj/baseline.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/execution-decision.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/generation-plan.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/generation-report.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/guide-source-resolution.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/physical-dependency-audit.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/physical-preview-report.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/preflight-report.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/testing-report.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/validation-report.json",
+                                   "data/operations/reports/publication-execution/guide/guide-pj/visual-pattern-resolution.json"
+                               ],
+    "restoreExistingFiles":  [
+
+                             ],
+    "confirmationSteps":  [
+                              "delete guias/pj/index.html",
+                              "remove empty guias/pj and guias directories only if no other files are added later",
+                              "confirm git status no longer lists the target page",
+                              "confirm no sitemap, catalog, runtime or category file was modified by this operation"
+                          ]
+}

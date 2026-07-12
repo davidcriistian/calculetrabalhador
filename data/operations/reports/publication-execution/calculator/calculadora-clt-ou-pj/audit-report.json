@@ -1,0 +1,26 @@
+{
+  "id": "audit-report-calculadora-clt-ou-pj-public-catalog-pilot",
+  "status": "passed",
+  "result": "PUBLIC CATALOG PILOT PASSED — NO PUBLIC CHANGE REQUIRED",
+  "checks": [
+    { "id": "working-tree-guard-executed", "status": "pass" },
+    { "id": "data-tools-json-clean-before-operation", "status": "pass" },
+    { "id": "entry-located", "status": "pass" },
+    { "id": "governed-asset-compared", "status": "pass" },
+    { "id": "physical-contract-compared", "status": "pass" },
+    { "id": "safe-no-change-decision", "status": "pass" },
+    { "id": "ferramentas-consumer-verified", "status": "pass" },
+    { "id": "home-consumer-verified", "status": "pass" },
+    { "id": "physical-url-verified", "status": "pass" },
+    { "id": "testing-completed", "status": "pass" },
+    { "id": "validation-completed", "status": "pass" },
+    { "id": "rollback-readiness-recorded", "status": "pass" },
+    { "id": "no-public-file-changed", "status": "pass" },
+    { "id": "no-file-outside-scope-changed-by-operation", "status": "pass" }
+  ],
+  "warnings": [
+    "pre-existing out-of-scope working tree changes remain untouched"
+  ],
+  "blockingIssues": [],
+  "conclusion": "The pipeline located, compared, protected, verified, tested and validated the governed calculator public catalog entry without unnecessary public change."
+}

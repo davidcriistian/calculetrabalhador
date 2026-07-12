@@ -1,0 +1,11 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "decision":  "execute-minimal-extension",
+    "reason":  "Existing nuclei projection was reusable but incomplete; Home had a dynamic mount and reusable card pattern; Guide PJ physical page exists.",
+    "approval":  "Prompt grants guide:guide-pj showOnHome true if tests pass and scope remains contained.",
+    "blocked":  false
+}

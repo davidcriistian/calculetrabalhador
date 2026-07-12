@@ -1,0 +1,12 @@
+{
+  "status": "PASS_WITH_BROWSER_WARNING",
+  "nodeCheckTargets": [
+    "assets/home-refactor-v8.js",
+    "assets/js/nuclei.js"
+  ],
+  "homeFailSafe": true,
+  "unknownCategorySafe": true,
+  "emptyCategorySafe": true,
+  "pjTextHeuristic": false,
+  "visualBrowserValidation": "VISUAL_BROWSER_VALIDATION_NOT_AVAILABLE"
+}

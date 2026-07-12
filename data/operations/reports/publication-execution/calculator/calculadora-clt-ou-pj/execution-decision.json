@@ -1,0 +1,18 @@
+{
+  "id": "execution-decision-calculadora-clt-ou-pj",
+  "status": "completed",
+  "decision": "NO PUBLIC CHANGE REQUIRED",
+  "acceptedResult": "PUBLIC CATALOG PILOT PASSED — NO PUBLIC CHANGE REQUIRED",
+  "rationale": [
+    "data/tools.json has no unrelated pending diff",
+    "public catalog entry exists",
+    "id and slug are unique",
+    "physical calculator page exists",
+    "public entry matches the governed asset snapshot and physical publication contract in operational fields",
+    "showOnHome is false and must not be changed without manual approval",
+    "updatedAt is a manual public catalog field and must not be changed only for this pilot"
+  ],
+  "safePublicCatalogUpdateAvailable": false,
+  "manualDecisionRequiredForChange": ["showOnHome", "homeOrder", "featured", "updatedAt", "badge", "badgeColor"],
+  "publicChangeApplied": false
+}

@@ -1,59 +1,50 @@
 {
-    "id":  "affected-breadcrumbs",
-    "status":  "draft",
-    "breadcrumbs":  [
-                        {
-                            "assetId":  "guide:guide-pj",
-                            "trail":  [
-                                          "Home",
-                                          "Guias",
-                                          "PJ"
-                                      ],
-                            "modifiedNow":  false
-                        },
-                        {
-                            "assetId":  "cluster:clt-ou-pj",
-                            "trail":  [
-                                          "Home",
-                                          "Guias",
-                                          "PJ",
-                                          "CLT ou PJ"
-                                      ],
-                            "modifiedNow":  false
-                        },
-                        {
-                            "assetId":  "calculator:calculadora-clt-ou-pj",
-                            "trail":  [
-                                          "Home",
-                                          "Guias",
-                                          "PJ",
-                                          "CLT ou PJ",
-                                          "Calculadora CLT ou PJ"
-                                      ],
-                            "modifiedNow":  false
-                        },
-                        {
-                            "assetId":  "article:clt-ou-pj",
-                            "trail":  [
-                                          "Home",
-                                          "Guias",
-                                          "PJ",
-                                          "CLT ou PJ",
-                                          "CLT ou PJ"
-                                      ],
-                            "modifiedNow":  false
-                        },
-                        {
-                            "assetId":  "article:como-calcular-clt-ou-pj",
-                            "trail":  [
-                                          "Home",
-                                          "Guias",
-                                          "PJ",
-                                          "CLT ou PJ",
-                                          "Como Calcular CLT ou PJ"
-                                      ],
-                            "modifiedNow":  false
-                        }
-                    ],
-    "modifiedNow":  false
+  "id": "affected-breadcrumbs",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "physicalReality": {
+    "reusableComponentFound": false,
+    "removedAbstraction": "component:breadcrumb",
+    "implementation": "breadcrumbs are page-specific HTML and/or embedded BreadcrumbList JSON-LD where present",
+    "classification": "GENERATION_REQUIRED"
+  },
+  "breadcrumbs": [
+    {
+      "assetId": "guide:guide-pj",
+      "physicalPath": "guias/pj/index.html",
+      "currentStatus": "not-created",
+      "futureTrail": ["Home", "Guias", "PJ"],
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "modifiedNow": false
+    },
+    {
+      "assetId": "cluster:clt-ou-pj",
+      "physicalPath": "blog/categoria/pj/ via local pending category runtime",
+      "currentStatus": "local-pending-not-official",
+      "futureTrail": ["Blog", "Categoria", "PJ"],
+      "classification": "READY_WITH_GUARDS",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "physicalPath": "calculadora-clt-ou-pj/index.html",
+      "currentStatus": "existing-page-specific-implementation",
+      "futureTrail": ["Home", "Calculadoras", "Calculadora CLT ou PJ"],
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "modifiedNow": false
+    },
+    {
+      "assetId": "article:clt-ou-pj",
+      "physicalPath": "blog/clt-ou-pj/index.html",
+      "currentStatus": "existing-page-specific-implementation",
+      "futureTrail": ["Blog", "CLT ou PJ"],
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "modifiedNow": false
+    }
+  ],
+  "modifiedNow": false
 }

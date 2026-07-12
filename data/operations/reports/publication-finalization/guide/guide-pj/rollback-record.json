@@ -1,0 +1,15 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "status":  "ready",
+    "rollbackType":  "surgical",
+    "rollbackInstruction":  "Remove only the sitemap.xml line containing https://calculetrabalhador.com.br/guias/pj/",
+    "doNotRemovePreExistingCategoryEntries":  true,
+    "doNotUseGitRestore":  true,
+    "affectedPublicFiles":  [
+                                "sitemap.xml"
+                            ]
+}

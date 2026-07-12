@@ -1,0 +1,25 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "audited",
+    "homeFiles":  [
+                      "index.html",
+                      "assets/home-refactor-v8.js"
+                  ],
+    "findings":  {
+                     "guidesSectionBefore":  "No dedicated Guide/Nucleus section existed in static HTML.",
+                     "dynamicMount":  "index.html exposes articlesMount, consumed by assets/home-refactor-v8.js.",
+                     "currentConsumers":  [
+                                              "/data/tools.json",
+                                              "/data/articles.json"
+                                          ],
+                     "cardsHardcoded":  false,
+                     "toolCards":  "generated from data/tools.json",
+                     "articleCards":  "generated from data/articles.json",
+                     "usablePattern":  "ct-article-section, ct-article-grid and ct-article-card can render guide cards without CSS changes.",
+                     "scriptOrder":  "home-refactor-v8.js was the only home runtime script before this phase."
+                 }
+}

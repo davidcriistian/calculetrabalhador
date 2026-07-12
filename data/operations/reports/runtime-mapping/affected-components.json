@@ -1,62 +1,98 @@
 {
-    "id":  "affected-components",
-    "status":  "draft",
-    "components":  [
-                       {
-                           "component":  "Guide Cards",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Cluster Cards",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Calculator Cards",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Article Cards",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Featured Blocks",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Breadcrumb Component",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Navigation Component",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "CTA Component",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "JSON-LD Component",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Search Index Component",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       },
-                       {
-                           "component":  "Sitemap Writer",
-                           "impactStatus":  "would-update-on-publish",
-                           "modifiedNow":  false
-                       }
-                   ],
-    "modifiedNow":  false
+  "id": "affected-components",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "note": "This file now records physical runtime capabilities. It does not assert nonexistent reusable components.",
+  "capabilities": [
+    {
+      "capability": "Home Tools Cards",
+      "physicalImplementation": "assets/home-refactor-v8.js renders data/tools.json into index.html#toolsGrid",
+      "classification": "CONFIGURATION_ONLY",
+      "automaticOrManual": "automatic when catalog fields are valid",
+      "preconditions": ["calculator page exists", "data/tools.json entry is valid", "published is true", "slug is correct"],
+      "risk": "Home inclusion only happens when showOnHome is true"
+    },
+    {
+      "capability": "Home Counters",
+      "physicalImplementation": "assets/home-refactor-v8.js counts published tools and all articles",
+      "classification": "AUTOMATIC_ALREADY",
+      "automaticOrManual": "automatic",
+      "preconditions": ["data/tools.json loads", "data/articles.json loads"],
+      "risk": "counter logic is tied to current JavaScript implementation"
+    },
+    {
+      "capability": "Blog Listing Cards",
+      "physicalImplementation": "inline script in blog/index.html renders data/articles.json",
+      "classification": "CONFIGURATION_ONLY",
+      "automaticOrManual": "automatic for listing only",
+      "preconditions": ["data/articles.json entry is valid", "individual page exists for the URL"],
+      "risk": "catalog listing can point to a missing article page"
+    },
+    {
+      "capability": "Tools Listing Cards",
+      "physicalImplementation": "inline script in ferramentas/index.html renders data/tools.json",
+      "classification": "CONFIGURATION_ONLY",
+      "automaticOrManual": "automatic for listing only",
+      "preconditions": ["data/tools.json entry is valid", "calculator page exists"],
+      "risk": "catalog listing can point to a missing calculator page"
+    },
+    {
+      "capability": "Category Pages",
+      "physicalImplementation": "local pending blog/categoria/index.html plus assets/js/nuclei.js and .htaccess rewrite",
+      "classification": "READY_WITH_GUARDS",
+      "automaticOrManual": "local pending, not official baseline",
+      "preconditions": ["resolve working tree", "approve category runtime", "preserve local pending files"],
+      "risk": "category-runtime-pending"
+    },
+    {
+      "capability": "Guide Page",
+      "physicalImplementation": "not implemented; guias/pj/index.html does not exist",
+      "classification": "GENERATION_REQUIRED",
+      "automaticOrManual": "not ready",
+      "preconditions": ["guide page template or controlled generation", "manual approval", "publishing gates"],
+      "risk": "guide-runtime-not-implemented"
+    },
+    {
+      "capability": "Breadcrumbs",
+      "physicalImplementation": "page-specific HTML and/or embedded BreadcrumbList JSON-LD where present",
+      "classification": "GENERATION_REQUIRED",
+      "automaticOrManual": "manual today unless generated by future operation",
+      "preconditions": ["page snapshot", "page-type rules", "validation"],
+      "risk": "breadcrumb-generation-required"
+    },
+    {
+      "capability": "JSON-LD",
+      "physicalImplementation": "embedded script blocks inside individual pages",
+      "classification": "GENERATION_REQUIRED",
+      "automaticOrManual": "manual today unless generated by future operation",
+      "preconditions": ["page snapshot", "schema decision per page type", "validation"],
+      "risk": "jsonld-generation-required"
+    },
+    {
+      "capability": "Sitemap",
+      "physicalImplementation": "sitemap.xml",
+      "classification": "MANUAL_TODAY",
+      "automaticOrManual": "manual",
+      "preconditions": ["publishing approval", "lastmod decision", "duplicate URL check"],
+      "risk": "manual-sitemap-update"
+    },
+    {
+      "capability": "IndexNow",
+      "physicalImplementation": "scripts/indexnow.js",
+      "classification": "READY_WITH_GUARDS",
+      "automaticOrManual": "manual optional send with --send",
+      "preconditions": ["explicit approval", "published URLs", "dry-run review"],
+      "risk": "external call must not run automatically"
+    },
+    {
+      "capability": "Global Search Index",
+      "physicalImplementation": "not implemented",
+      "classification": "NOT_APPLICABLE",
+      "automaticOrManual": "not applicable",
+      "preconditions": [],
+      "risk": "do not invent component:search-index"
+    }
+  ],
+  "removedAsPhysicalComponents": ["Breadcrumb Component", "JSON-LD Component", "Search Index Component", "Sitemap Writer"],
+  "modifiedNow": false
 }

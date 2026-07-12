@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "guideLeakHits": [],
+  "homeGuideLeakHits": [],
+  "note": "Tool catalog may still contain non-PJ assets outside the Guide section; this check targets Guide PJ and generated guide card."
+}

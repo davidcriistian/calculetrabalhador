@@ -1,0 +1,27 @@
+{
+  "id": "audit-report-publication-contract-pj",
+  "status": "passed-with-manual-decisions",
+  "result": "PHYSICAL PUBLICATION CONTRACT READY WITH MANUAL DECISIONS",
+  "createdAt": "2026-07-11",
+  "checks": [
+    { "id": "assets-have-physical-destination-or-generation-required", "status": "pass" },
+    { "id": "real-catalogs-and-consumers-identified", "status": "pass" },
+    { "id": "no-nonexistent-abstraction-used", "status": "pass" },
+    { "id": "required-catalog-fields-documented", "status": "pass" },
+    { "id": "working-tree-guards-complete", "status": "pass" },
+    { "id": "execution-gates-complete", "status": "pass" },
+    { "id": "rollback-contract-complete", "status": "pass" },
+    { "id": "testing-contract-defined", "status": "pass" },
+    { "id": "validation-contract-defined", "status": "pass" },
+    { "id": "no-public-file-changed", "status": "pass" },
+    { "id": "no-publication-executed", "status": "pass" }
+  ],
+  "warnings": [
+    "manual decisions remain",
+    "working tree contains pending public files outside this contract",
+    "Guide PJ page is not created",
+    "Category PJ implementation is local pending and not official"
+  ],
+  "blockingIssues": [],
+  "conclusion": "The contract is ready for a future small, controlled and reversible publication execution after manual decisions are resolved."
+}

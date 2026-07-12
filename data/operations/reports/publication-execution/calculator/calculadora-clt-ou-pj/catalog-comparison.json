@@ -1,0 +1,40 @@
+{
+  "id": "catalog-comparison-calculadora-clt-ou-pj",
+  "status": "completed",
+  "assetId": "calculator:calculadora-clt-ou-pj",
+  "publicCatalog": "data/tools.json",
+  "publicEntry": {
+    "id": "calculadora-clt-ou-pj",
+    "title": "Calculadora CLT ou PJ",
+    "slug": "/calculadora-clt-ou-pj/",
+    "category": "Trabalhista",
+    "description": "Compare uma proposta CLT com PJ, estimando salário líquido, benefícios, FGTS, férias, 13º, impostos e custos.",
+    "icone": "CT",
+    "badge": null,
+    "badgeColor": null,
+    "published": true,
+    "featured": false,
+    "showOnHome": false,
+    "updatedAt": "2026-06-07"
+  },
+  "fieldComparison": [
+    { "field": "id", "publicValue": "calculadora-clt-ou-pj", "governedValue": "calculadora-clt-ou-pj", "classification": "MATCH" },
+    { "field": "slug", "publicValue": "/calculadora-clt-ou-pj/", "governedValue": "calculadora-clt-ou-pj", "classification": "MATCH" },
+    { "field": "title", "publicValue": "Calculadora CLT ou PJ", "governedValue": "Calculadora CLT ou PJ", "classification": "MATCH" },
+    { "field": "description", "publicValue": "Compare uma proposta CLT com PJ, estimando salário líquido, benefícios, FGTS, férias, 13º, impostos e custos.", "governedValue": "source catalog snapshot matches current catalog", "classification": "MATCH" },
+    { "field": "category", "publicValue": "Trabalhista", "governedValue": "source catalog snapshot", "classification": "MATCH" },
+    { "field": "published", "publicValue": true, "governedValue": "existing public catalog status", "classification": "MATCH" },
+    { "field": "featured", "publicValue": false, "governedValue": "manual publication field", "classification": "PROHIBITED_TO_INFER" },
+    { "field": "showOnHome", "publicValue": false, "governedValue": "manual publication field", "classification": "PROHIBITED_TO_INFER" },
+    { "field": "homeOrder", "publicValue": null, "governedValue": "not required because showOnHome is false", "classification": "NOT_APPLICABLE" },
+    { "field": "updatedAt", "publicValue": "2026-06-07", "governedValue": "manual/public catalog date", "classification": "MANUAL_DECISION_REQUIRED" },
+    { "field": "relationship", "publicValue": "primary calculator for clt-ou-pj in approved internal relationship", "governedValue": "approved", "classification": "MATCH" },
+    { "field": "physicalUrl", "publicValue": "/calculadora-clt-ou-pj/", "governedValue": "https://calculetrabalhador.com.br/calculadora-clt-ou-pj/", "classification": "MATCH" }
+  ],
+  "uniqueness": {
+    "idCount": 1,
+    "slugCount": 1,
+    "duplicateAsset": false
+  },
+  "conclusion": "The public catalog entry is operationally correct. No safe objective catalog update is required."
+}

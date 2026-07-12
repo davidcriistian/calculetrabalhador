@@ -1,0 +1,15 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "ready",
+    "rollbackType":  "surgical",
+    "instructions":  {
+                         "data/brain/nuclei.json":  "Remove only PJ categoryTitle/categoryDescription/categoryUrl/guideUrl/articleFilter fields added in phase 5.14.",
+                         "assets/js/nuclei.js":  "Remove articleKey export and articleFilter.slugs branch from articleMatchesNucleus.",
+                         "blog/categoria/index.html":  "Restore breadcrumbTrail base line and remove category-specific setMeta/renderBreadcrumb changes."
+                     },
+    "doNotRestoreWholeFiles":  true
+}

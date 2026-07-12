@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scriptLoaded": true,
+  "pjEligibility": true,
+  "guideCardCount": 1,
+  "guideHrefCount": 1,
+  "titleRendered": true,
+  "descriptionRendered": true,
+  "position": "before-blog-and-clt-guides",
+  "semanticLink": true,
+  "hrefPlaceholderCount": 0,
+  "nonEligibleRendered": [],
+  "toolsPreserved": true,
+  "articlesPreserved": true,
+  "countersReady": true
+}

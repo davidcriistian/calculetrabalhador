@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "toolsParseable": true,
+  "articlesParseable": true,
+  "calculatorEntry": "present",
+  "articleCatalogEntries": [
+    "clt-ou-pj",
+    "como-calcular-clt-ou-pj",
+    "vantagens-e-desvantagens-clt-ou-pj",
+    "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "clt-ou-pj-vale-a-pena-em-2026"
+  ],
+  "pjConfig": {
+    "guideUrl": "/guias/pj/",
+    "categoryUrl": "/blog/categoria/pj/",
+    "articleFilterSlugs": [
+      "clt-ou-pj",
+      "como-calcular-clt-ou-pj",
+      "vantagens-e-desvantagens-clt-ou-pj",
+      "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "duplicateFilterSlugs": [],
+  "missingFilterArticles": []
+}

@@ -1,0 +1,21 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:36:13.5621840Z",
+    "status":  "audited",
+    "format":  {
+                   "xmlNamespace":  "http://www.sitemaps.org/schemas/sitemap/0.9",
+                   "entryShape":  "single-line url loc lastmod changefreq priority",
+                   "indentation":  "two spaces before url entries",
+                   "lastmodFormat":  "YYYY-MM-DD",
+                   "usesChangefreq":  true,
+                   "usesPriority":  true
+               },
+    "preExistingChanges":  "Category URL entries already pending before this phase",
+    "duplicateBefore":  false,
+    "orderingDecision":  "Insert guide after /blog/ because it is a top-level public discovery page, without reordering existing pending category entries.",
+    "lastmod":  "2026-07-11",
+    "lastmodSource":  "data/operations/reports/publication-execution/guide/guide-pj/generation-report.json createdAt 2026-07-11T22:50:45.1783264Z"
+}

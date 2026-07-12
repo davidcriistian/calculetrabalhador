@@ -1,0 +1,29 @@
+{
+  "id": "working-tree-preconditions-pj-publication",
+  "status": "draft",
+  "blockingMode": "block-on-scope-collision",
+  "currentlyPendingFiles": [
+    ".htaccess",
+    "blog/index.html",
+    "sitemap.xml",
+    "assets/js/nuclei.js",
+    "blog/categoria/",
+    "data/brain/nuclei.json"
+  ],
+  "requiredBeforeExecution": [
+    "inspect git status",
+    "classify pending changes",
+    "explicitly decide include, separate or preserve for each pending file",
+    "create snapshots for every file to be touched",
+    "do not silently overwrite any file",
+    "block if target file has unrelated local changes"
+  ],
+  "snapshotRequirements": [
+    "file path",
+    "pre-operation checksum",
+    "pre-operation content or diff",
+    "owner of existing change",
+    "rollback owner"
+  ],
+  "publicFilesChangedNow": false
+}

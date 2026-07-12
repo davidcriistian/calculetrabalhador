@@ -1,0 +1,30 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "passed-with-warnings",
+    "validations":  {
+                        "Constitution":  "PASS",
+                        "ArchitectureEvolutionPolicy":  "PASS - reused existing runtime",
+                        "AssetIdentityPolicy":  "PASS",
+                        "PAM":  "PASS",
+                        "Registry":  "PASS",
+                        "GuideCategoryRoleSeparation":  "PASS",
+                        "RuntimeMapping":  "PASS",
+                        "PhysicalPublicationContract":  "PASS",
+                        "deterministicFiltering":  "PASS",
+                        "SEOSeparation":  "PASS",
+                        "routing":  "PASS",
+                        "dataConsumerIntegrity":  "PASS",
+                        "noCrossGuideLeak":  "PASS",
+                        "noDuplicateSourceOfTruth":  "PASS",
+                        "rollbackReadiness":  "PASS"
+                    },
+    "warnings":  [
+                     "Category metadata is client-side in the current runtime.",
+                     "data/articles.json remains unchanged, so PJ membership is declared by runtime projection articleFilter.slugs.",
+                     "Some category links for future nuclei may lead to valid dynamic empty states."
+                 ]
+}

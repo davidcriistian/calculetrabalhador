@@ -1,0 +1,25 @@
+{
+  "id": "preflight-report-vantagens-e-desvantagens-clt-ou-pj",
+  "phase": "5.8",
+  "status": "passed",
+  "createdAt": "2026-07-11",
+  "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+  "targetFile": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+  "initialGitStatusSb": "## main...origin/main\n M .htaccess\n M blog/index.html\n M data/operations/reports/runtime-mapping/affected-breadcrumbs.json\n M data/operations/reports/runtime-mapping/affected-components.json\n M data/operations/reports/runtime-mapping/affected-files.json\n M data/operations/reports/runtime-mapping/affected-jsonld.json\n M data/operations/reports/runtime-mapping/affected-navigation.json\n M data/operations/reports/runtime-mapping/affected-pages.json\n M data/operations/reports/runtime-mapping/affected-search.json\n M data/operations/reports/runtime-mapping/affected-sitemap.json\n M data/operations/reports/runtime-mapping/audit-report.json\n M data/operations/reports/runtime-mapping/execution-checklist.json\n M data/operations/reports/runtime-mapping/execution-order.json\n M data/operations/reports/runtime-mapping/execution-risk-report.json\n M data/operations/reports/runtime-mapping/operation-report.json\n M data/operations/reports/runtime-mapping/rollback-impact.json\n M data/operations/reports/runtime-mapping/runtime-mapping-report.json\n M data/operations/reports/runtime-mapping/testing-plan.json\n M data/operations/reports/runtime-mapping/validation-plan.json\n M sitemap.xml\n?? assets/js/nuclei.js\n?? blog/categoria/\n?? data/brain/nuclei.json\n?? data/operations/reports/publication-contract/\n?? data/operations/reports/publication-execution/",
+  "targetHasPreExistingDiff": false,
+  "targetSha256Before": "718AD99AC73A74695896E12F4EC9CD7AC8213663CB013D5B591B60EFF1CCEC65",
+  "calculatorTargetExists": true,
+  "preExistingOutOfScopeChanges": [
+    ".htaccess",
+    "blog/index.html",
+    "sitemap.xml",
+    "assets/js/nuclei.js",
+    "blog/categoria/",
+    "data/brain/nuclei.json",
+    "data/operations/reports/runtime-mapping/",
+    "data/operations/reports/publication-contract/",
+    "data/operations/reports/publication-execution/calculator/"
+  ],
+  "guardDecision": "PASS",
+  "blockingIssues": []
+}

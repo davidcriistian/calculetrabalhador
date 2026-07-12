@@ -1,0 +1,23 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "passed",
+    "executedChecks":  [
+                           "target existence",
+                           "required SEO tags",
+                           "single H1",
+                           "approved internal links exist physically",
+                           "no empty optional module rendering",
+                           "no href placeholders",
+                           "no JSON-LD FAQPage without FAQ section"
+                       ],
+    "notExecuted":  [
+                        "browser visual screenshot",
+                        "production deploy",
+                        "IndexNow"
+                    ]
+}

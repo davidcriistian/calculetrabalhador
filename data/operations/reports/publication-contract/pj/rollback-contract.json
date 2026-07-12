@@ -1,0 +1,39 @@
+{
+  "id": "rollback-contract-pj-publication",
+  "status": "draft",
+  "rollbackScopes": ["per-asset", "per-page", "full-batch"],
+  "requiredRecordsPerChange": [
+    "original file path",
+    "reserved previous checksum",
+    "previous content or catalog entry",
+    "catalog entry created or changed",
+    "sitemap URLs added or lastmod changed",
+    "internal links changed",
+    "JSON-LD changed",
+    "post-rollback confirmation"
+  ],
+  "classes": [
+    {
+      "class": "catalog-entry",
+      "rollback": "restore previous entry or remove operation-created entry"
+    },
+    {
+      "class": "generated-page",
+      "rollback": "remove generated page and any catalog/sitemap references"
+    },
+    {
+      "class": "controlled-page-update",
+      "rollback": "restore page snapshot and revalidate canonical, links and JSON-LD"
+    },
+    {
+      "class": "sitemap-change",
+      "rollback": "remove operation-owned URL or restore previous lastmod"
+    },
+    {
+      "class": "indexnow-send",
+      "rollback": "not reversible; only execute after explicit approval and final validation"
+    }
+  ],
+  "postRollbackChecks": ["JSON valid", "catalog valid", "no broken links introduced", "sitemap valid", "git diff reviewed"],
+  "rollbackExecutedNow": false
+}

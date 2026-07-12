@@ -1,0 +1,27 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "status":  "completed",
+    "filesAltered":  [
+                         "blog/categoria/index.html",
+                         "assets/js/nuclei.js",
+                         "data/brain/nuclei.json"
+                     ],
+    "filesCreated":  [
+                         "data/operations/reports/publication-execution/category/pj/*.json"
+                     ],
+    "filesAuditedNotChangedByThisPhase":  [
+                                              ".htaccess",
+                                              "blog/index.html",
+                                              "sitemap.xml"
+                                          ],
+    "changes":  [
+                    "PJ projection now separates categoryUrl/guideUrl and category copy.",
+                    "nuclei.js supports deterministic articleFilter.slugs.",
+                    "category template uses categoryTitle/categoryDescription/categoryUrl and Home -\u003e Blog -\u003e PJ breadcrumb."
+                ],
+    "outOfScopeTouched":  false
+}

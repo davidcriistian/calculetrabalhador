@@ -1,43 +1,85 @@
 {
-    "id":  "affected-pages",
-    "status":  "draft",
-    "pages":  [
-                  {
-                      "page":  "Home",
-                      "assetResponsible":  "guide:guide-pj",
-                      "impact":  "guide card/module would appear",
-                      "modifiedNow":  false
-                  },
-                  {
-                      "page":  "Guia PJ",
-                      "assetResponsible":  "guide:guide-pj",
-                      "impact":  "new guide page would be created in future publishing",
-                      "modifiedNow":  false
-                  },
-                  {
-                      "page":  "Categoria PJ",
-                      "assetResponsible":  "cluster:clt-ou-pj",
-                      "impact":  "category would include cluster and article cards",
-                      "modifiedNow":  false
-                  },
-                  {
-                      "page":  "Calculadora CLT ou PJ",
-                      "assetResponsible":  "calculator:calculadora-clt-ou-pj",
-                      "impact":  "breadcrumbs, navigation and related links would be updated",
-                      "modifiedNow":  false
-                  },
-                  {
-                      "page":  "Artigo Pilar CLT ou PJ",
-                      "assetResponsible":  "article:clt-ou-pj",
-                      "impact":  "breadcrumbs and satellite navigation would be updated",
-                      "modifiedNow":  false
-                  },
-                  {
-                      "page":  "Artigos Satelites CLT ou PJ",
-                      "assetResponsible":  "cluster:clt-ou-pj",
-                      "impact":  "breadcrumbs and calculator links would be represented",
-                      "modifiedNow":  false
-                  }
-              ],
-    "modifiedNow":  false
+  "id": "affected-pages",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "pages": [
+    {
+      "page": "Home",
+      "physicalPath": "index.html",
+      "runtimeConsumer": "assets/home-refactor-v8.js",
+      "sources": ["data/tools.json", "data/articles.json"],
+      "currentImplementation": "catalog-driven tools and articles; counters calculated by JavaScript",
+      "futureImpact": "Guide PJ Home integration is not implemented and must not be assumed",
+      "classification": "REQUIRES_IMPLEMENTATION",
+      "readiness": "NOT_READY",
+      "modifiedNow": false
+    },
+    {
+      "page": "Ferramentas",
+      "physicalPath": "ferramentas/index.html",
+      "runtimeConsumer": "inline script",
+      "sources": ["data/tools.json"],
+      "currentImplementation": "published tools are listed from catalog",
+      "futureImpact": "calculator appears when page exists and catalog entry is valid",
+      "classification": "CONFIGURATION_ONLY",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "page": "Blog",
+      "physicalPath": "blog/index.html",
+      "runtimeConsumer": "inline script",
+      "sources": ["data/articles.json"],
+      "currentImplementation": "articles are listed from catalog; individual pages are separate physical files",
+      "futureImpact": "new article listing is configuration-only, but new page needs generation",
+      "classification": "CONFIGURATION_ONLY",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "page": "Categoria PJ",
+      "physicalPath": "blog/categoria/index.html via /blog/categoria/{slug}/ rewrite",
+      "runtimeConsumer": "assets/js/nuclei.js and inline category page script",
+      "sources": ["data/brain/nuclei.json", "data/articles.json"],
+      "currentImplementation": "local pending implementation, not official tracked baseline",
+      "futureImpact": "depends on resolving pending working tree files before publication",
+      "classification": "READY_WITH_GUARDS",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "page": "Guia PJ",
+      "physicalPath": "guias/pj/index.html",
+      "runtimeConsumer": "none identified",
+      "sources": [],
+      "currentImplementation": "not created; no public guide runtime exists",
+      "futureImpact": "page creation requires generation and publishing gates",
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "modifiedNow": false
+    },
+    {
+      "page": "Calculadora CLT ou PJ",
+      "physicalPath": "calculadora-clt-ou-pj/index.html",
+      "runtimeConsumer": "page-local calculator runtime plus global layout/editorial scripts",
+      "sources": ["page-local code", "assets/js/global-layout.js", "assets/js/editorial-metadata.js"],
+      "currentImplementation": "existing public calculator page",
+      "futureImpact": "only controlled links, breadcrumbs or JSON-LD updates should be considered; calculator logic must not change",
+      "classification": "MANUAL_TODAY",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    },
+    {
+      "page": "Artigo Pilar CLT ou PJ",
+      "physicalPath": "blog/clt-ou-pj/index.html",
+      "runtimeConsumer": "page-local HTML plus global layout/editorial scripts",
+      "sources": ["page-local HTML", "assets/js/global-layout.js", "assets/js/editorial-metadata.js"],
+      "currentImplementation": "existing public article page",
+      "futureImpact": "controlled link, breadcrumb or JSON-LD updates require page edit/generation",
+      "classification": "MANUAL_TODAY",
+      "readiness": "READY_WITH_GUARDS",
+      "modifiedNow": false
+    }
+  ],
+  "modifiedNow": false
 }

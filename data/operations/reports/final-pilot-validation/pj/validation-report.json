@@ -1,0 +1,23 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "scope": "final-end-to-end-pilot-validation-pj",
+  "validatedCapabilities": {
+    "homeDiscovery": "PASS",
+    "guideNavigation": "PASS",
+    "categoryRuntime": "PASS",
+    "calculatorAccess": "PASS",
+    "articleAccess": "PASS",
+    "ctaIntegrity": "PASS",
+    "seoSeparation": "PASS",
+    "sitemap": "PASS_WITH_WARNINGS",
+    "dataIntegrity": "PASS",
+    "runtimeSafety": "PASS",
+    "crossNucleusIsolation": "PASS",
+    "rollbackReadiness": "PASS"
+  },
+  "manualReviewNotes": [
+    "Category PJ sitemap entry is valid as a runtime-mapped URL, not as a physical directory.",
+    "Visual/browser rendering remains a manual or environment-dependent validation."
+  ],
+  "blockers": []
+}

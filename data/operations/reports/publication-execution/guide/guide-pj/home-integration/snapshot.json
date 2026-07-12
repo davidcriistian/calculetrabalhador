@@ -1,0 +1,35 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:57:31.8568716Z",
+    "status":  "captured",
+    "files":  [
+                  {
+                      "path":  "index.html",
+                      "exists":  true,
+                      "sha256":  "777CF62477EFB5746798351A0937E5D3A16F27595601C7CBAFAF3FDD1C8E92C7",
+                      "length":  7014
+                  },
+                  {
+                      "path":  "assets/home-refactor-v8.js",
+                      "exists":  true,
+                      "sha256":  "845ABB83D1174C5C87B66E4C1A4479156131022FA2F97F7CDCCD5A5332A2D361",
+                      "length":  7834
+                  },
+                  {
+                      "path":  "assets/js/nuclei.js",
+                      "exists":  true,
+                      "sha256":  "D3F3FA1F9D61E5D8AE5F3EEC06A00BEFE30746E9A39EE032CA4E2C404BB23610",
+                      "length":  2442
+                  },
+                  {
+                      "path":  "data/brain/nuclei.json",
+                      "exists":  true,
+                      "sha256":  "0545FDDBE6DDEFFC395139B7D7C3E24C2B04A4BAE954B1B124208924B6A45DB6",
+                      "length":  3612
+                  }
+              ],
+    "rollbackPolicy":  "surgical rollback only for changes introduced by phase 5.10"
+}

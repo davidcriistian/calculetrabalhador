@@ -1,0 +1,22 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "result":  "CONTROLLED NEW PAGE GENERATION PASSED WITH WARNINGS",
+    "physicalPageStatus":  "generated",
+    "runtimeStatus":  "not-consumed",
+    "publicDiscoveryStatus":  "not-integrated",
+    "createdFiles":  [
+                         "guias/pj/index.html"
+                     ],
+    "alteredFiles":  [
+
+                     ],
+    "warnings":  [
+                     "Manual review remains required for unavailable official guide reference.",
+                     "No public discovery integration was performed by design."
+                 ]
+}

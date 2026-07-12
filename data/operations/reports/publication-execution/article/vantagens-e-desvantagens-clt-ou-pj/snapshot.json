@@ -1,0 +1,12 @@
+{
+  "id": "snapshot-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "captured",
+  "createdAt": "2026-07-11",
+  "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+  "file": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+  "sha256Before": "718AD99AC73A74695896E12F4EC9CD7AC8213663CB013D5B591B60EFF1CCEC65",
+  "affectedRegionBefore": "After the paragraph ending 'a CLT pode ser financeiramente mais tranquila.' and before '<section class=\"mt-12\" aria-labelledby=\"faq-title\">'.",
+  "plannedInsertion": "one CTA_CARD_V1_Final block using the same-page secondary CTA pattern",
+  "referencePattern": "CTA_CARD_V1_Secundario",
+  "rollbackExactAction": "remove the inserted CTA_CARD_V1_Final block only"
+}

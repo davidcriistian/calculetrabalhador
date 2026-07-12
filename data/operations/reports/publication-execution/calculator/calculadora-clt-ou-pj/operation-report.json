@@ -1,0 +1,40 @@
+{
+  "id": "operation-report-calculadora-clt-ou-pj-public-catalog-pilot",
+  "operationId": "public-catalog-execution-pilot-calculadora-clt-ou-pj",
+  "phase": "5.7",
+  "status": "completed",
+  "result": "PUBLIC CATALOG PILOT PASSED — NO PUBLIC CHANGE REQUIRED",
+  "assetId": "calculator:calculadora-clt-ou-pj",
+  "decision": "NO PUBLIC CHANGE REQUIRED",
+  "createdAt": "2026-07-11",
+  "outputs": [
+    "preflight-report.json",
+    "catalog-comparison.json",
+    "execution-decision.json",
+    "snapshot.json",
+    "change-report.json",
+    "consumer-verification.json",
+    "testing-report.json",
+    "validation-report.json",
+    "rollback-record.json",
+    "audit-report.json"
+  ],
+  "publicScope": {
+    "allowedPublicFile": "data/tools.json",
+    "publicFilesAltered": [],
+    "htmlChanged": false,
+    "cssChanged": false,
+    "javascriptChanged": false,
+    "sitemapChanged": false,
+    "articlesChanged": false,
+    "categoriesChanged": false,
+    "guideChanged": false,
+    "indexNowExecuted": false,
+    "deployExecuted": false
+  },
+  "warnings": [
+    "working tree contains pre-existing out-of-scope changes",
+    "manual fields such as showOnHome, homeOrder, featured and updatedAt were intentionally not inferred"
+  ],
+  "blockingIssues": []
+}

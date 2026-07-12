@@ -1,0 +1,29 @@
+{
+  "id": "internal-links-publication-contract-pj",
+  "status": "draft",
+  "relationshipFlow": [
+    "guide:guide-pj -> cluster:clt-ou-pj",
+    "cluster:clt-ou-pj -> calculator:calculadora-clt-ou-pj",
+    "cluster:clt-ou-pj -> article:clt-ou-pj",
+    "article:clt-ou-pj -> satellite articles",
+    "satellite articles -> article:clt-ou-pj",
+    "satellite articles -> calculator:calculadora-clt-ou-pj"
+  ],
+  "pageRules": [
+    {
+      "pageType": "guide",
+      "rules": ["link to approved cluster", "link to primary calculator", "link to pillar and satellites", "do not link to unapproved assets"]
+    },
+    {
+      "pageType": "pillar-article",
+      "rules": ["link to calculator", "link to satellites", "link only to approved related content"]
+    },
+    {
+      "pageType": "satellite-article",
+      "rules": ["link to pillar article", "CTA to calculator at beginning, middle and end when approved", "related links only when approved"]
+    }
+  ],
+  "physicalImplementation": "page-local HTML and catalog fields such as relatedTool; no global link generator exists.",
+  "classification": "GENERATION_REQUIRED_OR_CONTROLLED_UPDATE",
+  "publicFilesChangedNow": false
+}

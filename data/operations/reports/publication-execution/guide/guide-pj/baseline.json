@@ -1,0 +1,28 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "captured",
+  "targetBeforeOperation": {
+    "exists": false,
+    "path": "guias/pj/index.html"
+  },
+  "publicFilesAllowedForCreation": [
+    "guias/pj/index.html"
+  ],
+  "publicFilesExplicitlyNotTouched": [
+    ".htaccess",
+    "index.html",
+    "assets/home-refactor-v8.js",
+    "sitemap.xml",
+    "blog/index.html",
+    "data/articles.json",
+    "data/tools.json",
+    "blog/vantagens-e-desvantagens-clt-ou-pj/index.html",
+    "calculadora-clt-ou-pj/index.html"
+  ],
+  "runtimeBeforeOperation": "guide page not present and not discoverable through public catalogs"
+}

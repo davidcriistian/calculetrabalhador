@@ -1,0 +1,17 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "ready",
+    "rollbackType":  "surgical",
+    "phaseFilesToRevert":  {
+                               "index.html":  "remove only the script tag for /assets/js/nuclei.js",
+                               "assets/home-refactor-v8.js":  "remove NUCLEI_URL, fetchJsonItems, renderGuideCard, renderGuideSection, loadHomeGuides, guides Promise slot and renderArticles guide argument",
+                               "assets/js/nuclei.js":  "remove only isHomeEligible/getHomeGuides exports added in this phase",
+                               "data/brain/nuclei.json":  "restore only PJ projection fields changed in this phase: assetId,type,url,published,status,description if needed"
+                           },
+    "doNotRestoreWholeFiles":  true,
+    "reason":  "Some files were already pending/untracked before this phase."
+}

@@ -1,0 +1,25 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "approved-for-controlled-generation",
+  "steps": [
+    "create authorized target directory if missing",
+    "create only guias/pj/index.html",
+    "render configured sections only",
+    "omit empty optional modules",
+    "do not integrate with catalogs, sitemap, home, categories or IndexNow",
+    "write post-generation reports and run validations"
+  ],
+  "expectedPhysicalStatus": {
+    "physicalPageStatus": "generated",
+    "publicDiscoveryStatus": "not-integrated",
+    "homeStatus": "not-integrated",
+    "sitemapStatus": "not-integrated",
+    "indexingStatus": "not-requested",
+    "categoryStatus": "not-integrated"
+  }
+}

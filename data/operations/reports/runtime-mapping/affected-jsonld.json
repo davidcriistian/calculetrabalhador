@@ -1,46 +1,55 @@
 {
-    "id":  "affected-jsonld",
-    "status":  "draft",
-    "jsonld":  [
-                   {
-                       "page":  "Guia PJ",
-                       "requiredSchemas":  [
-                                               "CollectionPage",
-                                               "BreadcrumbList",
-                                               "FAQPage"
-                                           ],
-                       "assetId":  "guide:guide-pj",
-                       "generatedNow":  false
-                   },
-                   {
-                       "page":  "Cluster CLT ou PJ",
-                       "requiredSchemas":  [
-                                               "CollectionPage",
-                                               "BreadcrumbList"
-                                           ],
-                       "assetId":  "cluster:clt-ou-pj",
-                       "generatedNow":  false
-                   },
-                   {
-                       "page":  "Calculadora CLT ou PJ",
-                       "requiredSchemas":  [
-                                               "SoftwareApplication",
-                                               "FAQPage",
-                                               "BreadcrumbList"
-                                           ],
-                       "assetId":  "calculator:calculadora-clt-ou-pj",
-                       "generatedNow":  false
-                   },
-                   {
-                       "page":  "Artigo Pilar e Satelites",
-                       "requiredSchemas":  [
-                                               "Article",
-                                               "FAQPage",
-                                               "BreadcrumbList"
-                                           ],
-                       "assetId":  "cluster:clt-ou-pj",
-                       "generatedNow":  false
-                   }
-               ],
-    "generatedNow":  false
+  "id": "affected-jsonld",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "physicalReality": {
+    "centralGeneratorFound": false,
+    "removedAbstraction": "component:jsonld",
+    "implementation": "JSON-LD is embedded in individual pages as script blocks",
+    "observedSchemas": ["Article", "FAQPage", "BreadcrumbList", "calculator-specific schemas where implemented"],
+    "classification": "GENERATION_REQUIRED"
+  },
+  "jsonld": [
+    {
+      "page": "Guia PJ",
+      "physicalPath": "guias/pj/index.html",
+      "currentStatus": "not-created",
+      "requiredFutureSchemas": ["CollectionPage", "BreadcrumbList", "FAQPage if editorial content requires it"],
+      "assetId": "guide:guide-pj",
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "generatedNow": false
+    },
+    {
+      "page": "Categoria PJ",
+      "physicalPath": "blog/categoria/index.html via /blog/categoria/pj/",
+      "currentStatus": "local-pending-not-official",
+      "requiredFutureSchemas": ["CollectionPage", "BreadcrumbList if approved"],
+      "assetId": "cluster:clt-ou-pj",
+      "classification": "READY_WITH_GUARDS",
+      "readiness": "READY_WITH_GUARDS",
+      "generatedNow": false
+    },
+    {
+      "page": "Calculadora CLT ou PJ",
+      "physicalPath": "calculadora-clt-ou-pj/index.html",
+      "currentStatus": "existing embedded JSON-LD found",
+      "requiredFutureSchemas": ["FAQPage", "BreadcrumbList if generated", "calculator-specific schema if approved"],
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "generatedNow": false
+    },
+    {
+      "page": "Artigos CLT ou PJ",
+      "physicalPath": "blog/{slug}/index.html",
+      "currentStatus": "existing articles use embedded page-level JSON-LD",
+      "requiredFutureSchemas": ["Article", "FAQPage", "BreadcrumbList"],
+      "assetId": "cluster:clt-ou-pj",
+      "classification": "GENERATION_REQUIRED",
+      "readiness": "NOT_READY",
+      "generatedNow": false
+    }
+  ],
+  "generatedNow": false
 }

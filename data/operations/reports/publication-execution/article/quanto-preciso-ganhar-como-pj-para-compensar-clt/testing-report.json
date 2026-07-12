@@ -1,0 +1,27 @@
+{
+    "operationId":  "controlled-existing-page-update-quanto-pj-cta-final",
+    "phase":  "5.12",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "target":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+    "createdAt":  "2026-07-11T23:24:17.7590639Z",
+    "status":  "passed",
+    "checks":  {
+                   "ctaPrincipal":  "PASS",
+                   "ctaSecundario":  "PASS",
+                   "ctaFinalUnique":  "PASS",
+                   "destinationUrl":  "PASS",
+                   "htmlStructural":  "PASS",
+                   "canonicalPreserved":  "PASS",
+                   "jsonLdPreserved":  "PASS",
+                   "scriptsPreserved":  "PASS",
+                   "noOutOfScopeChange":  "PASS",
+                   "diffSpecific":  "PASS"
+               },
+    "observed":  {
+                     "ctaPrincipalCount":  1,
+                     "ctaSecundarioCount":  1,
+                     "ctaFinalCount":  1,
+                     "calculatorLinkCount":  4,
+                     "scriptCount":  4
+                 }
+}

@@ -1,0 +1,23 @@
+{
+    "operationId":  "controlled-new-page-generation-guide-pj",
+    "phase":  "5.9",
+    "assetId":  "guide:guide-pj",
+    "target":  "guias/pj/index.html",
+    "proposedUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T22:50:45.1783264Z",
+    "status":  "passed-with-warnings",
+    "fileExists":  true,
+    "fileSizeBytes":  15321,
+    "checks":  {
+                   "hasGlobalHeader":  true,
+                   "hasGlobalFooter":  true,
+                   "hasCanonical":  true,
+                   "hasCollectionPageSchema":  true,
+                   "hasBreadcrumbSchema":  true,
+                   "linksOnlyApprovedAssets":  true,
+                   "noGuidesIndexLink":  true
+               },
+    "warnings":  [
+                     "The page is physical but not integrated into sitemap, home, categories or public catalogs."
+                 ]
+}

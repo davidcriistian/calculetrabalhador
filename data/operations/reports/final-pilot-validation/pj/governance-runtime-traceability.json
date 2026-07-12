@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "trace": {
+    "guide:guide-pj": "guias/pj/index.html and /guias/pj/",
+    "cluster:clt-ou-pj": "guide composition and approved relationship map",
+    "calculator:calculadora-clt-ou-pj": "calculadora-clt-ou-pj/index.html + data/tools.json",
+    "article:clt-ou-pj": "blog/clt-ou-pj/index.html + data/articles.json",
+    "satellites": "physical blog pages + data/articles.json + pj.articleFilter.slugs",
+    "category PJ": "data/brain/nuclei.json -> articleFilter.slugs -> blog/categoria/index.html"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "resolved",
+  "patternsUsed": [
+    "static editorial page",
+    "global header placeholder",
+    "global footer placeholder",
+    "page-local CSS",
+    "cards for governed relationship assets"
+  ],
+  "patternsNotUsed": [
+    "central breadcrumb component",
+    "central JSON-LD component",
+    "global CSS edits",
+    "global JavaScript edits",
+    "Tailwind CDN addition"
+  ]
+}

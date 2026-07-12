@@ -1,0 +1,11 @@
+{
+  "status": "READY",
+  "correctionApplied": false,
+  "rollbackScope": "reports-only for phase 5.15; no code changes were applied in this phase",
+  "existingRollbackRecords": [
+    "publication-execution/category/pj",
+    "publication-finalization/guide/guide-pj",
+    "publication-execution/article/*",
+    "publication-execution/guide/guide-pj"
+  ]
+}

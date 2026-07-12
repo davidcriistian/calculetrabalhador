@@ -1,0 +1,42 @@
+{
+  "id": "guide-publication-contract-guide-pj",
+  "status": "draft",
+  "assetId": "guide:guide-pj",
+  "proposedPhysicalPage": "guias/pj/index.html",
+  "proposedPublicUrl": "/guias/pj/",
+  "physicalStatus": "not-created",
+  "classification": "GENERATION_REQUIRED",
+  "futureInputs": [
+    "Guide Blueprint",
+    "Guide Gold Standard",
+    "Registry",
+    "approved site composition",
+    "approved cluster:clt-ou-pj",
+    "calculator:calculadora-clt-ou-pj",
+    "approved articles"
+  ],
+  "minimumStructure": [
+    "hero",
+    "introduction",
+    "clusters",
+    "calculators",
+    "articles",
+    "empty states",
+    "FAQ when configured",
+    "glossary when configured",
+    "downloads when configured",
+    "products and CTAs when configured",
+    "breadcrumb",
+    "JSON-LD",
+    "internal links"
+  ],
+  "blockedUntil": [
+    "public title approved",
+    "public description approved",
+    "SEO role separation approved",
+    "Home integration approach approved",
+    "publishing gates satisfied"
+  ],
+  "forbiddenActionsNow": ["create page", "change Home", "change sitemap", "call IndexNow"],
+  "publicFilesChangedNow": false
+}

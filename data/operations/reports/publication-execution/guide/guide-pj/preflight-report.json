@@ -1,0 +1,31 @@
+{
+  "operationId": "controlled-new-page-generation-guide-pj",
+  "phase": "5.9",
+  "assetId": "guide:guide-pj",
+  "target": "guias/pj/index.html",
+  "proposedUrl": "/guias/pj/",
+  "createdAt": "2026-07-11T22:47:49.670Z",
+  "status": "passed-with-warnings",
+  "targetExists": false,
+  "targetWasUntracked": false,
+  "authorizedPublicFiles": [
+    "guias/pj/index.html"
+  ],
+  "blockedFilesNotTouched": [
+    ".htaccess",
+    "index.html",
+    "assets/home-refactor-v8.js",
+    "sitemap.xml",
+    "blog/index.html",
+    "data/articles.json",
+    "data/tools.json",
+    "article pages",
+    "calculator pages",
+    "global CSS/JS"
+  ],
+  "knownDirtyTreePreserved": true,
+  "warnings": [
+    "Guide reference status is unavailable and remains under manual review.",
+    "Existing unrelated production and internal pending changes were preserved."
+  ]
+}

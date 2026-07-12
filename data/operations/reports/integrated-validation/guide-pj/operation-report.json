@@ -1,0 +1,18 @@
+{
+    "operationId":  "integrated-public-flow-validation-guide-pj",
+    "phase":  "5.11",
+    "createdAt":  "2026-07-11T23:14:10.8414541Z",
+    "result":  "INTEGRATED PUBLIC FLOW PASSED WITH WARNINGS",
+    "correctionsPerformed":  false,
+    "createdFiles":  [
+                         "data/operations/reports/integrated-validation/guide-pj/*.json"
+                     ],
+    "alteredCodeFilesByThisPhase":  [
+
+                                    ],
+    "guideDiscoveredFromHome":  true,
+    "guideCardUnique":  true,
+    "guideUrl":  "/guias/pj/",
+    "publicFlowValidated":  true,
+    "recommendation":  "Proceed to the next publication/distribution phase after deciding whether to handle sitemap/publication integration and the remaining quanto article CTA gap."
+}

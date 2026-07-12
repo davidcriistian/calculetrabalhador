@@ -1,55 +1,153 @@
 {
-    "id":  "runtime-mapping-report",
-    "version":  "0.1.0",
-    "createdAt":  "2026-07-10",
-    "source":  "Operational Capabilities Phase 5.5 - Runtime Mapping",
-    "status":  "passed-with-warnings",
-    "result":  "RUNTIME MAPPING PASSED WITH WARNINGS",
-    "commonState":  {
-                        "status":  "draft",
-                        "visibility":  "internal",
-                        "runtimeStatus":  "not-consumed",
-                        "mappingMode":  "execution-plan",
-                        "publicationExecuted":  false,
-                        "htmlGenerated":  false,
-                        "runtimeAffected":  false,
-                        "productionFilesChanged":  false
-                    },
-    "derivedFrom":  [
-                        "/data/operations/reports/site-preview/preview-model.json",
-                        "/data/operations/reports/site-composition/site-composition-report.json",
-                        "/data/registry/by-type/index.json",
-                        "/data/publishing/registry/index.json"
-                    ],
-    "scope":  {
-                  "guide":  "guide:guide-pj",
-                  "cluster":  "cluster:clt-ou-pj",
-                  "calculator":  "calculator:calculadora-clt-ou-pj",
-                  "pillar":  "article:clt-ou-pj",
-                  "satellites":  [
-                                     "article:como-calcular-clt-ou-pj",
-                                     "article:vantagens-e-desvantagens-clt-ou-pj",
-                                     "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
-                                     "article:clt-ou-pj-vale-a-pena-em-2026"
-                                 ]
-              },
-    "summary":  {
-                    "affectedFilesCount":  9,
-                    "affectedPagesCount":  6,
-                    "affectedComponentsCount":  11,
-                    "risksCount":  7,
-                    "productionFilesModifiedNow":  0
-                },
-    "warnings":  [
-                     "orphan-asset",
-                     "missing-reference-guide",
-                     "missing-reference-calculator",
-                     "missing-reference-article",
-                     "missing-cta",
-                     "missing-cta-quanto",
-                     "cross-guide-leak"
-                 ],
-    "blockingIssues":  [
-
-                       ]
+  "id": "runtime-mapping-report",
+  "version": "0.2.0",
+  "createdAt": "2026-07-10",
+  "reconciledAt": "2026-07-11",
+  "source": "Operational Capabilities Phase 5.5.2 - Runtime Mapping Reconciliation",
+  "status": "reconciled-with-warnings",
+  "result": "RUNTIME MAPPING RECONCILED WITH WARNINGS",
+  "commonState": {
+    "status": "draft",
+    "visibility": "internal",
+    "runtimeStatus": "not-consumed",
+    "mappingMode": "physical-execution-plan",
+    "publicationExecuted": false,
+    "htmlGenerated": false,
+    "runtimeAffected": false,
+    "productionFilesChanged": false
+  },
+  "authority": [
+    "Constitution and Platform Architecture govern principles",
+    "Registry and governed relationships define assets",
+    "Runtime Reality Audit Phase 5.5.1 defines the current physical implementation",
+    "The repository is the source of truth for existing files",
+    "Runtime Mapping must not invent components, files, generators, automations or search indexes"
+  ],
+  "derivedFrom": [
+    "/data/operations/reports/site-preview/preview-model.json",
+    "/data/operations/reports/site-composition/site-composition-report.json",
+    "/data/operations/reports/runtime-mapping/affected-files.json",
+    "Runtime Reality Audit Phase 5.5.1"
+  ],
+  "scope": {
+    "guide": "guide:guide-pj",
+    "cluster": "cluster:clt-ou-pj",
+    "calculator": "calculator:calculadora-clt-ou-pj",
+    "pillar": "article:clt-ou-pj",
+    "satellites": [
+      "article:como-calcular-clt-ou-pj",
+      "article:vantagens-e-desvantagens-clt-ou-pj",
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "reconciledPhysicalReality": {
+    "home": {
+      "file": "index.html",
+      "script": "assets/home-refactor-v8.js",
+      "sources": ["data/tools.json", "data/articles.json"],
+      "toolsDiscovery": "catalog-driven",
+      "publicationFlag": "published === true",
+      "homeFlag": "showOnHome === true",
+      "ordering": "homeOrder",
+      "counters": "calculated automatically by JavaScript",
+      "guidePjHomeIntegration": "not implemented"
+    },
+    "tools": {
+      "page": "ferramentas/index.html",
+      "source": "data/tools.json",
+      "consumer": "inline script",
+      "listingClassification": "CONFIGURATION_ONLY",
+      "homeImpactCondition": "showOnHome === true"
+    },
+    "blog": {
+      "page": "blog/index.html",
+      "source": "data/articles.json",
+      "consumer": "inline script",
+      "listingClassification": "CONFIGURATION_ONLY",
+      "individualPageClassification": "GENERATION_REQUIRED",
+      "individualPagePattern": "blog/{slug}/index.html"
+    },
+    "categories": {
+      "realPattern": "/blog/categoria/{slug}/",
+      "incorrectPathRemoved": "categoria/pj/index.html",
+      "status": "local-pending-not-official",
+      "readiness": "READY_WITH_GUARDS",
+      "dependsOn": "resolution of pending working tree files"
+    },
+    "guides": {
+      "guidePjPath": "guias/pj/index.html",
+      "exists": false,
+      "publicGuideRuntimeExists": false,
+      "guidePjAssetStatus": "internal governed asset only",
+      "urlProposal": "/guias/pj/",
+      "pageCreation": "GENERATION_REQUIRED",
+      "homeIntegration": "REQUIRES_IMPLEMENTATION"
+    },
+    "breadcrumbs": {
+      "componentExists": false,
+      "implementation": "page-specific HTML and/or BreadcrumbList JSON-LD",
+      "classification": "GENERATION_REQUIRED"
+    },
+    "jsonld": {
+      "centralGeneratorExists": false,
+      "implementation": "embedded per page",
+      "classification": "GENERATION_REQUIRED"
+    },
+    "search": {
+      "globalIndexExists": false,
+      "searchImpact": "not-applicable",
+      "localSearchSurfaces": ["Home", "Ferramentas", "Blog"]
+    },
+    "sitemap": {
+      "file": "sitemap.xml",
+      "updateMode": "manual-currently",
+      "lastmodMode": "manual-currently",
+      "indexNow": "scripts/indexnow.js with real send only via --send",
+      "searchConsoleAutomation": "not found"
+    }
+  },
+  "readiness": {
+    "addCalculatorToListing": "READY_WITH_GUARDS",
+    "addArticleToListing": "READY_WITH_GUARDS",
+    "createIndividualArticlePage": "GENERATION_REQUIRED",
+    "addCategoryPj": "READY_WITH_GUARDS",
+    "addGuidePjToHome": "NOT_READY_REQUIRES_IMPLEMENTATION",
+    "createGuidePjPage": "NOT_READY_GENERATION_REQUIRED",
+    "counters": "READY_AUTOMATIC_ALREADY",
+    "breadcrumbs": "NOT_READY_GENERATION_REQUIRED",
+    "jsonld": "NOT_READY_GENERATION_REQUIRED",
+    "internalLinks": "READY_WITH_GUARDS",
+    "sitemap": "READY_WITH_GUARDS_MANUAL_TODAY",
+    "indexNow": "READY_WITH_GUARDS",
+    "globalSearchIndex": "NOT_APPLICABLE",
+    "rollback": "READY_WITH_GUARDS"
+  },
+  "summary": {
+    "existingPhysicalFilesCount": 10,
+    "proposedNotCreatedCount": 1,
+    "localPendingNotOfficialCount": 6,
+    "nonExistentAbstractionsRemovedCount": 4,
+    "risksCount": 16,
+    "productionFilesModifiedNow": 0
+  },
+  "warnings": [
+    "working-tree-collision",
+    "nonexistent-runtime-abstraction",
+    "guide-runtime-not-implemented",
+    "category-runtime-pending",
+    "manual-sitemap-update",
+    "page-generation-required",
+    "breadcrumb-generation-required",
+    "jsonld-generation-required",
+    "cross-guide-leak",
+    "seo-cannibalization-guide-vs-category",
+    "orphan-asset",
+    "missing-reference-guide",
+    "missing-reference-calculator",
+    "missing-reference-article",
+    "missing-cta",
+    "missing-cta-quanto"
+  ],
+  "blockingIssues": []
 }

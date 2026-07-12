@@ -1,0 +1,19 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "status":  "dry-run-passed",
+    "command":  "node scripts/indexnow.js https://calculetrabalhador.com.br/guias/pj/",
+    "sendFlagUsed":  false,
+    "externalRequestSent":  false,
+    "output":  "Mode: dry-run\r\nEndpoint: https://api.indexnow.org/indexnow\r\nHost: calculetrabalhador.com.br\r\nKey location: https://calculetrabalhador.com.br/AD6E1D2A583449C7816E50E1D2B4BD17.txt\r\nURL count: 1\r\n\r\n{\r\n  \"host\": \"calculetrabalhador.com.br\",\r\n  \"key\": \"AD6E1D2A583449C7816E50E1D2B4BD17\",\r\n  \"keyLocation\": \"https://calculetrabalhador.com.br/AD6E1D2A583449C7816E50E1D2B4BD17.txt\",\r\n  \"urlList\": [\r\n    \"https://calculetrabalhador.com.br/guias/pj/\"\r\n  ]\r\n}\r\n",
+    "payload":  {
+                    "host":  "calculetrabalhador.com.br",
+                    "keyLocation":  "https://calculetrabalhador.com.br/AD6E1D2A583449C7816E50E1D2B4BD17.txt",
+                    "urlList":  [
+                                    "https://calculetrabalhador.com.br/guias/pj/"
+                                ]
+                }
+}

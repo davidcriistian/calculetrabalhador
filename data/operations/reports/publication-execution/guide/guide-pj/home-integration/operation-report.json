@@ -1,0 +1,18 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "result":  "GUIDE HOME DISTRIBUTION PASSED WITH WARNINGS",
+    "cardIntegrated":  true,
+    "finalUrl":  "/guias/pj/",
+    "finalPosition":  "articlesMount before Blog and Guias CLT sections",
+    "mechanism":  "Governed guide -\u003e data/brain/nuclei.json runtime projection -\u003e assets/js/nuclei.js eligibility -\u003e assets/home-refactor-v8.js render",
+    "reusableForFutureGuides":  true,
+    "sitemapChanged":  false,
+    "indexNowExecuted":  false,
+    "categoryChanged":  false,
+    "calculatorsChanged":  false,
+    "articlesChanged":  false
+}

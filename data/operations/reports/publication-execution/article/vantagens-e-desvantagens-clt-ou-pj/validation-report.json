@@ -1,0 +1,25 @@
+{
+  "id": "validation-report-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "passed",
+  "executionStatus": "completed",
+  "validations": [
+    { "id": "asset-identity-policy", "status": "pass", "evidence": "assetId maps to existing target page" },
+    { "id": "pam", "status": "pass", "evidence": "article identity and relationship preserved" },
+    { "id": "article-blueprint", "status": "pass", "evidence": "CTA component is allowed; no new blueprint created" },
+    { "id": "article-gold-standard", "status": "pass", "evidence": "related calculator/internal CTA support improved" },
+    { "id": "approved-relationship", "status": "pass", "evidence": "calculator:calculadora-clt-ou-pj is approved primary calculator for cluster" },
+    { "id": "physical-publication-contract", "status": "pass", "evidence": "existing page controlled update with snapshot" },
+    { "id": "cta-gap-resolution", "status": "pass", "evidence": "confirmed final gap resolved with same-page pattern" },
+    { "id": "visual-pattern-reuse", "status": "pass", "evidence": "CTA_CARD_V1_Secundario pattern reused" },
+    { "id": "basic-accessibility", "status": "pass", "evidence": "anchor has visible text and SVG remains aria-hidden" },
+    { "id": "url-correct", "status": "pass", "evidence": "/calculadora-clt-ou-pj/" },
+    { "id": "no-duplicate-cta", "status": "pass" },
+    { "id": "no-unrelated-content-change", "status": "pass" },
+    { "id": "no-seo-regression", "status": "pass" },
+    { "id": "no-jsonld-regression", "status": "pass" },
+    { "id": "no-runtime-regression", "status": "pass" },
+    { "id": "no-cross-guide-leak", "status": "pass", "evidence": "no Guide or category files changed" },
+    { "id": "rollback-readiness", "status": "pass" }
+  ],
+  "blockingIssues": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "execution-decision-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "completed",
+  "decision": "SAFE CONTROLLED PAGE UPDATE AVAILABLE",
+  "rationale": [
+    "gap was confirmed against physical HTML",
+    "calculator destination exists and is approved",
+    "same-page CTA pattern exists and can be reused exactly",
+    "final position is clear before FAQ and after the concluding decision section",
+    "change is limited to one inserted CTA block",
+    "rollback is a simple block removal"
+  ],
+  "publicChangePlanned": true,
+  "targetFileOnly": "blog/vantagens-e-desvantagens-clt-ou-pj/index.html"
+}

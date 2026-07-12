@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "routeRule": true,
+  "slugResolved": true,
+  "configFound": true,
+  "articleFilterApplied": true,
+  "expected": [
+    "clt-ou-pj",
+    "como-calcular-clt-ou-pj",
+    "vantagens-e-desvantagens-clt-ou-pj",
+    "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "clt-ou-pj-vale-a-pena-em-2026"
+  ],
+  "found": [
+    "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "vantagens-e-desvantagens-clt-ou-pj",
+    "como-calcular-clt-ou-pj",
+    "clt-ou-pj-vale-a-pena-em-2026",
+    "clt-ou-pj"
+  ],
+  "missing": [],
+  "extra": [],
+  "duplicateCards": false,
+  "cardUrlsValid": true,
+  "title": "Artigos sobre PJ",
+  "description": "Artigos sobre contratacao PJ, comparativos com CLT, custos, beneficios, impostos, riscos e decisao profissional.",
+  "canonical": "https://calculetrabalhador.com.br/blog/categoria/pj/",
+  "breadcrumb": "Home -> Blog -> PJ",
+  "guideCategoryDistinct": true,
+  "textHeuristicUsed": false,
+  "emptyStateSafe": true
+}

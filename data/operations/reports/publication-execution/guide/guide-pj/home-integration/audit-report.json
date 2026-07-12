@@ -1,0 +1,30 @@
+{
+    "operationId":  "guide-pj-home-integration",
+    "phase":  "5.10",
+    "assetId":  "guide:guide-pj",
+    "targetUrl":  "/guias/pj/",
+    "createdAt":  "2026-07-11T23:03:27.9941433Z",
+    "status":  "passed-with-warnings",
+    "scope":  {
+                  "alteredAllowedFiles":  [
+                                              "index.html",
+                                              "assets/home-refactor-v8.js",
+                                              "assets/js/nuclei.js",
+                                              "data/brain/nuclei.json"
+                                          ],
+                  "outOfScopeFilesTouchedByThisPhase":  [
+
+                                                        ],
+                  "sitemapChangedByThisPhase":  false,
+                  "indexNowExecuted":  false,
+                  "categoryPjChangedByThisPhase":  false,
+                  "toolsCatalogChanged":  false,
+                  "articlesCatalogChanged":  false
+              },
+    "duplication":  {
+                        "hardcodedPjCardInHome":  false,
+                        "generatedPjCardCount":  1,
+                        "uniqueGuideCard":  "PASS"
+                    },
+    "finalResult":  "GUIDE HOME DISTRIBUTION PASSED WITH WARNINGS"
+}

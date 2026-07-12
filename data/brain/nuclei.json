@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "clt",
+      "name": "CLT",
+      "slug": "clt",
+      "title": "Guia CLT",
+      "description": "Conteudos e calculadoras sobre direitos trabalhistas, rescisao, ferias, 13o salario e jornada de trabalho.",
+      "status": "active",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 1
+    },
+    {
+      "id": "mei",
+      "name": "MEI",
+      "slug": "mei",
+      "title": "Guia MEI",
+      "description": "Conteudos e calculadoras sobre DAS MEI, INSS do MEI, limite de faturamento e obrigacoes do microempreendedor individual.",
+      "status": "active",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 2
+    },
+    {
+      "id": "inss",
+      "name": "INSS",
+      "slug": "inss",
+      "title": "Guia INSS",
+      "description": "Conteudos e calculadoras sobre contribuicao previdenciaria, tabela do INSS, teto, aliquotas e beneficios.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 3
+    },
+    {
+      "id": "pj",
+      "assetId": "guide:guide-pj",
+      "type": "guide",
+      "name": "PJ",
+      "slug": "pj",
+      "title": "Guia PJ",
+      "description": "Compare contratacao PJ com CLT, acesse a calculadora principal e navegue por artigos sobre custos, beneficios, riscos e decisao profissional.",
+      "url": "/guias/pj/",
+      "categoryTitle": "Artigos sobre PJ",
+      "categoryDescription": "Artigos sobre contratacao PJ, comparativos com CLT, custos, beneficios, impostos, riscos e decisao profissional.",
+      "categoryUrl": "/blog/categoria/pj/",
+      "guideUrl": "/guias/pj/",
+      "articleFilter": {
+        "slugs": [
+          "clt-ou-pj",
+          "como-calcular-clt-ou-pj",
+          "vantagens-e-desvantagens-clt-ou-pj",
+          "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+          "clt-ou-pj-vale-a-pena-em-2026"
+        ]
+      },
+      "status": "active",
+      "published": true,
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 4
+    },
+    {
+      "id": "fgts",
+      "name": "FGTS",
+      "slug": "fgts",
+      "title": "Guia FGTS",
+      "description": "Conteudos e calculadoras sobre saldo do FGTS, multa de 40%, saque-aniversario e direitos relacionados.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 5
+    },
+    {
+      "id": "irpf",
+      "name": "IRPF",
+      "slug": "irpf",
+      "title": "Guia IRPF",
+      "description": "Conteudos e calculadoras sobre imposto de renda pessoa fisica, faixas, deducoes e declaracao anual.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 6
+    },
+    {
+      "id": "autonomo",
+      "name": "Autonomo",
+      "slug": "autonomo",
+      "title": "Guia do Autonomo",
+      "description": "Conteudos e calculadoras para trabalhadores autonomos, contribuicao ao INSS, impostos e emissao de recibos.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 7
+    },
+    {
+      "id": "empregador-domestico",
+      "name": "Empregador Domestico",
+      "slug": "empregador-domestico",
+      "title": "Guia do Empregador Domestico",
+      "description": "Conteudos e calculadoras sobre eSocial domestico, salario, ferias, 13o, FGTS e rescisao de empregado domestico.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 8
+    },
+    {
+      "id": "beneficios-trabalhistas",
+      "name": "Beneficios Trabalhistas",
+      "slug": "beneficios-trabalhistas",
+      "title": "Guia de Beneficios Trabalhistas",
+      "description": "Conteudos sobre seguro-desemprego, abono salarial, vale-transporte, salario-familia e demais beneficios.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 9
+    },
+    {
+      "id": "aposentadoria",
+      "name": "Aposentadoria",
+      "slug": "aposentadoria",
+      "title": "Guia de Aposentadoria",
+      "description": "Conteudos e calculadoras sobre aposentadoria por idade, tempo de contribuicao, regras de transicao e planejamento previdenciario.",
+      "status": "coming-soon",
+      "showOnHome": true,
+      "showOnBlog": true,
+      "order": 10
+    }
+  ]
+}

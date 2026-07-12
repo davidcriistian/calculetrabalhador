@@ -1,0 +1,26 @@
+{
+    "operationId":  "controlled-existing-page-update-quanto-pj-cta-final",
+    "phase":  "5.12",
+    "assetId":  "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "target":  "blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/index.html",
+    "createdAt":  "2026-07-11T23:24:17.7590639Z",
+    "status":  "passed-with-warnings",
+    "validations":  {
+                        "JSON_VALID":  "PASS",
+                        "INTERNAL_JSON_REFS_VALID":  "PASS",
+                        "governance":  "PASS",
+                        "transformRules":  "PASS",
+                        "shadowAdicionalNoturno":  "PASS",
+                        "shadowAvisoPrevio":  "PASS",
+                        "gitDiffCheck":  "PASS_WITH_LF_CRLF_WARNINGS",
+                        "targetHtmlInvariants":  "PASS"
+                    },
+    "canonical":  "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "canonicalPreserved":  true,
+    "jsonLdParseable":  true,
+    "jsonLdHashAfter":  "ABC106E6C4723EB160F7FAE5D7544D2924A9A635FA502EC0CC182BF58516780C",
+    "warnings":  [
+                     "git diff --check emitted LF/CRLF warnings only, no whitespace errors.",
+                     "Working tree contains pre-existing changes unrelated to this phase."
+                 ]
+}

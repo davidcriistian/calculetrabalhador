@@ -1,0 +1,40 @@
+{
+  "id": "consumer-verification-calculadora-clt-ou-pj",
+  "status": "passed",
+  "consumers": {
+    "ferramentas": {
+      "files": ["ferramentas/index.html", "data/tools.json"],
+      "behavior": "inline script fetches /data/tools.json and renders tools where tool.published is truthy",
+      "entryCompatible": true,
+      "validations": {
+        "id": "present",
+        "title": "present",
+        "slug": "/calculadora-clt-ou-pj/",
+        "category": "Trabalhista",
+        "description": "present",
+        "published": true,
+        "linkGenerated": "/calculadora-clt-ou-pj/",
+        "filterCompatible": true
+      }
+    },
+    "home": {
+      "files": ["index.html", "assets/home-refactor-v8.js", "data/tools.json"],
+      "behavior": "assets/home-refactor-v8.js counts published tools and renders Home tool cards only when published === true and showOnHome === true",
+      "entryCompatible": true,
+      "validations": {
+        "published": true,
+        "showOnHome": false,
+        "homeCardEligible": false,
+        "counterIncludes": true,
+        "homeOrderRequired": false
+      }
+    },
+    "physicalUrl": {
+      "slug": "/calculadora-clt-ou-pj/",
+      "page": "calculadora-clt-ou-pj/index.html",
+      "pageExists": true,
+      "matchesRuntimePattern": true
+    }
+  },
+  "publicFilesChangedNow": false
+}

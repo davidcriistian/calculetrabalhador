@@ -1,0 +1,40 @@
+{
+  "id": "calculator-publication-contract-calculadora-clt-ou-pj",
+  "status": "draft",
+  "assetId": "calculator:calculadora-clt-ou-pj",
+  "physicalPage": "calculadora-clt-ou-pj/index.html",
+  "publicCatalog": "data/tools.json",
+  "consumers": [
+    "ferramentas/index.html",
+    "index.html via assets/home-refactor-v8.js when showOnHome is true"
+  ],
+  "requiredCatalogFields": ["id", "title", "slug", "category", "description", "published", "featured", "showOnHome", "homeOrder", "updatedAt"],
+  "currentCatalogEntry": {
+    "id": "calculadora-clt-ou-pj",
+    "title": "Calculadora CLT ou PJ",
+    "slug": "/calculadora-clt-ou-pj/",
+    "category": "Trabalhista",
+    "published": true,
+    "featured": false,
+    "showOnHome": false,
+    "updatedAt": "2026-06-07"
+  },
+  "fieldsDerivedFromAsset": ["id", "slug", "title", "description", "category"],
+  "manualDecisionFields": ["featured", "showOnHome", "homeOrder", "updatedAt", "badge", "badgeColor"],
+  "forbiddenInferenceFields": ["featured", "showOnHome", "homeOrder", "badge", "badgeColor", "commercial CTA"],
+  "validationRules": [
+    "physical page must exist before catalog publication",
+    "slug must match physical URL",
+    "id must be unique in data/tools.json",
+    "slug must be unique in data/tools.json",
+    "published must be explicit boolean",
+    "homeOrder is required only when showOnHome is true",
+    "Home impact is allowed only when showOnHome is true"
+  ],
+  "rollback": {
+    "catalogEntry": "restore previous data/tools.json entry or remove operation-created entry",
+    "page": "restore page snapshot only if page was changed",
+    "sitemap": "revert lastmod only if public page was changed"
+  },
+  "publicFilesChangedNow": false
+}

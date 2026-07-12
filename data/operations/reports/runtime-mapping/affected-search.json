@@ -1,32 +1,33 @@
 {
-    "id":  "affected-search",
-    "status":  "draft",
-    "search":  [
-                   {
-                       "assetId":  "guide:guide-pj",
-                       "indexableIfPublished":  true,
-                       "indexedNow":  false
-                   },
-                   {
-                       "assetId":  "cluster:clt-ou-pj",
-                       "indexableIfPublished":  true,
-                       "indexedNow":  false
-                   },
-                   {
-                       "assetId":  "calculator:calculadora-clt-ou-pj",
-                       "indexableIfPublished":  true,
-                       "indexedNow":  false
-                   },
-                   {
-                       "assetId":  "article:clt-ou-pj",
-                       "indexableIfPublished":  true,
-                       "indexedNow":  false
-                   },
-                   {
-                       "assetId":  "article:como-calcular-clt-ou-pj",
-                       "indexableIfPublished":  true,
-                       "indexedNow":  false
-                   }
-               ],
-    "indexingExecuted":  false
+  "id": "affected-search",
+  "status": "draft",
+  "reconciledAt": "2026-07-11",
+  "searchImpact": "not-applicable",
+  "globalSearchIndex": {
+    "exists": false,
+    "removedAbstraction": "component:search-index",
+    "classification": "NOT_APPLICABLE",
+    "updateRequired": false
+  },
+  "localSearchAndFilters": [
+    {
+      "surface": "Home",
+      "physicalImplementation": "assets/home-refactor-v8.js filters loaded Home tools",
+      "sources": ["data/tools.json"],
+      "classification": "AUTOMATIC_ALREADY"
+    },
+    {
+      "surface": "Ferramentas",
+      "physicalImplementation": "inline script in ferramentas/index.html filters rendered tool cards",
+      "sources": ["data/tools.json"],
+      "classification": "AUTOMATIC_ALREADY"
+    },
+    {
+      "surface": "Blog",
+      "physicalImplementation": "inline script in blog/index.html filters rendered article cards",
+      "sources": ["data/articles.json"],
+      "classification": "AUTOMATIC_ALREADY"
+    }
+  ],
+  "indexingExecuted": false
 }

@@ -1,0 +1,34 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "status":  "passed-with-warnings",
+    "validations":  {
+                        "physicalPublicationContract":  "PASS",
+                        "publishingModel":  "PASS",
+                        "canonical":  "PASS",
+                        "sitemap":  "PASS",
+                        "physicalUrl":  "PASS",
+                        "homeIntegrationExisting":  "PASS",
+                        "guideAccessible":  "PASS",
+                        "noDuplicateSitemapUrl":  "PASS",
+                        "noCategoryCollision":  "PASS",
+                        "noUnrelatedFileChangeByThisPhase":  "PASS",
+                        "rollbackReadiness":  "PASS"
+                    },
+    "publicationStatus":  {
+                              "physicalPageStatus":  "generated",
+                              "homeStatus":  "integrated",
+                              "sitemapStatus":  "integrated",
+                              "indexnowStatus":  "dry-run-passed",
+                              "indexingStatus":  "not-requested",
+                              "categoryStatus":  "not-integrated"
+                          },
+    "warnings":  [
+                     "IndexNow was not sent; dry-run only.",
+                     "No claim of indexing by Google or Bing.",
+                     "Existing sitemap category diff remains outside this phase ownership."
+                 ]
+}

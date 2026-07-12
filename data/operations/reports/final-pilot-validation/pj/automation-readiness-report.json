@@ -1,0 +1,26 @@
+{
+  "status": "READY_WITH_GUARDS",
+  "capabilities": {
+    "criar asset governado": "READY",
+    "criar calculadora": "READY_WITH_GUARDS",
+    "criar artigo": "READY_WITH_GUARDS",
+    "criar cluster": "READY",
+    "criar Guide": "READY_WITH_GUARDS",
+    "registrar relacionamento": "READY",
+    "projetar categoria": "READY_WITH_GUARDS",
+    "integrar Guide na Home": "READY_WITH_GUARDS",
+    "atualizar catalogo": "READY_WITH_GUARDS",
+    "gerar pagina fisica": "READY_WITH_GUARDS",
+    "atualizar sitemap": "READY_WITH_GUARDS",
+    "executar IndexNow dry-run": "READY",
+    "executar testes": "READY_WITH_GUARDS",
+    "executar validacao": "READY_WITH_GUARDS",
+    "preparar rollback": "READY",
+    "publicar end-to-end": "READY_WITH_GUARDS"
+  },
+  "gaps": [
+    "Visual/browser validation still manual/unavailable in this environment.",
+    "Category metadata is client-side in current physical runtime.",
+    "data/articles.json lacks native nucleus fields, so category membership currently uses runtime projection articleFilter.slugs."
+  ]
+}

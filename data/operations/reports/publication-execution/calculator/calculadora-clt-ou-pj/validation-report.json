@@ -1,0 +1,21 @@
+{
+  "id": "validation-report-calculadora-clt-ou-pj-public-catalog",
+  "status": "passed",
+  "executionStatus": "completed",
+  "validations": [
+    { "id": "asset-identity-policy", "status": "pass", "evidence": "assetId calculator:calculadora-clt-ou-pj maps to public id calculadora-clt-ou-pj" },
+    { "id": "physical-publication-contract", "status": "pass", "evidence": "calculator publication contract identifies data/tools.json and consumers" },
+    { "id": "registry-correspondence", "status": "pass", "evidence": "data/registry/by-type/calculator-calculadora-clt-ou-pj.json" },
+    { "id": "relationship-integrity", "status": "pass", "evidence": "approved relationship map links calculator to cluster:clt-ou-pj" },
+    { "id": "public-catalog-integrity", "status": "pass" },
+    { "id": "runtime-compatibility", "status": "pass" },
+    { "id": "no-duplicate-asset", "status": "pass" },
+    { "id": "no-orphan-url", "status": "pass", "evidence": "catalog slug resolves to existing physical page" },
+    { "id": "no-unintended-home-exposure", "status": "pass", "evidence": "showOnHome=false" },
+    { "id": "no-cross-guide-leak", "status": "pass", "evidence": "no guide/category/public link changes made" },
+    { "id": "rollback-readiness", "status": "pass", "evidence": "rollback NOT_REQUIRED; logical snapshot recorded" },
+    { "id": "no-production-file-outside-scope-changed", "status": "pass" }
+  ],
+  "blockingIssues": [],
+  "publicChangeApplied": false
+}

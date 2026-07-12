@@ -1,0 +1,14 @@
+{
+    "operationId":  "integrated-public-flow-validation-guide-pj",
+    "phase":  "5.11",
+    "createdAt":  "2026-07-11T23:14:10.8414541Z",
+    "status":  "PASS_WITH_BROWSER_WARNING",
+    "nodeSyntax":  {
+                       "assets/js/nuclei.js":  "PASS",
+                       "assets/home-refactor-v8.js":  "PASS"
+                   },
+    "simulatedRuntime":  "INTEGRATED_FLOW_LOGIC_PASS",
+    "browserConsole":  "VISUAL_BROWSER_VALIDATION_NOT_AVAILABLE",
+    "failSafe":  "PASS",
+    "knownConsoleWarningDuringSimulation":  "Expected warning emitted only in simulated nuclei.json fetch failure case."
+}

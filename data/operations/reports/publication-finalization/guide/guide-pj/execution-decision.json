@@ -1,0 +1,10 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "decision":  "execute-surgical-sitemap-insertion",
+    "reason":  "Guide page exists, canonical matches, robots allow indexing, sitemap did not contain duplicate URL, and insertion was possible without removing or rewriting existing pending sitemap changes.",
+    "blocked":  false
+}

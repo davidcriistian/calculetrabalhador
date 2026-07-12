@@ -306,6 +306,47 @@
       color: #fff;
     }
 
+    .nuclei-section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 26px;
+    }
+
+    .nuclei-section h2 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .nuclei-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nuclei-links a {
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      background: #fff;
+      color: #334155;
+      padding: 8px 13px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .nuclei-links a:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -559,6 +600,11 @@
       </div>
     </section>
 
+    <section class="nuclei-section" aria-labelledby="nuclei-title">
+      <h2 id="nuclei-title">Explorar por categoria</h2>
+      <div id="nucleiLinks" class="nuclei-links"></div>
+    </section>
+
     <section aria-labelledby="articles-title">
       <h2 id="articles-title" class="eyebrow">Artigos disponíveis</h2>
       <div id="articlesGrid" class="articles-grid"></div>
@@ -589,6 +635,7 @@
       const searchInput = document.getElementById('articleSearch');
       const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
       const emptyState = document.getElementById('emptyState');
+      const nucleiLinks = document.getElementById('nucleiLinks');
       let cards = [];
       let activeCategory = 'Todas';
 
@@ -661,6 +708,23 @@
       });
 
       searchInput.addEventListener('input', updateCards);
+
+      fetch('/data/brain/nuclei.json')
+        .then((response) => {
+          if (!response.ok) throw new Error('Nucleos indisponiveis');
+          return response.json();
+        })
+        .then((payload) => {
+          const nuclei = Array.isArray(payload) ? payload : payload.items || [];
+          nucleiLinks.innerHTML = nuclei
+            .filter((nucleus) => nucleus.showOnBlog)
+            .sort((a, b) => (a.order || 0) - (b.order || 0))
+            .map((nucleus) => `<a href="/blog/categoria/${escapeHtml(nucleus.slug)}/">${escapeHtml(nucleus.name)}</a>`)
+            .join('');
+        })
+        .catch(() => {
+          nucleiLinks.innerHTML = '';
+        });
 
       fetch('/data/articles.json')
         .then((response) => {

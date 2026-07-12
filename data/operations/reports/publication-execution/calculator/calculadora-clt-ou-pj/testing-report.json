@@ -1,0 +1,20 @@
+{
+  "id": "testing-report-calculadora-clt-ou-pj-public-catalog",
+  "status": "passed",
+  "executionStatus": "completed",
+  "tests": [
+    { "id": "json-valid", "status": "pass" },
+    { "id": "unique-id", "status": "pass", "evidence": "idCount=1" },
+    { "id": "unique-slug", "status": "pass", "evidence": "slugCount=1" },
+    { "id": "physical-page-exists", "status": "pass", "evidence": "calculadora-clt-ou-pj/index.html" },
+    { "id": "ferramentas-consumer-compatible", "status": "pass" },
+    { "id": "home-consumer-compatible", "status": "pass" },
+    { "id": "no-impact-other-tools", "status": "pass", "evidence": "no data/tools.json change" },
+    { "id": "no-html-css-js-impact", "status": "pass", "evidence": "operation changed no public HTML/CSS/JS" },
+    { "id": "no-calculation-impact", "status": "pass", "evidence": "calculator page and runtime untouched" },
+    { "id": "no-sitemap-impact", "status": "pass", "evidence": "sitemap untouched by this operation" },
+    { "id": "known-pending-files-preserved", "status": "pass" }
+  ],
+  "testsInvented": false,
+  "publicChangeApplied": false
+}

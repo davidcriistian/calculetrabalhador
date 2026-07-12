@@ -1,0 +1,25 @@
+{
+    "operationId":  "publication-finalization-guide-pj",
+    "phase":  "5.13",
+    "assetId":  "guide:guide-pj",
+    "url":  "https://calculetrabalhador.com.br/guias/pj/",
+    "createdAt":  "2026-07-11T23:37:31.5003846Z",
+    "status":  "passed-with-warnings",
+    "tests":  {
+                  "sitemapXmlValid":  "PASS",
+                  "sitemapUrlUnique":  "PASS",
+                  "sitemapCanonicalMatch":  "PASS",
+                  "sitemapLastmodValid":  "PASS",
+                  "noExistingEntryRemoved":  "PASS",
+                  "diffMinimal":  "PASS_WITH_WARNING_PREEXISTING_CATEGORY_DIFF",
+                  "guidePageExists":  "PASS",
+                  "guideIndexable":  "PASS",
+                  "indexnowDryRun":  "PASS",
+                  "noOutOfScopePublicChange":  "PASS",
+                  "rollbackReadiness":  "PASS"
+              },
+    "warnings":  [
+                     "sitemap.xml had pre-existing pending category entries before this phase.",
+                     "git diff against HEAD includes those category entries plus the Guide PJ URL."
+                 ]
+}

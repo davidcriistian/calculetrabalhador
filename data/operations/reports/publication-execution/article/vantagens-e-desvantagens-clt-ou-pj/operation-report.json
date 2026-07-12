@@ -1,0 +1,42 @@
+{
+  "id": "operation-report-vantagens-e-desvantagens-clt-ou-pj",
+  "operationId": "controlled-existing-page-update-pilot-vantagens-e-desvantagens-clt-ou-pj",
+  "phase": "5.8",
+  "status": "completed",
+  "result": "CONTROLLED PAGE UPDATE PASSED",
+  "assetId": "article:vantagens-e-desvantagens-clt-ou-pj",
+  "targetGap": "possible-final-calculator-cta-gap",
+  "gapConfirmation": "CONFIRMED_GAP",
+  "decision": "SAFE CONTROLLED PAGE UPDATE AVAILABLE",
+  "publicFilesAltered": ["blog/vantagens-e-desvantagens-clt-ou-pj/index.html"],
+  "outputs": [
+    "preflight-report.json",
+    "physical-page-audit.json",
+    "gap-confirmation.json",
+    "pattern-resolution.json",
+    "execution-decision.json",
+    "snapshot.json",
+    "change-report.json",
+    "testing-report.json",
+    "validation-report.json",
+    "rollback-record.json",
+    "audit-report.json"
+  ],
+  "publicScope": {
+    "htmlChanged": true,
+    "targetOnly": true,
+    "cssChanged": false,
+    "javascriptChanged": false,
+    "catalogChanged": false,
+    "sitemapChanged": false,
+    "categoryChanged": false,
+    "homeChanged": false,
+    "toolsPageChanged": false,
+    "guideChanged": false,
+    "calculatorChanged": false,
+    "indexNowExecuted": false,
+    "deployExecuted": false
+  },
+  "warnings": ["pre-existing out-of-scope working tree changes remain untouched"],
+  "blockingIssues": []
+}

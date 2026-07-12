@@ -1,0 +1,23 @@
+{
+  "id": "pattern-resolution-vantagens-e-desvantagens-clt-ou-pj",
+  "status": "resolved",
+  "chosenPattern": "CTA_CARD_V1_Secundario from the same page",
+  "prioritySource": "same-page-existing-pattern",
+  "reuse": {
+    "htmlStructure": "exact same card wrapper, flex layout, icon block and button classes",
+    "cssClasses": "existing Tailwind utility classes already used on the page",
+    "javascript": "none",
+    "newCss": false,
+    "newClasses": false,
+    "buttonStyle": "same emerald button style",
+    "accessibility": "existing anchor text and visual hierarchy retained"
+  },
+  "copyResolution": {
+    "title": "Compare CLT e PJ gratuitamente",
+    "description": "Preencha os dados reais da proposta e veja o impacto no bolso.",
+    "button": "Comparar agora →",
+    "source": "existing CTA_CARD_V1_Secundario copy on same page"
+  },
+  "position": "after the final decision-making paragraph in 'Como transformar a decisão em números' and before FAQ",
+  "decision": "SAFE CONTROLLED PAGE UPDATE AVAILABLE"
+}

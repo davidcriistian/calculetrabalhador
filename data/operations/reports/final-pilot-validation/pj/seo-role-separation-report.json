@@ -1,0 +1,17 @@
+{
+  "status": "SEO_ROLE_SEPARATION_PASS",
+  "guide": {
+    "title": "Guia PJ: compare CLT ou PJ com calculadora e artigos | Calcule Trabalhador",
+    "description": "Guia PJ para comparar contratacao CLT ou PJ, acessar a calculadora CLT ou PJ e navegar por artigos sobre custos, beneficios, riscos e decisao profissional.",
+    "h1": "Guia PJ",
+    "canonical": "https://calculetrabalhador.com.br/guias/pj/",
+    "role": "strategic hub"
+  },
+  "category": {
+    "title": "Artigos sobre PJ | Calcule Trabalhador",
+    "description": "Artigos sobre contratacao PJ, comparativos com CLT, custos, beneficios, impostos, riscos e decisao profissional.",
+    "h1": "Artigos sobre PJ",
+    "canonical": "https://calculetrabalhador.com.br/blog/categoria/pj/",
+    "role": "editorial archive"
+  }
+}

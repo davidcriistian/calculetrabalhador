@@ -1,0 +1,23 @@
+{
+    "operationId":  "category-runtime-consolidation-pj",
+    "phase":  "5.14",
+    "category":  "pj",
+    "url":  "/blog/categoria/pj/",
+    "createdAt":  "2026-07-12T02:56:22.8193206Z",
+    "result":  "CATEGORY RUNTIME CONSOLIDATED WITH WARNINGS",
+    "finalRoute":  "/blog/categoria/pj/",
+    "finalDataSource":  "data/articles.json + data/brain/nuclei.json runtime projection",
+    "finalConsumer":  "blog/categoria/index.html + assets/js/nuclei.js",
+    "articleRule":  "pj.articleFilter.slugs",
+    "articlesFound":  [
+                          "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+                          "vantagens-e-desvantagens-clt-ou-pj",
+                          "como-calcular-clt-ou-pj",
+                          "clt-ou-pj-vale-a-pena-em-2026",
+                          "clt-ou-pj"
+                      ],
+    "indexNowExecuted":  false,
+    "homeAlteredByThisPhase":  false,
+    "guidePjAltered":  false,
+    "articlesOrCalculatorsAltered":  false
+}

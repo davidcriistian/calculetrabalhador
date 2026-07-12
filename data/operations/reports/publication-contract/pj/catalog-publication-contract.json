@@ -1,0 +1,32 @@
+{
+  "id": "catalog-publication-contract-pj",
+  "status": "draft",
+  "catalogs": [
+    {
+      "path": "data/tools.json",
+      "assetTypes": ["calculator"],
+      "consumers": ["ferramentas/index.html", "index.html via assets/home-refactor-v8.js"],
+      "requiredFields": ["id", "title", "slug", "category", "description", "published", "featured", "showOnHome", "homeOrder", "updatedAt"],
+      "writeRules": ["unique id", "unique slug", "physical page exists", "published is explicit", "homeOrder required only when showOnHome is true"],
+      "rollback": "restore or remove operation-owned tool entry"
+    },
+    {
+      "path": "data/articles.json",
+      "assetTypes": ["article"],
+      "consumers": ["blog/index.html", "index.html via assets/home-refactor-v8.js for selected flags"],
+      "requiredFieldsObserved": ["id", "title", "slug", "category", "description", "tempo", "cor", "corBg", "publishedAt", "updatedAt", "showOnHome"],
+      "optionalFieldsObserved": ["url", "relatedTool", "featured", "homeOrder", "showOnCltGuide", "cltGuideOrder"],
+      "writeRules": ["unique id", "unique slug", "physical page exists before catalog publication", "dates explicit", "relatedTool must point to existing calculator URL when used"],
+      "rollback": "restore or remove operation-owned article entry"
+    },
+    {
+      "path": "data/brain/nuclei.json",
+      "assetTypes": ["nucleus", "category"],
+      "consumers": ["local pending blog/index.html", "local pending blog/categoria/index.html", "assets/js/nuclei.js"],
+      "status": "LOCAL_PENDING_NOT_OFFICIAL",
+      "writeRules": ["blocked until pending implementation is approved"],
+      "rollback": "preserve pre-existing pending changes and restore only operation-owned diff"
+    }
+  ],
+  "publicFilesChangedNow": false
+}
