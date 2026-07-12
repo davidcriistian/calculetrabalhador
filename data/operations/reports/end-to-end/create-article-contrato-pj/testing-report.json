@@ -1,0 +1,69 @@
+{
+  "id": "testing-report-article-contrato-pj",
+  "status": "passed",
+  "plannedChecks": [
+    "JSON_VALID",
+    "INTERNAL_JSON_REFS_VALID",
+    "HTML structural checks",
+    "CTA destination checks",
+    "canonical and JSON-LD checks",
+    "sitemap uniqueness check",
+    "mutation guard",
+    "governance validators",
+    "shadow validators",
+    "git diff --check",
+    "IndexNow dry-run only"
+  ],
+  "executedChecks": [
+    {
+      "name": "JSON_VALID",
+      "result": "pass",
+      "command": "node -e JSON parse all data/*.json"
+    },
+    {
+      "name": "INTERNAL_JSON_REFS_VALID",
+      "result": "pass",
+      "details": "8 internal /data references checked in new registry, publishing and asset report JSONs."
+    },
+    {
+      "name": "governance",
+      "result": "pass",
+      "command": "node scripts/validate-governance.js"
+    },
+    {
+      "name": "transform-rules",
+      "result": "pass",
+      "command": "node scripts/transform-rules.js"
+    },
+    {
+      "name": "shadow-adicional-noturno",
+      "result": "pass",
+      "command": "node scripts/validate-shadow-adicional-noturno.js"
+    },
+    {
+      "name": "shadow-aviso-previo",
+      "result": "pass",
+      "command": "node scripts/validate-shadow-aviso-previo.js"
+    },
+    {
+      "name": "asset-structure",
+      "result": "pass",
+      "details": "Canonical, JSON-LD, CTAs, catalog entry, nucleus filter, guide link and sitemap URL validated."
+    },
+    {
+      "name": "git-diff-check",
+      "result": "pass",
+      "command": "git diff --check"
+    },
+    {
+      "name": "indexnow-dry-run",
+      "result": "pass",
+      "command": "node scripts/indexnow.js /blog/contrato-pj-o-que-analisar-antes-de-aceitar/"
+    },
+    {
+      "name": "mutation-guard",
+      "result": "pass",
+      "details": "Protected home, calculator, runtime, CSS and JavaScript paths have no diff."
+    }
+  ]
+}

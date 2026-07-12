@@ -1,0 +1,27 @@
+{
+  "id": "validation-reconciliation-article-contrato-pj",
+  "status": "passed-with-warning",
+  "gates": {
+    "assetExistence": "pass",
+    "duplication": "pass",
+    "lifecycleExplainability": "pass-with-warning",
+    "clusterIdentity": "pass",
+    "catalog": "pass",
+    "categoryPJ": "pass",
+    "runtimeCluster": "pass",
+    "contentMap": "pass",
+    "guidePJ": "pass",
+    "page": "pass",
+    "sitemap": "pass",
+    "indexnow": "pass",
+    "relationships": "pass",
+    "registry": "pass",
+    "publishing": "pass-with-warning",
+    "rollback": "pass",
+    "mutationGuard": "pass"
+  },
+  "blockers": [],
+  "warnings": [
+    "Publishing remains draft while controlled public distribution exists; this is documented as an intermediate state gap for future Publishing Model refinement."
+  ]
+}

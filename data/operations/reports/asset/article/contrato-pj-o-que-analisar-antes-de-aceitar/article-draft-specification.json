@@ -1,0 +1,73 @@
+{
+  "id": "contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetType": "article",
+  "version": "0.1.0",
+  "status": "draft",
+  "lifecycle": "draft",
+  "approvalStatus": "approved-relationship",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "visibility": "public-page-created",
+  "createdAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "owner": "core-platform",
+  "source": "Operational Capabilities Phase 5.18 - deliver-asset-end-to-end controlled creation",
+  "displayName": "Contrato PJ: O Que Analisar Antes de Aceitar?",
+  "publicSlug": "contrato-pj-o-que-analisar-antes-de-aceitar",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+  "relationshipType": "satellite-article",
+  "referenceStatus": "generated-from-approved-pattern",
+  "manualReviewRequired": false,
+  "blueprint": {
+    "type": "article",
+    "reference": "/data/blueprints/article/index.json",
+    "version": "0.2.0",
+    "resolvedBy": "/data/operations/defaults/index.json"
+  },
+  "goldStandard": {
+    "type": "article",
+    "reference": "/data/gold-standards/article/index.json",
+    "version": "1.0",
+    "status": "active-foundation",
+    "resolvedBy": "/data/operations/defaults/index.json"
+  },
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:clt-ou-pj",
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "primaryArticle": "article:clt-ou-pj"
+  },
+  "gapAnalysis": {
+    "selectedGap": "contract-review-before-accepting-pj",
+    "reason": "Existing PJ assets cover general comparison, calculation, compensation value, advantages and 2026 decision. Contract review appears only as supporting paragraphs and FAQ references.",
+    "cannibalizationRisk": "low",
+    "duplicateSlugFound": false
+  },
+  "ctaAnalysis": {
+    "ctaBeginning": "present",
+    "ctaMiddle": "present",
+    "ctaEnd": "present",
+    "ctaDestination": "/calculadora-clt-ou-pj/",
+    "ctaComplianceStatus": "pass"
+  },
+  "operationalBoundaries": {
+    "createsNewArticle": true,
+    "modifiesPublicArticle": false,
+    "modifiesExistingPublicPage": true,
+    "modifiesContent": true,
+    "modifiesHtml": true,
+    "modifiesCss": false,
+    "modifiesJavascript": false,
+    "modifiesRuntime": false,
+    "modifiesSeo": true,
+    "modifiesUrls": false,
+    "modifiesSitemap": true,
+    "publishes": true,
+    "feedsRuntime": false
+  },
+  "warnings": []
+}

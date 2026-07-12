@@ -1,0 +1,41 @@
+{
+  "id": "duplication-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "classifications": {
+    "registryByType": "UNIQUE",
+    "publishingRegistry": "UNIQUE",
+    "dataArticles": "UNIQUE",
+    "pjArticleFilter": "UNIQUE",
+    "runtimeCluster": "UNIQUE",
+    "contentMap": "UNIQUE",
+    "guideItemList": "UNIQUE",
+    "guideVisualCard": "UNIQUE",
+    "sitemap": "UNIQUE",
+    "approvedRelationshipMap": "UNIQUE",
+    "assetId": "UNIQUE",
+    "rawIdWithinType": "UNIQUE",
+    "publicSlug": "UNIQUE",
+    "publicUrl": "UNIQUE",
+    "canonical": "UNIQUE",
+    "physicalPage": "UNIQUE",
+    "ctaPattern": "UNIQUE"
+  },
+  "counts": {
+    "articles": 1,
+    "nucleusSlugs": 1,
+    "clusterRuntime": 1,
+    "contentMap": 1,
+    "registryIndex": 1,
+    "publishingIndex": 1,
+    "relationshipMap": 1,
+    "guideItemListAbsoluteUrl": 1,
+    "guideVisualHref": 1,
+    "sitemapUrl": 1,
+    "canonical": 1,
+    "h1": 1,
+    "ctaMarkers": 3,
+    "hrefHash": 0,
+    "placeholder": 0
+  },
+  "publicDuplicateBlocker": false
+}

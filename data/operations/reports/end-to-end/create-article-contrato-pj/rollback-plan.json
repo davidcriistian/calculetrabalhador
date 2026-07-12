@@ -1,0 +1,26 @@
+{
+  "id": "rollback-plan-article-contrato-pj",
+  "status": "ready",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "rollbackType": "surgical",
+  "steps": [
+    "Remove blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html.",
+    "Remove article:contrato-pj-o-que-analisar-antes-de-aceitar from data/articles.json.",
+    "Remove contrato-pj-o-que-analisar-antes-de-aceitar from data/brain/nuclei.json PJ articleFilter.slugs.",
+    "Remove contrato-pj-o-que-analisar-antes-de-aceitar from data/brain/clusters.json runtime cluster calculadora-clt-ou-pj and restore articleCount from 6 to 5.",
+    "Remove article:contrato-pj-o-que-analisar-antes-de-aceitar from data/maps/content-map.json.",
+    "Remove the article card and ItemList entry from guias/pj/index.html.",
+    "Remove the sitemap URL for /blog/contrato-pj-o-que-analisar-antes-de-aceitar/.",
+    "Remove registry and publishing draft entries created for the asset.",
+    "Remove the satellite article entry from the approved relationship map.",
+    "Remove operation reports for this controlled execution if reverting the entire operation record is required."
+  ],
+  "confirmationChecks": [
+    "JSON files parse successfully.",
+    "data/brain/clusters.json articleCount matches the number of listed articles.",
+    "data/maps/content-map.json contains no entry for article:contrato-pj-o-que-analisar-antes-de-aceitar.",
+    "The public URL is absent from sitemap.xml, data/articles.json and guias/pj/index.html.",
+    "Protected runtime, calculator, CSS and JavaScript files remain untouched.",
+    "git diff --check passes."
+  ]
+}

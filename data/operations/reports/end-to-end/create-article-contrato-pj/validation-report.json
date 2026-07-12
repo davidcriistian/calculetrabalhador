@@ -1,0 +1,19 @@
+{
+  "id": "validation-report-article-contrato-pj",
+  "status": "passed",
+  "gates": {
+    "gitPrecondition": "pass",
+    "candidateGap": "pass",
+    "slugUniqueness": "pass",
+    "physicalPageCreated": "pass",
+    "catalogUpdated": "pass",
+    "categoryUpdated": "pass",
+    "guideUpdated": "pass",
+    "sitemapUpdated": "pass",
+    "indexNowDryRun": "pass",
+    "mutationGuard": "pass",
+    "rollbackReady": "pass"
+  },
+  "warnings": [],
+  "blockers": []
+}

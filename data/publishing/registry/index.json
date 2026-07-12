@@ -125,6 +125,18 @@
                              "reference":  "/data/publishing/registry/article-clt-ou-pj-vale-a-pena-em-2026-draft.json"
                          },
                          {
+                             "id":  "publishing-draft-article-contrato-pj-o-que-analisar-antes-de-aceitar",
+                             "assetId":  "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+                             "assetType":  "article",
+                             "status":  "draft",
+                             "approvalStatus":  "approved-relationship",
+                             "relationshipStatus":  "approved",
+                             "publishingStatus":  "draft",
+                             "owner":  "core-platform",
+                             "version":  "0.1.0",
+                             "reference":  "/data/publishing/registry/article-contrato-pj-o-que-analisar-antes-de-aceitar-draft.json"
+                         },
+                         {
                              "id":  "publishing-draft-calculator-calculadora-clt-ou-pj",
                              "assetId":  "calculator:calculadora-clt-ou-pj",
                              "assetType":  "calculator",

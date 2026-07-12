@@ -1,0 +1,19 @@
+{
+  "id": "lifecycle-reconciliation-article-contrato-pj",
+  "status": "passed-with-warning",
+  "physicalPageStatus": "created",
+  "publicCatalogStatus": "distributed",
+  "guideIntegrationStatus": "distributed",
+  "categoryIntegrationStatus": "distributed",
+  "sitemapStatus": "ready",
+  "indexnowStatus": "dry-run-passed",
+  "indexingStatus": "not-requested",
+  "publishingStatus": "draft",
+  "lifecycle": "draft",
+  "approvalStatus": "approved-relationship",
+  "interpretation": "The asset is physically materialized and publicly discoverable through catalog, category, guide and sitemap, while Publishing remains draft. This is explainable as controlled execution evidence that has not advanced to deployed or indexed states.",
+  "decision": "B - falta registrar estado operacional intermediario em fase futura; no automatic status change was made because the current Publishing Model vocabulary does not define a precise controlled-distribution intermediate state.",
+  "warnings": [
+    "Publishing registry remains draft while the public artifact is materialized and distributed. This is not silent because operation reports explicitly record controlled execution."
+  ]
+}

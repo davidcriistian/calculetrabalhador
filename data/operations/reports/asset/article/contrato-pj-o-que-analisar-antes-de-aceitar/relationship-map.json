@@ -1,0 +1,45 @@
+{
+  "id": "relationship-map-article-contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "status": "approved",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "relationships": {
+    "domain": {
+      "assetId": "domain:pj",
+      "slug": "pj",
+      "decision": "reuse"
+    },
+    "nucleus": {
+      "assetId": "nucleus:pj",
+      "slug": "pj",
+      "decision": "reuse"
+    },
+    "guide": {
+      "assetId": "guide:guide-pj",
+      "slug": "pj",
+      "decision": "reuse"
+    },
+    "cluster": {
+      "assetId": "cluster:clt-ou-pj",
+      "slug": "clt-ou-pj",
+      "decision": "reuse"
+    },
+    "primaryCalculator": {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "slug": "calculadora-clt-ou-pj",
+      "decision": "reuse"
+    },
+    "pillarArticle": {
+      "assetId": "article:clt-ou-pj",
+      "slug": "clt-ou-pj",
+      "decision": "reuse"
+    }
+  },
+  "relationshipType": "satellite-article",
+  "officialRelationship": true,
+  "notes": [
+    "Relationship approved for the PJ ecosystem after duplicate and cannibalization checks.",
+    "Registry and relationship data remain non-runtime governance artifacts."
+  ]
+}

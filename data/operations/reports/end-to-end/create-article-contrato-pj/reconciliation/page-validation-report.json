@@ -1,0 +1,26 @@
+{
+  "id": "page-validation-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "page": "blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+  "checks": {
+    "title": "present",
+    "metaDescription": "present",
+    "canonical": "valid",
+    "robots": "index,follow",
+    "h1": "unique",
+    "breadcrumb": "present",
+    "jsonLd": "parseable",
+    "articleSchema": "present",
+    "faqPageSchema": "present-with-real-faq",
+    "faqDetailsCount": 5,
+    "internalLinks": "present",
+    "calculatorCta": "present",
+    "finalCta": "present",
+    "hrefHash": "absent",
+    "placeholder": "absent",
+    "otherNucleusContent": "absent",
+    "improperLegalPromise": "absent",
+    "scripts": "coherent",
+    "headerFooter": "coherent"
+  }
+}

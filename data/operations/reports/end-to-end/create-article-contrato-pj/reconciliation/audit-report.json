@@ -1,0 +1,19 @@
+{
+  "id": "audit-reconciliation-article-contrato-pj",
+  "status": "passed-with-warning",
+  "question": "A primeira criacao automatizada terminou em um estado coerente, idempotente, rastreavel e reversivel?",
+  "answer": "yes-after-rollback-plan-fix",
+  "result": "FIXED_AND_RECONCILED",
+  "summary": [
+    "Asset exists exactly once across public and governance surfaces.",
+    "Physical page, catalog, category, guide and sitemap are coherent.",
+    "Canonical cluster identity and runtime legacy key are differentiated.",
+    "IndexNow real was not executed.",
+    "Rollback is now complete and surgical.",
+    "No public functionality was changed during reconciliation."
+  ],
+  "blockers": [],
+  "warnings": [
+    "Publishing lifecycle lacks a precise intermediate state for controlled public distribution before deployed/indexed."
+  ]
+}

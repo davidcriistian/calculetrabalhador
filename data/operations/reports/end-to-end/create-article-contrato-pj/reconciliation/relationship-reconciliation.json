@@ -1,0 +1,16 @@
+{
+  "id": "relationship-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "primaryDomain": "pj",
+  "primaryNucleus": "nucleus:pj",
+  "primaryGuide": "guide:guide-pj",
+  "primaryCluster": "cluster:clt-ou-pj",
+  "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+  "primaryArticle": "article:clt-ou-pj",
+  "relationshipType": "satellite-article",
+  "approvedRelationshipCount": 1,
+  "typedAssetId": true,
+  "primaryCalculatorPreserved": true,
+  "primaryArticlePreserved": true,
+  "automaticOutOfScopeRelationships": false
+}

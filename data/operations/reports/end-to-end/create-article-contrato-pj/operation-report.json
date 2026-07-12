@@ -1,0 +1,44 @@
+{
+  "id": "operation-report-article-contrato-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "status": "CONTROLLED_ASSET_CREATION_PASSED",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "publicSlug": "contrato-pj-o-que-analisar-antes-de-aceitar",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+  "filesCreated": [
+    "blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+    "data/registry/by-type/article-contrato-pj-o-que-analisar-antes-de-aceitar.json",
+    "data/publishing/registry/article-contrato-pj-o-que-analisar-antes-de-aceitar-draft.json",
+    "data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "data/operations/reports/end-to-end/create-article-contrato-pj/"
+  ],
+  "filesUpdated": [
+    "data/articles.json",
+    "data/brain/nuclei.json",
+    "data/brain/clusters.json",
+    "data/maps/content-map.json",
+    "data/registry/by-type/index.json",
+    "data/publishing/registry/index.json",
+    "data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json",
+    "guias/pj/index.html",
+    "sitemap.xml"
+  ],
+  "publicFilesUpdated": [
+    "blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+    "guias/pj/index.html",
+    "sitemap.xml"
+  ],
+  "homeImpact": "none",
+  "calculatorImpact": "none",
+  "cssImpact": "none",
+  "javascriptImpact": "none",
+  "runtimeImpact": "none",
+  "gitOperationsExecuted": {
+    "add": false,
+    "commit": false,
+    "push": false
+  },
+  "finalResult": "CONTROLLED ASSET CREATION PASSED"
+}

@@ -866,5 +866,20 @@
     "publishedAt": "2026-06-24",
     "updatedAt": "2026-06-24",
     "showOnHome": false
+  },
+  {
+    "id": "contrato-pj-o-que-analisar-antes-de-aceitar",
+    "title": "Contrato PJ: O Que Analisar Antes de Aceitar?",
+    "slug": "/blog/contrato-pj-o-que-analisar-antes-de-aceitar",
+    "url": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "category": "CLT",
+    "description": "Veja o que analisar em um contrato PJ antes de aceitar, incluindo escopo, pagamento, exclusividade, autonomia, reajuste, rescisao, custos e riscos.",
+    "relatedTool": "/calculadora-clt-ou-pj/",
+    "tempo": "15 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "showOnHome": false
   }
 ]

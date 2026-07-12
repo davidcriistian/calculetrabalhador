@@ -1,0 +1,14 @@
+{
+  "id": "cluster-identity-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "canonicalClusterAssetId": "cluster:clt-ou-pj",
+  "canonicalClusterRawId": "clt-ou-pj",
+  "runtimeLegacyKey": "calculadora-clt-ou-pj",
+  "legacyKeyRole": "runtime-compatibility-only",
+  "findings": [
+    "Registry and relationship reports use typed assetId for the governed cluster relationship.",
+    "data/brain/clusters.json and data/maps/content-map.json use calculadora-clt-ou-pj only as legacy runtime compatibility key.",
+    "No cluster migration was executed."
+  ],
+  "ambiguity": false
+}

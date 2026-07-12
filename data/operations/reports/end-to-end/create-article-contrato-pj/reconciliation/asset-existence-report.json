@@ -1,0 +1,19 @@
+{
+  "id": "asset-existence-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "expectedArtifacts": {
+    "physicalPage": "present",
+    "registryEntry": "present",
+    "publishingEntry": "present",
+    "assetReports": "present",
+    "endToEndReports": "present",
+    "articlesCatalogEntry": "present",
+    "nucleusReference": "present",
+    "clusterRuntimeReference": "present",
+    "contentMapReference": "present",
+    "guideReference": "present",
+    "sitemapEntry": "present"
+  },
+  "missingArtifacts": []
+}

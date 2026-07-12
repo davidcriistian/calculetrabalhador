@@ -1,0 +1,23 @@
+{
+  "id": "rollback-completeness-reconciliation-article-contrato-pj",
+  "status": "ROLLBACK_COMPLETE",
+  "defectFound": true,
+  "defect": "Initial rollback plan omitted explicit removal from data/brain/clusters.json and data/maps/content-map.json.",
+  "cause": "Fase 5.18 added these governance/runtime compatibility entries after governance validation required them.",
+  "correctionApplied": true,
+  "correctionScope": "rollback-plan-only",
+  "coveredArtifacts": [
+    "physicalPage",
+    "dataArticles",
+    "nucleusSlug",
+    "runtimeCluster",
+    "contentMap",
+    "registry",
+    "publishing",
+    "approvedRelationship",
+    "guideCardAndItemList",
+    "sitemap",
+    "operationReports"
+  ],
+  "unsafeWholeFileRestoreRequired": false
+}

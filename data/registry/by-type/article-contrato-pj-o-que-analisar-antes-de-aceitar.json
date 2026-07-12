@@ -1,0 +1,22 @@
+{
+  "id": "contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "type": "article",
+  "slug": "contrato-pj-o-que-analisar-antes-de-aceitar",
+  "status": "draft",
+  "approvalStatus": "approved-relationship",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "0.1.0",
+  "references": [
+    "/data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/article-draft-specification.json",
+    "/data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/relationship-map.json",
+    "/data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/registry-draft-entry.json",
+    "/data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/publishing-draft-entry.json"
+  ],
+  "notes": [
+    "Internal governed representation only.",
+    "Public page exists after controlled execution, but this registry entry is not consumed by runtime."
+  ]
+}

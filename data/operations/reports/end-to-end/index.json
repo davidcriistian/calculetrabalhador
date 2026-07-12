@@ -67,5 +67,8 @@
   ],
   "dryRunEvidence": {
     "hypotheticalAutonomoPrevidencia": "/data/operations/reports/end-to-end/dry-run-autonomo-previdencia.json"
+  },
+  "controlledExecutionEvidence": {
+    "articleContratoPj": "/data/operations/reports/end-to-end/create-article-contrato-pj/operation-report.json"
   }
 }

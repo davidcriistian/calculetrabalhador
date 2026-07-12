@@ -1,0 +1,17 @@
+{
+  "id": "operation-reconciliation-article-contrato-pj",
+  "operation": "post-execution-reconciliation",
+  "originalOperation": "deliver-asset-end-to-end",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "mode": "READ_ONLY_FIRST",
+  "result": "FIXED_AND_RECONCILED",
+  "fixesApplied": [
+    "Completed rollback plan with runtime cluster and content-map rollback steps."
+  ],
+  "publicFunctionalityChanged": false,
+  "gitWritesExecuted": false,
+  "blockers": [],
+  "warnings": [
+    "Publishing status remains draft although public distribution artifacts exist; documented as non-blocking controlled-execution state."
+  ]
+}

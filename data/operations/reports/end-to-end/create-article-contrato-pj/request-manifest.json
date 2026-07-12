@@ -1,0 +1,34 @@
+{
+  "operationId": "deliver-asset-end-to-end-article-contrato-pj",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "phase": "5.18",
+  "createdAt": "2026-07-12",
+  "asset": {
+    "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+    "assetType": "article",
+    "publicSlug": "contrato-pj-o-que-analisar-antes-de-aceitar",
+    "publicUrl": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "title": "Contrato PJ: O Que Analisar Antes de Aceitar?"
+  },
+  "ecosystem": {
+    "domain": "pj",
+    "nucleus": "pj",
+    "guide": "guide-pj",
+    "cluster": "clt-ou-pj",
+    "calculator": "calculadora-clt-ou-pj",
+    "pillarArticle": "clt-ou-pj"
+  },
+  "constraints": {
+    "noGitAdd": true,
+    "noGitCommit": true,
+    "noGitPush": true,
+    "noForcePush": true,
+    "noRemoteChange": true,
+    "noRuntimeChange": true,
+    "noCssChange": true,
+    "noJavascriptChange": true,
+    "noCalculatorChange": true,
+    "homeChangesAllowed": false
+  }
+}

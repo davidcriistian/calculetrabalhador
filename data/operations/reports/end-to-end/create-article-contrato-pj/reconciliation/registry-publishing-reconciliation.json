@@ -1,0 +1,22 @@
+{
+  "id": "registry-publishing-reconciliation-article-contrato-pj",
+  "status": "passed-with-warning",
+  "registry": {
+    "individualEntry": "present",
+    "indexEntry": "present",
+    "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+    "runtimeStatus": "not-consumed",
+    "duplicate": false
+  },
+  "publishing": {
+    "individualEntry": "present",
+    "indexEntry": "present",
+    "publishingStatus": "draft",
+    "runtimeStatus": "not-consumed",
+    "deployed": false,
+    "indexed": false,
+    "duplicate": false,
+    "rollbackAvailable": true
+  },
+  "warning": "Publishing status remains draft although controlled public distribution exists. The state is documented, not silent, and was not changed because no precise lifecycle state exists yet."
+}

@@ -96,6 +96,18 @@
                                        ]
                     },
                     {
+                        "id":  "contrato-pj-o-que-analisar-antes-de-aceitar",
+                        "assetId":  "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+                        "type":  "article",
+                        "slug":  "contrato-pj-o-que-analisar-antes-de-aceitar",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-contrato-pj-o-que-analisar-antes-de-aceitar.json"
+                                       ]
+                    },
+                    {
                         "id":  "calculadora-clt-ou-pj",
                         "assetId":  "calculator:calculadora-clt-ou-pj",
                         "type":  "calculator",

@@ -1,0 +1,46 @@
+{
+  "id": "public-distribution-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "catalog": {
+    "status": "passed",
+    "entryCount": 1,
+    "fieldsPresent": ["id", "title", "slug", "url", "category", "description", "relatedTool", "tempo", "cor", "corBg", "publishedAt", "updatedAt", "showOnHome"],
+    "onlyNewEntryAdded": true
+  },
+  "categoryPJ": {
+    "status": "CATEGORY_INTEGRATION_RECONCILED",
+    "slugCount": 1,
+    "expectedArticleCount": 6,
+    "previousFiveArticlesPreserved": true,
+    "usesTextHeuristic": false
+  },
+  "runtimeCluster": {
+    "status": "passed",
+    "legacyClusterId": "calculadora-clt-ou-pj",
+    "articleCount": 6,
+    "newArticleCount": 1,
+    "otherClustersChanged": false
+  },
+  "contentMap": {
+    "status": "passed",
+    "entryCount": 1,
+    "primaryTool": "calculadora-clt-ou-pj",
+    "clusterId": "calculadora-clt-ou-pj",
+    "contentType": "support",
+    "intent": "comparison"
+  },
+  "guidePJ": {
+    "status": "passed",
+    "itemListEntryCount": 1,
+    "visualCardCount": 1,
+    "previousSatellitesPreserved": true,
+    "otherNucleusAssetsAdded": false
+  },
+  "sitemap": {
+    "status": "passed",
+    "urlCount": 1,
+    "xmlWellFormed": true,
+    "lastmod": "2026-07-12",
+    "canonicalMatches": true
+  }
+}

@@ -7,7 +7,7 @@
   "runtimeStatus": "not-consumed",
   "publishingStatus": "draft",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-12",
   "owner": "core-platform",
   "source": "Operational Capabilities Phase 4.7 - Relationship Approval",
   "assetIdentityPolicy": "/data/constitution/governance/asset-identity-policy.json",
@@ -65,6 +65,14 @@
       {
         "assetId": "article:clt-ou-pj-vale-a-pena-em-2026",
         "publicSlug": "clt-ou-pj-vale-a-pena-em-2026",
+        "relationshipType": "satellite-article",
+        "relationshipStatus": "approved",
+        "runtimeStatus": "not-consumed",
+        "publishingStatus": "draft"
+      },
+      {
+        "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+        "publicSlug": "contrato-pj-o-que-analisar-antes-de-aceitar",
         "relationshipType": "satellite-article",
         "relationshipStatus": "approved",
         "runtimeStatus": "not-consumed",

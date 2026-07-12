@@ -1,0 +1,21 @@
+{
+  "id": "preflight-reconciliation-article-contrato-pj",
+  "phase": "5.18.1",
+  "mode": "READ_ONLY_FIRST",
+  "branch": "main",
+  "head": "732e5d7ae2919eae6b7e237c0f3faf11bb928cf0",
+  "originMain": "732e5d7ae2919eae6b7e237c0f3faf11bb928cf0",
+  "gitStatus": "main...origin/main with local Fase 5.18 changes",
+  "gitWritesExecuted": {
+    "add": false,
+    "commit": false,
+    "push": false,
+    "restore": false,
+    "reset": false,
+    "checkout": false,
+    "clean": false,
+    "rebase": false
+  },
+  "diffCheck": "pass",
+  "unrelatedChangesDetected": false
+}

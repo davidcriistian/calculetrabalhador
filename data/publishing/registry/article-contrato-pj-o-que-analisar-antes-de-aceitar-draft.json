@@ -1,0 +1,30 @@
+{
+  "id": "publishing-draft-article-contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "assetType": "article",
+  "status": "draft",
+  "approvalStatus": "approved-relationship",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "public-page-created-with-controlled-distribution"
+  },
+  "actions": {
+    "publishes": true,
+    "deploys": false,
+    "modifiesSitemap": true,
+    "createsPublicPage": true,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false
+  },
+  "publicRepresentation": {
+    "path": "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "canonical": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "catalogStatus": "prepared",
+    "sitemapStatus": "prepared"
+  }
+}

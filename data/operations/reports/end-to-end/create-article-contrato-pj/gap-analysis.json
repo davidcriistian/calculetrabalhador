@@ -1,0 +1,27 @@
+{
+  "id": "gap-analysis-article-contrato-pj",
+  "status": "passed",
+  "assetId": "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+  "evaluatedExistingAssets": [
+    "article:clt-ou-pj",
+    "article:como-calcular-clt-ou-pj",
+    "article:vantagens-e-desvantagens-clt-ou-pj",
+    "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+    "article:clt-ou-pj-vale-a-pena-em-2026",
+    "calculator:calculadora-clt-ou-pj",
+    "guide:guide-pj"
+  ],
+  "selectedGap": "contract-review-before-accepting-pj",
+  "reasoning": [
+    "Existing assets cover comparison, calculation, compensation threshold, advantages, disadvantages and the 2026 decision context.",
+    "Contract review, autonomy, exclusivity, scope, payment timing, termination and clauses are only supporting mentions in existing pages.",
+    "The selected article adds a pre-acceptance decision layer without replacing the calculator or the existing financial articles."
+  ],
+  "duplicateChecks": {
+    "publicPageAlreadyExists": false,
+    "catalogIdAlreadyExists": false,
+    "sitemapUrlAlreadyExistsBeforeCreation": false,
+    "registryEntryAlreadyExistsBeforeCreation": false
+  },
+  "finalDecision": "CREATE"
+}

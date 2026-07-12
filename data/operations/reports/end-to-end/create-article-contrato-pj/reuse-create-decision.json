@@ -1,0 +1,32 @@
+{
+  "id": "reuse-create-decision-article-contrato-pj",
+  "status": "passed",
+  "reuse": [
+    "domain:pj",
+    "nucleus:pj",
+    "guide:guide-pj",
+    "cluster:clt-ou-pj",
+    "calculator:calculadora-clt-ou-pj",
+    "article:clt-ou-pj",
+    "existing PJ satellite article pattern",
+    "CTA_CARD_V1 pattern",
+    "article blueprint and gold standard"
+  ],
+  "create": [
+    "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+    "blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+    "registry entry",
+    "publishing draft entry",
+    "asset operation reports",
+    "end-to-end operation reports"
+  ],
+  "notCreated": [
+    "new engine",
+    "new blueprint",
+    "new CSS",
+    "new JavaScript",
+    "new calculator",
+    "new guide",
+    "new cluster"
+  ]
+}

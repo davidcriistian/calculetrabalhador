@@ -1,0 +1,41 @@
+{
+  "id": "mutation-guard-article-contrato-pj",
+  "status": "passed",
+  "protectedPaths": [
+    "index.html",
+    "assets/home-refactor-v8.js",
+    "assets/js/nuclei.js",
+    "data/tools.json",
+    "calculadora-clt-ou-pj/index.html"
+  ],
+  "allowedPublicPaths": [
+    "blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+    "guias/pj/index.html",
+    "sitemap.xml",
+    "data/articles.json",
+    "data/brain/nuclei.json",
+    "data/brain/clusters.json",
+    "data/maps/content-map.json"
+  ],
+  "allowedGovernancePaths": [
+    "data/registry/by-type/index.json",
+    "data/registry/by-type/article-contrato-pj-o-que-analisar-antes-de-aceitar.json",
+    "data/publishing/registry/index.json",
+    "data/publishing/registry/article-contrato-pj-o-que-analisar-antes-de-aceitar-draft.json",
+    "data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "data/operations/reports/end-to-end/create-article-contrato-pj/",
+    "data/operations/reports/cluster/clt-ou-pj/relationship-approval/approved-relationship-map.json"
+  ],
+  "gitOperationsExecuted": {
+    "add": false,
+    "commit": false,
+    "push": false,
+    "reset": false,
+    "restore": false,
+    "checkout": false,
+    "clean": false,
+    "rebase": false
+  },
+  "protectedDiffCheck": "passed",
+  "unexpectedFilesDetected": false
+}

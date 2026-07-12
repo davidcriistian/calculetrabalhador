@@ -1,0 +1,17 @@
+{
+  "id": "testing-reconciliation-article-contrato-pj",
+  "status": "passed",
+  "executedChecks": [
+    { "name": "JSON_VALID", "result": "pass", "details": "906 JSON files parsed." },
+    { "name": "INTERNAL_JSON_REFS_VALID", "result": "pass", "details": "8 internal /data references checked." },
+    { "name": "node-check-home-refactor", "result": "pass", "command": "node --check assets/home-refactor-v8.js" },
+    { "name": "node-check-nuclei", "result": "pass", "command": "node --check assets/js/nuclei.js" },
+    { "name": "governance", "result": "pass", "command": "node scripts/validate-governance.js" },
+    { "name": "transform-rules", "result": "pass", "command": "node scripts/transform-rules.js" },
+    { "name": "shadow-adicional-noturno", "result": "pass", "command": "node scripts/validate-shadow-adicional-noturno.js" },
+    { "name": "shadow-aviso-previo", "result": "pass", "command": "node scripts/validate-shadow-aviso-previo.js" },
+    { "name": "git-diff-check", "result": "pass", "command": "git diff --check" },
+    { "name": "custom-reconciliation-checks", "result": "pass" },
+    { "name": "public-mutation-guard", "result": "pass", "details": "PUBLIC_MUTATION_COUNT=0" }
+  ]
+}
