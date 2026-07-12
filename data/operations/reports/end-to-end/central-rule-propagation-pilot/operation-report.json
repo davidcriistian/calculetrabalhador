@@ -1,0 +1,21 @@
+{
+  "id": "operation-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "operation": "central-rule-propagation-pilot",
+  "mode": "DRY_RUN_IMPACT_ANALYSIS_READ_ONLY",
+  "status": "CENTRAL RULE PROPAGATION IMPACT ANALYSIS PASSED WITH WARNINGS",
+  "selectedRule": "inss",
+  "selectedChange": "hypothetical 2026 INSS CLT progressive table or ceiling update",
+  "createdReportsOnly": true,
+  "publicFilesChanged": false,
+  "ruleFilesChanged": false,
+  "runtimeFilesChanged": false,
+  "catalogFilesChanged": false,
+  "gitWriteExecuted": false,
+  "mainWarnings": [
+    "Runtime consumption is through data/tabelas-trabalhistas.json, not direct consumption of data/rules/inss.json.",
+    "Some calculators contain hardcoded INSS fallback constants.",
+    "Mapped articles require controlled review before any public copy update."
+  ],
+  "finalDecision": "A future real propagation can be executed with manual approval and a fallback-constant strategy."
+}

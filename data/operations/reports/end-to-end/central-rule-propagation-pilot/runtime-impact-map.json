@@ -1,0 +1,32 @@
+{
+  "id": "runtime-impact-map-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "runtimeFiles": [
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "role": "runtime data source",
+      "wouldChangeInRealPropagation": true,
+      "changedInDryRun": false
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "role": "shared runtime helper",
+      "wouldChangeInRealPropagation": false,
+      "changedInDryRun": false
+    }
+  ],
+  "publicPages": {
+    "directlyAffectedCount": 8,
+    "changedInDryRun": false
+  },
+  "catalogs": {
+    "wouldChangeInRealPropagation": false,
+    "changedInDryRun": false
+  },
+  "sitemapAndIndexing": {
+    "wouldChangeInRealPropagation": false,
+    "changedInDryRun": false
+  }
+}

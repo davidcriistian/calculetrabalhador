@@ -1,0 +1,18 @@
+{
+  "id": "single-source-of-truth-assessment-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "assessment": "PARTIALLY_CENTRALIZED",
+  "strengths": [
+    "INSS has a structured rule source in data/rules/inss.json.",
+    "scripts/transform-rules.js validates equivalence against the runtime aggregate.",
+    "Compatibility and dependency maps identify affected tools and sources."
+  ],
+  "gaps": [
+    "The public runtime consumes data/tabelas-trabalhistas.json rather than data/rules/inss.json directly.",
+    "Some calculator pages still contain hardcoded INSS fallback constants.",
+    "Core is documented as not connected to runtime in compatibility maps."
+  ],
+  "futureTarget": "data/rules/inss.json or a Core-approved equivalent should become the governed canonical source, with generated runtime aggregates and no divergent fallback constants."
+}

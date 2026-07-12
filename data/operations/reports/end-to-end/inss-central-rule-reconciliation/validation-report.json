@@ -1,0 +1,35 @@
+{
+  "id": "validation-report-inss-central-rule-reconciliation",
+  "phase": "5.20",
+  "status": "passed",
+  "validations": [
+    {
+      "name": "source-output-equivalence",
+      "status": "passed",
+      "classification": "SEMANTIC_EQUIVALENCE"
+    },
+    {
+      "name": "fallback-consistency",
+      "status": "passed",
+      "scope": "comparable INSS CLT, ceiling, minimum wage, contributor and MEI values"
+    },
+    {
+      "name": "typed-asset-identity",
+      "status": "passed",
+      "scope": "calculator:* identities recorded for eight consumers"
+    },
+    {
+      "name": "cross-nucleus-isolation",
+      "status": "passed",
+      "summary": "No files outside reports were modified; INSS shared and specialized derivatives were separated."
+    },
+    {
+      "name": "mutation-guard",
+      "status": "passed"
+    }
+  ],
+  "warnings": [
+    "Version traceability is partial because runtime aggregate does not embed source hash or transformedFrom metadata.",
+    "Fallbacks are currently equivalent but remain stale-risk without future fingerprint validation."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "propagation-boundary-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "inScopeForImpactAnalysis": [
+    "data/rules/inss.json",
+    "scripts/transform-rules.js",
+    "data/tabelas-trabalhistas.json",
+    "assets/js/tabelas-trabalhistas.js",
+    "mapped calculators",
+    "mapped articles",
+    "Core compatibility maps",
+    "Testing and Validation planning"
+  ],
+  "outOfScopeForDryRunMutation": [
+    "public calculators",
+    "public articles",
+    "runtime files",
+    "data/rules/inss.json",
+    "data/tabelas-trabalhistas.json",
+    "data/tools.json",
+    "data/articles.json",
+    "sitemap.xml",
+    ".htaccess",
+    "IndexNow",
+    "Git add",
+    "Git commit",
+    "Git push"
+  ],
+  "boundaryDecision": "No production or operational source was mutated. Only internal reports were created."
+}

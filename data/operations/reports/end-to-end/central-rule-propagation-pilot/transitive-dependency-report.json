@@ -1,0 +1,47 @@
+{
+  "id": "transitive-dependency-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "transitiveDependencies": {
+    "tools": [
+      "salario-liquido-clt",
+      "calculadora-13-salario",
+      "calculadora-ferias-clt",
+      "calculadora-clt-ou-pj",
+      "calculadora-inss",
+      "calculadora-inss-autonomo",
+      "calculadora-inss-mei",
+      "calculadora-das-mei-2026"
+    ],
+    "clusters": [
+      "calculadora-13-salario",
+      "calculadora-clt-ou-pj",
+      "calculadora-ferias-clt",
+      "salario-liquido-clt",
+      "calculadora-inss-mei",
+      "calculadora-das-mei-2026"
+    ],
+    "articles": {
+      "estimatedFromMaps": 11,
+      "explicitExamples": [
+        "tabela-inss-atualizada",
+        "como-calcular-salario-liquido",
+        "descontos-do-salario-clt",
+        "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "como-calcular-clt-ou-pj"
+      ],
+      "classification": "content-review-only-until-public-update-approved"
+    },
+    "catalogs": [
+      "data/tools.json",
+      "data/articles.json",
+      "data/maps/tools-map.json",
+      "data/maps/content-map.json"
+    ]
+  },
+  "notes": [
+    "Transitive content dependencies do not imply automatic article mutation.",
+    "URLs, sitemap, category pages and IndexNow remain out of scope for this dry run."
+  ]
+}

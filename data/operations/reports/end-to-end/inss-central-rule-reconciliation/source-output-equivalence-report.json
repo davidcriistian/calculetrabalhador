@@ -1,0 +1,31 @@
+{
+  "id": "source-output-equivalence-report-inss",
+  "phase": "5.20",
+  "status": "passed",
+  "result": "SEMANTIC_EQUIVALENCE",
+  "comparison": {
+    "source": "data/rules/inss.json",
+    "output": "data/tabelas-trabalhistas.json",
+    "salarioMinimo": "pass",
+    "teto": "pass",
+    "faixas": "pass",
+    "aliquotas": "pass",
+    "metodo": "pass"
+  },
+  "currentValues": {
+    "year": 2026,
+    "minimumWage": 1621.0,
+    "inssCeiling": 8475.55,
+    "method": "progressivo",
+    "ranges": [
+      { "ate": 1621.0, "aliquota": 0.075 },
+      { "ate": 2902.84, "aliquota": 0.09 },
+      { "ate": 4354.27, "aliquota": 0.12 },
+      { "ate": 8475.55, "aliquota": 0.14 }
+    ]
+  },
+  "whySemanticNotExact": [
+    "The aggregate contains additional runtime metadata such as ano, observacao and other domains.",
+    "The transformer validates the INSS value surface needed by runtime, not the whole aggregate document."
+  ]
+}

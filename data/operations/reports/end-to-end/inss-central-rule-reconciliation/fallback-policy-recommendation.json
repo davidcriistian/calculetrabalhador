@@ -1,0 +1,16 @@
+{
+  "id": "fallback-policy-recommendation-inss",
+  "phase": "5.20",
+  "recommendedPolicy": "B_KEEP_FALLBACK_WITH_VERSION_FINGERPRINT_REQUIRED",
+  "secondaryPolicy": "A_VALIDATE_FALLBACK_FROM_CANONICAL_SOURCE",
+  "decision": "Do not remove fallbacks now. Keep them as emergency behavior, but future propagation must validate each fallback against the canonical source or a source fingerprint before publication.",
+  "requiredFutureGuards": [
+    "canonical rule version",
+    "effective date",
+    "source path",
+    "source hash",
+    "generated or validated timestamp",
+    "fallback consistency check"
+  ],
+  "forbiddenFutureState": "CANONICAL SOURCE = VERSION A, RUNTIME DATA = VERSION A, FALLBACK = VERSION B without detection"
+}

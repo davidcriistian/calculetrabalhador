@@ -1,0 +1,35 @@
+{
+  "id": "canonical-source-report-inss",
+  "phase": "5.20",
+  "source": "data/rules/inss.json",
+  "classification": "CANONICAL_EDITABLE_SOURCE",
+  "evidence": {
+    "domain": "inss",
+    "status": "draft",
+    "currentYear": 2026,
+    "versionPath": "versions.2026",
+    "validFrom": "2026-01-01",
+    "validUntil": "2026-12-31",
+    "hasLegalFields": true,
+    "hasMetadata": true,
+    "hasOfficialSourceMetadata": true,
+    "hasGovernanceWarning": true,
+    "usedByTransformRules": true
+  },
+  "canonicalFields": [
+    "minimumWage.value",
+    "inssCeiling.value",
+    "clt.calculationMode",
+    "clt.progressiveTable",
+    "individualContributor.normal20",
+    "individualContributor.simplified11",
+    "mei.defaultInssRate",
+    "mei.cargoTransportInssRate",
+    "mei.types"
+  ],
+  "notes": [
+    "The file says it is prepared as an official structured INSS source for the project.",
+    "The file remains draft and must be validated against official sources before future production updates.",
+    "No legal value was changed in this phase."
+  ]
+}

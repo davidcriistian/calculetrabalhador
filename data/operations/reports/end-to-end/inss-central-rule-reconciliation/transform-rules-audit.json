@@ -1,0 +1,32 @@
+{
+  "id": "transform-rules-audit-inss",
+  "phase": "5.20",
+  "script": "scripts/transform-rules.js",
+  "classification": "VALIDATION_ONLY",
+  "answers": {
+    "readsDataRulesInssJson": true,
+    "writesDataTabelasTrabalhistasJson": false,
+    "comparesDataTabelasTrabalhistasJson": true,
+    "transformsFields": [
+      "minimumWage.value -> salarioMinimo.valor",
+      "inssCeiling.value -> inss.teto",
+      "clt.calculationMode -> inss.metodo",
+      "clt.progressiveTable[].max -> inss.faixas[].ate",
+      "clt.progressiveTable[].rate -> inss.faixas[].aliquota",
+      "deducao -> 0"
+    ],
+    "preservesPrecision": true,
+    "preservesOrder": true,
+    "preservesEffectiveDates": false,
+    "detectsDivergence": true,
+    "failsIfOutputStale": true,
+    "altersFileAutomatically": false,
+    "hasValidationMode": true,
+    "riskOfOverwritingUnrelatedData": false,
+    "idempotent": true
+  },
+  "notes": [
+    "It exits non-zero when transformed INSS values differ from the aggregate.",
+    "It does not generate or write the aggregate, so stale output detection depends on running this validator."
+  ]
+}

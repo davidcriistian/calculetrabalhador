@@ -1,0 +1,26 @@
+{
+  "id": "baseline-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "captured",
+  "baseline": {
+    "sourceFile": "data/rules/inss.json",
+    "currentYear": 2026,
+    "minimumWage": 1621.0,
+    "inssCeiling": 8475.55,
+    "cltCalculationMode": "progressive",
+    "cltProgressiveTable": [
+      { "max": 1621.0, "rate": 0.075 },
+      { "max": 2902.84, "rate": 0.09 },
+      { "max": 4354.27, "rate": 0.12 },
+      { "max": 8475.55, "rate": 0.14 }
+    ],
+    "runtimeAggregateFile": "data/tabelas-trabalhistas.json",
+    "runtimeHelperFile": "assets/js/tabelas-trabalhistas.js"
+  },
+  "checksumsBeforeReportCreation": {
+    "data/rules/inss.json": "E4A737A34FB4BB24D17249CF8C4F8A55F26B1F6DC62F9F45CD73B04444AC02F7",
+    "data/tabelas-trabalhistas.json": "C4A4AB30C7FA1C6B1C6D604E7725F70138B4B7DF5A7792CF8068B5A1B7984817",
+    "assets/js/tabelas-trabalhistas.js": "6A3AAA981C5AB6AAD49896279ACC4705A1A94AD1C31011A78ADBC263A9E18FB7"
+  }
+}

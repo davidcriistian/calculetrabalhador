@@ -1,0 +1,23 @@
+{
+  "id": "version-traceability-report-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "currentTraceability": {
+    "canonicalVersion": "data/rules/inss.json#/versions/2026",
+    "effectiveDate": "2026-01-01",
+    "validUntil": "2026-12-31",
+    "sourcePath": "data/rules/inss.json",
+    "sourceHashInRuntime": false,
+    "generatedAtInRuntime": false,
+    "transformedFromInRuntime": false,
+    "ruleVersionInRuntime": "partial via anoBase and inss.ano"
+  },
+  "classification": "PARTIAL_TRACEABILITY",
+  "minimumFutureNeed": [
+    "sourcePath",
+    "sourceHash",
+    "sourceVersion",
+    "generatedAt or validatedAt",
+    "transformScriptVersion or script hash"
+  ]
+}

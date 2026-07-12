@@ -1,0 +1,29 @@
+{
+  "id": "testing-impact-plan-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "planned-not-executed-as-public-mutation",
+  "requiredTestsForRealChange": [
+    "JSON_VALID for all changed JSON files",
+    "scripts/transform-rules.js equivalence check",
+    "node --check assets/js/tabelas-trabalhistas.js",
+    "Calculator smoke tests for calculadora-inss",
+    "Calculator smoke tests for calculadora-inss-autonomo",
+    "Calculator smoke tests for calculadora-inss-mei",
+    "Calculator smoke tests for calculadora-das-mei-2026",
+    "Regression tests for salario-liquido-clt",
+    "Regression tests for calculadora-13-salario",
+    "Regression tests for calculadora-ferias-clt",
+    "Regression tests for calculadora-clt-ou-pj",
+    "Content impact review for mapped INSS articles"
+  ],
+  "approvalGates": [
+    "official-source-confirmed",
+    "source-to-aggregate-equivalence-pass",
+    "runtime-safe",
+    "calculator-regression-pass",
+    "content-review-queued",
+    "rollback-ready",
+    "manual-approval"
+  ]
+}

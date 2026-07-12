@@ -1,0 +1,28 @@
+{
+  "id": "preflight-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "mode": "DRY_RUN_IMPACT_ANALYSIS_READ_ONLY",
+  "status": "passed",
+  "branch": "main",
+  "git": {
+    "statusSb": "## main...origin/main",
+    "diffStat": "",
+    "diffNameStatus": "",
+    "diffCheck": "passed",
+    "head": "0028bf507572aea96b1b73e9259f0d126f035458",
+    "originMain": "0028bf507572aea96b1b73e9259f0d126f035458",
+    "workingTreeState": "CLEAN"
+  },
+  "guardrails": {
+    "publicMutationAllowed": false,
+    "ruleMutationAllowed": false,
+    "runtimeMutationAllowed": false,
+    "catalogMutationAllowed": false,
+    "gitWriteAllowed": false,
+    "reportsAllowed": true
+  },
+  "notes": [
+    "No pre-existing diff was detected before creating internal dry-run reports.",
+    "The operation is limited to report creation under data/operations/reports/end-to-end/central-rule-propagation-pilot/."
+  ]
+}

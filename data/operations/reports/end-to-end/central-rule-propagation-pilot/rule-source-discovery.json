@@ -1,0 +1,67 @@
+{
+  "id": "rule-source-discovery-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "status": "completed",
+  "discoveredSources": [
+    {
+      "path": "data/rules/inss.json",
+      "type": "structured-rule-source",
+      "domain": "inss",
+      "status": "draft",
+      "currentYear": 2026,
+      "hasVersionedRules": true,
+      "hasEffectiveDates": true,
+      "hasRuntimeConsumers": true,
+      "reason": "Structured source for INSS values, ceiling, CLT progressive table, individual contributor rules and MEI values."
+    },
+    {
+      "path": "scripts/transform-rules.js",
+      "type": "rule-transformer",
+      "status": "active-validation-script",
+      "role": "Transforms data/rules/inss.json into the current aggregate shape and validates equivalence with data/tabelas-trabalhistas.json."
+    },
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "type": "runtime-aggregate",
+      "status": "current-runtime-source",
+      "role": "Central JSON consumed by public runtime helpers and calculators."
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "type": "runtime-helper",
+      "status": "current-runtime",
+      "role": "Loads the aggregate JSON and exposes shared calculation helpers."
+    },
+    {
+      "path": "data/core/compatibility/dependencies-map.json",
+      "type": "compatibility-map",
+      "status": "draft",
+      "role": "Maps current dependency surfaces to probable Core domains."
+    },
+    {
+      "path": "data/maps/update-map.json",
+      "type": "operational-map",
+      "status": "current-map",
+      "role": "Lists operational tools and clusters impacted by rule changes."
+    },
+    {
+      "path": "data/brain/dependencies.json",
+      "type": "dependency-map",
+      "status": "current-map",
+      "role": "Lists rule-to-tool and rule-to-source dependencies."
+    }
+  ],
+  "otherRuleFilesObserved": [
+    "data/rules/adicional-noturno.json",
+    "data/rules/aviso-previo.json",
+    "data/rules/decimo-terceiro.json",
+    "data/rules/ferias.json",
+    "data/rules/fgts.json",
+    "data/rules/horas-extras.json",
+    "data/rules/insalubridade.json",
+    "data/rules/irrf.json",
+    "data/rules/salario-minimo.json",
+    "data/rules/seguro-desemprego.json"
+  ],
+  "selectionConclusion": "INSS is the safest pilot candidate because it is physically present as a structured rule, is transformable, and has explicit dependency maps."
+}

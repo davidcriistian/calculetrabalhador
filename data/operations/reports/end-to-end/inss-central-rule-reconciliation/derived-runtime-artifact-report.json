@@ -1,0 +1,38 @@
+{
+  "id": "derived-runtime-artifact-report-inss",
+  "phase": "5.20",
+  "artifact": "data/tabelas-trabalhistas.json",
+  "classification": "PARTIALLY_DERIVED",
+  "role": "current public runtime aggregate",
+  "derivedFromCanonicalNow": {
+    "salarioMinimo.valor": true,
+    "inss.teto": true,
+    "inss.metodo": true,
+    "inss.faixas[].ate": true,
+    "inss.faixas[].aliquota": true,
+    "inss.faixas[].deducao": "runtime-compatible constant generated as 0"
+  },
+  "notDerivedByCurrentTransform": [
+    "anoBase",
+    "ultimaRevisao",
+    "vigencia",
+    "moeda",
+    "salarioMinimo.ano",
+    "salarioMinimo.observacao",
+    "inss.ano",
+    "irrf",
+    "seguroDesemprego",
+    "fgts",
+    "ferias",
+    "decimoTerceiro",
+    "avisoPrevio",
+    "adicionalNoturno",
+    "insalubridade",
+    "horasExtras",
+    "fontes",
+    "rescisao",
+    "cltOuPj"
+  ],
+  "risk": "Manual edits to data/tabelas-trabalhistas.json can diverge from data/rules/inss.json unless scripts/transform-rules.js is run.",
+  "conclusion": "The INSS slice is validated as derived-equivalent, but the aggregate file as a whole is not a fully generated artifact."
+}

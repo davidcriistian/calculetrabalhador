@@ -1,0 +1,13 @@
+{
+  "id": "rollback-plan-inss-central-rule-reconciliation",
+  "phase": "5.20",
+  "status": "ready",
+  "rollbackNeededForThisPhase": false,
+  "reason": "Only internal reports were created. No legal rule, runtime, consumer page, catalog or sitemap file was modified.",
+  "futureRealChangeRollback": [
+    "Restore previous data/rules/inss.json.",
+    "Restore previous data/tabelas-trabalhistas.json if derived output was updated.",
+    "Restore any consumer fallback edits if a controlled runtime reconciliation changed them.",
+    "Rerun source/output equivalence, fallback consistency, governance validation and mutation guard."
+  ]
+}

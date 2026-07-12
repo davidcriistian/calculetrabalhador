@@ -1,0 +1,49 @@
+{
+  "id": "cross-calculator-consistency-report-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "ruleFamilies": [
+    {
+      "family": "INSS progressivo empregado CLT",
+      "classification": "SHARED_RULE",
+      "consumers": [
+        "salario-liquido-clt",
+        "calculadora-13-salario",
+        "calculadora-ferias-clt",
+        "calculadora-clt-ou-pj",
+        "calculadora-inss"
+      ],
+      "sharedSource": "data/tabelas-trabalhistas.json#/inss",
+      "canonicalSource": "data/rules/inss.json#/versions/2026/clt"
+    },
+    {
+      "family": "INSS contribuinte individual/autonomo",
+      "classification": "SPECIALIZED_RULE",
+      "consumers": [
+        "calculadora-inss",
+        "calculadora-inss-autonomo"
+      ],
+      "canonicalSource": "data/rules/inss.json#/versions/2026/individualContributor"
+    },
+    {
+      "family": "INSS MEI",
+      "classification": "SPECIALIZED_RULE",
+      "consumers": [
+        "calculadora-inss",
+        "calculadora-inss-mei",
+        "calculadora-das-mei-2026"
+      ],
+      "canonicalSource": "data/rules/inss.json#/versions/2026/mei"
+    },
+    {
+      "family": "DAS MEI",
+      "classification": "DERIVED_RULE",
+      "consumers": [
+        "calculadora-das-mei-2026",
+        "calculadora-inss-mei"
+      ],
+      "note": "Combines INSS MEI rates with ICMS/ISS fixed values; not equivalent to CLT progressive INSS."
+    }
+  ],
+  "conclusion": "The project must validate shared CLT INSS and specialized INSS derivatives separately."
+}

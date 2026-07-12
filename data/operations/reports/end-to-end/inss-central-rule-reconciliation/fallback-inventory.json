@@ -1,0 +1,87 @@
+{
+  "id": "fallback-inventory-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "fallbacks": [
+    {
+      "consumer": "salario-liquido-clt",
+      "path": "salario-liquido-clt/index.html",
+      "lines": "735-750",
+      "values": "INSS_FAIXAS_2026 + TETO_INSS_2026",
+      "activation": "central helper missing, central data unavailable, or central-vs-legacy divergence",
+      "normallyExecuted": "only as fallback path",
+      "matchesCanonical": true,
+      "classification": "STALE_RISK_FALLBACK"
+    },
+    {
+      "consumer": "calculadora-13-salario",
+      "path": "calculadora-13-salario/index.html",
+      "lines": "377-392",
+      "values": "INSS_FAIXAS_2026 + TETO_INSS_2026",
+      "activation": "central data unavailable",
+      "normallyExecuted": "only as fallback path",
+      "matchesCanonical": true,
+      "classification": "STALE_RISK_FALLBACK"
+    },
+    {
+      "consumer": "calculadora-ferias-clt",
+      "path": "calculadora-ferias-clt/index.html",
+      "lines": "417-432",
+      "values": "INSS_FAIXAS_2026 + TETO_INSS_2026",
+      "activation": "central data unavailable",
+      "normallyExecuted": "only as fallback path",
+      "matchesCanonical": true,
+      "classification": "STALE_RISK_FALLBACK"
+    },
+    {
+      "consumer": "calculadora-clt-ou-pj",
+      "path": "calculadora-clt-ou-pj/index.html",
+      "lines": "329-342",
+      "values": "INSS_FAIXAS_2026 + TETO_INSS_2026",
+      "activation": "central helper unavailable or central-vs-legacy divergence",
+      "normallyExecuted": "fallback result remains default before central acceptance",
+      "matchesCanonical": true,
+      "classification": "STALE_RISK_FALLBACK"
+    },
+    {
+      "consumer": "calculadora-inss",
+      "path": "calculadora-inss/index.html",
+      "lines": "856-874",
+      "values": "LOCAL_INSS_TABLES including CLT, contributor and MEI values",
+      "activation": "explicit fallback source or central data unavailable",
+      "normallyExecuted": "controlled fallback and inline comparison",
+      "matchesCanonical": true,
+      "classification": "SAFE_EMERGENCY_FALLBACK"
+    },
+    {
+      "consumer": "calculadora-inss-autonomo",
+      "path": "calculadora-inss-autonomo/index.html",
+      "lines": "315-344",
+      "values": "INSS_AUTONOMO_DEFAULT_TABLES",
+      "activation": "central data unavailable",
+      "normallyExecuted": "fallback local source before central load succeeds",
+      "matchesCanonical": true,
+      "classification": "SPECIALIZED_RULE"
+    },
+    {
+      "consumer": "calculadora-inss-mei",
+      "path": "calculadora-inss-mei/index.html",
+      "lines": "339-375",
+      "values": "INSS_MEI_DEFAULT_TABLES",
+      "activation": "central data unavailable",
+      "normallyExecuted": "fallback local source before central load succeeds",
+      "matchesCanonical": true,
+      "classification": "SPECIALIZED_RULE"
+    },
+    {
+      "consumer": "calculadora-das-mei-2026",
+      "path": "calculadora-das-mei-2026/index.html",
+      "lines": "317-353",
+      "values": "DAS_MEI_DEFAULT_TABLES",
+      "activation": "central data unavailable",
+      "normallyExecuted": "fallback local source before central load succeeds",
+      "matchesCanonical": true,
+      "classification": "SPECIALIZED_RULE"
+    }
+  ]
+}

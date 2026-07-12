@@ -1,0 +1,43 @@
+{
+  "id": "rule-source-map-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "selectedRule": "inss",
+  "sourceFlow": [
+    {
+      "order": 1,
+      "asset": "data/rules/inss.json",
+      "role": "structured declarative source",
+      "mutationInThisPilot": false
+    },
+    {
+      "order": 2,
+      "asset": "scripts/transform-rules.js",
+      "role": "projection and equivalence validator",
+      "mutationInThisPilot": false
+    },
+    {
+      "order": 3,
+      "asset": "data/tabelas-trabalhistas.json",
+      "role": "current runtime aggregate",
+      "mutationInThisPilot": false
+    },
+    {
+      "order": 4,
+      "asset": "assets/js/tabelas-trabalhistas.js",
+      "role": "public runtime helper",
+      "mutationInThisPilot": false
+    },
+    {
+      "order": 5,
+      "asset": "public calculators and mapped articles",
+      "role": "downstream consumers",
+      "mutationInThisPilot": false
+    }
+  ],
+  "centralizationAssessment": "partial",
+  "notes": [
+    "The structured INSS rule can be transformed into the aggregate runtime shape.",
+    "The active public runtime still consumes data/tabelas-trabalhistas.json, not data/rules/inss.json directly.",
+    "Some calculator pages keep hardcoded 2026 INSS fallback constants, which creates a propagation warning for future real updates."
+  ]
+}

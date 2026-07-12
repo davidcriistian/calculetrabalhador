@@ -1,0 +1,10 @@
+{
+  "id": "stale-output-detection-report-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "classification": "DETECTED_BY_VALIDATION",
+  "mechanism": "node scripts/transform-rules.js transforms data/rules/inss.json in memory and compares the INSS runtime slice in data/tabelas-trabalhistas.json.",
+  "automaticInNormalRuntime": false,
+  "failsIfStaleWhenValidatorRuns": true,
+  "gap": "No embedded source hash or generated metadata currently proves that data/tabelas-trabalhistas.json was derived from the current canonical source without running validation."
+}

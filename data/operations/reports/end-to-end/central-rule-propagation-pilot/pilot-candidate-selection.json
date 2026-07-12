@@ -1,0 +1,24 @@
+{
+  "id": "pilot-candidate-selection-central-rule-propagation",
+  "phase": "5.19",
+  "status": "selected",
+  "candidate": {
+    "ruleId": "inss",
+    "rulePath": "data/rules/inss.json",
+    "version": "2026",
+    "selectedScope": "versions.2026.clt.progressiveTable + versions.2026.inssCeiling",
+    "risk": "high",
+    "reason": "The rule is structured, year-versioned, has effective dates, has a transformer, and has mapped runtime consumers."
+  },
+  "notSelected": [
+    {
+      "ruleId": "irrf",
+      "reason": "No equivalent structured source file is currently connected in data/rules for this pilot."
+    },
+    {
+      "ruleId": "salario-minimo",
+      "reason": "It is embedded inside the INSS rule and shared aggregate; selecting INSS provides a more complete propagation path."
+    }
+  ],
+  "decision": "Use INSS 2026 as the dry-run impact-analysis pilot."
+}

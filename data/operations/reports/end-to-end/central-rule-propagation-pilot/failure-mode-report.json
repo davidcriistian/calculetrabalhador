@@ -1,0 +1,32 @@
+{
+  "id": "failure-mode-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "failureModes": [
+    {
+      "mode": "official-source-unclear",
+      "impact": "manual decision required before source mutation"
+    },
+    {
+      "mode": "source-aggregate-divergence",
+      "impact": "block publication until scripts/transform-rules.js equivalence is restored"
+    },
+    {
+      "mode": "hardcoded-fallback-divergence",
+      "impact": "affected calculator may display stale results if central data load fails"
+    },
+    {
+      "mode": "unmapped-content-impact",
+      "impact": "article copy may become outdated even when calculator math is correct"
+    },
+    {
+      "mode": "cross-domain-cascade",
+      "impact": "INSS updates may also affect IRRF base calculations and CLT/PJ comparisons"
+    }
+  ],
+  "blockingGaps": [],
+  "warnings": [
+    "Hardcoded fallback constants should be consolidated before high-frequency automated propagation."
+  ]
+}

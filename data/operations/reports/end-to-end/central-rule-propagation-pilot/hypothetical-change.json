@@ -1,0 +1,22 @@
+{
+  "id": "hypothetical-change-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "mode": "SIMULATION_ONLY",
+  "change": {
+    "description": "Hypothetical government update to the 2026 INSS CLT progressive table or INSS ceiling.",
+    "fieldsThatWouldChange": [
+      "data/rules/inss.json#/versions/2026/inssCeiling/value",
+      "data/rules/inss.json#/versions/2026/clt/progressiveTable"
+    ],
+    "newValuesProvided": false,
+    "realMutationPerformed": false
+  },
+  "expectedPropagationIfReal": [
+    "Update structured source only after official source validation.",
+    "Run scripts/transform-rules.js to compare projected aggregate output.",
+    "Update data/tabelas-trabalhistas.json only in a controlled execution phase.",
+    "Run affected calculator tests and content-review checks.",
+    "Publish only after explicit approval gates pass."
+  ]
+}

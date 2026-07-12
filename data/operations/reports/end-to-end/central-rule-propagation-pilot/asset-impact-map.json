@@ -1,0 +1,60 @@
+{
+  "id": "asset-impact-map-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "assetImpacts": [
+    {
+      "assetId": "calculator:salario-liquido-clt",
+      "path": "salario-liquido-clt/index.html",
+      "impact": "direct-calculation-and-display",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-13-salario",
+      "path": "calculadora-13-salario/index.html",
+      "impact": "direct-calculation-and-display",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-clt",
+      "path": "calculadora-ferias-clt/index.html",
+      "impact": "direct-calculation-and-display",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "path": "calculadora-clt-ou-pj/index.html",
+      "impact": "direct-clt-cost-comparison",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-inss",
+      "path": "calculadora-inss/index.html",
+      "impact": "primary-domain-tool",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "path": "calculadora-inss-autonomo/index.html",
+      "impact": "individual-contributor-and-ceiling",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-inss-mei",
+      "path": "calculadora-inss-mei/index.html",
+      "impact": "salary-minimum-and-mei-contribution",
+      "requiresPublicMutationInDryRun": false
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "path": "calculadora-das-mei-2026/index.html",
+      "impact": "salary-minimum-and-das-mei-contribution",
+      "requiresPublicMutationInDryRun": false
+    }
+  ],
+  "contentImpact": {
+    "estimatedAffectedArticles": 11,
+    "actionClass": "manual-content-review-or-controlled-update-only"
+  }
+}

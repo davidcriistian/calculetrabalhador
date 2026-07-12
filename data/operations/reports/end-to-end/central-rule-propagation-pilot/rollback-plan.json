@@ -1,0 +1,17 @@
+{
+  "id": "rollback-plan-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "ready-for-future-real-change",
+  "dryRunRollback": {
+    "needed": false,
+    "reason": "No rule, runtime, calculator, article, catalog, sitemap or IndexNow mutation was performed."
+  },
+  "realChangeRollbackPlan": [
+    "Restore previous data/rules/inss.json from the approved checkpoint.",
+    "Restore previous data/tabelas-trabalhistas.json if the aggregate was regenerated.",
+    "Restore any public page fallback constants changed during controlled execution.",
+    "Re-run JSON_VALID, transform-rules, node --check and calculator regression checks.",
+    "Record rollback result in the operation report before any publication."
+  ]
+}

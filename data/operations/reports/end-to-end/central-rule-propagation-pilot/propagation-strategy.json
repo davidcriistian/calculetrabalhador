@@ -1,0 +1,48 @@
+{
+  "id": "propagation-strategy-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "strategy": [
+    {
+      "step": 1,
+      "name": "official-source-confirmation",
+      "description": "Confirm the official INSS update and record source, date, validity and manual approval."
+    },
+    {
+      "step": 2,
+      "name": "structured-rule-update",
+      "description": "Update only the governed structured source in a controlled real execution phase."
+    },
+    {
+      "step": 3,
+      "name": "projection-check",
+      "description": "Run scripts/transform-rules.js to verify aggregate equivalence and expected transformed output."
+    },
+    {
+      "step": 4,
+      "name": "runtime-aggregate-update",
+      "description": "Update data/tabelas-trabalhistas.json only after approval gates pass."
+    },
+    {
+      "step": 5,
+      "name": "calculator-impact-tests",
+      "description": "Run direct calculator tests for INSS, salary, 13th salary, vacation, CLT vs PJ, autonomous and MEI calculators."
+    },
+    {
+      "step": 6,
+      "name": "content-review-queue",
+      "description": "Queue affected articles for controlled review without automatic mutation."
+    },
+    {
+      "step": 7,
+      "name": "approval-and-publication",
+      "description": "Publish only after Testing, Validation, rollback and manual approval gates pass."
+    }
+  ],
+  "creditEconomy": [
+    "The dependency maps limit review to affected assets instead of scanning the whole repository repeatedly.",
+    "The transformer provides a deterministic comparison between source and runtime aggregate.",
+    "Content changes remain queued as typed review tasks instead of being guessed automatically."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "validation-plan-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "planned",
+  "validationItems": [
+    {
+      "name": "source-of-truth-integrity",
+      "expected": "Only the governed structured source may initiate the change."
+    },
+    {
+      "name": "dependency-uniqueness",
+      "expected": "Each affected typed asset appears once in the impact map."
+    },
+    {
+      "name": "typed-asset-identity",
+      "expected": "All calculators and articles use explicit type-qualified identities."
+    },
+    {
+      "name": "cross-nucleus-isolation",
+      "expected": "INSS propagation must not mutate unrelated nuclei unless listed as a mapped dependency."
+    },
+    {
+      "name": "mutation-guard",
+      "expected": "No public file changes during dry run."
+    }
+  ]
+}

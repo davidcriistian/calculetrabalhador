@@ -1,0 +1,87 @@
+{
+  "id": "consumer-inventory-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "consumers": [
+    {
+      "consumer": "salario-liquido-clt",
+      "assetId": "calculator:salario-liquido-clt",
+      "runtimePath": "salario-liquido-clt/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 733,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_FAIXAS_2026 and TETO_INSS_2026"
+    },
+    {
+      "consumer": "calculadora-13-salario",
+      "assetId": "calculator:calculadora-13-salario",
+      "runtimePath": "calculadora-13-salario/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 374,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_FAIXAS_2026 and TETO_INSS_2026"
+    },
+    {
+      "consumer": "calculadora-ferias-clt",
+      "assetId": "calculator:calculadora-ferias-clt",
+      "runtimePath": "calculadora-ferias-clt/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 414,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_FAIXAS_2026 and TETO_INSS_2026"
+    },
+    {
+      "consumer": "calculadora-clt-ou-pj",
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "runtimePath": "calculadora-clt-ou-pj/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 327,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_FAIXAS_2026 and TETO_INSS_2026"
+    },
+    {
+      "consumer": "calculadora-inss",
+      "assetId": "calculator:calculadora-inss",
+      "runtimePath": "calculadora-inss/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 854,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "LOCAL_INSS_TABLES from INSS_2026_CLT, INSS_2026_MINIMUM_WAGE and INSS_2026_CEILING"
+    },
+    {
+      "consumer": "calculadora-inss-autonomo",
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "runtimePath": "calculadora-inss-autonomo/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 313,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_AUTONOMO_DEFAULT_TABLES"
+    },
+    {
+      "consumer": "calculadora-inss-mei",
+      "assetId": "calculator:calculadora-inss-mei",
+      "runtimePath": "calculadora-inss-mei/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 337,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "INSS_MEI_DEFAULT_TABLES"
+    },
+    {
+      "consumer": "calculadora-das-mei-2026",
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "runtimePath": "calculadora-das-mei-2026/index.html",
+      "loadsHelper": true,
+      "scriptEvidenceLine": 315,
+      "usesSharedRuntime": true,
+      "fallbackPresent": true,
+      "fallbackRegion": "DAS_MEI_DEFAULT_TABLES"
+    }
+  ]
+}

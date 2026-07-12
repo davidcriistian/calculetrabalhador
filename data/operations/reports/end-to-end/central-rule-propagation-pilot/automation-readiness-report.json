@@ -1,0 +1,23 @@
+{
+  "id": "automation-readiness-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "readiness": "READY_WITH_WARNINGS",
+  "readyCapabilities": [
+    "Rule source discovery",
+    "Structured INSS source selection",
+    "Direct dependency mapping",
+    "Transitive dependency mapping",
+    "Runtime impact analysis",
+    "Testing plan generation",
+    "Validation plan generation",
+    "Rollback planning"
+  ],
+  "warnings": [
+    "Runtime does not yet consume the structured rule source directly.",
+    "Several calculators have fallback constants that must be governed during real updates.",
+    "Article updates still require controlled content-review decisions."
+  ],
+  "recommendation": "Proceed with future controlled propagation only after explicit source approval and fallback-constant strategy."
+}

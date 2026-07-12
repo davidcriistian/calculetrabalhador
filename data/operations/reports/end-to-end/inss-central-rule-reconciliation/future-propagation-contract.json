@@ -1,0 +1,27 @@
+{
+  "id": "future-propagation-contract-inss",
+  "phase": "5.20",
+  "status": "defined",
+  "steps": [
+    { "order": 1, "name": "PRECHANGE PREFLIGHT", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 2, "name": "SOURCE SNAPSHOT", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 3, "name": "UPDATE CANONICAL RULE", "classification": "MANUAL_APPROVAL_REQUIRED" },
+    { "order": 4, "name": "VALIDATE RULE SCHEMA", "classification": "AUTOMATIC" },
+    { "order": 5, "name": "TRANSFORM DERIVED RUNTIME DATA", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 6, "name": "VERIFY SOURCE/OUTPUT EQUIVALENCE", "classification": "AUTOMATIC" },
+    { "order": 7, "name": "VERIFY FALLBACK CONSISTENCY", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 8, "name": "RUN UNIT TESTS", "classification": "AUTOMATIC" },
+    { "order": 9, "name": "RUN BOUNDARY TESTS", "classification": "AUTOMATIC" },
+    { "order": 10, "name": "RUN SHADOW TESTS", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 11, "name": "RUN CROSS-CALCULATOR REGRESSION", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 12, "name": "DISCOVER CONTENT IMPACT", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 13, "name": "REVIEW PUBLICATION IMPACT", "classification": "MANUAL_APPROVAL_REQUIRED" },
+    { "order": 14, "name": "PREVIEW", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 15, "name": "MANUAL APPROVAL", "classification": "MANUAL_APPROVAL_REQUIRED" },
+    { "order": 16, "name": "CONTROLLED PUBLICATION", "classification": "MANUAL_EXECUTION_REQUIRED" },
+    { "order": 17, "name": "OPTIONAL INDEXING ACTION", "classification": "MANUAL_APPROVAL_REQUIRED" },
+    { "order": 18, "name": "FINAL VALIDATION", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 19, "name": "AUDIT LOG", "classification": "AUTOMATIC_WITH_GUARDS" },
+    { "order": 20, "name": "ROLLBACK IF REQUIRED", "classification": "MANUAL_EXECUTION_REQUIRED" }
+  ]
+}

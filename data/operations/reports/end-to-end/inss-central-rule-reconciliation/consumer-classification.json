@@ -1,0 +1,111 @@
+{
+  "id": "consumer-classification-inss",
+  "phase": "5.20",
+  "status": "completed",
+  "matrix": [
+    {
+      "consumer": "salario-liquido-clt",
+      "assetId": "calculator:salario-liquido-clt",
+      "classification": "CENTRAL_WITH_FALLBACK",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local hardcoded emergency table",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "inline legacy-vs-central comparison",
+      "recommendedAction": "Keep only with source/version consistency checks in future propagation."
+    },
+    {
+      "consumer": "calculadora-13-salario",
+      "assetId": "calculator:calculadora-13-salario",
+      "classification": "CENTRAL_WITH_FALLBACK",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local hardcoded emergency table",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "central fallback path and display fallback",
+      "recommendedAction": "Add fallback fingerprint guard in future."
+    },
+    {
+      "consumer": "calculadora-ferias-clt",
+      "assetId": "calculator:calculadora-ferias-clt",
+      "classification": "CENTRAL_WITH_FALLBACK",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local hardcoded emergency table",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "central fallback path and display fallback",
+      "recommendedAction": "Add fallback fingerprint guard in future."
+    },
+    {
+      "consumer": "calculadora-clt-ou-pj",
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "classification": "CENTRAL_WITH_FALLBACK",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local hardcoded emergency table",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "central-vs-legacy comparison before accepting central result",
+      "recommendedAction": "Keep guard, add generated fallback consistency check."
+    },
+    {
+      "consumer": "calculadora-inss",
+      "assetId": "calculator:calculadora-inss",
+      "classification": "CENTRAL_WITH_FALLBACK",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local comprehensive INSS tables",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "inline helper-vs-fallback comparison and smoke cases",
+      "recommendedAction": "Keep as controlled fallback for primary INSS tool, add fingerprint traceability."
+    },
+    {
+      "consumer": "calculadora-inss-autonomo",
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "classification": "SPECIALIZED_DERIVATION",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local contributor rules using minimum wage and ceiling",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "inline smoke cases",
+      "recommendedAction": "Treat as specialized INSS rule, not the same as CLT progressive INSS."
+    },
+    {
+      "consumer": "calculadora-inss-mei",
+      "assetId": "calculator:calculadora-inss-mei",
+      "classification": "SPECIALIZED_DERIVATION",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local MEI rate table using minimum wage",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "inline smoke cases",
+      "recommendedAction": "Treat as MEI specialized derivative and validate against canonical MEI fields."
+    },
+    {
+      "consumer": "calculadora-das-mei-2026",
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "classification": "SPECIALIZED_DERIVATION",
+      "canonicalSource": "data/rules/inss.json",
+      "runtimeSource": "data/tabelas-trabalhistas.json",
+      "fallbackPresent": true,
+      "fallbackType": "local DAS MEI table using INSS MEI rates plus ICMS/ISS",
+      "fallbackMatchesCanonical": true,
+      "divergenceRisk": "medium",
+      "testCoverage": "inline smoke cases",
+      "recommendedAction": "Do not compare as CLT progressive INSS; validate as DAS/MEI derivative."
+    }
+  ]
+}

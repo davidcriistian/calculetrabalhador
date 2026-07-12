@@ -1,0 +1,15 @@
+{
+  "id": "audit-report-inss-central-rule-reconciliation",
+  "phase": "5.20",
+  "status": "completed",
+  "answers": {
+    "canFutureChangeFlowFromCanonicalToConsumers": "Yes, with guards. The chain is identifiable and testable, but not fully automatic because the aggregate is validation-only and fallbacks need fingerprint checks.",
+    "canonicalSource": "data/rules/inss.json",
+    "derivedRuntimeArtifact": "data/tabelas-trabalhistas.json",
+    "transformer": "scripts/transform-rules.js",
+    "sharedRuntimeHelper": "assets/js/tabelas-trabalhistas.js",
+    "fallbackStatus": "Current fallbacks match canonical values where comparable, but are stale-risk fallbacks.",
+    "correctionApplied": "None"
+  },
+  "result": "INSS CENTRAL RULE CONSUMPTION RECONCILED WITH WARNINGS"
+}

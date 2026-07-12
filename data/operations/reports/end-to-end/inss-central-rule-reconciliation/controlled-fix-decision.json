@@ -1,0 +1,9 @@
+{
+  "id": "controlled-fix-decision-inss",
+  "phase": "5.20",
+  "decision": "NO_FIX_REQUIRED",
+  "reason": "Current source/output equivalence passes and all discovered comparable fallbacks match the canonical values. Required improvements are governance guards for future propagation, not immediate code changes.",
+  "fixesApplied": [],
+  "manualDecisionRequired": false,
+  "blockers": []
+}

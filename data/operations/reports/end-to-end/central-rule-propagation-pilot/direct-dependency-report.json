@@ -1,0 +1,47 @@
+{
+  "id": "direct-dependency-report-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "ruleId": "inss",
+  "status": "completed",
+  "directDependencies": [
+    {
+      "path": "scripts/transform-rules.js",
+      "dependencyType": "transformer",
+      "evidence": "Reads data/rules/inss.json and validates transformed output against data/tabelas-trabalhistas.json."
+    },
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "dependencyType": "runtime-aggregate",
+      "evidence": "Contains salarioMinimo and inss.teto/faixas currently consumed by runtime."
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "dependencyType": "runtime-helper",
+      "evidence": "Fetches /data/tabelas-trabalhistas.json and exposes calcularINSS, calcularBaseIRRF, calcularIRRF, calcularCustoCLT and calcularComparativoCltPj."
+    },
+    {
+      "path": "data/maps/update-map.json",
+      "dependencyType": "operational-impact-map",
+      "evidence": "Lists ruleId inss with impacted tools, clusters, triggers and estimated affected articles."
+    },
+    {
+      "path": "data/brain/dependencies.json",
+      "dependencyType": "dependency-map",
+      "evidence": "Lists inss tools, sources, clusters and risk."
+    }
+  ],
+  "directRuntimeConsumers": [
+    "salario-liquido-clt",
+    "calculadora-13-salario",
+    "calculadora-ferias-clt",
+    "calculadora-clt-ou-pj",
+    "calculadora-inss",
+    "calculadora-inss-autonomo",
+    "calculadora-inss-mei",
+    "calculadora-das-mei-2026"
+  ],
+  "warnings": [
+    "calculadora-clt-ou-pj, calculadora-13-salario, calculadora-ferias-clt and salario-liquido-clt contain hardcoded INSS fallback constants.",
+    "A real update would need to confirm whether fallback constants must be updated or removed through a separate controlled runtime consolidation."
+  ]
+}

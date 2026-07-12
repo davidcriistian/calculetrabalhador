@@ -1,0 +1,57 @@
+{
+  "id": "validation-results-central-rule-propagation-pilot",
+  "phase": "5.19",
+  "status": "passed",
+  "results": [
+    {
+      "name": "JSON_VALID",
+      "status": "passed",
+      "command": "PowerShell ConvertFrom-Json over all repository JSON files"
+    },
+    {
+      "name": "INTERNAL_JSON_REFS_VALID",
+      "status": "passed",
+      "command": "Node reference scanner over central-rule-propagation-pilot reports"
+    },
+    {
+      "name": "node --check assets/js/tabelas-trabalhistas.js",
+      "status": "passed"
+    },
+    {
+      "name": "node --check scripts/transform-rules.js",
+      "status": "passed"
+    },
+    {
+      "name": "node scripts/validate-governance.js",
+      "status": "passed",
+      "summary": "Governance Validation Report result PASS"
+    },
+    {
+      "name": "node scripts/transform-rules.js",
+      "status": "passed",
+      "summary": "INSS aggregate equivalence PASS"
+    },
+    {
+      "name": "node scripts/validate-shadow-adicional-noturno.js",
+      "status": "passed",
+      "summary": "50 scenarios equal, 0 divergences"
+    },
+    {
+      "name": "node scripts/validate-shadow-aviso-previo.js",
+      "status": "passed",
+      "summary": "60 scenarios equal, 0 divergences"
+    },
+    {
+      "name": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "name": "mutation guard",
+      "status": "passed",
+      "summary": "Guarded public, runtime, rule and catalog files kept identical hashes."
+    }
+  ],
+  "warnings": [
+    "Initial JSON_VALID attempt using Node child_process was blocked by sandbox EPERM while spawning cmd.exe; the validation was rerun successfully with PowerShell ConvertFrom-Json."
+  ]
+}

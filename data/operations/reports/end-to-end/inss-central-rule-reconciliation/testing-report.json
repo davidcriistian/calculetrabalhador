@@ -1,0 +1,19 @@
+{
+  "id": "testing-report-inss-central-rule-reconciliation",
+  "phase": "5.20",
+  "status": "passed",
+  "executedTests": [
+    { "name": "JSON_VALID", "status": "passed" },
+    { "name": "INTERNAL_JSON_REFS_VALID", "status": "passed", "summary": "5 report references checked" },
+    { "name": "node --check assets/js/tabelas-trabalhistas.js", "status": "passed" },
+    { "name": "node --check scripts/transform-rules.js", "status": "passed" },
+    { "name": "node scripts/validate-governance.js", "status": "passed" },
+    { "name": "node scripts/transform-rules.js", "status": "passed", "summary": "INSS equivalent to aggregate" },
+    { "name": "node scripts/validate-shadow-adicional-noturno.js", "status": "passed", "summary": "50 scenarios equal, 0 divergences" },
+    { "name": "node scripts/validate-shadow-aviso-previo.js", "status": "passed", "summary": "60 scenarios equal, 0 divergences" },
+    { "name": "git diff --check", "status": "passed" },
+    { "name": "source/output equivalence", "status": "passed", "summary": "semantic equivalence" },
+    { "name": "fallback consistency", "status": "passed", "summary": "comparable INSS fallback values match canonical values" },
+    { "name": "mutation guard", "status": "passed" }
+  ]
+}

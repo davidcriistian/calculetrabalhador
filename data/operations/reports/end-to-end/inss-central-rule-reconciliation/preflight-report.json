@@ -1,0 +1,28 @@
+{
+  "id": "preflight-inss-central-rule-reconciliation",
+  "phase": "5.20",
+  "mode": "READ_ONLY_FIRST_CONTROLLED_FIXES_ONLY",
+  "status": "passed",
+  "branch": "main",
+  "git": {
+    "statusSbInitial": "## main...origin/main\n?? data/operations/reports/end-to-end/central-rule-propagation-pilot/",
+    "diffStatInitial": "",
+    "diffNameStatusInitial": "",
+    "diffCheckInitial": "passed",
+    "head": "0028bf507572aea96b1b73e9259f0d126f035458",
+    "originMain": "0028bf507572aea96b1b73e9259f0d126f035458",
+    "gitWriteExecuted": false
+  },
+  "preservedUntrackedPaths": [
+    "data/operations/reports/end-to-end/central-rule-propagation-pilot/"
+  ],
+  "guardrails": {
+    "legalValueChangeAllowed": false,
+    "publicPageMutationAllowed": false,
+    "runtimeMutationAllowed": false,
+    "articleMutationAllowed": false,
+    "seoMutationAllowed": false,
+    "sitemapMutationAllowed": false,
+    "indexNowAllowed": false
+  }
+}
