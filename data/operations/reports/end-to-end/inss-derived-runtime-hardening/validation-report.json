@@ -1,0 +1,40 @@
+{
+  "id": "validation-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "validations": [
+    {
+      "name": "deterministic-generation",
+      "status": "passed",
+      "evidence": "node scripts/transform-rules.js --generate returned NO_CHANGE_REQUIRED"
+    },
+    {
+      "name": "source-runtime-equivalence",
+      "status": "passed",
+      "classification": "SEMANTIC_EQUIVALENCE"
+    },
+    {
+      "name": "stale-output-detection",
+      "status": "passed",
+      "classification": "DETECTED_BY_VALIDATION_WITH_EXPLICIT_CHECK_MODE"
+    },
+    {
+      "name": "fallback-consistency",
+      "status": "passed",
+      "centralConsumers": "MATCH"
+    },
+    {
+      "name": "specialized-consumer-isolation",
+      "status": "passed",
+      "summary": "autonomo, MEI and DAS MEI were not centralized or edited"
+    },
+    {
+      "name": "mutation-guard",
+      "status": "passed"
+    }
+  ],
+  "warnings": [
+    "Traceability remains external to avoid runtime schema changes.",
+    "Browser-level consumer regression was not added in this phase."
+  ]
+}

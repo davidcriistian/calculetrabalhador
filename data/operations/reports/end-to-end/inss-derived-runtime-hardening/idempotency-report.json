@@ -1,0 +1,11 @@
+{
+  "id": "idempotency-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "test": "buildGenerationPlan executed twice in memory",
+  "firstRunChanged": false,
+  "secondRunChanged": false,
+  "firstEquivalent": true,
+  "secondEquivalent": true,
+  "secondRunChangeCount": 0
+}

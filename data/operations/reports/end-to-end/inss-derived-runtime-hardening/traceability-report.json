@@ -1,0 +1,13 @@
+{
+  "id": "traceability-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "hardened-without-runtime-metadata",
+  "classification": "EXTERNAL_TRACEABILITY_WITH_GENERATION_PLAN",
+  "source": "data/rules/inss.json",
+  "target": "data/tabelas-trabalhistas.json",
+  "sourceVersion": "versions.2026",
+  "sourceHashBefore": "E4A737A34FB4BB24D17249CF8C4F8A55F26B1F6DC62F9F45CD73B04444AC02F7",
+  "runtimeHashBefore": "C4A4AB30C7FA1C6B1C6D604E7725F70138B4B7DF5A7792CF8068B5A1B7984817",
+  "runtimeMetadataAdded": false,
+  "reason": "Runtime compatibility has priority; source hash is validated externally by the transformer and reports instead of adding new runtime fields."
+}

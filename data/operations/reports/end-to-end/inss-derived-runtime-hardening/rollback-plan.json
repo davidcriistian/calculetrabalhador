@@ -1,0 +1,16 @@
+{
+  "id": "rollback-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "ready",
+  "changedExistingFiles": [
+    "scripts/transform-rules.js"
+  ],
+  "surgicalRollback": [
+    "Remove writeJson, applyInssToAggregate, buildGenerationPlan, printUsage, runCheck, runGenerate and new mode handling from scripts/transform-rules.js.",
+    "Restore runCli to the previous validation-only implementation.",
+    "Restore module.exports to the previous exported symbols.",
+    "Rerun node scripts/transform-rules.js and governance validations."
+  ],
+  "runtimeRollbackNeeded": false,
+  "reason": "data/tabelas-trabalhistas.json was not modified because generation returned NO_CHANGE_REQUIRED."
+}

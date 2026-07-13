@@ -1,0 +1,19 @@
+{
+  "id": "operation-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "MINIMAL FIX APPLIED AND VALIDATED",
+  "result": "INSS DERIVED RUNTIME GENERATION HARDENED WITH WARNINGS",
+  "existingFilesChanged": [
+    "scripts/transform-rules.js"
+  ],
+  "reportsCreated": true,
+  "legalValueChange": false,
+  "intentionalCalculationChange": false,
+  "runtimeAggregateChanged": false,
+  "gitWriteExecuted": false,
+  "warnings": [
+    "Runtime traceability remains external to avoid adding new fields to the consumed aggregate.",
+    "Browser-level consumer regression was not introduced; existing static and script validations were used."
+  ],
+  "blockers": []
+}

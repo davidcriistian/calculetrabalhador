@@ -1,0 +1,26 @@
+{
+  "id": "end-to-end-integration-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "documented-no-manifest-change-required",
+  "existingSupport": {
+    "requestType": "UPDATE_CENTRAL_RULE",
+    "manifest": "data/manifests/operations/end-to-end/index.json",
+    "operationCatalog": "data/manifests/operations/index.json",
+    "playbook": "data/operations/playbooks/end-to-end/index.json"
+  },
+  "futureUpdateCentralRuleFlow": [
+    "preflight",
+    "source update",
+    "node scripts/transform-rules.js --generate",
+    "node scripts/transform-rules.js --check",
+    "fallback consistency",
+    "consumer regression",
+    "impact discovery",
+    "validation",
+    "preview",
+    "manual approval",
+    "controlled publication",
+    "rollback if required"
+  ],
+  "manifestMutationRequired": false
+}

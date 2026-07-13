@@ -1,0 +1,12 @@
+{
+  "id": "audit-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "completed",
+  "answer": "A future INSS change now has an explicit deterministic validation and generation path: canonical source, derived runtime generation, check mode, stale detection, fallback consistency and rollback documentation.",
+  "finalMechanism": {
+    "validation": "node scripts/transform-rules.js or node scripts/transform-rules.js --check",
+    "generation": "node scripts/transform-rules.js --generate",
+    "dryRun": "node scripts/transform-rules.js --dry-run"
+  },
+  "result": "INSS DERIVED RUNTIME GENERATION HARDENED WITH WARNINGS"
+}

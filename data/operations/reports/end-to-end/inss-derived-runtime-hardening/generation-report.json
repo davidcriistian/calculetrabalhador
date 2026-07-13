@@ -1,0 +1,13 @@
+{
+  "id": "generation-report-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "command": "node scripts/transform-rules.js --generate",
+  "firstRunResult": "NO_CHANGE_REQUIRED",
+  "legalValuesChanged": 0,
+  "intentionalCalculationChange": 0,
+  "nonInssRuntimeSectionChanged": 0,
+  "unexpectedConsumerChange": 0,
+  "derivedRuntimeFileChanged": false,
+  "classification": "NO_SEMANTIC_CHANGE"
+}

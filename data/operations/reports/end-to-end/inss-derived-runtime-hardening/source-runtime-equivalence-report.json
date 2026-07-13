@@ -1,0 +1,13 @@
+{
+  "id": "source-runtime-equivalence-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "result": "SEMANTIC_EQUIVALENCE",
+  "command": "node scripts/transform-rules.js --check",
+  "checks": [
+    { "label": "Salario minimo", "status": "PASS" },
+    { "label": "Teto", "status": "PASS" },
+    { "label": "Faixas", "status": "PASS" },
+    { "label": "Aliquotas", "status": "PASS" }
+  ]
+}

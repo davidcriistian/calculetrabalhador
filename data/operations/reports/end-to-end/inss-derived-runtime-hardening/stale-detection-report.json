@@ -1,0 +1,15 @@
+{
+  "id": "stale-detection-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "normalCheckCommand": "node scripts/transform-rules.js --check",
+  "currentState": "SYNCED",
+  "staleSimulation": {
+    "method": "in-memory aggregate mutation",
+    "changedField": "inss.teto",
+    "realFilesChanged": false,
+    "staleDetected": true,
+    "failedCheck": "Teto"
+  },
+  "classification": "DETECTED_BY_VALIDATION_WITH_EXPLICIT_CHECK_MODE"
+}

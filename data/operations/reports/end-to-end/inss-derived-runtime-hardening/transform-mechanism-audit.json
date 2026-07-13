@@ -1,0 +1,17 @@
+{
+  "id": "transform-mechanism-audit-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "previousMechanism": "VALIDATION_ONLY",
+  "finalMechanism": "DETERMINISTIC_WITH_GUARDS",
+  "script": "scripts/transform-rules.js",
+  "audit": {
+    "readsCanonicalInput": true,
+    "readsDerivedTarget": true,
+    "comparesSourceAndOutput": true,
+    "canGenerateDerivedSection": true,
+    "preservesNonInssRuntimeData": true,
+    "defaultCommandPreserved": true,
+    "writesOnlyWhenGenerateRequested": true,
+    "noLegalValuesChanged": true
+  }
+}

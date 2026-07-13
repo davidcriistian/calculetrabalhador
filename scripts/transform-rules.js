@@ -19,6 +19,11 @@ function readJson(relativePath) {
   return JSON.parse(raw);
 }
 
+function writeJson(relativePath, value) {
+  const fullPath = path.join(ROOT, relativePath);
+  fs.writeFileSync(fullPath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
+}
+
 function loadRuleSets(rulesDir = FILES.rulesDir) {
   return {
     inss: readJson(path.join(rulesDir, 'inss.json'))
@@ -113,6 +118,22 @@ function transformRules(ruleSets) {
   };
 }
 
+function applyInssToAggregate(aggregate, transformed) {
+  return {
+    ...aggregate,
+    salarioMinimo: {
+      ...(aggregate.salarioMinimo || {}),
+      valor: transformed.salarioMinimo.valor
+    },
+    inss: {
+      ...(aggregate.inss || {}),
+      teto: transformed.inss.teto,
+      metodo: transformed.inss.metodo,
+      faixas: transformed.inss.faixas
+    }
+  };
+}
+
 function sameNumber(left, right) {
   return Object.is(left, right);
 }
@@ -181,6 +202,21 @@ function validateInss(transformed, aggregate) {
   };
 }
 
+function buildGenerationPlan(ruleSets, aggregate) {
+  const transformed = transformRules(ruleSets);
+  const nextAggregate = applyInssToAggregate(aggregate, transformed);
+  const beforeReport = validateInss(transformed, aggregate);
+  const afterReport = validateInss(transformed, nextAggregate);
+
+  return {
+    transformed,
+    nextAggregate,
+    beforeReport,
+    afterReport,
+    changed: JSON.stringify(aggregate) !== JSON.stringify(nextAggregate)
+  };
+}
+
 function printDomainReport(report) {
   console.log(report.domain);
   console.log('');
@@ -194,7 +230,15 @@ function printDomainReport(report) {
   console.log(report.equivalent ? 'Equivalente ao agregador.' : 'Diferente do agregador.');
 }
 
-function runCli() {
+function printUsage() {
+  console.log('Uso: node scripts/transform-rules.js [--check|--generate|--dry-run]');
+  console.log('');
+  console.log('Sem argumentos ou --check: valida se a regra INSS canonica esta sincronizada com o agregador.');
+  console.log('--dry-run: calcula a geracao derivada sem escrever arquivos.');
+  console.log('--generate: atualiza somente os campos derivados de INSS/salarioMinimo no agregador quando necessario.');
+}
+
+function runCheck() {
   try {
     const ruleSets = loadRuleSets();
     const aggregate = readJson(FILES.aggregate);
@@ -209,15 +253,84 @@ function runCli() {
   }
 }
 
+function runGenerate({ dryRun = false } = {}) {
+  try {
+    const ruleSets = loadRuleSets();
+    const aggregate = readJson(FILES.aggregate);
+    const plan = buildGenerationPlan(ruleSets, aggregate);
+
+    if (!plan.afterReport.equivalent) {
+      console.error('Erro: a geracao derivada nao produziu equivalencia INSS.');
+      return 1;
+    }
+
+    printDomainReport(plan.beforeReport);
+    console.log('');
+    console.log('Geracao derivada INSS:');
+
+    if (!plan.changed) {
+      console.log('NO_CHANGE_REQUIRED');
+      return 0;
+    }
+
+    if (dryRun) {
+      console.log('CHANGE_REQUIRED');
+      console.log('Dry run: nenhum arquivo foi alterado.');
+      return 0;
+    }
+
+    writeJson(FILES.aggregate, plan.nextAggregate);
+    console.log('UPDATED');
+    return 0;
+  } catch (error) {
+    console.error(`Erro: ${error.message}`);
+    return 1;
+  }
+}
+
+function runCli(args = process.argv.slice(2)) {
+  if (args.length > 1) {
+    printUsage();
+    return 1;
+  }
+
+  const mode = args[0] || '--check';
+
+  if (mode === '--help' || mode === '-h') {
+    printUsage();
+    return 0;
+  }
+
+  if (mode === '--check') {
+    return runCheck();
+  }
+
+  if (mode === '--dry-run') {
+    return runGenerate({ dryRun: true });
+  }
+
+  if (mode === '--generate') {
+    return runGenerate();
+  }
+
+  console.error(`Erro: modo desconhecido: ${mode}`);
+  printUsage();
+  return 1;
+}
+
 if (require.main === module) {
   process.exitCode = runCli();
 }
 
 module.exports = {
   FILES,
+  applyInssToAggregate,
+  buildGenerationPlan,
   compareInss,
   loadRuleSets,
   mapCalculationMode,
+  runCheck,
+  runGenerate,
   transformInss,
   transformRules,
   validateInss,

@@ -1,0 +1,15 @@
+{
+  "id": "implementation-decision-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "decision": "MINIMAL_FIX_APPLIED",
+  "reason": "The existing transformer could validate stale output but could not perform explicit deterministic generation. The smallest safe mechanism was to extend scripts/transform-rules.js.",
+  "filesChanged": [
+    "scripts/transform-rules.js"
+  ],
+  "commandsAdded": [
+    "node scripts/transform-rules.js --check",
+    "node scripts/transform-rules.js --dry-run",
+    "node scripts/transform-rules.js --generate"
+  ],
+  "compatibilityPreserved": "node scripts/transform-rules.js still performs validation and returns the same equivalence result."
+}

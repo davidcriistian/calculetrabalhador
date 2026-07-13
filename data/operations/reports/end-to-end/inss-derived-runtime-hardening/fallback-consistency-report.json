@@ -1,0 +1,18 @@
+{
+  "id": "fallback-consistency-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "centralConsumers": [
+    { "consumer": "salario-liquido-clt", "result": "MATCH" },
+    { "consumer": "calculadora-13-salario", "result": "MATCH" },
+    { "consumer": "calculadora-ferias-clt", "result": "MATCH" },
+    { "consumer": "calculadora-clt-ou-pj", "result": "MATCH" },
+    { "consumer": "calculadora-inss", "result": "MATCH" }
+  ],
+  "specializedConsumers": [
+    { "consumer": "calculadora-inss-autonomo", "result": "SPECIALIZED_NOT_APPLICABLE" },
+    { "consumer": "calculadora-inss-mei", "result": "SPECIALIZED_NOT_APPLICABLE" },
+    { "consumer": "calculadora-das-mei-2026", "result": "SPECIALIZED_NOT_APPLICABLE" }
+  ],
+  "guard": "Comparable central fallback values were checked against the canonical INSS values."
+}

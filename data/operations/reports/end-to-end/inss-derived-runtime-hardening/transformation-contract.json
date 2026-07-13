@@ -1,0 +1,25 @@
+{
+  "id": "transformation-contract-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "canonicalInput": "data/rules/inss.json",
+  "derivedTarget": "data/tabelas-trabalhistas.json",
+  "derivedFields": [
+    "salarioMinimo.valor",
+    "inss.teto",
+    "inss.metodo",
+    "inss.faixas"
+  ],
+  "preservedData": [
+    "all non-INSS sections",
+    "existing salarioMinimo metadata except valor",
+    "existing inss metadata except teto, metodo and faixas"
+  ],
+  "properties": {
+    "deterministic": true,
+    "idempotent": true,
+    "reproducible": true,
+    "semanticStability": true,
+    "reversible": true
+  },
+  "minimumContract": "SAME_CANONICAL_INPUT -> SAME_DERIVED_INSS_OUTPUT"
+}

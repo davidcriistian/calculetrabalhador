@@ -1,0 +1,21 @@
+{
+  "id": "testing-inss-derived-runtime-hardening",
+  "phase": "5.21",
+  "status": "passed",
+  "tests": [
+    { "name": "JSON_VALID", "status": "passed" },
+    { "name": "INTERNAL_JSON_REFS_VALID", "status": "passed", "summary": "7 report references checked" },
+    { "name": "node --check scripts/transform-rules.js", "status": "passed" },
+    { "name": "node --check assets/js/tabelas-trabalhistas.js", "status": "passed" },
+    { "name": "node scripts/transform-rules.js", "status": "passed", "summary": "Equivalente ao agregador" },
+    { "name": "node scripts/transform-rules.js --check", "status": "passed", "summary": "SYNCED" },
+    { "name": "node scripts/transform-rules.js --generate", "status": "passed", "summary": "NO_CHANGE_REQUIRED" },
+    { "name": "idempotency", "status": "passed", "summary": "secondRunChanged=false" },
+    { "name": "stale detection", "status": "passed", "summary": "in-memory stale teto mismatch detected" },
+    { "name": "fallback consistency", "status": "passed", "summary": "central consumers MATCH" },
+    { "name": "node scripts/validate-governance.js", "status": "passed" },
+    { "name": "node scripts/validate-shadow-adicional-noturno.js", "status": "passed", "summary": "50 scenarios, 0 divergences" },
+    { "name": "node scripts/validate-shadow-aviso-previo.js", "status": "passed", "summary": "60 scenarios, 0 divergences" },
+    { "name": "git diff --check", "status": "passed", "summary": "Only line-ending normalization warning reported for scripts/transform-rules.js" }
+  ]
+}
