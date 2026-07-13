@@ -1,0 +1,16 @@
+{
+  "id": "approval-gates-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "defined",
+  "gates": [
+    "PRECHANGE_APPROVAL",
+    "SOURCE_VALIDATION",
+    "DERIVED_SYNC_VALIDATION",
+    "FALLBACK_CONSISTENCY_GATE",
+    "CONSUMER_REGRESSION_GATE",
+    "CONTENT_IMPACT_REVIEW",
+    "PREVIEW_APPROVAL",
+    "PUBLICATION_APPROVAL"
+  ],
+  "failurePolicy": "If any gate fails, PUBLICATION_ALLOWED=false."
+}

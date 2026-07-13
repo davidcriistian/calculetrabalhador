@@ -1,0 +1,19 @@
+{
+  "id": "fallback-impact-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed-with-blocking-awareness",
+  "centralConsumers": [
+    { "consumer": "salario-liquido-clt", "result": "WOULD_BECOME_STALE" },
+    { "consumer": "calculadora-13-salario", "result": "WOULD_BECOME_STALE" },
+    { "consumer": "calculadora-ferias-clt", "result": "WOULD_BECOME_STALE" },
+    { "consumer": "calculadora-clt-ou-pj", "result": "WOULD_BECOME_STALE" },
+    { "consumer": "calculadora-inss", "result": "WOULD_BECOME_STALE" }
+  ],
+  "specializedConsumers": [
+    { "consumer": "calculadora-inss-autonomo", "result": "SPECIALIZED_NOT_APPLICABLE" },
+    { "consumer": "calculadora-inss-mei", "result": "SPECIALIZED_NOT_APPLICABLE" },
+    { "consumer": "calculadora-das-mei-2026", "result": "SPECIALIZED_NOT_APPLICABLE" }
+  ],
+  "publicationAllowedWithOldFallback": false,
+  "requiredFutureAction": "fallback regeneration or explicit fallback consistency approval before publication"
+}

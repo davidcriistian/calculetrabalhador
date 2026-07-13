@@ -1,0 +1,13 @@
+{
+  "id": "specialized-rule-isolation-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "specializedConsumers": [
+    "calculadora-inss-autonomo",
+    "calculadora-inss-mei",
+    "calculadora-das-mei-2026"
+  ],
+  "falseCentralizationDetected": false,
+  "mutationApplied": false,
+  "decision": "Specialized rules remain separate and require their own derivative validation in a real update."
+}

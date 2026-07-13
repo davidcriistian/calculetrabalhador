@@ -1,0 +1,9 @@
+{
+  "id": "synchronization-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "syncStatus": "SYNCED",
+  "staleDetectedAfterGeneration": false,
+  "canonicalDerivedEquivalence": "PASS",
+  "proof": "B -> generate -> B"
+}

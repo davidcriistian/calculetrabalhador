@@ -1,0 +1,14 @@
+{
+  "id": "preflight-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "branch": "main",
+  "head": "8c561a7ce0b2607b61a9f34e4c43709e7f9d8c98",
+  "originMain": "8c561a7ce0b2607b61a9f34e4c43709e7f9d8c98",
+  "workingTreeInitial": "## main...origin/main",
+  "diffStatInitial": "",
+  "diffNameStatusInitial": "",
+  "diffCheckInitial": "passed",
+  "preconditionWarnings": [],
+  "gitWriteExecuted": false
+}

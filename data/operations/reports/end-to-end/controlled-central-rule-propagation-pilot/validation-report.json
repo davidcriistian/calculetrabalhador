@@ -1,0 +1,26 @@
+{
+  "id": "validation-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "validations": [
+    { "name": "stale-before-generation", "status": "passed" },
+    { "name": "publication-block-while-stale", "status": "passed" },
+    { "name": "impact-discovery", "status": "passed" },
+    { "name": "sandbox-derived-generation", "status": "passed" },
+    { "name": "post-generation-equivalence", "status": "passed" },
+    { "name": "idempotency", "status": "passed" },
+    { "name": "fallback-stale-awareness", "status": "passed" },
+    { "name": "specialized-rule-isolation", "status": "passed" },
+    { "name": "workflow-representability", "status": "passed" },
+    { "name": "approval-gates", "status": "passed" },
+    { "name": "rollback", "status": "passed" },
+    { "name": "cleanup", "status": "passed" },
+    { "name": "real-repository-mutation-guard", "status": "passed" }
+  ],
+  "readiness": "READY_WITH_GUARDS",
+  "warnings": [
+    "Central fallbacks would require controlled update or blocking in a real legal change.",
+    "Browser regression is planned for a real change and was not executed in this isolated simulation."
+  ],
+  "blockers": []
+}

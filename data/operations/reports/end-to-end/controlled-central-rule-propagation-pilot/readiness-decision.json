@@ -1,0 +1,24 @@
+{
+  "id": "readiness-decision-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "classification": "READY_WITH_GUARDS",
+  "status": "passed",
+  "evidence": [
+    "stale detected before generation",
+    "generation synchronized derived copy",
+    "second generation was no-op",
+    "fallbacks that would become stale were identified",
+    "impact discovery identified central and specialized consumers",
+    "specialized rules remained isolated",
+    "rollback restored sandbox",
+    "repository real files remained intact"
+  ],
+  "guardsRequired": [
+    "manual prechange approval",
+    "fallback consistency gate",
+    "consumer regression gate",
+    "content impact review",
+    "preview approval",
+    "publication approval"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "testing-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "tests": [
+    { "name": "JSON_VALID", "status": "passed" },
+    { "name": "INTERNAL_JSON_REFS_VALID", "status": "passed", "summary": "3 report references checked" },
+    { "name": "node --check scripts/transform-rules.js", "status": "passed" },
+    { "name": "node --check assets/js/tabelas-trabalhistas.js", "status": "passed" },
+    { "name": "node scripts/validate-governance.js", "status": "passed" },
+    { "name": "node scripts/transform-rules.js", "status": "passed", "summary": "Equivalente ao agregador" },
+    { "name": "node scripts/transform-rules.js --check", "status": "passed", "summary": "Equivalente ao agregador" },
+    { "name": "node scripts/transform-rules.js --dry-run", "status": "passed", "summary": "NO_CHANGE_REQUIRED" },
+    { "name": "stale detection no sandbox", "status": "passed", "summary": "CANONICAL_COPY=B DERIVED_COPY=A detected" },
+    { "name": "generation no sandbox", "status": "passed", "summary": "CANONICAL_COPY=B DERIVED_COPY=B" },
+    { "name": "post-generation sync check", "status": "passed", "summary": "SYNCED" },
+    { "name": "second-generation no-op", "status": "passed", "summary": "SECOND_GENERATION_CHANGE_COUNT=0" },
+    { "name": "fallback impact analysis", "status": "passed", "summary": "central fallbacks WOULD_BECOME_STALE and publication blocked" },
+    { "name": "specialized-rule isolation", "status": "passed" },
+    { "name": "UPDATE_CENTRAL_RULE workflow dry-run/validate-only", "status": "passed", "summary": "static manifest/playbook audit confirmed representable flow; no publication executed" },
+    { "name": "rollback execution", "status": "passed" },
+    { "name": "sandbox cleanup", "status": "passed" },
+    { "name": "node scripts/validate-shadow-adicional-noturno.js", "status": "passed", "summary": "50 scenarios, 0 divergences" },
+    { "name": "node scripts/validate-shadow-aviso-previo.js", "status": "passed", "summary": "60 scenarios, 0 divergences" },
+    { "name": "git diff --check", "status": "passed" },
+    { "name": "mutation guard", "status": "passed" }
+  ],
+  "plannedForRealChange": [
+    "browser regression for the five central consumers",
+    "fallback regeneration or explicit fallback approval",
+    "content impact review for mapped articles"
+  ]
+}

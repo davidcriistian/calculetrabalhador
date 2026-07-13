@@ -1,0 +1,12 @@
+{
+  "id": "derived-generation-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "state": "CANONICAL_COPY=B DERIVED_COPY=B",
+  "derivedGeneration": "PASS",
+  "changedSandboxDerived": true,
+  "generatedEquivalent": true,
+  "nonTargetSectionMutationCount": 0,
+  "realRuntimeMutationCount": 0,
+  "realFilesTouched": false
+}

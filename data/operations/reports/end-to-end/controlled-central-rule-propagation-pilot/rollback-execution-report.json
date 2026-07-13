@@ -1,0 +1,10 @@
+{
+  "id": "rollback-execution-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "rollbackCanonicalRestored": true,
+  "rollbackDerivedRestored": true,
+  "rollbackEquivalence": "PASS",
+  "rollbackResidualMutationCount": 0,
+  "gitRollbackUsed": false
+}

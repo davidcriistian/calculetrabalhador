@@ -1,0 +1,14 @@
+{
+  "id": "hypothetical-change-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "applied-in-sandbox-only",
+  "hypotheticalChange": true,
+  "legalAuthority": "none",
+  "productionEligible": false,
+  "publicationAllowed": false,
+  "field": "data/rules/inss.json#/versions/2026/inssCeiling/value",
+  "originalValue": 8475.55,
+  "testValue": 8476.55,
+  "realCanonicalMutation": false,
+  "warning": "The test value is synthetic data used only to prove propagation behavior. It is not a legal update."
+}

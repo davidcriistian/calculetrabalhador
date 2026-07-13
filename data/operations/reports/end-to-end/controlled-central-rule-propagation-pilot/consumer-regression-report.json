@@ -1,0 +1,28 @@
+{
+  "id": "consumer-regression-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "completed",
+  "executed": [
+    "node --check assets/js/tabelas-trabalhistas.js",
+    "node scripts/transform-rules.js",
+    "node scripts/transform-rules.js --check",
+    "node scripts/transform-rules.js --dry-run",
+    "node scripts/validate-shadow-adicional-noturno.js",
+    "node scripts/validate-shadow-aviso-previo.js"
+  ],
+  "plannedForRealChange": [
+    "browser regression for salario-liquido-clt",
+    "browser regression for calculadora-13-salario",
+    "browser regression for calculadora-ferias-clt",
+    "browser regression for calculadora-clt-ou-pj",
+    "browser regression for calculadora-inss",
+    "fallback consistency regeneration or approval"
+  ],
+  "notApplicable": [
+    "public publication",
+    "IndexNow"
+  ],
+  "unavailable": [
+    "dedicated browser automation suite for the five central consumers"
+  ]
+}

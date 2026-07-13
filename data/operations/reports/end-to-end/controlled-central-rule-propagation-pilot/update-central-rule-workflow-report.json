@@ -1,0 +1,32 @@
+{
+  "id": "update-central-rule-workflow-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "validated-conceptually",
+  "canonicalOperation": "deliver-asset-end-to-end",
+  "requestType": "UPDATE_CENTRAL_RULE",
+  "mode": "DRY_RUN_VALIDATE_ONLY",
+  "evidence": [
+    "data/manifests/operations/end-to-end/index.json supports UPDATE_CENTRAL_RULE",
+    "data/manifests/operations/index.json defines update-law and update-table operation manifests",
+    "data/operations/playbooks/end-to-end/index.json defines preflight, testing, validation, approval, publication gate and rollback logic"
+  ],
+  "representedFlow": [
+    "intake",
+    "preflight",
+    "canonical source resolution",
+    "change classification",
+    "impact discovery",
+    "stale detection",
+    "derived generation plan",
+    "fallback consistency",
+    "consumer testing",
+    "content impact",
+    "validation",
+    "preview",
+    "approval gate",
+    "publication gate",
+    "rollback"
+  ],
+  "publicationExecuted": false,
+  "indexNowExecuted": false
+}

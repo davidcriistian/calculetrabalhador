@@ -1,0 +1,19 @@
+{
+  "id": "operation-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "CENTRAL RULE PROPAGATION CONTROLLED PILOT PASSED WITH WARNINGS",
+  "readiness": "READY_WITH_GUARDS",
+  "existingFilesChanged": [],
+  "reportsCreated": true,
+  "realCanonicalMutation": false,
+  "realDerivedRuntimeMutation": false,
+  "publicMutation": false,
+  "publicationExecuted": false,
+  "indexNowExecuted": false,
+  "gitWriteExecuted": false,
+  "warnings": [
+    "Central fallbacks would become stale under the hypothetical change and must be regenerated or blocked in a real update.",
+    "Browser-level consumer regression remains planned for a real change."
+  ],
+  "blockers": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sandbox-plan-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "executed",
+  "method": "temporary directory under OS temp with copied canonical source and aggregate",
+  "sandboxPathPattern": "C:/Users/david/AppData/Local/Temp/ct-inss-prop-*",
+  "realFilesTouched": false,
+  "cleanupRequired": true,
+  "cleanupCompleted": true,
+  "notes": [
+    "A first attempt using loadRuleSets with an absolute temp path failed because that helper resolves paths relative to the repository root.",
+    "The temporary residue from the failed attempt was removed before the successful simulation.",
+    "The successful simulation read copied JSON from the sandbox and used transform-rules exported functions directly."
+  ]
+}

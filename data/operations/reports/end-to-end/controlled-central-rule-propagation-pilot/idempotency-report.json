@@ -1,0 +1,8 @@
+{
+  "id": "idempotency-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "secondGenerationChanged": false,
+  "secondGenerationChangeCount": 0,
+  "result": "NO_CHANGE_REQUIRED"
+}

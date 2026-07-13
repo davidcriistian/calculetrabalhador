@@ -1,0 +1,11 @@
+{
+  "id": "sandbox-cleanup-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "temporarySandboxResidueCount": 0,
+  "officialReportsPreserved": true,
+  "cleanupNotes": [
+    "Temporary sandbox directories under the OS temp folder were removed.",
+    "No temporary sandbox artifact remains in the repository working tree."
+  ]
+}

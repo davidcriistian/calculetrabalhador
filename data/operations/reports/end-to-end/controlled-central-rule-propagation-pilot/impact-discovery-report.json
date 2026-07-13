@@ -1,0 +1,36 @@
+{
+  "id": "impact-discovery-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "completed",
+  "directConsumers": [
+    "data/tabelas-trabalhistas.json",
+    "assets/js/tabelas-trabalhistas.js",
+    "salario-liquido-clt",
+    "calculadora-13-salario",
+    "calculadora-ferias-clt",
+    "calculadora-clt-ou-pj",
+    "calculadora-inss"
+  ],
+  "centralConsumers": [
+    "salario-liquido-clt",
+    "calculadora-13-salario",
+    "calculadora-ferias-clt",
+    "calculadora-clt-ou-pj",
+    "calculadora-inss"
+  ],
+  "specializedConsumers": [
+    "calculadora-inss-autonomo",
+    "calculadora-inss-mei",
+    "calculadora-das-mei-2026"
+  ],
+  "transitiveAssetImpacts": [
+    "mapped INSS clusters",
+    "mapped INSS-related articles",
+    "content review candidates"
+  ],
+  "contentReviewCandidates": {
+    "estimatedFromMaps": 11,
+    "automaticContentMutationAllowed": false
+  },
+  "publicationImpact": "publication blocked until source, derived runtime, fallback consistency, consumer regression, preview and approval gates pass"
+}

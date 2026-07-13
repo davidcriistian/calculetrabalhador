@@ -1,0 +1,15 @@
+{
+  "id": "stale-detection-before-generation-controlled-central-rule-propagation-pilot",
+  "phase": "5.22",
+  "status": "passed",
+  "state": "CANONICAL_COPY=B DERIVED_COPY=A",
+  "staleDetected": true,
+  "publicationAllowed": false,
+  "checks": [
+    { "label": "Salario minimo", "pass": true },
+    { "label": "Teto", "pass": false },
+    { "label": "Faixas", "pass": true },
+    { "label": "Aliquotas", "pass": true }
+  ],
+  "requiredAction": "Generate derived runtime copy before any publication could be considered."
+}
