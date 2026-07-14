@@ -1,0 +1,28 @@
+{
+  "id": "publishing-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "assetType": "cluster",
+  "status": "active",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "publishingStatus": "internal-active",
+  "runtimeStatus": "consumed-by-governed-catalogs",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "active",
+    "maximumAllowedInThisOperation": "internal-active-with-controlled-runtime-projection"
+  },
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemap": false,
+    "createsPublicPage": false,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false
+  },
+  "runtimeRepresentation": {
+    "strategy": "/data/strategy/clusters/index.json#pj-financas",
+    "catalog": "/data/brain/clusters.json#pj-financas"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "publishing-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetType": "article",
+  "status": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "publishingStatus": "published",
+  "runtimeStatus": "consumed-by-public-catalogs",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "published",
+    "maximumAllowedInThisOperation": "public-page-created-with-controlled-distribution"
+  },
+  "actions": {
+    "publishes": true,
+    "deploys": false,
+    "modifiesSitemap": true,
+    "createsPublicPage": true,
+    "modifiesExistingPage": true,
+    "callsIndexNow": false
+  },
+  "publicRepresentation": {
+    "path": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+    "canonical": "https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+    "catalogStatus": "published",
+    "sitemapStatus": "published"
+  }
+}

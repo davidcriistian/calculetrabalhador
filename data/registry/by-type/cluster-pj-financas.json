@@ -1,0 +1,23 @@
+{
+  "id": "pj-financas",
+  "assetId": "cluster:pj-financas",
+  "type": "cluster",
+  "slug": "pj-financas",
+  "status": "active",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "consumed-by-governed-catalogs",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "references": [
+    "/data/strategy/clusters/index.json",
+    "/data/brain/clusters.json",
+    "/data/operations/reports/asset/cluster/pj-financas/cluster-draft-specification.json",
+    "/data/operations/reports/asset/cluster/pj-financas/relationship-map.json",
+    "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/final-operation-report.json"
+  ],
+  "notes": [
+    "Cluster provisioned by explicit user approval.",
+    "Internal identity uses cluster:pj-financas; the slug is a routing and catalog attribute only."
+  ]
+}

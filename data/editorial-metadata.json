@@ -218,5 +218,15 @@
     "anoBase": 2026,
     "fonteResumo": "Conteúdo educativo baseado em materiais do Banco Central, Sebrae e canais oficiais da Receita Federal.",
     "aviso": "Este conteúdo não substitui orientação contábil, tributária, jurídica ou financeira individualizada."
+  },
+  "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/": {
+    "tipo": "artigo",
+    "titulo": "Como Montar uma Reserva de Emergência Sendo PJ",
+    "publicadoEm": "2026-07-14",
+    "atualizadoEm": "2026-07-14",
+    "revisadoEm": "2026-07-14",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado no Portal do Investidor, Banco Central e Sebrae.",
+    "aviso": "Este conteúdo não constitui recomendação individual de investimento nem substitui orientação contábil ou financeira."
   }
 }

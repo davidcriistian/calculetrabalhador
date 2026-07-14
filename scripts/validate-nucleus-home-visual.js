@@ -60,6 +60,13 @@ async function evaluate(send, expression) {
 
 async function run() {
   if (!fs.existsSync(EDGE)) throw new Error('Microsoft Edge is not available.');
+  const nuclei = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'brain', 'nuclei.json'), 'utf8')).items || [];
+  const pjNucleus = nuclei.find((item) => item.id === 'pj');
+  const expectedPjCount = pjNucleus && pjNucleus.articleFilter && Array.isArray(pjNucleus.articleFilter.slugs)
+    ? pjNucleus.articleFilter.slugs.length
+    : 0;
+  const mobileLimit = pjNucleus.homeSection.responsivePresentation.mobile.itemLimit;
+  const desktopLimit = pjNucleus.homeSection.responsivePresentation.desktop.itemLimit;
   const server = await startServer();
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'ct-edge-nucleus-home-'));
   const browser = spawn(EDGE, ['--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check', '--disable-background-networking', '--remote-debugging-port=9223', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore', windowsHide: true });
@@ -104,8 +111,8 @@ async function run() {
         && metrics.sectionCount === 2
         && metrics.pj && metrics.clt
         && !metrics.isolatedGuideCard && !metrics.oldHeading
-        && metrics.allCards === 7
-        && metrics.visibleCards === (mobileOrTablet ? 6 : 7)
+        && metrics.allCards === expectedPjCount
+        && metrics.visibleCards === Math.min(mobileOrTablet ? mobileLimit : desktopLimit, expectedPjCount)
         && metrics.viewAll === '/blog/categoria/pj/'
         && (mobileOrTablet ? metrics.gridAutoFlow === 'column' && metrics.overflowX === 'auto' && metrics.horizontalScrollable : metrics.gridAutoFlow !== 'column' && !metrics.horizontalScrollable)
         && !metrics.pageOverflow && metrics.footer;

@@ -1,0 +1,7 @@
+{
+  "id": "publishing-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "assetType": "cluster",
+  "status": "internal-active",
+  "publishingReference": "/data/publishing/registry/cluster-pj-financas-active.json"
+}

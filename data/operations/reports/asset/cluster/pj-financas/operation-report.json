@@ -1,0 +1,11 @@
+{
+  "id": "operation-report-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "operationId": "deliver-asset-end-to-end",
+  "status": "SUCCESS_CONTROLLED_EXECUTION",
+  "pillarArticle": "article:como-organizar-as-financas-sendo-pj",
+  "coreSupportArticles": ["article:como-montar-uma-reserva-de-emergencia-sendo-pj"],
+  "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+  "runtimeProjection": ["/data/strategy/clusters/index.json", "/data/brain/clusters.json", "/data/brain/nuclei.json"],
+  "standalonePublicUrl": null
+}

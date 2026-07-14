@@ -423,6 +423,46 @@
         "calculadora-ferias-clt",
         "calculadora-13-salario"
       ]
+    },
+    {
+      "clusterId": "pj-financas",
+      "assetId": "cluster:pj-financas",
+      "clusterName": "Financas e Reserva PJ",
+      "domain": "PJ",
+      "nucleusId": "nucleus:pj",
+      "primaryTool": "calculadora-reserva-financeira-pj",
+      "pillarArticle": "como-organizar-as-financas-sendo-pj",
+      "articleCount": 2,
+      "articles": [
+        "como-organizar-as-financas-sendo-pj",
+        "como-montar-uma-reserva-de-emergencia-sendo-pj"
+      ],
+      "articleRoles": {
+        "como-organizar-as-financas-sendo-pj": "PILLAR",
+        "como-montar-uma-reserva-de-emergencia-sendo-pj": "CORE_SUPPORT"
+      },
+      "status": "active",
+      "priority": "medium",
+      "reviewFrequency": "event-driven",
+      "keywords": [
+        "financas PJ",
+        "reserva de emergencia PJ",
+        "reserva financeira PJ",
+        "capital de giro",
+        "meses de cobertura",
+        "planejamento financeiro PJ"
+      ],
+      "intents": [
+        "organizar as financas sendo PJ",
+        "montar reserva de emergencia PJ",
+        "calcular reserva financeira PJ"
+      ],
+      "relatedTools": [
+        "calculadora-reserva-financeira-pj",
+        "calculadora-custo-mensal-pj",
+        "calculadora-ferias-pj",
+        "calculadora-valor-hora-pj"
+      ]
     }
   ]
 }

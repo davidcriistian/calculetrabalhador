@@ -1,0 +1,6 @@
+{
+  "id": "validation-plan-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "status": "executed-pass",
+  "checks": ["registry", "strategy", "brain-catalog", "nucleus-projection", "guide-projection", "article-catalog", "orphan-risk"]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rollback-plan-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "status": "ready",
+  "scope": [
+    "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+    "/blog/como-organizar-as-financas-sendo-pj/index.html",
+    "/guias/pj/index.html",
+    "/data/articles.json",
+    "/data/maps/content-map.json",
+    "/data/brain/nuclei.json",
+    "/data/editorial-metadata.json",
+    "/sitemap.xml",
+    "/scripts/validate-governance.js",
+    "/scripts/validate-nucleus-home-visual.js",
+    "/scripts/test-reserva-emergencia-pj-article.js",
+    "/scripts/capture-reserva-emergencia-pj-article-visuals.js",
+    "/data/registry/by-type/article-como-montar-uma-reserva-de-emergencia-sendo-pj.json",
+    "/data/publishing/registry/article-como-montar-uma-reserva-de-emergencia-sendo-pj-published.json"
+  ],
+  "method": "Restore modified pre-operation files from the recorded SHA-256 snapshot and remove only files created for this article after explicit rollback approval.",
+  "safety": "Preserve every pre-existing asset and do not use repository-wide reset operations."
+}

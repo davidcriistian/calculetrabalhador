@@ -120,6 +120,30 @@
                                        ]
                     },
                     {
+                        "id":  "pj-financas",
+                        "assetId":  "cluster:pj-financas",
+                        "type":  "cluster",
+                        "slug":  "pj-financas",
+                        "status":  "active",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/cluster-pj-financas.json"
+                                       ]
+                    },
+                    {
+                        "id":  "como-montar-uma-reserva-de-emergencia-sendo-pj",
+                        "assetId":  "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+                        "type":  "article",
+                        "slug":  "como-montar-uma-reserva-de-emergencia-sendo-pj",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-como-montar-uma-reserva-de-emergencia-sendo-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "calculadora-clt-ou-pj",
                         "assetId":  "calculator:calculadora-clt-ou-pj",
                         "type":  "calculator",

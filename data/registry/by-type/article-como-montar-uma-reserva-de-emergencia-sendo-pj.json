@@ -1,0 +1,22 @@
+{
+  "id": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "type": "article",
+  "slug": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "status": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "consumed-by-public-catalogs",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "references": [
+    "/data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/article-draft-specification.json",
+    "/data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/article-editorial-plan.json",
+    "/data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/relationship-map.json",
+    "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/final-operation-report.json"
+  ],
+  "notes": [
+    "Public page and controlled catalog distribution were explicitly approved by the user.",
+    "Deployment and IndexNow send are not part of this operation."
+  ]
+}

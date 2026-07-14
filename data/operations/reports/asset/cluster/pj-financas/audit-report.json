@@ -1,0 +1,13 @@
+{
+  "id": "audit-report-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "typedIdentity": "PASS",
+  "strategyEntry": "PASS",
+  "brainCatalogEntry": "PASS",
+  "pillarRole": "PASS",
+  "coreSupportRole": "PASS",
+  "calculatorRelationship": "PASS",
+  "bidirectionalLinking": "PASS",
+  "duplicates": 0,
+  "status": "PASS"
+}

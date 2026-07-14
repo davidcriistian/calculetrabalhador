@@ -1,0 +1,167 @@
+{
+  "compatibilityClass": "NEW_ARTICLE",
+  "migrationRequested": false,
+  "intent": {
+    "primarySearchIntent": "STEP_BY_STEP_GUIDE",
+    "primaryQuestion": "Como montar uma reserva de emergência sendo PJ?",
+    "secondaryQuestions": [
+      "Quais despesas entram na base mensal?",
+      "Quantos meses de cobertura escolher?",
+      "Onde manter a reserva?",
+      "Como aportar com renda variável?",
+      "Quando usar e como recompor?"
+    ],
+    "readerActionAfterReading": "Calcular a própria meta, escolher um primeiro marco e registrar regras de aporte e uso.",
+    "topicOnly": false
+  },
+  "audience": {
+    "knowledgeLevel": "NON_SPECIALIST",
+    "problem": "O profissional PJ sabe que precisa de proteção, mas não consegue separar objetivos nem transformar gastos e riscos em uma meta possível."
+  },
+  "content": {
+    "directAnswerNearBeginning": true,
+    "technicalTerms": [
+      {"term": "capital de giro", "firstOccurrenceExplained": true},
+      {"term": "liquidez", "firstOccurrenceExplained": true},
+      {"term": "risco de crédito", "firstOccurrenceExplained": true},
+      {"term": "risco de mercado", "firstOccurrenceExplained": true}
+    ],
+    "paragraphs": [
+      {"wordCount": 79, "maxSentenceWords": 29, "averageSentenceWords": 20, "mainIdeaCount": 1},
+      {"wordCount": 82, "maxSentenceWords": 31, "averageSentenceWords": 21, "mainIdeaCount": 1},
+      {"wordCount": 94, "maxSentenceWords": 35, "averageSentenceWords": 23, "mainIdeaCount": 2},
+      {"wordCount": 86, "maxSentenceWords": 32, "averageSentenceWords": 22, "mainIdeaCount": 1}
+    ],
+    "wordCount": 3100,
+    "sections": [
+      {"id":"o-que-e","dependsOnPrevious":false,"transitionFromPrevious":null},
+      {"id":"separe-caixas","dependsOnPrevious":true,"transitionFromPrevious":"Depois de entender a finalidade, é preciso separar a emergência dos outros caixas."},
+      {"id":"base-mensal","dependsOnPrevious":true,"transitionFromPrevious":"Com os objetivos separados, a próxima etapa é identificar o custo essencial protegido."},
+      {"id":"meses-cobertura","dependsOnPrevious":true,"transitionFromPrevious":"A base mensal permite comparar quantos meses correspondem ao risco real do PJ."},
+      {"id":"formacao-camadas","dependsOnPrevious":true,"transitionFromPrevious":"A meta escolhida é convertida em marcos menores para tornar a formação executável."},
+      {"id":"onde-guardar","dependsOnPrevious":true,"transitionFromPrevious":"Depois de definir o valor, é necessário preservar acesso, segurança e finalidade."},
+      {"id":"aportes","dependsOnPrevious":true,"transitionFromPrevious":"Com destino compatível, o plano passa a depender de aportes sustentáveis."},
+      {"id":"exemplo","dependsOnPrevious":true,"transitionFromPrevious":"O exemplo reúne base, cobertura, saldo e aporte em um cenário hipotético completo."},
+      {"id":"regras-uso","dependsOnPrevious":true,"transitionFromPrevious":"A reserva formada precisa de regras para não ser consumida por despesas previsíveis."},
+      {"id":"recompor","dependsOnPrevious":true,"transitionFromPrevious":"Se houver uso legítimo, a próxima decisão é recalcular a proteção e recompor o saldo."},
+      {"id":"erros","dependsOnPrevious":true,"transitionFromPrevious":"Os erros comuns mostram onde o processo pode perder função mesmo com dinheiro guardado."},
+      {"id":"plano-30-dias","dependsOnPrevious":true,"transitionFromPrevious":"O plano final transforma todas as decisões anteriores em ações distribuídas por 30 dias."}
+    ],
+    "concepts": [
+      {"id":"base-essencial","complex":true,"critical":true,"exampleType":"NUMERICAL_EXAMPLE","exampleIsHypotheticalAndLabeled":true},
+      {"id":"cobertura-ajustada-ao-risco","complex":true,"critical":true,"exampleType":"REALISTIC_SCENARIO","exampleIsHypotheticalAndLabeled":true},
+      {"id":"separacao-de-caixas","complex":true,"critical":false,"exampleType":"COMMON_MISTAKE","exampleIsHypotheticalAndLabeled":true}
+    ],
+    "keywordDensity": 0.026,
+    "duplicatedConclusionCount": 0,
+    "repeatedParagraphRatio": 0.02,
+    "pedagogicalReinforcement": {"used": true, "addsNewValue": true},
+    "bureaucraticToneDetected": false
+  },
+  "freshness": {
+    "updateSensitivity": "EVERGREEN",
+    "lastReviewedAt": "2026-07-14",
+    "nextReviewAt": null,
+    "reviewEvidence": true,
+    "mutableContentSections": [],
+    "officialSources": [
+      {
+        "sourceId": "source:portal-investidor-emergencias",
+        "sourceType": "OFFICIAL_GUIDANCE",
+        "sourceUrl": "https://www.gov.br/investidor/pt-br/investir/antes-de-investir/defina-seus-objetivos/emergencias-e-aposentadoria",
+        "authority": "Portal do Investidor / CVM",
+        "supportsSections": ["meses-cobertura", "onde-guardar"],
+        "lastVerifiedAt": "2026-07-14",
+        "updateRisk": "LOW",
+        "status": "SOURCE_VERIFIED",
+        "official": true,
+        "reachable": true
+      },
+      {
+        "sourceId": "source:portal-investidor-caracteristicas",
+        "sourceType": "OFFICIAL_GUIDANCE",
+        "sourceUrl": "https://www.gov.br/investidor/pt-br/investir/antes-de-investir/entenda-as-caracteristicas-dos-investimentos",
+        "authority": "Portal do Investidor / CVM",
+        "supportsSections": ["onde-guardar"],
+        "lastVerifiedAt": "2026-07-14",
+        "updateRisk": "LOW",
+        "status": "SOURCE_VERIFIED",
+        "official": true,
+        "reachable": true
+      },
+      {
+        "sourceId": "source:sebrae-controles-capital-giro",
+        "sourceType": "INSTITUTIONAL_GUIDANCE",
+        "sourceUrl": "https://sebrae.com.br/sites/PortalSebrae/artigos/controles-financeiros-sao-essenciais-para-a-gestao-do-capital-de-giro%2Cdf395415e6433410VgnVCM1000003b74010aRCRD",
+        "authority": "Sebrae",
+        "supportsSections": ["separe-caixas", "base-mensal"],
+        "lastVerifiedAt": "2026-07-14",
+        "updateRisk": "LOW",
+        "status": "SOURCE_VERIFIED",
+        "official": true,
+        "reachable": true
+      },
+      {
+        "sourceId": "source:bcb-caderno-educacao-financeira",
+        "sourceType": "OFFICIAL_GUIDANCE",
+        "sourceUrl": "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Cuidando_do_seu_dinheiro_Gestao_de_Financas_Pessoais/caderno_cidadania_financeira.pdf",
+        "authority": "Banco Central do Brasil",
+        "supportsSections": ["o-que-e", "aportes", "regras-uso"],
+        "lastVerifiedAt": "2026-07-14",
+        "updateRisk": "LOW",
+        "status": "SOURCE_VERIFIED",
+        "official": true,
+        "reachable": true
+      }
+    ],
+    "affectedRules": [],
+    "affectedAssets": [
+      "article:como-organizar-as-financas-sendo-pj",
+      "calculator:calculadora-reserva-financeira-pj",
+      "guide:guide-pj"
+    ],
+    "dependencyIds": [
+      "cluster:pj-financas",
+      "article:como-organizar-as-financas-sendo-pj",
+      "calculator:calculadora-reserva-financeira-pj"
+    ]
+  },
+  "sourcePolicy": {"officialSourceRequired": true, "legalClaimPresent": false},
+  "relationships": {
+    "domainId": "domain:pj",
+    "nucleusId": "nucleus:pj",
+    "clusterId": "cluster:pj-financas",
+    "clusterExists": true,
+    "pillarAssetId": "article:como-organizar-as-financas-sendo-pj",
+    "articleRole": "CORE_SUPPORT"
+  },
+  "internalLinkPlan": {
+    "outbound": [
+      {"type":"CONTEXTUAL_LINK","targetAssetId":"article:como-organizar-as-financas-sendo-pj","targetExists":true,"anchor":"Como organizar as finanças sendo PJ","relationshipJustified":true},
+      {"type":"CONTINUITY_LINK","targetAssetId":"calculator:calculadora-reserva-financeira-pj","targetExists":true,"anchor":"calcular a meta de reserva PJ","relationshipJustified":true},
+      {"type":"CONTEXTUAL_LINK","targetAssetId":"calculator:calculadora-custo-mensal-pj","targetExists":true,"anchor":"calcular o custo mensal PJ","relationshipJustified":true},
+      {"type":"DISCOVERY_BLOCK_LINK","targetAssetId":"guide:guide-pj","targetExists":true,"anchor":"Guia PJ","relationshipJustified":true}
+    ],
+    "inboundAnalysis": {
+      "state": "INBOUND_LINK_UPDATE_REQUIRED",
+      "candidateAssets": ["article:como-organizar-as-financas-sendo-pj", "guide:guide-pj"],
+      "decisionReason": "O pilar e o guia foram atualizados para apresentar continuidade explícita para o novo conteúdo."
+    },
+    "orphanRisk": "CLUSTER_LINKING_HEALTHY"
+  },
+  "faq": {"visibleCount": 14, "schemaCount": 14, "exactMatch": true},
+  "cta": {"resolved": true, "targetAssetId": "calculator:calculadora-reserva-financeira-pj", "placements": ["beginning", "middle", "final"]},
+  "panelMetadata": {
+    "contentFreshnessStatus": "CURRENT",
+    "lastReviewedAt": "2026-07-14",
+    "nextReviewAt": null,
+    "updateSensitivity": "EVERGREEN",
+    "officialSources": ["source:portal-investidor-emergencias", "source:portal-investidor-caracteristicas", "source:sebrae-controles-capital-giro", "source:bcb-caderno-educacao-financeira"],
+    "affectedRules": [],
+    "affectedAssets": ["article:como-organizar-as-financas-sendo-pj", "calculator:calculadora-reserva-financeira-pj", "guide:guide-pj"],
+    "clusterId": "cluster:pj-financas",
+    "pillarAssetId": "article:como-organizar-as-financas-sendo-pj",
+    "validationStatus": "PASS",
+    "publicationStatus": "published"
+  }
+}

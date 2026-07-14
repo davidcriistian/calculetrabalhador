@@ -896,5 +896,20 @@
     "publishedAt": "2026-07-14",
     "updatedAt": "2026-07-14",
     "showOnHome": false
+  },
+  {
+    "id": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+    "title": "Como Montar uma Reserva de Emergencia Sendo PJ",
+    "slug": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj",
+    "url": "https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+    "category": "Carreira",
+    "description": "Aprenda a calcular a base mensal, escolher meses de cobertura, definir aportes e criar regras claras para a reserva de emergencia PJ.",
+    "relatedTool": "/calculadora-reserva-financeira-pj/",
+    "tempo": "18 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "showOnHome": false
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "id": "rollback-plan-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "status": "ready",
+  "scope": [
+    "/data/strategy/clusters/index.json",
+    "/data/brain/clusters.json",
+    "/data/registry/by-type/cluster-pj-financas.json",
+    "/data/publishing/registry/cluster-pj-financas-active.json",
+    "/data/operations/reports/asset/cluster/pj-financas/"
+  ],
+  "method": "Restore pre-operation catalog snapshots and remove only cluster:pj-financas artifacts after explicit rollback approval."
+}

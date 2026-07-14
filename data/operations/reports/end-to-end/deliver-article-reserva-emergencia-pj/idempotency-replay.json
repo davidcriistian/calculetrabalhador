@@ -1,0 +1,20 @@
+{
+  "id": "idempotency-replay-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "assetIds": ["cluster:pj-financas", "article:como-montar-uma-reserva-de-emergencia-sendo-pj"],
+  "checks": {
+    "articleCatalogOccurrences": 1,
+    "contentMapOccurrences": 1,
+    "articleRegistryOccurrences": 1,
+    "clusterRegistryOccurrences": 1,
+    "articlePublishingOccurrences": 1,
+    "clusterPublishingOccurrences": 1,
+    "nucleusSlugOccurrences": 1,
+    "sitemapOccurrences": 1,
+    "pillarInboundLinkOccurrences": 1,
+    "guideVisibleOccurrences": 1,
+    "guideSchemaOccurrences": 1
+  },
+  "replayDecision": "SKIPPED_ALREADY_COMPLIANT",
+  "status": "PASS"
+}

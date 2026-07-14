@@ -1,0 +1,45 @@
+{
+  "id": "pj-financas",
+  "assetId": "cluster:pj-financas",
+  "assetType": "cluster",
+  "version": "1.0.0",
+  "status": "active",
+  "lifecycle": "active",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "consumed-by-governed-catalogs",
+  "owner": "core-platform",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "displayName": "Finanças e Reserva PJ",
+  "publicSlug": "pj-financas",
+  "publicUrl": null,
+  "blueprint": {
+    "type": "cluster",
+    "reference": "/data/blueprints/cluster/index.json",
+    "version": "0.1.0"
+  },
+  "goldStandard": {
+    "type": "cluster",
+    "reference": "/data/gold-standards/cluster/index.json",
+    "version": "0.1.0"
+  },
+  "relationships": {
+    "primaryDomain": "domain:pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+    "pillarArticle": "article:como-organizar-as-financas-sendo-pj",
+    "satelliteArticles": ["article:como-montar-uma-reserva-de-emergencia-sendo-pj"]
+  },
+  "roles": {
+    "article:como-organizar-as-financas-sendo-pj": "PILLAR",
+    "article:como-montar-uma-reserva-de-emergencia-sendo-pj": "CORE_SUPPORT"
+  },
+  "publicRepresentation": {
+    "createsStandaloneUrl": false,
+    "projectsToNucleus": true,
+    "projectsToGuide": true,
+    "projectsToArticleCatalog": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "operation-report-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "status": "SUCCESS_CONTROLLED_EXECUTION",
+  "page": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/index.html",
+  "cluster": "cluster:pj-financas",
+  "role": "CORE_SUPPORT",
+  "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+  "registries": [
+    "/data/registry/by-type/article-como-montar-uma-reserva-de-emergencia-sendo-pj.json",
+    "/data/publishing/registry/article-como-montar-uma-reserva-de-emergencia-sendo-pj-published.json"
+  ],
+  "validation": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/validation-results.json",
+  "visualValidation": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/visual-validation.json",
+  "deploy": "NOT_EXECUTED",
+  "indexNow": "DRY_RUN_ONLY"
+}

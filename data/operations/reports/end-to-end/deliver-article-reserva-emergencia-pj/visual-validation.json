@@ -1,0 +1,26 @@
+{
+  "id": "visual-validation-article-reserva-emergencia-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "browser": "Microsoft Edge headless",
+  "status": "VISUAL_VALIDATION_PASSED",
+  "viewports": [
+    {"name":"small-mobile","width":320,"height":800,"status":"PASS"},
+    {"name":"large-mobile","width":430,"height":900,"status":"PASS"},
+    {"name":"intermediate","width":768,"height":1024,"status":"PASS"},
+    {"name":"desktop","width":1440,"height":1000,"status":"PASS"}
+  ],
+  "states": ["entry", "summary-toc", "table-cta", "example-plan", "faq", "sources-footer"],
+  "checks": {
+    "headerAndFooter": "PASS",
+    "singleH1": "PASS",
+    "faqCount": "PASS",
+    "bodyOverflow": "PASS",
+    "responsiveTable": "PASS",
+    "ctaMobile": "PASS",
+    "sourceCards": "PASS",
+    "manualRepresentativeReview": "PASS"
+  },
+  "evidenceDirectory": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/visual/",
+  "evidenceCount": 24,
+  "note": "The first sandboxed browser launch was not treated as a pass; the matrix was rerun with approved browser execution and then manually reviewed."
+}

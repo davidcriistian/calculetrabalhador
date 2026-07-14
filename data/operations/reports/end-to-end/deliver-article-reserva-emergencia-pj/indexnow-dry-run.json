@@ -1,0 +1,10 @@
+{
+  "id": "indexnow-dry-run-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "mode": "DRY_RUN",
+  "host": "calculetrabalhador.com.br",
+  "urlList": ["https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/"],
+  "payloadPrepared": true,
+  "sent": false,
+  "reasonNotSent": "Explicit IndexNow send approval was not requested or granted."
+}

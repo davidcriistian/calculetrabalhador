@@ -1,0 +1,11 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "physicalChangeType": "NEW_PAGE_GENERATION_WITH_CONTROLLED_RELATIONSHIP_UPDATES",
+  "newPublicPage": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/index.html",
+  "updatedPublicPages": ["/blog/como-organizar-as-financas-sendo-pj/index.html", "/guias/pj/index.html"],
+  "catalogs": ["/data/articles.json", "/data/maps/content-map.json", "/data/brain/clusters.json", "/data/brain/nuclei.json", "/data/editorial-metadata.json", "/sitemap.xml"],
+  "governance": ["/data/strategy/clusters/index.json", "/data/registry/by-type/", "/data/publishing/registry/", "/data/operations/reports/"],
+  "validatorCompatibilityUpdates": ["/scripts/validate-governance.js", "/scripts/validate-nucleus-home-visual.js"],
+  "globalCssJsChanges": [],
+  "rollbackPlan": "/data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/rollback-plan.json"
+}

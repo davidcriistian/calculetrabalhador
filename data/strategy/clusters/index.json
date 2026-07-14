@@ -37,7 +37,56 @@
       "reference": "/data/pos/validation/index.json"
     }
   },
-  "items": [],
+  "items": [
+    {
+      "clusterId": "pj-financas",
+      "assetId": "cluster:pj-financas",
+      "nucleus": "nucleus:pj",
+      "objective": "Ajudar profissionais PJ a organizar o caixa, dimensionar reservas e transformar riscos de renda em decisões financeiras práticas.",
+      "searchIntent": "problem-solving",
+      "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+      "pillarArticle": "article:como-organizar-as-financas-sendo-pj",
+      "satelliteArticles": [
+        "article:como-montar-uma-reserva-de-emergencia-sendo-pj"
+      ],
+      "articleRoles": {
+        "article:como-organizar-as-financas-sendo-pj": "PILLAR",
+        "article:como-montar-uma-reserva-de-emergencia-sendo-pj": "CORE_SUPPORT"
+      },
+      "internalLinks": [
+        {
+          "from": "article:como-organizar-as-financas-sendo-pj",
+          "to": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+          "type": "CONTEXTUAL_LINK"
+        },
+        {
+          "from": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+          "to": "article:como-organizar-as-financas-sendo-pj",
+          "type": "CONTEXTUAL_LINK"
+        },
+        {
+          "from": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+          "to": "calculator:calculadora-reserva-financeira-pj",
+          "type": "CONTINUITY_LINK"
+        }
+      ],
+      "seoStrategy": "Cobrir organização financeira PJ no pilar e aprofundar dimensionamento, formação, uso e recomposição da reserva no artigo de suporte.",
+      "primaryProduct": null,
+      "primaryCta": "calculator:calculadora-reserva-financeira-pj",
+      "recommendedPublishingOrder": [
+        "article:como-organizar-as-financas-sendo-pj",
+        "article:como-montar-uma-reserva-de-emergencia-sendo-pj"
+      ],
+      "testing": {
+        "required": true,
+        "reference": "/data/pos/testing/index.json"
+      },
+      "validation": {
+        "required": true,
+        "reference": "/data/pos/validation/index.json"
+      }
+    }
+  ],
   "notes": [
     "Clusters are not populated in this phase."
   ]

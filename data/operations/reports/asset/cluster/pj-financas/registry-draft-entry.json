@@ -1,0 +1,7 @@
+{
+  "id": "pj-financas",
+  "assetId": "cluster:pj-financas",
+  "type": "cluster",
+  "status": "active",
+  "registryReference": "/data/registry/by-type/cluster-pj-financas.json"
+}

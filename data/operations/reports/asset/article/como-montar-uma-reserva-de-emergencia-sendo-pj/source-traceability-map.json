@@ -1,0 +1,11 @@
+{
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "lastVerifiedAt": "2026-07-14",
+  "sources": [
+    {"sourceId":"source:portal-investidor-emergencias","authority":"Portal do Investidor / CVM","supportsSections":["meses-cobertura","onde-guardar"],"status":"SOURCE_VERIFIED"},
+    {"sourceId":"source:portal-investidor-caracteristicas","authority":"Portal do Investidor / CVM","supportsSections":["onde-guardar"],"status":"SOURCE_VERIFIED"},
+    {"sourceId":"source:sebrae-controles-capital-giro","authority":"Sebrae","supportsSections":["separe-caixas","base-mensal"],"status":"SOURCE_VERIFIED"},
+    {"sourceId":"source:bcb-caderno-educacao-financeira","authority":"Banco Central do Brasil","supportsSections":["o-que-e","aportes","regras-uso"],"status":"SOURCE_VERIFIED"}
+  ],
+  "status": "OFFICIAL_SOURCES_RESOLVED"
+}

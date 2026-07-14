@@ -11,6 +11,7 @@ const FILES = {
   updateMap: 'data/maps/update-map.json',
   dependencies: 'data/brain/dependencies.json',
   clusters: 'data/brain/clusters.json',
+  strategyClusters: 'data/strategy/clusters/index.json',
   validationRules: 'data/brain/validation-rules.json'
 };
 
@@ -209,8 +210,9 @@ function validateArticles(data) {
 }
 
 function validateClusters(data) {
-  const { clusters, contentMap, toolsMap } = data;
+  const { clusters, strategyClusters, contentMap, toolsMap } = data;
   const clusterItems = arrayFrom(clusters.items);
+  const strategicItems = arrayFrom(strategyClusters.items);
   const contentItems = arrayFrom(contentMap.items);
   const toolIds = new Set(arrayFrom(toolsMap.items).map((item) => item.id));
   const contentIds = new Set(contentItems.map((item) => item.id));
@@ -220,8 +222,15 @@ function validateClusters(data) {
       fail('Clusters', `Invalid primaryTool for cluster ${cluster.clusterId}: ${cluster.primaryTool}`);
     }
 
-    if (!toolIds.has(cluster.clusterId)) {
-      fail('Clusters', `Cluster id does not match an existing tool: ${cluster.clusterId}`);
+    if (cluster.assetId) {
+      const strategicCluster = strategicItems.find((item) => item.assetId === cluster.assetId);
+      if (!strategicCluster || strategicCluster.clusterId !== cluster.clusterId) {
+        fail('Clusters', `Typed cluster is missing from strategy registry: ${cluster.assetId}`);
+      } else if (strategicCluster.primaryCalculator !== `calculator:${cluster.primaryTool}`) {
+        fail('Clusters', `Typed cluster primary calculator mismatch: ${cluster.assetId}`);
+      }
+    } else if (!toolIds.has(cluster.clusterId)) {
+      fail('Clusters', `Legacy cluster id does not match an existing tool: ${cluster.clusterId}`);
     }
 
     const realCount = contentItems.filter((item) => item.clusterId === cluster.clusterId).length;
@@ -359,6 +368,7 @@ const data = {
   updateMap: readJson('updateMap'),
   dependencies: readJson('dependencies'),
   clusters: readJson('clusters'),
+  strategyClusters: readJson('strategyClusters'),
   validationRules: readJson('validationRules')
 };
 

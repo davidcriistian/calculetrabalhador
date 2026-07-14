@@ -1,0 +1,24 @@
+{
+  "id": "testing-plan-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "status": "executed-pass",
+  "required": [
+    "article-contract-check",
+    "fixture-regression",
+    "content-structure-check",
+    "link-check",
+    "seo-snapshot",
+    "schema-check",
+    "source-map-check",
+    "freshness-check",
+    "governance-check",
+    "visual-responsive-check"
+  ],
+  "commands": [
+    "node scripts/validate-article-automation.js",
+    "node scripts/validate-article-automation.js --input data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/article-editorial-plan.json",
+    "node scripts/test-reserva-emergencia-pj-article.js",
+    "node scripts/validate-governance.js",
+    "node scripts/capture-reserva-emergencia-pj-article-visuals.js"
+  ]
+}

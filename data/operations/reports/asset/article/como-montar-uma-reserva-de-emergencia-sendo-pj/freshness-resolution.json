@@ -1,0 +1,10 @@
+{
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "updateSensitivity": "EVERGREEN",
+  "lastReviewedAt": "2026-07-14",
+  "nextReviewAt": null,
+  "mutableContentSections": [],
+  "affectedRules": [],
+  "dependencyIds": ["cluster:pj-financas", "article:como-organizar-as-financas-sendo-pj", "calculator:calculadora-reserva-financeira-pj"],
+  "status": "CONTENT_FRESHNESS_RESOLVED"
+}

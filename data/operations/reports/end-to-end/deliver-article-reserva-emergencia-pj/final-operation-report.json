@@ -1,0 +1,124 @@
+{
+  "id": "final-operation-report-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "requestType": "CREATE_ASSET_WITH_RELATIONSHIPS",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "date": "2026-07-14",
+  "assetIds": [
+    "cluster:pj-financas",
+    "article:como-montar-uma-reserva-de-emergencia-sendo-pj"
+  ],
+  "publicPath": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+  "scope": {
+    "clusterProvisioning": "COMPLETE",
+    "articleGeneration": "COMPLETE",
+    "catalogIntegration": "COMPLETE",
+    "nucleusProjection": "COMPLETE",
+    "guideDistribution": "COMPLETE",
+    "pillarInboundLink": "COMPLETE",
+    "sitemap": "COMPLETE",
+    "testing": "COMPLETE",
+    "visualValidation": "COMPLETE",
+    "rollback": "READY",
+    "deploy": "NOT_EXECUTED",
+    "indexNow": "DRY_RUN_ONLY"
+  },
+  "reusedAssets": [
+    "domain:pj",
+    "nucleus:pj",
+    "guide:guide-pj",
+    "article:como-organizar-as-financas-sendo-pj",
+    "calculator:calculadora-reserva-financeira-pj",
+    "calculator:calculadora-custo-mensal-pj",
+    "calculator:calculadora-ferias-pj"
+  ],
+  "createdAssets": [
+    "cluster:pj-financas",
+    "article:como-montar-uma-reserva-de-emergencia-sendo-pj"
+  ],
+  "updatedAssets": [
+    "article:como-organizar-as-financas-sendo-pj",
+    "guide:guide-pj",
+    "nucleus:pj"
+  ],
+  "relationships": {
+    "clusterPillar": "article:como-organizar-as-financas-sendo-pj",
+    "articleRole": "CORE_SUPPORT",
+    "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+    "bidirectionalLinking": "CLUSTER_LINKING_HEALTHY"
+  },
+  "publicCatalogChanges": [
+    "/data/articles.json",
+    "/data/maps/content-map.json",
+    "/data/brain/clusters.json",
+    "/data/brain/nuclei.json",
+    "/data/editorial-metadata.json",
+    "/guias/pj/index.html",
+    "/sitemap.xml"
+  ],
+  "runtimeProjectionChanges": [
+    "PJ Home section now resolves 8 eligible articles: 6 visible on mobile and 8 on desktop.",
+    "PJ category and blog catalogs resolve the new article from governed data.",
+    "No hardcoded Home card or global layout change was made."
+  ],
+  "articleAutomation": {
+    "applicable": true,
+    "compatibilityClass": "NEW_ARTICLE",
+    "contractVersion": "1.0.0",
+    "goldStandardVersion": "2.0.0",
+    "gates": {
+      "SEARCH_INTENT_RESOLVED": "RESOLVED",
+      "EDITORIAL_CLARITY_RESOLVED": "RESOLVED",
+      "CONTENT_FRESHNESS_RESOLVED": "RESOLVED",
+      "OFFICIAL_SOURCES_RESOLVED": "RESOLVED",
+      "CLUSTER_POSITION_RESOLVED": "RESOLVED",
+      "INTERNAL_LINK_PLAN_RESOLVED": "RESOLVED",
+      "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED": "RESOLVED"
+    },
+    "checkTypes": {"DETERMINISTIC":0,"HEURISTIC":0,"HUMAN_REVIEW_REQUIRED":0},
+    "freshnessStatus": "EVERGREEN_CURRENT",
+    "sourceStatus": "4_SOURCES_VERIFIED",
+    "clusterStatus": "RESOLVED_BY_EXPLICIT_USER_APPROVAL",
+    "linkingStatus": "CLUSTER_LINKING_HEALTHY",
+    "fixtureReport": "20_OF_20_MATCHED",
+    "validationReport": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/validation-results.json"
+  },
+  "testing": {
+    "status": "PASS",
+    "reports": [
+      "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/validation-results.json",
+      "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/visual-validation.json"
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "articleWordCount": 3195,
+    "faqPairs": 14,
+    "visualEvidenceCount": 24,
+    "viewports": [320, 430, 768, 1440]
+  },
+  "manualDecisions": [
+    {
+      "decision": "Provision cluster:pj-financas with the existing organization article as PILLAR and the new article as CORE_SUPPORT.",
+      "resolvedBy": "user",
+      "resolvedAt": "2026-07-14"
+    }
+  ],
+  "warnings": [],
+  "blockers": [],
+  "rollback": {
+    "byAsset": [
+      "/data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/rollback-plan.json",
+      "/data/operations/reports/asset/cluster/pj-financas/rollback-plan.json"
+    ],
+    "byFile": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/snapshot-record.json",
+    "byOperation": "Remove created assets and restore only scoped modified files after explicit rollback approval.",
+    "fullBatch": "READY"
+  },
+  "indexnowImpact": {
+    "status": "DRY_RUN_PREPARED_NOT_SENT",
+    "report": "/data/operations/reports/end-to-end/deliver-article-reserva-emergencia-pj/indexnow-dry-run.json"
+  },
+  "finalStatus": "SUCCESS_CONTROLLED_EXECUTION"
+}

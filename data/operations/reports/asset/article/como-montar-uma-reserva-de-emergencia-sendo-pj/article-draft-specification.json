@@ -1,0 +1,67 @@
+{
+  "id": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetType": "article",
+  "version": "1.0.0",
+  "status": "published",
+  "lifecycle": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "consumed-by-public-catalogs",
+  "publishingStatus": "published",
+  "visibility": "public-page-created",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "core-platform",
+  "source": "deliver-asset-end-to-end controlled execution",
+  "displayName": "Como Montar uma Reserva de Emergência Sendo PJ",
+  "publicSlug": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+  "articleCompatibilityClass": "NEW_ARTICLE",
+  "primarySearchIntent": "STEP_BY_STEP_GUIDE",
+  "updateSensitivity": "EVERGREEN",
+  "articleRole": "CORE_SUPPORT",
+  "blueprint": {
+    "type": "article",
+    "reference": "/data/blueprints/article/index.json",
+    "version": "0.4.0"
+  },
+  "goldStandard": {
+    "type": "article",
+    "reference": "/data/gold-standards/article/index.json",
+    "version": "2.0.0"
+  },
+  "editorialContract": {
+    "reference": "/data/blueprints/article/editorial-automation.contract.json",
+    "version": "1.0.0"
+  },
+  "relationships": {
+    "primaryDomain": "domain:pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:pj-financas",
+    "pillarArticle": "article:como-organizar-as-financas-sendo-pj",
+    "primaryCalculator": "calculator:calculadora-reserva-financeira-pj",
+    "relatedCalculators": [
+      "calculator:calculadora-custo-mensal-pj",
+      "calculator:calculadora-ferias-pj"
+    ]
+  },
+  "editorial": {
+    "targetWordCount": "2500-3200",
+    "faqCount": 14,
+    "ctaPlacement": ["beginning", "middle", "final"],
+    "adSlots": ["Ads01", "Ads02", "Ads03", "Ads04"],
+    "officialSourcesRequired": true
+  },
+  "operationalBoundaries": {
+    "createsNewArticle": true,
+    "createsCluster": true,
+    "modifiesExistingPillar": true,
+    "modifiesGuide": true,
+    "modifiesSeo": true,
+    "modifiesSitemap": true,
+    "deploys": false,
+    "callsIndexNow": false
+  }
+}

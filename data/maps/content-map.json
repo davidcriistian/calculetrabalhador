@@ -892,13 +892,28 @@
       "url": "https://calculetrabalhador.com.br/blog/como-organizar-as-financas-sendo-pj/",
       "category": "Carreira",
       "primaryTool": "calculadora-custo-mensal-pj",
-      "clusterId": "calculadora-custo-mensal-pj",
-      "contentType": "guide",
+      "clusterId": "pj-financas",
+      "contentType": "pillar",
       "intent": "education",
       "funnelStage": "middle",
       "requiresAnnualReview": true,
       "dependencies": ["financial-planning-pj"],
-      "internalLinksRequired": ["/calculadora-custo-mensal-pj/", "/calculadora-reserva-financeira-pj/", "/calculadora-ferias-pj/", "/calculadora-valor-hora-pj/", "/guias/pj/"],
+      "internalLinksRequired": ["/calculadora-custo-mensal-pj/", "/calculadora-reserva-financeira-pj/", "/calculadora-ferias-pj/", "/calculadora-valor-hora-pj/", "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/", "/guias/pj/"],
+      "status": "published"
+    },
+    {
+      "id": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+      "slug": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj",
+      "url": "https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/",
+      "category": "Carreira",
+      "primaryTool": "calculadora-reserva-financeira-pj",
+      "clusterId": "pj-financas",
+      "contentType": "support",
+      "intent": "step-by-step-guide",
+      "funnelStage": "middle",
+      "requiresAnnualReview": false,
+      "dependencies": ["financial-planning-pj", "calculator:calculadora-reserva-financeira-pj", "article:como-organizar-as-financas-sendo-pj"],
+      "internalLinksRequired": ["/blog/como-organizar-as-financas-sendo-pj/", "/calculadora-reserva-financeira-pj/", "/calculadora-custo-mensal-pj/", "/calculadora-ferias-pj/", "/guias/pj/"],
       "status": "published"
     }
   ]

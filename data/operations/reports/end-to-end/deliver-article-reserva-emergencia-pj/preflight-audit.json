@@ -1,0 +1,19 @@
+{
+  "id": "preflight-audit-deliver-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "date": "2026-07-14",
+  "workingTree": "clean-before-operation",
+  "collisions": [],
+  "secretScan": "PASS",
+  "jsonBaseline": "READABLE",
+  "sourceOfTruth": "RESOLVED",
+  "typedIdentities": ["cluster:pj-financas", "article:como-montar-uma-reserva-de-emergencia-sendo-pj"],
+  "slug": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "slugCollision": false,
+  "urlCollision": false,
+  "physicalDestination": "/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/index.html",
+  "physicalDestinationExisted": false,
+  "clusterDecision": "EXPLICIT_USER_APPROVAL",
+  "rollback": "READY",
+  "status": "PASS"
+}

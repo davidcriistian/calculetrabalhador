@@ -1,0 +1,19 @@
+{
+  "id": "audit-report-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "compatibilityClass": "NEW_ARTICLE",
+  "contractVersion": "1.0.0",
+  "goldStandardVersion": "2.0.0",
+  "wordCount": 3195,
+  "faqPairs": 14,
+  "ctaCount": 3,
+  "adSlots": 4,
+  "officialSources": 4,
+  "denseParagraphs": 0,
+  "maximumParagraphWords": 66,
+  "gatesResolved": 7,
+  "gateFindings": 0,
+  "visualViewports": [320, 430, 768, 1440],
+  "status": "PASS",
+  "semanticNote": "Structural heuristics were complemented by manual editorial and visual review; no claim of perfect semantic analysis is made."
+}

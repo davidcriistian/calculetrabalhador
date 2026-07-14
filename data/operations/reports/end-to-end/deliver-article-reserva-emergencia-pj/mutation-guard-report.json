@@ -1,0 +1,12 @@
+{
+  "id": "mutation-guard-report-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "allowedSurfaces": ["new-article-page", "pillar-inbound-link", "pj-guide", "article-and-cluster-catalogs", "nucleus-runtime-projection", "sitemap", "governance-registries", "operation-evidence", "scoped-validators-and-tests"],
+  "globalCssChanged": false,
+  "globalJsChanged": false,
+  "homeHtmlChanged": false,
+  "calculatorLogicChanged": false,
+  "deploymentChanged": false,
+  "unexpectedFiles": [],
+  "status": "PASS"
+}

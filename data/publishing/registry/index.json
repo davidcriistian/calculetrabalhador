@@ -149,6 +149,30 @@
                              "reference":  "/data/publishing/registry/article-como-organizar-as-financas-sendo-pj-draft.json"
                          },
                          {
+                             "id":  "publishing-cluster-pj-financas",
+                             "assetId":  "cluster:pj-financas",
+                             "assetType":  "cluster",
+                             "status":  "active",
+                             "approvalStatus":  "approved-user-request",
+                             "relationshipStatus":  "approved",
+                             "publishingStatus":  "internal-active",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/cluster-pj-financas-active.json"
+                         },
+                         {
+                             "id":  "publishing-article-como-montar-uma-reserva-de-emergencia-sendo-pj",
+                             "assetId":  "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+                             "assetType":  "article",
+                             "status":  "published",
+                             "approvalStatus":  "approved-user-request",
+                             "relationshipStatus":  "approved",
+                             "publishingStatus":  "published",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/article-como-montar-uma-reserva-de-emergencia-sendo-pj-published.json"
+                         },
+                         {
                              "id":  "publishing-draft-calculator-calculadora-clt-ou-pj",
                              "assetId":  "calculator:calculadora-clt-ou-pj",
                              "assetType":  "calculator",

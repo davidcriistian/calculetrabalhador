@@ -1,0 +1,28 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "capturedAt": "2026-07-14",
+  "algorithm": "SHA256",
+  "newDestinations": [
+    {"path":"/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/index.html","state":"ABSENT"},
+    {"path":"/data/registry/by-type/cluster-pj-financas.json","state":"ABSENT"},
+    {"path":"/data/registry/by-type/article-como-montar-uma-reserva-de-emergencia-sendo-pj.json","state":"ABSENT"},
+    {"path":"/scripts/test-reserva-emergencia-pj-article.js","state":"ABSENT"},
+    {"path":"/scripts/capture-reserva-emergencia-pj-article-visuals.js","state":"ABSENT"}
+  ],
+  "existingFiles": [
+    {"path":"/data/articles.json","sha256":"029EEAFF7BAF1C8772D6EAF5EB3D50AC8BA8117D103E318D808ED262A2A7C33B"},
+    {"path":"/data/maps/content-map.json","sha256":"EA8CA7DA4CEF4F9073122C0519683B3610E38423B210D9EC4F838169FF6EB442"},
+    {"path":"/data/brain/clusters.json","sha256":"C1707AAD760EE9F35E42399A95B15C45CA559AE996EC7B63A36CE0ACF716C487"},
+    {"path":"/data/brain/nuclei.json","sha256":"45C09D39EBAC8A4918E24E2267864B4443D906969A730694748EC712F4C9D8FF"},
+    {"path":"/data/strategy/clusters/index.json","sha256":"582400833C2BF2108156B1D1162C94094AE63C0297A66234BCF102E77D438083"},
+    {"path":"/data/editorial-metadata.json","sha256":"DDF23AB304E98B2FCB131BED891DA7C3036EA1C1CA723BDE41EC98373A998112"},
+    {"path":"/data/registry/by-type/index.json","sha256":"BA2019661795F02A9A64C504ED86CEE15916C15EF3A2822D8E1D023D8E93BA46"},
+    {"path":"/data/publishing/registry/index.json","sha256":"D5FB8C0BC80AC81D4B92674A9818F18B297D51AD4CDAC73BCB281AF66D48ACC1"},
+    {"path":"/sitemap.xml","sha256":"063B62732B7353454614E37EF73206C127E6A63BFFBE8619EA09C10623F915A1"},
+    {"path":"/guias/pj/index.html","sha256":"4C602A497686EA1E175C0EABA103FFFA8B80E1D9E49C80149ED0DC2DAF2C20E1"},
+    {"path":"/blog/como-organizar-as-financas-sendo-pj/index.html","sha256":"6A0E177B6128E4861E1AE89B8CFBDD93444D33EF2980D1B247446CA68642AB11"},
+    {"path":"/scripts/validate-governance.js","gitBlob":"c7c7789edc2115bbfdfcb6646aa507ecab70962b"},
+    {"path":"/scripts/validate-nucleus-home-visual.js","gitBlob":"4ce97ec743452ded14bf305032a7fcae611e5bff"}
+  ],
+  "status": "CAPTURED_BEFORE_PUBLIC_CHANGE"
+}

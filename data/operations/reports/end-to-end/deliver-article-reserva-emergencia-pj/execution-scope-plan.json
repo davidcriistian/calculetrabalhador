@@ -1,0 +1,21 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "capabilities": [
+    {"capability":"create-cluster","classification":"REQUIRED"},
+    {"capability":"create-article","classification":"REQUIRED"},
+    {"capability":"approve-relationships","classification":"REQUIRED"},
+    {"capability":"update-public-catalog","classification":"REQUIRED"},
+    {"capability":"distribute-to-home","classification":"REQUIRED_RUNTIME_PROJECTION"},
+    {"capability":"distribute-to-category","classification":"REQUIRED"},
+    {"capability":"update-internal-links","classification":"REQUIRED"},
+    {"capability":"update-sitemap","classification":"REQUIRED"},
+    {"capability":"run-testing","classification":"REQUIRED"},
+    {"capability":"run-validation","classification":"REQUIRED"},
+    {"capability":"run-indexnow","classification":"DRY_RUN_ONLY"},
+    {"capability":"publish","classification":"NOT_APPLICABLE_NO_DEPLOY"},
+    {"capability":"rollback","classification":"REQUIRED_READY"}
+  ],
+  "homeRule": "No hardcoded Home change; the existing governed PJ collection is refreshed through data sources.",
+  "forbidden": ["deploy", "commit", "push", "indexnow-send", "global-css-js-change"]
+}

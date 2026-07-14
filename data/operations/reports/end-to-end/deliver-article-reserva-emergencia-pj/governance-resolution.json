@@ -1,0 +1,35 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "assets": [
+    {
+      "assetId": "cluster:pj-financas",
+      "assetType": "cluster",
+      "publicSlug": "pj-financas",
+      "owner": "core-platform",
+      "blueprint": "/data/blueprints/cluster/index.json",
+      "goldStandard": "/data/gold-standards/cluster/index.json",
+      "reference": "explicit-user-approved-relationship-model",
+      "lifecycle": "active"
+    },
+    {
+      "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+      "assetType": "article",
+      "publicSlug": "como-montar-uma-reserva-de-emergencia-sendo-pj",
+      "owner": "core-platform",
+      "blueprint": "/data/blueprints/article/index.json#0.4.0",
+      "goldStandard": "/data/gold-standards/article/index.json#2.0.0",
+      "reference": "/blog/como-organizar-as-financas-sendo-pj/index.html",
+      "referenceUsage": "structure-and-visual-pattern-only-no-content-copy",
+      "lifecycle": "published"
+    }
+  ],
+  "articleGates": {
+    "SEARCH_INTENT_RESOLVED": "RESOLVED",
+    "EDITORIAL_CLARITY_RESOLVED": "RESOLVED",
+    "CONTENT_FRESHNESS_RESOLVED": "RESOLVED",
+    "OFFICIAL_SOURCES_RESOLVED": "RESOLVED",
+    "CLUSTER_POSITION_RESOLVED": "RESOLVED_BY_USER_APPROVAL",
+    "INTERNAL_LINK_PLAN_RESOLVED": "RESOLVED",
+    "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED": "RESOLVED"
+  }
+}

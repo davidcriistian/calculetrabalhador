@@ -1,0 +1,15 @@
+{
+  "assetId": "article:como-montar-uma-reserva-de-emergencia-sendo-pj",
+  "outbound": [
+    {"type":"CONTEXTUAL_LINK","targetAssetId":"article:como-organizar-as-financas-sendo-pj","status":"implemented"},
+    {"type":"CONTINUITY_LINK","targetAssetId":"calculator:calculadora-reserva-financeira-pj","status":"implemented"},
+    {"type":"CONTEXTUAL_LINK","targetAssetId":"calculator:calculadora-custo-mensal-pj","status":"implemented"},
+    {"type":"DISCOVERY_BLOCK_LINK","targetAssetId":"guide:guide-pj","status":"implemented"}
+  ],
+  "inbound": [
+    {"sourceAssetId":"article:como-organizar-as-financas-sendo-pj","status":"implemented"},
+    {"sourceAssetId":"guide:guide-pj","status":"implemented"}
+  ],
+  "orphanRisk": "CLUSTER_LINKING_HEALTHY",
+  "status": "INTERNAL_LINK_PLAN_RESOLVED"
+}

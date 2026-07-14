@@ -1,0 +1,15 @@
+{
+  "id": "relationship-map-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "status": "approved",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-14",
+  "relationships": {
+    "domain": {"assetId":"domain:pj","decision":"REUSE"},
+    "nucleus": {"assetId":"nucleus:pj","decision":"REUSE"},
+    "guide": {"assetId":"guide:guide-pj","decision":"REUSE"},
+    "primaryCalculator": {"assetId":"calculator:calculadora-reserva-financeira-pj","decision":"REUSE"},
+    "pillarArticle": {"assetId":"article:como-organizar-as-financas-sendo-pj","decision":"UPDATE_AS_PILLAR"},
+    "coreSupportArticle": {"assetId":"article:como-montar-uma-reserva-de-emergencia-sendo-pj","decision":"CREATE"}
+  }
+}

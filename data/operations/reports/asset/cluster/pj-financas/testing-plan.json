@@ -1,0 +1,6 @@
+{
+  "id": "testing-plan-cluster-pj-financas",
+  "assetId": "cluster:pj-financas",
+  "status": "executed-pass",
+  "checks": ["typed-identity", "relationship-integrity", "pillar-role", "support-role", "runtime-projection", "duplicate-check", "bidirectional-links"]
+}

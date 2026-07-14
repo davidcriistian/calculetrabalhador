@@ -1,0 +1,9 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-14",
+  "approvedScope": "Provision cluster:pj-financas, set the existing finance article as PILLAR, create the new article as CORE_SUPPORT, link it to calculator:calculadora-reserva-financeira-pj, and continue the governed operation end to end.",
+  "approvedUrls": ["https://calculetrabalhador.com.br/blog/como-montar-uma-reserva-de-emergencia-sendo-pj/"],
+  "approvedChanges": ["new-page", "new-url", "seo", "cluster", "catalog", "category", "guide", "home-runtime-projection", "sitemap", "bidirectional-links", "visual-validation"],
+  "excludedScope": ["deploy", "commit", "push", "indexnow-send", "global-css-js"]
+}

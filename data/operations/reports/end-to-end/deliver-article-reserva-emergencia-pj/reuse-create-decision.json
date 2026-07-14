@@ -1,0 +1,16 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "decisions": [
+    {"assetId":"domain:pj","decision":"REUSE"},
+    {"assetId":"nucleus:pj","decision":"REUSE"},
+    {"assetId":"guide:guide-pj","decision":"UPDATE"},
+    {"assetId":"cluster:pj-financas","decision":"CREATE"},
+    {"assetId":"article:como-organizar-as-financas-sendo-pj","decision":"UPDATE_AS_PILLAR"},
+    {"assetId":"calculator:calculadora-reserva-financeira-pj","decision":"REUSE"},
+    {"assetId":"article:como-montar-uma-reserva-de-emergencia-sendo-pj","decision":"CREATE"}
+  ],
+  "duplicateIdentity": false,
+  "slugConflict": false,
+  "urlConflict": false,
+  "status": "RESOLVED"
+}

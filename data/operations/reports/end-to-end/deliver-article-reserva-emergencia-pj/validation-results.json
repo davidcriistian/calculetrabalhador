@@ -1,0 +1,28 @@
+{
+  "id": "validation-results-article-reserva-emergencia-pj",
+  "operationId": "deliver-asset-end-to-end",
+  "assetIds": ["cluster:pj-financas", "article:como-montar-uma-reserva-de-emergencia-sendo-pj"],
+  "status": "PASS",
+  "results": [
+    {"name":"article-editorial-fixtures","command":"node scripts/validate-article-automation.js","status":"PASS","evidence":"20/20 scenarios matched; 164 internal references resolved"},
+    {"name":"article-seven-gates","command":"node scripts/validate-article-automation.js --input data/operations/reports/asset/article/como-montar-uma-reserva-de-emergencia-sendo-pj/article-editorial-plan.json","status":"PASS","evidence":"7/7 gates resolved; zero findings"},
+    {"name":"article-integration","command":"node scripts/test-reserva-emergencia-pj-article.js","status":"PASS","evidence":"3195 words; 14 FAQ pairs; SEO, cluster and catalogs valid"},
+    {"name":"pillar-regression","command":"node scripts/test-como-organizar-financas-pj.js","status":"PASS","evidence":"3007 words; 8 FAQ pairs; integration valid"},
+    {"name":"calculator-regression","command":"node scripts/test-reserva-financeira-pj.js","status":"PASS","evidence":"9/9 calculation cases and structural integration passed"},
+    {"name":"governance","command":"node scripts/validate-governance.js","status":"PASS","evidence":"JSON, tools, articles, clusters, maps and dependencies passed"},
+    {"name":"nucleus-distribution","command":"node scripts/validate-nucleus-home-distribution.js","status":"PASS","evidence":"16/16 live checks and 24/24 fixtures passed"},
+    {"name":"article-visual-matrix","command":"node scripts/capture-reserva-emergencia-pj-article-visuals.js","status":"PASS","evidence":"4 viewports x 6 sections; no overflow"},
+    {"name":"home-visual-runtime","command":"node scripts/validate-nucleus-home-visual.js","status":"PASS","evidence":"4 responsive states and 2 fail-safe scenarios passed"},
+    {"name":"json-parse","status":"PASS","evidence":"38 changed or generated JSON files parsed"},
+    {"name":"git-diff-check","command":"git diff --check","status":"PASS","evidence":"No whitespace errors; only platform line-ending notices"}
+  ],
+  "articleAutomationGates": {
+    "SEARCH_INTENT_RESOLVED": "RESOLVED",
+    "EDITORIAL_CLARITY_RESOLVED": "RESOLVED",
+    "CONTENT_FRESHNESS_RESOLVED": "RESOLVED",
+    "OFFICIAL_SOURCES_RESOLVED": "RESOLVED",
+    "CLUSTER_POSITION_RESOLVED": "RESOLVED",
+    "INTERNAL_LINK_PLAN_RESOLVED": "RESOLVED",
+    "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED": "RESOLVED"
+  }
+}
