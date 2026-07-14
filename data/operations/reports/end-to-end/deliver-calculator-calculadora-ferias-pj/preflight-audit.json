@@ -1,0 +1,10 @@
+{
+  "id": "preflight-audit-calculadora-ferias-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "createdAt": "2026-07-14",
+  "status": "passed",
+  "checks": {"gitWorkingTree":"clean-before-operation","targetIdentity":"available","slug":"available","publicUrl":"available","physicalDestination":"available","jsonBaseline":"passed","internalReferences":"passed","secretScan":"passed-no-suspected-secret-in-scope","rollback":"required-and-ready","operationPermission":"explicit-user-request"},
+  "collisions": []
+}

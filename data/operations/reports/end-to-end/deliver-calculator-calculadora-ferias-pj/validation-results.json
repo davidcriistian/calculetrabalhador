@@ -1,0 +1,25 @@
+{
+  "id": "validation-results-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "automated": {
+    "calculationCases": "9/9 PASS",
+    "commonScenario": "PASS",
+    "negativeCases": "4/4 PASS",
+    "calculatorExperienceContractFixtures": "24/24 matched",
+    "json": "PASS",
+    "jsonLd": "PASS",
+    "faqVisibleSchemaExact": "PASS",
+    "internalLinks": "PASS",
+    "catalogIdentity": "PASS",
+    "registryIdentity": "PASS",
+    "sitemapIdentity": "PASS",
+    "editorialWordCount": 850,
+    "reportHtml": "PASS",
+    "structuredPdf": "PASS"
+  },
+  "gates": {"REFERENCE_STUDY_COMPLETE":"PASS","CALCULATOR_EXPERIENCE_PLAN_APPROVED":"PASS","RESULT_CONTRACT_RESOLVED":"PASS","VISUAL_VALIDATION_STATUS_RESOLVED":"PASS","ANTI_PATTERN_GATE":"PASS","CONTENT_DEPTH_GATE":"PASS","BRAND_THEME_RESOLVED":"PASS","VISIBLE_UPDATED_AT_RESOLVED":"PASS","EDITORIAL_DEPTH_RESOLVED":"PASS","RECOMMENDATION_SLOT_RESOLVED":"PASS","ADAPTIVE_REPORT_CONTRACT_RESOLVED":"PASS","REPORT_RENDER_VALIDATED":"PASS"},
+  "warnings": [],
+  "failures": []
+}

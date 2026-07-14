@@ -1,0 +1,14 @@
+{
+  "id": "report-render-validation-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "copy": {"behavior":"short-scenario-aware-summary","functional":true},
+  "print": {"behavior":"isolated-adaptive-report","functional":true,"a4":true,"navigationIndependent":true,"seoContentIndependent":true,"selectableText":true},
+  "download": {"behavior":"generated-structured-pdf","functional":true,"filename":"relatorio-ferias-pj.pdf","mimeType":"application/pdf","selectableText":true,"rasterOnly":false},
+  "distinctBehaviors": true,
+  "viewportMatrix": [320,430,768,1440],
+  "viewportIndependent": true,
+  "prohibitedPatterns": {"screenshot":false,"fullPageCapture":false,"viewportDependent":false,"rasterOnly":false},
+  "gate": "REPORT_RENDER_VALIDATED"
+}

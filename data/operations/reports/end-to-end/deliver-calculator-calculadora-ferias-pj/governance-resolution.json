@@ -1,0 +1,20 @@
+{
+  "id": "governance-resolution-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "resolved",
+  "assetType": "calculator",
+  "publicSlug": "calculadora-ferias-pj",
+  "owner": "core-platform",
+  "primaryDomain": "pj",
+  "primaryNucleus": "nucleus:pj",
+  "primaryGuide": "guide:guide-pj",
+  "primaryCluster": null,
+  "blueprint": "/data/blueprints/calculator/index.json#0.3.0",
+  "goldStandard": "/data/gold-standards/calculator/index.json#1.2",
+  "experienceContract": "/data/blueprints/contracts/calculator-experience.contract.json#1.1.0",
+  "officialReference": "/calculadora-multa-40-fgts/index.html",
+  "brandTheme": "INSTITUTIONAL_BLUE",
+  "UPDATED_AT": "2026-07-14",
+  "recommendationState": "NOT_CONFIGURED",
+  "visualValidationStatus": "VISUAL_VALIDATION_PASSED"
+}

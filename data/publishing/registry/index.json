@@ -185,6 +185,18 @@
                              "reference":  "/data/publishing/registry/calculator-calculadora-reserva-financeira-pj-published.json"
                          },
                          {
+                             "id":  "publishing-calculator-calculadora-ferias-pj",
+                             "assetId":  "calculator:calculadora-ferias-pj",
+                             "assetType":  "calculator",
+                             "status":  "published",
+                             "approvalStatus":  "approved-user-request",
+                             "relationshipStatus":  "approved-secondary",
+                             "publishingStatus":  "published",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/calculator-calculadora-ferias-pj-published.json"
+                         },
+                         {
                              "id":  "publishing-draft-guide-guide-pj",
                              "assetId":  "guide:guide-pj",
                              "assetType":  "guide",

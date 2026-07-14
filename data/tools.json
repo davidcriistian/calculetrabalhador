@@ -572,5 +572,29 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-14"
+  },
+  {
+    "id": "calculadora-ferias-pj",
+    "title": "Calculadora de Férias PJ",
+    "slug": "/calculadora-ferias-pj/",
+    "url": "/calculadora-ferias-pj/",
+    "category": "PJ",
+    "domain": "Financeiro / PJ",
+    "description": "Calcule a meta e o aporte mensal para férias PJ considerando renda, custos fixos, receita recorrente e reserva atual.",
+    "keywords": ["férias PJ", "calculadora férias PJ", "reserva férias PJ", "planejamento pausa PJ", "quanto guardar para férias", "aporte mensal PJ"],
+    "icon": "PJ",
+    "icone": "PJ",
+    "priority": 89,
+    "relatedTools": ["calculadora-reserva-financeira-pj", "calculadora-custo-mensal-pj", "calculadora-valor-hora-pj"],
+    "relatedPages": ["/calculadora-reserva-financeira-pj/", "/calculadora-custo-mensal-pj/", "/calculadora-valor-hora-pj/", "/guias/pj/"],
+    "relatedArticles": ["/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/", "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/"],
+    "badge": "NOVO",
+    "badgeColor": "#2563eb",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-14"
   }
 ]

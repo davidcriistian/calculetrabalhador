@@ -1,0 +1,6 @@
+{
+  "id": "validation-plan-calculator-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "executed-passed",
+  "checks": ["blueprint 0.3.0","gold standard 1.2","calculator experience contract 1.1.0","institutional blue theme","governed visible freshness","850-word editorial layer","visible FAQ and exact FAQPage schema","canonical recommendation slot hidden in NOT_CONFIGURED","A4 selectable adaptive report","visual parity at four required viewports","rollback readiness"]
+}

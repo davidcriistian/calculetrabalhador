@@ -1,0 +1,10 @@
+{
+  "id": "snapshot-record-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "captured",
+  "createdAt": "2026-07-14",
+  "baseline": "clean Git working tree at operation start",
+  "existingFileSnapshot": "Git HEAD provides file-level baseline for every modified existing file",
+  "newTargetsBeforeExecution": "absent",
+  "rollbackReference": "/data/operations/reports/asset/calculator/calculadora-ferias-pj/rollback-plan.json"
+}

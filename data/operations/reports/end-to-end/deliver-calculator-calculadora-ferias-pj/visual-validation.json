@@ -1,0 +1,15 @@
+{
+  "id": "visual-validation-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "VISUAL_VALIDATION_PASSED",
+  "createdAt": "2026-07-14",
+  "browserExecuted": true,
+  "browser": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "viewports": [{"id":"small-mobile","width":320,"height":800},{"id":"large-mobile","width":430,"height":900},{"id":"intermediate","width":768,"height":1024},{"id":"desktop","width":1440,"height":1000}],
+  "statesPerViewport": ["entry","form-focus","empty-state","error-state","result","result-actions","adaptive-report"],
+  "evidenceCount": 28,
+  "evidenceDirectory": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/visual/",
+  "checks": {"institutionalTheme":"passed","hero":"passed","form":"passed","visibleFocus":"passed","error":"passed","empty":"passed","resultHierarchy":"passed","recommendationHidden":"passed","actions":"passed","tableOverflow":"passed","pageOverflow":"passed","adaptiveReport":"passed","footerAndPermanentContent":"passed","smallMobile":"passed","largeMobile":"passed","intermediate":"passed","desktop":"passed"},
+  "manualInspection": {"performed":true,"samples":["small-mobile-entry.png","small-mobile-error-state.png","desktop-result.png","desktop-adaptive-report.png"],"outcome":"passed"},
+  "parity": {"STRUCTURAL_PARITY":"passed","DESIGN_SYSTEM_PARITY":"passed","QUALITY_PARITY":"passed","RESPONSIVE_PARITY":"passed"}
+}

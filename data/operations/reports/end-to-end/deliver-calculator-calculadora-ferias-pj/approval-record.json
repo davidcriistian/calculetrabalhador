@@ -1,0 +1,11 @@
+{
+  "id": "approval-record-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "approved",
+  "approvedBy": "user-request",
+  "approvedAt": "2026-07-14",
+  "approvedScope": "Create and integrate Calculadora de Férias PJ using deliver-asset-end-to-end.",
+  "approvedFiles": ["new calculator page","scoped calculator tests and evidence","tools catalog and map","typed registry and publishing registry","editorial metadata","sitemap"],
+  "approvedUrls": ["https://calculetrabalhador.com.br/calculadora-ferias-pj/"],
+  "excludedScope": ["deploy","IndexNow send","Home change","global CSS or JavaScript change","existing calculator mutation"]
+}

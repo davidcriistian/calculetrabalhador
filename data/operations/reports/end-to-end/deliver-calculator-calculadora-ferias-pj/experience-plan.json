@@ -1,0 +1,29 @@
+{
+  "id": "experience-plan-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "approved-and-implemented",
+  "createdAt": "2026-07-14",
+  "contract": "/data/blueprints/contracts/calculator-experience.contract.json#1.1.0",
+  "brand": {"primaryTheme":"INSTITUTIONAL_BLUE","variationRequired":false,"gate":"BRAND_THEME_RESOLVED"},
+  "freshness": {"UPDATED_AT":"2026-07-14","visible":"Atualizado em julho de 2026","metadataSource":"/data/editorial-metadata.json","gate":"VISIBLE_UPDATED_AT_RESOLVED"},
+  "form": {"classification":"GUIDED_MULTI_STEP","justification":"Eight essential inputs and several high-impact planning assumptions require numbered progression.","groups":["pause timing","financial coverage","formation capacity"],"finalConfirmation":true,"dominantFinalCta":true},
+  "result": {"classification":"DECISION_REPORT","justification":"The result supports a financial choice about duration, timing and monthly contribution.","memoryLevel":"AUDITABLE_MEMORY","primaryResult":"net vacation target","secondaryResults":["gap","monthly contribution","revenue weight","progress"],"interpretation":true,"limitations":true,"nextSteps":true},
+  "content": {"permanentBeforeCalculation":true,"mainEditorialWordCount":850,"faqVisible":true,"faqSchemaExact":true,"officialSources":2,"gate":"EDITORIAL_DEPTH_RESOLVED"},
+  "conditionalModules": {"estimatedEffort":"APPLIES_IMPLEMENTED","stepNumbering":"APPLIES_IMPLEMENTED","finalConfirmation":"APPLIES_IMPLEMENTED","scenarioTags":"APPLIES_IMPLEMENTED","comparison":"APPLIES_IMPLEMENTED","summaryTable":"APPLIES_IMPLEMENTED","sources":"APPLIES_IMPLEMENTED","resultActions":"APPLIES_COPY_PRINT_PDF_IMPLEMENTED","resultRecommendations":"NOT_CONFIGURED_HIDDEN"},
+  "recommendation": {"slot":"CANONICAL_RESULT_RECOMMENDATION_SLOT","position":"after-interpretation-before-calculation-memory","state":"NOT_CONFIGURED","visible":false,"productRendered":false,"gate":"RECOMMENDATION_SLOT_RESOLVED"},
+  "adaptiveReport": {
+    "REPORT_INPUT_FIELDS": ["days","months until pause","personal income","fixed business costs","recurring revenue","extra costs","current reserve","average revenue"],
+    "REPORT_PRIMARY_RESULT": "net vacation target",
+    "REPORT_SECONDARY_RESULTS": ["gap","monthly contribution","revenue weight","progress"],
+    "REPORT_MEMORY_SECTIONS": ["premises","fraction","coverage components","gross cost","maintained revenue","net target","gap","contribution"],
+    "REPORT_INTERPRETATION": "scenario-aware interpretation",
+    "REPORT_LIMITATIONS": ["no CLT rule","no contractual guarantee","no return or inflation"],
+    "REPORT_OPTIONAL_SECTIONS": ["duration comparison"],
+    "outputs": ["ISOLATED_PRINT_REPORT","STRUCTURED_PDF"],
+    "a4": true,
+    "selectableText": true,
+    "viewportIndependent": true,
+    "gate": "ADAPTIVE_REPORT_CONTRACT_RESOLVED"
+  },
+  "antiPatternResolution": {"applicableBlockers":0,"applicableMajorsUnresolved":0,"genericIntroCard":false,"formWithoutJourney":false,"resultWithOnlyNumbers":false,"shallowCalculationMemory":false,"noResultInterpretation":false,"noNextSteps":false,"staticValidationOnly":false,"screenshotReport":false}
+}

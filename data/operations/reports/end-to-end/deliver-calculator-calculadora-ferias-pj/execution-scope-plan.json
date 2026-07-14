@@ -1,0 +1,9 @@
+{
+  "id": "execution-scope-plan-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "executed",
+  "required": ["create-calculator","generate-new-page","update-public-catalog","update-tools-map","register-asset","register-publishing","update-editorial-metadata","update-sitemap","run-testing","run-validation","generate-browser-preview","record-rollback","final-verify"],
+  "notApplicable": ["create-domain","create-nucleus","create-guide","create-cluster","modify-home","modify-category-page","modify-global-runtime","central-rule-update","legal-table-update","deploy","IndexNow-send"],
+  "publicFilesAllowed": ["/calculadora-ferias-pj/index.html","/data/tools.json","/data/maps/tools-map.json","/data/editorial-metadata.json","/sitemap.xml"],
+  "internalFilesAllowed": ["/scripts/test-ferias-pj.js","/scripts/capture-ferias-pj-visuals.js","/data/registry/","/data/publishing/registry/","/data/operations/reports/"]
+}

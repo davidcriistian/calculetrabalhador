@@ -728,6 +728,22 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "low"
+    },
+    {
+      "id": "calculadora-ferias-pj",
+      "slug": "/calculadora-ferias-pj/",
+      "url": "/calculadora-ferias-pj/",
+      "title": "Calculadora de Férias PJ",
+      "category": "PJ",
+      "domain": "PJ",
+      "runtime": "static-html",
+      "rulesUsed": [],
+      "dependencies": [],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "low"
     }
   ]
 }

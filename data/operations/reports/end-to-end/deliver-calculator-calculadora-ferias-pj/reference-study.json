@@ -1,0 +1,23 @@
+{
+  "id": "reference-study-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "referenceId": "calculator-multa-40-fgts-reference",
+  "physicalReferencePath": "/calculadora-multa-40-fgts/index.html",
+  "physicalPageOpened": true,
+  "modulesDecomposed": [
+    {"referenceModule":"themed hero","adaptation":"Institutional blue pause-planning identity, four output previews, governed freshness and dominant entry CTA."},
+    {"referenceModule":"discovery summary","adaptation":"Four vacation-planning outcomes and a two-minute effort label."},
+    {"referenceModule":"guided form cards","adaptation":"Three numbered stages and a final confirmation for eight domain-specific inputs."},
+    {"referenceModule":"dominant result","adaptation":"Net vacation target with gap, contribution, revenue weight and progress."},
+    {"referenceModule":"step-by-step memory","adaptation":"Eight-step auditable trace using a 30-day planning fraction and user-supplied values."},
+    {"referenceModule":"comparison table","adaptation":"Consistent 7, 15, 20 and 30-day scenarios preserving extras and time horizon."},
+    {"referenceModule":"interpretation and next steps","adaptation":"Progress and contribution-sensitive guidance without product recommendation."},
+    {"referenceModule":"post-result actions","adaptation":"Short copy summary, isolated print report and generated selectable PDF."},
+    {"referenceModule":"content, FAQ, sources and related links","adaptation":"850 intent-specific words, six exact FAQ pairs, two official sources and governed PJ links."}
+  ],
+  "literalCopyAvoidance": {"textCopied":false,"legalRulesCopied":false,"fieldsCopied":false,"identifiersCopied":false,"formulasCopied":false,"fixedStepCountCopied":false,"fixedThemeColorCopied":false,"pixelIdenticalCopy":false},
+  "parityAssessment": {"STRUCTURAL_PARITY":"passed","DESIGN_SYSTEM_PARITY":"passed","QUALITY_PARITY":"passed","RESPONSIVE_PARITY":"passed"},
+  "evidence": ["/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/visual-validation.json","/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/visual/"]
+}

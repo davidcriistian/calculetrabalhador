@@ -1,0 +1,7 @@
+{
+  "id": "testing-plan-calculator-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "executed-passed",
+  "layers": ["calculation baseline and negative cases","rounding","empty and error states","HTML structure","JSON-LD and FAQ equivalence","internal links","catalog and registry identity","adaptive report HTML","structured PDF generation","copy/print/download actions","responsive browser matrix"],
+  "automation": ["/scripts/test-ferias-pj.js","/scripts/capture-ferias-pj-visuals.js"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "indexnow-dry-run-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "dry-run-only",
+  "createdAt": "2026-07-14",
+  "url": "https://calculetrabalhador.com.br/calculadora-ferias-pj/",
+  "eligibleAfterDeployment": true,
+  "requestPrepared": false,
+  "sent": false,
+  "reason": "No explicit approval to deploy or send IndexNow."
+}

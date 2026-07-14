@@ -1,0 +1,22 @@
+{
+  "id": "publishing-calculator-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {"current":"published","previous":"approved","maximumAllowedInThisOperation":"published"},
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-ferias-pj/",
+  "actions": {"publishes":true,"deploys":false,"modifiesSitemap":true,"createsPublicPage":true,"modifiesExistingPage":false,"callsIndexNow":false,"indexNowDryRunOnly":true},
+  "evidence": [
+    "/calculadora-ferias-pj/index.html",
+    "/data/tools.json",
+    "/data/maps/tools-map.json",
+    "/sitemap.xml",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/final-operation-report.json"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "final-operation-report-calculadora-ferias-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_END_TO_END_DELIVERY",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "completed",
+  "createdAt": "2026-07-14",
+  "result": "CALCULATOR CREATED, INTEGRATED AND VALIDATED",
+  "filesCreated": ["/calculadora-ferias-pj/index.html","/scripts/test-ferias-pj.js","/scripts/capture-ferias-pj-visuals.js","/data/registry/by-type/calculator-calculadora-ferias-pj.json","/data/publishing/registry/calculator-calculadora-ferias-pj-published.json","/data/operations/reports/asset/calculator/calculadora-ferias-pj/","/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/"],
+  "filesModified": ["/data/tools.json","/data/maps/tools-map.json","/data/registry/by-type/index.json","/data/publishing/registry/index.json","/data/editorial-metadata.json","/sitemap.xml"],
+  "governance": {"blueprint":"/data/blueprints/calculator/index.json#0.3.0","experienceContract":"/data/blueprints/contracts/calculator-experience.contract.json#1.1.0","goldStandard":"/data/gold-standards/calculator/index.json#1.2","registry":"registered-published","publishing":"registered-published","rollback":"ready"},
+  "experience": {"brandTheme":"INSTITUTIONAL_BLUE","UPDATED_AT":"2026-07-14","formComplexityClass":"GUIDED_MULTI_STEP","resultExperienceClass":"DECISION_REPORT","calculationMemoryLevel":"AUDITABLE_MEMORY","editorialWordCount":850,"recommendationState":"NOT_CONFIGURED","adaptiveReport":"STRUCTURED_PDF_AND_ISOLATED_PRINT_REPORT","visualStatus":"VISUAL_VALIDATION_PASSED"},
+  "relationships": {"primaryDomain":"pj","primaryNucleus":"nucleus:pj","primaryGuide":"guide:guide-pj","primaryCluster":null,"role":"secondary-supporting-calculator","primaryCalculatorPreserved":"calculator:calculadora-clt-ou-pj"},
+  "ruleAssessment": {"hardcodedLegalRule":false,"financialPremises":"USER_INPUT","formulas":"LOCAL_NON_LEGAL_FORMULA","centralRuleOrFallbackRequired":false},
+  "validation": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/validation-results.json",
+  "visualValidation": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/visual-validation.json",
+  "reportValidation": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/report-render-validation.json",
+  "rollback": "/data/operations/reports/asset/calculator/calculadora-ferias-pj/rollback-plan.json",
+  "replay": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/idempotency-replay.json",
+  "unchangedPublicAreas": ["existing calculators","existing articles","Home","Guide PJ physical page","clusters","global CSS","global JavaScript","runtime bundles"],
+  "finalConfirmation": {"deployed":false,"indexNowSent":false,"gitWriteExecuted":false,"publicFilesPrepared":true}
+}

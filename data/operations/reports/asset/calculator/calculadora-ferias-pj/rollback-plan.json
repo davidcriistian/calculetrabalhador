@@ -1,0 +1,9 @@
+{
+  "id": "rollback-plan-calculator-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "ready",
+  "createdAt": "2026-07-14",
+  "removeCreatedPaths": ["/calculadora-ferias-pj/","/scripts/test-ferias-pj.js","/scripts/capture-ferias-pj-visuals.js","/data/registry/by-type/calculator-calculadora-ferias-pj.json","/data/publishing/registry/calculator-calculadora-ferias-pj-published.json","/data/operations/reports/asset/calculator/calculadora-ferias-pj/","/data/operations/reports/end-to-end/deliver-calculator-calculadora-ferias-pj/"],
+  "revertCatalogMutations": ["remove the single matching entry from /data/tools.json","remove the matching item from /data/maps/tools-map.json","remove the matching registry and publishing index entries","remove /calculadora-ferias-pj/ from /data/editorial-metadata.json","remove the matching sitemap URL"],
+  "safety": "Rollback is scoped only to calculator:calculadora-ferias-pj and must preserve all pre-existing assets and user changes."
+}

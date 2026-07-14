@@ -198,5 +198,15 @@
     "anoBase": 2026,
     "fonteResumo": "Conteúdo educativo baseado nas regras trabalhistas vigentes em 2026.",
     "aviso": "Este conteúdo é informativo e não substitui orientação profissional."
+  },
+  "/calculadora-ferias-pj/": {
+    "tipo": "calculadora",
+    "titulo": "Calculadora de Férias PJ",
+    "publicadoEm": "2026-07-14",
+    "atualizadoEm": "2026-07-14",
+    "revisadoEm": "2026-07-14",
+    "anoBase": 2026,
+    "fonteResumo": "Planejamento financeiro baseado nos valores informados pelo usuário.",
+    "aviso": "A simulação não aplica verbas de férias CLT nem substitui a conferência do contrato."
   }
 }

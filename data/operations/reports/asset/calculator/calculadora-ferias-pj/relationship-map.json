@@ -1,0 +1,14 @@
+{
+  "id": "relationship-map-calculator-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "approved-secondary",
+  "primaryDomain": "pj",
+  "primaryNucleus": "nucleus:pj",
+  "primaryGuide": "guide:guide-pj",
+  "primaryCluster": null,
+  "role": "secondary-supporting-calculator",
+  "primaryCalculatorPreserved": "calculator:calculadora-clt-ou-pj",
+  "relatedCalculators": ["calculator:calculadora-reserva-financeira-pj","calculator:calculadora-custo-mensal-pj","calculator:calculadora-valor-hora-pj"],
+  "relatedArticles": ["article:quanto-preciso-ganhar-como-pj-para-compensar-clt","article:contrato-pj-o-que-analisar-antes-de-aceitar"],
+  "decision": "The calculator serves the distinct intent of funding a planned PJ pause without replacing emergency-reserve, pricing or CLT-versus-PJ tools."
+}

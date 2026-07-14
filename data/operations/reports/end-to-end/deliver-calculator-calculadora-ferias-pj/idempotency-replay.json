@@ -1,0 +1,8 @@
+{
+  "id": "idempotency-replay-calculadora-ferias-pj",
+  "assetId": "calculator:calculadora-ferias-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "duplicates": {"physicalPage":1,"toolsCatalogEntry":1,"toolsMapEntry":1,"registryEntry":1,"publishingEntry":1,"editorialMetadataEntry":1,"sitemapUrl":1},
+  "replayDecision": "SKIPPED_ALREADY_COMPLIANT"
+}

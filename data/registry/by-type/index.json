@@ -156,6 +156,18 @@
                                        ]
                     },
                     {
+                        "id":  "calculadora-ferias-pj",
+                        "assetId":  "calculator:calculadora-ferias-pj",
+                        "type":  "calculator",
+                        "slug":  "calculadora-ferias-pj",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-ferias-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "guide-pj",
                         "assetId":  "guide:guide-pj",
                         "type":  "guide",

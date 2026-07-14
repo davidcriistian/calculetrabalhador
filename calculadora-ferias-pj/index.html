@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Férias PJ | Planeje sua pausa</title>
+  <meta name="description" content="Calcule quanto guardar para férias PJ, cubra renda e custos da empresa, desconte receitas recorrentes e veja o aporte mensal até a pausa." />
+  <meta name="robots" content="index,follow" />
+  <meta name="updated_at" content="2026-07-14" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-ferias-pj/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora de Férias PJ" />
+  <meta property="og:description" content="Transforme sua próxima pausa em uma meta: renda, custos fixos, receita recorrente, reserva atual e aporte mensal." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-ferias-pj/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Calculadora de Férias PJ" />
+  <meta name="twitter:description" content="Descubra a meta e o aporte mensal para planejar uma pausa como PJ." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    input, select, button { box-sizing: border-box; line-height: 1.35; }
+    input[type="number"], select { min-height: 50px; min-width: 0; max-width: 100%; }
+    select {
+      appearance: none;
+      background-image: linear-gradient(45deg, transparent 50%, #475569 50%), linear-gradient(135deg, #475569 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+      background-repeat: no-repeat;
+      background-size: 6px 6px, 6px 6px;
+      padding-right: 2.75rem !important;
+    }
+    :focus-visible { outline: 3px solid #60a5fa; outline-offset: 3px; }
+    .result-progress { transition: width .35s ease; }
+    .editorial-copy p { margin-top: 1rem; line-height: 1.85; color: #334155; }
+    .editorial-copy h3 { margin-top: 1.75rem; color: #0f172a; font-size: 1.25rem; font-weight: 800; }
+    @media print { body { background: #fff !important; } }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-800 to-blue-600">
+      <div class="pointer-events-none absolute inset-0" style="background-image:radial-gradient(circle at 15% 35%,rgba(255,255,255,.10),transparent 34%),radial-gradient(circle at 88% 12%,rgba(255,255,255,.13),transparent 32%)"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Início</a><span aria-hidden="true">›</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a><span aria-hidden="true">›</span>
+          <span class="text-white">Férias PJ</span>
+        </nav>
+        <div class="mt-6 lg:max-w-[82%]">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">Planejamento de pausa PJ</span>
+          <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora de Férias PJ</h1>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-blue-50">Planeje quanto reservar para manter sua renda e os custos do negócio durante uma pausa. A simulação desconta a receita recorrente prevista e transforma a diferença em um aporte mensal.</p>
+          <p class="mt-3 text-sm font-semibold text-blue-100">Atualizado em julho de 2026</p>
+          <div class="mt-5 grid max-w-3xl gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Meta líquida para a pausa</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Aporte mensal necessário</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Peso sobre o faturamento</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Cenários de 7 a 30 dias</span>
+          </div>
+          <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-900 shadow-sm transition hover:bg-blue-50 sm:w-auto">Planejar minhas férias PJ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que você vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold text-slate-950">Uma meta de férias compatível com o seu caixa</h2>
+          </div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-950 ring-1 ring-blue-100 sm:w-auto">Tempo estimado: 2 minutos</span>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Custo da pausa</p><p class="mt-1 text-sm text-slate-600">Renda pessoal, empresa e gastos extras.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Receita que continua</p><p class="mt-1 text-sm text-slate-600">Valor recorrente proporcional aos dias.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Valor ainda necessário</p><p class="mt-1 text-sm text-slate-600">Meta líquida menos a reserva atual.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Ritmo de formação</p><p class="mt-1 text-sm text-slate-600">Aporte e percentual do faturamento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div id="simulador-intro" class="mb-6">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Simulador</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950 sm:text-3xl">Monte o plano da sua próxima pausa</h2>
+        <p class="mt-3 max-w-3xl leading-8 text-slate-700">Preencha três etapas. Os valores são premissas pessoais: a calculadora não presume férias remuneradas, adicional de 1/3 nem qualquer condição que não esteja no seu contrato.</p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <form id="ferias-pj-form" class="min-w-0 space-y-6" novalidate aria-label="Calculadora de Férias PJ">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="agenda-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 font-extrabold text-white shadow-sm">1</div>
+                <div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Agenda da pausa</p><h3 id="agenda-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quando e por quantos dias você quer parar?</h3><p class="mt-2 leading-7 text-slate-600">O prazo define quantos aportes cabem no plano. Os dias determinam a fração mensal de renda, custos e receita recorrente.</p></div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block"><span class="text-sm font-bold text-slate-700">Dias de férias planejados</span><input id="diasFerias" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" aria-describedby="ajuda-dias" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-dias" class="mt-2 block text-xs leading-5 text-slate-500">Informe de 1 a 60 dias corridos para esta simulação.</span></label>
+                <label class="block"><span class="text-sm font-bold text-slate-700">Meses até o início das férias</span><input id="mesesAteFerias" type="number" min="1" max="60" step="1" value="10" inputmode="numeric" aria-describedby="ajuda-meses" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-meses" class="mt-2 block text-xs leading-5 text-slate-500">Use meses completos disponíveis para formar a reserva.</span></label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="cobertura-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 font-extrabold text-white shadow-sm">2</div>
+                <div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Cobertura financeira</p><h3 id="cobertura-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quais valores precisam atravessar a pausa?</h3><p class="mt-2 leading-7 text-slate-600">Separe renda pessoal, custos da empresa e gastos extras. Informe somente a receita que realmente continuará entrando sem depender do trabalho durante a pausa.</p></div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block"><span class="text-sm font-bold text-slate-700">Renda pessoal mensal desejada (R$)</span><input id="rendaPessoal" type="number" min="0" step="0.01" value="6000" inputmode="decimal" aria-describedby="ajuda-renda" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-renda" class="mt-2 block text-xs leading-5 text-slate-500">Valor mensal que sustenta sua vida pessoal, não o faturamento bruto.</span></label>
+                <label class="block"><span class="text-sm font-bold text-slate-700">Custos fixos mensais da empresa (R$)</span><input id="custosFixos" type="number" min="0" step="0.01" value="1500" inputmode="decimal" aria-describedby="ajuda-custos" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-custos" class="mt-2 block text-xs leading-5 text-slate-500">Contabilidade, ferramentas, aluguel, internet e outros compromissos.</span></label>
+                <label class="block"><span class="text-sm font-bold text-slate-700">Receita recorrente mensal durante a pausa (R$)</span><input id="receitaRecorrente" type="number" min="0" step="0.01" value="1000" inputmode="decimal" aria-describedby="ajuda-recorrente" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-recorrente" class="mt-2 block text-xs leading-5 text-slate-500">Contratos ou receitas que continuam sem exigir entrega no período.</span></label>
+                <label class="block"><span class="text-sm font-bold text-slate-700">Gastos extras das férias (R$)</span><input id="gastosExtras" type="number" min="0" step="0.01" value="3000" inputmode="decimal" aria-describedby="ajuda-extras" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-extras" class="mt-2 block text-xs leading-5 text-slate-500">Viagem, lazer ou despesas específicas, sem repetir custos já informados.</span></label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="capacidade-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 font-extrabold text-white shadow-sm">3</div>
+                <div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Capacidade de formação</p><h3 id="capacidade-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quanto já existe e qual é sua referência de receita?</h3><p class="mt-2 leading-7 text-slate-600">A reserva atual reduz o valor faltante. O faturamento médio serve apenas para mostrar o peso do aporte mensal projetado.</p></div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block"><span class="text-sm font-bold text-slate-700">Reserva atual para férias (R$)</span><input id="reservaAtual" type="number" min="0" step="0.01" value="2000" inputmode="decimal" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /></label>
+                <label class="block"><span class="text-sm font-bold text-slate-700">Faturamento médio mensal (R$)</span><input id="faturamentoMensal" type="number" min="0.01" step="0.01" value="12000" inputmode="decimal" aria-describedby="ajuda-faturamento" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /><span id="ajuda-faturamento" class="mt-2 block text-xs leading-5 text-slate-500">Use uma média realista antes de impostos e custos.</span></label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-blue-200 bg-blue-50 p-5 sm:p-6" aria-labelledby="confirmacao-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Confirmação</p>
+              <h3 id="confirmacao-title" class="mt-1 text-xl font-extrabold text-blue-950">Gere seu plano de férias PJ</h3>
+              <p class="mt-2 leading-7 text-blue-900">Você receberá meta líquida, aporte mensal, peso sobre o faturamento, quatro cenários e memória de cálculo reproduzível.</p>
+              <div id="form-error" class="mt-4 hidden rounded-xl border border-red-200 bg-red-50 p-4 font-semibold text-red-800" role="alert" tabindex="-1"></div>
+              <button type="submit" class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-base font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-blue-800">Calcular reserva para férias</button>
+            </section>
+          </form>
+
+          <section id="resultado-vazio" class="mt-8 rounded-3xl border border-dashed border-slate-300 bg-white p-7 text-center" aria-live="polite">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Seu relatório aparecerá aqui</p>
+            <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Preencha as três etapas e calcule</h2>
+            <p class="mx-auto mt-3 max-w-xl leading-7 text-slate-600">Os valores são processados no navegador e não são enviados por esta calculadora.</p>
+          </section>
+
+          <section id="resultado" class="mt-8 hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="resultado-title">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Seu plano</p><h2 id="resultado-title" class="mt-1 text-2xl font-extrabold text-slate-950 sm:text-3xl">Reserva para férias PJ</h2></div>
+              <span id="status-plano" class="inline-flex w-fit rounded-full px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1"></span>
+            </div>
+            <div id="badges-resultado" class="mt-5 flex flex-wrap gap-2" aria-label="Premissas do cenário"></div>
+
+            <div class="mt-6 rounded-3xl bg-blue-700 p-5 text-white sm:p-7">
+              <p class="text-sm font-bold uppercase tracking-wide text-blue-100">Meta líquida para a pausa</p>
+              <p id="resMeta" class="mt-2 break-words text-4xl font-extrabold sm:text-5xl"></p>
+              <p id="resSignificado" class="mt-3 max-w-3xl leading-7 text-blue-50"></p>
+            </div>
+
+            <div class="mt-5 rounded-2xl border border-slate-200 p-4">
+              <div class="flex items-center justify-between gap-4"><span class="text-sm font-bold text-slate-700">Progresso da reserva</span><strong id="resProgresso" class="text-sm text-blue-800"></strong></div>
+              <div class="mt-3 h-3 overflow-hidden rounded-full bg-slate-200"><div id="barra-progresso" class="result-progress h-full rounded-full bg-blue-600" style="width:0%"></div></div>
+            </div>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Valor que falta</p><p id="resFalta" class="mt-1 text-xl font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Aporte mensal</p><p id="resAporte" class="mt-1 text-xl font-extrabold text-slate-950"></p></div>
+              <div class="rounded-2xl bg-slate-50 p-4"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Peso no faturamento</p><p id="resPeso" class="mt-1 text-xl font-extrabold text-slate-950"></p></div>
+            </div>
+
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="interpretacao-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Leitura do cenário</p>
+              <h3 id="interpretacao-title" class="mt-1 text-xl font-extrabold text-blue-950">O que este resultado indica</h3>
+              <p id="resInterpretacao" class="mt-3 leading-7 text-blue-900"></p>
+              <ul id="proximos-passos" class="mt-4 space-y-2 text-sm font-semibold leading-6 text-blue-950"></ul>
+            </section>
+
+            <div id="CANONICAL_RESULT_RECOMMENDATION_SLOT" hidden data-state="NOT_CONFIGURED" aria-hidden="true"></div>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memoria-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Memória auditável</p>
+              <h3 id="memoria-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo reproduzível</h3>
+              <ol id="memoria-lista" class="mt-4 space-y-3 text-sm leading-7 text-slate-700"></ol>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="cenarios-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Comparação</p>
+              <h3 id="cenarios-title" class="mt-1 text-xl font-extrabold text-slate-950">Como a duração muda a meta</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Os gastos extras e o prazo até a pausa permanecem iguais em todos os cenários.</p>
+              <div class="mt-4 max-w-full overflow-x-auto"><table class="w-full min-w-[680px] border-collapse text-left text-sm"><thead class="bg-slate-100 text-slate-700"><tr><th class="px-4 py-3">Duração</th><th class="px-4 py-3">Custo bruto</th><th class="px-4 py-3">Receita mantida</th><th class="px-4 py-3">Meta líquida</th><th class="px-4 py-3">Aporte/mês</th></tr></thead><tbody id="tabela-cenarios" class="divide-y divide-slate-200"></tbody></table></div>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="limites-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-amber-700">Limitações</p>
+              <h3 id="limites-title" class="mt-1 text-xl font-extrabold text-amber-950">Uma projeção, não uma garantia de renda</h3>
+              <p class="mt-2 leading-7 text-amber-900">A conta não prevê cancelamentos, atrasos de clientes, impostos, inflação, rendimento da reserva nem mudanças no faturamento. Confirme no contrato qualquer receita durante a pausa e mantenha esta meta separada da reserva de emergência.</p>
+            </section>
+
+            <div class="no-print mt-7 grid gap-3 sm:grid-cols-3">
+              <button id="btnCopiar" type="button" class="rounded-xl border border-blue-200 bg-white px-4 py-3 font-extrabold text-blue-800 hover:bg-blue-50">Copiar resumo</button>
+              <button id="btnImprimir" type="button" class="rounded-xl border border-slate-300 bg-white px-4 py-3 font-extrabold text-slate-700 hover:bg-slate-50">Imprimir relatório</button>
+              <button id="btnBaixar" type="button" class="rounded-xl bg-slate-900 px-4 py-3 font-extrabold text-white hover:bg-slate-800">Baixar PDF</button>
+            </div>
+          </section>
+        </div>
+
+        <aside class="no-print lg:sticky lg:top-6">
+          <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Nesta página</p>
+            <nav class="mt-4 grid gap-2 text-sm font-bold text-slate-600" aria-label="Navegação da ferramenta">
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#simulador">Calculadora</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#resultado">Resultado</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#metodologia">Metodologia</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#faq">Dúvidas frequentes</a>
+              <a class="rounded-xl px-3 py-2 hover:bg-blue-50 hover:text-blue-800" href="#fontes">Fontes</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="metodologia" class="mx-auto max-w-6xl px-4 pb-8">
+      <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Guia e metodologia</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950 sm:text-3xl">Como planejar férias sendo PJ</h2>
+        <div id="editorial-main" class="editorial-copy mt-4 max-w-4xl">
+          <p>Para quem trabalha como pessoa jurídica, uma pausa costuma exigir duas decisões ao mesmo tempo: quanto dinheiro precisa estar disponível e quanto trabalho pode deixar de ser faturado. Esta calculadora organiza essas decisões em uma meta única, mas conserva os componentes separados. Assim, você consegue revisar a renda pessoal, os custos da empresa, a receita que continua entrando e os gastos próprios das férias sem transformar tudo em um número difícil de explicar.</p>
+          <h3>Férias PJ não são calculadas como férias CLT</h3>
+          <p>A ferramenta não aplica salário acrescido de um terço, abono ou descontos trabalhistas. O artigo 129 da CLT trata das férias anuais do empregado; esta página, por outro lado, parte de valores informados por quem presta serviços como PJ. Se o seu contrato comercial prevê pausa remunerada, mensalidade fixa, aviso ou compensação específica, represente apenas o fluxo que realmente ocorrerá: coloque a receita mantida no campo correspondente e confirme as condições diretamente no contrato.</p>
+          <p>Essa separação evita um erro comum: copiar a fórmula de férias de um vínculo de emprego para uma relação comercial com dinâmica diferente. A meta PJ é financeira e contratual. Ela busca dar caixa para uma pausa planejada, não reconhecer direito, classificar vínculo ou substituir análise jurídica. Quando a rotina prática tiver características de emprego ou houver dúvida sobre o contrato, a simulação não resolve essa questão.</p>
+          <h3>Comece pela renda pessoal que precisa continuar</h3>
+          <p>Informe uma renda mensal compatível com suas despesas pessoais durante o período, e não o faturamento bruto da empresa. A calculadora divide esse valor por 30 e multiplica pelos dias de pausa. Esse rateio diário é uma convenção de planejamento, útil para comparar durações diferentes. Ele não afirma que todo mês tenha o mesmo número de dias úteis ou que sua receita seja produzida de maneira uniforme.</p>
+          <p>Se as despesas durante a viagem forem menores do que em um mês comum, ajuste a renda pessoal antes de calcular. Se continuarem iguais — aluguel, escola, plano de saúde, alimentação e parcelas — mantenha uma referência que cubra esses compromissos. O objetivo é evitar que a reserva pareça suficiente apenas porque algumas despesas foram esquecidas.</p>
+          <h3>Inclua os custos fixos que não param com você</h3>
+          <p>Contabilidade, licenças de software, ferramentas, domínio, aluguel, telefone empresarial e parcelas de equipamentos podem continuar vencendo mesmo sem novas entregas. Some somente os custos fixos mensais relevantes. Despesas variáveis que desaparecem durante a pausa não precisam entrar. Tributos devem ser incluídos apenas se houver pagamento previsível ligado ao período; a calculadora não escolhe regime ou alíquota.</p>
+          <p>Renda pessoal e custos da empresa são rateados pela mesma proporção de dias. Em uma pausa de 15 dias, por exemplo, a conta considera metade de cada base mensal. Se algum custo vencer integralmente e não puder ser rateado na prática, você pode incorporá-lo em gastos extras para que a meta reflita o caixa necessário.</p>
+          <h3>Desconte apenas receita recorrente confiável</h3>
+          <p>Receita recorrente é o valor que tende a continuar entrando sem exigir trabalho incompatível com a pausa. Uma assinatura, licenciamento ou contrato mensal já confirmado pode se encaixar; uma proposta ainda não aprovada ou um projeto que depende de entregas durante as férias não. A receita mensal informada também é proporcional aos dias e reduz o custo bruto da pausa.</p>
+          <p>Use uma premissa conservadora quando houver risco de atraso ou cancelamento. A meta não precisa descontar toda receita possível. Você pode informar somente a parcela cuja data, valor e obrigação estejam suficientemente claros. Depois do cálculo, a memória mostra o desconto aplicado, facilitando uma nova simulação se o contrato mudar.</p>
+          <h3>Separe gastos extras e reserva de emergência</h3>
+          <p>Passagens, hospedagem, passeios, seguro-viagem e outras despesas específicas entram como gastos extras. Esse valor não é rateado pelos dias, pois representa o orçamento total informado para a pausa. Evite repetir itens já incluídos na renda pessoal ou nos custos da empresa. A tabela de cenários mantém os mesmos gastos extras para evidenciar apenas o efeito da duração.</p>
+          <p>Uma reserva para férias financia um evento previsível. A reserva de emergência protege contra choques inesperados. Misturar as duas pode deixar a segurança cotidiana menor depois da viagem. O Banco Central relaciona planejamento, controle de receitas e despesas e capacidade de lidar com choques ao bem-estar financeiro. Por isso, a reserva atual deste cálculo deve ser o valor realmente separado para a pausa.</p>
+          <h3>Transforme a diferença em aporte mensal</h3>
+          <p>A meta líquida é o custo bruto menos a receita recorrente proporcional. Em seguida, a calculadora subtrai a reserva atual. Se ainda houver diferença, divide o valor pelos meses disponíveis até as férias. O resultado é um ritmo linear: não considera rendimentos, inflação nem oscilação mensal de receita. Valores monetários são arredondados para centavos, enquanto o percentual sobre o faturamento aparece com uma casa decimal.</p>
+          <p>O percentual do aporte sobre o faturamento ajuda a testar viabilidade, não define uma faixa ideal. Um peso elevado pode indicar que o prazo é curto, os gastos extras são altos ou a renda desejada precisa ser revista. Compare 7, 15, 20 e 30 dias com a mesma base, escolha conscientemente o que pretende preservar e atualize o plano quando contratos, custos ou datas mudarem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="mx-auto max-w-6xl px-4 pb-8">
+      <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Dúvidas frequentes</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Perguntas sobre férias PJ</h2>
+        <div class="mt-5 space-y-3">
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Como calcular quanto guardar para férias PJ?</summary><p class="mt-3 leading-7 text-slate-700">Some a renda pessoal e os custos da empresa proporcionais aos dias, acrescente os gastos extras, desconte a receita recorrente prevista e a reserva atual. Divida o valor faltante pelos meses até a pausa.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A calculadora adiciona um terço de férias?</summary><p class="mt-3 leading-7 text-slate-700">Não. A ferramenta não aplica verbas de férias CLT. Ela monta uma meta de planejamento com os valores informados pelo usuário e não presume benefício ou pagamento contratual.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O que colocar como receita recorrente durante a pausa?</summary><p class="mt-3 leading-7 text-slate-700">Informe somente receitas que devem continuar entrando sem exigir trabalho durante as férias, conforme contratos e condições que você tenha confirmado.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Os gastos extras são proporcionais aos dias?</summary><p class="mt-3 leading-7 text-slate-700">Não. A calculadora considera o valor total informado em todos os cenários. Renda, custos fixos e receita recorrente são proporcionais aos dias.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso usar minha reserva de emergência?</summary><p class="mt-3 leading-7 text-slate-700">A simulação aceita qualquer reserva atual informada, mas é mais claro separar a reserva de férias, que cobre um evento previsto, da reserva destinada a imprevistos.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A projeção considera rendimento do dinheiro guardado?</summary><p class="mt-3 leading-7 text-slate-700">Não. O aporte é calculado de forma linear, sem juros, inflação, impostos sobre investimentos ou mudanças futuras nas receitas e despesas.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="fontes" class="mx-auto max-w-6xl px-4 pb-8">
+      <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Fontes e critérios</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Referências usadas para contextualizar a ferramenta</h2>
+        <ul class="mt-4 space-y-3 leading-7 text-slate-700">
+          <li><a class="font-bold text-blue-700 underline" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm" target="_blank" rel="noopener noreferrer">Consolidação das Leis do Trabalho — artigo 129</a>: referência oficial para distinguir o direito anual de férias do empregado da meta financeira simulada nesta página.</li>
+          <li><a class="font-bold text-blue-700 underline" href="https://www.bcb.gov.br/cidadaniafinanceira/letramento_financeiro" target="_blank" rel="noopener noreferrer">Banco Central — Letramento Financeiro</a>: contexto oficial sobre controle de renda e gastos, planejamento e resiliência financeira.</li>
+        </ul>
+        <p class="mt-4 text-sm leading-6 text-slate-500">As fórmulas da calculadora são aritmética local baseada exclusivamente nos valores do usuário. Nenhuma tabela tributária ou regra trabalhista é aplicada ao resultado.</p>
+      </div>
+    </section>
+
+    <section id="relacionados" class="mx-auto grid max-w-6xl gap-5 px-4 pb-12 lg:grid-cols-2">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Ferramentas relacionadas</p><h2 class="mt-2 text-2xl font-extrabold text-slate-950">Complete seu planejamento PJ</h2><ul class="mt-4 space-y-3"><li><a class="font-bold text-blue-700 underline" href="/calculadora-reserva-financeira-pj/">Reserva Financeira PJ</a><p class="text-sm text-slate-600">Planeje proteção para meses de baixa receita e imprevistos.</p></li><li><a class="font-bold text-blue-700 underline" href="/calculadora-custo-mensal-pj/">Custo Mensal PJ</a><p class="text-sm text-slate-600">Organize custos, tributos, benefícios e reservas.</p></li><li><a class="font-bold text-blue-700 underline" href="/calculadora-valor-hora-pj/">Valor Hora PJ</a><p class="text-sm text-slate-600">Inclua dias não faturáveis na formação do seu preço.</p></li></ul></div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Continue aprendendo</p><h2 class="mt-2 text-2xl font-extrabold text-slate-950">Conteúdos para quem trabalha como PJ</h2><ul class="mt-4 space-y-3"><li><a class="font-bold text-blue-700 underline" href="/guias/pj/">Guia PJ</a></li><li><a class="font-bold text-blue-700 underline" href="/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/">Quanto preciso ganhar como PJ para compensar CLT</a></li><li><a class="font-bold text-blue-700 underline" href="/blog/contrato-pj-o-que-analisar-antes-de-aceitar/">Contrato PJ: o que analisar antes de aceitar</a></li></ul></div>
+    </section>
+  </main>
+
+  <div id="global-footer"></div>
+
+  <script>
+    (function () {
+      'use strict';
+      var $ = function (id) { return document.getElementById(id); };
+      var money = function (value) { return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); };
+      var decimal = function (value, digits) { return value.toLocaleString('pt-BR', { minimumFractionDigits: digits == null ? 1 : digits, maximumFractionDigits: digits == null ? 1 : digits }); };
+      var roundMoney = function (value) { return Math.round((value + Number.EPSILON) * 100) / 100; };
+      var recommendationState = 'NOT_CONFIGURED';
+      var latestReport = null;
+      var REPORT_DECLARATIONS = {
+        REPORT_INPUT_FIELDS: ['diasFerias', 'mesesAteFerias', 'rendaPessoal', 'custosFixos', 'receitaRecorrente', 'gastosExtras', 'reservaAtual', 'faturamentoMensal'],
+        REPORT_PRIMARY_RESULT: 'metaLiquida',
+        REPORT_SECONDARY_RESULTS: ['valorFaltante', 'aporteMensal', 'pesoFaturamento', 'progresso'],
+        REPORT_MEMORY_SECTIONS: ['premissas', 'proporcao', 'custoBruto', 'receitaMantida', 'metaLiquida', 'valorFaltante', 'aporte'],
+        REPORT_INTERPRETATION: 'scenario-aware',
+        REPORT_LIMITATIONS: ['sem rendimento', 'sem inflação', 'sem garantia contratual', 'sem regra CLT'],
+        REPORT_OPTIONAL_SECTIONS: ['comparação de durações']
+      };
+
+      function numericValue(id) {
+        var raw = String($(id) && $(id).value != null ? $(id).value : '').trim().replace(',', '.');
+        if (raw === '') return 0;
+        var value = Number(raw);
+        if (!Number.isFinite(value)) throw new Error('Preencha todos os campos com números válidos.');
+        return value;
+      }
+
+      function scenarioForDays(input, days) {
+        var factor = days / 30;
+        var rendaPeriodo = roundMoney(input.rendaPessoal * factor);
+        var custosPeriodo = roundMoney(input.custosFixos * factor);
+        var receitaPeriodo = roundMoney(input.receitaRecorrente * factor);
+        var custoBruto = roundMoney(rendaPeriodo + custosPeriodo + input.gastosExtras);
+        var metaLiquida = roundMoney(Math.max(0, custoBruto - receitaPeriodo));
+        var valorFaltante = roundMoney(Math.max(0, metaLiquida - input.reservaAtual));
+        var aporteMensal = roundMoney(valorFaltante / input.mesesAteFerias);
+        return { dias: days, fator: factor, rendaPeriodo: rendaPeriodo, custosPeriodo: custosPeriodo, receitaPeriodo: receitaPeriodo, custoBruto: custoBruto, metaLiquida: metaLiquida, valorFaltante: valorFaltante, aporteMensal: aporteMensal };
+      }
+
+      function calculateFeriasPj(input) {
+        input = input || {};
+        var fields = ['diasFerias', 'mesesAteFerias', 'rendaPessoal', 'custosFixos', 'receitaRecorrente', 'gastosExtras', 'reservaAtual', 'faturamentoMensal'];
+        fields.forEach(function (field) {
+          if (!Number.isFinite(Number(input[field]))) throw new Error('Todos os valores devem ser números válidos.');
+          if (Number(input[field]) < 0) throw new Error('Os valores não podem ser negativos.');
+        });
+        var normalized = {
+          diasFerias: Number(input.diasFerias), mesesAteFerias: Number(input.mesesAteFerias),
+          rendaPessoal: roundMoney(Number(input.rendaPessoal)), custosFixos: roundMoney(Number(input.custosFixos)),
+          receitaRecorrente: roundMoney(Number(input.receitaRecorrente)), gastosExtras: roundMoney(Number(input.gastosExtras)),
+          reservaAtual: roundMoney(Number(input.reservaAtual)), faturamentoMensal: roundMoney(Number(input.faturamentoMensal))
+        };
+        if (!Number.isInteger(normalized.diasFerias) || normalized.diasFerias < 1 || normalized.diasFerias > 60) throw new Error('Informe de 1 a 60 dias inteiros de férias.');
+        if (!Number.isInteger(normalized.mesesAteFerias) || normalized.mesesAteFerias < 1 || normalized.mesesAteFerias > 60) throw new Error('Informe de 1 a 60 meses inteiros até as férias.');
+        if (normalized.faturamentoMensal <= 0) throw new Error('Informe um faturamento médio mensal maior que zero.');
+        if (normalized.rendaPessoal + normalized.custosFixos + normalized.gastosExtras <= 0) throw new Error('Informe pelo menos uma necessidade de renda, custo fixo ou gasto extra.');
+        var selected = scenarioForDays(normalized, normalized.diasFerias);
+        var progresso = selected.metaLiquida > 0 ? Math.min(100, normalized.reservaAtual / selected.metaLiquida * 100) : 100;
+        var excedente = roundMoney(Math.max(0, normalized.reservaAtual - selected.metaLiquida));
+        var pesoFaturamento = selected.aporteMensal / normalized.faturamentoMensal * 100;
+        var cenarios = [7, 15, 20, 30].map(function (days) { return scenarioForDays(normalized, days); });
+        return { inputs: normalized, selected: selected, progresso: progresso, excedente: excedente, pesoFaturamento: pesoFaturamento, cenarios: cenarios, recommendationState: recommendationState, reportDeclarations: REPORT_DECLARATIONS };
+      }
+
+      function statusFor(result) {
+        if (result.selected.valorFaltante === 0) return { label: 'Meta alcançada', classes: 'bg-emerald-100 text-emerald-800 ring-emerald-200' };
+        if (result.pesoFaturamento > 20) return { label: 'Plano exigente', classes: 'bg-amber-100 text-amber-900 ring-amber-200' };
+        if (result.progresso >= 50) return { label: 'Reserva em andamento', classes: 'bg-blue-100 text-blue-800 ring-blue-200' };
+        return { label: 'Plano iniciado', classes: 'bg-slate-100 text-slate-700 ring-slate-200' };
+      }
+
+      function buildMemory(result) {
+        var i = result.inputs, s = result.selected;
+        return [
+          'Premissas: ' + i.diasFerias + ' dias de pausa, ' + i.mesesAteFerias + ' meses para formar a meta e faturamento médio de ' + money(i.faturamentoMensal) + '.',
+          'Proporção da pausa: ' + i.diasFerias + ' ÷ 30 = ' + decimal(s.fator * 100, 2) + '% de um mês de planejamento.',
+          'Renda pessoal no período: ' + money(i.rendaPessoal) + ' × ' + decimal(s.fator, 4) + ' = ' + money(s.rendaPeriodo) + '.',
+          'Custos fixos no período: ' + money(i.custosFixos) + ' × ' + decimal(s.fator, 4) + ' = ' + money(s.custosPeriodo) + '.',
+          'Custo bruto: ' + money(s.rendaPeriodo) + ' + ' + money(s.custosPeriodo) + ' + ' + money(i.gastosExtras) + ' de extras = ' + money(s.custoBruto) + '.',
+          'Receita mantida: ' + money(i.receitaRecorrente) + ' × ' + decimal(s.fator, 4) + ' = ' + money(s.receitaPeriodo) + '. Meta líquida: máximo entre zero e custo bruto menos essa receita = ' + money(s.metaLiquida) + '.',
+          'Valor faltante: máximo entre zero e ' + money(s.metaLiquida) + ' − ' + money(i.reservaAtual) + ' = ' + money(s.valorFaltante) + '.',
+          'Aporte mensal: ' + money(s.valorFaltante) + ' ÷ ' + i.mesesAteFerias + ' = ' + money(s.aporteMensal) + ', equivalente a ' + decimal(result.pesoFaturamento) + '% do faturamento médio. Valores monetários arredondados para centavos.'
+        ];
+      }
+
+      function interpretationFor(result) {
+        var s = result.selected;
+        if (s.valorFaltante === 0) return 'A reserva informada cobre a meta líquida deste cenário e deixa ' + money(result.excedente) + ' acima dela. Antes de usar o excedente, confira se impostos, vencimentos integrais ou riscos contratuais ficaram de fora.';
+        if (result.pesoFaturamento > 20) return 'O aporte projetado consome ' + decimal(result.pesoFaturamento) + '% do faturamento médio. O plano está concentrado: compare uma pausa menor, um prazo maior ou gastos extras revisados antes de comprometer o caixa operacional.';
+        if (result.progresso >= 50) return 'Mais da metade da meta já está formada. Faltam ' + money(s.valorFaltante) + ', distribuídos em ' + result.inputs.mesesAteFerias + ' aportes mensais iguais nesta projeção linear.';
+        return 'A reserva ainda está no início e o valor faltante é ' + money(s.valorFaltante) + '. Use os cenários para testar a duração e revise o plano se o aporte não couber com folga no caixa mensal.';
+      }
+
+      function renderResult(result) {
+        var s = result.selected, i = result.inputs, status = statusFor(result);
+        $('status-plano').textContent = status.label;
+        $('status-plano').className = 'inline-flex w-fit rounded-full px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ' + status.classes;
+        $('badges-resultado').innerHTML = [i.diasFerias + ' dias', i.mesesAteFerias + ' meses até a pausa', 'Receita mantida: ' + money(s.receitaPeriodo), 'Extras: ' + money(i.gastosExtras)].map(function (label) { return '<span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-extrabold text-slate-700 ring-1 ring-slate-200">' + label + '</span>'; }).join('');
+        $('resMeta').textContent = money(s.metaLiquida);
+        $('resSignificado').textContent = 'Custo bruto de ' + money(s.custoBruto) + ' menos ' + money(s.receitaPeriodo) + ' de receita recorrente proporcional aos ' + i.diasFerias + ' dias.';
+        $('barra-progresso').style.width = result.progresso + '%';
+        $('resProgresso').textContent = decimal(result.progresso) + '%';
+        $('resFalta').textContent = money(s.valorFaltante);
+        $('resAporte').textContent = money(s.aporteMensal);
+        $('resPeso').textContent = decimal(result.pesoFaturamento) + '%';
+        $('resInterpretacao').textContent = interpretationFor(result);
+        var steps = [];
+        if (s.valorFaltante === 0) steps.push('Revalide a meta perto da pausa e mantenha a reserva de emergência separada.');
+        else steps.push('Separe ' + money(s.aporteMensal) + ' por mês durante os próximos ' + i.mesesAteFerias + ' meses.');
+        steps.push('Confirme se a receita recorrente continuará sem entregas durante as férias.');
+        steps.push('Atualize a conta se custos, datas, contratos ou orçamento da viagem mudarem.');
+        $('proximos-passos').innerHTML = steps.map(function (item) { return '<li class="flex gap-2"><span aria-hidden="true">✓</span><span>' + item + '</span></li>'; }).join('');
+        var memory = buildMemory(result);
+        $('memoria-lista').innerHTML = memory.map(function (item, index) { return '<li class="rounded-2xl bg-white p-4"><span class="font-extrabold text-blue-700">' + (index + 1) + '.</span> ' + item + '</li>'; }).join('');
+        $('tabela-cenarios').innerHTML = result.cenarios.map(function (scenario) { var selected = scenario.dias === i.diasFerias; return '<tr class="' + (selected ? 'bg-blue-50' : 'bg-white') + '"><td class="px-4 py-3 font-bold text-slate-950">' + scenario.dias + ' dias' + (selected ? ' — escolhido' : '') + '</td><td class="px-4 py-3">' + money(scenario.custoBruto) + '</td><td class="px-4 py-3">' + money(scenario.receitaPeriodo) + '</td><td class="px-4 py-3 font-semibold">' + money(scenario.metaLiquida) + '</td><td class="px-4 py-3">' + money(scenario.aporteMensal) + '</td></tr>'; }).join('');
+        latestReport = Object.assign({}, result, { status: status.label, interpretation: interpretationFor(result), memory: memory, calculatedAt: new Date().toLocaleString('pt-BR') });
+        $('resultado-vazio').classList.add('hidden');
+        $('resultado').classList.remove('hidden');
+        $('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        var errorBox = $('form-error');
+        try {
+          var result = calculateFeriasPj({
+            diasFerias: numericValue('diasFerias'), mesesAteFerias: numericValue('mesesAteFerias'), rendaPessoal: numericValue('rendaPessoal'),
+            custosFixos: numericValue('custosFixos'), receitaRecorrente: numericValue('receitaRecorrente'), gastosExtras: numericValue('gastosExtras'),
+            reservaAtual: numericValue('reservaAtual'), faturamentoMensal: numericValue('faturamentoMensal')
+          });
+          errorBox.classList.add('hidden'); renderResult(result); return result;
+        } catch (error) {
+          errorBox.textContent = error.message; errorBox.classList.remove('hidden'); errorBox.focus(); return { ok: false, error: error.message };
+        }
+      }
+
+      function ensureReport() {
+        if (latestReport) return true;
+        $('form-error').textContent = 'Calcule sua reserva de férias antes de usar esta ação.';
+        $('form-error').classList.remove('hidden'); $('form-error').focus(); return false;
+      }
+
+      function shortSummary(report) {
+        return ['Férias PJ — Calcule Trabalhador', 'Cenário: ' + report.inputs.diasFerias + ' dias em ' + report.inputs.mesesAteFerias + ' meses', 'Meta líquida: ' + money(report.selected.metaLiquida), 'Reserva atual: ' + money(report.inputs.reservaAtual), 'Valor que falta: ' + money(report.selected.valorFaltante), 'Aporte mensal: ' + money(report.selected.aporteMensal) + ' (' + decimal(report.pesoFaturamento) + '% do faturamento)', 'Leitura: ' + report.interpretation].join('\n');
+      }
+
+      function escapeHtml(value) { return String(value).replace(/[&<>\"]/g, function (char) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;' })[char]; }); }
+
+      function buildReportHtml(report, autoPrint) {
+        var rows = [
+          ['Calculado em', report.calculatedAt], ['Cenário', report.inputs.diasFerias + ' dias; ' + report.inputs.mesesAteFerias + ' meses até a pausa'],
+          ['Renda pessoal mensal', money(report.inputs.rendaPessoal)], ['Custos fixos mensais', money(report.inputs.custosFixos)],
+          ['Receita recorrente mensal', money(report.inputs.receitaRecorrente)], ['Gastos extras', money(report.inputs.gastosExtras)],
+          ['Reserva atual', money(report.inputs.reservaAtual)], ['Faturamento médio', money(report.inputs.faturamentoMensal)],
+          ['Custo bruto da pausa', money(report.selected.custoBruto)], ['Receita mantida no período', money(report.selected.receitaPeriodo)],
+          ['Meta líquida', money(report.selected.metaLiquida)], ['Valor que falta', money(report.selected.valorFaltante)],
+          ['Aporte mensal', money(report.selected.aporteMensal)], ['Peso no faturamento', decimal(report.pesoFaturamento) + '%']
+        ];
+        var table = rows.map(function (row) { return '<tr><th>' + escapeHtml(row[0]) + '</th><td>' + escapeHtml(row[1]) + '</td></tr>'; }).join('');
+        var memory = report.memory.map(function (item, index) { return '<li><strong>' + (index + 1) + '.</strong> ' + escapeHtml(item) + '</li>'; }).join('');
+        var printScript = autoPrint ? '<script>window.addEventListener("load",function(){window.focus();window.print();});<\/script>' : '';
+        return '<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><title>Relatório Férias PJ</title><style>@page{size:A4;margin:14mm}*{box-sizing:border-box}body{margin:0;color:#0f172a;font-family:Arial,sans-serif;line-height:1.5}main{width:100%;max-width:180mm;margin:auto}.brand{color:#1d4ed8;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{font-size:26px;margin:6px 0 4px}.date{color:#64748b;font-size:12px;margin:0 0 18px}.primary{background:#1d4ed8;color:#fff;border-radius:12px;padding:16px;margin:16px 0}.primary strong{display:block;font-size:30px}table{width:100%;border-collapse:collapse;font-size:12px}th,td{border-top:1px solid #cbd5e1;padding:7px;text-align:left;vertical-align:top}th{width:43%;color:#475569}h2{font-size:18px;margin:20px 0 8px}ol{padding-left:20px;font-size:11px}li{margin:6px 0}.note{background:#fef3c7;border-radius:10px;padding:10px;font-size:11px}@media print{main{max-width:none}}</style></head><body><main><div class="brand">Calcule Trabalhador</div><h1>Relatório de Férias PJ</h1><p class="date">' + escapeHtml(report.calculatedAt) + '</p><section class="primary"><span>Meta líquida para a pausa</span><strong>' + escapeHtml(money(report.selected.metaLiquida)) + '</strong><span>Aporte mensal: ' + escapeHtml(money(report.selected.aporteMensal)) + '</span></section><table><tbody>' + table + '</tbody></table><h2>Interpretação</h2><p>' + escapeHtml(report.interpretation) + '</p><h2>Memória de cálculo</h2><ol>' + memory + '</ol><p class="note">Projeção educativa baseada nos valores informados. Não aplica férias CLT, não garante receita contratual e não considera rendimentos, inflação ou mudanças futuras.</p></main>' + printScript + '</body></html>';
+      }
+
+      function openPrintReport() {
+        if (!ensureReport()) return;
+        var reportWindow = window.open('', '_blank');
+        if (!reportWindow) { alert('Não foi possível abrir o relatório. Verifique o bloqueador de pop-ups.'); return; }
+        reportWindow.document.open(); reportWindow.document.write(buildReportHtml(latestReport, true)); reportWindow.document.close();
+      }
+
+      function ascii(value) { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\x20-\x7E]/g, '-'); }
+      function pdfEscape(value) { return ascii(value).replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)'); }
+      function wrapText(value, limit) {
+        var words = ascii(value).split(/\s+/), lines = [], line = '';
+        words.forEach(function (word) { var next = line ? line + ' ' + word : word; if (next.length > limit && line) { lines.push(line); line = word; } else line = next; });
+        if (line) lines.push(line); return lines;
+      }
+      function buildPdfBlob(report) {
+        var lines = [
+          'CALCULE TRABALHADOR', 'Relatorio de Ferias PJ', 'Calculado em: ' + report.calculatedAt, '',
+          'Meta liquida: ' + money(report.selected.metaLiquida), 'Aporte mensal: ' + money(report.selected.aporteMensal),
+          'Cenario: ' + report.inputs.diasFerias + ' dias; ' + report.inputs.mesesAteFerias + ' meses ate a pausa',
+          'Reserva atual: ' + money(report.inputs.reservaAtual), 'Valor faltante: ' + money(report.selected.valorFaltante),
+          'Peso no faturamento: ' + decimal(report.pesoFaturamento) + '%', '', 'Interpretacao:'
+        ];
+        wrapText(report.interpretation, 86).forEach(function (line) { lines.push(line); });
+        lines.push('', 'Memoria de calculo:');
+        report.memory.forEach(function (item, index) { wrapText((index + 1) + '. ' + item, 86).forEach(function (line) { lines.push(line); }); });
+        lines.push('', 'Limitacoes: sem regra CLT, garantia contratual, rendimento ou inflacao.');
+        var pages = [];
+        while (lines.length) pages.push(lines.splice(0, 46));
+        var objects = [];
+        var add = function (body) { objects.push(body); return objects.length; };
+        var catalogId = add(''); var pagesId = add(''); var fontId = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>');
+        var pageIds = [];
+        pages.forEach(function (pageLines) {
+          var content = 'BT\n/F1 10 Tf\n42 800 Td\n13 TL\n';
+          pageLines.forEach(function (line, index) { if (index > 0) content += 'T*\n'; content += '(' + pdfEscape(line) + ') Tj\n'; });
+          content += 'ET';
+          var contentId = add('<< /Length ' + content.length + ' >>\nstream\n' + content + '\nendstream');
+          var pageId = add('<< /Type /Page /Parent ' + pagesId + ' 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ' + fontId + ' 0 R >> >> /Contents ' + contentId + ' 0 R >>');
+          pageIds.push(pageId);
+        });
+        objects[catalogId - 1] = '<< /Type /Catalog /Pages ' + pagesId + ' 0 R >>';
+        objects[pagesId - 1] = '<< /Type /Pages /Kids [' + pageIds.map(function (id) { return id + ' 0 R'; }).join(' ') + '] /Count ' + pageIds.length + ' >>';
+        var pdf = '%PDF-1.4\n', offsets = [0];
+        objects.forEach(function (body, index) { offsets.push(pdf.length); pdf += (index + 1) + ' 0 obj\n' + body + '\nendobj\n'; });
+        var xref = pdf.length;
+        pdf += 'xref\n0 ' + (objects.length + 1) + '\n0000000000 65535 f \n';
+        offsets.slice(1).forEach(function (offset) { pdf += String(offset).padStart(10, '0') + ' 00000 n \n'; });
+        pdf += 'trailer\n<< /Size ' + (objects.length + 1) + ' /Root ' + catalogId + ' 0 R >>\nstartxref\n' + xref + '\n%%EOF';
+        return new Blob([pdf], { type: 'application/pdf' });
+      }
+
+      async function copyResult() {
+        if (!ensureReport()) return;
+        var button = $('btnCopiar'), original = button.textContent, text = shortSummary(latestReport);
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(text);
+          else { var area = document.createElement('textarea'); area.value = text; area.setAttribute('readonly', ''); area.style.position = 'fixed'; area.style.left = '-9999px'; document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove(); }
+          button.textContent = 'Resumo copiado'; window.setTimeout(function () { button.textContent = original; }, 2000);
+        } catch (error) { alert('Não foi possível copiar o resultado.'); }
+      }
+
+      function downloadPdf() {
+        if (!ensureReport()) return;
+        var url = URL.createObjectURL(buildPdfBlob(latestReport)), link = document.createElement('a');
+        link.href = url; link.download = 'relatorio-ferias-pj.pdf'; document.body.appendChild(link); link.click(); link.remove(); window.setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      }
+
+      function testarCalculadoraFeriasPj() {
+        var base = { diasFerias: 20, mesesAteFerias: 10, rendaPessoal: 6000, custosFixos: 1500, receitaRecorrente: 1000, gastosExtras: 3000, reservaAtual: 2000, faturamentoMensal: 12000 };
+        var cases = [
+          { name: 'cenário comum', input: base, test: function (r) { return r.selected.custoBruto === 8000 && r.selected.receitaPeriodo === 666.67 && r.selected.metaLiquida === 7333.33 && r.selected.valorFaltante === 5333.33 && r.selected.aporteMensal === 533.33; } },
+          { name: 'meta alcançada', input: Object.assign({}, base, { reservaAtual: 8000 }), test: function (r) { return r.selected.valorFaltante === 0 && r.excedente === 666.67; } },
+          { name: 'sem receita recorrente', input: Object.assign({}, base, { receitaRecorrente: 0 }), test: function (r) { return r.selected.metaLiquida === 8000; } },
+          { name: 'sete dias', input: Object.assign({}, base, { diasFerias: 7 }), test: function (r) { return r.selected.rendaPeriodo === 1400 && r.selected.custosPeriodo === 350; } },
+          { name: 'receita cobre custo', input: Object.assign({}, base, { receitaRecorrente: 20000, gastosExtras: 0 }), test: function (r) { return r.selected.metaLiquida === 0 && r.selected.aporteMensal === 0; } },
+          { name: 'dia inválido bloqueado', input: Object.assign({}, base, { diasFerias: 0 }), throws: true },
+          { name: 'mês fracionado bloqueado', input: Object.assign({}, base, { mesesAteFerias: 2.5 }), throws: true },
+          { name: 'faturamento zero bloqueado', input: Object.assign({}, base, { faturamentoMensal: 0 }), throws: true },
+          { name: 'negativo bloqueado', input: Object.assign({}, base, { reservaAtual: -1 }), throws: true }
+        ];
+        var results = cases.map(function (item) { try { var result = calculateFeriasPj(item.input); return { name: item.name, status: !item.throws && item.test(result) ? 'PASS' : 'FAIL' }; } catch (error) { return { name: item.name, status: item.throws ? 'PASS' : 'FAIL', error: error.message }; } });
+        return { results: results, passed: results.filter(function (item) { return item.status === 'PASS'; }).length, total: results.length };
+      }
+
+      $('ferias-pj-form').addEventListener('submit', handleSubmit);
+      $('btnCopiar').addEventListener('click', copyResult);
+      $('btnImprimir').addEventListener('click', openPrintReport);
+      $('btnBaixar').addEventListener('click', downloadPdf);
+      window.calculateFeriasPj = calculateFeriasPj;
+      window.testarCalculadoraFeriasPj = testarCalculadoraFeriasPj;
+      window.buildFeriasPjReportHtml = buildReportHtml;
+      window.buildFeriasPjPdfBlob = buildPdfBlob;
+      var visualMode = ['127.0.0.1', 'localhost'].includes(window.location && window.location.hostname) ? new URLSearchParams(window.location.search).get('visual-test') : '';
+      if (visualMode === 'result') {
+        $('ferias-pj-form').requestSubmit();
+        var preview = $('resultado'); document.body.insertBefore(preview, document.querySelector('main')); $('global-header').style.display = 'none'; document.querySelector('main').style.display = 'none'; preview.style.maxWidth = '1120px'; preview.style.margin = '16px auto'; window.scrollTo(0, 0);
+      } else if (visualMode === 'report') {
+        $('ferias-pj-form').requestSubmit();
+        var reportPreview = buildReportHtml(latestReport, false);
+        window.setTimeout(function () { document.open(); document.write(reportPreview); document.close(); }, 0);
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://calculetrabalhador.com.br/"},{"@type":"ListItem","position":2,"name":"Ferramentas","item":"https://calculetrabalhador.com.br/ferramentas/"},{"@type":"ListItem","position":3,"name":"Calculadora de Férias PJ","item":"https://calculetrabalhador.com.br/calculadora-ferias-pj/"}]},
+      {"@type":"SoftwareApplication","name":"Calculadora de Férias PJ","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://calculetrabalhador.com.br/calculadora-ferias-pj/","description":"Calculadora para estimar meta líquida, valor faltante e aporte mensal para uma pausa planejada como PJ.","dateModified":"2026-07-14","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}},
+      {"@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Como calcular quanto guardar para férias PJ?","acceptedAnswer":{"@type":"Answer","text":"Some a renda pessoal e os custos da empresa proporcionais aos dias, acrescente os gastos extras, desconte a receita recorrente prevista e a reserva atual. Divida o valor faltante pelos meses até a pausa."}},
+        {"@type":"Question","name":"A calculadora adiciona um terço de férias?","acceptedAnswer":{"@type":"Answer","text":"Não. A ferramenta não aplica verbas de férias CLT. Ela monta uma meta de planejamento com os valores informados pelo usuário e não presume benefício ou pagamento contratual."}},
+        {"@type":"Question","name":"O que colocar como receita recorrente durante a pausa?","acceptedAnswer":{"@type":"Answer","text":"Informe somente receitas que devem continuar entrando sem exigir trabalho durante as férias, conforme contratos e condições que você tenha confirmado."}},
+        {"@type":"Question","name":"Os gastos extras são proporcionais aos dias?","acceptedAnswer":{"@type":"Answer","text":"Não. A calculadora considera o valor total informado em todos os cenários. Renda, custos fixos e receita recorrente são proporcionais aos dias."}},
+        {"@type":"Question","name":"Posso usar minha reserva de emergência?","acceptedAnswer":{"@type":"Answer","text":"A simulação aceita qualquer reserva atual informada, mas é mais claro separar a reserva de férias, que cobre um evento previsto, da reserva destinada a imprevistos."}},
+        {"@type":"Question","name":"A projeção considera rendimento do dinheiro guardado?","acceptedAnswer":{"@type":"Answer","text":"Não. O aporte é calculado de forma linear, sem juros, inflação, impostos sobre investimentos ou mudanças futuras nas receitas e despesas."}}
+      ]}
+    ]
+  }
+  </script>
+  <script src="/assets/js/global-layout.js" defer></script>
+</body>
+</html>
