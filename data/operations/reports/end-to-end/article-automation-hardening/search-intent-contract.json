@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","classes":["INFORMATIONAL","PROBLEM_SOLVING","COMPARATIVE","TRANSACTIONAL_SUPPORT","CALCULATOR_SUPPORT","LEGAL_EXPLANATION","STEP_BY_STEP_GUIDE","UPDATE_NEWS"],"required":["primarySearchIntent","primaryQuestion","secondaryQuestions","readerActionAfterReading"],"gate":"SEARCH_INTENT_RESOLVED","blocker":"TOPIC_COVERED_BUT_INTENT_NOT_RESOLVED"}

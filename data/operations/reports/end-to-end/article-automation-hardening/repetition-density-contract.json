@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","allowed":"PEDAGOGICAL_REINFORCEMENT_WITH_NEW_VALUE","prohibited":"ARTIFICIAL_REPETITION","antiPatterns":["REPETITION_WITHOUT_NEW_VALUE","KEYWORD_REPETITION","PADDED_PARAGRAPH","DUPLICATED_CONCLUSION"],"heuristicThresholds":{"keywordDensityBlocker":0.08,"duplicatedConclusionCount":2},"perfectSemanticClaim":false}

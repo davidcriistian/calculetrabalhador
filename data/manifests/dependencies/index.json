@@ -1,11 +1,11 @@
 {
   "id": "operational-manifest-dependencies",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/manifests/schemas/dependency-map.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Logical dependency map between future operations and platform components.",
@@ -20,7 +20,7 @@
     },
     {
       "operationId": "create-article",
-      "requires": ["Constitution", "Strategy Cluster", "Core Domain", "Article Blueprint", "Operation Playbook", "Validation Engine"]
+      "requires": ["Constitution", "Strategy Cluster", "Core Domain", "Article Blueprint", "Article Editorial Automation Contract", "Official Source Traceability", "Operation Playbook", "Testing Engine", "Validation Engine"]
     },
     {
       "operationId": "update-calculator",
@@ -28,7 +28,7 @@
     },
     {
       "operationId": "update-article",
-      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Validation Engine", "Publishing Model"]
+      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Article Compatibility Class", "Freshness Metadata", "Validation Engine", "Publishing Model"]
     },
     {
       "operationId": "update-law",
@@ -44,7 +44,7 @@
     },
     {
       "operationId": "validate-article",
-      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Validation Engine"]
+      "requires": ["Target Asset", "Strategy Cluster", "Article Blueprint", "Article Editorial Automation Contract", "Source Map", "Internal Link Plan", "Validation Engine"]
     },
     {
       "operationId": "publish",

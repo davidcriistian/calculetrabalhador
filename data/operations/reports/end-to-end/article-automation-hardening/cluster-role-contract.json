@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","required":["domainId","nucleusId","clusterId","pillarAssetId","articleRole"],"roles":["PILLAR","CORE_SUPPORT","SPECIALIZED_SUPPORT","COMPARATIVE_SUPPORT","CALCULATOR_SUPPORT","UPDATE_SUPPORT"],"missingCluster":"MANUAL_DECISION_REQUIRED","inventClusterAllowed":false,"gate":"CLUSTER_POSITION_RESOLVED"}

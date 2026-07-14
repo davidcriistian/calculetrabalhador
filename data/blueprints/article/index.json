@@ -1,28 +1,96 @@
 {
   "id": "article-blueprint-template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/blueprints/schemas/article-blueprint.schema.json",
   "status": "template",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-article-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
-  "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
-  "description": "Declarative model for future article construction.",
+  "source": "Productivity Layer Phase 5.29 - Article Automation Editorial, Freshness and Cluster Hardening",
+  "description": "Declarative model for clear, useful, traceable and maintainable future articles.",
   "blueprintType": "article",
+  "compatibilityClass": "NEW_ARTICLE",
+  "compatibilityPolicy": {
+    "NEW_ARTICLE": "NEW_STANDARD_REQUIRED",
+    "LEGACY_ARTICLE": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "MIGRATED_ARTICLE": "NEW_STANDARD_REQUIRED"
+  },
+  "editorialContract": {
+    "reference": "/data/blueprints/article/editorial-automation.contract.json",
+    "version": "1.0.0",
+    "principle": "WRITE_FOR_THE_PERSON_LIVING_THE_PROBLEM"
+  },
   "clusterRole": {
     "belongsToCluster": true,
-    "role": "component-of-cluster",
+    "role": "CORE_SUPPORT",
     "clusterBlueprintReference": "/data/blueprints/cluster/index.json",
-    "standaloneModelStillValid": true
+    "standaloneModelStillValid": false,
+    "missingClusterDecision": "MANUAL_DECISION_REQUIRED"
   },
   "identity": {
+    "assetId": "article:example-article",
     "title": "Example Article",
     "category": "example-category",
-    "nucleus": "example-nucleus",
-    "domain": "example-domain",
     "slug": "/blog/example-article",
     "status": "draft"
+  },
+  "intent": {
+    "primarySearchIntent": "PROBLEM_SOLVING",
+    "primaryQuestion": "What real question must this article resolve?",
+    "secondaryQuestions": [],
+    "readerActionAfterReading": "Describe the action the reader can complete.",
+    "gate": "SEARCH_INTENT_RESOLVED"
+  },
+  "audience": {
+    "knowledgeLevel": "NON_SPECIALIST",
+    "problem": "Describe the concrete problem the reader is living.",
+    "context": "Describe only context needed to answer accurately."
+  },
+  "answer": {
+    "mainAnswer": "State the direct answer near the beginning.",
+    "actionability": "Explain what to do next.",
+    "limitations": "State relevant limits without bureaucratic language."
+  },
+  "editorial": {
+    "plainLanguagePlan": {
+      "directOrder": true,
+      "technicalTermsExplainedOnFirstUse": true,
+      "oneMainIdeaPerParagraph": true,
+      "readerIsNotInfantilized": true,
+      "technicalPrecisionPreserved": true
+    },
+    "sectionPlan": [],
+    "examplePlan": [],
+    "repetitionReview": "REQUIRED",
+    "transitionPolicy": "SECTION_TRANSITION_REQUIRED_WHEN_CONCEPTUALLY_DEPENDENT"
+  },
+  "freshness": {
+    "updateSensitivity": "EVERGREEN",
+    "lastReviewedAt": null,
+    "nextReviewAt": null,
+    "mutableContentSections": [],
+    "officialSources": [],
+    "affectedRules": [],
+    "affectedAssets": [],
+    "dependencyIds": []
+  },
+  "relationships": {
+    "domainId": "domain:example-domain",
+    "nucleusId": "nucleus:example-nucleus",
+    "clusterId": "cluster:example-cluster",
+    "pillarAssetId": "article:example-pillar",
+    "articleRole": "CORE_SUPPORT"
+  },
+  "internalLinkPlan": {
+    "outbound": [],
+    "inboundAnalysis": {
+      "state": "INBOUND_LINK_UPDATE_RECOMMENDED",
+      "candidateAssets": [],
+      "decisionReason": null
+    },
+    "orphanRisk": "ORPHAN_RISK",
+    "gate": "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"
   },
   "seo": {
     "title": null,
@@ -35,56 +103,47 @@
     "jsonLd": []
   },
   "structure": {
-    "sections": [
-      "hero",
-      "introduction",
-      "main-content",
-      "faq",
-      "related-calculators",
-      "related-content",
-      "disclaimer"
-    ],
-    "components": [
-      "hero",
-      "section",
-      "table",
-      "info-card",
-      "alert",
-      "faq",
-      "cta",
-      "offer-slot",
-      "calculator-card",
-      "article-card",
-      "related-content",
-      "breadcrumb",
-      "disclaimer"
-    ],
+    "sections": ["hero", "direct-answer", "summary", "table-of-contents", "main-content", "faq", "related-calculators", "related-content", "disclaimer"],
+    "components": ["hero", "section", "table", "info-card", "alert", "faq", "cta", "calculator-card", "article-card", "related-content", "breadcrumb", "disclaimer"],
     "images": [],
-    "internalLinks": [],
-    "relatedCalculators": [],
-    "products": [],
-    "cta": null,
+    "cta": {"beginning": null, "middle": null, "end": null},
     "faq": []
+  },
+  "panelMetadata": {
+    "contentFreshnessStatus": "REVIEW_REQUIRED",
+    "lastReviewedAt": null,
+    "nextReviewAt": null,
+    "updateSensitivity": "EVERGREEN",
+    "officialSources": [],
+    "affectedRules": [],
+    "affectedAssets": [],
+    "clusterId": "cluster:example-cluster",
+    "pillarAssetId": "article:example-pillar",
+    "validationStatus": "NOT_VALIDATED",
+    "publicationStatus": "draft"
   },
   "testing": {
     "required": true,
     "testingReference": "/data/pos/testing/index.json",
-    "requiredEvidence": ["html-snapshot", "seo-snapshot", "link-check", "manual-review"]
+    "validator": "/scripts/validate-article-automation.js",
+    "fixtures": "/data/pos/validation/article-automation-fixtures.json",
+    "requiredEvidence": ["article-plan", "validator-report", "seo-snapshot", "link-check", "source-map", "manual-editorial-review"]
   },
   "validation": {
     "required": true,
     "validationReference": "/data/pos/validation/index.json",
-    "requiredTypes": ["content-structure-validation", "seo-validation", "html-validation", "jsonld-validation", "link-validation"]
+    "requiredTypes": ["search-intent-validation", "editorial-clarity-validation", "freshness-validation", "source-traceability-validation", "cluster-position-validation", "internal-link-validation", "seo-validation", "jsonld-validation"]
   },
   "publishing": {
     "required": true,
     "status": "not-ready",
     "requiresManualApproval": true,
+    "requiredGates": ["SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"],
     "modifiesProductionInThisPhase": false
   },
   "notes": [
-    "This template does not generate an article.",
-    "Article Blueprint is now formally modeled as a reusable component inside Cluster Blueprint.",
-    "Future generation must pass Testing, Validation and Publishing gates."
+    "This template does not generate or modify an article.",
+    "Dates remain null until supported by real review evidence.",
+    "Legacy articles remain accepted pending an explicitly approved migration."
   ]
 }

@@ -1,9 +1,9 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -80,6 +80,19 @@
     "recommendations": ["canonical-four-state-model", "configuration-state-resolved", "eligibility-verified", "approved-product-source-verified", "not-configured-and-not-eligible-hidden", "no-recommendation-invented"],
     "antiPatterns": ["no-applicable-blocker", "major-items-resolved-or-approved-exception"]
   },
+  "articleStandard": {
+    "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+    "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "intentAndAudience": ["primary-search-intent-declared", "primary-question-declared", "secondary-questions-declared", "reader-action-declared", "audience-problem-defined", "SEARCH_INTENT_RESOLVED-passed"],
+    "editorial": ["plain-language-plan", "technical-terms-explained", "dense-paragraphs-reviewed", "dependent-section-transitions-planned", "complex-concepts-have-examples-or-justification", "artificial-repetition-reviewed", "EDITORIAL_CLARITY_RESOLVED-passed"],
+    "freshness": ["update-sensitivity-classified", "review-dates-evidence-based-or-null", "mutable-sections-identified-when-mixed", "affected-rules-assets-and-dependencies-recorded", "CONTENT_FRESHNESS_RESOLVED-passed"],
+    "sources": ["official-dependent-claims-mapped", "source-fields-complete", "sources-verified-or-review-state-explicit", "OFFICIAL_SOURCES_RESOLVED-passed"],
+    "cluster": ["domain-resolved", "nucleus-resolved", "cluster-resolved-without-invention", "pillar-resolved", "article-role-resolved", "CLUSTER_POSITION_RESOLVED-passed"],
+    "links": ["contextual-links-planned", "continuity-links-planned", "discovery-links-planned", "targets-exist", "anchors-descriptive", "pillar-link-present-when-required", "inbound-links-evaluated", "orphan-risk-evaluated", "INTERNAL_LINK_PLAN_RESOLVED-passed", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED-passed"],
+    "contentAndSeo": ["direct-answer-near-beginning", "single-h1", "canonical-resolved", "faq-visible-schema-exact", "cta-plan-resolved", "mobile-validation-planned"],
+    "panelMetadata": ["minimum-fields-only", "no-equivalent-field-duplicates", "validation-status-resolved", "publication-status-resolved"],
+    "validator": ["article-contract-valid", "fixtures-pass", "heuristics-labeled", "human-review-items-recorded"]
+  },
   "after": [
     "record-consolidated-report",
     "record-created-updated-reused-skipped-assets",
@@ -113,5 +126,12 @@
     ,"calculator-applicable-blocker-anti-pattern"
     ,"calculator-false-visual-pass"
     ,"calculator-recommendation-source-unapproved"
+    ,"article-search-intent-unresolved"
+    ,"article-editorial-clarity-unresolved"
+    ,"article-freshness-unresolved"
+    ,"article-official-sources-unresolved"
+    ,"article-cluster-position-unresolved"
+    ,"article-internal-link-plan-unresolved"
+    ,"article-bidirectional-linking-unresolved"
   ]
 }

@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","questions":["where should the new article point","which existing assets should point to it"],"states":["INBOUND_LINK_UPDATE_REQUIRED","INBOUND_LINK_UPDATE_RECOMMENDED","NO_INBOUND_UPDATE_REQUIRED"],"publicAutoMutation":false,"planRequiredWhenMutationNotAllowed":true,"gate":"BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"}

@@ -1,11 +1,11 @@
 {
   "id": "pos-testing-engine-index",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 3.5 - Governance Hardening",
   "description": "Declarative authority for how platform components must be tested before and after future changes.",
@@ -41,6 +41,8 @@
     "testReportTemplate": "/data/pos/testing/test-report-template.json",
     "approvalMatrix": "/data/pos/testing/approval-matrix.json",
     "documentation": "/data/pos/docs/TESTING_ENGINE.md"
+    ,"articleValidator": "/scripts/validate-article-automation.js"
+    ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
   },
   "operationalBoundaries": {
     "runsTests": false,

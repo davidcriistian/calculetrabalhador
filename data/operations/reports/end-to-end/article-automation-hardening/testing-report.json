@@ -1,0 +1,20 @@
+{
+  "status":"PASS",
+  "date":"2026-07-14",
+  "tests":[
+    {"name":"article validator syntax","command":"node --check scripts/validate-article-automation.js","result":"PASS"},
+    {"name":"article fixtures","command":"node scripts/validate-article-automation.js","result":"PASS","scenarios":20,"matched":20},
+    {"name":"test article read-only audit","command":"node scripts/validate-article-automation.js --audit-html blog/como-organizar-as-financas-sendo-pj/index.html","result":"LEGACY_ACCEPTED_PENDING_MIGRATION"},
+    {"name":"second article hypothetical dry-run","command":"node scripts/validate-article-automation.js --input data/operations/reports/end-to-end/article-automation-hardening/dry-run-article-input.json","result":"PASS"},
+    {"name":"governance","command":"node scripts/validate-governance.js","result":"PASS"},
+    {"name":"transform rules default check","command":"node scripts/transform-rules.js","result":"PASS"},
+    {"name":"transform rules explicit check","command":"node scripts/transform-rules.js --check","result":"PASS"},
+    {"name":"adicional noturno shadow","command":"node scripts/validate-shadow-adicional-noturno.js","result":"PASS","scenarios":50},
+    {"name":"aviso previo shadow","command":"node scripts/validate-shadow-aviso-previo.js","result":"PASS","scenarios":60},
+    {"name":"backward compatibility","result":"LEGACY_ACCEPTED_PENDING_MIGRATION"},
+    {"name":"git diff check","command":"git diff --check","result":"PASS"}
+  ],
+  "unexecutedTests": [],
+  "publicationTest": "NOT_APPLICABLE",
+  "indexNowTest": "NOT_APPLICABLE"
+}

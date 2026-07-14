@@ -1,9 +1,9 @@
 {
   "id": "pos-contract-testing",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -25,6 +25,8 @@
     ,"rendered viewport evidence"
     ,"calculator brand freshness editorial recommendation and adaptive report negative scenarios"
     ,"distinct copy print and download behavior"
+    ,"article editorial automation positive and negative fixtures"
+    ,"article backward compatibility scenarios"
   ],
   "expectedInputs": [
     "asset reference",
@@ -48,12 +50,16 @@
     "open validation notes"
     ,"calculator experience fixture results"
     ,"adaptive report render test results"
+    ,"article automation fixture results"
+    ,"article dry-run readiness result"
   ],
   "dependencies": [
     "/data/pos/registry/index.json",
     "/data/pos/testing/index.json"
     ,"/data/pos/validation/calculator-experience-fixtures.json"
     ,"/data/blueprints/contracts/calculator-experience.contract.json"
+    ,"/data/pos/validation/article-automation-fixtures.json"
+    ,"/data/blueprints/article/editorial-automation.contract.json"
   ],
   "nonResponsibilities": [
     "run automated tests",
@@ -70,5 +76,7 @@
     "Phase 3 details the official Testing Engine protocol under /data/pos/testing.",
     "The calculator experience validator must reject generic report-class pages and preserve justified SIMPLE_SINGLE_STEP/SIMPLE_RESULT cases.",
     "Report-class calculators must test semantic derivation, A4/selectable isolation and distinct COPY_RESULT, PRINT_RESULT and DOWNLOAD_REPORT behavior."
+    ,"Article fixtures must cover clarity, flow, examples, repetition, intent, freshness, sources, cluster, bidirectional links and anchors."
+    ,"Legacy article compatibility must not fail existing articles without an explicit migration request."
   ]
 }

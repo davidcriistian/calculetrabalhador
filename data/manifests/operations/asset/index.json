@@ -1,9 +1,9 @@
 {
   "id": "asset-operation-manifests",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-10",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -46,6 +46,9 @@
       "blueprint": "/data/blueprints/article/index.json",
       "goldStandard": "/data/gold-standards/article/index.json",
       "reference": "/data/references/articles/index.json",
+      "editorialContract": "/data/blueprints/article/editorial-automation.contract.json",
+      "validator": "/scripts/validate-article-automation.js",
+      "fixtures": "/data/pos/validation/article-automation-fixtures.json",
       "testing": "/data/pos/testing/index.json",
       "validation": "/data/pos/validation/index.json",
       "publishing": "/data/publishing/registry/index.json",
@@ -140,6 +143,13 @@
     "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"],
     "fullStandardBlockedBy": ["VISUAL_VALIDATION_NOT_EXECUTED", "applicable-blocker-anti-pattern", "UNAPPROVED_PRIMARY_THEME", "invalid-or-invented-visible-updated-at", "editorial-depth-unresolved", "recommendation-slot-unresolved", "prohibited-report-pattern", "non-distinct-result-actions", "unapproved-recommendation-source"]
   },
+  "articleResolutionRequirements": {
+    "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+    "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "requiredBeforeSpecification": ["resolve-primary-search-intent", "define-reader-problem-and-main-answer", "prepare-plain-language-plan", "prepare-section-flow-and-transition-plan", "prepare-concrete-example-plan", "classify-update-sensitivity", "separate-evergreen-and-mutable-content", "map-official-sources-and-dependencies", "resolve-cluster-pillar-and-article-role", "prepare-typed-outbound-links", "evaluate-inbound-links-and-orphan-risk", "prepare-essential-panel-metadata"],
+    "requiredGates": ["SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"],
+    "fullStandardBlockedBy": ["TOPIC_COVERED_BUT_INTENT_NOT_RESOLVED", "UNEXPLAINED_TECHNICAL_TERM", "DISCONNECTED_SECTION_SEQUENCE", "REPETITION_WITHOUT_NEW_VALUE", "missing-mandatory-official-source", "unresolved-cluster-position", "new-non-pillar-article-without-pillar-link", "inbound-analysis-missing"]
+  },
   "manifest": {
     "operationId": "create-asset",
     "objective": "Provision any supported asset type as an internal draft through official configuration.",
@@ -150,7 +160,7 @@
     "playbook": "/data/operations/playbooks/asset/index.json#create-asset",
     "workflow": "/data/operations/workflows/asset/index.json#create-asset-workflow",
     "reports": "/data/operations/reports/asset/index.json",
-    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus"]
+    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"]
   },
   "inheritance": {
     "create-calculator": "inherits-create-asset",

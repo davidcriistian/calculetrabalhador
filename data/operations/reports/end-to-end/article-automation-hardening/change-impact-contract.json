@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","essentialFields":["affectedRules","affectedAssets","dependencyIds"],"flow":["RULE_CHANGE","IMPACTED_ARTICLES","IMPACTED_CALCULATORS","REVIEW_REQUIRED"],"implementation":"reuse existing update map dependencies and Registry","newEngineCreated":false}

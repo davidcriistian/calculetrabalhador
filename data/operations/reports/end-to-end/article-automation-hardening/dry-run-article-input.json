@@ -1,0 +1,104 @@
+{
+  "assetId": "article:hypothetical-second-controlled-test",
+  "compatibilityClass": "NEW_ARTICLE",
+  "migrationRequested": false,
+  "dryRun": true,
+  "publicPageCreation": false,
+  "intent": {
+    "primarySearchIntent": "STEP_BY_STEP_GUIDE",
+    "primaryQuestion": "Como avaliar uma proposta PJ com custos e riscos variáveis?",
+    "secondaryQuestions": ["Quais custos mapear?", "Quais fontes revisar?", "Qual calculadora usar?"],
+    "readerActionAfterReading": "Montar uma comparação com premissas próprias e identificar pontos que exigem orientação profissional.",
+    "topicOnly": false
+  },
+  "audience": {
+    "knowledgeLevel": "NON_SPECIALIST",
+    "problem": "A pessoa recebeu uma proposta PJ e não sabe transformar valores, custos e riscos em uma decisão comparável."
+  },
+  "content": {
+    "directAnswerNearBeginning": true,
+    "technicalTerms": [{"term": "pró-labore", "firstOccurrenceExplained": true}],
+    "paragraphs": [
+      {"wordCount": 64, "maxSentenceWords": 23, "averageSentenceWords": 17, "mainIdeaCount": 1},
+      {"wordCount": 81, "maxSentenceWords": 27, "averageSentenceWords": 20, "mainIdeaCount": 1}
+    ],
+    "wordCount": 2400,
+    "sections": [
+      {"id": "resposta-direta", "dependsOnPrevious": false, "transitionFromPrevious": null},
+      {"id": "custos", "dependsOnPrevious": true, "transitionFromPrevious": "Com a proposta identificada, o próximo passo é descobrir quais custos reduzem o valor disponível."},
+      {"id": "riscos", "dependsOnPrevious": true, "transitionFromPrevious": "Depois dos custos, ainda falta avaliar os riscos que não aparecem no valor mensal."},
+      {"id": "decisao", "dependsOnPrevious": true, "transitionFromPrevious": "Com custos e riscos visíveis, a comparação pode ser transformada em uma decisão prática."}
+    ],
+    "concepts": [
+      {"id": "custo-total", "complex": true, "critical": false, "exampleType": "NUMERICAL_EXAMPLE", "exampleIsHypotheticalAndLabeled": true},
+      {"id": "risco-de-renda", "complex": true, "critical": false, "exampleType": "REALISTIC_SCENARIO", "exampleIsHypotheticalAndLabeled": true}
+    ],
+    "keywordDensity": 0.024,
+    "duplicatedConclusionCount": 0,
+    "repeatedParagraphRatio": 0.01,
+    "pedagogicalReinforcement": {"used": true, "addsNewValue": true},
+    "bureaucraticToneDetected": false
+  },
+  "freshness": {
+    "updateSensitivity": "MIXED",
+    "lastReviewedAt": "2026-07-14",
+    "nextReviewAt": "2027-01-14",
+    "reviewEvidence": true,
+    "reviewCadenceJustification": "The hypothetical plan includes official procedures and is scheduled for a six-month controlled review before any publication decision.",
+    "mutableContentSections": ["tributos-e-procedimentos-oficiais"],
+    "officialSources": [
+      {
+        "sourceId": "source:receita-servicos-digitais",
+        "sourceType": "OFFICIAL_GUIDANCE",
+        "sourceUrl": "https://www.gov.br/receitafederal/pt-br/canais_atendimento/digital",
+        "authority": "Receita Federal",
+        "supportsSections": ["tributos-e-procedimentos-oficiais"],
+        "lastVerifiedAt": "2026-07-14",
+        "updateRisk": "MEDIUM",
+        "status": "SOURCE_VERIFIED",
+        "official": true,
+        "reachable": true
+      }
+    ],
+    "affectedRules": ["rule:pj-tax-procedure"],
+    "affectedAssets": ["article:hypothetical-second-controlled-test", "calculator:calculadora-clt-ou-pj"],
+    "dependencyIds": ["rule:pj-tax-procedure"]
+  },
+  "sourcePolicy": {"officialSourceRequired": true, "legalClaimPresent": false},
+  "relationships": {
+    "domainId": "domain:pj",
+    "nucleusId": "nucleus:pj",
+    "clusterId": "cluster:calculadora-clt-ou-pj",
+    "clusterExists": true,
+    "pillarAssetId": "article:clt-ou-pj",
+    "articleRole": "SPECIALIZED_SUPPORT"
+  },
+  "internalLinkPlan": {
+    "outbound": [
+      {"type":"CONTEXTUAL_LINK","targetAssetId":"article:clt-ou-pj","targetExists":true,"anchor":"comparação completa entre CLT e PJ","relationshipJustified":true},
+      {"type":"CONTINUITY_LINK","targetAssetId":"calculator:calculadora-clt-ou-pj","targetExists":true,"anchor":"simular a diferença entre CLT e PJ","relationshipJustified":true},
+      {"type":"DISCOVERY_BLOCK_LINK","targetAssetId":"article:contrato-pj-o-que-analisar-antes-de-aceitar","targetExists":true,"anchor":"pontos essenciais de um contrato PJ","relationshipJustified":true}
+    ],
+    "inboundAnalysis": {
+      "state": "INBOUND_LINK_UPDATE_RECOMMENDED",
+      "candidateAssets": ["article:clt-ou-pj", "guide:guide-pj"],
+      "decisionReason": "The pillar and guide are the natural discovery paths, but no public link is changed in dry-run."
+    },
+    "orphanRisk": "CLUSTER_LINKING_HEALTHY"
+  },
+  "faq": {"visibleCount": 6, "schemaCount": 6, "exactMatch": true},
+  "cta": {"resolved": true},
+  "panelMetadata": {
+    "contentFreshnessStatus": "CURRENT",
+    "lastReviewedAt": "2026-07-14",
+    "nextReviewAt": "2027-01-14",
+    "updateSensitivity": "MIXED",
+    "officialSources": ["source:receita-servicos-digitais"],
+    "affectedRules": ["rule:pj-tax-procedure"],
+    "affectedAssets": ["article:hypothetical-second-controlled-test", "calculator:calculadora-clt-ou-pj"],
+    "clusterId": "cluster:calculadora-clt-ou-pj",
+    "pillarAssetId": "article:clt-ou-pj",
+    "validationStatus": "PASS",
+    "publicationStatus": "draft"
+  }
+}

@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","requirements":["descriptive","natural","varied","context coherent"],"genericExamples":["clique aqui","saiba mais","veja aqui"],"antiPatterns":["DESCRIPTIVE_ANCHOR_REQUIRED","EXACT_MATCH_OVERUSE","GENERIC_ANCHOR_OVERUSE"],"validatorCheck":"deterministic for known generic anchors; heuristic or human review for overuse"}

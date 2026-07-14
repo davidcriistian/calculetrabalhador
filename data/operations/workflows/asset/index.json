@@ -1,9 +1,9 @@
 {
   "id": "asset-operation-workflows",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-10",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -39,6 +39,20 @@
         "when-calculator-pass-recommendation-slot-resolved",
         "when-calculator-pass-adaptive-report-contract-resolved",
         "when-calculator-pass-report-render-validated",
+        "when-article-resolve-primary-search-intent-and-reader-action",
+        "when-article-prepare-plain-language-section-flow-example-and-repetition-plan",
+        "when-article-classify-update-sensitivity-and-mutable-sections",
+        "when-article-map-official-sources-rules-assets-and-dependencies",
+        "when-article-resolve-domain-nucleus-cluster-pillar-and-role",
+        "when-article-prepare-contextual-continuity-and-discovery-links",
+        "when-article-evaluate-inbound-links-and-orphan-risk",
+        "when-article-pass-search-intent-resolved",
+        "when-article-pass-editorial-clarity-resolved",
+        "when-article-pass-content-freshness-resolved",
+        "when-article-pass-official-sources-resolved",
+        "when-article-pass-cluster-position-resolved",
+        "when-article-pass-internal-link-plan-resolved",
+        "when-article-pass-bidirectional-cluster-linking-resolved",
         "provision-draft-specification",
         "prepare-relationship-map",
         "register-registry-draft",
@@ -60,6 +74,9 @@
     "usesInference": false,
     "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
     "calculatorSpecificStepsApplyWhen": "assetType=calculator AND compatibility class is NEW_ASSET or MIGRATED_ASSET",
-    "legacyCalculatorPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
+    "legacyCalculatorPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "articleContract": "/data/blueprints/article/editorial-automation.contract.json",
+    "articleSpecificStepsApplyWhen": "assetType=article AND compatibility class is NEW_ARTICLE or MIGRATED_ARTICLE",
+    "legacyArticlePolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
   }
 }

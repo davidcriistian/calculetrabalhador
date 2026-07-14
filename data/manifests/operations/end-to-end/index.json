@@ -1,9 +1,9 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -78,6 +78,18 @@
       ,"editorialWordCount"
       ,"recommendationSlotState"
       ,"adaptiveReportDeclarations"
+      ,"articleCompatibilityClass"
+      ,"primarySearchIntent"
+      ,"updateSensitivity"
+      ,"mutableContentSections"
+      ,"officialSources"
+      ,"affectedRules"
+      ,"affectedAssets"
+      ,"dependencyIds"
+      ,"pillarAssetId"
+      ,"articleRole"
+      ,"internalLinkPlan"
+      ,"inboundLinkAnalysis"
     ],
     "conditional": [
       "coreSource",
@@ -96,6 +108,9 @@
       ,"resultContractResolution"
       ,"visualEvidenceOrManualApproval"
       ,"reportRenderEvidence"
+      ,"articleEditorialPlan"
+      ,"sourceTraceabilityEvidence"
+      ,"clusterPositionResolution"
     ],
     "manualDecision": [
       "missingDomain",
@@ -114,6 +129,11 @@
       "recommendationSlotNotResolved",
       "adaptiveReportNotResolved",
       "unapprovedPublicDestination"
+      ,"articleSearchIntentNotResolved"
+      ,"articleFreshnessNotResolved"
+      ,"articleSourcesNotResolved"
+      ,"articleClusterPositionNotResolved"
+      ,"articleBidirectionalLinksNotResolved"
     ],
     "prohibitedToInfer": [
       "assetId",
@@ -196,6 +216,14 @@
       ,"recommendationSlotResolution"
       ,"adaptiveReportResolution"
       ,"reportRenderValidation"
+      ,"articleEditorialContract"
+      ,"articleEditorialPlan"
+      ,"searchIntentResolution"
+      ,"freshnessResolution"
+      ,"sourceTraceabilityMap"
+      ,"clusterPositionResolution"
+      ,"internalLinkPlan"
+      ,"bidirectionalLinkResolution"
     ],
     "identityRule": "Use typed assetId for internal identity. Slug is public routing only."
   },
@@ -258,6 +286,9 @@
     "calculatorExperienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
     "calculatorExperienceValidator": "/scripts/validate-calculator-experience-contract.js",
     "calculatorExperienceFixtures": "/data/pos/validation/calculator-experience-fixtures.json"
+    ,"articleEditorialContract": "/data/blueprints/article/editorial-automation.contract.json"
+    ,"articleValidator": "/scripts/validate-article-automation.js"
+    ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
   },
   "restrictions": [
     "Do not execute every phase blindly.",
@@ -273,6 +304,8 @@
     ,"Do not accept a non-institutional primary theme without approved variation evidence."
     ,"Do not invent or hide the governed visible updated-at value."
     ,"Do not accept screenshot, full-page capture, viewport-dependent or raster-only reports."
+    ,"Do not generate a NEW_ARTICLE or MIGRATED_ARTICLE with unresolved editorial, freshness, source, cluster or bidirectional-link gates."
+    ,"Do not apply the new article standard retroactively without explicit migration scope."
   ],
   "finalStatuses": [
     "SUCCESS_NO_PUBLIC_CHANGE",

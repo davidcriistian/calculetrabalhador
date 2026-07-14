@@ -1,0 +1,1 @@
+{"status":"HARDENED","fromVersion":"0.2.0","toVersion":"0.3.0","requiredBlocks":["intent","audience","answer","editorial","freshness","relationships","internalLinkPlan","panelMetadata"],"compatibility":{"legacy":"LEGACY_ACCEPTED_PENDING_MIGRATION","new":"NEW_STANDARD_REQUIRED","migrated":"NEW_STANDARD_REQUIRED"},"schemaUpdated":true,"publicArticleChanged":false}

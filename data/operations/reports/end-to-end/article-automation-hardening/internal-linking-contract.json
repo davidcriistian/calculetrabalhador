@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","types":["CONTEXTUAL_LINK","CONTINUITY_LINK","DISCOVERY_BLOCK_LINK"],"requirements":["existing target","justified relationship","descriptive anchor","pillar link for non-pillar article"],"prohibited":["random link","keyword-only link","excess links","generic anchor","broken target","unjustified cross-cluster link"],"gate":"INTERNAL_LINK_PLAN_RESOLVED"}

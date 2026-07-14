@@ -1,0 +1,103 @@
+{
+  "id": "article-automation-fixtures",
+  "version": "1.0.0",
+  "status": "active",
+  "runtimeStatus": "consumed-by-article-automation",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "Calcule Trabalhador",
+  "contract": "/data/blueprints/article/editorial-automation.contract.json",
+  "defaults": {
+    "compatibilityClass": "NEW_ARTICLE",
+    "migrationRequested": false,
+    "intent": {
+      "primarySearchIntent": "PROBLEM_SOLVING",
+      "primaryQuestion": "Como resolver o problema de forma segura?",
+      "secondaryQuestions": ["O que fazer primeiro?"],
+      "readerActionAfterReading": "Aplicar o passo a passo ao próprio caso.",
+      "topicOnly": false
+    },
+    "audience": {"knowledgeLevel": "NON_SPECIALIST", "problem": "Uma dúvida concreta que exige orientação prática."},
+    "content": {
+      "directAnswerNearBeginning": true,
+      "technicalTerms": [],
+      "paragraphs": [{"wordCount": 70, "maxSentenceWords": 24, "averageSentenceWords": 18, "mainIdeaCount": 1}],
+      "wordCount": 1800,
+      "sections": [
+        {"id": "inicio", "dependsOnPrevious": false, "transitionFromPrevious": null},
+        {"id": "passo-seguinte", "dependsOnPrevious": true, "transitionFromPrevious": "Depois do primeiro passo, a próxima dúvida é como aplicar a decisão."}
+      ],
+      "concepts": [{"id": "conceito-principal", "complex": true, "critical": false, "exampleType": "REALISTIC_SCENARIO", "exampleIsHypotheticalAndLabeled": true}],
+      "keywordDensity": 0.02,
+      "duplicatedConclusionCount": 0,
+      "repeatedParagraphRatio": 0,
+      "pedagogicalReinforcement": {"used": false, "addsNewValue": true},
+      "bureaucraticToneDetected": false
+    },
+    "freshness": {
+      "updateSensitivity": "EVERGREEN",
+      "lastReviewedAt": null,
+      "nextReviewAt": null,
+      "reviewEvidence": false,
+      "mutableContentSections": [],
+      "officialSources": [],
+      "affectedRules": [],
+      "affectedAssets": [],
+      "dependencyIds": []
+    },
+    "sourcePolicy": {"officialSourceRequired": false, "legalClaimPresent": false},
+    "relationships": {
+      "domainId": "domain:pj",
+      "nucleusId": "nucleus:pj",
+      "clusterId": "cluster:pj-financas",
+      "clusterExists": true,
+      "pillarAssetId": "article:guia-financeiro-pj",
+      "articleRole": "CORE_SUPPORT"
+    },
+    "internalLinkPlan": {
+      "outbound": [
+        {"type": "CONTEXTUAL_LINK", "targetAssetId": "article:guia-financeiro-pj", "targetExists": true, "anchor": "guia financeiro para PJ", "relationshipJustified": true},
+        {"type": "CONTINUITY_LINK", "targetAssetId": "calculator:calculadora-custo-mensal-pj", "targetExists": true, "anchor": "calcular o custo mensal da operação", "relationshipJustified": true}
+      ],
+      "inboundAnalysis": {"state": "INBOUND_LINK_UPDATE_RECOMMENDED", "candidateAssets": ["article:guia-financeiro-pj"], "decisionReason": "O pilar deve oferecer continuidade para o novo conteúdo."},
+      "orphanRisk": "CLUSTER_LINKING_HEALTHY"
+    },
+    "faq": {"visibleCount": 5, "schemaCount": 5, "exactMatch": true},
+    "cta": {"resolved": true},
+    "panelMetadata": {
+      "contentFreshnessStatus": "CURRENT",
+      "lastReviewedAt": null,
+      "nextReviewAt": null,
+      "updateSensitivity": "EVERGREEN",
+      "officialSources": [],
+      "affectedRules": [],
+      "affectedAssets": [],
+      "clusterId": "cluster:pj-financas",
+      "pillarAssetId": "article:guia-financeiro-pj",
+      "validationStatus": "PENDING",
+      "publicationStatus": "draft"
+    }
+  },
+  "scenarios": [
+    {"id": "01-unexplained-technical-language", "description": "Technical term is not explained on first use.", "overrides": {"content": {"technicalTerms": [{"term": "competência tributária", "firstOccurrenceExplained": false}]}}, "expectedStatus": "FAIL", "expectedFindings": ["UNEXPLAINED_TECHNICAL_TERM"]},
+    {"id": "02-dense-multi-concept-paragraph", "description": "Dense paragraph combines several concepts.", "overrides": {"content": {"paragraphs": [{"wordCount": 138, "maxSentenceWords": 32, "averageSentenceWords": 23, "mainIdeaCount": 4}]}}, "expectedStatus": "FAIL", "expectedFindings": ["DENSE_MULTI_CONCEPT_PARAGRAPH"]},
+    {"id": "03-simple-and-precise-language", "description": "Plain and precise language.", "overrides": {}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "04-ten-dependent-sections-without-transitions", "description": "Ten dependent sections omit transitions.", "overrides": {"content": {"sections": [{"id":"s1","dependsOnPrevious":false,"transitionFromPrevious":null},{"id":"s2","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s3","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s4","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s5","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s6","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s7","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s8","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s9","dependsOnPrevious":true,"transitionFromPrevious":null},{"id":"s10","dependsOnPrevious":true,"transitionFromPrevious":null}]}}, "expectedStatus": "FAIL", "expectedFindings": ["DISCONNECTED_SECTION_SEQUENCE", "H2_STACK_WITHOUT_LOGICAL_FLOW"]},
+    {"id": "05-logical-transitions", "description": "Dependent sections include useful transitions.", "overrides": {}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "06-abstract-financial-concept-without-example", "description": "Complex financial concept lacks an example.", "overrides": {"content": {"concepts": [{"id":"capital-de-giro","complex":true,"critical":false,"exampleType":null,"exampleIsHypotheticalAndLabeled":false}]}}, "expectedStatus": "WARNING", "expectedFindings": ["ABSTRACT_CONCEPT_WITHOUT_EXAMPLE"]},
+    {"id": "07-artificial-keyword-repetition", "description": "Keyword density indicates artificial repetition.", "overrides": {"content": {"keywordDensity": 0.12}}, "expectedStatus": "FAIL", "expectedFindings": ["KEYWORD_REPETITION"]},
+    {"id": "08-pedagogical-reinforcement-new-context", "description": "Reinforcement adds a new example and context.", "overrides": {"content": {"pedagogicalReinforcement": {"used": true, "addsNewValue": true}}}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "09-legal-article-without-official-source", "description": "Legal content has no official source.", "overrides": {"freshness": {"updateSensitivity":"LEGAL_RULE_DEPENDENT","lastReviewedAt":"2026-07-14","nextReviewAt":"2027-01-14","reviewEvidence":true,"officialSources":[],"affectedRules":["rule:test"],"affectedAssets":["article:test"],"dependencyIds":["rule:test"]}, "sourcePolicy": {"officialSourceRequired": true, "legalClaimPresent": true}}, "expectedStatus": "FAIL", "expectedFindings": ["MISSING_MANDATORY_OFFICIAL_SOURCE"]},
+    {"id": "10-evergreen-without-legal-dependency", "description": "Evergreen content has no legal dependency.", "overrides": {}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "11-mixed-without-mutable-sections", "description": "Mixed content omits mutable section mapping.", "overrides": {"freshness": {"updateSensitivity":"MIXED","lastReviewedAt":"2026-07-14","nextReviewAt":"2027-01-14","reviewEvidence":true,"mutableContentSections":[],"officialSources":[{"sourceId":"source:official","sourceType":"OFFICIAL_GUIDANCE","sourceUrl":"https://example.gov.br/official","authority":"Official authority","supportsSections":["regra-atual"],"lastVerifiedAt":"2026-07-14","updateRisk":"MEDIUM","status":"SOURCE_VERIFIED","official":true,"reachable":true}],"affectedRules":["rule:test"],"affectedAssets":["article:test"],"dependencyIds":["rule:test"]}}, "expectedStatus": "FAIL", "expectedFindings": ["MUTABLE_CONTENT_SECTIONS_MISSING"]},
+    {"id": "12-traced-source-and-dependencies", "description": "Official source and dependencies are traced.", "overrides": {"freshness": {"updateSensitivity":"LEGAL_RULE_DEPENDENT","lastReviewedAt":"2026-07-14","nextReviewAt":"2027-01-14","reviewEvidence":true,"officialSources":[{"sourceId":"source:official","sourceType":"LAW","sourceUrl":"https://example.gov.br/law","authority":"Official authority","supportsSections":["regra"],"lastVerifiedAt":"2026-07-14","updateRisk":"HIGH","status":"SOURCE_VERIFIED","official":true,"reachable":true}],"affectedRules":["rule:test"],"affectedAssets":["article:test","calculator:test"],"dependencyIds":["rule:test"]}, "sourcePolicy": {"officialSourceRequired": true, "legalClaimPresent": true}}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "13-article-without-cluster", "description": "Cluster position is unresolved.", "overrides": {"relationships": {"clusterId": null, "clusterExists": false}}, "expectedStatus": "MANUAL_DECISION_REQUIRED", "expectedFindings": ["CLUSTER_POSITION_UNRESOLVED"]},
+    {"id": "14-new-support-without-pillar-link", "description": "New support article omits its pillar link.", "overrides": {"internalLinkPlan": {"outbound": [{"type":"CONTINUITY_LINK","targetAssetId":"calculator:calculadora-custo-mensal-pj","targetExists":true,"anchor":"calcular o custo mensal da operação","relationshipJustified":true}]}}, "expectedStatus": "FAIL", "expectedFindings": ["ARTICLE_WITHOUT_PILLAR_LINK"]},
+    {"id": "15-no-inbound-analysis", "description": "Inbound link analysis is absent.", "overrides": {"internalLinkPlan": {"inboundAnalysis": null}}, "expectedStatus": "FAIL", "expectedFindings": ["INBOUND_LINK_ANALYSIS_MISSING"]},
+    {"id": "16-bidirectional-plan", "description": "Outbound and inbound linking are resolved.", "overrides": {}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "17-repeated-generic-anchors", "description": "Generic anchors are repeated.", "overrides": {"internalLinkPlan": {"outbound": [{"type":"CONTEXTUAL_LINK","targetAssetId":"article:guia-financeiro-pj","targetExists":true,"anchor":"clique aqui","relationshipJustified":true},{"type":"DISCOVERY_BLOCK_LINK","targetAssetId":"calculator:calculadora-custo-mensal-pj","targetExists":true,"anchor":"saiba mais","relationshipJustified":true}]}}, "expectedStatus": "FAIL", "expectedFindings": ["GENERIC_ANCHOR_OVERUSE"]},
+    {"id": "18-descriptive-natural-anchors", "description": "Anchors are descriptive and contextual.", "overrides": {}, "expectedStatus": "PASS", "expectedFindings": []},
+    {"id": "19-three-thousand-repetitive-words", "description": "Long article pads length with repeated keywords and conclusions.", "overrides": {"content": {"wordCount":3000,"keywordDensity":0.14,"duplicatedConclusionCount":5,"repeatedParagraphRatio":0.45,"pedagogicalReinforcement":{"used":true,"addsNewValue":false}}}, "expectedStatus": "FAIL", "expectedFindings": ["DUPLICATED_CONCLUSION", "KEYWORD_REPETITION", "REPETITION_WITHOUT_NEW_VALUE"]},
+    {"id": "20-real-depth-and-progression", "description": "Long-form content has examples, transitions and real progression.", "overrides": {"content": {"wordCount":3000,"keywordDensity":0.025,"duplicatedConclusionCount":0,"repeatedParagraphRatio":0.02,"pedagogicalReinforcement":{"used":true,"addsNewValue":true}}}, "expectedStatus": "PASS", "expectedFindings": []}
+  ]
+}

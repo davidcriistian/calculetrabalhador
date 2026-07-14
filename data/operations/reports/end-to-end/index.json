@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-reports",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/report.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Consolidated report template and dry-run evidence for deliver-asset-end-to-end.",
@@ -42,6 +42,19 @@
     "validation": {
       "status": "NOT_APPLICABLE",
       "reports": []
+    },
+    "articleAutomation": {
+      "applicable": false,
+      "compatibilityClass": null,
+      "contractVersion": null,
+      "gates": {},
+      "checkTypes": {"DETERMINISTIC": 0, "HEURISTIC": 0, "HUMAN_REVIEW_REQUIRED": 0},
+      "freshnessStatus": null,
+      "sourceStatus": null,
+      "clusterStatus": null,
+      "linkingStatus": null,
+      "fixtureReport": null,
+      "dryRunReport": null
     },
     "manualDecisions": [],
     "warnings": [],

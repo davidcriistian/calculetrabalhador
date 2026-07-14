@@ -1,9 +1,9 @@
 {
   "id": "asset-operation-playbooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-10",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -32,6 +32,15 @@
         "for-calculator-decide-conditional-modules-and-result-actions",
         "for-calculator-resolve-governed-recommendation-state",
         "for-calculator-prepare-and-approve-experience-plan",
+        "for-article-resolve-search-intent-and-reader-action",
+        "for-article-prepare-plain-language-and-flow-plan",
+        "for-article-plan-concrete-examples-and-review-repetition",
+        "for-article-classify-freshness-and-identify-mutable-sections",
+        "for-article-map-official-sources-and-change-impact",
+        "for-article-resolve-cluster-pillar-and-role",
+        "for-article-plan-outbound-inbound-links-and-orphan-risk",
+        "for-article-resolve-essential-panel-metadata",
+        "for-article-run-contract-validator-before-specification",
         "prepare-asset-specification",
         "prepare-relationship-map",
         "prepare-registry-entry",
@@ -43,18 +52,20 @@
         "generate-audit-report",
         "keep-lifecycle-draft"
       ],
-      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus"],
+      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"],
       "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-runtime", "modify-core", "modify-blueprints", "modify-gold-standards", "publish", "deploy"]
     }
   ],
   "specializationPolicy": {
     "create-calculator": "consume the canonical calculator experience contract in addition to calculation-specific requirements",
-    "create-article": "add editorial and SEO-specific requirements only",
+    "create-article": "consume the canonical article editorial automation contract in addition to editorial and SEO requirements",
     "create-cluster": "add relationship and candidate-review requirements only",
     "create-guide": "add guide aggregation requirements only",
     "create-nucleus": "add domain-guide-cluster requirements only",
     "rule": "Specific operations must not duplicate generic create-asset flow.",
     "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "articleContract": "/data/blueprints/article/editorial-automation.contract.json",
+    "articleStopConditions": ["SEARCH_INTENT_RESOLVED failed", "EDITORIAL_CLARITY_RESOLVED failed", "CONTENT_FRESHNESS_RESOLVED failed", "OFFICIAL_SOURCES_RESOLVED failed", "CLUSTER_POSITION_RESOLVED failed or requires manual decision", "INTERNAL_LINK_PLAN_RESOLVED failed", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED failed", "applicable blocker editorial anti-pattern", "legacy retrofit requested without migration approval"],
     "calculatorStopConditions": ["REFERENCE_STUDY_COMPLETE failed", "CALCULATOR_EXPERIENCE_PLAN_APPROVED failed", "RESULT_CONTRACT_RESOLVED failed", "BRAND_THEME_RESOLVED failed", "VISIBLE_UPDATED_AT_RESOLVED failed", "EDITORIAL_DEPTH_RESOLVED failed", "RECOMMENDATION_SLOT_RESOLVED failed", "ADAPTIVE_REPORT_CONTRACT_RESOLVED failed", "REPORT_RENDER_VALIDATED failed", "applicable blocker anti-pattern", "recommendation lacks approved source"]
   }
 }

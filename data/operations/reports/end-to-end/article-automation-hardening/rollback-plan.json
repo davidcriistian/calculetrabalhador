@@ -1,0 +1,9 @@
+{
+  "status":"ROLLBACK_READY",
+  "strategy":"surgical internal-only reversal",
+  "restoreModifiedInternalFiles":["data/blueprints/article/index.json","data/blueprints/schemas/article-blueprint.schema.json","data/gold-standards/article/index.json","data/references/articles/index.json","data/manifests/dependencies/index.json","data/manifests/operations/asset/index.json","data/manifests/operations/end-to-end/index.json","data/operations/workflows/asset/index.json","data/operations/workflows/end-to-end/index.json","data/operations/playbooks/asset/index.json","data/operations/playbooks/end-to-end/index.json","data/operations/checklists/end-to-end/index.json","data/operations/reports/end-to-end/index.json","data/pos/contracts/content.contract.json","data/pos/contracts/testing.contract.json","data/pos/contracts/validation.contract.json","data/pos/testing/index.json","data/pos/validation/index.json","data/pos/validation/validation-checklist.json","data/pos/validation/validation-rules.json"],
+  "removeCreatedInternalFiles":["data/blueprints/article/editorial-automation.contract.json","data/pos/validation/article-automation-fixtures.json","scripts/validate-article-automation.js","data/operations/reports/end-to-end/article-automation-hardening/"],
+  "protectedExclusions":["all public articles","all calculators","all guides","Home","data/articles.json","data/tools.json","sitemap.xml","data/rules/","data/tabelas-trabalhistas.json","data/registry/","data/publishing/","all prior-phase reports"],
+  "automaticExecution":false,
+  "postRollbackValidation":["JSON_VALID","node --check","validate-governance","transform-rules --check","git diff --check","mutation guard"]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "article-editorial-automation-contract",
+  "version": "1.0.0",
+  "status": "active",
+  "runtimeStatus": "consumed-by-article-automation",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "Calcule Trabalhador",
+  "source": "Phase 5.29 - evidence from article:como-organizar-as-financas-sendo-pj",
+  "principle": "WRITE_FOR_THE_PERSON_LIVING_THE_PROBLEM",
+  "compatibility": {
+    "classes": ["LEGACY_ARTICLE", "NEW_ARTICLE", "MIGRATED_ARTICLE"],
+    "LEGACY_ARTICLE": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "NEW_ARTICLE": "NEW_STANDARD_REQUIRED",
+    "MIGRATED_ARTICLE": "NEW_STANDARD_REQUIRED",
+    "retrofitRequiresExplicitApproval": true
+  },
+  "searchIntent": {
+    "classes": ["INFORMATIONAL", "PROBLEM_SOLVING", "COMPARATIVE", "TRANSACTIONAL_SUPPORT", "CALCULATOR_SUPPORT", "LEGAL_EXPLANATION", "STEP_BY_STEP_GUIDE", "UPDATE_NEWS"],
+    "required": ["primarySearchIntent", "primaryQuestion", "secondaryQuestions", "readerActionAfterReading"],
+    "gate": "SEARCH_INTENT_RESOLVED",
+    "blocker": "TOPIC_COVERED_BUT_INTENT_NOT_RESOLVED"
+  },
+  "plainLanguage": {
+    "requirements": [
+      "answer-primary-question-near-beginning",
+      "prefer-direct-sentence-order",
+      "prefer-concrete-language",
+      "explain-technical-term-on-first-use",
+      "prefer-clear-verbs",
+      "one-main-idea-per-paragraph-when-possible",
+      "split-dense-paragraphs",
+      "avoid-unnecessarily-long-sentences",
+      "avoid-bureaucratic-tone",
+      "do-not-infantilize-reader",
+      "preserve-technical-precision"
+    ],
+    "observableThresholds": {
+      "denseParagraphWords": 120,
+      "veryLongSentenceWords": 45,
+      "averageSentenceWarningWords": 28
+    },
+    "antiPatterns": [
+      {"id": "EXPERT_TO_EXPERT_LANGUAGE", "defaultSeverity": "major", "checkType": "HUMAN_REVIEW_REQUIRED"},
+      {"id": "UNEXPLAINED_TECHNICAL_TERM", "defaultSeverity": "blocker", "checkType": "DETERMINISTIC"},
+      {"id": "ABSTRACT_FINANCIAL_LANGUAGE", "defaultSeverity": "major", "checkType": "HUMAN_REVIEW_REQUIRED"},
+      {"id": "DENSE_MULTI_CONCEPT_PARAGRAPH", "defaultSeverity": "major", "checkType": "HEURISTIC"},
+      {"id": "BUREAUCRATIC_TONE", "defaultSeverity": "warning", "checkType": "HEURISTIC"},
+      {"id": "UNNECESSARY_JARGON", "defaultSeverity": "major", "checkType": "HUMAN_REVIEW_REQUIRED"}
+    ]
+  },
+  "sectionFlow": {
+    "rule": "SECTION_TRANSITION_REQUIRED",
+    "appliesWhen": "next-section-conceptually-depends-on-previous",
+    "transitionFunctions": ["summarize-resolved-point", "introduce-next-question", "explain-why-next-topic-matters"],
+    "doesNotRequireArtificialTransitionEverywhere": true,
+    "blockers": ["DISCONNECTED_SECTION_SEQUENCE", "H2_STACK_WITHOUT_LOGICAL_FLOW"]
+  },
+  "examples": {
+    "requiredWhenItImprovesUnderstandingOf": ["money", "percentage", "date", "deadline", "calculation", "right", "obligation", "scenario", "practical-decision"],
+    "types": ["NUMERICAL_EXAMPLE", "REALISTIC_SCENARIO", "BEFORE_AFTER", "COMMON_MISTAKE", "STEP_BY_STEP_EXAMPLE"],
+    "prohibited": ["invented-legal-data-presented-as-official", "invented-real-case", "invented-testimonial", "hypothetical-example-presented-as-universal-rule"],
+    "antiPattern": "ABSTRACT_CONCEPT_WITHOUT_EXAMPLE",
+    "defaultSeverity": "warning",
+    "blockWhen": "complex-critical-concept-has-no-example-and-no-justification"
+  },
+  "repetitionAndDensity": {
+    "allowed": "PEDAGOGICAL_REINFORCEMENT",
+    "allowedWhen": ["new-context", "decision-support", "new-example", "connection-to-next-step"],
+    "prohibited": "ARTIFICIAL_REPETITION",
+    "antiPatterns": ["REPETITION_WITHOUT_NEW_VALUE", "KEYWORD_REPETITION", "PADDED_PARAGRAPH", "DUPLICATED_CONCLUSION"],
+    "heuristicThresholds": {"keywordDensityBlocker": 0.08, "duplicatedConclusionCount": 2}
+  },
+  "freshness": {
+    "classes": ["EVERGREEN", "TIME_SENSITIVE", "LEGAL_RULE_DEPENDENT", "OFFICIAL_TABLE_DEPENDENT", "PROCEDURE_DEPENDENT", "MIXED"],
+    "requiredFields": ["updateSensitivity", "lastReviewedAt", "nextReviewAt", "officialSources", "affectedRules", "affectedAssets", "dependencyIds"],
+    "datePolicy": "do-not-invent-review-date-or-cadence",
+    "mutableSeparation": {
+      "requiredFor": ["MIXED"],
+      "field": "mutableContentSections",
+      "mutableExamples": ["rates", "limits", "dates", "tables", "values", "legal-deadlines", "official-procedures", "annual-rules"],
+      "purpose": "surgical-future-update"
+    },
+    "gate": "CONTENT_FRESHNESS_RESOLVED"
+  },
+  "sourceTraceability": {
+    "fields": ["sourceId", "sourceType", "sourceUrl", "authority", "supportsSections", "lastVerifiedAt", "updateRisk", "status"],
+    "statuses": ["SOURCE_VERIFIED", "SOURCE_REVIEW_REQUIRED", "SOURCE_UNAVAILABLE", "SOURCE_OUTDATED"],
+    "prohibited": ["generic-source-for-specific-claim", "unrelated-reference", "non-official-source-as-legal-rule", "broken-link", "unverified-source-cited-as-verified"],
+    "missingMandatorySourceBlocksPublication": true,
+    "gate": "OFFICIAL_SOURCES_RESOLVED"
+  },
+  "changeImpact": {
+    "essentialFields": ["affectedRules", "affectedAssets", "dependencyIds"],
+    "conceptualFlow": ["RULE_CHANGE", "IMPACTED_ARTICLES", "IMPACTED_CALCULATORS", "REVIEW_REQUIRED"],
+    "usesExistingMapsAndRegistry": true,
+    "createsNewEngine": false
+  },
+  "panelMetadata": {
+    "minimumFields": ["contentFreshnessStatus", "lastReviewedAt", "nextReviewAt", "updateSensitivity", "officialSources", "affectedRules", "affectedAssets", "clusterId", "pillarAssetId", "validationStatus", "publicationStatus"],
+    "duplicateEquivalentFields": false,
+    "panelImplementationIncluded": false
+  },
+  "clusterPosition": {
+    "required": ["domainId", "nucleusId", "clusterId", "pillarAssetId", "articleRole"],
+    "roles": ["PILLAR", "CORE_SUPPORT", "SPECIALIZED_SUPPORT", "COMPARATIVE_SUPPORT", "CALCULATOR_SUPPORT", "UPDATE_SUPPORT"],
+    "missingCluster": "MANUAL_DECISION_REQUIRED",
+    "inventClusterProhibited": true,
+    "gate": "CLUSTER_POSITION_RESOLVED"
+  },
+  "internalLinking": {
+    "types": ["CONTEXTUAL_LINK", "CONTINUITY_LINK", "DISCOVERY_BLOCK_LINK"],
+    "requirements": ["target-exists", "relationship-justified", "anchor-descriptive", "outbound-to-pillar-when-not-pillar"],
+    "prohibited": ["random-link", "keyword-only-link", "excessive-linking", "generic-anchor", "artificial-exact-anchor-repetition", "nonexistent-target", "unjustified-cross-cluster-link"],
+    "inboundStates": ["INBOUND_LINK_UPDATE_REQUIRED", "INBOUND_LINK_UPDATE_RECOMMENDED", "NO_INBOUND_UPDATE_REQUIRED"],
+    "healthStates": ["CLUSTER_LINKING_HEALTHY", "ORPHAN_RISK", "WEAK_CLUSTER_CONNECTION", "CROSS_CLUSTER_LINK_REVIEW_REQUIRED"],
+    "gates": ["INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"]
+  },
+  "anchors": {
+    "requirements": ["descriptive", "natural", "varied", "context-coherent"],
+    "genericExamples": ["clique aqui", "saiba mais", "veja aqui"],
+    "antiPatterns": ["DESCRIPTIVE_ANCHOR_REQUIRED", "EXACT_MATCH_OVERUSE", "GENERIC_ANCHOR_OVERUSE"]
+  },
+  "validation": {
+    "checkTypes": ["DETERMINISTIC", "HEURISTIC", "HUMAN_REVIEW_REQUIRED"],
+    "gates": ["SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"],
+    "semanticLimit": "Heuristics must not be reported as perfect semantic analysis.",
+    "validator": "/scripts/validate-article-automation.js",
+    "fixtures": "/data/pos/validation/article-automation-fixtures.json"
+  }
+}

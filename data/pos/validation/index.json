@@ -1,11 +1,11 @@
 {
   "id": "pos-validation-engine-index",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 4 - Validation Engine",
   "description": "Declarative authority for platform compliance validation.",
@@ -34,6 +34,9 @@
     "evidence": "/data/pos/validation/validation-evidence.json",
     "approvalTemplate": "/data/pos/validation/approval-template.json",
     "documentation": "/data/pos/docs/VALIDATION_ENGINE.md"
+    ,"articleContract": "/data/blueprints/article/editorial-automation.contract.json"
+    ,"articleValidator": "/scripts/validate-article-automation.js"
+    ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
   },
   "operationalBoundaries": {
     "executesValidations": false,

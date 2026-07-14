@@ -1,11 +1,11 @@
 {
   "id": "validation-rules",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 4 - Validation Engine",
   "description": "Declarative compliance rules for future validation decisions.",
@@ -51,6 +51,62 @@
       "required": true,
       "blocksApproval": true,
       "description": "POS records must not become the source of legal or labor knowledge."
+    },
+    {
+      "id": "article-search-intent-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Primary question, secondary questions and reader action must resolve the declared search intent."
+    },
+    {
+      "id": "article-editorial-clarity-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Blocker plain-language, flow, example or repetition findings must be resolved."
+    },
+    {
+      "id": "article-content-freshness-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Update sensitivity and mutable content must be classified without invented dates."
+    },
+    {
+      "id": "article-official-sources-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Official-dependent claims require verified source traceability."
+    },
+    {
+      "id": "article-cluster-position-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Domain, nucleus, cluster, pillar and article role must be resolved without inventing a cluster."
+    },
+    {
+      "id": "article-internal-link-plan-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Typed outbound links must be relevant, descriptive and target existing assets."
+    },
+    {
+      "id": "article-bidirectional-linking-resolved",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+      "description": "Inbound-link action and orphan risk must be explicitly resolved."
+    },
+    {
+      "id": "legacy-article-compatibility",
+      "required": true,
+      "blocksApproval": false,
+      "appliesTo": ["LEGACY_ARTICLE"],
+      "description": "Existing articles remain LEGACY_ACCEPTED_PENDING_MIGRATION unless retrofit is explicitly approved."
     }
   ],
   "notes": [

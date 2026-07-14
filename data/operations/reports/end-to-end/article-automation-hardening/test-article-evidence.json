@@ -1,0 +1,12 @@
+{
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "physicalPath": "blog/como-organizar-as-financas-sendo-pj/index.html",
+  "auditMode": "read-only",
+  "compatibilityResult": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+  "structuralMetrics": {"h1":1,"h2":19,"paragraphs":53,"averageParagraphWords":43,"maximumParagraphWords":73,"denseParagraphsOver120Words":0,"faq":8,"ctaMarkers":3,"officialSourceLinks":5,"internalLinks":18,"uniqueInternalLinks":13},
+  "approvedEvidence": ["single H1", "deep progressive structure", "three CTA positions", "visible FAQ mirrored by schema", "official sources", "related calculators and content", "SEO metadata"],
+  "hardeningSignals": ["plain-language planning must be explicit", "transitions must be planned where sections depend on previous concepts", "examples must be declared for complex concepts", "repetition must add new value", "mutable claims need section mapping", "source-to-section mapping is needed", "formal cluster and inbound-link decisions must be resolved"],
+  "semanticLimit": "Structural metrics are heuristic evidence and do not claim perfect semantic analysis.",
+  "contentCopied": false,
+  "articleMutated": false
+}

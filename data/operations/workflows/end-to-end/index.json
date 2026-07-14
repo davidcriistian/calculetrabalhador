@@ -1,9 +1,9 @@
 {
   "id": "end-to-end-operation-workflows",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -56,7 +56,7 @@
           "gates": ["assetId", "assetType", "blueprint", "gold-standard", "reference", "owner"],
           "stopConditions": ["identity-missing", "blueprint-missing", "gold-standard-missing", "reference-critical-missing"],
           "rollback": "none",
-          "nextStates": ["CALCULATOR_EXPERIENCE_RESOLUTION", "REUSE_OR_CREATE_DECISION"]
+          "nextStates": ["CALCULATOR_EXPERIENCE_RESOLUTION", "ARTICLE_AUTOMATION_RESOLUTION", "REUSE_OR_CREATE_DECISION"]
         },
         {
           "id": "CALCULATOR_EXPERIENCE_RESOLUTION",
@@ -68,6 +68,18 @@
           "gates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED"],
           "stopConditions": ["reference-declared-but-not-studied", "module-decomposition-missing", "literal-copy-risk", "form-class-unresolved", "result-class-unresolved", "memory-level-unresolved", "unapproved-primary-theme", "visible-updated-at-unresolved", "editorial-depth-unresolved", "permanent-content-hidden-before-calculation", "recommendation-slot-unresolved", "adaptive-report-unresolved", "conditional-modules-undecided", "calculator-experience-plan-not-approved"],
           "rollback": "discard-calculator-experience-draft-evidence",
+          "nextStates": ["REUSE_OR_CREATE_DECISION"]
+        },
+        {
+          "id": "ARTICLE_AUTOMATION_RESOLUTION",
+          "appliesWhen": ["assetType=article", "articleCompatibilityClass=NEW_ARTICLE-or-MIGRATED_ARTICLE"],
+          "legacyBehavior": "LEGACY_ACCEPTED_PENDING_MIGRATION bypasses new-standard certification unless migration is explicitly requested",
+          "input": ["governance-resolution", "article-editorial-automation-contract", "article-reference-evidence"],
+          "output": ["search-intent-resolution", "article-editorial-plan", "freshness-resolution", "source-traceability-map", "cluster-position-resolution", "internal-link-plan", "bidirectional-link-resolution", "panel-metadata-minimum"],
+          "preconditions": ["article-blueprint-resolved", "article-gold-standard-resolved", "article-editorial-contract-resolved"],
+          "gates": ["SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"],
+          "stopConditions": ["topic-covered-but-intent-not-resolved", "blocker-editorial-anti-pattern", "freshness-classification-missing", "mandatory-official-source-missing", "cluster-or-pillar-unresolved", "new-non-pillar-article-without-pillar-link", "inbound-link-analysis-missing", "orphan-risk-unresolved"],
+          "rollback": "discard-article-automation-draft-evidence",
           "nextStates": ["REUSE_OR_CREATE_DECISION"]
         },
         {
@@ -175,7 +187,7 @@
           "input": ["sitemap-plan"],
           "output": ["testing-report"],
           "preconditions": ["tests-selected-by-scope"],
-          "gates": ["critical-tests-pass-or-not-applicable", "calculator-negative-standard-tests-pass-when-applicable", "result-action-functionality-tests-pass-when-applicable"],
+          "gates": ["critical-tests-pass-or-not-applicable", "calculator-negative-standard-tests-pass-when-applicable", "article-contract-fixtures-pass-when-applicable", "result-action-functionality-tests-pass-when-applicable"],
           "stopConditions": ["critical-test-failed"],
           "rollback": "none",
           "nextStates": ["VALIDATION"]
@@ -185,8 +197,8 @@
           "input": ["testing-report"],
           "output": ["validation-report"],
           "preconditions": ["validation-selected-by-scope"],
-          "gates": ["critical-validations-pass-or-not-applicable", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "REPORT_RENDER_VALIDATED", "result-experience-validation-resolved", "accessibility-validation-resolved"],
-          "stopConditions": ["critical-validation-failed", "applicable-blocker-anti-pattern", "result-experience-invalid", "report-render-invalid", "result-actions-not-distinct"],
+          "gates": ["critical-validations-pass-or-not-applicable", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED", "REPORT_RENDER_VALIDATED", "result-experience-validation-resolved", "accessibility-validation-resolved"],
+          "stopConditions": ["critical-validation-failed", "applicable-blocker-anti-pattern", "result-experience-invalid", "report-render-invalid", "result-actions-not-distinct", "article-gate-unresolved"],
           "rollback": "none",
           "nextStates": ["PREVIEW"]
         },

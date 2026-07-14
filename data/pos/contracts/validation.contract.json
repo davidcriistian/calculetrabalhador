@@ -1,9 +1,9 @@
 {
   "id": "pos-contract-validation",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -24,6 +24,9 @@
     ,"calculator institutional theme and governed visible freshness"
     ,"editorial depth and permanent content visibility"
     ,"canonical recommendation slot and adaptive report compliance"
+    ,"article search intent and editorial clarity"
+    ,"article freshness source traceability and change impact"
+    ,"article cluster position bidirectional links orphan risk and anchors"
   ],
   "expectedInputs": [
     "registry entry",
@@ -44,6 +47,8 @@
     ,"visual validation status"
     ,"calculator experience gate results"
     ,"adaptive report contract and render gate results"
+    ,"article seven-gate results"
+    ,"deterministic heuristic and human-review classifications"
   ],
   "dependencies": [
     "/data/pos/schemas/index.json",
@@ -51,6 +56,7 @@
     "/data/pos/validation/index.json",
     "/data/pos/testing/index.json"
     ,"/data/blueprints/contracts/calculator-experience.contract.json"
+    ,"/data/blueprints/article/editorial-automation.contract.json"
   ],
   "nonResponsibilities": [
     "execute validations",
@@ -66,5 +72,7 @@
     "Validation complements Testing by checking compliance with official project standards.",
     "For NEW_ASSET and MIGRATED_ASSET calculators, static validation cannot be reported as visual PASS.",
     "VISUAL_VALIDATION_NOT_EXECUTED blocks FULL_STANDARD_ACCEPTED until rendered evidence or resolved manual visual approval exists."
+    ,"For NEW_ARTICLE and MIGRATED_ARTICLE, all seven article gates are required before publication."
+    ,"For LEGACY_ARTICLE, return LEGACY_ACCEPTED_PENDING_MIGRATION unless a migration is explicitly in scope."
   ]
 }

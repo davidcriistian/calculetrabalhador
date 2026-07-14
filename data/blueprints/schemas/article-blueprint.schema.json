@@ -6,12 +6,22 @@
     { "$ref": "/data/blueprints/schemas/blueprint.schema.json" },
     {
       "type": "object",
-      "required": ["blueprintType", "identity", "seo", "structure", "testing", "validation", "publishing"],
+      "required": ["blueprintType", "compatibilityClass", "editorialContract", "identity", "intent", "audience", "answer", "editorial", "freshness", "relationships", "internalLinkPlan", "seo", "structure", "panelMetadata", "testing", "validation", "publishing"],
       "properties": {
         "blueprintType": { "const": "article" },
+        "compatibilityClass": { "enum": ["LEGACY_ARTICLE", "NEW_ARTICLE", "MIGRATED_ARTICLE"] },
+        "editorialContract": { "type": "object" },
         "identity": { "type": "object" },
+        "intent": { "type": "object" },
+        "audience": { "type": "object" },
+        "answer": { "type": "object" },
+        "editorial": { "type": "object" },
+        "freshness": { "type": "object" },
+        "relationships": { "type": "object" },
+        "internalLinkPlan": { "type": "object" },
         "seo": { "type": "object" },
         "structure": { "type": "object" },
+        "panelMetadata": { "type": "object" },
         "testing": { "type": "object" },
         "validation": { "type": "object" },
         "publishing": { "type": "object" }

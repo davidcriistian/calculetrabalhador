@@ -1,9 +1,9 @@
 {
   "id": "end-to-end-operation-playbooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
-  "runtimeStatus": "consumed-by-calculator-automation",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
@@ -46,6 +46,11 @@
         "for-new-or-migrated-calculator-resolve-canonical-recommendation-slot",
         "for-new-or-migrated-calculator-declare-adaptive-report-and-distinct-actions",
         "for-new-or-migrated-calculator-approve-experience-plan",
+        "for-new-or-migrated-article-resolve-search-intent-reader-problem-and-action",
+        "for-new-or-migrated-article-resolve-plain-language-flow-examples-and-repetition",
+        "for-new-or-migrated-article-resolve-freshness-mutable-content-sources-and-impact",
+        "for-new-or-migrated-article-resolve-cluster-pillar-role-and-bidirectional-links",
+        "for-new-or-migrated-article-pass-seven-article-gates",
         "check-reuse-before-create",
         "classify-relationships",
         "select-existing-operation-capabilities",
@@ -96,6 +101,8 @@
         "rule": "Do not mark a test PASS when it was not executed.",
         "calculatorNegativeFixtures": "/data/pos/validation/calculator-experience-fixtures.json",
         "calculatorValidator": "/scripts/validate-calculator-experience-contract.js"
+        ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
+        ,"articleValidator": "/scripts/validate-article-automation.js"
       },
       "calculatorExperiencePolicy": {
         "contract": "/data/blueprints/contracts/calculator-experience.contract.json",
@@ -108,6 +115,17 @@
         "requiredVisualEvidence": ["small-mobile", "large-mobile", "intermediate", "desktop"],
         "recommendationRule": "Keep CANONICAL_RESULT_RECOMMENDATION_SLOT after interpretation and before memory; render approved product only in CONFIGURED_ELIGIBLE, otherwise hide.",
         "reportRule": "Derive seven adaptive report declarations from calculator semantics; use an isolated A4 selectable report and distinct copy, print and download behaviors.",
+        "literalCopyProhibited": true
+      },
+      "articleAutomationPolicy": {
+        "contract": "/data/blueprints/article/editorial-automation.contract.json",
+        "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
+        "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+        "generationPrerequisites": ["SEARCH_INTENT_RESOLVED", "EDITORIAL_CLARITY_RESOLVED", "CONTENT_FRESHNESS_RESOLVED", "OFFICIAL_SOURCES_RESOLVED", "CLUSTER_POSITION_RESOLVED", "INTERNAL_LINK_PLAN_RESOLVED", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED"],
+        "freshnessClasses": ["EVERGREEN", "TIME_SENSITIVE", "LEGAL_RULE_DEPENDENT", "OFFICIAL_TABLE_DEPENDENT", "PROCEDURE_DEPENDENT", "MIXED"],
+        "linkTypes": ["CONTEXTUAL_LINK", "CONTINUITY_LINK", "DISCOVERY_BLOCK_LINK"],
+        "heuristicsMustBeLabeled": true,
+        "panelImplementationIncluded": false,
         "literalCopyProhibited": true
       },
       "approvalPolicy": {
@@ -162,6 +180,13 @@
         "applicable-blocker-anti-pattern",
         "false-visual-pass",
         "unapproved-calculator-recommendation",
+        "article-search-intent-unresolved",
+        "article-editorial-clarity-unresolved",
+        "article-freshness-unresolved",
+        "article-official-sources-unresolved",
+        "article-cluster-position-unresolved",
+        "article-internal-link-plan-unresolved",
+        "article-bidirectional-linking-unresolved",
         "critical-test-failed",
         "critical-validation-failed",
         "rollback-unavailable",

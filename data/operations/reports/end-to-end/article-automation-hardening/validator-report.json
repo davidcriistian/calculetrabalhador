@@ -1,0 +1,1 @@
+{"status":"PASS","validator":"/scripts/validate-article-automation.js","contractVersion":"1.0.0","modes":["fixtures","structured input dry-run","read-only HTML audit"],"checkTypes":["DETERMINISTIC","HEURISTIC","HUMAN_REVIEW_REQUIRED"],"internalReferencesChecked":156,"internalReferencesUnresolved":0,"semanticClaim":"heuristic, not perfect semantic analysis","nodeCheck":"PASS"}

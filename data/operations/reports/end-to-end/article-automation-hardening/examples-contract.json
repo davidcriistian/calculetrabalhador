@@ -1,0 +1,1 @@
+{"status":"ESTABLISHED","types":["NUMERICAL_EXAMPLE","REALISTIC_SCENARIO","BEFORE_AFTER","COMMON_MISTAKE","STEP_BY_STEP_EXAMPLE"],"antiPattern":"ABSTRACT_CONCEPT_WITHOUT_EXAMPLE","defaultSeverity":"warning","blockWhen":"complex critical concept has no example or justification","hypotheticalMustBeLabeled":true,"inventedLegalOrRealEvidenceProhibited":true}

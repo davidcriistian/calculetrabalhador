@@ -1,0 +1,33 @@
+{
+  "phase": "5.29",
+  "status": "PASS_WITH_PREEXISTING_CHANGES_ISOLATED",
+  "branch": "main",
+  "head": "1a92520f5cb4d1cb5882e4d644b8e0aeca4e6ea1",
+  "originMain": "1a92520f5cb4d1cb5882e4d644b8e0aeca4e6ea1",
+  "ahead": 0,
+  "behind": 0,
+  "staging": [],
+  "workingTree": "dirty-before-operation",
+  "preexistingChanges": [
+    "data/articles.json", "data/brain/nuclei.json", "data/editorial-metadata.json", "data/maps/content-map.json",
+    "data/publishing/registry/index.json", "data/registry/by-type/index.json", "guias/pj/index.html", "sitemap.xml",
+    "blog/como-organizar-as-financas-sendo-pj/", "data/operations/reports/asset/article/como-organizar-as-financas-sendo-pj/",
+    "data/operations/reports/end-to-end/create-article-como-organizar-financas-pj/",
+    "data/publishing/registry/article-como-organizar-as-financas-sendo-pj-draft.json",
+    "data/registry/by-type/article-como-organizar-as-financas-sendo-pj.json",
+    "scripts/capture-como-organizar-financas-pj-visuals.js", "scripts/test-como-organizar-financas-pj.js"
+  ],
+  "isolation": "safe-internal-only",
+  "gitWriteAllowed": false,
+  "checksumsBefore": {
+    "publicHtml": "635BF1C536D4D3D0FCAAC097011E60D75BE55D5D2FB45242FBA42AAF7B2B15B7",
+    "articles": "325BF84908C5634FC7F8A3D8111FB1D7D2DB63E0B6F58EFD23D9DF133B90E914",
+    "guides": "8135A20C08B0BE4D56B27CFD5862E52A245FBCC5AB8812616C7068C78E4FCFF1",
+    "home": "440EDDB7C1B15E4AFEA971D2F2C59B5C816FA9AE1C34A518F95D33A5081328D1",
+    "publicAssets": "15A136094824A388D0EAE25FFA20FCD1CC16CB04766CC7EBDBA45EAC0C620DBA",
+    "catalogs": "5CA271FD191C75AEAE3B8B333E8DFF8F9817391C8DA8A011748DEBD8F49695B2",
+    "sitemap": "D65EA573A68AC5E1DE2B934343FAD528ACB4EADD9A44A2E7D6D70EEB2E15A69B",
+    "legal": "9BB0AD3A3C2A6A415E30F4262D59F82433ABD06B9FC36E68532FF9EDAD87C6A9",
+    "registryPublishing": "44B262B570C707A1482FEDBB7AB50E9A33FC618AC374C46A8D3F345DDD7AD1FA"
+  }
+}

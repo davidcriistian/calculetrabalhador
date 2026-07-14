@@ -1,11 +1,11 @@
 {
   "id": "validation-checklist",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 4 - Validation Engine",
   "description": "Official declarative checklist for future compliance validation.",
@@ -29,7 +29,14 @@
     { "id": "runtime-safety", "required": true, "severity": "critical", "evidence": ["manual-review"] },
     { "id": "configuration", "required": true, "severity": "high", "evidence": ["manual-review"] },
     { "id": "architecture", "required": true, "severity": "high", "evidence": ["manual-review"] },
-    { "id": "project-standards", "required": true, "severity": "high", "evidence": ["manual-review"] }
+    { "id": "project-standards", "required": true, "severity": "high", "evidence": ["manual-review"] },
+    { "id": "article-search-intent", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["article-plan", "validator-report"] },
+    { "id": "article-editorial-clarity", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["article-plan", "validator-report", "manual-editorial-review"] },
+    { "id": "article-freshness", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["freshness-resolution", "source-map"] },
+    { "id": "article-official-sources", "required": true, "severity": "critical", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["source-map", "source-verification"] },
+    { "id": "article-cluster-position", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["relationship-map", "cluster-position-resolution"] },
+    { "id": "article-internal-links", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["internal-link-plan", "link-check"] },
+    { "id": "article-bidirectional-links", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["bidirectional-link-resolution", "orphan-risk-check"] }
   ],
   "notes": [
     "Checklist items define compliance expectations and do not perform validation."

@@ -1,16 +1,25 @@
 {
   "id": "article-references",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/references/schemas/reference.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-article-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.5 - Reference System",
   "description": "Approved article reference assets.",
   "articleReferencePolicy": {
     "approvedCalculatorCtaPlacement": ["inicio", "meio", "final"],
+    "automationEvidence": {
+      "articleId": "article:como-organizar-as-financas-sendo-pj",
+      "physicalPath": "/blog/como-organizar-as-financas-sendo-pj/index.html",
+      "usage": "read-only evidence for editorial automation hardening",
+      "approvedStrengths": ["structure", "visual-identity", "depth", "search-intent", "practical-utility", "cta", "faq", "technical-seo"],
+      "automationOpportunities": ["plain-language", "paragraph-density", "section-transitions", "concrete-examples", "repetition-control", "freshness-classification", "source-traceability", "change-impact", "bidirectional-linking"],
+      "contentCopyAllowed": false,
+      "publicMutationAllowed": false
+    },
     "notes": [
       "CTA da calculadora no inicio, meio e final passa a ser posicionamento oficial esperado para futuros artigos.",
       "This is recorded declaratively only and does not alter any existing article."
