@@ -1,0 +1,10 @@
+{
+  "id": "rollback-partial-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "ROLLBACK_PARTIAL",
+  "simulation": "page removed while catalog entry remains",
+  "result": "ROLLBACK_INCOMPLETE_DETECTED",
+  "postRollbackValidationStatus": "failed-as-expected",
+  "consideredSuccess": false,
+  "realMutationCount": 0
+}

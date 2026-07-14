@@ -1,0 +1,10 @@
+{
+  "id": "testing-report-automation-failure-hardening",
+  "status": "passed",
+  "executedScenarios": 30,
+  "pass": 30,
+  "warning": 0,
+  "fail": 0,
+  "notExecutedAsPass": false,
+  "executionMode": "isolated simulation plus read-only real-state checks"
+}

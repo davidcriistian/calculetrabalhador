@@ -1,0 +1,9 @@
+{
+  "id": "out-of-scope-mutation-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "OUT_OF_SCOPE_MUTATION",
+  "simulation": "mutation plan includes index.html and assets/js/nuclei.js outside authorized scope",
+  "result": "OUT_OF_SCOPE_MUTATION_BLOCKED",
+  "detectedBeforeCommitOrPublication": true,
+  "realMutationCount": 0
+}

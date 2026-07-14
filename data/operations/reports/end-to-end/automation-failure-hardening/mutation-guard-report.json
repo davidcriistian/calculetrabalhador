@@ -1,0 +1,19 @@
+{
+  "id": "mutation-guard-report-automation-failure-hardening",
+  "status": "passed",
+  "finalCounts": {
+    "publicMutationCount": 0,
+    "legalRuleMutationCount": 0,
+    "realRuntimeMutationCount": 0,
+    "catalogMutationCount": 0,
+    "sitemapMutationCount": 0,
+    "articleMutationCount": 0,
+    "calculatorPageMutationCount": 0,
+    "homeMutationCount": 0,
+    "guideMutationCount": 0,
+    "categoryMutationCount": 0,
+    "unrelatedFileMutationCount": 0
+  },
+  "allowedMutation": "internal reports under data/operations/reports/end-to-end/automation-failure-hardening/",
+  "gitWriteExecuted": false
+}

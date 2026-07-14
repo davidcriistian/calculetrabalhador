@@ -1,0 +1,9 @@
+{
+  "id": "sitemap-duplication-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "SITEMAP_DUPLICATION",
+  "urlUnderTest": "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/",
+  "result": "NO_CHANGE_REQUIRED",
+  "sitemapUrlOccurrenceCount": 1,
+  "realSitemapMutationCount": 0
+}

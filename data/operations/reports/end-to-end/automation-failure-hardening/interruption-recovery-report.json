@@ -1,0 +1,15 @@
+{
+  "id": "interruption-recovery-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "EXECUTION_INTERRUPTED_MIDWAY",
+  "interruptionPoints": ["after-registry", "after-page", "after-catalog", "before-sitemap", "after-sitemap-before-final-validation"],
+  "results": [
+    {"point":"after-registry","classification":"ROLLBACK_REQUIRED"},
+    {"point":"after-page","classification":"ROLLBACK_REQUIRED"},
+    {"point":"after-catalog","classification":"ROLLBACK_REQUIRED"},
+    {"point":"before-sitemap","classification":"RESUMABLE_WITH_VALIDATION"},
+    {"point":"after-sitemap-before-final-validation","classification":"MANUAL_INTERVENTION_REQUIRED"}
+  ],
+  "silentInconsistencyAllowed": false,
+  "realMutationCount": 0
+}

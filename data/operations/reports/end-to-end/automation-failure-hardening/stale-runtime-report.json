@@ -1,0 +1,10 @@
+{
+  "id": "stale-runtime-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "STALE_DERIVED_RUNTIME",
+  "simulation": "canonical source differs from derived runtime",
+  "staleDetected": true,
+  "publicationAllowed": false,
+  "requiredSequence": ["transform-generate", "sync-check", "validation"],
+  "realRuntimeMutationCount": 0
+}

@@ -1,0 +1,9 @@
+{
+  "id": "validation-failure-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "VALIDATION_FAILURE",
+  "simulatedFailures": ["missing-canonical", "invalid-json-ld", "missing-h1", "broken-internal-link", "invalid-schema", "invalid-asset-identity", "invalid-relationship", "invalid-catalog", "invalid-sitemap"],
+  "result": "VALIDATION_FAILED",
+  "stoppedBeforePublication": true,
+  "realMutationCount": 0
+}

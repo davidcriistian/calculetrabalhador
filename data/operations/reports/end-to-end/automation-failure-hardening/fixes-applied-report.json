@@ -1,0 +1,9 @@
+{
+  "id": "fixes-applied-report-automation-failure-hardening",
+  "status": "passed",
+  "fixesApplied": [],
+  "minimalFixCount": 0,
+  "architecturalChangeApplied": false,
+  "publicAssetChangedByFix": false,
+  "legalRuleChangedByFix": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "approval-gate-report-automation-failure-hardening",
+  "status": "passed",
+  "coveredScenarios": ["PREVIEW_NOT_APPROVED", "PUBLICATION_WITHOUT_APPROVAL"],
+  "requiredApprovalFields": ["approvedBy", "approvedScope", "approvedFiles", "approvedUrls", "approvedAt"],
+  "results": [
+    {"testId":"PREVIEW_NOT_APPROVED","result":"MANUAL_APPROVAL_REQUIRED"},
+    {"testId":"PUBLICATION_WITHOUT_APPROVAL","result":"BLOCKED_BY_MISSING_APPROVAL"}
+  ],
+  "publicationAllowed": false,
+  "realMutationCount": 0
+}

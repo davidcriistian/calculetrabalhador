@@ -1,0 +1,21 @@
+{
+  "id": "operation-report-automation-failure-hardening",
+  "phase": "5.24",
+  "operation": "deliver-asset-end-to-end failure hardening",
+  "mode": "ISOLATED_TESTS_READ_ONLY_FIRST",
+  "status": "completed",
+  "result": "AUTOMATION FAILURE HARDENING PASSED WITH WARNINGS",
+  "createdAt": "2026-07-14",
+  "scenariosExecuted": 30,
+  "scenariosPassed": 30,
+  "scenariosWarning": 0,
+  "scenariosFailed": 0,
+  "filesCreated": ["data/operations/reports/end-to-end/automation-failure-hardening/"],
+  "existingFilesModified": [],
+  "publicFilesModified": [],
+  "legalRulesModified": [],
+  "runtimeFilesModified": [],
+  "gitWritesExecuted": false,
+  "indexNowRealExecuted": false,
+  "publicationExecuted": false
+}

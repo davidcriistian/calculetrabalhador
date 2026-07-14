@@ -1,0 +1,19 @@
+{
+  "id": "partial-state-report-automation-failure-hardening",
+  "status": "passed",
+  "coveredScenarios": ["PARTIAL_REGISTRY_STATE", "PARTIAL_PUBLISHING_STATE", "PARTIAL_CATALOG_STATE", "PARTIAL_SITEMAP_STATE", "EXECUTION_INTERRUPTED_MIDWAY"],
+  "results": [
+    {"state":"registry-without-page","result":"RECONCILIATION_REQUIRED"},
+    {"state":"page-without-registry","result":"MANUAL_DECISION_REQUIRED"},
+    {"state":"publishing-without-registry","result":"PUBLICATION_STATE_INCONSISTENCY_DETECTED"},
+    {"state":"published-without-page","result":"PUBLICATION_STATE_INCONSISTENCY_DETECTED"},
+    {"state":"catalog-without-page","result":"CATALOG_PHYSICAL_STATE_MISMATCH"},
+    {"state":"page-without-catalog","result":"CATALOG_PHYSICAL_STATE_MISMATCH"},
+    {"state":"sitemap-without-page","result":"SITEMAP_INTEGRITY_FAILURE"},
+    {"state":"page-without-sitemap","result":"SITEMAP_RECONCILIATION_REQUIRED"},
+    {"state":"interrupted-after-checkpoint","result":"MANUAL_DECISION_REQUIRED"}
+  ],
+  "publicationAllowed": false,
+  "silentCorrectionAllowed": false,
+  "realMutationCount": 0
+}

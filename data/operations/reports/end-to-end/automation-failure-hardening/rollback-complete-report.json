@@ -1,0 +1,10 @@
+{
+  "id": "rollback-complete-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "ROLLBACK_COMPLETE",
+  "simulation": "fixture creation rolled back completely",
+  "restoredItems": ["page", "registry", "publishing", "catalog", "relationships", "projections", "sitemap", "derived-outputs", "active-state-reports"],
+  "result": "ROLLBACK_COMPLETE",
+  "residualMutationCount": 0,
+  "realMutationCount": 0
+}

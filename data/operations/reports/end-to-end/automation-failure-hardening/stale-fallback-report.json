@@ -1,0 +1,9 @@
+{
+  "id": "stale-fallback-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "STALE_FALLBACK",
+  "simulation": "canonical=B runtime=B fallback=A",
+  "fallbackDivergenceDetected": true,
+  "publicationAllowed": false,
+  "realFallbackMutationCount": 0
+}

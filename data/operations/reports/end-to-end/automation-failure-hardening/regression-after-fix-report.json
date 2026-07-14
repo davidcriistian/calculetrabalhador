@@ -1,0 +1,7 @@
+{
+  "id": "regression-after-fix-report-automation-failure-hardening",
+  "status": "not-applicable",
+  "reason": "No minimal fixes were applied.",
+  "regressionRequired": false,
+  "existingApprovedFlowsAffected": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "slug-url-collision-report-automation-failure-hardening",
+  "status": "passed",
+  "scenarios": [
+    {
+      "testId": "DUPLICATE_SLUG",
+      "result": "BLOCKED_BY_SLUG_COLLISION",
+      "mutationCount": 0
+    },
+    {
+      "testId": "DUPLICATE_PUBLIC_URL",
+      "result": "BLOCKED_BY_URL_COLLISION",
+      "mutationCount": 0
+    }
+  ],
+  "blockedEffects": ["overwrite-page", "second-asset-same-url", "canonical-conflict", "sitemap-duplicate"]
+}

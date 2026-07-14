@@ -1,0 +1,9 @@
+{
+  "id": "residue-cleanup-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "TEMPORARY_RESIDUE",
+  "temporarySandboxResidueCount": 0,
+  "fixturesCreatedInRealRepo": false,
+  "allowedResidue": ["data/operations/reports/end-to-end/automation-failure-hardening/"],
+  "realPublicMutationCount": 0
+}

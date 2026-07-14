@@ -1,0 +1,10 @@
+{
+  "id": "indexnow-guard-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "INDEXNOW_SEND_WITHOUT_APPROVAL",
+  "simulation": "attempted --send without explicit approval record",
+  "result": "INDEXNOW_SEND_BLOCKED",
+  "externalCallExecuted": false,
+  "payloadSent": false,
+  "realMutationCount": 0
+}

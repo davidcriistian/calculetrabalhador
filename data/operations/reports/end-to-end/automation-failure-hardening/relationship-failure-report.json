@@ -1,0 +1,9 @@
+{
+  "id": "relationship-failure-report-automation-failure-hardening",
+  "status": "passed",
+  "coveredScenarios": ["PARTIAL_RELATIONSHIP_STATE", "INVALID_RELATIONSHIP"],
+  "invalidRelationshipCases": ["calculatorId-as-clusterId", "unknown-guide", "cross-nucleus-asset", "raw-slug-as-asset-identity", "unapproved-relationship", "missing-cluster"],
+  "result": "BLOCKED_BY_RELATIONSHIP_INTEGRITY",
+  "inferenceAllowed": false,
+  "realMutationCount": 0
+}

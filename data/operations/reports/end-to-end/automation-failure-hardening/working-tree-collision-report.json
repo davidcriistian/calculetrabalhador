@@ -1,0 +1,9 @@
+{
+  "id": "working-tree-collision-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "WORKING_TREE_COLLISION",
+  "simulation": "fixture target contains unrelated local mutation before operation",
+  "result": "BLOCKED_BY_WORKING_TREE_COLLISION",
+  "forbiddenActionsConfirmed": ["overwrite", "automatic-merge", "restore", "silent-absorb", "continue-publication"],
+  "realWorkingTreeMutationCount": 0
+}

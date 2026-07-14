@@ -1,0 +1,14 @@
+{
+  "id": "duplicate-asset-report-automation-failure-hardening",
+  "status": "passed",
+  "assetUnderTest": "calculator:calculadora-valor-hora-pj",
+  "simulatedRequest": "CREATE_SINGLE_ASSET",
+  "result": "NO_CHANGE_REQUIRED",
+  "createDecisionCount": 0,
+  "duplicateFileCreationCount": 0,
+  "duplicateCatalogEntryCount": 0,
+  "duplicateSitemapEntryCount": 0,
+  "duplicateRegistryEntryCount": 0,
+  "publicationAllowed": false,
+  "evidence": "Existing physical page, tools catalog entry, registry entry, publishing entry and sitemap URL are sufficient for replay no-op."
+}

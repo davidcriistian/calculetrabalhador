@@ -1,0 +1,13 @@
+{
+  "id": "governance-resolution-failure-report-automation-failure-hardening",
+  "status": "passed",
+  "coveredScenarios": ["MISSING_BLUEPRINT", "MISSING_GOLD_STANDARD", "MISSING_CANONICAL_RULE"],
+  "results": [
+    {"testId":"MISSING_BLUEPRINT","result":"MANUAL_DECISION_REQUIRED"},
+    {"testId":"MISSING_GOLD_STANDARD","result":"MANUAL_DECISION_REQUIRED"},
+    {"testId":"MISSING_CANONICAL_RULE","result":"BLOCKED_BY_RULE_SOURCE"}
+  ],
+  "improvisedPublicStructureAllowed": false,
+  "inventedLegalRuleAllowed": false,
+  "realMutationCount": 0
+}

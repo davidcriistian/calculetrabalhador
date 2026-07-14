@@ -1,0 +1,9 @@
+{
+  "id": "category-duplication-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "CATEGORY_FILTER_DUPLICATION",
+  "simulation": "attempt to add same slug twice to articleFilter.slugs",
+  "result": "NO_CHANGE_REQUIRED",
+  "slugOccurrenceCount": 1,
+  "realCategoryMutationCount": 0
+}

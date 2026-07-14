@@ -1,0 +1,14 @@
+{
+  "id": "status-contract-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "FAILURE_STATUS_CONTRACT",
+  "allowedStatuses": ["SUCCESS", "SUCCESS_WITH_WARNINGS", "SUCCESS_NO_PUBLIC_CHANGE", "NO_CHANGE_REQUIRED", "SKIPPED_ALREADY_COMPLIANT", "MANUAL_DECISION_REQUIRED", "BLOCKED", "FAILED", "FAILED_AND_ROLLED_BACK"],
+  "invalidStatusCasesBlocked": [
+    "SUCCESS after critical test failure",
+    "SUCCESS after incomplete rollback",
+    "PUBLISHED without approval",
+    "INDEXED without send/response",
+    "NO_CHANGE_REQUIRED after mutation"
+  ],
+  "allScenarioStatusesCoherent": true
+}

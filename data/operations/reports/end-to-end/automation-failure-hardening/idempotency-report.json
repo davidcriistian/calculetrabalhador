@@ -1,0 +1,11 @@
+{
+  "id": "idempotency-report-automation-failure-hardening",
+  "status": "passed",
+  "assetUnderTest": "calculator:calculadora-valor-hora-pj",
+  "result": "NO_CHANGE_REQUIRED",
+  "createDecisionCount": 0,
+  "publicMutationCount": 0,
+  "relationshipDuplicationCount": 0,
+  "catalogDuplicationCount": 0,
+  "sitemapDuplicationCount": 0
+}

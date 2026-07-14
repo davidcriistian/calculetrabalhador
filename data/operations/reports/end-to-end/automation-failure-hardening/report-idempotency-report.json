@@ -1,0 +1,10 @@
+{
+  "id": "report-idempotency-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "REPORT_DUPLICATION",
+  "simulation": "rerun finds existing report directory",
+  "requiredBehavior": "detect-existing-report-or-create-new-run-id-before-writing",
+  "result": "SUCCESS_WITH_WARNINGS",
+  "silentOverwriteAllowed": false,
+  "warning": "Current phase report path is unique for this run. Future reruns should create runId/timestamped evidence or explicitly mark no-op."
+}

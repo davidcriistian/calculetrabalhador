@@ -1,0 +1,10 @@
+{
+  "id": "target-file-collision-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "TARGET_FILE_ALREADY_EXISTS",
+  "simulation": "sandbox fixture with target /calculadora-valor-hora-pj/index.html already present",
+  "result": "TARGET_ALREADY_EXISTS",
+  "requiredDecision": "REUSE_OR_UPDATE_OR_BLOCKED",
+  "automaticOverwriteAllowed": false,
+  "realFileMutationCount": 0
+}

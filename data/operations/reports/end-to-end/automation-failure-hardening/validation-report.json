@@ -1,0 +1,23 @@
+{
+  "id": "validation-report-automation-failure-hardening",
+  "status": "passed",
+  "requiredCommands": [
+    "JSON_VALID",
+    "node scripts/validate-governance.js",
+    "node scripts/transform-rules.js",
+    "node scripts/transform-rules.js --check",
+    "node scripts/validate-shadow-adicional-noturno.js",
+    "node scripts/validate-shadow-aviso-previo.js",
+    "git diff --check"
+  ],
+  "results": [
+    {"command":"JSON_VALID","status":"pass","evidence":"All JSON files under data parsed successfully."},
+    {"command":"node scripts/validate-governance.js","status":"pass","evidence":"Governance Validation Report: Result PASS."},
+    {"command":"node scripts/transform-rules.js","status":"pass","evidence":"INSS aggregator equivalent."},
+    {"command":"node scripts/transform-rules.js --check","status":"pass","evidence":"INSS aggregator equivalent."},
+    {"command":"node scripts/validate-shadow-adicional-noturno.js","status":"pass","evidence":"50 scenarios, 0 divergences."},
+    {"command":"node scripts/validate-shadow-aviso-previo.js","status":"pass","evidence":"60 scenarios, 0 divergences."},
+    {"command":"git diff --check","status":"pass","evidence":"No whitespace errors."},
+    {"command":"critical checksum comparison","status":"pass","evidence":"Before and after SHA256 hashes match for public, legal, runtime, catalog, sitemap, registry and workflow files."}
+  ]
+}

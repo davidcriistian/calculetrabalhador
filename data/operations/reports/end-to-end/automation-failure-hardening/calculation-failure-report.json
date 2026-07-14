@@ -1,0 +1,10 @@
+{
+  "id": "calculation-failure-report-automation-failure-hardening",
+  "status": "passed",
+  "testId": "CALCULATION_TEST_FAILURE",
+  "simulation": "fixture calculation expected value intentionally mismatched",
+  "result": "FAILED_AND_ROLLED_BACK",
+  "blockedActions": ["catalog-update", "sitemap-update", "guide-integration", "publication", "indexnow-send"],
+  "rollbackExecutedInFixture": true,
+  "realMutationCount": 0
+}

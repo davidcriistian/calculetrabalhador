@@ -1,0 +1,32 @@
+{
+  "id": "baseline-report-automation-failure-hardening",
+  "phase": "5.24",
+  "capturedAt": "2026-07-14",
+  "algorithm": "SHA256",
+  "baselinePurpose": "Compare real critical project state before and after isolated failure hardening.",
+  "files": [
+    {"path":"data/tools.json","sha256":"807CA9092A296A47AA9ECE80A54A0164158610EDBAB9B96B8FE5CC8346D5620C"},
+    {"path":"data/articles.json","sha256":"23AD81E952B798A6A7F34613C094EAE731408C6C465459B2C27606ABD557572C"},
+    {"path":"data/brain/nuclei.json","sha256":"F066B0A0C855B72CD7E72A0E932652083B556A831B8A5A1C4A31225B18D3FA30"},
+    {"path":"data/brain/clusters.json","sha256":"C1707AAD760EE9F35E42399A95B15C45CA559AE996EC7B63A36CE0ACF716C487"},
+    {"path":"data/maps/content-map.json","sha256":"772CCA934F65D9832C4E36D61D4A738814304F12E984B9DA6FB0684F138DB35B"},
+    {"path":"data/maps/tools-map.json","sha256":"FEEBA51ADE9904E1B9D7059C5821662677354DA7FF19D7DED47FC89A3D613BCA"},
+    {"path":"data/tabelas-trabalhistas.json","sha256":"C4A4AB30C7FA1C6B1C6D604E7725F70138B4B7DF5A7792CF8068B5A1B7984817"},
+    {"path":"data/rules/inss.json","sha256":"E4A737A34FB4BB24D17249CF8C4F8A55F26B1F6DC62F9F45CD73B04444AC02F7"},
+    {"path":"scripts/transform-rules.js","sha256":"35101A2AD1EA1B8027CE0D0AC2BD3388DE9E6E66767836F9B7D3D829CDE85C04"},
+    {"path":"assets/home-refactor-v8.js","sha256":"005C247A153CA09ED8958AC75FF47954A1769D948A9B41AF906D0863935247E5"},
+    {"path":"assets/js/nuclei.js","sha256":"A7F7BF3D7D554AFA9DC805B64E58ED1607FBAEEC6240B0532C2D43A9052E0B43"},
+    {"path":"sitemap.xml","sha256":"7ACCE982DEAFE029167F3E010840A509F29E2E097FCBEE306B0BC820A699DD9C"},
+    {"path":"index.html","sha256":"4BC313745E4274FB4F3A9C3A8F1DF4B3C354D7FA387EA05F5200246D4CCAD53F"},
+    {"path":"guias/pj/index.html","sha256":"D060038EADCBF9621B72FA85F33DCB72C2FED205D9C093E19068B4F66C9FBDEE"},
+    {"path":"blog/categoria/index.html","sha256":"BD6DB547311407252818D03ECA1D19A225794AE183422173B67B26DB711EE512"},
+    {"path":"calculadora-valor-hora-pj/index.html","sha256":"444FE2CA05B6A7ED0F18B84F5D652E4F26F3A4875E479BAE0D44084706A83418"},
+    {"path":"calculadora-clt-ou-pj/index.html","sha256":"4D893381403194022460919569D20629B40EFFF4FA1F3DA99AAB7B21549F9F56"},
+    {"path":"data/registry/by-type/index.json","sha256":"6BE38C827668EF334E7B65DC2F75B5F4B13347438EF85538BA6C3EE20072BEF4"},
+    {"path":"data/publishing/registry/index.json","sha256":"8FB5FD4B75362EF3B426F6B7C39D9A760D3902C835E5A089B5744EBFC96BF6EE"},
+    {"path":"data/operations/workflows/end-to-end/index.json","sha256":"448D45776F5048B382E18AF017A7ACED337FF4B09C674543356114792B9523C2"},
+    {"path":"data/operations/playbooks/end-to-end/index.json","sha256":"33EF6F6662DC129214D679524ABFDB9D5DC6DB2E89B830DE0969577D41D0EE20"},
+    {"path":"data/manifests/operations/end-to-end/index.json","sha256":"0A9A6001716471EFF23BD62A97BF7577045FAE572D71A6731D8445D13E38A290"}
+  ],
+  "expectedAfterComparison": "unchanged except this report directory"
+}
