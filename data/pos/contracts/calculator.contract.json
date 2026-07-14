@@ -1,11 +1,11 @@
 {
   "id": "pos-contract-calculator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 3.5 - Governance Hardening",
   "name": "Calculator Contract",
@@ -14,13 +14,14 @@
     "coreContracts": "calculator knowledge capabilities, domains, rules and tables",
     "posContracts": "operational lifecycle, registry, migration, testing and approval process for calculators"
   },
-  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata"],
-  "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status"],
-  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes"],
-  "dependencies": ["/data/pos/registry/index.json"],
+  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata", "canonical experience classification", "result and memory contract resolution"],
+  "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status", "asset compatibility class", "form complexity class", "result experience class", "memory level", "reference study evidence"],
+  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes", "calculator experience plan", "result contract resolution", "visual validation status"],
+  "dependencies": ["/data/pos/registry/index.json", "/data/blueprints/contracts/calculator-experience.contract.json"],
   "nonResponsibilities": ["calculate values", "change calculator HTML", "change calculator JavaScript", "change URLs"],
   "notes": [
-    "Existing calculators do not consume this contract.",
+    "Existing calculators are LEGACY_ACCEPTED_PENDING_MIGRATION and do not fail automatically.",
+    "New and migrated calculators must resolve the canonical experience contract.",
     "POS does not own calculator legal knowledge; it orchestrates future operational handling."
   ]
 }

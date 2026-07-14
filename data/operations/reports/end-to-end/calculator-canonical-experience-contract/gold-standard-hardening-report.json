@@ -1,0 +1,3 @@
+{
+  "id":"gold-standard-hardening-report","status":"MEASURABLE_ENFORCEABLE_REFERENCE_BACKED_CONTEXT_AWARE","path":"/data/gold-standards/calculator/index.json","beforeVersion":"1.0","afterVersion":"1.1","acceptanceAreas":["structure","visual","journey","result","memory","content","mobile","accessibility","actions","recommendations"],"blockerEvidenceRequired":true,"subjectivePresenceOnlyApproval":false
+}

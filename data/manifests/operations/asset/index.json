@@ -1,11 +1,11 @@
 {
   "id": "asset-operation-manifests",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Generic manifest for provisioning internal draft assets through a single create-asset flow.",
@@ -34,6 +34,9 @@
       "blueprint": "/data/blueprints/calculator/index.json",
       "goldStandard": "/data/gold-standards/calculator/index.json",
       "reference": "/data/references/calculators/index.json",
+      "experienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+      "experienceValidator": "/scripts/validate-calculator-experience-contract.js",
+      "negativeFixtures": "/data/pos/validation/calculator-experience-fixtures.json",
       "testing": "/data/pos/testing/index.json",
       "validation": "/data/pos/validation/index.json",
       "publishing": "/data/publishing/registry/index.json",
@@ -130,17 +133,24 @@
       "resolutionStatus": "pending-specific-blueprint"
     }
   },
+  "calculatorResolutionRequirements": {
+    "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
+    "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "requiredBeforeSpecification": ["resolve-official-reference", "open-physical-reference", "decompose-reference-modules", "record-literal-copy-avoidance", "classify-form-complexity", "classify-result-experience", "classify-calculation-memory", "decide-conditional-modules", "evaluate-post-result-actions", "resolve-recommendation-state", "prepare-calculator-experience-plan"],
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED"],
+    "fullStandardBlockedBy": ["VISUAL_VALIDATION_NOT_EXECUTED", "applicable-blocker-anti-pattern", "unapproved-recommendation-source"]
+  },
   "manifest": {
     "operationId": "create-asset",
     "objective": "Provision any supported asset type as an internal draft through official configuration.",
     "requiredInputs": ["assetType", "assetId", "displayName", "owner"],
-    "optionalInputsResolvedByDefaults": ["strategyVersion", "goldStandardVersion", "blueprintVersion", "reference", "lifecycle", "runtimeStatus", "visibility", "publishingStatus", "testingRequired", "validationRequired", "publishingRequired", "rollbackRequired", "manualApprovalRequired"],
+    "optionalInputsResolvedByDefaults": ["strategyVersion", "goldStandardVersion", "blueprintVersion", "reference", "lifecycle", "runtimeStatus", "visibility", "publishingStatus", "testingRequired", "validationRequired", "publishingRequired", "rollbackRequired", "manualApprovalRequired", "recommendationState"],
     "preconditions": ["asset-type-supported", "typed-asset-id-valid", "asset-not-duplicated", "pam-valid", "blueprint-resolution-valid", "registry-available", "publishing-draft-available"],
     "flow": ["Manifest", "Operational Defaults", "PAM", "Blueprint", "Gold Standard", "Reference System", "Registry", "Testing Plan", "Validation Plan", "Publishing Draft", "Reports"],
     "playbook": "/data/operations/playbooks/asset/index.json#create-asset",
     "workflow": "/data/operations/workflows/asset/index.json#create-asset-workflow",
     "reports": "/data/operations/reports/asset/index.json",
-    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport"]
+    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "visualValidationStatus"]
   },
   "inheritance": {
     "create-calculator": "inherits-create-asset",

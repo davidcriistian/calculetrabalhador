@@ -1,0 +1,3 @@
+{
+  "id":"visual-evidence-contract-report","status":"ESTABLISHED","viewports":["small-mobile","large-mobile","intermediate","desktop"],"criticalAreas":["hero","form","fields","cta","result","cards","tables-when-present","faq","overflow","text-wrap","footer","result-actions"],"automatedBrowser":{"playwright":"NOT_AVAILABLE","puppeteer":"NOT_AVAILABLE"},"fallback":"VISUAL_APPROVAL_REQUIRED with external render/screenshots","falseEvidenceCreated":false,"phase527VisualCertification":"NOT_REQUESTED_INTERNAL_SYSTEM_ONLY"
+}

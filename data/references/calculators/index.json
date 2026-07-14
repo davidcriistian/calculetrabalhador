@@ -1,11 +1,11 @@
 {
   "id": "calculator-references",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/references/schemas/reference.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.5 - Reference System",
   "description": "Approved calculator reference assets.",
@@ -18,11 +18,19 @@
       "slug": "/calculadora-multa-40-fgts/",
       "status": "official-reference",
       "goldStandardType": "calculator",
-      "goldStandardVersion": "1.0",
+      "goldStandardVersion": "1.1",
       "approved": true,
       "approvedDate": "2026-07-10",
       "owner": "Calcule Trabalhador",
       "description": "Implementacao oficial aprovada do Calculator Gold Standard v1.",
+      "referenceRole": ["structural", "visual", "result-depth", "mobile-ux", "accessibility-pattern", "conversion-pattern"],
+      "physicalReferencePath": "/calculadora-multa-40-fgts/index.html",
+      "requiredStudyBeforeGeneration": true,
+      "requiredModuleDecomposition": true,
+      "requiredParityAssessment": ["STRUCTURAL_PARITY", "DESIGN_SYSTEM_PARITY", "QUALITY_PARITY", "RESPONSIVE_PARITY"],
+      "experienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+      "prohibitedLiteralCopy": ["content", "legal-rules", "fields", "identifiers", "formulas", "fixed-step-count", "pixel-identical-layout"],
+      "consumptionEvidenceRequired": ["reference-study-report", "module-decomposition", "experience-plan", "parity-assessment"],
       "referenceCriteria": [
         "approved-layout",
         "approved-ux",
@@ -37,8 +45,8 @@
         "approved-cta-placement"
       ],
       "notes": [
-        "Reference metadata only.",
-        "No calculator HTML, content or runtime is copied into this system."
+        "Canonical internal calculator automation reference.",
+        "Automation must study and abstract quality patterns without copying calculator HTML, content, fields, formulas or legal rules."
       ],
       "supersedes": null,
       "supersededBy": null

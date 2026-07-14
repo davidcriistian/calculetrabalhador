@@ -1,15 +1,21 @@
 {
   "id": "calculator-blueprint-template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
   "status": "template",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
   "description": "Declarative model for future calculator construction.",
   "blueprintType": "calculator",
+  "calculatorExperienceContract": {
+    "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "version": "1.0.0",
+    "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
+    "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
+  },
   "clusterRole": {
     "belongsToCluster": true,
     "role": "component-of-cluster",
@@ -55,6 +61,23 @@
       "disclaimer",
       "breadcrumb"
     ],
+    "moduleResolution": {
+      "requiredCoreModulesSource": "/data/blueprints/contracts/calculator-experience.contract.json#requiredCoreModules",
+      "conditionalModulesSource": "/data/blueprints/contracts/calculator-experience.contract.json#conditionalModules",
+      "optionalEnhancementsSource": "/data/blueprints/contracts/calculator-experience.contract.json#optionalEnhancements",
+      "requiredModuleFields": ["id", "purpose", "minimumContent", "depth", "behavior", "validationEvidence", "referenceRelation", "relatedAntiPatterns"],
+      "conditionalDecisionRequired": true,
+      "presenceOnlyIsSufficient": false
+    },
+    "experienceClassification": {
+      "formComplexityClassRequired": true,
+      "formClasses": ["SIMPLE_SINGLE_STEP", "GUIDED_MULTI_GROUP", "GUIDED_MULTI_STEP", "CONDITIONAL_FLOW"],
+      "resultExperienceClassRequired": true,
+      "resultClasses": ["SIMPLE_RESULT", "CALCULATION_REPORT", "DECISION_REPORT", "COMPARATIVE_REPORT"],
+      "calculationMemoryLevelRequired": true,
+      "memoryLevels": ["MEMORY_NOT_REQUIRED", "BASIC_MEMORY", "STEP_BY_STEP_MEMORY", "AUDITABLE_MEMORY"],
+      "classificationJustificationRequired": true
+    },
     "fields": [],
     "calculations": {
       "modelReference": null,
@@ -86,21 +109,32 @@
   "testing": {
     "required": true,
     "testingReference": "/data/pos/testing/index.json",
-    "requiredEvidence": ["calculation-baseline", "json-output", "manual-review"]
+    "requiredEvidence": ["calculation-baseline", "json-output", "reference-study", "module-decomposition", "experience-plan", "negative-standard-tests", "visual-evidence-or-manual-approval", "manual-review"]
   },
   "validation": {
     "required": true,
     "validationReference": "/data/pos/validation/index.json",
-    "requiredTypes": ["calculator-structure-validation", "runtime-validation", "seo-validation", "jsonld-validation"]
+    "requiredTypes": ["calculator-structure-validation", "calculation-validation", "governance-validation", "result-experience-validation", "visual-render-validation", "responsive-validation", "accessibility-validation", "seo-validation", "jsonld-validation", "human-approval"],
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE"]
   },
   "publishing": {
     "required": true,
     "status": "not-ready",
     "requiresManualApproval": true,
-    "modifiesProductionInThisPhase": false
+    "modifiesProductionInThisPhase": false,
+    "newStandardRule": "VISUAL_VALIDATION_NOT_EXECUTED cannot produce FULL_STANDARD_ACCEPTED",
+    "recommendationRule": "Render recommendations only from approved configuration and eligibility evidence"
+  },
+  "assetCompatibility": {
+    "LEGACY_ASSET": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "NEW_ASSET": "NEW_STANDARD_REQUIRED",
+    "MIGRATED_ASSET": "NEW_STANDARD_REQUIRED",
+    "retrofitRequest": "MIGRATION_REQUIRED",
+    "automaticallyFailsLegacyAssets": false,
+    "changesExistingPublishingStatus": false
   },
   "notes": [
-    "This template does not generate a calculator.",
+    "This template does not generate a calculator by itself; calculator automation consumes its canonical experience contract.",
     "Calculator Blueprint is now formally modeled as a reusable component inside Cluster Blueprint.",
     "Future generation must pass Testing, Validation and Publishing gates."
   ]

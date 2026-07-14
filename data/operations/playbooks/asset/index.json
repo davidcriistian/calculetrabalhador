@@ -1,11 +1,11 @@
 {
   "id": "asset-operation-playbooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Generic create-asset playbook reused by future asset creation operations.",
@@ -23,6 +23,15 @@
         "resolve-blueprint-by-assetType",
         "resolve-gold-standard-by-assetType-when-available",
         "resolve-reference-by-assetType-when-available",
+        "for-calculator-open-and-study-physical-reference",
+        "for-calculator-create-reference-module-decomposition",
+        "for-calculator-record-prohibited-literal-copy-review",
+        "for-calculator-classify-form-complexity",
+        "for-calculator-classify-result-experience",
+        "for-calculator-classify-calculation-memory",
+        "for-calculator-decide-conditional-modules-and-result-actions",
+        "for-calculator-resolve-governed-recommendation-state",
+        "for-calculator-prepare-and-approve-experience-plan",
         "prepare-asset-specification",
         "prepare-relationship-map",
         "prepare-registry-entry",
@@ -34,16 +43,18 @@
         "generate-audit-report",
         "keep-lifecycle-draft"
       ],
-      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport"],
+      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "visualValidationStatus"],
       "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-runtime", "modify-core", "modify-blueprints", "modify-gold-standards", "publish", "deploy"]
     }
   ],
   "specializationPolicy": {
-    "create-calculator": "add-calculation-specific requirements only",
+    "create-calculator": "consume the canonical calculator experience contract in addition to calculation-specific requirements",
     "create-article": "add editorial and SEO-specific requirements only",
     "create-cluster": "add relationship and candidate-review requirements only",
     "create-guide": "add guide aggregation requirements only",
     "create-nucleus": "add domain-guide-cluster requirements only",
-    "rule": "Specific operations must not duplicate generic create-asset flow."
+    "rule": "Specific operations must not duplicate generic create-asset flow.",
+    "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "calculatorStopConditions": ["REFERENCE_STUDY_COMPLETE failed", "CALCULATOR_EXPERIENCE_PLAN_APPROVED failed", "RESULT_CONTRACT_RESOLVED failed", "applicable blocker anti-pattern", "recommendation lacks approved source"]
   }
 }

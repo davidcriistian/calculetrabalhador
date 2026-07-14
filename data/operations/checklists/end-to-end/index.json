@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Checklist for scoped end-to-end asset delivery. Items are declarative and do not execute operations.",
@@ -65,6 +65,19 @@
     "runtime",
     "rollback"
   ],
+  "calculatorStandard": {
+    "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
+    "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "reference": ["reference-resolved", "physical-reference-studied", "modules-decomposed", "literal-copy-avoided", "REFERENCE_STUDY_COMPLETE-passed"],
+    "entryExperience": ["context-clear", "hero-complete", "outputs-previewed", "primary-entry-cta-dominant", "simulator-transition-clear"],
+    "form": ["complexity-classified-and-justified", "semantic-grouping-proportional", "journey-adequate", "optional-fields-differentiated", "conditional-fields-resolved", "validation-near-context", "confirmation-present-when-applicable", "final-cta-dominant"],
+    "result": ["result-class-defined-and-justified", "primary-result-dominant", "scenario-context-restated", "secondary-indicators-evaluated", "memory-level-adequate", "interpretation-present", "limitations-present", "next-steps-present", "RESULT_CONTRACT_RESOLVED-passed"],
+    "actions": ["copy-evaluated", "print-evaluated", "download-report-evaluated", "implemented-actions-functionally-tested", "omissions-justified"],
+    "content": ["guide-depth-adequate", "faq-sufficient-and-schema-consistent", "methodology-and-sources-compatible", "related-content-governed"],
+    "visual": ["design-system-parity-assessed", "responsive-parity-assessed", "small-mobile-checked", "large-mobile-checked", "intermediate-checked", "desktop-checked", "overflow-checked", "focus-states-checked", "VISUAL_VALIDATION_STATUS_RESOLVED-passed"],
+    "recommendations": ["configuration-state-resolved", "eligibility-verified", "approved-source-verified", "no-recommendation-invented"],
+    "antiPatterns": ["no-applicable-blocker", "major-items-resolved-or-approved-exception"]
+  },
   "after": [
     "record-consolidated-report",
     "record-created-updated-reused-skipped-assets",
@@ -86,5 +99,11 @@
     "critical-validation-failed",
     "rollback-unavailable",
     "manual-decision-required-and-not-provided"
+    ,"calculator-reference-study-incomplete"
+    ,"calculator-experience-plan-not-approved"
+    ,"calculator-result-contract-unresolved"
+    ,"calculator-applicable-blocker-anti-pattern"
+    ,"calculator-false-visual-pass"
+    ,"calculator-recommendation-source-unapproved"
   ]
 }

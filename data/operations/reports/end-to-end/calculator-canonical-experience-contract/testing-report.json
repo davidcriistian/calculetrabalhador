@@ -1,0 +1,5 @@
+{
+  "id":"phase-5-27-testing-report","status":"PASS","tests":[
+    {"name":"calculator contract validator syntax","result":"PASS"},{"name":"negative fixtures","result":"PASS","scenarios":8,"mismatches":0},{"name":"internal JSON references","result":"PASS","checked":112,"unresolved":0},{"name":"governance","result":"PASS"},{"name":"transform rules default","result":"PASS"},{"name":"transform rules check","result":"PASS"},{"name":"shadow adicional noturno","result":"PASS","scenarios":50,"divergences":0},{"name":"shadow aviso previo","result":"PASS","scenarios":60,"divergences":0},{"name":"hypothetical dry-run","result":"READY_WITH_GUARDS"},{"name":"backward compatibility","result":"PASS"},{"name":"git diff check","result":"PASS"}
+  ]
+}

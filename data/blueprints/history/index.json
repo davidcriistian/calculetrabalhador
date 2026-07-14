@@ -1,11 +1,11 @@
 {
   "id": "blueprint-system-history",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 1 - Blueprint System",
   "description": "Change history for Blueprint System foundation files.",
@@ -67,6 +67,20 @@
         "Declared PAM as the last transversal foundation model before operational capabilities."
       ],
       "notes": []
+    },
+    {
+      "id": "calculator-canonical-experience-contract-1.0.0",
+      "phase": "Phase 5.27 - Calculator Canonical Experience Contract",
+      "version": "0.5.0",
+      "date": "2026-07-14",
+      "owner": "Calcule Trabalhador",
+      "status": "active-internal-standard",
+      "changes": [
+        "Created a reference-backed canonical calculator experience contract.",
+        "Added measurable module, journey, result, memory, visual, recommendation and anti-pattern rules.",
+        "Connected Calculator Blueprint to internal calculator automation without modifying public calculators."
+      ],
+      "notes": ["Legacy assets remain accepted pending migration."]
     }
   ],
   "notes": [

@@ -1,0 +1,3 @@
+{
+  "id":"required-modules-contract-report","status":"PASS","count":9,"modules":["page-context","hero","simulator-preparation","form-journey","result-experience","calculation-explainability","post-result-utility","content-and-trust","responsive-accessible-shell"],"eachModuleDefines":["purpose","minimumContent","depth","behavior","validationEvidence","referenceRelation","relatedAntiPatterns"],"entrySequence":["PAGE_CONTEXT","HERO","VALUE_PROMISE","OUTPUT_PREVIEW","PRIMARY_ENTRY_CTA","SIMULATOR_PREPARATION"]
+}

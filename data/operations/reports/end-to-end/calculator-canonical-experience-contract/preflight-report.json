@@ -1,0 +1,5 @@
+{
+  "id":"phase-5-27-preflight","status":"PASS","branch":"main","head":"06cf82192bd5a560eaf4c5acd210bb9f3a726cb6","originMain":"06cf82192bd5a560eaf4c5acd210bb9f3a726cb6","ahead":0,"behind":0,"staging":"empty",
+  "workingTreeInitial":{"trackedModified":["data/maps/tools-map.json","data/publishing/registry/index.json","data/registry/by-type/index.json","data/tools.json","sitemap.xml"],"untrackedRoots":["calculadora-custo-mensal-pj/","data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/","data/operations/reports/end-to-end/calculator-standard-audit/","data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/","data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json","data/registry/by-type/calculator-calculadora-custo-mensal-pj.json"]},
+  "preexistingOutOfScopeFilesProtected":true,"prohibitedGitWritesExecuted":0,"diffCheck":"PASS"
+}

@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Canonical manifest for governing end-to-end asset delivery by orchestrating existing operations without duplicating them.",
@@ -67,6 +67,12 @@
       "protectedFiles",
       "allowedPublicFiles",
       "forbiddenFiles"
+      ,"assetCompatibilityClass"
+      ,"formComplexityClass"
+      ,"resultExperienceClass"
+      ,"calculationMemoryLevel"
+      ,"recommendationState"
+      ,"visualValidationStatus"
     ],
     "conditional": [
       "coreSource",
@@ -80,6 +86,10 @@
       "approvedScope",
       "approvedFiles",
       "approvedUrls"
+      ,"referenceStudyEvidence"
+      ,"calculatorExperiencePlan"
+      ,"resultContractResolution"
+      ,"visualEvidenceOrManualApproval"
     ],
     "manualDecision": [
       "missingDomain",
@@ -89,6 +99,9 @@
       "ambiguousSlug",
       "ambiguousReference",
       "visualPatternNotResolved",
+      "calculatorExperienceClassNotResolved",
+      "referenceStudyNotComplete",
+      "visualValidationNotResolved",
       "unapprovedPublicDestination"
     ],
     "prohibitedToInfer": [
@@ -162,6 +175,10 @@
       "testingRequirements",
       "validationRequirements",
       "rollbackRequirements"
+      ,"calculatorExperienceContract"
+      ,"calculatorExperiencePlan"
+      ,"resultContractResolution"
+      ,"visualValidationStatus"
     ],
     "identityRule": "Use typed assetId for internal identity. Slug is public routing only."
   },
@@ -220,7 +237,10 @@
     "testing": "/data/pos/testing/index.json",
     "validation": "/data/pos/validation/index.json",
     "runtimeMappingEvidence": "/data/operations/reports/runtime-mapping/runtime-mapping-report.json",
-    "physicalPublicationContractEvidence": "/data/operations/reports/publication-contract/pj/publication-contract.json"
+    "physicalPublicationContractEvidence": "/data/operations/reports/publication-contract/pj/publication-contract.json",
+    "calculatorExperienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "calculatorExperienceValidator": "/scripts/validate-calculator-experience-contract.js",
+    "calculatorExperienceFixtures": "/data/pos/validation/calculator-experience-fixtures.json"
   },
   "restrictions": [
     "Do not execute every phase blindly.",
@@ -230,6 +250,9 @@
     "Do not publish by default.",
     "Do not run IndexNow send without explicit approval.",
     "Do not infer missing governance decisions."
+    ,"Do not certify a new or migrated calculator as FULL_STANDARD_ACCEPTED when visual status is VISUAL_VALIDATION_NOT_EXECUTED."
+    ,"Do not render calculator recommendations without approved configuration and eligibility evidence."
+    ,"Do not treat the canonical FGTS reference as a literal template or copy its domain content."
   ],
   "finalStatuses": [
     "SUCCESS_NO_PUBLIC_CHANGE",

@@ -1,0 +1,3 @@
+{
+  "id":"form-journey-contract-report","status":"PASS","classificationField":"FORM_COMPLEXITY_CLASS","classes":["SIMPLE_SINGLE_STEP","GUIDED_MULTI_GROUP","GUIDED_MULTI_STEP","CONDITIONAL_FLOW"],"measurableRules":{"simple":"semanticGroupCount <= 1, essentialInputCount <= 3, no conditional branch","multiGroup":"2-3 semantic groups or 4-7 essential inputs","multiStep":"at least 4 semantic groups, 8 essential inputs or 3 high-impact assumptions","conditional":"branch changes visible inputs or calculation path"},"artificialStepsForSimpleCalculators":false,"classificationJustificationRequired":true
+}

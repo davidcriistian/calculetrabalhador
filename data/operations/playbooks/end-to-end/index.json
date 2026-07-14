@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-playbooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Playbook for deliver-asset-end-to-end. It coordinates existing capabilities and stops when scope, governance or approval is missing.",
@@ -37,6 +37,11 @@
         "classify-request-type",
         "resolve-scope-plan",
         "resolve-governance-for-each-asset",
+        "for-new-or-migrated-calculator-open-and-study-official-physical-reference",
+        "for-new-or-migrated-calculator-decompose-reference-modules-without-literal-copy",
+        "for-new-or-migrated-calculator-classify-form-result-and-memory",
+        "for-new-or-migrated-calculator-decide-conditional-modules-actions-and-recommendations",
+        "for-new-or-migrated-calculator-approve-experience-plan",
         "check-reuse-before-create",
         "classify-relationships",
         "select-existing-operation-capabilities",
@@ -84,7 +89,21 @@
       },
       "testingPolicy": {
         "statuses": ["PASS", "FAIL", "WARNING", "NOT_APPLICABLE", "NOT_AVAILABLE"],
-        "rule": "Do not mark a test PASS when it was not executed."
+        "rule": "Do not mark a test PASS when it was not executed.",
+        "calculatorNegativeFixtures": "/data/pos/validation/calculator-experience-fixtures.json",
+        "calculatorValidator": "/scripts/validate-calculator-experience-contract.js"
+      },
+      "calculatorExperiencePolicy": {
+        "contract": "/data/blueprints/contracts/calculator-experience.contract.json",
+        "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
+        "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+        "generationPrerequisites": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED"],
+        "fullStandardPrerequisite": "VISUAL_VALIDATION_STATUS_RESOLVED",
+        "visualStatuses": ["VISUAL_VALIDATION_PASSED", "VISUAL_VALIDATION_FAILED", "VISUAL_VALIDATION_NOT_EXECUTED", "VISUAL_APPROVAL_REQUIRED"],
+        "notExecutedRule": "VISUAL_VALIDATION_NOT_EXECUTED cannot become FULL_STANDARD_ACCEPTED",
+        "requiredVisualEvidence": ["small-mobile", "large-mobile", "intermediate", "desktop"],
+        "recommendationRule": "Render only from approved configuration plus eligibility evidence; otherwise hide.",
+        "literalCopyProhibited": true
       },
       "approvalPolicy": {
         "requiresManualApprovalFor": [
@@ -126,6 +145,12 @@
         "missing-critical-reference",
         "missing-blueprint",
         "missing-gold-standard",
+        "reference-study-incomplete",
+        "calculator-experience-plan-not-approved",
+        "result-contract-unresolved",
+        "applicable-blocker-anti-pattern",
+        "false-visual-pass",
+        "unapproved-calculator-recommendation",
         "critical-test-failed",
         "critical-validation-failed",
         "rollback-unavailable",
@@ -153,6 +178,11 @@
         "approvalRecord",
         "rollbackPlan",
         "consolidatedReport"
+        ,"referenceStudy"
+        ,"moduleDecomposition"
+        ,"calculatorExperiencePlan"
+        ,"resultContractResolution"
+        ,"visualValidationStatus"
       ]
     }
   ],

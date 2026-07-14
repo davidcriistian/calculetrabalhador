@@ -1,0 +1,3 @@
+{
+  "id":"conditional-modules-contract-report","status":"PASS","count":9,"modules":["estimated-effort","step-numbering","final-confirmation","scenario-tags","comparison","summary-table","sources","result-actions","result-recommendations"],"eachModuleDefines":["appliesWhen","doesNotApplyWhen","requirements"],"optionalEnhancements":["share-result","advanced-examples","progress-indicator","saved-scenario","export-data","contextual-service-offer"]
+}

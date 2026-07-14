@@ -1,0 +1,11 @@
+{
+  "id":"canonical-reference-decomposition","status":"PASS","reference":"calculator:calculadora-multa-40-fgts","physicalPath":"/calculadora-multa-40-fgts/index.html","inspectionMode":"READ_ONLY","literalCopyUsed":false,
+  "experienceAnatomy":["page-context","hero-and-value-promise","simulator-preparation","guided-form-journey","result-report","calculation-explainability","post-result-utility","long-form-content","responsive-accessible-shell","related-discovery"],
+  "moduleClassification":{
+    "CANONICAL_REQUIRED":["breadcrumb-or-equivalent-context","category-or-thematic-identification","hero","title-hierarchy","description","value-promise","output-preview","primary-entry-cta","simulator-introduction","semantic-field-grouping","field-explanations","essential-optional-treatment","primary-calculation-cta","result-context","primary-result","calculation-explainability-for-non-trivial-calculation","interpretation","limitations","next-steps","guide-content","responsive-stacking","mobile-readability","focus-and-error-states","related-content-governance"],
+    "CONDITIONALLY_REQUIRED":["benefit-bullets","estimated-effort","step-numbering","conditional-fields","final-confirmation","secondary-metrics","scenario-tags","comparison","mathematical-operation-display","summary-table","warnings","result-actions","faq","sources-methodology","related-articles","related-tools","empty-loading-states","in-page-navigation"],
+    "OPTIONAL_ENHANCEMENT":["share-result","saved-scenario","advanced-examples","progress-indicator","export-data","contextual-service-offer"],
+    "DOMAIN_SPECIFIC_REFERENCE_ONLY":["fgts-legal-copy","fgts-fields","fgts-identifiers","fgts-formulas","fgts-fixed-step-count","fgts-specific-scenario-labels","fgts-theme-color"]
+  },
+  "parityTarget":["STRUCTURAL_PARITY","DESIGN_SYSTEM_PARITY","QUALITY_PARITY","RESPONSIVE_PARITY"],"excludedTarget":"PIXEL_IDENTICAL_COPY"
+}

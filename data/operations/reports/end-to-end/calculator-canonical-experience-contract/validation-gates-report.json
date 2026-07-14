@@ -1,0 +1,12 @@
+{
+  "id":"validation-gates-report","status":"PASS","dimensions":{
+    "STATIC_STRUCTURAL_VALIDATION":"JSON, required fields, module plan and internal references",
+    "CALCULATION_VALIDATION":"scenario, equivalence, rounding and memory trace",
+    "GOVERNANCE_VALIDATION":"identity, approved sources, recommendations and compatibility",
+    "VISUAL_RENDER_VALIDATION":"real rendered hierarchy and critical areas",
+    "RESPONSIVE_VALIDATION":"four required viewport classes, overflow and wrapping",
+    "RESULT_EXPERIENCE_VALIDATION":"class-dependent context, hierarchy, interpretation and utility",
+    "ACCESSIBILITY_VALIDATION":"semantics, labels, keyboard, focus and errors",
+    "HUMAN_APPROVAL":"required when automated render evidence cannot resolve visual status"
+  },"visualStatuses":["VISUAL_VALIDATION_PASSED","VISUAL_VALIDATION_FAILED","VISUAL_VALIDATION_NOT_EXECUTED","VISUAL_APPROVAL_REQUIRED"],"staticCanSubstituteVisual":false,"notExecutedCanBecomeFullStandardAccepted":false
+}

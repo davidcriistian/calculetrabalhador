@@ -1,0 +1,3 @@
+{
+  "id":"calculation-memory-contract-report","status":"PASS","levels":["MEMORY_NOT_REQUIRED","BASIC_MEMORY","STEP_BY_STEP_MEMORY","AUDITABLE_MEMORY"],"nonTrivialMinimum":["inputs-used","ignored-or-conditional-inputs-when-relevant","premises","source-when-applicable","intermediate-values","operations","rounding","final-result","limitations"],"qualities":["PEDAGOGICAL","TRACEABLE","REPRODUCIBLE"],"labelValueOnlyComplete":false,"levelJustificationRequired":true
+}

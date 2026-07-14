@@ -1,0 +1,3 @@
+{
+  "id":"result-experience-contract-report","status":"PASS","classificationField":"RESULT_EXPERIENCE_CLASS","classes":["SIMPLE_RESULT","CALCULATION_REPORT","DECISION_REPORT","COMPARATIVE_REPORT"],"reportMinimum":["result-context","inputs-summary","premises","dominant-primary-result","secondary-results","step-by-step-memory","interpretation","limitations","next-steps","result-actions-evaluation"],"primaryDominance":["distinct-from-secondary","meaning-text","scenario-understandable-without-returning-to-form"],"numbersOnlyAcceptedForReportClasses":false
+}

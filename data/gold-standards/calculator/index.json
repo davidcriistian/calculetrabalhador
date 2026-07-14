@@ -2,14 +2,21 @@
   "id": "calculator-gold-standard",
   "name": "Calculator Standard",
   "type": "calculator",
-  "version": "1.0",
+  "version": "1.1",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "active-foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "description": "Declarative quality standard for future calculator assets.",
+  "canonicalExperienceContract": {
+    "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "version": "1.0.0",
+    "referenceBacked": true,
+    "contextAware": true,
+    "pixelIdenticalCopyRequired": false
+  },
   "mandatoryStructure": ["hero", "summary", "field-groups", "result", "cards", "explanation", "faq", "related-calculators", "related-articles", "footer"],
   "optionalStructure": ["product-context", "cta-context", "downloads", "advanced-examples", "legal-notice"],
   "mandatoryComponents": ["Hero", "Summary", "Field Group", "Result Card", "Info Card", "FAQ", "Related Links", "Notice"],
@@ -33,6 +40,25 @@
     "related content is intentional",
     "publishing gates are declared"
   ],
+  "measurableApprovalCriteria": {
+    "entryExperience": ["visible page context", "complete hero with value promise and output preview", "dominant entry CTA", "clear simulator transition"],
+    "formJourney": ["FORM_COMPLEXITY_CLASS declared and justified", "semantic groups match complexity", "guided classes include context and proportional progression", "final CTA is visually dominant"],
+    "resultExperience": ["RESULT_EXPERIENCE_CLASS declared and justified", "primary result is distinguishable from secondary metrics", "meaning and scenario context are understandable without returning to form", "class-required interpretation, limitations and next steps are present"],
+    "calculationMemory": ["memory level declared and justified", "non-trivial reports include inputs, premises, intermediates, operations, rounding, final result and limitations", "memory and primary result are equivalent"],
+    "content": ["content depth is proportional to intent and risk", "FAQ is sufficient and matches FAQPage when used", "sources support claims", "related links are governed"],
+    "actions": ["copy, print and report applicability evaluated", "implemented actions have functional evidence", "omissions have justification"],
+    "recommendations": ["state is declared", "rendering requires approved source and eligibility", "NOT_CONFIGURED renders hidden"],
+    "visual": ["structural, design-system, quality and responsive parity assessed", "small mobile, large mobile, intermediate and desktop evidence resolved", "focus, error, empty and overflow states reviewed"],
+    "reference": ["physical reference studied", "modules decomposed", "literal copy avoided", "parity assessment recorded"]
+  },
+  "visualValidationStatuses": ["VISUAL_VALIDATION_PASSED", "VISUAL_VALIDATION_FAILED", "VISUAL_VALIDATION_NOT_EXECUTED", "VISUAL_APPROVAL_REQUIRED"],
+  "fullStandardBlockers": ["applicable BLOCKER anti-pattern", "REFERENCE_STUDY_COMPLETE not passed", "RESULT_CONTRACT_RESOLVED not passed", "VISUAL_VALIDATION_NOT_EXECUTED", "false visual pass without rendered evidence", "unapproved recommendation source"],
+  "antiPatternSource": "/data/blueprints/contracts/calculator-experience.contract.json#prohibitedAntiPatterns",
+  "backwardCompatibility": {
+    "legacy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "new": "NEW_STANDARD_REQUIRED",
+    "migrated": "NEW_STANDARD_REQUIRED"
+  },
   "migrationNotes": [
     "Assets on v1.0 may migrate to v1.1 for improved evidence requirements.",
     "Assets on v1.x may migrate to v2.0 only through Migration, Testing and Validation gates."
@@ -41,7 +67,7 @@
   "supersededBy": null,
   "availableVersions": {
     "1.0": "Initial calculator quality standard.",
-    "1.1": "Reserved for stricter evidence and accessibility expectations.",
+    "1.1": "Canonical reference-backed experience, result, memory, visual evidence and anti-pattern enforcement.",
     "2.0": "Reserved for future layout, publishing and monetization quality changes."
   }
 }

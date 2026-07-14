@@ -1,11 +1,11 @@
 {
   "id": "pos-contract-validation",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 4 - Validation Engine",
   "name": "Validation Contract",
@@ -19,6 +19,8 @@
     "approval decision model",
     "validation report model",
     "schema and contract compatibility"
+    ,"calculator result experience validation"
+    ,"calculator visual render and responsive evidence resolution"
   ],
   "expectedInputs": [
     "registry entry",
@@ -36,12 +38,15 @@
     "nonconformity record",
     "approval decision",
     "blocking issues"
+    ,"visual validation status"
+    ,"calculator experience gate results"
   ],
   "dependencies": [
     "/data/pos/schemas/index.json",
     "/data/pos/contracts/index.json",
     "/data/pos/validation/index.json",
     "/data/pos/testing/index.json"
+    ,"/data/blueprints/contracts/calculator-experience.contract.json"
   ],
   "nonResponsibilities": [
     "execute validations",
@@ -54,6 +59,8 @@
   ],
   "notes": [
     "This contract defines the Validation Engine protocol but does not execute validations.",
-    "Validation complements Testing by checking compliance with official project standards."
+    "Validation complements Testing by checking compliance with official project standards.",
+    "For NEW_ASSET and MIGRATED_ASSET calculators, static validation cannot be reported as visual PASS.",
+    "VISUAL_VALIDATION_NOT_EXECUTED blocks FULL_STANDARD_ACCEPTED until rendered evidence or resolved manual visual approval exists."
   ]
 }

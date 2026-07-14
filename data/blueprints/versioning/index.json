@@ -1,20 +1,20 @@
 {
   "id": "blueprint-system-versioning",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 1 - Blueprint System",
   "description": "Versioning control for blueprint architecture.",
-  "currentBlueprintSystemVersion": "0.4.0",
+  "currentBlueprintSystemVersion": "0.5.0",
   "compatibility": {
     "runtimeConsumesBlueprints": false,
     "calculatorsConsumeBlueprints": false,
     "articlesConsumeBlueprints": false,
-    "automationConsumesBlueprints": false,
+    "automationConsumesBlueprints": true,
     "publishingConsumesBlueprints": false
   },
   "items": [
@@ -56,6 +56,18 @@
       "changes": [
         "Added Platform Asset Model as shared base model.",
         "Declared inheritance for Nucleus, Guide, Cluster, Calculator and Article blueprints."
+      ]
+    },
+    {
+      "id": "calculator-canonical-experience-contract-1.0.0",
+      "version": "0.5.0",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Added canonical calculator experience contract 1.0.0.",
+        "Strengthened Calculator Blueprint to version 0.3.0.",
+        "Connected new and migrated calculator automation to reference, form, result, memory, visual and anti-pattern gates.",
+        "Preserved legacy calculators pending explicit migration."
       ]
     }
   ],

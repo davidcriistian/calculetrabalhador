@@ -1,0 +1,3 @@
+{
+  "id":"blueprint-hardening-report","status":"HARDENED_AND_CONSUMED","path":"/data/blueprints/calculator/index.json","beforeVersion":"0.2.0","afterVersion":"0.3.0","contract":"/data/blueprints/contracts/calculator-experience.contract.json","additions":["module resolution","form/result/memory classes","conditional decisions","testing and validation gates","compatibility classes"],"legacySchemaAbsenceFailsAutomatically":false
+}

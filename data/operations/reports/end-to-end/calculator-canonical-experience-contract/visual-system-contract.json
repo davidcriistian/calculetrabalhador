@@ -1,0 +1,3 @@
+{
+  "id":"visual-system-contract-report","status":"PASS","parity":["STRUCTURAL_PARITY","DESIGN_SYSTEM_PARITY","QUALITY_PARITY","RESPONSIVE_PARITY"],"notRequired":"PIXEL_IDENTICAL_COPY","criteria":["hero-hierarchy","typographic-hierarchy","section-rhythm","card-role-differentiation","primary-cta-dominance","result-dominance","secondary-metric-hierarchy","label-and-tag-system","form-consistency","responsive-stacking","mobile-readability","focus-states","error-states","empty-loading-states-when-applicable"],"themeVariationWithinSystem":true
+}

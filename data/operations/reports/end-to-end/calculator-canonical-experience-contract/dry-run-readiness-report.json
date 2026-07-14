@@ -1,0 +1,3 @@
+{
+  "id":"hypothetical-new-calculator-dry-run","status":"READY_WITH_GUARDS","publicAssetCreated":false,"hypothesis":{"asset":"calculator:fictitious-unpublished","formClass":"GUIDED_MULTI_GROUP","resultClass":"CALCULATION_REPORT","memoryLevel":"STEP_BY_STEP_MEMORY","recommendationState":"NOT_CONFIGURED"},"resolved":["official-reference","physical-study-plan","module-decomposition","experience-plan","form-class","result-class","memory-level","post-result-actions","recommendation-policy"],"guard":"VISUAL_APPROVAL_REQUIRED because no automated browser evidence exists","catalogMutation":false,"sitemapMutation":false,"publication":false
+}

@@ -1,11 +1,11 @@
 {
   "id": "blueprint-system-registry",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Platform Asset Model foundation",
   "description": "Master declarative registry for blueprint definitions.",
@@ -31,6 +31,7 @@
     "calculatorBlueprints": ["/data/blueprints/calculator/index.json"],
     "articleBlueprints": ["/data/blueprints/article/index.json"],
     "sharedComponents": ["/data/blueprints/shared/index.json"],
+    "calculatorExperienceContracts": ["/data/blueprints/contracts/calculator-experience.contract.json"],
     "generatedAssets": []
   },
   "references": {
@@ -64,5 +65,6 @@
     "modifiesUrls": false,
     "modifiesSitemap": false,
     "executesAutomation": false
+    ,"feedsCalculatorAutomation": true
   }
 }

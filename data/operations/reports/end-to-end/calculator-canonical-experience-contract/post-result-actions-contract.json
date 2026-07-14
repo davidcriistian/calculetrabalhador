@@ -1,0 +1,3 @@
+{
+  "id":"post-result-actions-contract-report","status":"PASS","actions":["COPY_RESULT","PRINT_RESULT","DOWNLOAD_REPORT","SHARE_RESULT"],"decisionStates":["REQUIRED","CONDITIONALLY_REQUIRED","OPTIONAL","NOT_APPLICABLE"],"reportClassesMustEvaluate":["COPY_RESULT","PRINT_RESULT","DOWNLOAD_REPORT"],"buttonWithoutFunctionPasses":false,"omissionRequiresJustification":true
+}

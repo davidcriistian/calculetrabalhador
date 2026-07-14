@@ -1,0 +1,15 @@
+{
+  "id":"phase-526-input-resolution","status":"ALL_ROOT_CAUSES_TREATED","source":"/data/operations/reports/end-to-end/calculator-standard-audit/","filesConsumed":18,
+  "traceability":[
+    {"auditFinding":"RC-BP-01","contractRequirement":"typed core/conditional modules with depth and evidence","affectedInternalSystem":["calculator-blueprint","experience-contract"],"enforcementMechanism":"blueprint contract resolution","validationGate":"CALCULATOR_EXPERIENCE_PLAN_APPROVED"},
+    {"auditFinding":"RC-GS-01","contractRequirement":"measurable reference-backed acceptance","affectedInternalSystem":["calculator-gold-standard"],"enforcementMechanism":"criterion evidence and blocker status","validationGate":"ANTI_PATTERN_GATE"},
+    {"auditFinding":"RC-REF-01","contractRequirement":"physical study, decomposition and parity","affectedInternalSystem":["calculator-reference","asset-workflow"],"enforcementMechanism":"consumption evidence required","validationGate":"REFERENCE_STUDY_COMPLETE"},
+    {"auditFinding":"RC-WF-01","contractRequirement":"pre-generation experience resolution","affectedInternalSystem":["asset-workflow","end-to-end-workflow","playbooks"],"enforcementMechanism":"ordered calculator-only gates","validationGate":"CALCULATOR_EXPERIENCE_PLAN_APPROVED"},
+    {"auditFinding":"RC-VAL-01","contractRequirement":"executable structural/result checks plus real render evidence","affectedInternalSystem":["validation-contract","calculator-validator"],"enforcementMechanism":"fixtures and explicit validation dimensions","validationGate":"VISUAL_VALIDATION_STATUS_RESOLVED"},
+    {"auditFinding":"RC-TPL-01","contractRequirement":"configurable anatomy without literal page template","affectedInternalSystem":["blueprint","asset-manifest"],"enforcementMechanism":"required module resolution before generation","validationGate":"CALCULATOR_EXPERIENCE_PLAN_APPROVED"},
+    {"auditFinding":"RC-PROMPT-01","contractRequirement":"pre-generation module map and rationale","affectedInternalSystem":["playbooks","checklist"],"enforcementMechanism":"experience plan output","validationGate":"RESULT_CONTRACT_RESOLVED"},
+    {"auditFinding":"RC-BROWSER-01","contractRequirement":"rendered viewport evidence or resolved manual approval","affectedInternalSystem":["testing-contract","validation-contract","workflow"],"enforcementMechanism":"NOT_EXECUTED cannot certify visual pass","validationGate":"VISUAL_VALIDATION_STATUS_RESOLVED"},
+    {"auditFinding":"RC-RESULT-01","contractRequirement":"typed result, memory and actions","affectedInternalSystem":["experience-contract","calculator-pos-contract"],"enforcementMechanism":"class-dependent minimums","validationGate":"RESULT_CONTRACT_RESOLVED"},
+    {"auditFinding":"RC-REPORT-01","contractRequirement":"action decisions and governed recommendation states","affectedInternalSystem":["experience-contract","gold-standard"],"enforcementMechanism":"omission justification and approved source","validationGate":"RESULT_CONTRACT_RESOLVED"}
+  ],"untreatedFindings":[]
+}

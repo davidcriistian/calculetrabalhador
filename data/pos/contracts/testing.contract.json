@@ -1,11 +1,11 @@
 {
   "id": "pos-contract-testing",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 3 - Testing Engine",
   "name": "Testing Contract",
@@ -21,6 +21,8 @@
     "approval matrix",
     "test report model",
     "homologation references"
+    ,"calculator canonical experience negative scenarios"
+    ,"rendered viewport evidence"
   ],
   "expectedInputs": [
     "asset reference",
@@ -42,10 +44,13 @@
     "test report",
     "approval matrix decision",
     "open validation notes"
+    ,"calculator experience fixture results"
   ],
   "dependencies": [
     "/data/pos/registry/index.json",
     "/data/pos/testing/index.json"
+    ,"/data/pos/validation/calculator-experience-fixtures.json"
+    ,"/data/blueprints/contracts/calculator-experience.contract.json"
   ],
   "nonResponsibilities": [
     "run automated tests",
@@ -59,6 +64,7 @@
   ],
   "notes": [
     "This contract does not add, execute or wire test runners.",
-    "Phase 3 details the official Testing Engine protocol under /data/pos/testing."
+    "Phase 3 details the official Testing Engine protocol under /data/pos/testing.",
+    "The calculator experience validator must reject generic report-class pages and preserve justified SIMPLE_SINGLE_STEP/SIMPLE_RESULT cases."
   ]
 }

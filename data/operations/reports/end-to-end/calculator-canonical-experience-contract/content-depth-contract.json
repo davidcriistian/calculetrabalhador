@@ -1,0 +1,3 @@
+{
+  "id":"content-depth-contract-report","status":"PASS","areas":["guide","interpretation","faq","methodology","sources","related-articles","related-tools"],"criteria":["intent-relevance","proportional-depth","no-artificial-repetition","faq-visible-schema-equivalence","claim-source-compatibility","governed-internal-links","no-invented-reference"],"presenceOnlySufficient":false
+}

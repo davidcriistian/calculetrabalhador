@@ -1,11 +1,11 @@
 {
   "id": "reference-system-history",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/references/schemas/reference.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.5 - Reference System",
   "description": "Change history for Reference System.",
@@ -20,6 +20,17 @@
         "Registered official calculator reference metadata.",
         "Registered official article reference metadata.",
         "Kept production assets, HTML and content untouched."
+      ]
+    },
+    {
+      "id": "calculator-reference-consumption-0.2.0",
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Assigned structural, visual, result-depth, mobile, accessibility and conversion roles to the FGTS calculator reference.",
+        "Required physical study, module decomposition and parity assessment before new calculator generation.",
+        "Prohibited literal content, rule, field, formula and pixel-identical copying."
       ]
     }
   ]

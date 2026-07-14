@@ -1,0 +1,3 @@
+{
+  "id":"backward-compatibility-report","status":"PASS","policy":{"LEGACY_ASSET":"LEGACY_ACCEPTED_PENDING_MIGRATION","NEW_ASSET":"NEW_STANDARD_REQUIRED","MIGRATED_ASSET":"NEW_STANDARD_REQUIRED","retrofitRequest":"MIGRATION_REQUIRED"},"automaticLegacyFailure":false,"historicalCalculatorMutationCount":0,"publicRegistryStatusMutationByPhase527":0,"publishingStatusMutationByPhase527":0,"legacyRecordsWithoutNewFieldsRemainReadable":true
+}

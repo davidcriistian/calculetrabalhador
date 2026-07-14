@@ -1,11 +1,11 @@
 {
   "id": "reference-system-registry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/references/schemas/registry.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.5 - Reference System",
   "description": "Official registry for approved platform reference assets.",
@@ -34,11 +34,13 @@
     "feedsRuntime": false,
     "executesValidation": false,
     "executesPublishing": false,
-    "executesAutomation": false
+    "executesAutomation": false,
+    "feedsCalculatorAutomation": true
   },
   "notes": [
     "Gold Standard defines quality standards.",
     "Reference System points to approved real implementations.",
-    "References may change without changing the Gold Standard."
+    "References may change without changing the Gold Standard.",
+    "The calculator reference is consumed through a mandatory physical-study and parity-assessment contract; no public runtime consumes it."
   ]
 }

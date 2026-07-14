@@ -1,0 +1,157 @@
+{
+  "id": "calculator-canonical-experience-contract",
+  "calculatorExperienceContractVersion": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "consumed-by-calculator-automation",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "Calcule Trabalhador",
+  "source": "Phase 5.27 - Calculator Canonical Experience Contract",
+  "principle": ["SAME_PRODUCT_SYSTEM", "SAME_QUALITY_FLOOR", "DOMAIN_SPECIFIC_ADAPTATION"],
+  "canonicalReference": {
+    "referenceId": "calculator-multa-40-fgts-reference",
+    "assetId": "calculator:calculadora-multa-40-fgts",
+    "physicalReferencePath": "/calculadora-multa-40-fgts/index.html",
+    "referenceRoles": ["structural", "visual", "result-depth", "mobile-ux", "accessibility-pattern", "conversion-pattern"],
+    "requiredStudyBeforeGeneration": true,
+    "requiredModuleDecomposition": true,
+    "requiredParityAssessment": ["STRUCTURAL_PARITY", "DESIGN_SYSTEM_PARITY", "QUALITY_PARITY", "RESPONSIVE_PARITY"],
+    "prohibitedLiteralCopy": ["text", "legal-rules", "field-identifiers", "domain-formulas", "fixed-step-count", "fixed-theme-color", "pixel-identical-copy"]
+  },
+  "requiredCoreModules": [
+    {"id":"page-context","purpose":"Orient location and domain","minimumContent":["breadcrumb-or-equivalent-context","thematic-identification"],"depth":"explicit-and-visible","behavior":"precedes-or-is-integrated-with-hero","validationEvidence":["structure-map","render-evidence"],"referenceRelation":"abstracted-context-pattern","relatedAntiPatterns":["GENERIC_INTRO_CARD"]},
+    {"id":"hero","purpose":"State intent and value before data entry","minimumContent":["single-clear-h1","user-oriented-description","concrete-value-promise","output-preview","dominant-primary-entry-cta"],"depth":"complete-entry-experience","behavior":"cta-transitions-clearly-to-simulator","validationEvidence":["hero-content-map","mobile-and-desktop-render"],"referenceRelation":"quality-parity-not-literal-copy","relatedAntiPatterns":["MINIMAL_HERO","GENERIC_INTRO_CARD","SMALL_PRIMARY_CTA"]},
+    {"id":"simulator-preparation","purpose":"Prepare the user for required information","minimumContent":["simulator-heading","brief-instructions","effort-or-input-expectation-when-useful"],"depth":"intent-proportional","behavior":"connects-value-promise-to-form","validationEvidence":["experience-plan"],"referenceRelation":"abstracted-transition-pattern","relatedAntiPatterns":["FORM_WITHOUT_JOURNEY"]},
+    {"id":"form-journey","purpose":"Collect inputs with proportional guidance","minimumContent":["declared-complexity-class","semantic-grouping","essential-vs-optional-treatment","contextual-help","near-field-or-group-validation","dominant-final-cta"],"depth":"class-dependent","behavior":"follows-form-journey-contract","validationEvidence":["form-classification","field-group-map","error-state-test"],"referenceRelation":"adapted-guided-journey","relatedAntiPatterns":["FORM_WITHOUT_JOURNEY","FLAT_FIELD_GROUPS","NO_STEP_CONTEXT","SMALL_PRIMARY_CTA"]},
+    {"id":"result-experience","purpose":"Answer the user question as a reusable report","minimumContent":["declared-result-class","result-context","dominant-primary-result","meaning-text","class-required-secondary-modules","interpretation","limitations","next-steps"],"depth":"class-dependent","behavior":"hidden-or-empty-before-valid-calculation-and-updated-from-calculated-scenario","validationEvidence":["result-contract-resolution","result-state-tests","render-evidence"],"referenceRelation":"adapted-result-depth","relatedAntiPatterns":["RESULT_WITH_ONLY_NUMBERS","NO_SCENARIO_CONTEXT","NO_RESULT_INTERPRETATION","NO_NEXT_STEPS"]},
+    {"id":"calculation-explainability","purpose":"Make non-trivial calculations traceable and reproducible","minimumContent":["declared-memory-level","inputs-used","premises","intermediate-values","operations","final-result","limitations"],"depth":"memory-level-dependent","behavior":"uses-the-same-values-and-rounding-as-result","validationEvidence":["memory-equivalence-test","calculation-trace"],"referenceRelation":"adapted-memory-pattern","relatedAntiPatterns":["SHALLOW_CALCULATION_MEMORY"]},
+    {"id":"post-result-utility","purpose":"Help use and retain the result","minimumContent":["action-applicability-decision","contextual-next-steps","governed-related-content"],"depth":"result-class-dependent","behavior":"implemented-actions-must-be-functional","validationEvidence":["action-tests","link-validation"],"referenceRelation":"adapted-post-result-pattern","relatedAntiPatterns":["NO_REPORT_ACTION_EVALUATION"]},
+    {"id":"content-and-trust","purpose":"Provide proportional guidance and trustworthy context","minimumContent":["intent-relevant-guide","sufficient-faq","methodology-or-rule-explanation","sources-when-claims-require-them","related-articles","related-tools","limitations"],"depth":"topic-risk-and-complexity-proportional","behavior":"faq-visible-content-matches-faqpage-when-schema-is-used","validationEvidence":["content-depth-review","source-review","link-validation"],"referenceRelation":"quality-depth-not-content-copy","relatedAntiPatterns":["FAQ_PRESENT_BUT_SHALLOW","CONTENT_PRESENT_BUT_MINIMAL"]},
+    {"id":"responsive-accessible-shell","purpose":"Keep the complete experience usable across viewports and input modes","minimumContent":["responsive-stacking","mobile-readable-type","no-uncontrolled-overflow","visible-focus","semantic-labels","error-state","empty-state"],"depth":"all-critical-modules","behavior":"validated-at-required-viewports","validationEvidence":["visual-evidence-set","keyboard-review","overflow-check"],"referenceRelation":"mobile-and-accessibility-pattern-parity","relatedAntiPatterns":["NO_VISUAL_PARITY","STATIC_VALIDATION_ONLY"]}
+  ],
+  "conditionalModules": [
+    {"id":"estimated-effort","appliesWhen":"completion effort is not obvious or form has multiple groups","doesNotApplyWhen":"single obvious input","requirements":["plain-language-time-or-effort-expectation"]},
+    {"id":"step-numbering","appliesWhen":"FORM_COMPLEXITY_CLASS is GUIDED_MULTI_STEP or CONDITIONAL_FLOW","doesNotApplyWhen":"SIMPLE_SINGLE_STEP or clearly grouped short form","requirements":["visible-progress-sequence","step-title","step-context"]},
+    {"id":"final-confirmation","appliesWhen":"form has at least 3 semantic groups, conditional branches or high-impact assumptions","doesNotApplyWhen":"simple direct calculation","requirements":["calculation-summary","dominant-final-cta","visible-error-region"]},
+    {"id":"scenario-tags","appliesWhen":"scenario, regime, category or premise changes interpretation","doesNotApplyWhen":"single context has no ambiguity","requirements":["human-readable-scenario","relevant-premise-tags"]},
+    {"id":"comparison","appliesWhen":"two or more meaningful scenarios can be compared without misleading the user","doesNotApplyWhen":"comparison would be artificial","requirements":["consistent-bases","difference-or-tradeoff","interpretation"]},
+    {"id":"summary-table","appliesWhen":"result has multiple inputs, components or intermediate values","doesNotApplyWhen":"trivial single operation","requirements":["item","rule-or-meaning","value"]},
+    {"id":"sources","appliesWhen":"legal, tax, financial or official-rule claims are made","doesNotApplyWhen":"pure user-input arithmetic with no external claim","requirements":["governed-source","claim-compatibility"]},
+    {"id":"result-actions","appliesWhen":"RESULT_EXPERIENCE_CLASS is CALCULATION_REPORT, DECISION_REPORT or COMPARATIVE_REPORT","doesNotApplyWhen":"SIMPLE_RESULT and no retention need","requirements":["copy-evaluated","print-evaluated","download-report-evaluated","justification-for-omissions"]},
+    {"id":"result-recommendations","appliesWhen":"approved recommendation configuration and eligibility rule both exist","doesNotApplyWhen":"not configured, not eligible or hidden by policy","requirements":["approved-source","eligibility-evidence","disclosure-when-required"]}
+  ],
+  "optionalEnhancements": ["share-result", "advanced-examples", "progress-indicator", "saved-scenario", "export-data", "contextual-service-offer"],
+  "formJourneyContract": {
+    "classificationField": "FORM_COMPLEXITY_CLASS",
+    "classes": {
+      "SIMPLE_SINGLE_STEP":{"measurableWhen":"semanticGroupCount <= 1 AND essentialInputCount <= 3 AND conditionalBranchCount = 0","required":["clear-labels","contextual-help-when-needed","near-field-validation","dominant-cta"],"stepNumberingRequired":false},
+      "GUIDED_MULTI_GROUP":{"measurableWhen":"semanticGroupCount between 2 and 3 OR essentialInputCount between 4 and 7","required":["logical-group-order","group-title","group-context","essential-vs-optional","group-validation","final-cta"],"stepNumberingRequired":false},
+      "GUIDED_MULTI_STEP":{"measurableWhen":"semanticGroupCount >= 4 OR essentialInputCount >= 8 OR highImpactAssumptionCount >= 3","required":["numbered-or-equivalent-progress","step-title","step-context","essential-vs-optional","final-confirmation","dominant-final-cta"],"stepNumberingRequired":true},
+      "CONDITIONAL_FLOW":{"measurableWhen":"conditionalBranchCount >= 1 AND branch changes visible inputs or calculation path","required":["branch-trigger-explanation","conditional-field-state","progress-context","final-confirmation-when-complex"],"stepNumberingRequired":"when multiple stages"}
+    },
+    "classificationMustBeJustified": true
+  },
+  "resultExperienceContract": {
+    "classificationField": "RESULT_EXPERIENCE_CLASS",
+    "classes": {
+      "SIMPLE_RESULT":{"appliesWhen":"single direct output, trivial operation, no decision or material premise","required":["result-context","dominant-primary-result","meaning-text","limitations-when-needed"],"memoryMinimum":"MEMORY_NOT_REQUIRED"},
+      "CALCULATION_REPORT":{"appliesWhen":"multiple inputs, non-trivial formula, multiple outputs or financial composition","required":["result-context","inputs-summary","premises","dominant-primary-result","secondary-results","STEP_BY_STEP_MEMORY","interpretation","limitations","next-steps","result-actions-evaluation"],"memoryMinimum":"STEP_BY_STEP_MEMORY"},
+      "DECISION_REPORT":{"appliesWhen":"result supports a financial, labor, legal or operational decision","required":["all-calculation-report-modules","scenario-tags-when-useful","decision-interpretation","risk-or-limitation-context","actionable-next-steps"],"memoryMinimum":"AUDITABLE_MEMORY"},
+      "COMPARATIVE_REPORT":{"appliesWhen":"two or more scenarios are intentionally compared","required":["all-calculation-report-modules","consistent-comparison-bases","scenario-tags","differences","tradeoff-interpretation"],"memoryMinimum":"AUDITABLE_MEMORY"}
+    },
+    "primaryResultDominanceCriteria":["visually-distinct-from-secondary-metrics","contains-value-or-conclusion","contains-meaning-text","context-understandable-without-returning-to-form"]
+  },
+  "calculationMemoryContract": {
+    "levels": {
+      "MEMORY_NOT_REQUIRED":{"appliesWhen":"trivial single operation and SIMPLE_RESULT","required":[]},
+      "BASIC_MEMORY":{"appliesWhen":"simple formula with limited premises","required":["inputs-used","operation","result"]},
+      "STEP_BY_STEP_MEMORY":{"appliesWhen":"non-trivial calculation or CALCULATION_REPORT","required":["inputs-used","ignored-or-conditional-inputs-when-relevant","premises","intermediate-values","operations","rounding","final-result","limitations"]},
+      "AUDITABLE_MEMORY":{"appliesWhen":"DECISION_REPORT, COMPARATIVE_REPORT or high-risk official-rule calculation","required":["all-step-by-step-items","rule-source","scenario-trace","reproducible-summary-table"]}
+    },
+    "qualities":["PEDAGOGICAL","TRACEABLE","REPRODUCIBLE"],
+    "labelValueListAloneIsComplete": false,
+    "levelChoiceRequiresJustification": true
+  },
+  "postResultActionsContract": {
+    "actions": ["COPY_RESULT","PRINT_RESULT","DOWNLOAD_REPORT","SHARE_RESULT"],
+    "rules": {
+      "SIMPLE_RESULT":{"COPY_RESULT":"OPTIONAL","PRINT_RESULT":"OPTIONAL","DOWNLOAD_REPORT":"NOT_APPLICABLE_ALLOWED","SHARE_RESULT":"OPTIONAL"},
+      "CALCULATION_REPORT":{"COPY_RESULT":"CONDITIONALLY_REQUIRED","PRINT_RESULT":"CONDITIONALLY_REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"},
+      "DECISION_REPORT":{"COPY_RESULT":"REQUIRED","PRINT_RESULT":"REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"},
+      "COMPARATIVE_REPORT":{"COPY_RESULT":"REQUIRED","PRINT_RESULT":"REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"}
+    },
+    "functionalEvidenceRequired": true,
+    "omissionRequiresJustification": true
+  },
+  "contentDepthContract": {
+    "requiredQualities":["intent-relevance","proportional-depth","no-artificial-repetition","faq-visible-schema-equivalence","claim-source-compatibility","governed-internal-links","no-invented-reference"],
+    "minimumReviewAreas":["guide","interpretation","faq","methodology","sources","related-articles","related-tools"],
+    "presenceOnlyIsSufficient": false
+  },
+  "resultRecommendationsContract": {
+    "states":["NOT_CONFIGURED","CONFIGURED_BUT_NOT_ELIGIBLE","ELIGIBLE_WITH_PRODUCTS","ELIGIBLE_WITH_SERVICES","ELIGIBLE_WITH_OFFERS","HIDDEN_BY_POLICY"],
+    "flow":["RESULT_OR_SCENARIO","ELIGIBILITY_RULE","APPROVED_PRODUCT_OR_OFFER_SOURCE","RENDER"],
+    "defaultState":"NOT_CONFIGURED",
+    "defaultRendering":"HIDDEN",
+    "prohibited":["invent-product","invent-price","invent-offer","invent-affiliate","hardcode-without-approved-source","render-without-eligibility"]
+  },
+  "visualSystemContract": {
+    "parityTargets":["STRUCTURAL_PARITY","DESIGN_SYSTEM_PARITY","QUALITY_PARITY","RESPONSIVE_PARITY"],
+    "excludedTarget":"PIXEL_IDENTICAL_COPY",
+    "criteria": {
+      "heroHierarchy":["context","thematic-identity","h1","description","output-preview","dominant-cta"],
+      "typographicHierarchy":["one-h1","ordered-headings","primary-result-larger-or-otherwise-more-prominent-than-secondary"],
+      "sectionRhythm":["consistent-container","repeatable-spacing-scale","clear-section-boundaries"],
+      "cardRoles":["entry-form-result-info-warning-and-related-roles-visually-distinguishable"],
+      "ctaDominance":["primary-action-distinguishable","mobile-action-usable","secondary-actions-do-not-compete"],
+      "resultDominance":["primary-result-distinct","secondary-metrics-subordinate","scenario-context-adjacent"],
+      "labelsAndTags":["labels-readable","tags-contextual","no-color-only-meaning"],
+      "formConsistency":["consistent-control-height","visible-focus","error-near-context","disabled-and-conditional-states-clear"],
+      "responsiveStacking":["small-mobile","large-mobile","intermediate","desktop"],
+      "stateCoverage":["empty","error","valid-result","loading-when-applicable"]
+    },
+    "visualStatuses":["VISUAL_VALIDATION_PASSED","VISUAL_VALIDATION_FAILED","VISUAL_VALIDATION_NOT_EXECUTED","VISUAL_APPROVAL_REQUIRED"],
+    "visualPassRequires":{"renderedEvidence":true,"requiredViewports":["small-mobile","large-mobile","intermediate","desktop"],"criticalAreas":["hero","form","fields","cta","result","cards","tables-when-present","faq","overflow","text-wrap","footer","result-actions"]},
+    "notExecutedCannotBecome":"FULL_STANDARD_ACCEPTED"
+  },
+  "prohibitedAntiPatterns": [
+    {"id":"MINIMAL_HERO","appliesWhen":"hero is the primary entry experience","doesNotApplyWhen":"embedded utility with approved compact-entry exception","severity":"BLOCKER","validationMethod":"hero-module-content-and-render-review","requiredEvidence":["hero-map","render"]},
+    {"id":"GENERIC_INTRO_CARD","appliesWhen":"generic card substitutes the required hero system","doesNotApplyWhen":"card is a secondary introduction after a complete hero","severity":"MAJOR","validationMethod":"module-role-review","requiredEvidence":["page-anatomy"]},
+    {"id":"FORM_WITHOUT_JOURNEY","appliesWhen":"class is not SIMPLE_SINGLE_STEP","doesNotApplyWhen":"simple classification is justified","severity":"BLOCKER","validationMethod":"form-class-vs-module-review","requiredEvidence":["form-classification","journey-map"]},
+    {"id":"FLAT_FIELD_GROUPS","appliesWhen":"multiple semantic groups or at least 4 essential inputs","doesNotApplyWhen":"single short group","severity":"MAJOR","validationMethod":"field-group-depth-review","requiredEvidence":["group-map"]},
+    {"id":"NO_STEP_CONTEXT","appliesWhen":"guided multi-step or conditional flow","doesNotApplyWhen":"simple or short multi-group form","severity":"MAJOR","validationMethod":"step-content-review","requiredEvidence":["step-map"]},
+    {"id":"SMALL_PRIMARY_CTA","appliesWhen":"action initiates primary calculation or entry","doesNotApplyWhen":"compact embedded exception approved","severity":"MAJOR","validationMethod":"cta-hierarchy-render-review","requiredEvidence":["mobile-and-desktop-render"]},
+    {"id":"RESULT_WITH_ONLY_NUMBERS","appliesWhen":"result class is not SIMPLE_RESULT","doesNotApplyWhen":"simple result classification justified","severity":"BLOCKER","validationMethod":"result-content-review","requiredEvidence":["result-map"]},
+    {"id":"SHALLOW_CALCULATION_MEMORY","appliesWhen":"memory minimum is STEP_BY_STEP_MEMORY or AUDITABLE_MEMORY","doesNotApplyWhen":"MEMORY_NOT_REQUIRED or justified BASIC_MEMORY","severity":"BLOCKER","validationMethod":"memory-reproducibility-test","requiredEvidence":["calculation-trace"]},
+    {"id":"NO_SCENARIO_CONTEXT","appliesWhen":"scenario or premise materially changes interpretation","doesNotApplyWhen":"single unambiguous scenario","severity":"MAJOR","validationMethod":"result-context-review","requiredEvidence":["scenario-map"]},
+    {"id":"NO_RESULT_INTERPRETATION","appliesWhen":"result class is CALCULATION_REPORT, DECISION_REPORT or COMPARATIVE_REPORT","doesNotApplyWhen":"SIMPLE_RESULT with self-evident meaning","severity":"BLOCKER","validationMethod":"result-contract-review","requiredEvidence":["interpretation"]},
+    {"id":"NO_NEXT_STEPS","appliesWhen":"result supports action or decision","doesNotApplyWhen":"no safe action can be recommended","severity":"MAJOR","validationMethod":"post-result-review","requiredEvidence":["next-step-or-justification"]},
+    {"id":"NO_REPORT_ACTION_EVALUATION","appliesWhen":"result is report class","doesNotApplyWhen":"SIMPLE_RESULT","severity":"MAJOR","validationMethod":"action-decision-review","requiredEvidence":["action-matrix"]},
+    {"id":"NO_VISUAL_PARITY","appliesWhen":"new or migrated calculator seeks full-standard approval","doesNotApplyWhen":"legacy accepted pending migration","severity":"BLOCKER","validationMethod":"reference-parity-and-render-review","requiredEvidence":["parity-assessment","render-set"]},
+    {"id":"STATIC_VALIDATION_ONLY","appliesWhen":"full-standard visual approval is requested","doesNotApplyWhen":"internal plan/dry-run without visual certification","severity":"BLOCKER","validationMethod":"visual-status-review","requiredEvidence":["browser-render-or-manual-screenshot-approval"]},
+    {"id":"FAQ_PRESENT_BUT_SHALLOW","appliesWhen":"FAQ is required by user intent or FAQPage is emitted","doesNotApplyWhen":"FAQ is not applicable and schema absent","severity":"MAJOR","validationMethod":"faq-intent-and-schema-review","requiredEvidence":["faq-map"]},
+    {"id":"CONTENT_PRESENT_BUT_MINIMAL","appliesWhen":"guide/content is required by complexity or risk","doesNotApplyWhen":"simple low-risk utility with approved concise content","severity":"MAJOR","validationMethod":"content-depth-review","requiredEvidence":["content-review"]},
+    {"id":"REFERENCE_DECLARED_BUT_NOT_ENFORCED","appliesWhen":"new or migrated calculator generation","doesNotApplyWhen":"legacy asset is only being inventoried","severity":"BLOCKER","validationMethod":"reference-study-gate","requiredEvidence":["reference-study","module-decomposition","parity-assessment"]}
+  ],
+  "validationGates": [
+    {"id":"REFERENCE_STUDY_COMPLETE","passWhen":["reference-resolved","physical-page-opened","modules-decomposed","literal-copy-avoidance-recorded"]},
+    {"id":"CALCULATOR_EXPERIENCE_PLAN_APPROVED","passWhen":["required-modules-resolved","conditional-modules-decided","form-class-justified","result-class-justified","memory-level-justified"]},
+    {"id":"RESULT_CONTRACT_RESOLVED","passWhen":["class-required-result-modules-planned","memory-equivalence-planned","actions-evaluated","recommendation-state-resolved"]},
+    {"id":"VISUAL_VALIDATION_STATUS_RESOLVED","passWhen":["status-is-passed-with-render-evidence-or-manual-approval-required-is-resolved"],"cannotPassAsFullStandard":["VISUAL_VALIDATION_NOT_EXECUTED"]},
+    {"id":"ANTI_PATTERN_GATE","passWhen":["no-applicable-blocker","all-major-items-resolved-or-approved-exception"]},
+    {"id":"CONTENT_DEPTH_GATE","passWhen":["presence-only-not-used-as-evidence","faq-and-sources-consistent","related-links-governed"]}
+  ],
+  "exceptionRules": {
+    "allowedOnlyWhen":["module-not-applicable-by-contract","alternative-achieves-same-quality-floor","manual-exception-approved-with-evidence"],
+    "requiredFields":["exceptionId","moduleOrGate","reason","alternative","risk","approvedBy","approvedAt"],
+    "cannotWaive":["literal-copy-prohibition","invented-product-prohibition","false-visual-pass-prohibition","legal-source-governance"]
+  },
+  "backwardCompatibility": {
+    "LEGACY_ASSET":"LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "NEW_ASSET":"NEW_STANDARD_REQUIRED",
+    "MIGRATED_ASSET":"NEW_STANDARD_REQUIRED",
+    "retrofitRequest":"MIGRATION_REQUIRED",
+    "automaticLegacyFailure":false,
+    "automaticPublishingStatusChange":false
+  }
+}

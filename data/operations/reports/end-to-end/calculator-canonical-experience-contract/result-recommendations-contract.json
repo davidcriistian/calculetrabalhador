@@ -1,0 +1,3 @@
+{
+  "id":"result-recommendations-contract-report","status":"PASS","states":["NOT_CONFIGURED","CONFIGURED_BUT_NOT_ELIGIBLE","ELIGIBLE_WITH_PRODUCTS","ELIGIBLE_WITH_SERVICES","ELIGIBLE_WITH_OFFERS","HIDDEN_BY_POLICY"],"flow":["RESULT_OR_SCENARIO","ELIGIBILITY_RULE","APPROVED_PRODUCT_OR_OFFER_SOURCE","RENDER"],"defaultState":"NOT_CONFIGURED","defaultRendering":"HIDDEN","newCatalogCreated":false,"inventedProductsAllowed":false
+}

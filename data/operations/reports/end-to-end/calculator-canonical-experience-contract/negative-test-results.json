@@ -1,0 +1,5 @@
+{
+  "id":"negative-test-results","status":"PASS","validator":"/scripts/validate-calculator-experience-contract.js","fixtures":"/data/pos/validation/calculator-experience-fixtures.json","scenarioCount":8,"matched":8,"mismatches":0,"results":[
+    {"id":"minimal-hero-form-three-numbers","expected":"FAIL","actual":"FAIL"},{"id":"complex-form-without-journey","expected":"FAIL","actual":"FAIL"},{"id":"numbers-without-interpretation","expected":"FAIL","actual":"FAIL"},{"id":"label-value-memory-for-non-trivial-calculation","expected":"FAIL","actual":"FAIL"},{"id":"reference-declared-not-studied","expected":"FAIL","actual":"FAIL"},{"id":"false-visual-pass-without-browser","expected":"FAIL","actual":"FAIL"},{"id":"invented-product-without-configuration","expected":"FAIL","actual":"FAIL"},{"id":"justified-simple-calculator","expected":"PASS","actual":"PASS"}
+  ],"conclusion":"rigorous-without-artificial-complexity"
+}

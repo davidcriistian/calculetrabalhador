@@ -1,11 +1,11 @@
 {
   "id": "gold-standard-history",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.4 - Gold Standard System",
   "description": "Change history for Gold Standard System.",
@@ -19,6 +19,18 @@
         "Created versioned Gold Standard System.",
         "Defined calculator, article, cluster, guide, SEO, component and validation standards.",
         "Kept standards disconnected from production and runtime."
+      ]
+    },
+    {
+      "id": "calculator-gold-standard-1.1",
+      "version": "1.1",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Added measurable reference-backed calculator experience criteria.",
+        "Separated static, result, visual, responsive, accessibility and human approval evidence.",
+        "Prevented VISUAL_VALIDATION_NOT_EXECUTED from becoming FULL_STANDARD_ACCEPTED.",
+        "Preserved legacy calculator compatibility pending migration."
       ]
     }
   ]

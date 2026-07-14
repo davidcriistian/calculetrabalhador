@@ -1,11 +1,11 @@
 {
   "id": "reference-system-versioning",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/references/schemas/reference.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.5 - Reference System",
   "description": "Versioning policy for Reference System.",
@@ -19,6 +19,13 @@
     "referencesMayChangeWithoutGoldStandardChange": true,
     "requiresApprovalRecord": true,
     "usesSupersedesSupersededBy": true
+  },
+  "calculatorReferenceConsumption": {
+    "version": "0.2.0",
+    "contract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "physicalStudyRequired": true,
+    "moduleDecompositionRequired": true,
+    "literalCopyProhibited": true
   },
   "notes": [
     "Changing an official reference does not change the Gold Standard.",

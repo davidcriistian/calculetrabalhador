@@ -1,0 +1,3 @@
+{
+  "id":"reference-enforcement-report","status":"CANONICAL_REFERENCE_CONSUMED_WITH_ENFORCEABLE_CONTRACT","path":"/data/references/calculators/index.json","reference":"calculator:calculadora-multa-40-fgts","beforeRuntimeStatus":"not-consumed","afterRuntimeStatus":"consumed-by-calculator-automation","roles":["structural","visual","result-depth","mobile-ux","accessibility-pattern","conversion-pattern"],"requiredBeforeGeneration":["open-physical-reference","module-decomposition","experience-plan","parity-assessment"],"literalCopyProhibited":true
+}

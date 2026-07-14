@@ -1,0 +1,3 @@
+{
+  "id":"canonical-experience-contract-report","status":"ESTABLISHED","contract":"/data/blueprints/contracts/calculator-experience.contract.json","version":"1.0.0","runtimeStatus":"consumed-by-calculator-automation","reasonForDedicatedArtifact":"Blueprint and Gold Standard have different responsibilities; a versioned shared contract prevents divergent duplication across workflows, validation and POS contracts.","sections":["requiredCoreModules","conditionalModules","optionalEnhancements","formJourneyContract","resultExperienceContract","calculationMemoryContract","postResultActionsContract","contentDepthContract","resultRecommendationsContract","visualSystemContract","prohibitedAntiPatterns","validationGates","exceptionRules","backwardCompatibility"]
+}

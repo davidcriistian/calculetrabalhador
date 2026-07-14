@@ -1,0 +1,3 @@
+{
+  "id":"phase-5-27-validation-report","status":"PASS","jsonValid":"PASS","internalJsonRefsValid":{"status":"PASS","checked":112,"unresolved":0},"internalJsSyntax":"PASS","governance":"PASS","transformRules":"PASS","transformRulesCheck":"PASS","shadowValidators":"PASS","blueprintResolution":"PASS:0.3.0","goldStandardResolution":"PASS:1.1","referenceResolution":"PASS:consumed-by-calculator-automation","workflowResolution":"PASS:0.2.0","checklistResolution":"PASS:0.2.0","negativeTests":"PASS:8/8","dryRun":"READY_WITH_GUARDS","backwardCompatibility":"PASS","diffCheck":"PASS","mutationGuard":"PASS","indexNowExecuted":false,"publicationExecuted":false
+}

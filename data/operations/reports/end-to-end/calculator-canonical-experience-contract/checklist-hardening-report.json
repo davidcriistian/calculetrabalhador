@@ -1,0 +1,3 @@
+{
+  "id":"checklist-hardening-report","status":"HARDENED_AND_CONSUMED","path":"/data/operations/checklists/end-to-end/index.json","sections":{"reference":4,"entryExperience":4,"form":6,"result":8,"actions":3,"content":4,"visual":5,"recommendations":3},"blockingRules":["unstudied-reference","unjustified-classification","applicable-blocker-anti-pattern","false-visual-pass","invented-recommendation"]
+}

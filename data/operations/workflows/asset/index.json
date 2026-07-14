@@ -1,11 +1,11 @@
 {
   "id": "asset-operation-workflows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.8 - Generic Asset Provisioning",
   "description": "Single workflow for generic internal draft asset provisioning.",
@@ -20,6 +20,14 @@
         "resolve-blueprint",
         "resolve-gold-standard",
         "resolve-reference",
+        "when-calculator-open-physical-reference",
+        "when-calculator-decompose-reference-modules",
+        "when-calculator-classify-form-result-and-memory",
+        "when-calculator-decide-conditional-modules-actions-and-recommendations",
+        "when-calculator-prepare-experience-plan",
+        "when-calculator-pass-reference-study-complete",
+        "when-calculator-pass-calculator-experience-plan-approved",
+        "when-calculator-pass-result-contract-resolved",
         "provision-draft-specification",
         "prepare-relationship-map",
         "register-registry-draft",
@@ -38,6 +46,9 @@
   "selectionRules": {
     "selectBy": "assetType",
     "usesConfiguration": "/data/manifests/operations/asset/index.json#assetTypeResolution",
-    "usesInference": false
+    "usesInference": false,
+    "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "calculatorSpecificStepsApplyWhen": "assetType=calculator AND compatibility class is NEW_ASSET or MIGRATED_ASSET",
+    "legacyCalculatorPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
   }
 }

@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-workflows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Official ordered workflow for deliver-asset-end-to-end. It defines orchestration states only and does not execute operations.",
@@ -16,7 +16,7 @@
       "defaultMode": "DRY_RUN",
       "approvalRequired": true,
       "rollbackRequired": true,
-      "runtimeStatus": "not-consumed",
+      "runtimeStatus": "consumed-by-calculator-automation",
       "steps": [
         {
           "id": "REQUEST_INTAKE",
@@ -56,6 +56,18 @@
           "gates": ["assetId", "assetType", "blueprint", "gold-standard", "reference", "owner"],
           "stopConditions": ["identity-missing", "blueprint-missing", "gold-standard-missing", "reference-critical-missing"],
           "rollback": "none",
+          "nextStates": ["CALCULATOR_EXPERIENCE_RESOLUTION", "REUSE_OR_CREATE_DECISION"]
+        },
+        {
+          "id": "CALCULATOR_EXPERIENCE_RESOLUTION",
+          "appliesWhen": ["assetType=calculator", "assetCompatibilityClass=NEW_ASSET-or-MIGRATED_ASSET"],
+          "legacyBehavior": "LEGACY_ACCEPTED_PENDING_MIGRATION bypasses new-standard certification unless migration is requested",
+          "input": ["governance-resolution", "calculator-experience-contract", "official-reference"],
+          "output": ["reference-study", "module-decomposition", "calculator-experience-plan", "result-contract-resolution", "recommendation-state", "visual-validation-plan"],
+          "preconditions": ["calculator-blueprint-resolved", "calculator-gold-standard-resolved", "official-reference-resolved", "physical-reference-readable"],
+          "gates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED"],
+          "stopConditions": ["reference-declared-but-not-studied", "module-decomposition-missing", "literal-copy-risk", "form-class-unresolved", "result-class-unresolved", "memory-level-unresolved", "conditional-modules-undecided", "recommendation-state-unresolved", "calculator-experience-plan-not-approved"],
+          "rollback": "discard-calculator-experience-draft-evidence",
           "nextStates": ["REUSE_OR_CREATE_DECISION"]
         },
         {
@@ -163,7 +175,7 @@
           "input": ["sitemap-plan"],
           "output": ["testing-report"],
           "preconditions": ["tests-selected-by-scope"],
-          "gates": ["critical-tests-pass-or-not-applicable"],
+          "gates": ["critical-tests-pass-or-not-applicable", "calculator-negative-standard-tests-pass-when-applicable", "result-action-functionality-tests-pass-when-applicable"],
           "stopConditions": ["critical-test-failed"],
           "rollback": "none",
           "nextStates": ["VALIDATION"]
@@ -173,8 +185,8 @@
           "input": ["testing-report"],
           "output": ["validation-report"],
           "preconditions": ["validation-selected-by-scope"],
-          "gates": ["critical-validations-pass-or-not-applicable"],
-          "stopConditions": ["critical-validation-failed"],
+          "gates": ["critical-validations-pass-or-not-applicable", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "result-experience-validation-resolved", "accessibility-validation-resolved"],
+          "stopConditions": ["critical-validation-failed", "applicable-blocker-anti-pattern", "result-experience-invalid"],
           "rollback": "none",
           "nextStates": ["PREVIEW"]
         },
@@ -183,8 +195,8 @@
           "input": ["validation-report"],
           "output": ["preview-or-diff-evidence"],
           "preconditions": ["preview-required-when-public-impact"],
-          "gates": ["reviewable-output"],
-          "stopConditions": ["preview-unavailable-for-public-impact"],
+          "gates": ["reviewable-output", "visual-status-is-explicit", "required-viewports-evidenced-or-manual-visual-approval-requested"],
+          "stopConditions": ["preview-unavailable-for-public-impact", "false-visual-pass", "visual-validation-not-executed-claimed-as-full-standard"],
           "rollback": "none",
           "nextStates": ["MANUAL_APPROVAL"]
         },
@@ -193,7 +205,7 @@
           "input": ["preview-or-diff-evidence"],
           "output": ["approval-record"],
           "preconditions": ["approval-required-by-scope"],
-          "gates": ["approvedBy", "approvedScope", "approvedFiles", "approvedUrls", "approvedAt"],
+          "gates": ["approvedBy", "approvedScope", "approvedFiles", "approvedUrls", "approvedAt", "VISUAL_VALIDATION_STATUS_RESOLVED-when-new-or-migrated-calculator"],
           "stopConditions": ["approval-missing"],
           "rollback": "none",
           "nextStates": ["PUBLICATION_CONFIRMATION"]
