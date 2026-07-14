@@ -1,0 +1,11 @@
+{
+  "id": "report-prohibited-patterns",
+  "status": "BLOCKERS_ACTIVE",
+  "patterns": [
+    {"id":"SCREENSHOT_REPORT","severity":"BLOCKER"},
+    {"id":"FULL_PAGE_CAPTURE_REPORT","severity":"BLOCKER"},
+    {"id":"VIEWPORT_DEPENDENT_REPORT","severity":"BLOCKER"},
+    {"id":"RASTER_ONLY_REPORT","severity":"BLOCKER"}
+  ],
+  "screenshotsAllowedOnlyAs": "supplementary QA evidence"
+}

@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -70,12 +70,14 @@
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
     "reference": ["reference-resolved", "physical-reference-studied", "modules-decomposed", "literal-copy-avoided", "REFERENCE_STUDY_COMPLETE-passed"],
     "entryExperience": ["context-clear", "hero-complete", "outputs-previewed", "primary-entry-cta-dominant", "simulator-transition-clear"],
+    "brandAndFreshness": ["institutional-blue-primary-theme-or-approved-variation", "BRAND_THEME_RESOLVED-passed", "governed-UPDATED_AT-present", "visible-Atualizado-em-month-year-matches-metadata", "VISIBLE_UPDATED_AT_RESOLVED-passed"],
     "form": ["complexity-classified-and-justified", "semantic-grouping-proportional", "journey-adequate", "optional-fields-differentiated", "conditional-fields-resolved", "validation-near-context", "confirmation-present-when-applicable", "final-cta-dominant"],
-    "result": ["result-class-defined-and-justified", "primary-result-dominant", "scenario-context-restated", "secondary-indicators-evaluated", "memory-level-adequate", "interpretation-present", "limitations-present", "next-steps-present", "RESULT_CONTRACT_RESOLVED-passed"],
-    "actions": ["copy-evaluated", "print-evaluated", "download-report-evaluated", "implemented-actions-functionally-tested", "omissions-justified"],
-    "content": ["guide-depth-adequate", "faq-sufficient-and-schema-consistent", "methodology-and-sources-compatible", "related-content-governed"],
+    "result": ["result-class-defined-and-justified", "primary-result-dominant", "scenario-context-restated", "secondary-indicators-evaluated", "interpretation-present", "CANONICAL_RESULT_RECOMMENDATION_SLOT-after-interpretation-before-memory", "memory-level-adequate", "limitations-present", "next-steps-present", "RESULT_CONTRACT_RESOLVED-passed", "RECOMMENDATION_SLOT_RESOLVED-passed"],
+    "actions": ["COPY_RESULT-short-summary", "PRINT_RESULT-isolated-adaptive-report", "DOWNLOAD_REPORT-approved-adaptive-document", "copy-print-download-distinct", "implemented-actions-functionally-tested", "REPORT_RENDER_VALIDATED-passed"],
+    "adaptiveReport": ["seven-report-declarations-resolved", "declarations-derived-from-calculator-semantics", "A4-structured", "selectable-text", "viewport-independent", "navigation-and-seo-content-independent", "no-screenshot-or-raster-only-pattern", "ADAPTIVE_REPORT_CONTRACT_RESOLVED-passed"],
+    "content": ["permanent-layer-visible-before-calculation", "editorial-main-word-count-between-800-and-1200-after-exclusions", "editorial-useful-specific-and-not-padded", "faq-visible-before-calculation", "faq-sufficient-and-schema-exact", "methodology-and-sources-compatible", "related-content-governed", "EDITORIAL_DEPTH_RESOLVED-passed"],
     "visual": ["design-system-parity-assessed", "responsive-parity-assessed", "small-mobile-checked", "large-mobile-checked", "intermediate-checked", "desktop-checked", "overflow-checked", "focus-states-checked", "VISUAL_VALIDATION_STATUS_RESOLVED-passed"],
-    "recommendations": ["configuration-state-resolved", "eligibility-verified", "approved-source-verified", "no-recommendation-invented"],
+    "recommendations": ["canonical-four-state-model", "configuration-state-resolved", "eligibility-verified", "approved-product-source-verified", "not-configured-and-not-eligible-hidden", "no-recommendation-invented"],
     "antiPatterns": ["no-applicable-blocker", "major-items-resolved-or-approved-exception"]
   },
   "after": [
@@ -102,6 +104,12 @@
     ,"calculator-reference-study-incomplete"
     ,"calculator-experience-plan-not-approved"
     ,"calculator-result-contract-unresolved"
+    ,"calculator-brand-theme-unresolved"
+    ,"calculator-visible-updated-at-unresolved"
+    ,"calculator-editorial-depth-unresolved"
+    ,"calculator-recommendation-slot-unresolved"
+    ,"calculator-adaptive-report-unresolved"
+    ,"calculator-report-render-invalid"
     ,"calculator-applicable-blocker-anti-pattern"
     ,"calculator-false-visual-pass"
     ,"calculator-recommendation-source-unapproved"

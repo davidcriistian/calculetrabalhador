@@ -1,0 +1,12 @@
+{
+  "id": "report-actions-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "actions": {
+    "COPY_RESULT": "short scenario-aware textual summary",
+    "PRINT_RESULT": "isolated adaptive report",
+    "DOWNLOAD_REPORT": "approved adaptive document"
+  },
+  "distinctBehaviorRequired": true,
+  "functionalEvidenceRequired": true,
+  "allActionsSameBehaviorAllowed": false
+}

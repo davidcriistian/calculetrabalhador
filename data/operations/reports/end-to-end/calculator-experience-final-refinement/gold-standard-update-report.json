@@ -1,0 +1,10 @@
+{
+  "id": "gold-standard-update-report",
+  "status": "UPDATED_INTERNAL_ONLY",
+  "path": "/data/gold-standards/calculator/index.json",
+  "beforeVersion": "1.1",
+  "afterVersion": "1.2",
+  "contractVersion": "1.1.0",
+  "newMeasurableAreas": ["brand", "freshness", "permanent content", "editorial depth", "recommendation slot", "adaptive report", "distinct result actions"],
+  "sha256": "4BF599F46FBAD3A9931349CC0DB4051DB12CEB51BF786AEE42E3C51F7148A801"
+}

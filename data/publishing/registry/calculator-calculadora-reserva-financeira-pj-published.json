@@ -1,0 +1,34 @@
+{
+  "id": "publishing-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "published",
+    "previous": "approved",
+    "maximumAllowedInThisOperation": "published"
+  },
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/",
+  "actions": {
+    "publishes": true,
+    "deploys": false,
+    "modifiesSitemap": true,
+    "createsPublicPage": true,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false,
+    "indexNowDryRunOnly": true
+  },
+  "evidence": [
+    "/calculadora-reserva-financeira-pj/index.html",
+    "/data/tools.json",
+    "/data/maps/tools-map.json",
+    "/sitemap.xml",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/final-operation-report.json"
+  ]
+}

@@ -144,6 +144,18 @@
                                        ]
                     },
                     {
+                        "id":  "calculadora-reserva-financeira-pj",
+                        "assetId":  "calculator:calculadora-reserva-financeira-pj",
+                        "type":  "calculator",
+                        "slug":  "calculadora-reserva-financeira-pj",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-reserva-financeira-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "guide-pj",
                         "assetId":  "guide:guide-pj",
                         "type":  "guide",

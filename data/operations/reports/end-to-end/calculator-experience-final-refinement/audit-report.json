@@ -1,0 +1,9 @@
+{
+  "id": "audit-report",
+  "status": "PASS_WITH_GUARDS",
+  "scopeCompliance": {"internalAutomationChanged":true,"publicCalculatorChanged":false,"publicPageChanged":false,"catalogChanged":false,"sitemapChanged":false,"legalRuleChanged":false,"runtimeChanged":false,"published":false,"indexNowSent":false,"gitWrite":false},
+  "deliverables": {"requiredReports":26,"createdReports":26,"missingReports":0,"validatorUpdated":true,"fixturesUpdated":true,"dryRunExecuted":true,"rollbackReady":true},
+  "qualityEvidence": {"fixtureMatches":"24/24","internalReferences":"150/150","jsonParsing":"20/20","protectedChecksums":"unchanged"},
+  "residualRisk": "The refined standard has been proven by fixtures and a hypothetical dry-run, but still requires the requested second controlled real calculator test before broad adoption.",
+  "finalStatus": "READY_FOR_SECOND_CONTROLLED_CALCULATOR_TEST"
+}

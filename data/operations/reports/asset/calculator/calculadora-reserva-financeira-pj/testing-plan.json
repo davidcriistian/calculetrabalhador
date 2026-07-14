@@ -1,0 +1,8 @@
+{
+  "id": "testing-plan-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "planned-and-executed",
+  "createdAt": "2026-07-14",
+  "requiredTests": ["unique-identity", "common-scenario", "target-reached", "zero-contribution", "zero-planned-values", "coverage-comparison", "decimal-rounding", "zero-base-rejected", "negative-input-rejected", "invalid-coverage-rejected", "memory-result-equivalence", "action-wiring", "html-structure", "canonical", "json-ld", "internal-links", "catalog", "tools-map", "sitemap", "governance", "experience-contract", "responsive-render", "accessibility-static", "git-diff-check", "idempotency-replay"],
+  "resultsReference": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/validation-results.json"
+}

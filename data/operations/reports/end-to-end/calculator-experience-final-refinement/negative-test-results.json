@@ -1,0 +1,13 @@
+{
+  "id": "negative-test-results",
+  "status": "PASS",
+  "fixtureCount": 24,
+  "requiredMinimumCases": 16,
+  "matched": 24,
+  "mismatches": 0,
+  "exactFailureSetsMatched": true,
+  "results": [
+    {"id":"green-primary-theme-fails","actual":"FAIL"},{"id":"missing-visible-updated-text-fails","actual":"FAIL"},{"id":"invented-updated-date-without-metadata-fails","actual":"FAIL"},{"id":"editorial-300-words-fails","actual":"FAIL"},{"id":"editorial-700-plus-faq-300-fails","actual":"FAIL"},{"id":"editorial-900-useful-words-passes","actual":"PASS"},{"id":"recommendation-slot-absent-fails","actual":"FAIL"},{"id":"slot-hidden-not-configured-passes","actual":"PASS"},{"id":"product-without-configuration-fails","actual":"FAIL"},{"id":"screenshot-download-fails","actual":"FAIL"},{"id":"report-fixed-fields-from-another-calculator-fails","actual":"FAIL"},{"id":"report-derived-from-calculator-contract-passes","actual":"PASS"},{"id":"methodology-hidden-until-calculation-fails","actual":"FAIL"},{"id":"faq-visible-before-calculation-passes","actual":"PASS"},{"id":"all-result-actions-same-fail","actual":"FAIL"},{"id":"distinct-result-actions-pass","actual":"PASS"},
+    {"id":"minimal-hero-form-three-numbers","actual":"FAIL"},{"id":"complex-form-without-journey","actual":"FAIL"},{"id":"numbers-without-interpretation","actual":"FAIL"},{"id":"label-value-memory-for-non-trivial-calculation","actual":"FAIL"},{"id":"reference-declared-not-studied","actual":"FAIL"},{"id":"false-visual-pass-without-browser","actual":"FAIL"},{"id":"invented-product-without-approved-source","actual":"FAIL"},{"id":"justified-simple-calculator","actual":"PASS"}
+  ]
+}

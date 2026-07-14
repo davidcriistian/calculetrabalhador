@@ -1,0 +1,18 @@
+{
+  "id": "idempotency-replay-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "mode": "VALIDATE_ONLY",
+  "identityCounts": {
+    "publicPage": 1,
+    "toolsCatalogEntry": 1,
+    "toolsMapEntry": 1,
+    "registryEntry": 1,
+    "publishingEntry": 1,
+    "sitemapUrl": 1
+  },
+  "decision": "REUSE",
+  "result": "NO_CHANGE_REQUIRED",
+  "mutationCount": 0
+}

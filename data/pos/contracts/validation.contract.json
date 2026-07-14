@@ -1,6 +1,6 @@
 {
   "id": "pos-contract-validation",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -21,6 +21,9 @@
     "schema and contract compatibility"
     ,"calculator result experience validation"
     ,"calculator visual render and responsive evidence resolution"
+    ,"calculator institutional theme and governed visible freshness"
+    ,"editorial depth and permanent content visibility"
+    ,"canonical recommendation slot and adaptive report compliance"
   ],
   "expectedInputs": [
     "registry entry",
@@ -40,6 +43,7 @@
     "blocking issues"
     ,"visual validation status"
     ,"calculator experience gate results"
+    ,"adaptive report contract and render gate results"
   ],
   "dependencies": [
     "/data/pos/schemas/index.json",

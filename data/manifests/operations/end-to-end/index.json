@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -73,6 +73,11 @@
       ,"calculationMemoryLevel"
       ,"recommendationState"
       ,"visualValidationStatus"
+      ,"brandTheme"
+      ,"updatedAtMetadata"
+      ,"editorialWordCount"
+      ,"recommendationSlotState"
+      ,"adaptiveReportDeclarations"
     ],
     "conditional": [
       "coreSource",
@@ -90,6 +95,7 @@
       ,"calculatorExperiencePlan"
       ,"resultContractResolution"
       ,"visualEvidenceOrManualApproval"
+      ,"reportRenderEvidence"
     ],
     "manualDecision": [
       "missingDomain",
@@ -102,6 +108,11 @@
       "calculatorExperienceClassNotResolved",
       "referenceStudyNotComplete",
       "visualValidationNotResolved",
+      "brandThemeNotResolved",
+      "visibleUpdatedAtNotResolved",
+      "editorialDepthNotResolved",
+      "recommendationSlotNotResolved",
+      "adaptiveReportNotResolved",
       "unapprovedPublicDestination"
     ],
     "prohibitedToInfer": [
@@ -179,6 +190,12 @@
       ,"calculatorExperiencePlan"
       ,"resultContractResolution"
       ,"visualValidationStatus"
+      ,"brandThemeResolution"
+      ,"visibleUpdatedAtResolution"
+      ,"editorialDepthResolution"
+      ,"recommendationSlotResolution"
+      ,"adaptiveReportResolution"
+      ,"reportRenderValidation"
     ],
     "identityRule": "Use typed assetId for internal identity. Slug is public routing only."
   },
@@ -253,6 +270,9 @@
     ,"Do not certify a new or migrated calculator as FULL_STANDARD_ACCEPTED when visual status is VISUAL_VALIDATION_NOT_EXECUTED."
     ,"Do not render calculator recommendations without approved configuration and eligibility evidence."
     ,"Do not treat the canonical FGTS reference as a literal template or copy its domain content."
+    ,"Do not accept a non-institutional primary theme without approved variation evidence."
+    ,"Do not invent or hide the governed visible updated-at value."
+    ,"Do not accept screenshot, full-page capture, viewport-dependent or raster-only reports."
   ],
   "finalStatuses": [
     "SUCCESS_NO_PUBLIC_CHANGE",

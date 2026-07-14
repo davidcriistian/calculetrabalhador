@@ -548,5 +548,29 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-14"
+  },
+  {
+    "id": "calculadora-reserva-financeira-pj",
+    "title": "Calculadora de Reserva Financeira PJ",
+    "slug": "/calculadora-reserva-financeira-pj/",
+    "url": "/calculadora-reserva-financeira-pj/",
+    "category": "PJ",
+    "domain": "Financeiro / PJ",
+    "description": "Calcule a meta de reserva PJ, compare coberturas de 3 a 12 meses e veja o valor faltante e o prazo estimado.",
+    "keywords": ["reserva financeira PJ", "reserva de emergência PJ", "planejamento PJ", "meses de cobertura", "férias PJ", "segurança financeira PJ", "aporte mensal"],
+    "icon": "PJ",
+    "icone": "PJ",
+    "priority": 88,
+    "relatedTools": ["calculadora-custo-mensal-pj", "calculadora-valor-hora-pj", "calculadora-clt-ou-pj"],
+    "relatedPages": ["/calculadora-custo-mensal-pj/", "/calculadora-valor-hora-pj/", "/calculadora-clt-ou-pj/", "/guias/pj/"],
+    "relatedArticles": ["/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/", "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/"],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-14"
   }
 ]

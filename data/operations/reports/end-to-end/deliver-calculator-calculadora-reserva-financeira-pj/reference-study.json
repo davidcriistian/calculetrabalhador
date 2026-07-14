@@ -1,0 +1,37 @@
+{
+  "id": "reference-study-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "referenceId": "calculator-multa-40-fgts-reference",
+  "physicalReferencePath": "/calculadora-multa-40-fgts/index.html",
+  "physicalPageOpened": true,
+  "modulesDecomposed": [
+    {"referenceModule":"themed hero","adaptation":"Emerald planning identity, explicit reserve outputs and dominant entry CTA."},
+    {"referenceModule":"discovery summary","adaptation":"Four concrete reserve-planning outcomes and a two-minute effort label."},
+    {"referenceModule":"guided form cards","adaptation":"Three numbered planning stages plus final confirmation for nine inputs."},
+    {"referenceModule":"dominant result","adaptation":"Total reserve target with progress, gap, coverage and time estimate."},
+    {"referenceModule":"step-by-step memory","adaptation":"Auditable seven-step trace using only user premises and local arithmetic."},
+    {"referenceModule":"comparison table","adaptation":"Consistent 3, 6, 9 and 12-month targets with selected-scenario highlight."},
+    {"referenceModule":"interpretation and next steps","adaptation":"Progress-sensitive guidance without recommending products or investments."},
+    {"referenceModule":"post-result actions","adaptation":"Copy, print/PDF and text download."},
+    {"referenceModule":"content, FAQ and related links","adaptation":"Reserve-specific methodology, six matching FAQ items and governed PJ links."}
+  ],
+  "literalCopyAvoidance": {
+    "textCopied": false,
+    "legalRulesCopied": false,
+    "fieldsCopied": false,
+    "identifiersCopied": false,
+    "formulasCopied": false,
+    "fixedStepCountCopied": false,
+    "fixedThemeColorCopied": false,
+    "pixelIdenticalCopy": false
+  },
+  "parityAssessment": {
+    "STRUCTURAL_PARITY": "passed",
+    "DESIGN_SYSTEM_PARITY": "passed",
+    "QUALITY_PARITY": "passed",
+    "RESPONSIVE_PARITY": "passed"
+  },
+  "evidence": ["/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual-validation.json", "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/"]
+}

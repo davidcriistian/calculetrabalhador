@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Reserva Financeira PJ | Calcule Trabalhador</title>
+  <meta name="description" content="Calcule sua reserva financeira PJ, veja a meta para 3, 6, 9 ou 12 meses, o valor que falta e o tempo estimado para atingir o objetivo." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora de Reserva Financeira PJ" />
+  <meta property="og:description" content="Monte uma meta de reserva para meses sem receita, pausas planejadas e custos anuais do seu trabalho PJ." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Calculadora de Reserva Financeira PJ" />
+  <meta name="twitter:description" content="Descubra sua meta, o valor que falta e o prazo estimado para formar uma reserva PJ." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    input, select, button { box-sizing: border-box; line-height: 1.35; }
+    input[type="number"], select { min-height: 50px; min-width: 0; max-width: 100%; }
+    select {
+      appearance: none;
+      background-image: linear-gradient(45deg, transparent 50%, #475569 50%), linear-gradient(135deg, #475569 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+      background-repeat: no-repeat;
+      background-size: 6px 6px, 6px 6px;
+      padding-right: 2.75rem !important;
+    }
+    :focus-visible { outline: 3px solid #34d399; outline-offset: 3px; }
+    .result-progress { transition: width .35s ease; }
+    @media print {
+      #global-header, #global-footer, .no-print, #descobrir, #simulador-intro, #reserva-form, #resultado-vazio, #conteudo, #faq, #relacionados { display: none !important; }
+      body { background: #fff !important; }
+      #simulador { padding: 0 !important; }
+      #resultado { display: block !important; border: 0 !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main>
+    <section class="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-800 to-teal-700">
+      <div class="pointer-events-none absolute inset-0" style="background-image:radial-gradient(circle at 15% 35%,rgba(255,255,255,.10),transparent 34%),radial-gradient(circle at 88% 12%,rgba(255,255,255,.12),transparent 32%)"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-9 sm:py-12 lg:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-emerald-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Início</a><span aria-hidden="true">›</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a><span aria-hidden="true">›</span>
+          <span class="text-white">Reserva Financeira PJ</span>
+        </nav>
+
+        <div class="mt-6 lg:max-w-[82%]">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">Planejamento financeiro PJ</span>
+          <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora de Reserva Financeira PJ</h1>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-emerald-50">Transforme seus compromissos essenciais em uma meta de segurança. Veja quanto reservar para atravessar períodos sem receita, financiar uma pausa planejada e cobrir custos anuais.</p>
+          <div class="mt-5 grid max-w-3xl gap-2 text-sm font-semibold text-emerald-50 sm:grid-cols-2">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Meta total de reserva</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Cobertura em meses</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Valor que ainda falta</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Prazo estimado com seu aporte</span>
+          </div>
+          <a href="#simulador" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-emerald-900 shadow-sm transition hover:bg-emerald-50 sm:w-auto">Calcular minha reserva PJ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="descobrir" class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10">
+      <div class="rounded-2xl border border-emerald-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">O que você vai descobrir</p>
+            <h2 class="mt-1 text-2xl font-extrabold text-slate-950">Uma meta de reserva conectada à sua realidade</h2>
+          </div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-950 ring-1 ring-emerald-100 sm:w-auto">Tempo estimado: 2 minutos</span>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Quanto custa um mês essencial</p><p class="mt-1 text-sm text-slate-600">Empresa, vida pessoal, tributos e outros compromissos.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Qual é a meta de segurança</p><p class="mt-1 text-sm text-slate-600">Cobertura escolhida mais valores planejados.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Quanto já foi formado</p><p class="mt-1 text-sm text-slate-600">Progresso percentual e cobertura bruta atual.</p></div>
+          <div class="rounded-xl bg-slate-50 p-4"><p class="font-bold text-slate-950">Quanto tempo pode levar</p><p class="mt-1 text-sm text-slate-600">Projeção linear, sem supor rendimento financeiro.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div id="simulador-intro" class="mb-6">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Simulador</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950 sm:text-3xl">Monte seu plano de reserva PJ</h2>
+        <p class="mt-3 max-w-3xl leading-8 text-slate-700">Preencha três etapas curtas. Use somente despesas essenciais na base mensal e mantenha separados os valores de pausa e custos anuais para não contar o mesmo compromisso duas vezes.</p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <form id="reserva-form" class="min-w-0 space-y-6" novalidate aria-label="Calculadora de Reserva Financeira PJ">
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="base-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-700 font-extrabold text-white shadow-sm">1</div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Base essencial</p>
+                  <h3 id="base-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quanto você precisa para atravessar um mês?</h3>
+                  <p class="mt-2 leading-7 text-slate-600">Considere apenas compromissos que continuariam existindo mesmo com faturamento reduzido ou interrompido.</p>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Custos essenciais da empresa (R$)</span>
+                  <input id="custosEmpresa" type="number" min="0" step="0.01" value="1200" inputmode="decimal" aria-describedby="ajuda-custos-empresa" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-custos-empresa" class="mt-2 block text-xs leading-5 text-slate-500">Contabilidade, ferramentas, internet, aluguel e outros custos indispensáveis.</span>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Despesas pessoais essenciais (R$)</span>
+                  <input id="despesasPessoais" type="number" min="0" step="0.01" value="4500" inputmode="decimal" aria-describedby="ajuda-despesas-pessoais" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-despesas-pessoais" class="mt-2 block text-xs leading-5 text-slate-500">Moradia, alimentação, saúde, transporte e compromissos indispensáveis.</span>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Provisão mensal de tributos (R$)</span>
+                  <input id="tributosMensais" type="number" min="0" step="0.01" value="800" inputmode="decimal" aria-describedby="ajuda-tributos" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-tributos" class="mt-2 block text-xs leading-5 text-slate-500">Informe sua média em reais. A ferramenta não escolhe alíquota ou regime.</span>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Outros compromissos essenciais (R$)</span>
+                  <input id="outrosEssenciais" type="number" min="0" step="0.01" value="500" inputmode="decimal" aria-describedby="ajuda-outros" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-outros" class="mt-2 block text-xs leading-5 text-slate-500">Parcelas, seguros ou itens não incluídos acima. Evite duplicidades.</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="meta-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-700 font-extrabold text-white shadow-sm">2</div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Meta de proteção</p>
+                  <h3 id="meta-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Escolha a cobertura e os valores planejados</h3>
+                  <p class="mt-2 leading-7 text-slate-600">A quantidade de meses é uma decisão pessoal. A calculadora também permite reservar valores específicos para pausa e despesas anuais.</p>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Meses de cobertura desejados</span>
+                  <select id="mesesCobertura" aria-describedby="ajuda-cobertura" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4">
+                    <option value="3">3 meses</option>
+                    <option value="6" selected>6 meses</option>
+                    <option value="9">9 meses</option>
+                    <option value="12">12 meses</option>
+                  </select>
+                  <span id="ajuda-cobertura" class="mt-2 block text-xs leading-5 text-slate-500">Compare os quatro cenários no relatório antes de decidir.</span>
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Reserva para pausa ou férias (R$)</span>
+                  <input id="pausaPlanejada" type="number" min="0" step="0.01" value="4500" inputmode="decimal" aria-describedby="ajuda-pausa" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-pausa" class="mt-2 block text-xs leading-5 text-slate-500">Valor adicional para um período planejado com menor receita.</span>
+                </label>
+                <label class="block md:col-span-2">
+                  <span class="text-sm font-bold text-slate-700">Custos anuais já previstos (R$)</span>
+                  <input id="custosAnuais" type="number" min="0" step="0.01" value="1200" inputmode="decimal" aria-describedby="ajuda-anuais" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-anuais" class="mt-2 block text-xs leading-5 text-slate-500">Licenças, seguros, anuidades, manutenção ou outros pagamentos não incluídos na base mensal.</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="progresso-title">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-700 font-extrabold text-white shadow-sm">3</div>
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Seu progresso</p>
+                  <h3 id="progresso-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quanto você já tem e quanto consegue guardar?</h3>
+                  <p class="mt-2 leading-7 text-slate-600">O prazo usa uma projeção linear: não considera rendimento, inflação, saques ou mudanças no aporte.</p>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-6 md:grid-cols-2">
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Reserva atual disponível (R$)</span>
+                  <input id="reservaAtual" type="number" min="0" step="0.01" value="5000" inputmode="decimal" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                </label>
+                <label class="block">
+                  <span class="text-sm font-bold text-slate-700">Aporte mensal planejado (R$)</span>
+                  <input id="aporteMensal" type="number" min="0" step="0.01" value="1000" inputmode="decimal" aria-describedby="ajuda-aporte" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-emerald-200 transition focus:border-emerald-600 focus:ring-4" />
+                  <span id="ajuda-aporte" class="mt-2 block text-xs leading-5 text-slate-500">Pode ser zero; nesse caso, o relatório mostra o valor faltante sem projetar prazo.</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="rounded-3xl border border-emerald-200 bg-emerald-50 p-5 sm:p-6" aria-labelledby="confirmacao-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Confirmação</p>
+              <h3 id="confirmacao-title" class="mt-1 text-xl font-extrabold text-emerald-950">Gere seu plano de reserva</h3>
+              <p class="mt-2 leading-7 text-emerald-900">Você receberá a meta escolhida, quatro cenários de cobertura, memória passo a passo e próximos movimentos possíveis.</p>
+              <div id="form-error" class="mt-4 hidden rounded-xl border border-red-200 bg-red-50 p-4 font-semibold text-red-800" role="alert" tabindex="-1"></div>
+              <button type="submit" class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-emerald-700 px-6 py-4 text-base font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-emerald-800">Calcular reserva financeira</button>
+            </section>
+          </form>
+
+          <section id="resultado-vazio" class="mt-8 rounded-3xl border border-dashed border-slate-300 bg-white p-7 text-center" aria-live="polite">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-slate-500">Seu relatório aparecerá aqui</p>
+            <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Preencha as três etapas e calcule</h2>
+            <p class="mx-auto mt-3 max-w-xl leading-7 text-slate-600">Os valores ficam no seu navegador e são usados somente para montar a simulação desta página.</p>
+          </section>
+
+          <section id="resultado" class="mt-8 hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="resultado-title">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Seu plano</p>
+                <h2 id="resultado-title" class="mt-1 text-2xl font-extrabold text-slate-950 sm:text-3xl">Meta de reserva financeira PJ</h2>
+              </div>
+              <span id="status-reserva" class="inline-flex w-fit rounded-full px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1"></span>
+            </div>
+
+            <div id="badges-resultado" class="mt-5 flex flex-wrap gap-2" aria-label="Premissas do cenário"></div>
+
+            <div class="mt-6 rounded-3xl bg-emerald-950 p-6 text-white sm:p-8">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-200">Meta total escolhida</p>
+              <p id="resMetaTotal" class="mt-2 break-words text-4xl font-black tracking-tight sm:text-5xl">R$ 0,00</p>
+              <p id="resSignificado" class="mt-4 max-w-2xl leading-7 text-emerald-50"></p>
+              <div class="mt-5 h-3 overflow-hidden rounded-full bg-white/15" aria-hidden="true"><div id="barra-progresso" class="result-progress h-full rounded-full bg-emerald-300" style="width:0%"></div></div>
+              <p id="resProgresso" class="mt-2 text-sm font-bold text-emerald-100"></p>
+            </div>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5"><p class="text-sm font-bold text-amber-900">Valor que falta</p><p id="resFalta" class="mt-2 text-2xl font-extrabold text-amber-950"></p></div>
+              <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5"><p class="text-sm font-bold text-blue-900">Cobertura bruta atual</p><p id="resCobertura" class="mt-2 text-2xl font-extrabold text-blue-950"></p></div>
+              <div class="rounded-2xl border border-violet-100 bg-violet-50 p-5 sm:col-span-2 lg:col-span-1"><p class="text-sm font-bold text-violet-900">Prazo estimado</p><p id="resPrazo" class="mt-2 text-2xl font-extrabold text-violet-950"></p><p id="resData" class="mt-1 text-xs text-violet-800"></p></div>
+            </div>
+
+            <section class="mt-7 rounded-3xl border border-emerald-100 bg-emerald-50 p-5" aria-labelledby="interpretacao-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Interpretação</p>
+              <h3 id="interpretacao-title" class="mt-1 text-xl font-extrabold text-emerald-950">O que este resultado indica</h3>
+              <p id="resInterpretacao" class="mt-3 leading-7 text-emerald-950"></p>
+              <ul id="proximos-passos" class="mt-4 space-y-2 text-sm leading-6 text-emerald-950"></ul>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memoria-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Memória de cálculo</p>
+              <h3 id="memoria-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo reproduzível</h3>
+              <ol id="memoria-lista" class="mt-4 space-y-3 leading-7 text-slate-700"></ol>
+              <p class="mt-4 text-xs leading-5 text-slate-500">Valores monetários são arredondados para centavos em cada etapa. A projeção de prazo divide o valor faltante pelo aporte mensal e arredonda o número de meses para cima.</p>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="cenarios-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Comparação</p>
+              <h3 id="cenarios-title" class="mt-1 text-xl font-extrabold text-slate-950">Metas para diferentes coberturas</h3>
+              <p class="mt-2 leading-7 text-slate-600">A base mensal, a pausa planejada e os custos anuais permanecem iguais. Somente os meses de segurança mudam.</p>
+              <div class="mt-4 overflow-x-auto rounded-2xl border border-slate-200">
+                <table class="w-full min-w-[620px] border-collapse text-sm">
+                  <thead class="bg-slate-100 text-left text-slate-700"><tr><th class="px-4 py-3">Cobertura</th><th class="px-4 py-3">Reserva de segurança</th><th class="px-4 py-3">Meta total</th><th class="px-4 py-3">Valor faltante</th></tr></thead>
+                  <tbody id="tabela-cenarios" class="divide-y divide-slate-200"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="limites-title">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-amber-800">Limites da simulação</p>
+              <h3 id="limites-title" class="mt-1 text-xl font-extrabold text-amber-950">Use a meta como instrumento de planejamento</h3>
+              <p class="mt-3 leading-7 text-amber-950">A calculadora não define uma quantidade ideal de meses, não recomenda investimento e não considera rendimento, inflação, tributação financeira ou mudanças futuras nas despesas. Reveja os valores quando sua renda, empresa ou família mudar.</p>
+            </section>
+
+            <div class="no-print mt-7 flex flex-col gap-3 sm:flex-row">
+              <button id="btnCopiar" type="button" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-emerald-700 px-5 py-3 text-sm font-extrabold text-emerald-800 hover:bg-emerald-50">Copiar resultado</button>
+              <button id="btnImprimir" type="button" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-extrabold text-slate-700 hover:bg-slate-50">Imprimir / salvar PDF</button>
+              <button id="btnBaixar" type="button" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-extrabold text-slate-700 hover:bg-slate-50">Baixar resumo (.txt)</button>
+            </div>
+          </section>
+        </div>
+
+        <aside class="no-print rounded-3xl border border-emerald-100 bg-emerald-50 p-5 lg:sticky lg:top-24" aria-label="Orientações para preencher">
+          <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Antes de calcular</p>
+          <ul class="mt-4 space-y-4 text-sm leading-6 text-emerald-950">
+            <li><strong>Use valores essenciais:</strong> a reserva não precisa reproduzir todo gasto variável.</li>
+            <li><strong>Não duplique despesas:</strong> um custo mensal não deve entrar novamente em custos anuais.</li>
+            <li><strong>Separe objetivos:</strong> pausa planejada e emergência aparecem como partes distintas da meta.</li>
+            <li><strong>Revise periodicamente:</strong> uma reserva baseada em despesas antigas perde utilidade.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="conteudo" class="mx-auto max-w-6xl px-4 pb-8">
+      <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Entenda a metodologia</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Como calcular uma reserva financeira para PJ</h2>
+        <div class="mt-5 grid gap-6 leading-8 text-slate-700 lg:grid-cols-2">
+          <div>
+            <h3 class="text-xl font-bold text-slate-950">Comece pela base mensal essencial</h3>
+            <p class="mt-2">A base reúne o mínimo necessário para manter a atividade e sua vida pessoal durante um período de receita menor. Somamos custos essenciais da empresa, despesas pessoais, provisão tributária informada e outros compromissos indispensáveis.</p>
+            <p class="mt-3">Despesas opcionais ou que poderiam ser rapidamente interrompidas podem ficar fora. O objetivo é criar uma referência realista para a continuidade, não reproduzir automaticamente todo o padrão de consumo atual.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-950">Diferencie emergência de gastos previstos</h3>
+            <p class="mt-2">A reserva de segurança é calculada multiplicando a base mensal pelos meses escolhidos. Pausa planejada e custos anuais são adicionados depois, pois representam objetivos conhecidos e ajudam a evitar que um gasto previsível consuma a proteção destinada a imprevistos.</p>
+            <p class="mt-3">A quantidade de meses não é uma regra universal. Estabilidade dos contratos, concentração de clientes, facilidade para conseguir novos projetos e responsabilidades familiares mudam o nível de proteção que cada pessoa considera adequado.</p>
+          </div>
+        </div>
+        <div class="mt-6 rounded-2xl bg-slate-50 p-5">
+          <h3 class="text-xl font-bold text-slate-950">Fórmula usada</h3>
+          <p class="mt-2 leading-7 text-slate-700"><strong>Meta total = (base mensal essencial × meses de cobertura) + pausa planejada + custos anuais.</strong> O valor faltante é a meta menos a reserva atual, nunca menor que zero. O prazo estimado é o valor faltante dividido pelo aporte mensal, arredondado para cima.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="mx-auto max-w-6xl px-4 pb-8">
+      <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Perguntas frequentes</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Dúvidas sobre reserva financeira PJ</h2>
+        <div class="mt-5 space-y-3">
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">O que entra na reserva financeira PJ?</summary><p class="mt-3 leading-7 text-slate-700">Entram os compromissos essenciais da empresa e da vida pessoal durante o período escolhido, além de valores separados para pausa planejada e custos anuais que você decidir incluir.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Quantos meses de cobertura devo escolher?</summary><p class="mt-3 leading-7 text-slate-700">Não existe uma quantidade universal. Compare 3, 6, 9 e 12 meses e avalie a estabilidade dos contratos, a concentração de clientes, suas responsabilidades e o tempo provável para recuperar receita.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Reserva para férias é a mesma coisa que reserva de emergência?</summary><p class="mt-3 leading-7 text-slate-700">Não. Férias ou pausas são previsíveis e podem ter uma reserva própria. A calculadora soma esse valor à proteção para meses de baixa receita, mantendo os objetivos visíveis separadamente.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">A calculadora considera rendimentos da reserva?</summary><p class="mt-3 leading-7 text-slate-700">Não. O prazo é uma projeção linear baseada apenas na reserva atual, no valor faltante e no aporte mensal informado. Rendimentos, inflação e saques não entram na conta.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Posso informar aporte mensal igual a zero?</summary><p class="mt-3 leading-7 text-slate-700">Sim. A ferramenta calcula a meta e o valor faltante normalmente, mas não apresenta uma data estimada até que exista um aporte mensal maior que zero.</p></details>
+          <details class="rounded-2xl border border-slate-200 bg-slate-50 p-4"><summary class="cursor-pointer font-extrabold text-slate-950">Os dados informados são armazenados?</summary><p class="mt-3 leading-7 text-slate-700">A lógica da calculadora funciona localmente no navegador. Os valores digitados são usados para gerar a simulação na página e não são enviados por esta ferramenta para um servidor.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="relacionados" class="mx-auto grid max-w-6xl gap-5 px-4 pb-12 lg:grid-cols-2">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Ferramentas relacionadas</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Complete seu planejamento PJ</h2>
+        <ul class="mt-4 space-y-3">
+          <li><a class="font-bold text-emerald-700 underline" href="/calculadora-custo-mensal-pj/">Calculadora de Custo Mensal PJ</a><p class="text-sm text-slate-600">Organize custos, retiradas, benefícios e reservas mensais.</p></li>
+          <li><a class="font-bold text-emerald-700 underline" href="/calculadora-valor-hora-pj/">Calculadora Valor Hora PJ</a><p class="text-sm text-slate-600">Transforme sua meta mensal em hora, diária e projeto.</p></li>
+          <li><a class="font-bold text-emerald-700 underline" href="/calculadora-clt-ou-pj/">Calculadora CLT ou PJ</a><p class="text-sm text-slate-600">Compare propostas e custos dos dois modelos.</p></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <p class="text-sm font-extrabold uppercase tracking-wide text-emerald-700">Continue aprendendo</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-slate-950">Conteúdos para quem trabalha como PJ</h2>
+        <ul class="mt-4 space-y-3">
+          <li><a class="font-bold text-emerald-700 underline" href="/guias/pj/">Guia PJ</a><p class="text-sm text-slate-600">Acesse o núcleo de conteúdos sobre contratos, custos e decisões.</p></li>
+          <li><a class="font-bold text-emerald-700 underline" href="/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/">Quanto preciso ganhar como PJ para compensar CLT</a></li>
+          <li><a class="font-bold text-emerald-700 underline" href="/blog/contrato-pj-o-que-analisar-antes-de-aceitar/">Contrato PJ: o que analisar antes de aceitar</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="global-footer"></div>
+
+  <script>
+    (() => {
+      const $ = (id) => document.getElementById(id);
+      const money = (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      const decimal = (value, digits = 1) => value.toLocaleString('pt-BR', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+      const roundMoney = (value) => Math.round((value + Number.EPSILON) * 100) / 100;
+      const recommendationState = 'NOT_CONFIGURED';
+      let latestReport = null;
+
+      function numericValue(id) {
+        const raw = String($(id)?.value ?? '').trim().replace(',', '.');
+        if (raw === '') return 0;
+        const value = Number(raw);
+        if (!Number.isFinite(value)) throw new Error('Preencha todos os campos com números válidos.');
+        return value;
+      }
+
+      function calculateReservaFinanceiraPj(input = {}) {
+        const fields = ['custosEmpresa', 'despesasPessoais', 'tributosMensais', 'outrosEssenciais', 'mesesCobertura', 'pausaPlanejada', 'custosAnuais', 'reservaAtual', 'aporteMensal'];
+        fields.forEach((field) => {
+          if (!Number.isFinite(Number(input[field]))) throw new Error('Todos os valores devem ser números válidos.');
+          if (Number(input[field]) < 0) throw new Error('Os valores não podem ser negativos.');
+        });
+
+        const custosEmpresa = roundMoney(Number(input.custosEmpresa));
+        const despesasPessoais = roundMoney(Number(input.despesasPessoais));
+        const tributosMensais = roundMoney(Number(input.tributosMensais));
+        const outrosEssenciais = roundMoney(Number(input.outrosEssenciais));
+        const mesesCobertura = Number(input.mesesCobertura);
+        const pausaPlanejada = roundMoney(Number(input.pausaPlanejada));
+        const custosAnuais = roundMoney(Number(input.custosAnuais));
+        const reservaAtual = roundMoney(Number(input.reservaAtual));
+        const aporteMensal = roundMoney(Number(input.aporteMensal));
+
+        if (![3, 6, 9, 12].includes(mesesCobertura)) throw new Error('Escolha uma cobertura de 3, 6, 9 ou 12 meses.');
+
+        const baseMensal = roundMoney(custosEmpresa + despesasPessoais + tributosMensais + outrosEssenciais);
+        if (baseMensal <= 0) throw new Error('Informe pelo menos um compromisso mensal essencial maior que zero.');
+
+        const reservaSeguranca = roundMoney(baseMensal * mesesCobertura);
+        const valoresPlanejados = roundMoney(pausaPlanejada + custosAnuais);
+        const metaTotal = roundMoney(reservaSeguranca + valoresPlanejados);
+        const valorFaltante = roundMoney(Math.max(0, metaTotal - reservaAtual));
+        const excedente = roundMoney(Math.max(0, reservaAtual - metaTotal));
+        const coberturaAtual = reservaAtual / baseMensal;
+        const progresso = metaTotal > 0 ? Math.min(100, (reservaAtual / metaTotal) * 100) : 100;
+        const mesesExatos = valorFaltante > 0 && aporteMensal > 0 ? valorFaltante / aporteMensal : 0;
+        const mesesPrazo = valorFaltante > 0 && aporteMensal > 0 ? Math.ceil(mesesExatos) : 0;
+        const cenarios = [3, 6, 9, 12].map((meses) => {
+          const seguranca = roundMoney(baseMensal * meses);
+          const meta = roundMoney(seguranca + valoresPlanejados);
+          return { meses, seguranca, meta, falta: roundMoney(Math.max(0, meta - reservaAtual)) };
+        });
+
+        return {
+          inputs: { custosEmpresa, despesasPessoais, tributosMensais, outrosEssenciais, mesesCobertura, pausaPlanejada, custosAnuais, reservaAtual, aporteMensal },
+          baseMensal, reservaSeguranca, valoresPlanejados, metaTotal, valorFaltante, excedente,
+          coberturaAtual, progresso, mesesExatos, mesesPrazo, cenarios, recommendationState
+        };
+      }
+
+      function statusFor(result) {
+        if (result.valorFaltante === 0) return { label: 'Meta alcançada', classes: 'bg-emerald-100 text-emerald-800 ring-emerald-200' };
+        if (result.progresso >= 75) return { label: 'Reta final', classes: 'bg-blue-100 text-blue-800 ring-blue-200' };
+        if (result.progresso >= 40) return { label: 'Reserva em formação', classes: 'bg-amber-100 text-amber-900 ring-amber-200' };
+        return { label: 'Início do plano', classes: 'bg-slate-100 text-slate-700 ring-slate-200' };
+      }
+
+      function projectedDate(months) {
+        if (!months) return '';
+        const date = new Date();
+        date.setMonth(date.getMonth() + months);
+        return date.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
+      }
+
+      function buildMemory(result) {
+        const i = result.inputs;
+        const items = [
+          `Base mensal: ${money(i.custosEmpresa)} de empresa + ${money(i.despesasPessoais)} pessoais + ${money(i.tributosMensais)} de tributos + ${money(i.outrosEssenciais)} de outros compromissos = ${money(result.baseMensal)}.`,
+          `Reserva de segurança: ${money(result.baseMensal)} × ${i.mesesCobertura} meses = ${money(result.reservaSeguranca)}.`,
+          `Valores planejados: ${money(i.pausaPlanejada)} para pausa + ${money(i.custosAnuais)} de custos anuais = ${money(result.valoresPlanejados)}.`,
+          `Meta total: ${money(result.reservaSeguranca)} + ${money(result.valoresPlanejados)} = ${money(result.metaTotal)}.`,
+          `Progresso: reserva atual de ${money(i.reservaAtual)} equivale a ${decimal(result.progresso)}% da meta e a ${decimal(result.coberturaAtual)} mês(es) da base essencial.`,
+          `Valor faltante: máximo entre zero e ${money(result.metaTotal)} − ${money(i.reservaAtual)} = ${money(result.valorFaltante)}.`
+        ];
+        if (result.valorFaltante === 0) items.push(`A reserva atual alcança a meta e apresenta excedente de ${money(result.excedente)} sobre este cenário.`);
+        else if (i.aporteMensal > 0) items.push(`Prazo linear: ${money(result.valorFaltante)} ÷ ${money(i.aporteMensal)} = ${decimal(result.mesesExatos)} meses; projeção exibida: ${result.mesesPrazo} meses, com arredondamento para cima.`);
+        else items.push('Prazo não projetado: o aporte mensal informado é zero.');
+        return items;
+      }
+
+      function renderResult(result) {
+        const status = statusFor(result);
+        $('status-reserva').textContent = status.label;
+        $('status-reserva').className = `inline-flex w-fit rounded-full px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide ring-1 ${status.classes}`;
+        $('badges-resultado').innerHTML = [
+          `${result.inputs.mesesCobertura} meses de cobertura`,
+          `Base mensal: ${money(result.baseMensal)}`,
+          `Pausa: ${money(result.inputs.pausaPlanejada)}`,
+          `Custos anuais: ${money(result.inputs.custosAnuais)}`
+        ].map((label) => `<span class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-extrabold text-slate-700 ring-1 ring-slate-200">${label}</span>`).join('');
+
+        $('resMetaTotal').textContent = money(result.metaTotal);
+        $('resSignificado').textContent = `Este valor reúne ${money(result.reservaSeguranca)} para ${result.inputs.mesesCobertura} meses essenciais e ${money(result.valoresPlanejados)} para pausa e custos anuais.`;
+        $('barra-progresso').style.width = `${result.progresso}%`;
+        $('resProgresso').textContent = `${decimal(result.progresso)}% da meta já formada com a reserva informada.`;
+        $('resFalta').textContent = money(result.valorFaltante);
+        $('resCobertura').textContent = `${decimal(result.coberturaAtual)} mês(es)`;
+        $('resPrazo').textContent = result.valorFaltante === 0 ? 'Meta alcançada' : result.inputs.aporteMensal > 0 ? `${result.mesesPrazo} meses` : 'Sem projeção';
+        $('resData').textContent = result.valorFaltante > 0 && result.inputs.aporteMensal > 0 ? `Estimativa: ${projectedDate(result.mesesPrazo)}, mantendo o aporte e sem considerar rendimentos.` : '';
+
+        let interpretation;
+        if (result.valorFaltante === 0) interpretation = `A reserva atual cobre integralmente a meta escolhida. Há ${money(result.excedente)} acima deste cenário, mas isso não significa que o valor esteja livre para uso: confirme se existem outros objetivos ou riscos não incluídos.`;
+        else if (result.progresso >= 75) interpretation = `Você está na reta final: faltam ${money(result.valorFaltante)} para a meta escolhida. Antes de aumentar o objetivo, verifique se a base mensal ainda representa seus compromissos atuais.`;
+        else if (result.progresso >= 40) interpretation = `A reserva está em formação e já cobre, de forma bruta, ${decimal(result.coberturaAtual)} mês(es) essenciais. O relatório ajuda a enxergar o próximo marco sem misturar emergência e gastos planejados.`;
+        else interpretation = `O plano está no início. A diferença de ${money(result.valorFaltante)} pode parecer alta, então vale transformar a meta em marcos menores e revisar despesas essenciais antes de definir um aporte sustentável.`;
+        $('resInterpretacao').textContent = interpretation;
+
+        const nextSteps = [];
+        if (result.valorFaltante === 0) nextSteps.push('Revise a meta quando custos, contratos ou responsabilidades mudarem.');
+        else if (result.inputs.aporteMensal === 0) nextSteps.push('Defina um aporte mensal para transformar o valor faltante em prazo.');
+        else nextSteps.push(`Use ${money(result.inputs.aporteMensal)} como referência mensal e acompanhe a diferença até a meta.`);
+        nextSteps.push('Mantenha a reserva separada do caixa usado para despesas rotineiras.');
+        nextSteps.push('Compare os cenários de 3, 6, 9 e 12 meses antes de escolher sua cobertura.');
+        $('proximos-passos').innerHTML = nextSteps.map((item) => `<li class="flex gap-2"><span aria-hidden="true">✓</span><span>${item}</span></li>`).join('');
+
+        const memory = buildMemory(result);
+        $('memoria-lista').innerHTML = memory.map((item, index) => `<li class="rounded-2xl bg-white p-4"><span class="font-extrabold text-emerald-700">${index + 1}.</span> ${item}</li>`).join('');
+        $('tabela-cenarios').innerHTML = result.cenarios.map((scenario) => `<tr class="${scenario.meses === result.inputs.mesesCobertura ? 'bg-emerald-50' : 'bg-white'}"><td class="px-4 py-3 font-bold text-slate-950">${scenario.meses} meses${scenario.meses === result.inputs.mesesCobertura ? ' — escolhido' : ''}</td><td class="px-4 py-3 text-slate-700">${money(scenario.seguranca)}</td><td class="px-4 py-3 font-semibold text-slate-950">${money(scenario.meta)}</td><td class="px-4 py-3 text-slate-700">${money(scenario.falta)}</td></tr>`).join('');
+
+        latestReport = { ...result, status: status.label, memory, calculatedAt: new Date().toLocaleString('pt-BR') };
+        $('resultado-vazio').classList.add('hidden');
+        $('resultado').classList.remove('hidden');
+        $('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const errorBox = $('form-error');
+        try {
+          const result = calculateReservaFinanceiraPj({
+            custosEmpresa: numericValue('custosEmpresa'), despesasPessoais: numericValue('despesasPessoais'),
+            tributosMensais: numericValue('tributosMensais'), outrosEssenciais: numericValue('outrosEssenciais'),
+            mesesCobertura: numericValue('mesesCobertura'), pausaPlanejada: numericValue('pausaPlanejada'),
+            custosAnuais: numericValue('custosAnuais'), reservaAtual: numericValue('reservaAtual'), aporteMensal: numericValue('aporteMensal')
+          });
+          errorBox.classList.add('hidden');
+          renderResult(result);
+          return result;
+        } catch (error) {
+          errorBox.textContent = error.message;
+          errorBox.classList.remove('hidden');
+          errorBox.focus();
+          return { ok: false, error: error.message };
+        }
+      }
+
+      function plainTextReport(report) {
+        return [
+          'Reserva Financeira PJ — Calcule Trabalhador',
+          `Calculado em: ${report.calculatedAt}`,
+          `Cenário: ${report.inputs.mesesCobertura} meses de cobertura`,
+          `Base mensal essencial: ${money(report.baseMensal)}`,
+          `Reserva de segurança: ${money(report.reservaSeguranca)}`,
+          `Pausa e custos anuais: ${money(report.valoresPlanejados)}`,
+          `Meta total: ${money(report.metaTotal)}`,
+          `Reserva atual: ${money(report.inputs.reservaAtual)}`,
+          `Valor faltante: ${money(report.valorFaltante)}`,
+          `Progresso: ${decimal(report.progresso)}%`,
+          `Prazo estimado: ${report.valorFaltante === 0 ? 'meta alcançada' : report.inputs.aporteMensal > 0 ? `${report.mesesPrazo} meses` : 'sem projeção'}`,
+          '', 'Memória de cálculo:', ...report.memory.map((item, index) => `${index + 1}. ${item}`),
+          '', 'Simulação educativa baseada nos valores informados. Não considera rendimentos, inflação ou mudanças futuras.'
+        ].join('\n');
+      }
+
+      function ensureReport() {
+        if (latestReport) return true;
+        $('form-error').textContent = 'Calcule sua reserva antes de usar esta ação.';
+        $('form-error').classList.remove('hidden');
+        $('form-error').focus();
+        return false;
+      }
+
+      async function copyReport() {
+        if (!ensureReport()) return;
+        const button = $('btnCopiar');
+        const original = button.textContent;
+        const text = plainTextReport(latestReport);
+        try {
+          if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+          else {
+            const area = document.createElement('textarea'); area.value = text; area.setAttribute('readonly', ''); area.style.position = 'fixed'; area.style.left = '-9999px'; document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove();
+          }
+          button.textContent = 'Resultado copiado';
+          window.setTimeout(() => { button.textContent = original; }, 2000);
+        } catch (error) { alert('Não foi possível copiar o resultado.'); }
+      }
+
+      function downloadReport() {
+        if (!ensureReport()) return;
+        const blob = new Blob([plainTextReport(latestReport)], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url; link.download = 'reserva-financeira-pj.txt'; document.body.appendChild(link); link.click(); link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function testarCalculadoraReservaFinanceiraPj() {
+        const base = { custosEmpresa: 1000, despesasPessoais: 4000, tributosMensais: 500, outrosEssenciais: 500, mesesCobertura: 6, pausaPlanejada: 4000, custosAnuais: 2000, reservaAtual: 10000, aporteMensal: 1000 };
+        const cases = [
+          { name: 'cenário comum', input: base, test: (r) => r.baseMensal === 6000 && r.metaTotal === 42000 && r.valorFaltante === 32000 && r.mesesPrazo === 32 },
+          { name: 'meta alcançada', input: { ...base, reservaAtual: 50000 }, test: (r) => r.valorFaltante === 0 && r.excedente === 8000 && r.mesesPrazo === 0 },
+          { name: 'aporte zero', input: { ...base, aporteMensal: 0 }, test: (r) => r.valorFaltante === 32000 && r.mesesPrazo === 0 },
+          { name: 'sem valores planejados', input: { ...base, pausaPlanejada: 0, custosAnuais: 0 }, test: (r) => r.metaTotal === 36000 },
+          { name: 'comparação 3 meses', input: base, test: (r) => r.cenarios[0].meta === 24000 && r.cenarios[0].falta === 14000 },
+          { name: 'decimais e arredondamento', input: { ...base, custosEmpresa: 1000.11, despesasPessoais: 4000.22, tributosMensais: 500.33, outrosEssenciais: 500.44 }, test: (r) => r.baseMensal === 6001.1 && r.reservaSeguranca === 36006.6 },
+          { name: 'base zerada bloqueada', input: { ...base, custosEmpresa: 0, despesasPessoais: 0, tributosMensais: 0, outrosEssenciais: 0 }, throws: true },
+          { name: 'negativo bloqueado', input: { ...base, reservaAtual: -1 }, throws: true },
+          { name: 'cobertura inválida bloqueada', input: { ...base, mesesCobertura: 5 }, throws: true }
+        ];
+        const results = cases.map((item) => {
+          try {
+            const result = calculateReservaFinanceiraPj(item.input);
+            return { name: item.name, status: !item.throws && item.test(result) ? 'PASS' : 'FAIL' };
+          } catch (error) { return { name: item.name, status: item.throws ? 'PASS' : 'FAIL', error: error.message }; }
+        });
+        return { results, passed: results.filter((item) => item.status === 'PASS').length, total: results.length };
+      }
+
+      $('reserva-form').addEventListener('submit', handleSubmit);
+      $('btnCopiar').addEventListener('click', copyReport);
+      $('btnImprimir').addEventListener('click', () => { if (ensureReport()) window.print(); });
+      $('btnBaixar').addEventListener('click', downloadReport);
+      window.calculateReservaFinanceiraPj = calculateReservaFinanceiraPj;
+      window.testarCalculadoraReservaFinanceiraPj = testarCalculadoraReservaFinanceiraPj;
+      if (['127.0.0.1', 'localhost'].includes(window.location?.hostname) && new URLSearchParams(window.location.search).get('visual-test') === 'result') {
+        $('reserva-form').requestSubmit();
+        const resultPreview = $('resultado');
+        document.body.insertBefore(resultPreview, document.querySelector('main'));
+        $('global-header').style.display = 'none';
+        document.querySelector('main').style.display = 'none';
+        resultPreview.style.maxWidth = '1120px';
+        resultPreview.style.margin = '16px auto';
+        window.scrollTo(0, 0);
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Início","item":"https://calculetrabalhador.com.br/"},
+          {"@type":"ListItem","position":2,"name":"Ferramentas","item":"https://calculetrabalhador.com.br/ferramentas/"},
+          {"@type":"ListItem","position":3,"name":"Calculadora de Reserva Financeira PJ","item":"https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/"}
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Calculadora de Reserva Financeira PJ",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/",
+        "description": "Calculadora para estimar meta de reserva PJ, cobertura em meses, valor faltante e prazo linear com aporte mensal.",
+        "offers": {"@type":"Offer","price":"0","priceCurrency":"BRL"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"O que entra na reserva financeira PJ?","acceptedAnswer":{"@type":"Answer","text":"Entram os compromissos essenciais da empresa e da vida pessoal durante o período escolhido, além de valores separados para pausa planejada e custos anuais que você decidir incluir."}},
+          {"@type":"Question","name":"Quantos meses de cobertura devo escolher?","acceptedAnswer":{"@type":"Answer","text":"Não existe uma quantidade universal. Compare 3, 6, 9 e 12 meses e avalie a estabilidade dos contratos, a concentração de clientes, suas responsabilidades e o tempo provável para recuperar receita."}},
+          {"@type":"Question","name":"Reserva para férias é a mesma coisa que reserva de emergência?","acceptedAnswer":{"@type":"Answer","text":"Não. Férias ou pausas são previsíveis e podem ter uma reserva própria. A calculadora soma esse valor à proteção para meses de baixa receita, mantendo os objetivos visíveis separadamente."}},
+          {"@type":"Question","name":"A calculadora considera rendimentos da reserva?","acceptedAnswer":{"@type":"Answer","text":"Não. O prazo é uma projeção linear baseada apenas na reserva atual, no valor faltante e no aporte mensal informado. Rendimentos, inflação e saques não entram na conta."}},
+          {"@type":"Question","name":"Posso informar aporte mensal igual a zero?","acceptedAnswer":{"@type":"Answer","text":"Sim. A ferramenta calcula a meta e o valor faltante normalmente, mas não apresenta uma data estimada até que exista um aporte mensal maior que zero."}},
+          {"@type":"Question","name":"Os dados informados são armazenados?","acceptedAnswer":{"@type":"Answer","text":"A lógica da calculadora funciona localmente no navegador. Os valores digitados são usados para gerar a simulação na página e não são enviados por esta ferramenta para um servidor."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
+  <script src="/assets/js/global-layout.js" defer></script>
+</body>
+</html>

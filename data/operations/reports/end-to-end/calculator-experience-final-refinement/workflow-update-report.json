@@ -1,0 +1,7 @@
+{
+  "id": "workflow-update-report",
+  "status": "UPDATED_INTERNAL_ONLY",
+  "updatedVersions": {"assetManifest":"0.3.0","endToEndManifest":"0.3.0","assetWorkflow":"0.3.0","endToEndWorkflow":"0.3.0","assetPlaybook":"0.3.0","endToEndPlaybook":"0.3.0"},
+  "preGenerationOrder": ["reference study", "institutional theme", "governed visible updated-at", "form/result/memory classification", "permanent/dynamic separation", "editorial and FAQ validation", "canonical recommendation slot", "adaptive report declarations", "distinct actions", "experience approval"],
+  "newStopConditions": ["unapproved primary theme", "visible updated-at unresolved", "editorial depth unresolved", "permanent content hidden", "recommendation slot unresolved", "adaptive report unresolved", "report render invalid", "actions not distinct"]
+}

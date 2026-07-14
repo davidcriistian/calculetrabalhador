@@ -1,0 +1,10 @@
+{
+  "id": "blueprint-update-report",
+  "status": "UPDATED_INTERNAL_ONLY",
+  "path": "/data/blueprints/calculator/index.json",
+  "beforeVersion": "0.3.0",
+  "afterVersion": "0.4.0",
+  "contractVersion": "1.1.0",
+  "additions": ["permanent and dynamic content layers", "canonical recommendation slot position", "seven adaptive report declarations", "six new gates", "new evidence requirements"],
+  "sha256": "CA0581610503792F96841354F4B40E153996C2AE187EDBDB2D38C98FC60FB17A"
+}

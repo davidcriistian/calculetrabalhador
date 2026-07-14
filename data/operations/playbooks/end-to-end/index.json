@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-playbooks",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -39,8 +39,12 @@
         "resolve-governance-for-each-asset",
         "for-new-or-migrated-calculator-open-and-study-official-physical-reference",
         "for-new-or-migrated-calculator-decompose-reference-modules-without-literal-copy",
+        "for-new-or-migrated-calculator-resolve-institutional-theme-and-governed-visible-updated-at",
         "for-new-or-migrated-calculator-classify-form-result-and-memory",
-        "for-new-or-migrated-calculator-decide-conditional-modules-actions-and-recommendations",
+        "for-new-or-migrated-calculator-separate-permanent-and-dynamic-content",
+        "for-new-or-migrated-calculator-validate-editorial-depth-and-visible-faq",
+        "for-new-or-migrated-calculator-resolve-canonical-recommendation-slot",
+        "for-new-or-migrated-calculator-declare-adaptive-report-and-distinct-actions",
         "for-new-or-migrated-calculator-approve-experience-plan",
         "check-reuse-before-create",
         "classify-relationships",
@@ -97,12 +101,13 @@
         "contract": "/data/blueprints/contracts/calculator-experience.contract.json",
         "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
         "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
-        "generationPrerequisites": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED"],
-        "fullStandardPrerequisite": "VISUAL_VALIDATION_STATUS_RESOLVED",
+        "generationPrerequisites": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED"],
+        "fullStandardPrerequisites": ["VISUAL_VALIDATION_STATUS_RESOLVED", "REPORT_RENDER_VALIDATED"],
         "visualStatuses": ["VISUAL_VALIDATION_PASSED", "VISUAL_VALIDATION_FAILED", "VISUAL_VALIDATION_NOT_EXECUTED", "VISUAL_APPROVAL_REQUIRED"],
         "notExecutedRule": "VISUAL_VALIDATION_NOT_EXECUTED cannot become FULL_STANDARD_ACCEPTED",
         "requiredVisualEvidence": ["small-mobile", "large-mobile", "intermediate", "desktop"],
-        "recommendationRule": "Render only from approved configuration plus eligibility evidence; otherwise hide.",
+        "recommendationRule": "Keep CANONICAL_RESULT_RECOMMENDATION_SLOT after interpretation and before memory; render approved product only in CONFIGURED_ELIGIBLE, otherwise hide.",
+        "reportRule": "Derive seven adaptive report declarations from calculator semantics; use an isolated A4 selectable report and distinct copy, print and download behaviors.",
         "literalCopyProhibited": true
       },
       "approvalPolicy": {
@@ -148,6 +153,12 @@
         "reference-study-incomplete",
         "calculator-experience-plan-not-approved",
         "result-contract-unresolved",
+        "brand-theme-unresolved",
+        "visible-updated-at-unresolved",
+        "editorial-depth-unresolved",
+        "recommendation-slot-unresolved",
+        "adaptive-report-contract-unresolved",
+        "report-render-invalid",
         "applicable-blocker-anti-pattern",
         "false-visual-pass",
         "unapproved-calculator-recommendation",
@@ -182,6 +193,12 @@
         ,"moduleDecomposition"
         ,"calculatorExperiencePlan"
         ,"resultContractResolution"
+        ,"brandThemeResolution"
+        ,"visibleUpdatedAtResolution"
+        ,"editorialDepthResolution"
+        ,"recommendationSlotResolution"
+        ,"adaptiveReportResolution"
+        ,"reportRenderValidation"
         ,"visualValidationStatus"
       ]
     }

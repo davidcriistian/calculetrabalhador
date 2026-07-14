@@ -1,0 +1,9 @@
+{
+  "id": "institutional-theme-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "defaultPrimaryTheme": "INSTITUTIONAL_BLUE",
+  "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
+  "approvedVariationRequires": ["documented brand rationale", "human approval", "render evidence"],
+  "antiPattern": {"id":"UNAPPROVED_PRIMARY_THEME","severity":"BLOCKER"},
+  "gate": "BRAND_THEME_RESOLVED"
+}

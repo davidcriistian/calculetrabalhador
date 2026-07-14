@@ -1,6 +1,6 @@
 {
   "id": "asset-operation-playbooks",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -43,7 +43,7 @@
         "generate-audit-report",
         "keep-lifecycle-draft"
       ],
-      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "visualValidationStatus"],
+      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus"],
       "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-runtime", "modify-core", "modify-blueprints", "modify-gold-standards", "publish", "deploy"]
     }
   ],
@@ -55,6 +55,6 @@
     "create-nucleus": "add domain-guide-cluster requirements only",
     "rule": "Specific operations must not duplicate generic create-asset flow.",
     "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "calculatorStopConditions": ["REFERENCE_STUDY_COMPLETE failed", "CALCULATOR_EXPERIENCE_PLAN_APPROVED failed", "RESULT_CONTRACT_RESOLVED failed", "applicable blocker anti-pattern", "recommendation lacks approved source"]
+    "calculatorStopConditions": ["REFERENCE_STUDY_COMPLETE failed", "CALCULATOR_EXPERIENCE_PLAN_APPROVED failed", "RESULT_CONTRACT_RESOLVED failed", "BRAND_THEME_RESOLVED failed", "VISIBLE_UPDATED_AT_RESOLVED failed", "EDITORIAL_DEPTH_RESOLVED failed", "RECOMMENDATION_SLOT_RESOLVED failed", "ADAPTIVE_REPORT_CONTRACT_RESOLVED failed", "REPORT_RENDER_VALIDATED failed", "applicable blocker anti-pattern", "recommendation lacks approved source"]
   }
 }

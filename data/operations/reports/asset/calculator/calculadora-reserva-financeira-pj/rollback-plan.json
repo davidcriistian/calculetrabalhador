@@ -1,0 +1,15 @@
+{
+  "id": "rollback-plan-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "ready",
+  "createdAt": "2026-07-14",
+  "removeCreatedPaths": [
+    "/calculadora-reserva-financeira-pj/",
+    "/data/registry/by-type/calculator-calculadora-reserva-financeira-pj.json",
+    "/data/publishing/registry/calculator-calculadora-reserva-financeira-pj-published.json",
+    "/data/operations/reports/asset/calculator/calculadora-reserva-financeira-pj/",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/"
+  ],
+  "revertCatalogMutations": ["remove the single matching entry from /data/tools.json", "remove the single matching entry from /data/maps/tools-map.json", "remove the matching by-type registry index entry", "remove the matching publishing registry index entry", "remove the matching sitemap URL"],
+  "safety": "Rollback is scoped only to calculator:calculadora-reserva-financeira-pj and must preserve all pre-existing assets."
+}

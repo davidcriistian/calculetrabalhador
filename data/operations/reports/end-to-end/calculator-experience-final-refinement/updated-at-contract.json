@@ -1,0 +1,10 @@
+{
+  "id": "updated-at-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "metadataField": "UPDATED_AT",
+  "governed": true,
+  "visibleFormat": "Atualizado em [mês] de [ano]",
+  "equivalenceRequired": true,
+  "inventedDateProhibited": true,
+  "gate": "VISIBLE_UPDATED_AT_RESOLVED"
+}

@@ -712,6 +712,22 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "low"
+    },
+    {
+      "id": "calculadora-reserva-financeira-pj",
+      "slug": "/calculadora-reserva-financeira-pj/",
+      "url": "/calculadora-reserva-financeira-pj/",
+      "title": "Calculadora de Reserva Financeira PJ",
+      "category": "PJ",
+      "domain": "PJ",
+      "runtime": "static-html",
+      "rulesUsed": [],
+      "dependencies": [],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "low"
     }
   ]
 }

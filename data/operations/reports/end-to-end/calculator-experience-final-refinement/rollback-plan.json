@@ -1,0 +1,10 @@
+{
+  "id": "rollback-plan",
+  "status": "READY_SURGICAL",
+  "strategy": "Reverse only Phase 5.28 hunks in the listed internal automation files, then remove only this Phase 5.28 report directory.",
+  "internalFileGroups": ["calculator experience contract", "Calculator Blueprint registry/versioning/history", "Calculator Gold Standard registry/history", "asset and end-to-end manifests", "asset and end-to-end workflows", "asset and end-to-end playbooks", "end-to-end checklist", "POS calculator/testing/validation contracts", "reference versioning", "validator", "fixtures"],
+  "knownBeforeHashes": {"contract":"3908D30897D112F413567F644456D791EE5BAA84B31064B3F4836F1C775A00A2","fixtures":"157794BCD420B3EE85E08B5F99D67C01CDE72C2ACBB83658B899A0419B9908A8","validator":"BD79EFF20E22261F8CA81106376EC25A9973FDB7375D5385B27DE0E84EACE97A"},
+  "mustPreserve": ["all preexisting dirty public files", "calculator:calculadora-reserva-financeira-pj", "previous delivery reports", "public catalogs", "sitemap", "publishing records"],
+  "forbiddenRollbackMethods": ["git reset --hard", "broad checkout/restore", "recursive delete outside the exact Phase 5.28 report directory"],
+  "verificationAfterRollback": ["validator returns contract 1.0.0 behavior", "protected checksums unchanged", "preexisting working tree entries preserved"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "adaptive-report-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "appliesTo": ["CALCULATION_REPORT", "DECISION_REPORT", "COMPARATIVE_REPORT"],
+  "requiredDeclarations": ["REPORT_INPUT_FIELDS", "REPORT_PRIMARY_RESULT", "REPORT_SECONDARY_RESULTS", "REPORT_MEMORY_SECTIONS", "REPORT_INTERPRETATION", "REPORT_LIMITATIONS", "REPORT_OPTIONAL_SECTIONS"],
+  "derivation": "calculator semantics, metadata and result contract",
+  "document": ["A4 structured", "selectable text", "viewport independent", "navigation independent", "SEO content independent", "isolated"],
+  "approvedOutputs": ["STRUCTURED_PDF", "ISOLATED_PRINT_REPORT"],
+  "txtAdequateAsFinalReport": false,
+  "gates": ["ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "calculator-experience-final-refinement-preflight",
+  "phase": "5.28",
+  "date": "2026-07-14",
+  "status": "PASS_WITH_PROTECTED_PREEXISTING_WORKTREE",
+  "branch": "main",
+  "head": "45bd74b5a8eda55050657a2cb24083d866315f77",
+  "originMain": "45bd74b5a8eda55050657a2cb24083d866315f77",
+  "ahead": 0,
+  "behind": 0,
+  "stagedFiles": 0,
+  "workingTreeCleanAtStart": false,
+  "preexistingProtectedChanges": ["calculator:calculadora-reserva-financeira-pj", "public catalogs", "publishing registry", "sitemap", "prior delivery reports and test scripts"],
+  "authorizedMutationScope": ["internal calculator automation", "phase 5.28 reports"],
+  "publicationAuthorized": false,
+  "gitWriteAuthorized": false
+}

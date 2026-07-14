@@ -1,0 +1,14 @@
+{
+  "id": "relationship-map-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "approved-secondary",
+  "primaryDomain": "pj",
+  "primaryNucleus": "nucleus:pj",
+  "primaryGuide": "guide:guide-pj",
+  "primaryCluster": null,
+  "role": "secondary-supporting-calculator",
+  "primaryCalculatorPreserved": "calculator:calculadora-clt-ou-pj",
+  "relatedCalculators": ["calculator:calculadora-custo-mensal-pj", "calculator:calculadora-valor-hora-pj", "calculator:calculadora-clt-ou-pj"],
+  "relatedArticles": ["article:quanto-preciso-ganhar-como-pj-para-compensar-clt", "article:contrato-pj-o-que-analisar-antes-de-aceitar"],
+  "decision": "The asset fills a distinct financial-reserve planning intent without replacing the primary CLT-or-PJ comparison calculator."
+}

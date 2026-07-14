@@ -1,0 +1,8 @@
+{
+  "id": "checklist-update-report",
+  "status": "UPDATED_INTERNAL_ONLY",
+  "beforeVersion": "0.2.0",
+  "afterVersion": "0.3.0",
+  "sectionsAddedOrStrengthened": ["brandAndFreshness", "result slot order", "adaptiveReport", "distinct actions", "scoped editorial content", "visible FAQ", "four-state recommendation"],
+  "blockingItemsAdded": 6
+}

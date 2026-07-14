@@ -1,0 +1,13 @@
+{
+  "id": "audit-report-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "identity": {"duplicateAsset": false, "duplicateSlug": false, "duplicatePublicUrl": false},
+  "gap": "No existing calculator focuses on building and tracking a financial reserve for PJ workers.",
+  "ruleRisk": "low",
+  "ruleReason": "All financial premises are provided by the user and formulas are local non-legal arithmetic.",
+  "relationshipDecision": "Secondary supporting calculator in the PJ nucleus; the primary CLT-or-PJ calculator remains unchanged.",
+  "reference": "/calculadora-multa-40-fgts/index.html",
+  "referenceStudy": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/reference-study.json"
+}

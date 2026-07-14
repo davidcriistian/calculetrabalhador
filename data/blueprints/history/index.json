@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-history",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -79,6 +79,20 @@
         "Created a reference-backed canonical calculator experience contract.",
         "Added measurable module, journey, result, memory, visual, recommendation and anti-pattern rules.",
         "Connected Calculator Blueprint to internal calculator automation without modifying public calculators."
+      ],
+      "notes": ["Legacy assets remain accepted pending migration."]
+    },
+    {
+      "id": "calculator-experience-final-refinement-1.1.0",
+      "phase": "Phase 5.28 - Calculator Experience Contract Final Refinement",
+      "version": "0.6.0",
+      "date": "2026-07-14",
+      "owner": "Calcule Trabalhador",
+      "status": "active-internal-standard",
+      "changes": [
+        "Refined the canonical contract from practical calculator test findings.",
+        "Added six blocking gates for brand, freshness, editorial depth, recommendation slot and adaptive report quality.",
+        "Connected the refinements to internal automation without modifying public calculators."
       ],
       "notes": ["Legacy assets remain accepted pending migration."]
     }

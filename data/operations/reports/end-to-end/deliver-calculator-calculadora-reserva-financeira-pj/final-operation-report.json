@@ -1,0 +1,60 @@
+{
+  "id": "final-operation-report-calculadora-reserva-financeira-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_END_TO_END_DELIVERY",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "completed",
+  "createdAt": "2026-07-14",
+  "result": "CALCULATOR CREATED, INTEGRATED AND VALIDATED",
+  "filesCreated": [
+    "/calculadora-reserva-financeira-pj/index.html",
+    "/scripts/test-reserva-financeira-pj.js",
+    "/scripts/capture-reserva-financeira-pj-visuals.js",
+    "/data/registry/by-type/calculator-calculadora-reserva-financeira-pj.json",
+    "/data/publishing/registry/calculator-calculadora-reserva-financeira-pj-published.json",
+    "/data/operations/reports/asset/calculator/calculadora-reserva-financeira-pj/",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/"
+  ],
+  "filesModified": ["/data/tools.json", "/data/maps/tools-map.json", "/data/registry/by-type/index.json", "/data/publishing/registry/index.json", "/sitemap.xml"],
+  "governance": {
+    "blueprint": "/data/blueprints/calculator/index.json#0.3.0",
+    "experienceContract": "/data/blueprints/contracts/calculator-experience.contract.json#1.0.0",
+    "goldStandard": "/data/gold-standards/calculator/index.json#1.1",
+    "registry": "registered-published",
+    "publishing": "registered-published",
+    "rollback": "ready"
+  },
+  "experience": {
+    "formComplexityClass": "GUIDED_MULTI_STEP",
+    "resultExperienceClass": "DECISION_REPORT",
+    "calculationMemoryLevel": "AUDITABLE_MEMORY",
+    "visualStatus": "VISUAL_VALIDATION_PASSED",
+    "recommendationState": "NOT_CONFIGURED"
+  },
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": null,
+    "role": "secondary-supporting-calculator",
+    "primaryCalculatorPreserved": "calculator:calculadora-clt-ou-pj"
+  },
+  "ruleAssessment": {
+    "hardcodedLegalRule": false,
+    "financialPremises": "USER_INPUT",
+    "formulas": "LOCAL_NON_LEGAL_FORMULA",
+    "centralRuleOrFallbackRequired": false
+  },
+  "validation": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/validation-results.json",
+  "visualValidation": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual-validation.json",
+  "rollback": "/data/operations/reports/asset/calculator/calculadora-reserva-financeira-pj/rollback-plan.json",
+  "replay": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/idempotency-replay.json",
+  "unchangedPublicAreas": ["existing calculators", "existing articles", "Home", "Guide PJ physical page", "clusters", "global CSS", "global JavaScript", "runtime bundles"],
+  "finalConfirmation": {
+    "deployed": false,
+    "indexNowSent": false,
+    "gitWriteExecuted": false,
+    "publicFilesPrepared": true
+  }
+}

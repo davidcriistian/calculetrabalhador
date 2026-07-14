@@ -1,0 +1,67 @@
+{
+  "id": "visual-validation-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "VISUAL_VALIDATION_PASSED",
+  "createdAt": "2026-07-14",
+  "browser": "Google Chrome 150.0.7871.102 headless via Chrome DevTools Protocol",
+  "reference": "/calculadora-multa-40-fgts/index.html",
+  "viewports": [
+    {"name":"small-mobile","width":320,"height":800,"status":"PASS"},
+    {"name":"large-mobile","width":430,"height":900,"status":"PASS"},
+    {"name":"intermediate","width":768,"height":1024,"status":"PASS"},
+    {"name":"desktop","width":1440,"height":1000,"status":"PASS"}
+  ],
+  "statesPerViewport": ["entry", "form", "empty-state", "error-state", "result", "result-actions"],
+  "screenshots": [
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-entry.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-form.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-empty-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-error-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-result.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/small-mobile-result-actions.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-entry.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-form.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-empty-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-error-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-result.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/large-mobile-result-actions.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-entry.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-form.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-empty-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-error-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-result.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/intermediate-result-actions.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-entry.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-form.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-empty-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-error-state.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-result.png",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/visual/desktop-result-actions.png"
+  ],
+  "criticalAreaReview": {
+    "hero": "PASS",
+    "formAndFields": "PASS",
+    "dominantCta": "PASS",
+    "emptyState": "PASS",
+    "errorState": "PASS",
+    "primaryResult": "PASS",
+    "secondaryMetrics": "PASS",
+    "memoryAndTable": "PASS_WITH_CONTROLLED_HORIZONTAL_TABLE_SCROLL_ON_MOBILE",
+    "resultActions": "PASS",
+    "textWrap": "PASS",
+    "bodyOverflow": "PASS",
+    "footer": "PASS"
+  },
+  "functionalBrowserChecks": {
+    "copyResult": "PASS_AT_ALL_FOUR_VIEWPORTS_WITH_MOCKED_CLIPBOARD",
+    "downloadTextReport": "PASS_AT_ALL_FOUR_VIEWPORTS_WITH_EXPECTED_FILENAME",
+    "print": "STATIC_HANDLER_AND_PRINT_STYLES_PASS; native print dialog intentionally not opened in headless automation"
+  },
+  "parity": {
+    "STRUCTURAL_PARITY": "PASS",
+    "DESIGN_SYSTEM_PARITY": "PASS",
+    "QUALITY_PARITY": "PASS",
+    "RESPONSIVE_PARITY": "PASS",
+    "PIXEL_IDENTICAL_COPY": "NOT_REQUESTED_AND_NOT_USED"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "id": "asset-operation-manifests",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -136,9 +136,9 @@
   "calculatorResolutionRequirements": {
     "appliesTo": ["NEW_ASSET", "MIGRATED_ASSET"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
-    "requiredBeforeSpecification": ["resolve-official-reference", "open-physical-reference", "decompose-reference-modules", "record-literal-copy-avoidance", "classify-form-complexity", "classify-result-experience", "classify-calculation-memory", "decide-conditional-modules", "evaluate-post-result-actions", "resolve-recommendation-state", "prepare-calculator-experience-plan"],
-    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED"],
-    "fullStandardBlockedBy": ["VISUAL_VALIDATION_NOT_EXECUTED", "applicable-blocker-anti-pattern", "unapproved-recommendation-source"]
+    "requiredBeforeSpecification": ["resolve-official-reference", "open-physical-reference", "decompose-reference-modules", "record-literal-copy-avoidance", "resolve-institutional-theme", "resolve-governed-visible-updated-at", "classify-form-complexity", "classify-result-experience", "classify-calculation-memory", "separate-permanent-and-dynamic-content", "validate-editorial-depth-and-faq", "resolve-canonical-recommendation-slot", "declare-adaptive-report-from-calculator-semantics", "evaluate-distinct-post-result-actions", "prepare-calculator-experience-plan"],
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"],
+    "fullStandardBlockedBy": ["VISUAL_VALIDATION_NOT_EXECUTED", "applicable-blocker-anti-pattern", "UNAPPROVED_PRIMARY_THEME", "invalid-or-invented-visible-updated-at", "editorial-depth-unresolved", "recommendation-slot-unresolved", "prohibited-report-pattern", "non-distinct-result-actions", "unapproved-recommendation-source"]
   },
   "manifest": {
     "operationId": "create-asset",
@@ -150,7 +150,7 @@
     "playbook": "/data/operations/playbooks/asset/index.json#create-asset",
     "workflow": "/data/operations/workflows/asset/index.json#create-asset-workflow",
     "reports": "/data/operations/reports/asset/index.json",
-    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "visualValidationStatus"]
+    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus"]
   },
   "inheritance": {
     "create-calculator": "inherits-create-asset",

@@ -1,0 +1,10 @@
+{
+  "id": "recommendation-slot-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "slot": "CANONICAL_RESULT_RECOMMENDATION_SLOT",
+  "stablePosition": "after interpretation and before calculation memory",
+  "states": ["NOT_CONFIGURED", "CONFIGURED_NOT_ELIGIBLE", "CONFIGURED_ELIGIBLE", "HIDDEN_BY_POLICY"],
+  "hiddenStates": ["NOT_CONFIGURED", "CONFIGURED_NOT_ELIGIBLE", "HIDDEN_BY_POLICY"],
+  "visibleState": "CONFIGURED_ELIGIBLE",
+  "gate": "RECOMMENDATION_SLOT_RESOLVED"
+}

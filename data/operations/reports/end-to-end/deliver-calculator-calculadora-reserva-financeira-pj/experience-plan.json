@@ -1,0 +1,46 @@
+{
+  "id": "experience-plan-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "approved-and-implemented",
+  "createdAt": "2026-07-14",
+  "contract": "/data/blueprints/contracts/calculator-experience.contract.json#1.0.0",
+  "form": {
+    "classification": "GUIDED_MULTI_STEP",
+    "justification": "Nine inputs and three high-impact planning groups require numbered progression and final confirmation.",
+    "groups": ["monthly essential base", "protection target", "current progress"],
+    "finalConfirmation": true,
+    "dominantFinalCta": true
+  },
+  "result": {
+    "classification": "DECISION_REPORT",
+    "justification": "The result supports selection of a reserve target and contribution plan.",
+    "memoryLevel": "AUDITABLE_MEMORY",
+    "primaryResult": "selected total reserve target",
+    "secondaryResults": ["gap", "current gross coverage", "linear time estimate"],
+    "interpretation": true,
+    "limitations": true,
+    "nextSteps": true
+  },
+  "conditionalModules": {
+    "estimatedEffort": "APPLIES_IMPLEMENTED",
+    "stepNumbering": "APPLIES_IMPLEMENTED",
+    "finalConfirmation": "APPLIES_IMPLEMENTED",
+    "scenarioTags": "APPLIES_IMPLEMENTED",
+    "comparison": "APPLIES_IMPLEMENTED",
+    "summaryTable": "APPLIES_IMPLEMENTED",
+    "sources": "NOT_APPLICABLE_PURE_USER_INPUT_ARITHMETIC",
+    "resultActions": "APPLIES_COPY_PRINT_DOWNLOAD_IMPLEMENTED",
+    "resultRecommendations": "NOT_CONFIGURED_HIDDEN"
+  },
+  "antiPatternResolution": {
+    "applicableBlockers": 0,
+    "applicableMajorsUnresolved": 0,
+    "genericIntroCard": false,
+    "formWithoutJourney": false,
+    "resultWithOnlyNumbers": false,
+    "shallowCalculationMemory": false,
+    "noResultInterpretation": false,
+    "noNextSteps": false,
+    "staticValidationOnly": false
+  }
+}

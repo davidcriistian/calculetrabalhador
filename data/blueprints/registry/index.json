@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-registry",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -14,7 +14,8 @@
     "Blueprints are architecture models for future productivity engines.",
     "Cluster Blueprint is now the primary structural blueprint for calculator and article ecosystems.",
     "Nucleus Blueprint and Guide Blueprint model future nucleus organization and public guide pages without creating real assets.",
-    "Platform Asset Model defines the shared base structure inherited by asset blueprints."
+    "Platform Asset Model defines the shared base structure inherited by asset blueprints.",
+    "Calculator Experience Contract 1.1.0 is the active final-refinement authority for new and migrated calculators."
   ],
   "blueprintTypes": [
     "nucleus",

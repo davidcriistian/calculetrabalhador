@@ -1,0 +1,12 @@
+{
+  "id": "backward-compatibility-report",
+  "status": "PASS",
+  "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+  "newPolicy": "NEW_STANDARD_REQUIRED",
+  "migratedPolicy": "NEW_STANDARD_REQUIRED",
+  "automaticLegacyFailure": false,
+  "automaticPublishingStatusChange": false,
+  "legacyRecommendationAliasesPreserved": true,
+  "publicCalculatorsRevalidatedOrMutated": false,
+  "migrationRequiredForRetrofit": true
+}

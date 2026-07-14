@@ -1,0 +1,20 @@
+{
+  "id": "calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "type": "calculator",
+  "slug": "calculadora-reserva-financeira-pj",
+  "status": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "references": [
+    "/data/operations/reports/asset/calculator/calculadora-reserva-financeira-pj/calculator-draft-specification.json",
+    "/data/operations/reports/asset/calculator/calculadora-reserva-financeira-pj/relationship-map.json",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/reference-study.json",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/experience-plan.json",
+    "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/final-operation-report.json"
+  ]
+}

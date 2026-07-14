@@ -1,6 +1,6 @@
 {
   "id": "gold-standard-registry",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/gold-standards/schemas/registry.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -28,7 +28,7 @@
   },
   "standardTypes": ["calculator", "article", "cluster", "guide", "seo", "component", "validation"],
   "versionedStandards": [
-    { "type": "calculator", "versions": ["1.0", "1.1", "2.0"], "current": "1.1" },
+    { "type": "calculator", "versions": ["1.0", "1.1", "1.2", "2.0"], "current": "1.2" },
     { "type": "article", "versions": ["1.0", "2.0"], "current": "1.0" },
     { "type": "guide", "versions": ["1.0"], "current": "1.0" },
     { "type": "cluster", "versions": ["1.0"], "current": "1.0" },
@@ -47,7 +47,7 @@
   },
   "notes": [
     "Gold Standards define ideal quality requirements, not implementations.",
-    "Calculator Blueprint and automation consume Calculator Gold Standard 1.1; other standards remain declarative unless explicitly connected.",
+    "Calculator Blueprint and automation consume Calculator Gold Standard 1.2; other standards remain declarative unless explicitly connected.",
     "This system is versioned independently from Constitution."
   ]
 }

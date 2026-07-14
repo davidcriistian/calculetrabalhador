@@ -1,0 +1,8 @@
+{
+  "id": "product-recommendation-contract",
+  "status": "ACTIVE",
+  "renderRequires": ["CONFIGURED_ELIGIBLE state", "configured product", "eligibility evidence", "approved product source"],
+  "prohibited": ["invent product", "invent price", "invent offer", "invent affiliate", "hardcode without approved source", "render without eligibility"],
+  "default": {"state":"NOT_CONFIGURED","rendering":"HIDDEN"},
+  "legacyAliases": {"CONFIGURED_BUT_NOT_ELIGIBLE":"CONFIGURED_NOT_ELIGIBLE","ELIGIBLE_WITH_PRODUCTS":"CONFIGURED_ELIGIBLE","ELIGIBLE_WITH_SERVICES":"CONFIGURED_ELIGIBLE","ELIGIBLE_WITH_OFFERS":"CONFIGURED_ELIGIBLE"}
+}

@@ -1,6 +1,6 @@
 {
   "id": "pos-contract-calculator",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -14,9 +14,9 @@
     "coreContracts": "calculator knowledge capabilities, domains, rules and tables",
     "posContracts": "operational lifecycle, registry, migration, testing and approval process for calculators"
   },
-  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata", "canonical experience classification", "result and memory contract resolution"],
-  "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status", "asset compatibility class", "form complexity class", "result experience class", "memory level", "reference study evidence"],
-  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes", "calculator experience plan", "result contract resolution", "visual validation status"],
+  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata", "canonical experience classification", "brand and visible freshness resolution", "permanent and dynamic content separation", "editorial depth", "canonical recommendation slot", "adaptive report declarations", "result and memory contract resolution"],
+  "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status", "asset compatibility class", "form complexity class", "result experience class", "memory level", "reference study evidence", "governed updated-at metadata", "report semantics"],
+  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes", "calculator experience plan", "result contract resolution", "brand theme resolution", "visible updated-at resolution", "editorial depth resolution", "recommendation slot resolution", "adaptive report resolution", "report render validation", "visual validation status"],
   "dependencies": ["/data/pos/registry/index.json", "/data/blueprints/contracts/calculator-experience.contract.json"],
   "nonResponsibilities": ["calculate values", "change calculator HTML", "change calculator JavaScript", "change URLs"],
   "notes": [

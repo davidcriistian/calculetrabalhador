@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-versioning",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -9,7 +9,7 @@
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 1 - Blueprint System",
   "description": "Versioning control for blueprint architecture.",
-  "currentBlueprintSystemVersion": "0.5.0",
+  "currentBlueprintSystemVersion": "0.6.0",
   "compatibility": {
     "runtimeConsumesBlueprints": false,
     "calculatorsConsumeBlueprints": false,
@@ -67,6 +67,19 @@
         "Added canonical calculator experience contract 1.0.0.",
         "Strengthened Calculator Blueprint to version 0.3.0.",
         "Connected new and migrated calculator automation to reference, form, result, memory, visual and anti-pattern gates.",
+        "Preserved legacy calculators pending explicit migration."
+      ]
+    },
+    {
+      "id": "calculator-experience-final-refinement-1.1.0",
+      "version": "0.6.0",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Updated Calculator Experience Contract to 1.1.0.",
+        "Strengthened Calculator Blueprint to version 0.4.0.",
+        "Added institutional theme, visible freshness, permanent content, editorial depth and canonical recommendation gates.",
+        "Added semantic adaptive-report declarations and prohibited screenshot-based reports.",
         "Preserved legacy calculators pending explicit migration."
       ]
     }

@@ -1,6 +1,6 @@
 {
   "id": "pos-contract-testing",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -23,6 +23,8 @@
     "homologation references"
     ,"calculator canonical experience negative scenarios"
     ,"rendered viewport evidence"
+    ,"calculator brand freshness editorial recommendation and adaptive report negative scenarios"
+    ,"distinct copy print and download behavior"
   ],
   "expectedInputs": [
     "asset reference",
@@ -45,6 +47,7 @@
     "approval matrix decision",
     "open validation notes"
     ,"calculator experience fixture results"
+    ,"adaptive report render test results"
   ],
   "dependencies": [
     "/data/pos/registry/index.json",
@@ -65,6 +68,7 @@
   "notes": [
     "This contract does not add, execute or wire test runners.",
     "Phase 3 details the official Testing Engine protocol under /data/pos/testing.",
-    "The calculator experience validator must reject generic report-class pages and preserve justified SIMPLE_SINGLE_STEP/SIMPLE_RESULT cases."
+    "The calculator experience validator must reject generic report-class pages and preserve justified SIMPLE_SINGLE_STEP/SIMPLE_RESULT cases.",
+    "Report-class calculators must test semantic derivation, A4/selectable isolation and distinct COPY_RESULT, PRINT_RESULT and DOWNLOAD_REPORT behavior."
   ]
 }

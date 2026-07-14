@@ -1,0 +1,15 @@
+{
+  "id": "current-contract-resolution",
+  "status": "RESOLVED_FROM_PRACTICAL_TEST",
+  "inputContractVersion": "1.0.0",
+  "testedAsset": "calculator:calculadora-reserva-financeira-pj",
+  "assetMutationPerformed": false,
+  "findings": [
+    {"id":"primary-theme","observed":"emerald/green primary system","resolution":"institutional blue mandatory default","blocker":"UNAPPROVED_PRIMARY_THEME"},
+    {"id":"visible-updated-at","observed":"no visible governed updated text","resolution":"UPDATED_AT must render Atualizado em [mês] de [ano]"},
+    {"id":"editorial-depth","observedMainWords":198,"resolution":"800 to 1200 scoped useful words"},
+    {"id":"recommendation-slot","observed":"slot absent","resolution":"stable CANONICAL_RESULT_RECOMMENDATION_SLOT"},
+    {"id":"download-report","observed":"text file download","resolution":"semantic adaptive report required for report classes"}
+  ],
+  "positiveFindingsPreserved": ["methodology visible before calculation", "FAQ visible before calculation", "result hidden before valid calculation", "no screenshot library used"]
+}

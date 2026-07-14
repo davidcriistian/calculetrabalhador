@@ -1,0 +1,28 @@
+{
+  "id": "preflight-audit-deliver-calculator-calculadora-reserva-financeira-pj",
+  "operation": "deliver-asset-end-to-end",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "executedAt": "2026-07-14",
+  "inputs": {
+    "requestType": "CREATE_SINGLE_ASSET",
+    "assetType": "calculator",
+    "preferredDomain": "pj",
+    "preferredNucleus": "pj",
+    "preferredGuide": "guide-pj",
+    "preferredCluster": null
+  },
+  "auditedSources": ["/data/tools.json", "/data/articles.json", "/data/brain/nuclei.json", "/data/brain/clusters.json", "/data/registry/by-type/index.json", "/data/registry/by-nucleus/pj.json", "/guias/pj/index.html", "/calculadora-clt-ou-pj/index.html", "/calculadora-custo-mensal-pj/index.html", "/calculadora-valor-hora-pj/index.html", "/sitemap.xml"],
+  "existingAssets": {
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "supportingCalculators": ["calculator:calculadora-valor-hora-pj", "calculator:calculadora-custo-mensal-pj"],
+    "guide": "guide:guide-pj",
+    "cluster": "cluster:clt-ou-pj"
+  },
+  "gapDecision": {
+    "gapFound": true,
+    "gap": "No existing calculator builds a financial reserve target from essential monthly commitments, planned pauses, annual costs, current balance and monthly contributions.",
+    "selectedCandidate": "calculator:calculadora-reserva-financeira-pj",
+    "duplicateFound": false,
+    "safeToCreate": true
+  }
+}

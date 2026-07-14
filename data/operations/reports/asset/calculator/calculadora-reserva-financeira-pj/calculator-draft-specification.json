@@ -1,0 +1,93 @@
+{
+  "id": "calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "assetType": "calculator",
+  "type": "calculator",
+  "version": "1.0.0",
+  "status": "published",
+  "lifecycle": "published",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved-secondary",
+  "runtimeStatus": "catalog-consumed",
+  "publishingStatus": "published",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "core-platform",
+  "source": "deliver-asset-end-to-end equivalent local execution",
+  "displayName": "Calculadora de Reserva Financeira PJ",
+  "publicSlug": "calculadora-reserva-financeira-pj",
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/",
+  "blueprint": {
+    "type": "calculator",
+    "reference": "/data/blueprints/calculator/index.json",
+    "version": "0.3.0"
+  },
+  "goldStandard": {
+    "type": "calculator",
+    "reference": "/data/gold-standards/calculator/index.json",
+    "version": "1.1",
+    "status": "active-foundation"
+  },
+  "experienceClassification": {
+    "formComplexityClass": "GUIDED_MULTI_STEP",
+    "formJustification": "The calculator has nine numeric/select inputs, three high-impact planning groups and a required confirmation step.",
+    "resultExperienceClass": "DECISION_REPORT",
+    "resultJustification": "The output supports a personal financial planning decision with a selected scenario, four comparable coverage targets, interpretation and next steps.",
+    "calculationMemoryLevel": "AUDITABLE_MEMORY",
+    "memoryJustification": "The report records inputs, premises, intermediate values, operations, rounding, final values and limitations so the selected scenario can be reproduced."
+  },
+  "calculationSpec": {
+    "inputs": ["custosEmpresa", "despesasPessoais", "tributosMensais", "outrosEssenciais", "mesesCobertura", "pausaPlanejada", "custosAnuais", "reservaAtual", "aporteMensal"],
+    "normalization": ["empty input becomes numeric zero", "decimal comma is accepted by the local parser", "money is rounded to centavos", "negative and non-finite values are rejected"],
+    "validations": ["all numeric inputs are finite and non-negative", "monthly essential base is greater than zero", "coverage is one of 3, 6, 9 or 12 months"],
+    "formulas": [
+      "baseMensal = custosEmpresa + despesasPessoais + tributosMensais + outrosEssenciais",
+      "reservaSeguranca = baseMensal * mesesCobertura",
+      "valoresPlanejados = pausaPlanejada + custosAnuais",
+      "metaTotal = reservaSeguranca + valoresPlanejados",
+      "valorFaltante = max(0, metaTotal - reservaAtual)",
+      "excedente = max(0, reservaAtual - metaTotal)",
+      "coberturaAtual = reservaAtual / baseMensal",
+      "progresso = min(100, reservaAtual / metaTotal * 100)",
+      "mesesPrazo = ceil(valorFaltante / aporteMensal) when aporteMensal > 0",
+      "scenario targets repeat the same formula for 3, 6, 9 and 12 months"
+    ],
+    "outputs": ["monthly essential base", "selected target", "security reserve", "planned values", "gap or surplus", "current gross coverage", "progress percentage", "linear time estimate", "four-scenario comparison"],
+    "rounding": "Monetary inputs and intermediates are rounded to two decimals; the displayed time estimate rounds months upward.",
+    "assumptions": ["all values come from user input", "the selected coverage is a user planning preference", "the time projection assumes constant monthly contributions", "no investment return or inflation is assumed"],
+    "limitations": ["does not prescribe an ideal coverage period", "does not recommend investments", "does not model returns, inflation, withdrawals or future cost changes", "does not replace individualized financial or accounting advice"]
+  },
+  "ruleSourceClassification": {
+    "allFinancialInputs": "USER_INPUT",
+    "coverageChoice": "USER_INPUT",
+    "aggregationAndProjection": "LOCAL_NON_LEGAL_FORMULA",
+    "canonicalCentralRule": "NOT_APPLICABLE",
+    "hardcodedLegalRule": false,
+    "fallback": "NOT_APPLICABLE"
+  },
+  "recommendations": {
+    "state": "NOT_CONFIGURED",
+    "rendering": "HIDDEN",
+    "approvedProductOrOfferSource": null
+  },
+  "actions": {
+    "COPY_RESULT": "implemented",
+    "PRINT_RESULT": "implemented",
+    "DOWNLOAD_REPORT": "implemented-as-text-summary",
+    "SHARE_RESULT": "omitted-no-retention-requirement"
+  },
+  "operationalBoundaries": {
+    "modifiesExistingCalculator": false,
+    "modifiesExistingArticle": false,
+    "modifiesGlobalRuntime": false,
+    "modifiesGlobalCss": false,
+    "modifiesGlobalJavascript": false,
+    "modifiesHome": false,
+    "modifiesGuidePage": false,
+    "modifiesCluster": false,
+    "modifiesSitemap": true,
+    "modifiesToolsCatalog": true,
+    "executesDeploy": false,
+    "sendsIndexNow": false
+  }
+}

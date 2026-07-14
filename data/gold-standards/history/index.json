@@ -1,6 +1,6 @@
 {
   "id": "gold-standard-history",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -31,6 +31,18 @@
         "Separated static, result, visual, responsive, accessibility and human approval evidence.",
         "Prevented VISUAL_VALIDATION_NOT_EXECUTED from becoming FULL_STANDARD_ACCEPTED.",
         "Preserved legacy calculator compatibility pending migration."
+      ]
+    },
+    {
+      "id": "calculator-gold-standard-1.2",
+      "version": "1.2",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Made institutional blue and governed visible freshness measurable requirements.",
+        "Added 800 to 1200 scoped editorial words and pre-calculation FAQ and methodology visibility.",
+        "Added the stable canonical recommendation slot and four-state model.",
+        "Required semantic A4 selectable adaptive reports with distinct copy, print and download actions."
       ]
     }
   ]

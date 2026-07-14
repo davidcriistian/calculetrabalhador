@@ -1,0 +1,10 @@
+{
+  "id": "editorial-depth-contract",
+  "status": "ACTIVE_BLOCKING_RULE",
+  "minimumWords": 800,
+  "maximumWords": 1200,
+  "excluded": ["header", "footer", "form", "result", "faq", "navigation", "related-content", "json-ld"],
+  "qualities": ["useful", "intent-specific", "methodological", "non-generic", "non-padded"],
+  "antiPatterns": ["EDITORIAL_CONTENT_TOO_SHORT", "EDITORIAL_CONTENT_GENERIC", "EDITORIAL_CONTENT_PADDED"],
+  "gate": "EDITORIAL_DEPTH_RESOLVED"
+}

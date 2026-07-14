@@ -1,6 +1,6 @@
 {
   "id": "calculator-blueprint-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -12,7 +12,7 @@
   "blueprintType": "calculator",
   "calculatorExperienceContract": {
     "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
   },
@@ -39,6 +39,10 @@
     "jsonLd": ["FAQPage", "BreadcrumbList", "SoftwareApplication"]
   },
   "structure": {
+    "contentLayers": {
+      "permanentBeforeCalculation": ["hero", "intro", "simulator", "editorial-or-methodology", "faq", "related-content", "sources", "footer"],
+      "dynamicAfterCalculation": ["result", "indicators", "interpretation", "CANONICAL_RESULT_RECOMMENDATION_SLOT", "calculation-memory", "comparisons", "limitations", "result-actions"]
+    },
     "visualStructure": [
       "hero",
       "calculator-form",
@@ -89,7 +93,10 @@
       "resultFields": [],
       "formattingRules": [],
       "emptyState": null,
-      "errorState": null
+      "errorState": null,
+      "recommendationSlot": "CANONICAL_RESULT_RECOMMENDATION_SLOT",
+      "recommendationSlotPosition": "after-interpretation-before-calculation-memory",
+      "adaptiveReportDeclarations": ["REPORT_INPUT_FIELDS", "REPORT_PRIMARY_RESULT", "REPORT_SECONDARY_RESULTS", "REPORT_MEMORY_SECTIONS", "REPORT_INTERPRETATION", "REPORT_LIMITATIONS", "REPORT_OPTIONAL_SECTIONS"]
     },
     "cards": [],
     "faq": [],
@@ -109,13 +116,13 @@
   "testing": {
     "required": true,
     "testingReference": "/data/pos/testing/index.json",
-    "requiredEvidence": ["calculation-baseline", "json-output", "reference-study", "module-decomposition", "experience-plan", "negative-standard-tests", "visual-evidence-or-manual-approval", "manual-review"]
+    "requiredEvidence": ["calculation-baseline", "json-output", "reference-study", "module-decomposition", "experience-plan", "editorial-word-count", "updated-at-equivalence", "report-render", "negative-standard-tests", "visual-evidence-or-manual-approval", "manual-review"]
   },
   "validation": {
     "required": true,
     "validationReference": "/data/pos/validation/index.json",
     "requiredTypes": ["calculator-structure-validation", "calculation-validation", "governance-validation", "result-experience-validation", "visual-render-validation", "responsive-validation", "accessibility-validation", "seo-validation", "jsonld-validation", "human-approval"],
-    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE"]
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"]
   },
   "publishing": {
     "required": true,

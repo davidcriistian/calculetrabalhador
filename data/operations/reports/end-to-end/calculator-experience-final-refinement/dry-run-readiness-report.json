@@ -1,0 +1,12 @@
+{
+  "id": "dry-run-readiness-report",
+  "operation": "deliver-asset-end-to-end",
+  "mode": "DRY_RUN",
+  "hypotheticalAssetType": "calculator",
+  "compatibilityClass": "NEW_ASSET",
+  "resultClass": "CALCULATION_REPORT",
+  "publicPageCreated": false,
+  "publicationExecuted": false,
+  "gateFailures": [],
+  "status": "READY_FOR_SECOND_CONTROLLED_CALCULATOR_TEST"
+}

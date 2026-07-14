@@ -1,0 +1,10 @@
+{
+  "id": "operation-report",
+  "phase": "5.28",
+  "status": "READY_FOR_SECOND_CONTROLLED_CALCULATOR_TEST",
+  "numberedDetails": [
+    "01 branch main", "02 HEAD 45bd74b5a8eda55050657a2cb24083d866315f77", "03 origin/main equals HEAD", "04 ahead 0", "05 behind 0", "06 working tree was dirty before this phase", "07 staged files remained zero", "08 preexisting public work was protected", "09 contract upgraded 1.0.0 to 1.1.0", "10 Blueprint upgraded 0.3.0 to 0.4.0", "11 Gold Standard upgraded 1.1 to 1.2", "12 manifests upgraded to 0.3.0", "13 workflows upgraded to 0.3.0", "14 playbooks upgraded to 0.3.0", "15 checklist upgraded to 0.3.0", "16 POS calculator contract upgraded to 0.4.0", "17 POS testing contract upgraded to 0.5.0", "18 POS validation contract upgraded to 0.6.0", "19 institutional blue default enforced", "20 governed visible updated-at enforced", "21 permanent and dynamic layers separated", "22 editorial range 800 to 1200 enforced", "23 FAQ visible and schema exactness enforced", "24 canonical recommendation slot and four states enforced", "25 adaptive report seven declarations enforced", "26 four screenshot-related report blockers enforced", "27 copy print and download behaviors made distinct", "28 validator expanded", "29 fixtures expanded to 24", "30 all 24 expected outcomes and failure sets matched", "31 150 internal references resolved", "32 hypothetical dry-run passed", "33 backward compatibility preserved", "34 all ten public mutation counters are zero", "35 no publication IndexNow or Git write occurred"
+  ],
+  "reportsCreated": 26,
+  "finalRecommendation": "Run a second controlled calculator test against Contract 1.1.0 before authorizing any public rollout."
+}

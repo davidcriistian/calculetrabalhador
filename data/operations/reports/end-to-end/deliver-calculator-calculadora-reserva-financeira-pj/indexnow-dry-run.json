@@ -1,0 +1,15 @@
+{
+  "id": "indexnow-dry-run-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "mode": "dry-run",
+  "sent": false,
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "payload": {
+    "host": "calculetrabalhador.com.br",
+    "key": "AD6E1D2A583449C7816E50E1D2B4BD17",
+    "keyLocation": "https://calculetrabalhador.com.br/AD6E1D2A583449C7816E50E1D2B4BD17.txt",
+    "urlList": ["https://calculetrabalhador.com.br/calculadora-reserva-financeira-pj/"]
+  }
+}

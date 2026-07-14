@@ -1,0 +1,7 @@
+{
+  "id": "permanent-vs-dynamic-content-contract",
+  "status": "ACTIVE",
+  "permanentVisibleBeforeCalculation": ["hero", "intro", "simulator", "editorial-or-methodology", "faq", "related-content", "sources", "footer"],
+  "dynamicAfterValidCalculation": ["result", "indicators", "interpretation", "CANONICAL_RESULT_RECOMMENDATION_SLOT", "calculation-memory", "comparisons", "limitations", "result-actions"],
+  "blockedPattern": "methodology or FAQ hidden until calculation"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "validation-plan-calculator-calculadora-reserva-financeira-pj",
+  "assetId": "calculator:calculadora-reserva-financeira-pj",
+  "status": "planned-and-executed",
+  "createdAt": "2026-07-14",
+  "validationGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "unique-identity", "calculator-blueprint-0.3.0", "calculator-gold-standard-1.1", "no-hardcoded-legal-rule", "calculation-evidence", "accessible-result-states", "seo-and-jsonld", "catalog-and-tools-map", "single-sitemap-url", "registry-and-publishing", "rollback-ready", "replay-idempotent"],
+  "resultsReference": "/data/operations/reports/end-to-end/deliver-calculator-calculadora-reserva-financeira-pj/validation-results.json"
+}

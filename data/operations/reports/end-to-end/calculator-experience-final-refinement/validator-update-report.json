@@ -1,0 +1,11 @@
+{
+  "id": "validator-update-report",
+  "status": "PASS",
+  "validator": "/scripts/validate-calculator-experience-contract.js",
+  "contractVersion": "1.1.0",
+  "capabilities": ["deep-merge fixture defaults", "exact expected failure-set comparison", "institutional theme validation", "visible updated-at validation", "scoped editorial validation", "permanent content validation", "four-state recommendation and slot validation", "seven report declaration validation", "prohibited report pattern validation", "distinct action validation", "internal reference validation"],
+  "consumerFiles": 21,
+  "internalReferencesChecked": 150,
+  "unresolvedReferences": 0,
+  "sha256": "EB23D73F32F685EA9D2B622F8894CDF5AF00A836932D8AE023149572F99CC5A5"
+}

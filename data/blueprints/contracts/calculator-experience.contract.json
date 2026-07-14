@@ -1,12 +1,12 @@
 {
   "id": "calculator-canonical-experience-contract",
-  "calculatorExperienceContractVersion": "1.0.0",
+  "calculatorExperienceContractVersion": "1.1.0",
   "status": "active-internal-standard",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-14",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
-  "source": "Phase 5.27 - Calculator Canonical Experience Contract",
+  "source": "Phase 5.28 - Calculator Experience Contract Final Refinement",
   "principle": ["SAME_PRODUCT_SYSTEM", "SAME_QUALITY_FLOOR", "DOMAIN_SPECIFIC_ADAPTATION"],
   "canonicalReference": {
     "referenceId": "calculator-multa-40-fgts-reference",
@@ -16,7 +16,42 @@
     "requiredStudyBeforeGeneration": true,
     "requiredModuleDecomposition": true,
     "requiredParityAssessment": ["STRUCTURAL_PARITY", "DESIGN_SYSTEM_PARITY", "QUALITY_PARITY", "RESPONSIVE_PARITY"],
-    "prohibitedLiteralCopy": ["text", "legal-rules", "field-identifiers", "domain-formulas", "fixed-step-count", "fixed-theme-color", "pixel-identical-copy"]
+    "prohibitedLiteralCopy": ["text", "legal-rules", "field-identifiers", "domain-formulas", "fixed-step-count", "reference-specific-theme-color", "pixel-identical-copy"]
+  },
+  "brandThemeContract": {
+    "defaultPrimaryTheme": "INSTITUTIONAL_BLUE",
+    "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
+    "approvedVariationRequires": ["documented-brand-rationale", "human-approval", "render-evidence"],
+    "unapprovedPrimaryThemeAntiPattern": "UNAPPROVED_PRIMARY_THEME",
+    "gate": "BRAND_THEME_RESOLVED"
+  },
+  "visibleUpdatedAtContract": {
+    "metadataField": "UPDATED_AT",
+    "metadataMustBeGoverned": true,
+    "visibleFormatPtBr": "Atualizado em [mês] de [ano]",
+    "visibleTextMustMatchMetadata": true,
+    "inventedDateProhibited": true,
+    "gate": "VISIBLE_UPDATED_AT_RESOLVED"
+  },
+  "contentLayerContract": {
+    "permanentVisibleBeforeCalculation": ["hero", "intro", "simulator", "editorial-or-methodology", "faq", "related-content", "sources", "footer"],
+    "dynamicAfterValidCalculation": ["result", "indicators", "interpretation", "CANONICAL_RESULT_RECOMMENDATION_SLOT", "calculation-memory", "comparisons", "limitations", "result-actions"],
+    "rules": ["methodology-must-not-require-calculation", "faq-must-not-require-calculation", "result-layer-must-not-show-stale-or-fabricated-values"]
+  },
+  "editorialDepthContract": {
+    "scope": "main editorial content only",
+    "minimumWords": 800,
+    "maximumWords": 1200,
+    "excludedFromCount": ["header", "footer", "form", "result", "faq", "navigation", "related-content", "json-ld"],
+    "requiredQualities": ["intent-specific", "methodologically-useful", "non-generic", "non-padded", "source-compatible"],
+    "antiPatterns": ["EDITORIAL_CONTENT_TOO_SHORT", "EDITORIAL_CONTENT_GENERIC", "EDITORIAL_CONTENT_PADDED"],
+    "gate": "EDITORIAL_DEPTH_RESOLVED"
+  },
+  "faqContract": {
+    "visibleBeforeCalculation": true,
+    "faqPageAllowed": true,
+    "faqPageRequiresExactVisibleMatch": true,
+    "excludedFromEditorialWordCount": true
   },
   "requiredCoreModules": [
     {"id":"page-context","purpose":"Orient location and domain","minimumContent":["breadcrumb-or-equivalent-context","thematic-identification"],"depth":"explicit-and-visible","behavior":"precedes-or-is-integrated-with-hero","validationEvidence":["structure-map","render-evidence"],"referenceRelation":"abstracted-context-pattern","relatedAntiPatterns":["GENERIC_INTRO_CARD"]},
@@ -72,6 +107,20 @@
     "labelValueListAloneIsComplete": false,
     "levelChoiceRequiresJustification": true
   },
+  "adaptiveReportContract": {
+    "appliesTo": ["CALCULATION_REPORT", "DECISION_REPORT", "COMPARATIVE_REPORT"],
+    "requiredDeclarations": ["REPORT_INPUT_FIELDS", "REPORT_PRIMARY_RESULT", "REPORT_SECONDARY_RESULTS", "REPORT_MEMORY_SECTIONS", "REPORT_INTERPRETATION", "REPORT_LIMITATIONS", "REPORT_OPTIONAL_SECTIONS"],
+    "derivationRule": "all report declarations must derive from calculator semantics, metadata and result contract",
+    "documentRequirements": ["A4-structured", "selectable-text", "viewport-independent", "navigation-independent", "seo-content-independent", "isolated-report-document"],
+    "approvedOutputs": ["STRUCTURED_PDF", "ISOLATED_PRINT_REPORT"],
+    "textFileFinalAdequacy": {
+      "CALCULATION_REPORT": false,
+      "DECISION_REPORT": false,
+      "COMPARATIVE_REPORT": false
+    },
+    "prohibitedPatterns": ["SCREENSHOT_REPORT", "FULL_PAGE_CAPTURE_REPORT", "VIEWPORT_DEPENDENT_REPORT", "RASTER_ONLY_REPORT"],
+    "gates": ["ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"]
+  },
   "postResultActionsContract": {
     "actions": ["COPY_RESULT","PRINT_RESULT","DOWNLOAD_REPORT","SHARE_RESULT"],
     "rules": {
@@ -79,6 +128,12 @@
       "CALCULATION_REPORT":{"COPY_RESULT":"CONDITIONALLY_REQUIRED","PRINT_RESULT":"CONDITIONALLY_REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"},
       "DECISION_REPORT":{"COPY_RESULT":"REQUIRED","PRINT_RESULT":"REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"},
       "COMPARATIVE_REPORT":{"COPY_RESULT":"REQUIRED","PRINT_RESULT":"REQUIRED","DOWNLOAD_REPORT":"CONDITIONALLY_REQUIRED","SHARE_RESULT":"OPTIONAL"}
+    },
+    "distinctBehaviorRequired": true,
+    "behavior": {
+      "COPY_RESULT": "short scenario-aware textual summary",
+      "PRINT_RESULT": "isolated adaptive report without navigation or SEO/editorial page chrome",
+      "DOWNLOAD_REPORT": "approved adaptive document derived from report declarations"
     },
     "functionalEvidenceRequired": true,
     "omissionRequiresJustification": true
@@ -89,13 +144,25 @@
     "presenceOnlyIsSufficient": false
   },
   "resultRecommendationsContract": {
-    "states":["NOT_CONFIGURED","CONFIGURED_BUT_NOT_ELIGIBLE","ELIGIBLE_WITH_PRODUCTS","ELIGIBLE_WITH_SERVICES","ELIGIBLE_WITH_OFFERS","HIDDEN_BY_POLICY"],
-    "flow":["RESULT_OR_SCENARIO","ELIGIBILITY_RULE","APPROVED_PRODUCT_OR_OFFER_SOURCE","RENDER"],
+    "slotId": "CANONICAL_RESULT_RECOMMENDATION_SLOT",
+    "stablePosition": "after interpretation and before calculation memory",
+    "states":["NOT_CONFIGURED","CONFIGURED_NOT_ELIGIBLE","CONFIGURED_ELIGIBLE","HIDDEN_BY_POLICY"],
+    "legacyStateAliases": {
+      "CONFIGURED_BUT_NOT_ELIGIBLE": "CONFIGURED_NOT_ELIGIBLE",
+      "ELIGIBLE_WITH_PRODUCTS": "CONFIGURED_ELIGIBLE",
+      "ELIGIBLE_WITH_SERVICES": "CONFIGURED_ELIGIBLE",
+      "ELIGIBLE_WITH_OFFERS": "CONFIGURED_ELIGIBLE"
+    },
+    "flow":["RESULT_OR_SCENARIO","ELIGIBILITY_RULE","APPROVED_PRODUCT_SOURCE","RENDER"],
     "defaultState":"NOT_CONFIGURED",
     "defaultRendering":"HIDDEN",
+    "hiddenStates":["NOT_CONFIGURED","CONFIGURED_NOT_ELIGIBLE","HIDDEN_BY_POLICY"],
+    "visibleState":"CONFIGURED_ELIGIBLE",
     "prohibited":["invent-product","invent-price","invent-offer","invent-affiliate","hardcode-without-approved-source","render-without-eligibility"]
   },
   "visualSystemContract": {
+    "primaryTheme": "INSTITUTIONAL_BLUE",
+    "primaryThemeVariationRequiresApproval": true,
     "parityTargets":["STRUCTURAL_PARITY","DESIGN_SYSTEM_PARITY","QUALITY_PARITY","RESPONSIVE_PARITY"],
     "excludedTarget":"PIXEL_IDENTICAL_COPY",
     "criteria": {
@@ -115,6 +182,15 @@
     "notExecutedCannotBecome":"FULL_STANDARD_ACCEPTED"
   },
   "prohibitedAntiPatterns": [
+    {"id":"UNAPPROVED_PRIMARY_THEME","appliesWhen":"primary theme is not INSTITUTIONAL_BLUE and no approved variation exists","doesNotApplyWhen":"documented brand variation has human approval and render evidence","severity":"BLOCKER","validationMethod":"brand-theme-resolution","requiredEvidence":["theme-token-map","approval-record","render"]},
+    {"id":"EDITORIAL_CONTENT_TOO_SHORT","appliesWhen":"main editorial content has fewer than 800 words after exclusions","doesNotApplyWhen":"never for NEW_ASSET or MIGRATED_ASSET","severity":"BLOCKER","validationMethod":"scoped-editorial-word-count","requiredEvidence":["word-count-report","exclusion-map"]},
+    {"id":"EDITORIAL_CONTENT_GENERIC","appliesWhen":"editorial content could be reused unchanged across unrelated calculators","doesNotApplyWhen":"content is calculator-intent-specific and methodologically useful","severity":"BLOCKER","validationMethod":"editorial-specificity-review","requiredEvidence":["editorial-review"]},
+    {"id":"EDITORIAL_CONTENT_PADDED","appliesWhen":"repetition or low-value text is used to reach the word range","doesNotApplyWhen":"every section has distinct user value","severity":"BLOCKER","validationMethod":"editorial-density-review","requiredEvidence":["editorial-review"]},
+    {"id":"SCREENSHOT_REPORT","appliesWhen":"downloaded or printed report is a page screenshot","doesNotApplyWhen":"screenshots are supplementary QA evidence only","severity":"BLOCKER","validationMethod":"report-artifact-inspection","requiredEvidence":["report-render"]},
+    {"id":"FULL_PAGE_CAPTURE_REPORT","appliesWhen":"report captures the full public page instead of report semantics","doesNotApplyWhen":"isolated report document is used","severity":"BLOCKER","validationMethod":"report-boundary-review","requiredEvidence":["report-render"]},
+    {"id":"VIEWPORT_DEPENDENT_REPORT","appliesWhen":"report structure or completeness depends on browser viewport","doesNotApplyWhen":"A4 structured report is viewport independent","severity":"BLOCKER","validationMethod":"multi-viewport-report-test","requiredEvidence":["report-render-matrix"]},
+    {"id":"RASTER_ONLY_REPORT","appliesWhen":"final report has no selectable semantic text","doesNotApplyWhen":"raster graphics supplement selectable text","severity":"BLOCKER","validationMethod":"text-selection-test","requiredEvidence":["report-text-extraction"]},
+    {"id":"RECOMMENDATION_SLOT_MISSING","appliesWhen":"result experience omits CANONICAL_RESULT_RECOMMENDATION_SLOT","doesNotApplyWhen":"never for NEW_ASSET or MIGRATED_ASSET","severity":"BLOCKER","validationMethod":"result-order-map","requiredEvidence":["result-module-map"]},
     {"id":"MINIMAL_HERO","appliesWhen":"hero is the primary entry experience","doesNotApplyWhen":"embedded utility with approved compact-entry exception","severity":"BLOCKER","validationMethod":"hero-module-content-and-render-review","requiredEvidence":["hero-map","render"]},
     {"id":"GENERIC_INTRO_CARD","appliesWhen":"generic card substitutes the required hero system","doesNotApplyWhen":"card is a secondary introduction after a complete hero","severity":"MAJOR","validationMethod":"module-role-review","requiredEvidence":["page-anatomy"]},
     {"id":"FORM_WITHOUT_JOURNEY","appliesWhen":"class is not SIMPLE_SINGLE_STEP","doesNotApplyWhen":"simple classification is justified","severity":"BLOCKER","validationMethod":"form-class-vs-module-review","requiredEvidence":["form-classification","journey-map"]},
@@ -139,7 +215,13 @@
     {"id":"RESULT_CONTRACT_RESOLVED","passWhen":["class-required-result-modules-planned","memory-equivalence-planned","actions-evaluated","recommendation-state-resolved"]},
     {"id":"VISUAL_VALIDATION_STATUS_RESOLVED","passWhen":["status-is-passed-with-render-evidence-or-manual-approval-required-is-resolved"],"cannotPassAsFullStandard":["VISUAL_VALIDATION_NOT_EXECUTED"]},
     {"id":"ANTI_PATTERN_GATE","passWhen":["no-applicable-blocker","all-major-items-resolved-or-approved-exception"]},
-    {"id":"CONTENT_DEPTH_GATE","passWhen":["presence-only-not-used-as-evidence","faq-and-sources-consistent","related-links-governed"]}
+    {"id":"CONTENT_DEPTH_GATE","passWhen":["presence-only-not-used-as-evidence","faq-and-sources-consistent","related-links-governed"]},
+    {"id":"BRAND_THEME_RESOLVED","passWhen":["institutional-blue-is-primary-or-approved-variation-recorded","theme-render-evidence-exists"]},
+    {"id":"VISIBLE_UPDATED_AT_RESOLVED","passWhen":["governed-updated-at-metadata-exists","visible-pt-br-text-matches-metadata","date-not-invented"]},
+    {"id":"EDITORIAL_DEPTH_RESOLVED","passWhen":["scoped-word-count-is-between-800-and-1200","content-is-useful-specific-and-not-padded"]},
+    {"id":"RECOMMENDATION_SLOT_RESOLVED","passWhen":["stable-slot-exists-after-interpretation-before-memory","state-is-one-of-four-canonical-states","visibility-and-approved-source-rules-pass"]},
+    {"id":"ADAPTIVE_REPORT_CONTRACT_RESOLVED","passWhen":["all-seven-report-declarations-resolved-from-calculator-contract","output-is-a4-structured-selectable-and-isolated","no-prohibited-report-pattern"]},
+    {"id":"REPORT_RENDER_VALIDATED","passWhen":["copy-print-download-behaviors-are-distinct","each-applicable-action-has-functional-evidence","report-is-viewport-independent"]}
   ],
   "exceptionRules": {
     "allowedOnlyWhen":["module-not-applicable-by-contract","alternative-achieves-same-quality-floor","manual-exception-approved-with-evidence"],

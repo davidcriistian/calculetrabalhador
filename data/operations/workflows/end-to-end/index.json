@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-workflows",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -63,10 +63,10 @@
           "appliesWhen": ["assetType=calculator", "assetCompatibilityClass=NEW_ASSET-or-MIGRATED_ASSET"],
           "legacyBehavior": "LEGACY_ACCEPTED_PENDING_MIGRATION bypasses new-standard certification unless migration is requested",
           "input": ["governance-resolution", "calculator-experience-contract", "official-reference"],
-          "output": ["reference-study", "module-decomposition", "calculator-experience-plan", "result-contract-resolution", "recommendation-state", "visual-validation-plan"],
+          "output": ["reference-study", "module-decomposition", "calculator-experience-plan", "result-contract-resolution", "brand-theme-resolution", "visible-updated-at-resolution", "editorial-depth-resolution", "recommendation-slot-resolution", "adaptive-report-resolution", "report-render-plan", "visual-validation-plan"],
           "preconditions": ["calculator-blueprint-resolved", "calculator-gold-standard-resolved", "official-reference-resolved", "physical-reference-readable"],
-          "gates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED"],
-          "stopConditions": ["reference-declared-but-not-studied", "module-decomposition-missing", "literal-copy-risk", "form-class-unresolved", "result-class-unresolved", "memory-level-unresolved", "conditional-modules-undecided", "recommendation-state-unresolved", "calculator-experience-plan-not-approved"],
+          "gates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED"],
+          "stopConditions": ["reference-declared-but-not-studied", "module-decomposition-missing", "literal-copy-risk", "form-class-unresolved", "result-class-unresolved", "memory-level-unresolved", "unapproved-primary-theme", "visible-updated-at-unresolved", "editorial-depth-unresolved", "permanent-content-hidden-before-calculation", "recommendation-slot-unresolved", "adaptive-report-unresolved", "conditional-modules-undecided", "calculator-experience-plan-not-approved"],
           "rollback": "discard-calculator-experience-draft-evidence",
           "nextStates": ["REUSE_OR_CREATE_DECISION"]
         },
@@ -185,8 +185,8 @@
           "input": ["testing-report"],
           "output": ["validation-report"],
           "preconditions": ["validation-selected-by-scope"],
-          "gates": ["critical-validations-pass-or-not-applicable", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "result-experience-validation-resolved", "accessibility-validation-resolved"],
-          "stopConditions": ["critical-validation-failed", "applicable-blocker-anti-pattern", "result-experience-invalid"],
+          "gates": ["critical-validations-pass-or-not-applicable", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "REPORT_RENDER_VALIDATED", "result-experience-validation-resolved", "accessibility-validation-resolved"],
+          "stopConditions": ["critical-validation-failed", "applicable-blocker-anti-pattern", "result-experience-invalid", "report-render-invalid", "result-actions-not-distinct"],
           "rollback": "none",
           "nextStates": ["PREVIEW"]
         },
