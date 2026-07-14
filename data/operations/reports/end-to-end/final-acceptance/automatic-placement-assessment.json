@@ -1,0 +1,11 @@
+{
+  "id": "automatic-placement-assessment-final-acceptance",
+  "status": "accepted-with-guards",
+  "placements": [
+    {"assetType":"article","classification":"DETERMINISTIC_WITH_GUARDS","destinations":["physical page","data/articles.json","content-map","nucleus","cluster","category","Guide when approved","sitemap","links/CTAs"]},
+    {"assetType":"calculator","classification":"DETERMINISTIC_WITH_GUARDS","destinations":["physical page","data/tools.json","tools-map","Ferramentas via catalog","Home via showOnHome","nucleus/cluster when applicable","sitemap"]},
+    {"assetType":"guide","classification":"DETERMINISTIC_WITH_GUARDS","destinations":["physical page","nucleus projection","Home only when approved","category relation","sitemap"]},
+    {"assetType":"rule","classification":"DETERMINISTIC_WITH_GUARDS","destinations":["canonical rule","derived runtime","consumers","tests","stale guards"]}
+  ],
+  "manualParts": ["strategic editorial approval", "publication approval", "IndexNow real send", "new domain/nucleus decisions", "missing official reference resolution"]
+}

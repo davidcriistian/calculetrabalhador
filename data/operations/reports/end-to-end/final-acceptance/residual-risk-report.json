@@ -1,0 +1,11 @@
+{
+  "id": "residual-risk-report-final-acceptance",
+  "status": "accepted",
+  "risks": [
+    {"risk":"manual approval omitted by operator","severity":"high","guard":"workflow approval gates and failure hardening"},
+    {"risk":"browser-level visual issue not caught by static validation","severity":"medium","guard":"visual review for publication-sensitive changes"},
+    {"risk":"future report rerun overwrites evidence","severity":"low","guard":"use runId/timestamp or explicit no-op report behavior"},
+    {"risk":"new legal rule without canonical source","severity":"high","guard":"BLOCKED_BY_RULE_SOURCE"}
+  ],
+  "blockers": []
+}

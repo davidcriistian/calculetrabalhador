@@ -1,0 +1,17 @@
+{
+  "id": "single-source-of-truth-assessment-final-acceptance",
+  "status": "accepted-with-guards",
+  "domains": [
+    {"domain":"legal-rules","sourceOfTruth":"/data/rules/inss.json for INSS canonical rule","derived":["/data/tabelas-trabalhistas.json", "/assets/js/tabelas-trabalhistas.js"],"classification":"STRONG"},
+    {"domain":"blueprints","sourceOfTruth":"/data/blueprints/","derived":["asset specifications and generated pages"],"classification":"STRONG"},
+    {"domain":"gold-standards","sourceOfTruth":"/data/gold-standards/","derived":["operation acceptance criteria"],"classification":"STRONG"},
+    {"domain":"registry","sourceOfTruth":"/data/registry/","derived":["lightweight discovery indexes"],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"publishing-registry","sourceOfTruth":"/data/publishing/registry/","derived":["publication lifecycle entries"],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"relationships","sourceOfTruth":"approved relationship maps under /data/operations/reports/","derived":["Guide, cluster and asset distribution"],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"public-catalogs","sourceOfTruth":"/data/tools.json and /data/articles.json for public discovery","derived":["Ferramentas, Blog and page cards"],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"runtime-projections","sourceOfTruth":"canonical data plus transform scripts","derived":["runtime JSON/JS projections"],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"sitemap","sourceOfTruth":"/sitemap.xml after physical page and canonical validation","derived":[],"classification":"ACCEPTABLE_WITH_GUARDS"},
+    {"domain":"operation-reports","sourceOfTruth":"/data/operations/reports/","derived":["audit evidence"],"classification":"ACCEPTABLE_WITH_GUARDS"}
+  ],
+  "ambiguity": "No blocking ambiguity found; architecture uses canonical sources plus governed projections rather than one physical file for every concern."
+}

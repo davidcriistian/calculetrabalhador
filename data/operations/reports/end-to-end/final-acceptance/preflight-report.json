@@ -1,0 +1,16 @@
+{
+  "id": "preflight-report-final-acceptance",
+  "phase": "5.25",
+  "operation": "deliver-asset-end-to-end",
+  "mode": "READ_ONLY_FIRST_FINAL_ACCEPTANCE",
+  "executedAt": "2026-07-14",
+  "branch": "main",
+  "head": "4763c96742d668cd4a1a7dcd171cdf09055f8b62",
+  "originMain": "4763c96742d668cd4a1a7dcd171cdf09055f8b62",
+  "aheadBehind": "0/0",
+  "initialWorkingTree": "clean",
+  "initialStagingArea": "empty",
+  "initialDiff": [],
+  "gitDiffCheck": "pass",
+  "gitWriteExecuted": false
+}

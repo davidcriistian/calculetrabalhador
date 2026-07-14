@@ -1,0 +1,19 @@
+{
+  "id": "idempotency-assessment-final-acceptance",
+  "status": "IDEMPOTENCY_PASS_WITH_WARNINGS",
+  "evidence": [
+    "replay-pj validate-only",
+    "calculator creation replay/no-op",
+    "central rule generation second execution no-change",
+    "automation failure hardening duplicate asset/category/sitemap scenarios"
+  ],
+  "answers": {
+    "secondExecutionRecreatesAsset": false,
+    "duplicatesCatalog": false,
+    "duplicatesSitemap": false,
+    "duplicatesRelationship": false,
+    "silentlyOverwritesPage": false,
+    "generatesUnnecessaryChange": false
+  },
+  "warning": "Report reruns should keep runId/timestamp discipline or explicit no-op detection."
+}

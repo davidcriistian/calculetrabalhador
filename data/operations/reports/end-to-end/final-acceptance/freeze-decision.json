@@ -1,0 +1,15 @@
+{
+  "id": "freeze-decision-final-acceptance",
+  "status": "FREEZE_ACCEPTED",
+  "decision": "Freeze Phase 5 as the operational automation baseline.",
+  "rulesAfterFreeze": [
+    "Do not create a new Engine without proven need.",
+    "Do not create competing transversal systems.",
+    "Do not duplicate Manifest, Workflow or Playbook.",
+    "Reuse deliver-asset-end-to-end for supported new capabilities.",
+    "Apply incremental fixes to the existing mechanism.",
+    "Require new assets to prove reuse of the workflow.",
+    "Route new rules through the existing canonical model.",
+    "Phase 6 management panel is optional and does not block automated operation."
+  ]
+}

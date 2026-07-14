@@ -1,0 +1,16 @@
+{
+  "id": "canonical-workflow-resolution-final-acceptance",
+  "operationId": "deliver-asset-end-to-end",
+  "status": "CANONICAL_AND_RESOLVABLE",
+  "manifest": "/data/manifests/operations/end-to-end/index.json",
+  "playbook": "/data/operations/playbooks/end-to-end/index.json",
+  "workflow": "/data/operations/workflows/end-to-end/index.json",
+  "checklist": "/data/operations/checklists/end-to-end/index.json",
+  "reportEvidence": "/data/operations/reports/end-to-end/",
+  "supportedRequestTypes": ["CREATE_SINGLE_ASSET", "VALIDATE_ONLY"],
+  "supportedExecutionModes": ["DRY_RUN", "VALIDATE_ONLY", "CONTROLLED_EXECUTION"],
+  "approvalGuards": "present",
+  "publicationGuards": "present",
+  "indexNowGuards": "present",
+  "competingCanonicalOperationFound": false
+}

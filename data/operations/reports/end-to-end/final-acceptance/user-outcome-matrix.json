@@ -1,0 +1,29 @@
+{
+  "id": "user-outcome-matrix-final-acceptance",
+  "status": "passed-with-guards",
+  "outcomes": [
+    {
+      "request": "Crie um novo artigo para o nucleo PJ",
+      "classification": "PASS_WITH_GUARDS",
+      "covered": ["duplicate check", "Blueprint", "Gold Standard", "Registry", "relationships", "physical page", "catalog", "nucleus", "cluster", "Guide when applicable", "sitemap", "testing", "validation", "rollback", "idempotency"],
+      "guards": ["editorial decision", "publication approval", "IndexNow send approval"]
+    },
+    {
+      "request": "Crie uma nova calculadora",
+      "classification": "PASS_WITH_GUARDS",
+      "covered": ["duplicate check", "standard resolution", "physical page", "Registry", "Publishing", "tools catalog", "Ferramentas consumption", "Home flags", "sitemap", "calculation tests", "validation", "rollback", "existing calculator isolation"],
+      "guards": ["calculation source approval when legal rule is needed", "publication approval", "IndexNow send approval"]
+    },
+    {
+      "request": "Atualize uma regra central",
+      "classification": "PASS_WITH_GUARDS",
+      "covered": ["canonical source", "derived detection", "stale guard", "transform-rules", "semantic equivalence", "fallback stale guard", "unrelated-rule protection", "rollback"],
+      "guards": ["legal approval", "fallback regeneration/validation", "consumer regression for real change"]
+    },
+    {
+      "request": "Se a execucao falhar",
+      "classification": "PASS",
+      "covered": ["stop", "block publication", "partial state detection", "reconciliation", "rollback", "incomplete rollback detection", "false success prevention"]
+    }
+  ]
+}

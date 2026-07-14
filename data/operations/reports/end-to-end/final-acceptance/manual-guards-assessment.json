@@ -1,0 +1,7 @@
+{
+  "id": "manual-guards-assessment-final-acceptance",
+  "status": "accepted",
+  "healthyIntentionalGuards": ["publication approval", "legal rule approval", "editorial strategy", "new domain/nucleus decision", "IndexNow real send", "official reference resolution"],
+  "acceptableOperationalDebt": ["browser-level visual validation can require human/browser pass", "report runId/timestamp standard can be improved incrementally", "real fallback regeneration must remain guarded before legal/rule publication"],
+  "realBlockers": []
+}

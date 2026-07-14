@@ -1,0 +1,42 @@
+{
+  "id": "evidence-inventory-final-acceptance",
+  "phase": "5.25",
+  "status": "complete",
+  "evidence": {
+    "pjPilot": [
+      "/guias/pj/index.html",
+      "/data/registry/by-type/guide-guide-pj.json",
+      "/data/registry/by-cluster/clt-ou-pj.json",
+      "/data/operations/reports/publication-contract/pj/publication-contract.json",
+      "/data/operations/reports/end-to-end/replay-pj/validation-report.json"
+    ],
+    "canonicalWorkflow": [
+      "/data/manifests/operations/end-to-end/index.json",
+      "/data/operations/playbooks/end-to-end/index.json",
+      "/data/operations/workflows/end-to-end/index.json",
+      "/data/operations/checklists/end-to-end/index.json"
+    ],
+    "automatedArticleCreation": [
+      "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/index.html",
+      "/data/operations/reports/end-to-end/create-article-contrato-pj/operation-report.json",
+      "/data/operations/reports/asset/article/contrato-pj-o-que-analisar-antes-de-aceitar/"
+    ],
+    "automatedCalculatorCreation": [
+      "/calculadora-valor-hora-pj/index.html",
+      "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/final-operation-report.json",
+      "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/"
+    ],
+    "centralRules": [
+      "/data/rules/inss.json",
+      "/scripts/transform-rules.js",
+      "/data/operations/reports/end-to-end/inss-central-rule-reconciliation/",
+      "/data/operations/reports/end-to-end/inss-derived-runtime-hardening/",
+      "/data/operations/reports/end-to-end/controlled-central-rule-propagation-pilot/"
+    ],
+    "failureHardening": [
+      "/data/operations/reports/end-to-end/automation-failure-hardening/scenario-matrix.json",
+      "/data/operations/reports/end-to-end/automation-failure-hardening/audit-report.json",
+      "/data/operations/reports/end-to-end/automation-failure-hardening/mutation-guard-report.json"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "final-acceptance-report-phase-5",
+  "phase": "5.25",
+  "verdict": "OPERATIONAL AUTOMATION ACCEPTED WITH GUARDS",
+  "fase5Encerrada": true,
+  "reason": "The canonical end-to-end workflow is resolvable and evidenced by PJ replay, controlled article creation, controlled calculator creation, central rule propagation dry-run, idempotency, failure hardening and rollback readiness. Remaining manual guards are intentional.",
+  "blockers": [],
+  "guards": ["publication approval", "legal approval", "IndexNow send approval", "strategic editorial decisions", "browser visual review when needed"],
+  "mutationGuard": {
+    "publicPageMutationCount": 0,
+    "runtimeMutationCount": 0,
+    "legalRuleMutationCount": 0,
+    "calculatorMutationCount": 0,
+    "articleMutationCount": 0,
+    "catalogMutationCount": 0,
+    "sitemapMutationCount": 0,
+    "indexNowRealSendCount": 0,
+    "gitWriteCount": 0
+  }
+}

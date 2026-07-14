@@ -1,0 +1,12 @@
+{
+  "id": "rollback-readiness-report-final-acceptance",
+  "status": "ready-with-guards",
+  "evidence": [
+    "article rollback plans",
+    "calculator rollback plan",
+    "publication contract rollback",
+    "automation failure hardening partial and complete rollback scenarios"
+  ],
+  "guarantees": ["scope-specific rollback", "partial rollback detection", "complete rollback evidence", "post-rollback validation expectations"],
+  "manualGuard": "Rollback execution for public assets should follow approved rollback scope and avoid unrelated changes."
+}

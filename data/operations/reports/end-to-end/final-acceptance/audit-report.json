@@ -1,0 +1,13 @@
+{
+  "id": "audit-report-final-acceptance",
+  "phase": "5.25",
+  "status": "completed",
+  "result": "OPERATIONAL AUTOMATION ACCEPTED WITH GUARDS",
+  "conclusion": "Phase 5 evidence supports accepting the operational automation baseline with guards.",
+  "workflowCanonical": "CANONICAL_AND_RESOLVABLE",
+  "idempotency": "IDEMPOTENCY_PASS_WITH_WARNINGS",
+  "failureSafety": "FAILURE_SAFETY_PASS",
+  "freezeDecision": "FREEZE_ACCEPTED",
+  "realBlockers": [],
+  "warnings": ["Manual guards remain intentional and must not be bypassed."]
+}

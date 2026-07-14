@@ -1,0 +1,17 @@
+{
+  "id": "capability-matrix-final-acceptance",
+  "phase": "5.25",
+  "capabilities": [
+    {"capability":"CREATE_SINGLE_ASSET","classification":"PROVEN_IN_CONTROLLED_EXECUTION","evidence":"article and calculator controlled creations"},
+    {"capability":"CREATE_ASSET_WITH_RELATIONSHIPS","classification":"PROVEN_IN_CONTROLLED_EXECUTION","evidence":"article:contrato-pj and calculator:calculadora-valor-hora-pj relationship maps"},
+    {"capability":"CREATE_CLUSTER_ECOSYSTEM","classification":"PROVEN_BY_EXISTING_EVIDENCE","evidence":"cluster clt-ou-pj draft, approval and publication contract evidence"},
+    {"capability":"CREATE_NUCLEUS_ECOSYSTEM","classification":"PROVEN_BY_EXISTING_EVIDENCE","evidence":"nucleus pj draft and Guide PJ evidence"},
+    {"capability":"UPDATE_EXISTING_ASSET","classification":"PROVEN_IN_CONTROLLED_EXECUTION","evidence":"controlled existing article updates and CTA reconciliation reports"},
+    {"capability":"UPDATE_CENTRAL_RULE","classification":"PROVEN_IN_DRY_RUN","evidence":"controlled central rule propagation pilot; real legal mutation still guarded"},
+    {"capability":"MIGRATE_TO_NEW_STANDARD","classification":"SUPPORTED_WITH_GUARDS","evidence":"Migration, Testing, Validation and rollback protocols exist; scale migration not executed"},
+    {"capability":"PUBLISH_APPROVED_ASSETS","classification":"PROVEN_IN_CONTROLLED_EXECUTION","evidence":"calculator and article publication/catalog/sitemap execution with manual guards"},
+    {"capability":"VALIDATE_ONLY","classification":"PROVEN_IN_DRY_RUN","evidence":"replay-pj validate-only reports"},
+    {"capability":"ROLLBACK","classification":"PROVEN_BY_EXISTING_EVIDENCE","evidence":"rollback plans plus failure hardening rollback partial/complete scenarios"}
+  ],
+  "overall": "OPERATIONALLY_READY_WITH_GUARDS"
+}
