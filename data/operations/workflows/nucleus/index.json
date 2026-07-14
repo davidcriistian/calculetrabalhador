@@ -1,11 +1,11 @@
 {
   "id": "nucleus-operation-workflows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Declarative workflows for nucleus operations.",
@@ -43,6 +43,14 @@
       "workflowId": "publish-nucleus-workflow",
       "operationId": "publish-nucleus",
       "steps": ["manifest", "lifecycle-check", "gate-check", "release-specification", "deploy-plan", "sitemap-plan", "indexing-plan", "rollback-plan", "publication-log-template", "declarative-status-plan", "report"],
+      "approvalRequired": true,
+      "rollbackRequired": true
+    },
+    {
+      "workflowId": "progressive-nucleus-provisioning-workflow",
+      "operationId": "progressive-nucleus-provisioning",
+      "steps": ["resolve-theme", "resolve-existing-nucleus", "resolve-semantic-duplication", "register-nucleus-candidate-for-first-calculator", "wait-for-first-eligible-article", "confirm-unambiguous-taxonomy", "provision-minimum-ecosystem", "link-calculator-and-first-article", "configure-category-and-guide-roles", "configure-nucleus-article-section", "validate-mobile-carousel-limit", "validate-desktop-grid-limit", "validate-view-all-destination", "validate-no-duplicate-section", "prepare-rollback", "report"],
+      "manualDecisionWhen": ["ambiguous-topic", "slug-collision", "domain-conflict", "equivalent-nucleus-possible"],
       "approvalRequired": true,
       "rollbackRequired": true
     }

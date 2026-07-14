@@ -4,6 +4,7 @@
   const NUCLEI_URL = '/data/brain/nuclei.json';
   const LIMIT_HOME_TOOLS = 9;
   const LIMIT_ARTICLES = 6;
+  const LIMIT_NUCLEUS_DESKTOP = 9;
 
   const $ = (selector) => document.querySelector(selector);
   const byOrder = (field) => (a, b) => Number(a[field] ?? 999) - Number(b[field] ?? 999);
@@ -106,11 +107,11 @@
     }).join('');
   };
 
-  const renderArticleCard = (article) => `
+  const renderArticleCard = (article, badgeLabel = '') => `
     <a class="ct-article-anchor" href="${escapeHtml(normalizeHref(article.slug))}">
       <article class="ct-article-card">
         <div class="ct-article-meta">
-          <span class="ct-article-category" style="color:${escapeHtml(article.cor || '#1d4ed8')};background:${escapeHtml(article.corBg || '#dbeafe')}">${escapeHtml(article.category || 'CLT')}</span>
+          <span class="ct-article-category" style="color:${escapeHtml(article.cor || '#1d4ed8')};background:${escapeHtml(article.corBg || '#dbeafe')}">${escapeHtml(badgeLabel || article.category || 'CLT')}</span>
           <span class="ct-article-time">⏱ ${escapeHtml(article.tempo || '')} de leitura</span>
         </div>
         <h3>${escapeHtml(article.title)}</h3>
@@ -135,39 +136,31 @@
     </section>
   `;
 
-  const renderGuideCard = (guide) => `
-    <a class="ct-article-anchor" href="${escapeHtml(normalizeHref(guide.url))}">
-      <article class="ct-article-card" data-guide-asset-id="${escapeHtml(guide.assetId || guide.id || '')}">
-        <div class="ct-article-meta">
-          <span class="ct-article-category">Guia</span>
-          <span class="ct-article-time">${escapeHtml(guide.name || guide.slug || '')}</span>
-        </div>
-        <h3>${escapeHtml(guide.title)}</h3>
-        <p>${escapeHtml(guide.description)}</p>
-        <span class="ct-article-read">Abrir guia &rarr;</span>
-      </article>
-    </a>
-  `;
-
-  const renderGuideSection = (guides) => {
-    if (!guides.length) return '';
+  const renderNucleusArticleSection = ({ nucleus, config, articles }) => {
+    const sectionId = config.sectionId || `nucleus-articles-${nucleus.slug || nucleus.id}`;
+    const headingId = `${sectionId}-title`;
+    const instructionId = `${sectionId}-instructions`;
+    const visibleArticles = articles.slice(0, LIMIT_NUCLEUS_DESKTOP);
+    if (!visibleArticles.length) return '';
 
     return `
-      <section class="ct-article-section" aria-labelledby="home-guides-title">
+      <section class="ct-article-section ct-nucleus-article-section" data-section-type="NUCLEUS_ARTICLE_SECTION" data-section-id="${escapeHtml(sectionId)}" data-nucleus-id="${escapeHtml(nucleus.id)}" data-source="GOVERNED_NUCLEUS_ARTICLES" data-mobile-mode="CAROUSEL" data-mobile-limit="6" data-desktop-mode="GRID" data-desktop-limit="9" aria-labelledby="${escapeHtml(headingId)}">
         <div class="ct-article-heading">
           <div>
-            <p class="ct-article-eyebrow">Guias</p>
-            <h2 class="ct-article-title" id="home-guides-title">Guias por tema</h2>
+            <p class="ct-article-eyebrow">${escapeHtml(config.label || nucleus.title)}</p>
+            <h2 class="ct-article-title" id="${escapeHtml(headingId)}">${escapeHtml(config.title || nucleus.title)}</h2>
           </div>
+          <a class="ct-article-all" href="${escapeHtml(normalizeHref(config.viewAllUrl || nucleus.categoryUrl))}">Ver todos &rarr;</a>
         </div>
-        <div class="ct-article-grid">
-          ${guides.map(renderGuideCard).join('')}
+        <p class="sr-only" id="${escapeHtml(instructionId)}">No celular, deslize horizontalmente para navegar pelos artigos.</p>
+        <div class="ct-article-grid ct-nucleus-article-grid" role="region" tabindex="0" aria-label="Artigos de ${escapeHtml(nucleus.name)}" aria-describedby="${escapeHtml(instructionId)}">
+          ${visibleArticles.map((article) => renderArticleCard(article, nucleus.name)).join('')}
         </div>
       </section>
     `;
   };
 
-  const renderArticles = (articles, guides = []) => {
+  const renderArticles = (articles, nuclei = []) => {
     const mount = $('#articlesMount');
     if (!mount) return;
 
@@ -176,15 +169,13 @@
       .sort(byOrder('homeOrder'))
       .slice(0, LIMIT_ARTICLES);
 
-    const cltGuides = articles
-      .filter((article) => article.showOnCltGuide === true)
-      .sort(byOrder('cltGuideOrder'))
-      .slice(0, LIMIT_ARTICLES);
+    const nucleusSections = window.CTNuclei
+      ? window.CTNuclei.getHomeArticleSections(articles, nuclei)
+      : [];
 
     const sections = [
-      renderGuideSection(guides),
       renderArticleSection({ eyebrow: 'Blog', title: 'Últimos Artigos', articles: latest }),
-      renderArticleSection({ eyebrow: 'Guias CLT', title: 'Guias CLT', articles: cltGuides })
+      ...nucleusSections.map(renderNucleusArticleSection)
     ].filter(Boolean);
 
     mount.innerHTML = sections.join('');
@@ -240,14 +231,14 @@
     });
   };
 
-  const loadHomeGuides = async () => {
+  const loadHomeNuclei = async () => {
     if (!window.CTNuclei) return [];
 
     try {
       const nuclei = await fetchJsonItems(NUCLEI_URL);
-      return window.CTNuclei.getHomeGuides(nuclei);
+      return nuclei;
     } catch (error) {
-      console.warn('Nao foi possivel carregar os guias da Home.', error);
+      console.warn('Nao foi possivel carregar os nucleos da Home.', error);
       return [];
     }
   };
@@ -255,26 +246,31 @@
   const init = async () => {
     setupMenu();
 
-    try {
-      const [tools, articles, guides] = await Promise.all([
-        fetchJson(TOOLS_URL),
-        fetchJson(ARTICLES_URL),
-        loadHomeGuides()
-      ]);
+    const [toolsResult, articlesResult, nucleiResult] = await Promise.allSettled([
+      fetchJson(TOOLS_URL),
+      fetchJson(ARTICLES_URL),
+      loadHomeNuclei()
+    ]);
 
-      const homeTools = tools
-        .filter((tool) => tool.published === true && tool.showOnHome === true)
-        .sort(byOrder('homeOrder'))
-        .slice(0, LIMIT_HOME_TOOLS);
+    const tools = toolsResult.status === 'fulfilled' ? toolsResult.value : [];
+    const articles = articlesResult.status === 'fulfilled' ? articlesResult.value : [];
+    const nuclei = nucleiResult.status === 'fulfilled' ? nucleiResult.value : [];
 
-      renderTools(homeTools);
-      renderArticles(articles, guides);
-      updateStats(tools, articles);
-      setupSearch(homeTools);
+    const homeTools = tools
+      .filter((tool) => tool.published === true && tool.showOnHome === true)
+      .sort(byOrder('homeOrder'))
+      .slice(0, LIMIT_HOME_TOOLS);
+
+    renderTools(homeTools);
+    renderArticles(articles, nuclei);
+    updateStats(tools, articles);
+    setupSearch(homeTools);
+
+    if ([toolsResult, articlesResult, nucleiResult].every((result) => result.status === 'fulfilled')) {
       document.documentElement.dataset.homeRefactorV8 = 'ready';
-    } catch (error) {
-      console.warn('Nao foi possivel carregar a Home refatorada V5.', error);
-      document.documentElement.dataset.homeRefactorV8 = 'error';
+    } else {
+      console.warn('A Home foi carregada em modo degradado porque um catalogo falhou.');
+      document.documentElement.dataset.homeRefactorV8 = 'degraded';
     }
   };
 

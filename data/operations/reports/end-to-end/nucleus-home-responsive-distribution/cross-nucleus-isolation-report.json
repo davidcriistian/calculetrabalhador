@@ -1,0 +1,1 @@
+{"status":"PASS","pjCollection":7,"cltCollection":6,"overlap":0,"pjRule":"articleFilter.slugs","cltRule":"articleFilter.flag=showOnCltGuide","textHeuristics":false}

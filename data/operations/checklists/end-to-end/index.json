@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -93,6 +93,15 @@
     "panelMetadata": ["minimum-fields-only", "no-equivalent-field-duplicates", "validation-status-resolved", "publication-status-resolved"],
     "validator": ["article-contract-valid", "fixtures-pass", "heuristics-labeled", "human-review-items-recorded"]
   },
+  "nucleusHomeDistributionStandard": {
+    "roles": ["Guide-asset-preserved", "category-page-resolves-complete-list", "Home-label-represents-NUCLEUS_ARTICLE_SECTION", "no-isolated-Guide-card"],
+    "source": ["single-governed-collection", "published-and-resolvable-only", "deduplicated-before-limit", "deterministic-order-before-limit", "cross-nucleus-isolation"],
+    "mobile": ["CAROUSEL", "maximum-six-visible-cards", "horizontal-swipe-or-scroll", "no-long-vertical-grid", "no-page-overflow"],
+    "desktop": ["GRID", "maximum-nine-visible-cards", "no-primary-carousel-controls", "balanced-columns", "no-page-overflow"],
+    "eligibility": ["hide-empty-section", "first-calculator-registers-candidate-only", "first-article-enables-section-after-provisioning", "future-articles-reuse-section"],
+    "guards": ["ambiguous-topic-is-MANUAL_DECISION_REQUIRED", "no-duplicate-section", "no-duplicate-card-fill", "view-all-role-resolved"],
+    "gates": ["NUCLEUS_EXISTENCE_RESOLVED", "NUCLEUS_CANDIDATE_RESOLVED", "FIRST_ARTICLE_FOR_NUCLEUS_DETECTED", "NUCLEUS_PROVISIONING_RESOLVED", "NUCLEUS_HOME_SECTION_ELIGIBILITY_RESOLVED", "NUCLEUS_ARTICLE_SECTION_RESOLVED", "RESPONSIVE_PRESENTATION_RESOLVED", "MOBILE_CAROUSEL_LIMIT_RESOLVED", "DESKTOP_GRID_LIMIT_RESOLVED", "VIEW_ALL_DESTINATION_RESOLVED", "DUPLICATE_HOME_SECTION_CHECKED"]
+  },
   "after": [
     "record-consolidated-report",
     "record-created-updated-reused-skipped-assets",
@@ -133,5 +142,15 @@
     ,"article-cluster-position-unresolved"
     ,"article-internal-link-plan-unresolved"
     ,"article-bidirectional-linking-unresolved"
+    ,"isolated-guide-card-on-home"
+    ,"empty-nucleus-home-section"
+    ,"text-heuristic-article-filter"
+    ,"duplicate-nucleus-home-section"
+    ,"mobile-nucleus-section-not-carousel"
+    ,"desktop-nucleus-section-not-grid"
+    ,"mobile-more-than-six-home-articles"
+    ,"desktop-more-than-nine-home-articles"
+    ,"separate-content-sources-by-viewport"
+    ,"ambiguous-nucleus-provisioning"
   ]
 }

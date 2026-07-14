@@ -1,6 +1,6 @@
 {
   "id": "validation-checklist",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -36,7 +36,13 @@
     { "id": "article-official-sources", "required": true, "severity": "critical", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["source-map", "source-verification"] },
     { "id": "article-cluster-position", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["relationship-map", "cluster-position-resolution"] },
     { "id": "article-internal-links", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["internal-link-plan", "link-check"] },
-    { "id": "article-bidirectional-links", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["bidirectional-link-resolution", "orphan-risk-check"] }
+    { "id": "article-bidirectional-links", "required": true, "severity": "high", "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"], "evidence": ["bidirectional-link-resolution", "orphan-risk-check"] },
+    { "id": "nucleus-home-role-separation", "required": true, "severity": "critical", "evidence": ["home-current-state-audit", "validator-report"] },
+    { "id": "nucleus-home-source-and-isolation", "required": true, "severity": "critical", "evidence": ["pj-section-resolution", "cross-nucleus-isolation-report"] },
+    { "id": "nucleus-home-responsive-presentation", "required": true, "severity": "high", "evidence": ["responsive-presentation-contract", "visual-validation-report"] },
+    { "id": "nucleus-home-empty-and-view-all", "required": true, "severity": "high", "evidence": ["empty-section-contract", "view-all-destination-report"] },
+    { "id": "progressive-nucleus-provisioning", "required": true, "severity": "critical", "evidence": ["progressive-nucleus-provisioning-contract", "fixture-results"] },
+    { "id": "nucleus-home-idempotency", "required": true, "severity": "high", "evidence": ["idempotency-report", "validator-report"] }
   ],
   "notes": [
     "Checklist items define compliance expectations and do not perform validation."

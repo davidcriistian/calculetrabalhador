@@ -1,16 +1,20 @@
 {
   "id": "nucleus-blueprint-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
   "description": "Declarative model for future nucleus organization without creating real nuclei.",
   "blueprintType": "nucleus",
   "relationshipAuthority": "/docs/PLATFORM_ARCHITECTURE.md#domain-relationship-model",
+  "distributionContract": {
+    "reference": "/data/blueprints/nucleus/home-distribution.contract.json",
+    "version": "1.0.0"
+  },
   "identity": {
     "id": "example-nucleus",
     "name": "Example Nucleus",
@@ -110,6 +114,24 @@
     "sitemap": "controlled-by-publishing",
     "indexing": "controlled-by-publishing",
     "publicationLog": []
+  },
+  "homeDistribution": {
+    "sectionType": "NUCLEUS_ARTICLE_SECTION",
+    "sectionIdPattern": "nucleus-articles-{nucleusSlug}",
+    "source": "GOVERNED_NUCLEUS_ARTICLES",
+    "eligibility": "HAS_PUBLISHED_ARTICLES",
+    "emptyBehavior": "DO_NOT_RENDER",
+    "viewAllRole": "CATEGORY_PAGE",
+    "responsivePresentation": {
+      "mobile": { "mode": "CAROUSEL", "itemLimit": 6, "navigation": "HORIZONTAL_SWIPE_OR_SCROLL" },
+      "desktop": { "mode": "GRID", "itemLimit": 9, "navigation": "NONE_FOR_VISIBLE_GRID" }
+    }
+  },
+  "progressiveProvisioning": {
+    "firstCalculator": "NUCLEUS_CANDIDATE_WITHOUT_HOME_SECTION",
+    "firstArticle": "PROVISION_MINIMUM_ECOSYSTEM_WHEN_UNAMBIGUOUS",
+    "futureArticles": "REUSE_EXISTING_NUCLEUS_ARTICLE_SECTION",
+    "ambiguousTopic": "MANUAL_DECISION_REQUIRED"
   },
   "operationalBoundaries": {
     "createsNuclei": false,

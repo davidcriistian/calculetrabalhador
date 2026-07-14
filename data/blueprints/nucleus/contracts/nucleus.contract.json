@@ -1,11 +1,11 @@
 {
   "id": "blueprint-contract-nucleus",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/blueprints/nucleus/schemas/nucleus-blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Productivity Phase 3.2 - Nucleus Blueprint + Guide Blueprint",
   "name": "Nucleus Blueprint Contract",
@@ -15,7 +15,10 @@
     "declare primaryDomain and primaryGuide",
     "reference clusters, calculators, articles, downloads, glossary, FAQs, products, offers and CTAs by identifier",
     "model lifecycle, approval, publishing, testing and validation status",
-    "model growth planning without real counts"
+    "model growth planning without real counts",
+    "distinguish Guide asset, category page and nucleus article section",
+    "define mobile carousel and desktop grid from one governed article source",
+    "govern progressive provisioning from nucleus candidate through first and future articles"
   ],
   "nonResponsibilities": [
     "create real nuclei",
@@ -28,7 +31,8 @@
   ],
   "dependencies": [
     "/docs/PLATFORM_ARCHITECTURE.md",
-    "/data/blueprints/guide/index.json"
+    "/data/blueprints/guide/index.json",
+    "/data/blueprints/nucleus/home-distribution.contract.json"
   ],
   "notes": [
     "Nucleus Blueprint references assets by id only.",

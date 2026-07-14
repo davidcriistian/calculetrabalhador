@@ -1,6 +1,6 @@
 {
   "id": "article-blueprint-template",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/blueprints/schemas/article-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "consumed-by-article-automation",
@@ -27,6 +27,14 @@
     "clusterBlueprintReference": "/data/blueprints/cluster/index.json",
     "standaloneModelStillValid": false,
     "missingClusterDecision": "MANUAL_DECISION_REQUIRED"
+  },
+  "nucleusProvisioning": {
+    "detectFirstArticleForCandidate": true,
+    "provisionOnlyWhenTopicIsUnambiguous": true,
+    "firstArticleAction": "PROVISION_MINIMUM_NUCLEUS_ECOSYSTEM",
+    "existingNucleusAction": "REUSE_EXISTING_NUCLEUS_ARTICLE_SECTION",
+    "ambiguousTopicAction": "MANUAL_DECISION_REQUIRED",
+    "requiredGates": ["NUCLEUS_EXISTENCE_RESOLVED", "NUCLEUS_CANDIDATE_RESOLVED", "FIRST_ARTICLE_FOR_NUCLEUS_DETECTED", "NUCLEUS_PROVISIONING_RESOLVED", "NUCLEUS_HOME_SECTION_ELIGIBILITY_RESOLVED", "NUCLEUS_ARTICLE_SECTION_RESOLVED", "RESPONSIVE_PRESENTATION_RESOLVED", "VIEW_ALL_DESTINATION_RESOLVED", "DUPLICATE_HOME_SECTION_CHECKED"]
   },
   "identity": {
     "assetId": "article:example-article",

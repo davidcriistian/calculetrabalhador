@@ -1,11 +1,11 @@
 {
   "id": "nucleus-operation-playbooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Reusable playbooks for future nucleus operations.",
@@ -130,6 +130,17 @@
       ],
       "outputs": ["releaseSpecification", "deployPlan", "sitemapPlan", "indexingPlan", "rollbackPlan", "publicationLogTemplate", "operationReport"],
       "forbiddenActions": ["modify-sitemap-xml", "execute-git", "execute-deploy", "call-indexnow", "create-public-page", "publish-now"]
+    },
+    {
+      "operationId": "progressive-nucleus-provisioning",
+      "objective": "Provision a minimum nucleus ecosystem only after an unambiguous first article confirms a prior thematic calculator candidate.",
+      "stages": {
+        "firstCalculator": ["resolve-theme", "check-existing-nucleus", "check-semantic-duplicate", "register-NUCLEUS_CANDIDATE", "do-not-create-home-section"],
+        "firstArticle": ["resolve-related-calculator", "confirm-candidate-theme", "require-unambiguous-taxonomy", "provision-domain-nucleus-guide-category-relationships", "link-calculator-and-article", "enable-NUCLEUS_ARTICLE_SECTION", "validate-home", "prepare-rollback"],
+        "futureArticles": ["resolve-nucleusId", "update-governed-catalog", "reuse-existing-section", "deduplicate", "preserve-order", "apply-responsive-limits", "validate-mobile-and-desktop"]
+      },
+      "gates": ["NUCLEUS_EXISTENCE_RESOLVED", "NUCLEUS_CANDIDATE_RESOLVED", "FIRST_ARTICLE_FOR_NUCLEUS_DETECTED", "NUCLEUS_PROVISIONING_RESOLVED", "NUCLEUS_HOME_SECTION_ELIGIBILITY_RESOLVED", "NUCLEUS_ARTICLE_SECTION_RESOLVED", "RESPONSIVE_PRESENTATION_RESOLVED", "MOBILE_CAROUSEL_LIMIT_RESOLVED", "DESKTOP_GRID_LIMIT_RESOLVED", "VIEW_ALL_DESTINATION_RESOLVED", "DUPLICATE_HOME_SECTION_CHECKED"],
+      "forbiddenActions": ["infer-nucleus-from-keyword-only", "create-empty-home-section", "create-isolated-guide-card-on-home", "duplicate-section", "use-separate-viewport-sources", "fill-layout-with-duplicate-cards"]
     }
   ],
   "lifecycle": {

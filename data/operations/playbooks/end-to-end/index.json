@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-playbooks",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -228,6 +228,15 @@
       ]
     }
   ],
+  "nucleusHomeDistribution": {
+    "firstCalculator": "Register NUCLEUS_CANDIDATE; do not create Guide card or empty Home section.",
+    "firstArticle": "Provision the minimum ecosystem only when taxonomy is unambiguous, then enable the governed nucleus article section.",
+    "futureArticle": "Reuse the same section, refresh the governed collection, deduplicate, preserve ordering and viewport limits.",
+    "presentation": { "mobile": "CAROUSEL_MAX_6", "desktop": "GRID_MAX_9", "source": "SINGLE_GOVERNED_COLLECTION" },
+    "viewAll": "Prefer the valid public category URL for complete editorial listing.",
+    "empty": "DO_NOT_RENDER",
+    "ambiguity": "MANUAL_DECISION_REQUIRED"
+  },
   "duplicationAudit": {
     "createAsset": "referenced-not-duplicated",
     "nucleusOperations": "referenced-not-duplicated",

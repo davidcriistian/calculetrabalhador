@@ -1,6 +1,6 @@
 {
   "id": "validation-rules",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -107,6 +107,36 @@
       "blocksApproval": false,
       "appliesTo": ["LEGACY_ARTICLE"],
       "description": "Existing articles remain LEGACY_ACCEPTED_PENDING_MIGRATION unless retrofit is explicitly approved."
+    },
+    {
+      "id": "nucleus-home-role-separation",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Guide assets, category pages and NUCLEUS_ARTICLE_SECTION must keep distinct roles; isolated Guide cards on Home are forbidden."
+    },
+    {
+      "id": "nucleus-home-single-governed-source",
+      "required": true,
+      "blocksApproval": true,
+      "description": "One deduplicated and deterministically ordered governed collection must feed mobile and desktop."
+    },
+    {
+      "id": "nucleus-home-responsive-limits",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Mobile is a horizontal carousel with at most six visible cards; desktop is a grid with at most nine."
+    },
+    {
+      "id": "nucleus-home-empty-hidden",
+      "required": true,
+      "blocksApproval": true,
+      "description": "A nucleus without eligible published articles must not render a public Home section."
+    },
+    {
+      "id": "progressive-nucleus-provisioning-guarded",
+      "required": true,
+      "blocksApproval": true,
+      "description": "The first calculator registers a candidate only; the first article may provision when unambiguous; future articles reuse the section; ambiguity requires manual decision."
     }
   ],
   "notes": [

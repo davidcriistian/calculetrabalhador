@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -289,6 +289,9 @@
     ,"articleEditorialContract": "/data/blueprints/article/editorial-automation.contract.json"
     ,"articleValidator": "/scripts/validate-article-automation.js"
     ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
+    ,"nucleusHomeDistributionContract": "/data/blueprints/nucleus/home-distribution.contract.json"
+    ,"nucleusHomeValidator": "/scripts/validate-nucleus-home-distribution.js"
+    ,"nucleusHomeFixtures": "/data/pos/validation/nucleus-home-distribution-fixtures.json"
   },
   "restrictions": [
     "Do not execute every phase blindly.",
@@ -306,6 +309,11 @@
     ,"Do not accept screenshot, full-page capture, viewport-dependent or raster-only reports."
     ,"Do not generate a NEW_ARTICLE or MIGRATED_ARTICLE with unresolved editorial, freshness, source, cluster or bidirectional-link gates."
     ,"Do not apply the new article standard retroactively without explicit migration scope."
+    ,"Do not represent a Guide asset as an isolated Home card."
+    ,"Do not create an empty nucleus Home section before the first eligible article."
+    ,"Do not use separate content sources or arbitrary order by viewport."
+    ,"Do not exceed six visible nucleus articles on mobile or nine on desktop."
+    ,"Do not provision a nucleus from an ambiguous topic; return MANUAL_DECISION_REQUIRED."
   ],
   "finalStatuses": [
     "SUCCESS_NO_PUBLIC_CHANGE",

@@ -1,0 +1,1 @@
+{"status":"PASS","fixtureFile":"/data/pos/validation/nucleus-home-distribution-fixtures.json","scenarioCount":24,"matched":24,"mismatches":0,"covered":["role separation","responsive limits","empty state","cross-nucleus isolation","governed filter","candidate provisioning","ambiguity","idempotent reuse","fail-safe"]}

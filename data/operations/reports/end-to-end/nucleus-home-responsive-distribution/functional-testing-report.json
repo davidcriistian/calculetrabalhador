@@ -1,0 +1,1 @@
+{"status":"PASS","checks":["7 governed PJ articles","mobile max 6","desktop max 9","no duplicates","physical routes","published-at ordering","same source","empty hidden","invalid articles rejected","cross-nucleus isolation","articles catalog failure","nuclei catalog failure"],"failed":0}

@@ -1,11 +1,11 @@
 {
   "id": "nucleus-operation-checklists",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Reusable checklists for nucleus operations.",
@@ -20,6 +20,8 @@
     "confirm-guide-blueprint",
     "confirm-gold-standard",
     "confirm-reference-system-when-applicable",
+    "confirm-guide-category-and-home-section-role-separation",
+    "confirm-nucleus-candidate-and-first-article-state",
     "confirm-blocked-production-files"
   ],
   "execution": [
@@ -33,6 +35,13 @@
     "track-estimated-context",
     "track-estimated-credits",
     "collect-evidence"
+    ,"resolve-one-governed-article-source-before-viewport-limits"
+    ,"confirm-mobile-carousel-at-most-six"
+    ,"confirm-desktop-grid-at-most-nine"
+    ,"confirm-empty-section-does-not-render"
+    ,"confirm-view-all-points-to-editorial-listing-role"
+    ,"confirm-no-duplicate-nucleus-section"
+    ,"require-manual-decision-for-ambiguous-topic"
   ],
   "postOperation": [
     "confirm-json-validity",
@@ -40,6 +49,10 @@
     "confirm-no-production-change",
     "confirm-no-public-catalog-change",
     "confirm-no-url-or-sitemap-change",
+    "confirm-cross-nucleus-isolation",
+    "confirm-first-calculator-does-not-create-public-section",
+    "confirm-first-article-controls-section-eligibility",
+    "confirm-future-articles-reuse-section",
     "prepare-operation-report",
     "record-warnings-and-failures",
     "define-next-action"

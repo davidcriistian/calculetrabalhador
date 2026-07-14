@@ -1,6 +1,6 @@
 {
   "id": "calculator-blueprint-template",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -21,6 +21,13 @@
     "role": "component-of-cluster",
     "clusterBlueprintReference": "/data/blueprints/cluster/index.json",
     "standaloneModelStillValid": true
+  },
+  "nucleusCandidatePolicy": {
+    "whenCompatibleNucleusIsMissing": "REGISTER_NUCLEUS_CANDIDATE",
+    "createHomeSection": false,
+    "createGuideCardOnHome": false,
+    "ambiguousTopicAction": "MANUAL_DECISION_REQUIRED",
+    "requiredGates": ["NUCLEUS_EXISTENCE_RESOLVED", "NUCLEUS_CANDIDATE_RESOLVED"]
   },
   "identity": {
     "name": "Example Calculator",

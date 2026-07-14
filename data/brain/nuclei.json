@@ -7,6 +7,25 @@
       "slug": "clt",
       "title": "Guia CLT",
       "description": "Conteudos e calculadoras sobre direitos trabalhistas, rescisao, ferias, 13o salario e jornada de trabalho.",
+      "categoryUrl": "/blog/categoria/clt/",
+      "articleFilter": {
+        "flag": "showOnCltGuide"
+      },
+      "homeSection": {
+        "sectionType": "NUCLEUS_ARTICLE_SECTION",
+        "sectionId": "nucleus-articles-clt",
+        "label": "Guia CLT",
+        "title": "Guia CLT",
+        "viewAllUrl": "/blog/categoria/clt/",
+        "enabled": true,
+        "eligibility": "HAS_PUBLISHED_ARTICLES",
+        "source": "GOVERNED_NUCLEUS_ARTICLES",
+        "ordering": { "strategy": "PUBLISHED_AT_DESC" },
+        "responsivePresentation": {
+          "mobile": { "mode": "CAROUSEL", "itemLimit": 6, "navigation": "HORIZONTAL_SWIPE_OR_SCROLL" },
+          "desktop": { "mode": "GRID", "itemLimit": 9, "navigation": "NONE_FOR_VISIBLE_GRID" }
+        }
+      },
       "status": "active",
       "showOnHome": true,
       "showOnBlog": true,
@@ -56,6 +75,21 @@
           "clt-ou-pj-vale-a-pena-em-2026",
           "contrato-pj-o-que-analisar-antes-de-aceitar"
         ]
+      },
+      "homeSection": {
+        "sectionType": "NUCLEUS_ARTICLE_SECTION",
+        "sectionId": "nucleus-articles-pj",
+        "label": "Guia PJ",
+        "title": "Guia PJ",
+        "viewAllUrl": "/blog/categoria/pj/",
+        "enabled": true,
+        "eligibility": "HAS_PUBLISHED_ARTICLES",
+        "source": "GOVERNED_NUCLEUS_ARTICLES",
+        "ordering": { "strategy": "PUBLISHED_AT_DESC" },
+        "responsivePresentation": {
+          "mobile": { "mode": "CAROUSEL", "itemLimit": 6, "navigation": "HORIZONTAL_SWIPE_OR_SCROLL" },
+          "desktop": { "mode": "GRID", "itemLimit": 9, "navigation": "NONE_FOR_VISIBLE_GRID" }
+        }
       },
       "status": "active",
       "published": true,

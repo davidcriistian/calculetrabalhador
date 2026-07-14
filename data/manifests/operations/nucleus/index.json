@@ -1,11 +1,11 @@
 {
   "id": "nucleus-operation-manifests",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 4.1 - Nucleus Operations",
   "description": "Manifest entry points for official nucleus operations.",
@@ -15,6 +15,11 @@
     "useExistingArchitectureOnly": true,
     "noNewLayer": true,
     "noNewEngine": true
+  },
+  "controlledHomeDistributionException": {
+    "allowedScope": ["Home runtime", "Home stylesheet", "governed nucleus projection", "internal automation"],
+    "requiredContract": "/data/blueprints/nucleus/home-distribution.contract.json",
+    "forbiddenScope": ["articles", "calculators", "Guide pages", "legal rules", "IndexNow", "deploy", "git write"]
   },
   "blockedFiles": [
     "calculators",
@@ -131,6 +136,20 @@
       "publishing": ["release-specification", "deploy-plan", "sitemap-plan", "indexing-plan", "rollback-plan", "publication-log-template"],
       "expectedOutputs": ["releaseSpecification", "deployPlan", "sitemapPlan", "indexingPlan", "rollbackPlan", "publicationLogTemplate", "operationReport"],
       "reportType": "publish-nucleus-report"
+    },
+    {
+      "operationId": "progressive-nucleus-provisioning",
+      "objective": "Resolve candidate, first-article provisioning and future-article reuse without empty or duplicate Home sections.",
+      "minimumContext": ["Nucleus Home Distribution Contract", "Nucleus Blueprint", "Article Blueprint", "Calculator Blueprint", "Registry", "Publishing", "Content Map"],
+      "requiredInputs": ["assetType", "topicIdentity", "relatedAssetIds", "existingNucleusResolution"],
+      "preconditions": ["semantic-duplicate-check", "domain-conflict-check", "slug-collision-check", "taxonomy-resolution"],
+      "requiredBlueprints": ["/data/blueprints/nucleus/index.json", "/data/blueprints/article/index.json", "/data/blueprints/calculator/index.json"],
+      "playbook": "/data/operations/playbooks/nucleus/index.json#progressive-nucleus-provisioning",
+      "workflow": "/data/operations/workflows/nucleus/index.json#progressive-nucleus-provisioning-workflow",
+      "testing": ["candidate-without-section", "first-article-eligibility", "responsive-limits", "cross-nucleus-isolation", "idempotency"],
+      "validation": ["all-nucleus-home-gates", "ambiguity-guard", "rollback-readiness"],
+      "expectedOutputs": ["candidateResolution", "provisioningResolution", "homeSectionResolution", "rollbackPlan", "operationReport"],
+      "reportType": "progressive-nucleus-provisioning-report"
     }
   ],
   "notes": [

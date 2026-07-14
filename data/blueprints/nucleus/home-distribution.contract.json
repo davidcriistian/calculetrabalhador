@@ -1,0 +1,29 @@
+{
+  "id": "nucleus-home-responsive-distribution-contract",
+  "version": "1.0.0",
+  "status": "active",
+  "updatedAt": "2026-07-14",
+  "sectionType": "NUCLEUS_ARTICLE_SECTION",
+  "roleSeparation": {
+    "GUIDE_ASSET": "Strategic nucleus hub; never an isolated Home card.",
+    "NUCLEUS_ARTICLE_SECTION": "Responsive Home section containing governed article cards.",
+    "CATEGORY_PAGE": "Complete editorial listing and preferred View all destination."
+  },
+  "sourceResolution": ["resolve all governed nucleus articles", "remove ineligible items", "deduplicate by stable article key", "apply configured editorial order or published-at descending", "derive viewport limits from the same ordered collection"],
+  "articleEligibility": ["public eligible state", "resolvable public route", "governed nucleus membership", "not noindex", "not removed or archived", "valid title", "valid description", "unique stable key"],
+  "responsivePresentation": {
+    "mobile": { "mode": "CAROUSEL", "itemLimit": 6, "navigation": "HORIZONTAL_SWIPE_OR_SCROLL" },
+    "desktop": { "mode": "GRID", "itemLimit": 9, "navigation": "NONE_FOR_VISIBLE_GRID" },
+    "institutionalBreakpoint": "840px"
+  },
+  "emptySection": "DO_NOT_RENDER",
+  "viewAllDestination": "PUBLIC_VALID_CATEGORY_URL_UNLESS_EXPLICIT_GOVERNANCE_OVERRIDES_ROLE",
+  "progressiveProvisioning": {
+    "firstCalculator": { "result": "NUCLEUS_CANDIDATE", "publicHomeSection": false },
+    "firstArticle": { "result": "PROVISION_MINIMUM_ECOSYSTEM_AND_ENABLE_SECTION", "requiresUnambiguousTaxonomy": true },
+    "futureArticle": { "result": "REUSE_SECTION_AND_REFRESH_GOVERNED_COLLECTION" },
+    "ambiguousTopic": "MANUAL_DECISION_REQUIRED"
+  },
+  "requiredGates": ["NUCLEUS_EXISTENCE_RESOLVED", "NUCLEUS_CANDIDATE_RESOLVED", "FIRST_ARTICLE_FOR_NUCLEUS_DETECTED", "NUCLEUS_PROVISIONING_RESOLVED", "NUCLEUS_HOME_SECTION_ELIGIBILITY_RESOLVED", "NUCLEUS_ARTICLE_SECTION_RESOLVED", "RESPONSIVE_PRESENTATION_RESOLVED", "MOBILE_CAROUSEL_LIMIT_RESOLVED", "DESKTOP_GRID_LIMIT_RESOLVED", "VIEW_ALL_DESTINATION_RESOLVED", "DUPLICATE_HOME_SECTION_CHECKED"],
+  "blockedAntiPatterns": ["ISOLATED_GUIDE_CARD_ON_HOME", "GUIDE_ASSET_USED_AS_NUCLEUS_ARTICLE_SECTION", "EMPTY_NUCLEUS_SECTION", "TEXT_HEURISTIC_ARTICLE_FILTER", "DUPLICATE_NUCLEUS_HOME_SECTION", "ARTICLE_IN_WRONG_NUCLEUS_SECTION", "HOME_SECTION_WITH_BROKEN_ARTICLE", "NUCLEUS_CREATED_FROM_AMBIGUOUS_TOPIC", "SECTION_CREATED_BEFORE_FIRST_ARTICLE", "VIEW_ALL_POINTS_TO_WRONG_ROLE", "MOBILE_NUCLEUS_SECTION_NOT_CAROUSEL", "DESKTOP_NUCLEUS_SECTION_NOT_GRID", "MOBILE_MORE_THAN_6_HOME_ARTICLES", "DESKTOP_MORE_THAN_9_HOME_ARTICLES", "DUPLICATED_ARTICLES_TO_FILL_LAYOUT", "SEPARATE_CONTENT_SOURCES_BY_VIEWPORT"]
+}

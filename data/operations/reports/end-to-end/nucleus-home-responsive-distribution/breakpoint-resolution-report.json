@@ -1,0 +1,1 @@
+{"status":"PASS","institutionalBreakpoint":"840px","mobile":"width <= 840px uses carousel","tablet":"768px uses carousel to preserve card width","desktop":"width > 840px uses grid","newConflictingBreakpointCreated":false}

@@ -1,0 +1,31 @@
+{
+  "id": "nucleus-home-distribution-fixtures",
+  "version": "1.0.0",
+  "updatedAt": "2026-07-14",
+  "scenarios": [
+    { "id": "01-isolated-guide-card", "input": { "sectionRole": "GUIDE_ASSET_CARD" }, "expectedStatus": "FAIL" },
+    { "id": "02-pj-article-section", "input": { "sectionRole": "NUCLEUS_ARTICLE_SECTION", "filterType": "GOVERNED_SLUGS", "eligibleArticleCount": 3, "rendered": true }, "expectedStatus": "PASS" },
+    { "id": "03-mobile-carousel-six", "input": { "mobileMode": "CAROUSEL", "mobileVisible": 6 }, "expectedStatus": "PASS" },
+    { "id": "04-mobile-seven-visible", "input": { "mobileMode": "CAROUSEL", "mobileVisible": 7 }, "expectedStatus": "FAIL" },
+    { "id": "05-desktop-grid-nine", "input": { "desktopMode": "GRID", "desktopVisible": 9 }, "expectedStatus": "PASS" },
+    { "id": "06-desktop-ten-visible", "input": { "desktopMode": "GRID", "desktopVisible": 10 }, "expectedStatus": "FAIL" },
+    { "id": "07-desktop-primary-carousel", "input": { "desktopMode": "CAROUSEL", "desktopVisible": 6 }, "expectedStatus": "FAIL" },
+    { "id": "08-mobile-long-grid", "input": { "mobileMode": "GRID", "mobileVisible": 6 }, "expectedStatus": "FAIL" },
+    { "id": "09-empty-nucleus-hidden", "input": { "eligibleArticleCount": 0, "rendered": false }, "expectedStatus": "PASS" },
+    { "id": "10-one-article-eligible", "input": { "eligibleArticleCount": 1, "rendered": true }, "expectedStatus": "PASS" },
+    { "id": "11-pj-article-in-clt", "input": { "membershipValid": false }, "expectedStatus": "FAIL" },
+    { "id": "12-text-filter", "input": { "filterType": "TEXT_HEURISTIC" }, "expectedStatus": "FAIL" },
+    { "id": "13-governed-filter", "input": { "filterType": "GOVERNED_SLUGS" }, "expectedStatus": "PASS" },
+    { "id": "14-duplicate-section", "input": { "duplicateSection": true }, "expectedStatus": "FAIL" },
+    { "id": "15-category-view-all", "input": { "viewAllRole": "CATEGORY_PAGE" }, "expectedStatus": "PASS" },
+    { "id": "16-first-calculator", "input": { "assetEvent": "FIRST_CALCULATOR", "nucleusExists": false, "rendered": false }, "expectedStatus": "NUCLEUS_CANDIDATE" },
+    { "id": "17-first-article", "input": { "assetEvent": "FIRST_ARTICLE", "nucleusExists": false, "themeAmbiguous": false, "eligibleArticleCount": 1, "rendered": true }, "expectedStatus": "NUCLEUS_PROVISIONED" },
+    { "id": "18-ambiguous-topic", "input": { "assetEvent": "FIRST_ARTICLE", "nucleusExists": false, "themeAmbiguous": true }, "expectedStatus": "MANUAL_DECISION_REQUIRED" },
+    { "id": "19-future-article-reuses", "input": { "assetEvent": "FUTURE_ARTICLE", "nucleusExists": true, "duplicateSection": false }, "expectedStatus": "PASS" },
+    { "id": "20-below-limit-no-fill", "input": { "eligibleArticleCount": 2, "mobileVisible": 2, "desktopVisible": 2, "duplicateCards": false }, "expectedStatus": "PASS" },
+    { "id": "21-duplicate-to-fill", "input": { "eligibleArticleCount": 2, "desktopVisible": 9, "duplicateCards": true }, "expectedStatus": "FAIL" },
+    { "id": "22-separate-viewport-sources", "input": { "sourcesSame": false }, "expectedStatus": "FAIL" },
+    { "id": "23-twelve-eligible", "input": { "eligibleArticleCount": 12, "mobileMode": "CAROUSEL", "mobileVisible": 6, "desktopMode": "GRID", "desktopVisible": 9, "sourcesSame": true }, "expectedStatus": "PASS" },
+    { "id": "24-catalog-failure", "input": { "catalogLoad": "FAIL", "homeFunctional": true, "rendered": false }, "expectedStatus": "PASS" }
+  ]
+}

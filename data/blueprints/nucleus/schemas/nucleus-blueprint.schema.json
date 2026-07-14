@@ -20,7 +20,9 @@
     "growth",
     "testing",
     "validation",
-    "publishing"
+    "publishing",
+    "homeDistribution",
+    "progressiveProvisioning"
   ],
   "properties": {
     "id": { "type": "string" },
@@ -35,6 +37,7 @@
     "description": { "type": "string" },
     "blueprintType": { "const": "nucleus" },
     "relationshipAuthority": { "type": "string" },
+    "distributionContract": { "type": "object" },
     "identity": { "type": "object" },
     "relationships": { "$ref": "/data/blueprints/nucleus/schemas/nucleus-relation.schema.json" },
     "governance": { "type": "object" },
@@ -42,6 +45,17 @@
     "testing": { "type": "object" },
     "validation": { "type": "object" },
     "publishing": { "type": "object" },
+    "homeDistribution": {
+      "type": "object",
+      "required": ["sectionType", "source", "eligibility", "responsivePresentation"],
+      "properties": {
+        "sectionType": { "const": "NUCLEUS_ARTICLE_SECTION" },
+        "source": { "const": "GOVERNED_NUCLEUS_ARTICLES" },
+        "eligibility": { "const": "HAS_PUBLISHED_ARTICLES" },
+        "responsivePresentation": { "type": "object" }
+      }
+    },
+    "progressiveProvisioning": { "type": "object" },
     "operationalBoundaries": { "type": "object" },
     "notes": { "type": "array", "items": { "type": "string" } }
   }

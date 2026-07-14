@@ -1,6 +1,6 @@
 {
   "id": "pos-validation-engine-index",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -37,6 +37,9 @@
     ,"articleContract": "/data/blueprints/article/editorial-automation.contract.json"
     ,"articleValidator": "/scripts/validate-article-automation.js"
     ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
+    ,"nucleusHomeContract": "/data/blueprints/nucleus/home-distribution.contract.json"
+    ,"nucleusHomeValidator": "/scripts/validate-nucleus-home-distribution.js"
+    ,"nucleusHomeFixtures": "/data/pos/validation/nucleus-home-distribution-fixtures.json"
   },
   "operationalBoundaries": {
     "executesValidations": false,

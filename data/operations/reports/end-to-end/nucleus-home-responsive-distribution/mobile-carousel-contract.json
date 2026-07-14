@@ -1,0 +1,1 @@
+{"status":"PASS","breakpoint":"max-width: 840px","mode":"CAROUSEL","itemLimit":6,"navigation":"HORIZONTAL_SWIPE_OR_SCROLL","implementation":["grid-auto-flow: column","overflow-x: auto","scroll-snap-type: x mandatory","cards 7+ hidden"]}

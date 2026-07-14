@@ -181,6 +181,8 @@ a{text-decoration:none;color:inherit}
 .ct-article-section + .ct-article-section{padding-top:0}
 .ct-article-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:40px}
 .ct-article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.ct-nucleus-article-grid{align-items:stretch}
+.ct-nucleus-article-grid .ct-article-anchor,.ct-nucleus-article-grid .ct-article-card{height:100%}
 .ct-article-anchor{display:block}
 .ct-article-card{
   border:1px solid var(--border);border-radius:16px;background:#fff;padding:28px;
@@ -252,6 +254,7 @@ a{text-decoration:none;color:inherit}
     padding-bottom:12px;
   }
   .ct-article-anchor{scroll-snap-align:start}
+  .ct-nucleus-article-grid .ct-article-anchor:nth-child(n+7){display:none}
 
   .ct-footer__top{display:block}
   .ct-footer__brand{margin-bottom:24px}

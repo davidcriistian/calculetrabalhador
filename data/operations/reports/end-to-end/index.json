@@ -82,6 +82,7 @@
     "hypotheticalAutonomoPrevidencia": "/data/operations/reports/end-to-end/dry-run-autonomo-previdencia.json"
   },
   "controlledExecutionEvidence": {
-    "articleContratoPj": "/data/operations/reports/end-to-end/create-article-contrato-pj/operation-report.json"
+    "articleContratoPj": "/data/operations/reports/end-to-end/create-article-contrato-pj/operation-report.json",
+    "nucleusHomeResponsiveDistribution": "/data/operations/reports/end-to-end/nucleus-home-responsive-distribution/operation-report.json"
   }
 }
