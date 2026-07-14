@@ -1,0 +1,31 @@
+{
+  "id": "calculator-gold-standard-audit-phase-5-26",
+  "standard": "/data/gold-standards/calculator/index.json",
+  "version": "1.0",
+  "status": "GOLD_STANDARD_GAP_CONFIRMED",
+  "runtimeStatus": "not-consumed",
+  "audit": {
+    "visualSystem": {
+      "classification":"ABSENT",
+      "evidence":"No typography scale, hero anatomy, institutional palette, thematic color policy, spacing rhythm, card geometry, button hierarchy, focus specification or mobile layout thresholds."
+    },
+    "journey": {
+      "classification":"PRESENT_BUT_MINIMAL",
+      "evidence":"Hero, summary, field groups, result and explanation are named; preparation, numbered steps, confirmation and post-result guidance are not contracted."
+    },
+    "result": {
+      "classification":"PRESENT_BUT_MINIMAL",
+      "evidence":"Result Card is mandatory and must be clear/explainable, but primary-result dominance, scenario context, inputs, intermediate values, formula, rounding, table, interpretation and actions are not required."
+    },
+    "content": {
+      "classification":"PRESENT_BUT_MINIMAL",
+      "evidence":"FAQ and related links are mandatory; complete guide, sources and methodology are absent, while product/downloads are optional without configuration contract."
+    },
+    "validation": {
+      "classification":"NOT_CONSUMED",
+      "evidence":"Names structure/SEO/JSON-LD/accessibility/runtime/component validation but defines no comparator, screenshots, browser, mobile viewport, density, overflow or visual parity metrics."
+    }
+  },
+  "subjectiveQualities": ["clear-purpose","brief","scannable","matches-intent","clear-result","explainable","contextual","readable","useful"],
+  "enforcementProblem": "Acceptance criteria can be satisfied by existence-only interpretation; no minimum depth or measurable pass/fail thresholds prevent a generic form page from passing."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "preflight-report-calculator-standard-audit-phase-5-26",
+  "phase": "5.26",
+  "mode": "AUDIT_ONLY",
+  "executedAt": "2026-07-14",
+  "branch": "main",
+  "head": "06cf82192bd5a560eaf4c5acd210bb9f3a726cb6",
+  "originMain": "06cf82192bd5a560eaf4c5acd210bb9f3a726cb6",
+  "ahead": 0,
+  "behind": 0,
+  "staging": [],
+  "initialWorkingTree": [
+    "M data/maps/tools-map.json",
+    "M data/publishing/registry/index.json",
+    "M data/registry/by-type/index.json",
+    "M data/tools.json",
+    "M sitemap.xml",
+    "?? calculadora-custo-mensal-pj/",
+    "?? data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/",
+    "?? data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/",
+    "?? data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json",
+    "?? data/registry/by-type/calculator-calculadora-custo-mensal-pj.json"
+  ],
+  "preExistingChangesPreserved": true,
+  "gitDiffCheck": "PASS_WITH_LF_CRLF_WARNINGS",
+  "gitWriteCount": 0,
+  "notes": ["All listed changes predate Phase 5.26 and were treated as immutable audit inputs.", "Only files under data/operations/reports/end-to-end/calculator-standard-audit/ may be created."]
+}

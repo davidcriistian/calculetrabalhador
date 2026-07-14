@@ -1,0 +1,27 @@
+{
+  "id": "calculator-visual-comparison-phase-5-26",
+  "validationMode": "STATIC_HTML_CSS_ANALYSIS",
+  "browserStatus": "BROWSER_VISUAL_VALIDATION_NOT_EXECUTED",
+  "classifications": {
+    "calculator:calculadora-multa-40-fgts":"SAME_DESIGN_SYSTEM",
+    "calculator:calculadora-valor-hora-pj":"GENERIC_FORM_PAGE",
+    "calculator:calculadora-custo-mensal-pj":"PARTIAL_VISUAL_COMPATIBILITY"
+  },
+  "evidence": {
+    "fgts": ["Full-width blue gradient hero", "15 rounded-3xl surfaces, 13 shadow-sm uses", "32 uppercase/31 tracking-wide hierarchy markers", "4xl/5xl dominant result", "mobile-first full-width CTAs with sm:w-auto", "50px input minimum and focus:ring states", "dynamic badges and dense result modules"],
+    "valueHour": ["No rounded-3xl, no 5xl result, no focus styles", "H1 sits outside intro card", "Only six main sections and two buttons", "Uniform white/pastel cards with limited hierarchy", "No print styling or report actions"],
+    "monthlyCost": ["Uses shared Tailwind palette, borders, shadows and responsive grids", "Has no full-width themed hero or rounded-3xl hierarchy", "Equal-weight 2xl result cards rather than dominant result", "Has focus-visible, table overflow and print CSS", "Field groups are dense and flat on mobile compared with numbered reference journey"]
+  },
+  "dimensions": [
+    {"dimension":"identity and thematic color","fgts":"STRONG","valueHour":"WEAK_EMERALD_ACCENT","monthlyCost":"MODERATE_EMERALD_ACCENT"},
+    {"dimension":"hero hierarchy","fgts":"STRONG","valueHour":"WEAK","monthlyCost":"WEAK"},
+    {"dimension":"typography hierarchy","fgts":"STRONG","valueHour":"BASIC","monthlyCost":"BASIC"},
+    {"dimension":"field density and guidance","fgts":"GUIDED","valueHour":"FLAT","monthlyCost":"GROUPED_BUT_DENSE"},
+    {"dimension":"CTA prominence","fgts":"STRONG_MOBILE_FIRST","valueHour":"SMALL","monthlyCost":"SMALL"},
+    {"dimension":"result hierarchy","fgts":"DOMINANT_AND_LAYERED","valueHour":"FLAT_THREE_CARD","monthlyCost":"FLAT_THREE_CARD"},
+    {"dimension":"vertical rhythm","fgts":"LAYERED_6_8_7_SPACING","valueHour":"UNIFORM_MT_6","monthlyCost":"UNIFORM_MT_5_6"},
+    {"dimension":"responsive evidence","fgts":"EXPLICIT_INPUT_AND_CTA_RULES","valueHour":"GRID_BREAKPOINTS_ONLY","monthlyCost":"GRID_PRINT_AND_OVERFLOW_RULES"},
+    {"dimension":"coherence end-to-end","fgts":"HIGH","valueHour":"LOW","monthlyCost":"MEDIUM"}
+  ],
+  "warning":"No browser/screenshot assertion was executed; classifications are based on physical HTML, CSS classes, breakpoints and module structure."
+}

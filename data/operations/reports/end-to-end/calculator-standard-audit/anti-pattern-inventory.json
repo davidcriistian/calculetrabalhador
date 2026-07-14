@@ -1,0 +1,22 @@
+{
+  "id": "anti-pattern-inventory-phase-5-26",
+  "items": [
+    {"antiPattern":"MINIMAL_HERO","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"Generic intro card instead of themed full hero anatomy."},
+    {"antiPattern":"GENERIC_INTRO_CARD","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"White/gradient card carries promise but not full product identity."},
+    {"antiPattern":"FORM_WITHOUT_JOURNEY","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"No numbered progression or final confirmation."},
+    {"antiPattern":"FLAT_FIELD_GROUPS","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"Cards/fieldsets group data but do not guide decisions."},
+    {"antiPattern":"NO_STEP_CONTEXT","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"Value-hour has titles only; monthly has limited one-paragraph context."},
+    {"antiPattern":"SMALL_PRIMARY_CTA","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"Compact inline buttons versus reference mobile-first prominent CTA."},
+    {"antiPattern":"RESULT_WITH_ONLY_NUMBERS","valueHour":"CONFIRMED","monthlyCost":"NOT_FOUND","evidence":"Value-hour result begins with three values and sparse interpretation; monthly adds summary/table."},
+    {"antiPattern":"SHALLOW_CALCULATION_MEMORY","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"Value-hour four facts; monthly grouped table without ordered derivation."},
+    {"antiPattern":"NO_SCENARIO_CONTEXT","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"No tags/source/premise block; monthly restates totals only."},
+    {"antiPattern":"NO_RESULT_INTERPRETATION","valueHour":"POSSIBLE","monthlyCost":"NOT_FOUND","evidence":"Value-hour one generic sentence; monthly positive/negative summary."},
+    {"antiPattern":"NO_NEXT_STEPS","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"Monthly has generic page-level steps, not calculated-scenario steps."},
+    {"antiPattern":"NO_REPORT_ACTIONS","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"Monthly copy/print exists but no download report."},
+    {"antiPattern":"NO_VISUAL_PARITY","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"Neither matches official hero, journey or result hierarchy."},
+    {"antiPattern":"STATIC_VALIDATION_ONLY","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"No browser-based visual validation."},
+    {"antiPattern":"FAQ_PRESENT_BUT_SHALLOW","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"Three static questions versus eight accordions in reference."},
+    {"antiPattern":"CONTENT_PRESENT_BUT_MINIMAL","valueHour":"CONFIRMED","monthlyCost":"POSSIBLE","evidence":"Value-hour lacks guide/sources; monthly has limited guide depth."},
+    {"antiPattern":"REFERENCE_DECLARED_BUT_NOT_ENFORCED","valueHour":"CONFIRMED","monthlyCost":"CONFIRMED","evidence":"No physical reference study, module comparison or parity gate in delivery reports."}
+  ]
+}

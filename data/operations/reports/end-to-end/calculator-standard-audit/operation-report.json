@@ -1,0 +1,20 @@
+{
+  "id": "operation-report-calculator-standard-audit-phase-5-26",
+  "operation": "CALCULATOR_AUTOMATION_STANDARD_AUDIT",
+  "phase": "5.26",
+  "executionMode": "AUDIT_ONLY",
+  "status": "completed-with-warnings",
+  "result": "CALCULATOR AUTOMATION STANDARD AUDIT COMPLETED WITH WARNINGS",
+  "secondaryResults": ["REFERENCE ENFORCEMENT GAP CONFIRMED", "BLUEPRINT AND GOLD STANDARD GAP CONFIRMED"],
+  "createdAt": "2026-07-14",
+  "auditedCalculators": ["calculator:calculadora-multa-40-fgts", "calculator:calculadora-valor-hora-pj", "calculator:calculadora-custo-mensal-pj"],
+  "reportDirectory": "/data/operations/reports/end-to-end/calculator-standard-audit/",
+  "reportFileCreationCount": 18,
+  "existingFilesModifiedByPhase": [],
+  "publicPageMutationCount": 0,
+  "automationMutationCount": 0,
+  "gitWriteCount": 0,
+  "browserVisualValidation": "BROWSER_VISUAL_VALIDATION_NOT_EXECUTED",
+  "decision":"Current automation is reliable for identity, arithmetic evidence, catalogs and governance bookkeeping, but insufficient for enforcing official calculator product quality.",
+  "nextAction":"Execute a separately approved strengthening phase against existing Blueprint, Gold Standard, reference, workflow and validation systems; do not alter existing calculators in that phase unless separately scoped."
+}

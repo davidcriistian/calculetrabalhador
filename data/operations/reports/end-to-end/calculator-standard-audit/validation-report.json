@@ -1,0 +1,24 @@
+{
+  "id": "validation-report-calculator-standard-audit-phase-5-26",
+  "status": "PASSED_WITH_WARNINGS",
+  "result": ["REFERENCE_ENFORCEMENT_GAP_CONFIRMED", "BLUEPRINT_AND_GOLD_STANDARD_GAP_CONFIRMED"],
+  "criteria": [
+    {"criterion":"system inventory complete","status":"PASS"},
+    {"criterion":"official reference role resolved","status":"PASS","classification":"DECLARATIVE_REFERENCE_ONLY"},
+    {"criterion":"Calculator Blueprint audited","status":"PASS","finding":"required nouns are vague; detailed contracts absent"},
+    {"criterion":"Calculator Gold Standard audited","status":"PASS","finding":"minimal subjective presence rules; no visual system contract"},
+    {"criterion":"workflow enforcement audited","status":"PASS","finding":"reference metadata resolved but physical comparison absent"},
+    {"criterion":"three physical calculators compared","status":"PASS","evidence":"40-module matrix and physical metrics"},
+    {"criterion":"result depth compared","status":"PASS","evidence":"23 post-calculation criteria"},
+    {"criterion":"static visual comparison","status":"PASS"},
+    {"criterion":"browser visual comparison","status":"NOT_EXECUTED","warning":true},
+    {"criterion":"existing validations audited","status":"PASS","finding":"false-positive risk confirmed"},
+    {"criterion":"anti-patterns classified","status":"PASS"},
+    {"criterion":"root causes classified","status":"PASS","count":10},
+    {"criterion":"next phase scope defined","status":"PASS"},
+    {"criterion":"zero public and automation mutation","status":"PASS","evidence":"SHA-256 mutation guard"},
+    {"criterion":"zero Git write","status":"PASS"}
+  ],
+  "warnings": ["BROWSER_VISUAL_VALIDATION_NOT_EXECUTED", "Pre-existing working-tree changes were present and preserved", "LF/CRLF warnings emitted by Git"],
+  "blockers": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "testing-report-calculator-standard-audit-phase-5-26",
+  "status": "PASSED_WITH_WARNINGS",
+  "executedAt": "2026-07-14",
+  "tests": [
+    {"name":"INLINE_JS_SYNTAX_FGTS","status":"PASS","evidence":"One executable inline script compiled with vm.Script."},
+    {"name":"INLINE_JS_SYNTAX_VALUE_HOUR","status":"PASS","evidence":"One executable inline script compiled with vm.Script."},
+    {"name":"INLINE_JS_SYNTAX_MONTHLY_COST","status":"PASS","evidence":"One executable inline script compiled with vm.Script."},
+    {"name":"STATIC_STRUCTURE_THREE_PAGES","status":"PASS","evidence":"One H1 per page, balanced section elements and parseable JSON-LD."},
+    {"name":"JSON_VALID","status":"PASS","evidence":"All JSON files under data parsed after report creation."},
+    {"name":"INTERNAL_JSON_REFS_VALID","status":"PASS","evidence":"Zero missing rooted /data/*.json references."},
+    {"name":"VALIDATE_GOVERNANCE","status":"PASS","evidence":"JSON, Tools, Articles, Clusters, Update Map, Dependencies and Validation Rules OK."},
+    {"name":"TRANSFORM_RULES","status":"PASS","evidence":"Normal and --check executions reported equivalent INSS aggregator."},
+    {"name":"SHADOW_ADICIONAL_NOTURNO","status":"PASS","evidence":"50 scenarios equal, zero divergences."},
+    {"name":"SHADOW_AVISO_PREVIO","status":"PASS","evidence":"60 scenarios equal, zero divergences."},
+    {"name":"GIT_DIFF_CHECK","status":"PASS_WITH_WARNINGS","evidence":"No whitespace errors; LF/CRLF working-copy warnings only."},
+    {"name":"BROWSER_VISUAL_VALIDATION","status":"BROWSER_VISUAL_VALIDATION_NOT_EXECUTED","evidence":"No automated browser package is available; audit uses static HTML/CSS evidence."}
+  ],
+  "harnessNotes": ["The first inline-script shell invocation contained an extra closing brace and failed before testing page code; a corrected read-only invocation was executed immediately and all three scripts compiled.", "No calculator behavior, HTML, CSS or JavaScript was changed."],
+  "scope":"Audit validation only; calculation equivalence was not reclassified as visual quality evidence."
+}

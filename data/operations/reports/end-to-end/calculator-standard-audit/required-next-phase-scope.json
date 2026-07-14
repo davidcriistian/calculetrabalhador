@@ -1,0 +1,32 @@
+{
+  "id": "required-next-phase-scope-calculator-standard-audit",
+  "status": "RECOMMENDED",
+  "objective": "Strengthen existing calculator automation so new calculators reach official-reference quality without copying FGTS-specific content or changing existing public calculators.",
+  "inScope": [
+    "Turn the FGTS reference's quality traits into a versioned canonical reference-conformance contract.",
+    "Define required modules and calculator-specific conditional modules.",
+    "Define prohibited anti-patterns with measurable detection rules.",
+    "Strengthen Calculator Blueprint with typed hero, journey, field-step, result, memory, actions, content and mobile contracts.",
+    "Strengthen Calculator Gold Standard with visual hierarchy, spacing, CTA, focus, mobile and density requirements.",
+    "Require a pre-generation physical reference study and module adaptation map.",
+    "Add a result contract covering scenario, inputs, premises, source, dominant value, secondary indicators, formulas, intermediate values, rounding, interpretation and limitations.",
+    "Add a step-by-step calculation-memory contract and structured verification table contract.",
+    "Add post-result action requirements: copy, print and downloadable report when applicable.",
+    "Add configurable product-recommendation slot with hidden/neutral fallback.",
+    "Strengthen workflow, playbook and checklist gates for structural depth and reference parity.",
+    "Require rendered desktop/mobile browser evidence, overflow checks and visual approval.",
+    "Make missing browser evidence blocking for production-quality certification.",
+    "Add validation fixtures proving that a generic form page fails and an adapted reference-quality calculator passes."
+  ],
+  "outOfScope": ["Changing existing calculators", "Copying FGTS-specific fields or legal content", "Creating a new engine or data root", "Changing legal calculation rules", "Publishing or migrating assets automatically"],
+  "targetFilesOrSystems": ["data/blueprints/calculator/", "data/gold-standards/calculator/", "data/gold-standards/components/", "data/references/calculators/", "data/operations/workflows/", "data/operations/playbooks/", "data/operations/checklists/", "data/operations/templates/", "data/pos/testing/", "data/pos/validation/", "calculator-specific validation scripts or fixtures"],
+  "acceptanceCriteria": [
+    "Reference physical study is recorded before generation.",
+    "Every required module has measurable content and behavior criteria.",
+    "Conditional modules include a documented applicability decision.",
+    "Result can stand alone as a useful calculation report.",
+    "Desktop and mobile rendered evidence is mandatory.",
+    "A shallow existence-only calculator is rejected.",
+    "Existing calculators remain unchanged until separately approved."
+  ]
+}

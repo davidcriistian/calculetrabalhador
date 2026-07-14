@@ -1,0 +1,36 @@
+{
+  "id": "official-reference-resolution-calculator-standard-audit",
+  "status": "DECLARATIVE_REFERENCE_ONLY",
+  "reference": {
+    "asset": "calculator:calculadora-multa-40-fgts",
+    "registryId": "calculator-multa-40-fgts-reference",
+    "title": "Calculadora de Multa de 40% do FGTS",
+    "status": "official-reference",
+    "approved": true,
+    "goldStandardType": "calculator",
+    "goldStandardVersion": "1.0",
+    "url": "https://calculetrabalhador.com.br/calculadora-multa-40-fgts/",
+    "physicalPage": "/calculadora-multa-40-fgts/index.html"
+  },
+  "declaredProperties": ["approved-layout","approved-ux","approved-seo","approved-structure","approved-navigation","approved-components","approved-jsonld","approved-accessibility","approved-conversion","approved-internal-links","approved-cta-placement"],
+  "resolutionAnswers": {
+    "officiallyRegistered": true,
+    "physicalExistenceRegistered": true,
+    "visualRequiredByDetailedContract": false,
+    "structureRequiredByDetailedContract": false,
+    "resultDepthRequired": false,
+    "mobileExperienceRequired": false,
+    "componentsDescribed": false,
+    "consumedByWorkflow": "path/metadata resolution only",
+    "workflowRequiresOpeningPhysicalPage": false,
+    "workflowRequiresStudyingComponents": false,
+    "conformanceValidatorExists": false
+  },
+  "evidence": [
+    "/data/references/calculators/index.json uses runtimeStatus=not-consumed and metadata-only notes.",
+    "/data/references/docs/REFERENCE_SYSTEM.md says future Validation may compare and future Automation may load references.",
+    "/data/references/contracts/calculator-reference.contract.json only defines registration and disclaims creation/HTML copying.",
+    "Generated calculator specifications resolve Blueprint and Gold Standard but do not record a physical reference study or module map."
+  ],
+  "conclusion": "The reference is official in governance metadata but not enforced as structural, visual, result-depth or mobile evidence."
+}

@@ -1,0 +1,17 @@
+{
+  "id": "audit-report-calculator-standard-audit-phase-5-26",
+  "status": "completed-with-warnings",
+  "overallResult":"CALCULATOR AUTOMATION STANDARD AUDIT COMPLETED WITH WARNINGS",
+  "executiveFinding":"The automation approved technically functional but shallower calculators because it enforces asset existence, arithmetic and governance metadata while treating visual/reference/result quality as broad declarative nouns without measurable depth.",
+  "officialReference":{"asset":"calculator:calculadora-multa-40-fgts","resolution":"DECLARATIVE_REFERENCE_ONLY","physicalEnforcement":false},
+  "systemFindings":{"blueprint":"GAP_CONFIRMED","goldStandard":"GAP_CONFIRMED","workflow":"GAP_CONFIRMED","validation":"FALSE_POSITIVE_RISK_CONFIRMED","browser":"NOT_EXECUTED","resultContract":"ABSENT"},
+  "calculatorClassifications": {
+    "visual":{"fgts":"SAME_DESIGN_SYSTEM","valueHour":"GENERIC_FORM_PAGE","monthlyCost":"PARTIAL_VISUAL_COMPATIBILITY"},
+    "result":{"fgts":"FULL_DECISION_REPORT","valueHour":"BASIC_RESULT_WITH_MEMORY","monthlyCost":"COMPLETE_CALCULATION_REPORT"}
+  },
+  "highestSeverityGaps": ["No physical official-reference enforcement", "No typed journey and result contract", "No measurable visual Gold Standard", "No browser/mobile validation gate", "Existence-only compatibility assertions can pass"],
+  "confirmedAntiPatterns": ["MINIMAL_HERO", "GENERIC_INTRO_CARD", "FORM_WITHOUT_JOURNEY", "FLAT_FIELD_GROUPS", "SMALL_PRIMARY_CTA", "NO_VISUAL_PARITY", "STATIC_VALIDATION_ONLY", "FAQ_PRESENT_BUT_SHALLOW", "REFERENCE_DECLARED_BUT_NOT_ENFORCED"],
+  "integrity":{"calculatorsChanged":false,"automationChanged":false,"catalogChanged":false,"sitemapChanged":false,"gitWriteExecuted":false},
+  "warnings":["BROWSER_VISUAL_VALIDATION_NOT_EXECUTED","Pre-existing Phase 5.25 calculator reconciliation changes remain in the working tree and were not touched."],
+  "blockers":[]
+}

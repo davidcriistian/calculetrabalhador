@@ -1,0 +1,30 @@
+{
+  "id": "workflow-enforcement-audit-phase-5-26",
+  "operations": ["create-asset", "deliver-asset-end-to-end"],
+  "status": "WORKFLOW_GAP_CONFIRMED",
+  "checks": [
+    {"item":"select official reference","status":"DECLARED","evidence":"Manifest resolves /data/references/calculators/index.json."},
+    {"item":"open physical reference","status":"NOT_PRESENT","evidence":"No step requires opening /calculadora-multa-40-fgts/index.html."},
+    {"item":"map reference components","status":"NOT_PRESENT","evidence":"No module inventory output or gate."},
+    {"item":"copy quality not content","status":"DECLARED","evidence":"Reference system prohibits HTML/content copying but gives no quality extraction procedure."},
+    {"item":"complete result","status":"BYPASSABLE","evidence":"Generic result/structure checks can pass shallow outputs."},
+    {"item":"step-by-step memory","status":"NOT_PRESENT","evidence":"Not named in create-asset or end-to-end gates."},
+    {"item":"what user will discover","status":"NOT_PRESENT","evidence":"No workflow field or gate."},
+    {"item":"download report","status":"OPTIONAL","evidence":"Downloads are optional in Gold Standard and absent from workflow."},
+    {"item":"print","status":"NOT_PRESENT","evidence":"No gate."},
+    {"item":"copy result","status":"NOT_PRESENT","evidence":"No gate."},
+    {"item":"next steps","status":"NOT_PRESENT","evidence":"No calculator-specific gate."},
+    {"item":"complete guide","status":"NOT_PRESENT","evidence":"No content-depth gate."},
+    {"item":"configured product recommendations","status":"OPTIONAL","evidence":"Product context is optional; no fallback/configuration contract."},
+    {"item":"real visual validation","status":"NOT_PRESENT","evidence":"PREVIEW requires reviewable output, not a browser rendering or screenshot matrix."},
+    {"item":"allows pass without browser","status":"BYPASSABLE","evidence":"Both generated deliveries passed; monthly-cost report explicitly warned browser was unavailable."},
+    {"item":"static validation sufficient","status":"BYPASSABLE","evidence":"Canonical, HTML counts, JSON-LD and JS syntax were accepted as structural validation."},
+    {"item":"visual approval gate","status":"DECLARED","evidence":"Visual change requires manual approval, but approval fields do not define visual criteria."},
+    {"item":"result-depth approval gate","status":"NOT_PRESENT","evidence":"No result contract or report usefulness threshold."}
+  ],
+  "generatedEvidence": {
+    "valueHour":"Final report says passed although no visual/reference parity evidence exists.",
+    "monthlyCost":"Final report says reconciled with warnings and accepts BROWSER_VISUAL_VALIDATION warning."
+  },
+  "conclusion":"The workflow resolves governance identifiers but does not operationalize the official reference or enforce product-level calculator depth."
+}

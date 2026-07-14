@@ -1,0 +1,34 @@
+{
+  "id": "calculator-result-comparison-phase-5-26",
+  "classifications": {
+    "calculator:calculadora-multa-40-fgts":"FULL_DECISION_REPORT",
+    "calculator:calculadora-valor-hora-pj":"BASIC_RESULT_WITH_MEMORY",
+    "calculator:calculadora-custo-mensal-pj":"COMPLETE_CALCULATION_REPORT"
+  },
+  "criteria": [
+    {"criterion":"scenario used","fgts":"YES","valueHour":"NO","monthlyCost":"PARTIAL"},
+    {"criterion":"relevant inputs","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"YES"},
+    {"criterion":"premises","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"PARTIAL"},
+    {"criterion":"source/rule","fgts":"YES","valueHour":"NO","monthlyCost":"NO_IN_RESULT"},
+    {"criterion":"explains main value","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"YES"},
+    {"criterion":"dominant main value","fgts":"YES","valueHour":"NO","monthlyCost":"NO"},
+    {"criterion":"secondary results","fgts":"YES","valueHour":"YES","monthlyCost":"YES"},
+    {"criterion":"scenario tags","fgts":"YES","valueHour":"NO","monthlyCost":"NO"},
+    {"criterion":"comparison","fgts":"YES","valueHour":"NO","monthlyCost":"NO"},
+    {"criterion":"memory steps","fgts":"YES","valueHour":"SUMMARY_ONLY","monthlyCost":"TABLE_ONLY"},
+    {"criterion":"mathematical formula","fgts":"YES","valueHour":"NO","monthlyCost":"BASIC_TEXT"},
+    {"criterion":"intermediate values","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"YES"},
+    {"criterion":"rounding disclosure","fgts":"NO_EXPLICIT_POLICY","valueHour":"NO","monthlyCost":"NO_VISIBLE_POLICY"},
+    {"criterion":"limitations","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"YES_OUTSIDE_RESULT"},
+    {"criterion":"interpretation","fgts":"YES_SCENARIO_SPECIFIC","valueHour":"GENERIC","monthlyCost":"BASIC"},
+    {"criterion":"next steps","fgts":"YES_RESULT_SPECIFIC","valueHour":"NO","monthlyCost":"GENERIC_OUTSIDE_RESULT"},
+    {"criterion":"copy","fgts":"YES_DETAILED","valueHour":"NO","monthlyCost":"YES_BASIC"},
+    {"criterion":"print","fgts":"YES_REPORT","valueHour":"NO","monthlyCost":"YES_PAGE"},
+    {"criterion":"download report","fgts":"YES","valueHour":"NO","monthlyCost":"NO"},
+    {"criterion":"product recommendation","fgts":"CONFIGURABLE_SLOT_ONLY","valueHour":"NO","monthlyCost":"VISIBLE_PLACEHOLDER_ONLY"},
+    {"criterion":"restate user data","fgts":"YES","valueHour":"PARTIAL","monthlyCost":"YES_GROUPED"},
+    {"criterion":"how to use result","fgts":"YES","valueHour":"GENERIC","monthlyCost":"PARTIAL"},
+    {"criterion":"useful standalone report","fgts":"YES","valueHour":"NO","monthlyCost":"PARTIAL"}
+  ],
+  "mainGap":"Generated results answer the arithmetic question but do not consistently produce a scenario-aware, explainable and reusable decision report."
+}
