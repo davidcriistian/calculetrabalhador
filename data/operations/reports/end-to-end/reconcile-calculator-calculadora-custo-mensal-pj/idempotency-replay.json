@@ -1,0 +1,12 @@
+{
+  "id": "idempotency-replay-reconcile-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "mode": "VALIDATE_ONLY",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "expectedReplayResult": ["REUSE", "NO_CHANGE_REQUIRED"],
+  "actualReplayResult": ["REUSE", "NO_CHANGE_REQUIRED"],
+  "counts": {"CREATE_DECISION_COUNT":0,"DUPLICATE_COUNT":0,"PUBLIC_MUTATION_COUNT":0},
+  "reuseChecks": ["physical-page-exists-once","tools-entry-exists-once","tools-map-entry-exists-once","registry-entry-exists-once","publishing-entry-exists-once","sitemap-url-exists-once","canonical-matches"],
+  "duplicateCreated": false
+}

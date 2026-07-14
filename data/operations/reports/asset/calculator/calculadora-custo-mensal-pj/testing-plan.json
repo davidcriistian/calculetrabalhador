@@ -1,0 +1,8 @@
+{
+  "id": "testing-plan-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "executed",
+  "createdAt": "2026-07-14",
+  "requiredTests": ["identity-and-duplicate-prevention","minimum-scenario","common-scenario","revenue-equals-costs","revenue-below-costs","zero-tax","high-valid-tax","zero-pro-labore","zero-fixed-costs","zero-reserves","empty-inputs","invalid-inputs","negative-inputs","decimals","break-even","memory-total-equivalence","html-structure","canonical","json-ld","links","catalog","tools-map","sitemap","governance","transform-rules","shadow-validators","git-diff-check","mutation-guard","idempotency-replay"],
+  "resultsReference": "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/validation-results.json"
+}

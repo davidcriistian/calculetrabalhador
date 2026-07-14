@@ -161,6 +161,18 @@
                              "reference":  "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json"
                          },
                          {
+                             "id":  "publishing-calculator-calculadora-custo-mensal-pj",
+                             "assetId":  "calculator:calculadora-custo-mensal-pj",
+                             "assetType":  "calculator",
+                             "status":  "published",
+                             "approvalStatus":  "approved-user-request-reconciled",
+                             "relationshipStatus":  "approved-secondary",
+                             "publishingStatus":  "published",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json"
+                         },
+                         {
                              "id":  "publishing-draft-guide-guide-pj",
                              "assetId":  "guide:guide-pj",
                              "assetType":  "guide",

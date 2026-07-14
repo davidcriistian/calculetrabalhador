@@ -1,0 +1,17 @@
+{
+  "id": "relationship-map-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "approved-secondary",
+  "createdAt": "2026-07-14",
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": null,
+    "relatedPrimaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "relatedCalculators": ["calculator:calculadora-valor-hora-pj", "calculator:calculadora-inss-autonomo"]
+  },
+  "relationshipNature": {"role":"secondary-supporting-calculator","officialPrimaryCalculatorUnchanged":true,"guidePhysicalPageChanged":false,"clusterPhysicalPageChanged":false,"clusterDecision":"No approved cluster was assigned; the tool addresses general PJ operating costs rather than only CLT-versus-PJ comparison."},
+  "evidence": ["/data/brain/nuclei.json", "/data/brain/clusters.json", "/data/tools.json", "/guias/pj/index.html"],
+  "notes": ["The Guide PJ is a valid semantic parent, but its physical page was not changed because no explicit placement approval exists."]
+}

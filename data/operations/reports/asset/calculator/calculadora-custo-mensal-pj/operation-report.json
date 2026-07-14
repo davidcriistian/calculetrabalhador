@@ -1,0 +1,15 @@
+{
+  "id": "operation-report-calculator-calculadora-custo-mensal-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "POST_CREATION_AUDIT_RECONCILIATION",
+  "executionMode": "CONTROLLED_MINIMAL_FIX",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "completed-with-warnings",
+  "result": "CALCULATOR DELIVERY RECONCILED WITH WARNINGS",
+  "createdAt": "2026-07-14",
+  "publicFiles": ["/calculadora-custo-mensal-pj/index.html", "/data/tools.json", "/sitemap.xml"],
+  "governanceFiles": ["/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/", "/data/registry/by-type/calculator-calculadora-custo-mensal-pj.json", "/data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json"],
+  "unchanged": ["Home", "Guide PJ physical page", "Clusters", "Existing calculators and articles", "Global CSS and JavaScript"],
+  "gitWriteExecuted": false,
+  "indexNowSent": false
+}

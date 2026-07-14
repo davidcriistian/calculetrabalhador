@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Custo Mensal PJ: despesas, impostos e reservas</title>
+  <meta name="description" content="Calcule o custo mensal de trabalhar como PJ, incluindo impostos, contador, pro-labore, INSS, despesas, beneficios e reservas.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/global-layout.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Calcule Trabalhador">
+  <meta property="og:title" content="Calculadora de Custo Mensal PJ">
+  <meta property="og:description" content="Descubra quanto custa manter sua atividade PJ por mes e quanto sobra do faturamento.">
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Calculadora de Custo Mensal PJ","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://calculetrabalhador.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Ferramentas","item":"https://calculetrabalhador.com.br/ferramentas/"},
+    {"@type":"ListItem","position":3,"name":"Calculadora de Custo Mensal PJ","item":"https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/"}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Quais custos devo considerar como PJ?","acceptedAnswer":{"@type":"Answer","text":"Considere tributos, contabilidade, conta bancaria, ferramentas, pro-labore e INSS, beneficios pagos por voce e reservas para ferias, decimo terceiro e emergencias."}},
+    {"@type":"Question","name":"A calculadora define o imposto correto da minha empresa?","acceptedAnswer":{"@type":"Answer","text":"Nao. A aliquota deve ser informada pelo usuario, pois depende do regime tributario, atividade, faturamento, municipio e enquadramento."}},
+    {"@type":"Question","name":"O custo mensal PJ e igual ao faturamento necessario?","acceptedAnswer":{"@type":"Answer","text":"Nao. O custo e a soma das saidas e reservas. O faturamento necessario tambem precisa cobrir a renda que voce deseja retirar."}}
+  ]}
+  </script>
+  <style>
+    .ct-eyebrow{display:block;margin:0 0 10px;color:#047857;font-size:.8125rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+    #calculadora input:focus-visible,#calculadora button:focus-visible,#resultado button:focus-visible{outline:3px solid #10b981;outline-offset:2px}
+    @media print{#global-header,#global-footer,.no-print,.seo-content{display:none!important}body{background:#fff!important}.print-card{box-shadow:none!important;border-color:#cbd5e1!important}}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <nav class="mb-4 text-sm text-slate-600" aria-label="Navegacao estrutural"><a class="underline hover:text-emerald-700" href="/">Inicio</a><span aria-hidden="true"> / </span><a class="underline hover:text-emerald-700" href="/ferramentas/">Ferramentas</a><span aria-hidden="true"> / </span><span aria-current="page">Custo mensal PJ</span></nav>
+    <span class="ct-eyebrow">Planejamento PJ</span>
+    <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora de Custo Mensal PJ</h1>
+
+    <section class="mt-6 rounded-2xl border border-emerald-100 bg-gradient-to-r from-emerald-50 to-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Veja quanto custa manter sua atividade como PJ</h2>
+      <p class="mt-3 max-w-3xl leading-relaxed text-slate-700">Reuna despesas da empresa, tributos, pro-labore, beneficios e reservas em uma unica conta. O resultado mostra o custo total, quanto sobra do faturamento e o peso de cada grupo.</p>
+      <a href="#calculadora" class="mt-5 inline-block rounded-lg bg-emerald-700 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800">Calcular meu custo mensal</a>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">O que voce vai descobrir</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">Custo total mensal</strong><p class="mt-1 text-sm text-slate-600">Todas as saidas e reservas somadas.</p></div>
+        <div class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">Valor disponivel</strong><p class="mt-1 text-sm text-slate-600">O que resta depois dos custos informados.</p></div>
+        <div class="rounded-xl bg-slate-50 p-4"><strong class="text-slate-900">Ponto de equilibrio</strong><p class="mt-1 text-sm text-slate-600">Faturamento minimo para cobrir os custos.</p></div>
+      </div>
+    </section>
+
+    <section id="calculadora" class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Informe seus valores mensais</h2>
+      <p class="mt-2 text-slate-600">Use zero nos itens que nao se aplicam. Os percentuais incidem sobre o faturamento mensal.</p>
+      <div class="mt-5 grid gap-5 lg:grid-cols-2">
+        <fieldset class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <legend class="px-1 text-lg font-bold text-slate-900">Faturamento e tributos</legend>
+          <div class="mt-3 grid gap-4 sm:grid-cols-2">
+            <label class="text-sm font-semibold">Faturamento mensal (R$)<input id="faturamento" type="number" min="0" step="0.01" value="10000" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Impostos sobre faturamento (%)<input id="impostos" type="number" min="0" max="99" step="0.01" value="0" placeholder="Ex.: aliquota efetiva informada pelo contador" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Pro-labore (R$)<input id="proLabore" type="number" min="0" step="0.01" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">INSS sobre pro-labore (%)<input id="inss" type="number" min="0" max="100" step="0.01" value="0" placeholder="Ex.: percentual confirmado para seu caso" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+          </div>
+          <p class="mt-3 text-xs leading-relaxed text-slate-500">Informe as aliquotas validadas pelo seu contador. O pro-labore aparece como custo/retirada para permitir visualizar quanto do caixa e comprometido.</p>
+        </fieldset>
+
+        <fieldset class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <legend class="px-1 text-lg font-bold text-slate-900">Custos da empresa</legend>
+          <div class="mt-3 grid gap-4 sm:grid-cols-2">
+            <label class="text-sm font-semibold">Contabilidade (R$)<input id="contabilidade" type="number" min="0" step="0.01" value="250" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Banco e taxas (R$)<input id="banco" type="number" min="0" step="0.01" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Softwares e ferramentas (R$)<input id="ferramentas" type="number" min="0" step="0.01" value="200" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Outras despesas (R$)<input id="outras" type="number" min="0" step="0.01" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="rounded-xl border border-slate-200 bg-slate-50 p-4 lg:col-span-2">
+          <legend class="px-1 text-lg font-bold text-slate-900">Beneficios e reservas</legend>
+          <div class="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <label class="text-sm font-semibold">Plano de saude (R$)<input id="saude" type="number" min="0" step="0.01" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Alimentacao e transporte (R$)<input id="alimentacao" type="number" min="0" step="0.01" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Ferias e 13º (%)<input id="ferias" type="number" min="0" max="99" step="0.01" value="16.67" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+            <label class="text-sm font-semibold">Emergencia/lucro (%)<input id="emergencia" type="number" min="0" max="99" step="0.01" value="5" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-3 no-print">
+        <button id="btnCalcular" type="button" class="rounded-lg bg-emerald-700 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800">Calcular custo mensal</button>
+        <button id="btnLimpar" type="button" class="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold hover:bg-slate-100">Limpar</button>
+      </div>
+    </section>
+
+    <section id="resultado" class="print-card mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-live="polite">
+      <h2 class="text-2xl font-bold text-slate-900">Resultado</h2>
+      <div id="resultadoVazio" role="status" class="mt-4 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-slate-600">Preencha os campos e calcule para ver seu custo mensal PJ.</div>
+      <div id="resultadoConteudo" class="hidden">
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-4"><p class="text-sm font-semibold text-emerald-900">Custo mensal total</p><p id="resTotal" class="mt-2 text-2xl font-bold text-emerald-950"></p></div>
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-4"><p class="text-sm font-semibold text-blue-900">Disponivel apos custos</p><p id="resDisponivel" class="mt-2 text-2xl font-bold text-blue-950"></p></div>
+          <div class="rounded-xl border border-violet-100 bg-violet-50 p-4"><p class="text-sm font-semibold text-violet-900">Custo sobre faturamento</p><p id="resPeso" class="mt-2 text-2xl font-bold text-violet-950"></p></div>
+        </div>
+        <div class="mt-5 rounded-xl border border-slate-200 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Resumo</h3>
+          <p id="resResumo" class="mt-2 text-slate-700"></p>
+          <p class="mt-2 text-slate-700">Ponto de equilibrio estimado: <strong id="resEquilibrio"></strong>.</p>
+        </div>
+        <div class="mt-5 overflow-x-auto">
+          <h3 class="text-lg font-bold text-slate-900">Memoria de calculo</h3>
+          <table class="mt-3 w-full min-w-[520px] border-collapse text-sm">
+            <thead><tr class="bg-slate-100 text-left"><th class="border border-slate-200 p-3">Grupo</th><th class="border border-slate-200 p-3 text-right">Valor mensal</th><th class="border border-slate-200 p-3 text-right">% do faturamento</th></tr></thead>
+            <tbody id="memoria"></tbody>
+          </table>
+          <p id="formula" class="mt-3 text-sm text-slate-600"></p>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-3 no-print">
+          <button id="btnCopiar" type="button" class="rounded-lg border border-emerald-700 px-4 py-2 text-sm font-semibold text-emerald-800">Copiar resultado</button>
+          <button id="btnImprimir" type="button" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold">Imprimir / salvar PDF</button>
+        </div>
+        <div class="mt-5 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4 text-sm text-slate-500" data-slot="FUTURE_PRODUCT_SLOT">Organize estes valores em seu planejamento financeiro mensal.</div>
+      </div>
+    </section>
+
+    <div class="seo-content">
+      <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Como calcular o custo mensal de um PJ</h2>
+        <p class="mt-3 leading-relaxed text-slate-700">O custo mensal PJ nao se resume ao imposto da nota fiscal. Uma estimativa util combina custos operacionais, obrigacoes tributarias, retiradas e valores que substituem beneficios comuns de um emprego CLT. Contabilidade, tarifas bancarias, softwares, equipamentos, internet e outras despesas necessarias para trabalhar formam a parte operacional.</p>
+        <p class="mt-3 leading-relaxed text-slate-700">Os tributos variam conforme atividade, regime, anexo, fator R, faturamento acumulado e municipio. Por isso, esta ferramenta nao escolhe uma aliquota automaticamente. Informe o percentual efetivo indicado para o seu caso e revise-o quando o faturamento ou o enquadramento mudar.</p>
+        <h3 class="mt-5 text-xl font-bold text-slate-900">Pro-labore, INSS e dinheiro disponivel</h3>
+        <p class="mt-2 leading-relaxed text-slate-700">Pro-labore e a remuneracao pelo trabalho do socio. Nesta simulacao ele entra entre os valores comprometidos no mes, junto com o INSS informado. O resultado “disponivel apos custos” representa o saldo do faturamento depois de todos os itens cadastrados; ele nao deve ser interpretado automaticamente como lucro distribuivel sem a validacao contabil.</p>
+        <h3 class="mt-5 text-xl font-bold text-slate-900">Por que criar reservas</h3>
+        <p class="mt-2 leading-relaxed text-slate-700">Quem presta servicos como PJ normalmente precisa financiar os proprios periodos sem faturamento, descanso, decimo terceiro desejado e imprevistos. A reserva de ferias e 13º vem preenchida com 16,67% apenas como referencia simples — um mes de ferias mais um mes de renda adicional divididos pelos doze meses do ano. Ajuste a premissa ao seu contrato e ao seu objetivo.</p>
+        <p class="mt-3 leading-relaxed text-slate-700">O ponto de equilibrio estima o faturamento necessario para cobrir custos fixos e percentuais cadastrados. Se impostos, reservas e INSS consumirem uma parcela maior, o faturamento minimo aumenta. Use essa informacao para revisar precos, cortar despesas ou formar uma margem de seguranca.</p>
+      </section>
+
+      <section class="mt-6 grid gap-5 lg:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">Proximos passos</h2><ul class="mt-3 space-y-2 text-slate-700"><li>Confirme regime e aliquotas com sua contabilidade.</li><li>Separe custos pessoais de despesas da empresa.</li><li>Revise a conta quando contratos ou custos mudarem.</li><li>Use a <a class="font-semibold text-emerald-700 underline" href="/calculadora-valor-hora-pj/">Calculadora Valor Hora PJ</a> para transformar o custo em preco.</li></ul></div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">Ferramentas relacionadas</h2><ul class="mt-3 space-y-2"><li><a class="font-semibold text-emerald-700 underline" href="/calculadora-clt-ou-pj/">Calculadora CLT ou PJ</a></li><li><a class="font-semibold text-emerald-700 underline" href="/calculadora-valor-hora-pj/">Calculadora Valor Hora PJ</a></li><li><a class="font-semibold text-emerald-700 underline" href="/calculadora-inss-autonomo/">Calculadora INSS para autonomo</a></li><li><a class="font-semibold text-emerald-700 underline" href="/guias/pj/">Guia PJ</a></li></ul></div>
+      </section>
+
+      <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
+        <div class="mt-4 space-y-4"><div><h3 class="font-bold text-slate-900">Quais custos devo considerar como PJ?</h3><p class="mt-1 text-slate-700">Inclua todo gasto recorrente necessario para emitir notas e executar o trabalho, alem de beneficios e reservas que voce deseja financiar.</p></div><div><h3 class="font-bold text-slate-900">A calculadora define o imposto correto da minha empresa?</h3><p class="mt-1 text-slate-700">Nao. Use a aliquota efetiva estimada para sua empresa. Ela pode ser diferente da aliquota nominal e deve ser confirmada com um contador.</p></div><div><h3 class="font-bold text-slate-900">O custo mensal PJ e igual ao faturamento necessario?</h3><p class="mt-1 text-slate-700">Nao. O custo soma saidas e reservas; o faturamento necessario tambem precisa cobrir a renda que voce deseja retirar.</p></div></div>
+      </section>
+      <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-2xl font-bold text-slate-900">Fontes oficiais e orientacao</h2><p class="mt-3 text-slate-700">Para regras tributarias, consulte o <a class="font-semibold text-emerald-700 underline" href="https://www8.receita.fazenda.gov.br/SimplesNacional/" rel="noopener noreferrer">Portal do Simples Nacional</a> e a <a class="font-semibold text-emerald-700 underline" href="https://www.gov.br/receitafederal/pt-br" rel="noopener noreferrer">Receita Federal</a>. Confirme o enquadramento com profissional habilitado.</p></section>
+      <aside class="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950" aria-label="Limites da simulacao"><strong>Aviso:</strong> esta calculadora e educativa. Todos os percentuais tributarios e previdenciarios sao informados por voce; nenhum deles e definido automaticamente como regra legal. O resultado nao substitui contabilidade e nao determina lucro distribuivel.</aside>
+    </div>
+  </main>
+  <div id="global-footer"></div>
+  <script>
+    const ids=['faturamento','impostos','proLabore','inss','contabilidade','banco','ferramentas','outras','saude','alimentacao','ferias','emergencia'];
+    const el=id=>document.getElementById(id);
+    const val=id=>{
+      const raw=String(el(id).value??'').trim().replace(',','.');
+      if(raw==='') return 0;
+      const value=Number(raw);
+      if(!Number.isFinite(value)) throw new Error(`Informe um valor numerico valido em "${el(id).closest('label').childNodes[0].textContent.trim()}".`);
+      return value;
+    };
+    const brl=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    const pct=n=>n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'%';
+    let ultimo=null;
+    function calcularCustoMensalPJ(i){
+      const campos=['faturamento','impostos','proLabore','inss','contabilidade','banco','ferramentas','outras','saude','alimentacao','ferias','emergencia'];
+      if(campos.some(c=>!Number.isFinite(i[c]))) throw new Error('Todos os campos devem conter numeros validos e finitos.');
+      if(campos.some(c=>i[c]<0)) throw new Error('Os valores nao podem ser negativos.');
+      if(i.faturamento<=0) throw new Error('Informe um faturamento mensal maior que zero.');
+      if(i.impostos>=100||i.ferias>=100||i.emergencia>=100) throw new Error('Cada percentual sobre o faturamento deve ser menor que 100%.');
+      if(i.inss>100) throw new Error('O percentual de INSS deve estar entre 0% e 100%.');
+      const percentualReceita=i.impostos+i.ferias+i.emergencia;
+      if(percentualReceita>=100) throw new Error('A soma de impostos e reservas deve ser menor que 100%.');
+      const money=n=>Math.round((n+Number.EPSILON)*100)/100;
+      const tributos=money(i.faturamento*i.impostos/100);
+      const inssValor=money(i.proLabore*i.inss/100);
+      const empresa=money(i.contabilidade+i.banco+i.ferramentas+i.outras);
+      const beneficios=money(i.saude+i.alimentacao);
+      const reservas=money(i.faturamento*(i.ferias+i.emergencia)/100);
+      const total=money(tributos+inssValor+i.proLabore+empresa+beneficios+reservas);
+      const disponivel=money(i.faturamento-total);
+      const fixos=money(i.proLabore+inssValor+empresa+beneficios);
+      const equilibrio=money(fixos/(1-percentualReceita/100));
+      return {...i,tributos,inssValor,empresa,beneficios,reservas,total,disponivel,equilibrio,peso:total/i.faturamento*100};
+    }
+    function calcular(){
+      try{const input=Object.fromEntries(ids.map(id=>[id,val(id)]));ultimo=calcularCustoMensalPJ(input)}catch(e){el('resultadoVazio').textContent=e.message;el('resultadoVazio').classList.remove('hidden');el('resultadoConteudo').classList.add('hidden');return}
+      el('resTotal').textContent=brl(ultimo.total);el('resDisponivel').textContent=brl(ultimo.disponivel);el('resPeso').textContent=pct(ultimo.peso);el('resEquilibrio').textContent=brl(ultimo.equilibrio);
+      el('resDisponivel').classList.toggle('text-red-700',ultimo.disponivel<0);
+      el('resResumo').textContent=ultimo.disponivel>=0?`Do faturamento de ${brl(ultimo.faturamento)}, ${brl(ultimo.total)} ficam comprometidos e ${brl(ultimo.disponivel)} permanecem disponiveis.`:`Os custos superam o faturamento em ${brl(Math.abs(ultimo.disponivel))}. Revise despesas, reservas ou preco.`;
+      const linhas=[['Tributos sobre faturamento',ultimo.tributos],['Pro-labore',ultimo.proLabore],['INSS sobre pro-labore',ultimo.inssValor],['Custos da empresa',ultimo.empresa],['Beneficios pessoais',ultimo.beneficios],['Reservas',ultimo.reservas],['Custo total',ultimo.total]];
+      el('memoria').innerHTML=linhas.map((l,n)=>`<tr class="${n===linhas.length-1?'bg-emerald-50 font-bold':''}"><td class="border border-slate-200 p-3">${l[0]}</td><td class="border border-slate-200 p-3 text-right">${brl(l[1])}</td><td class="border border-slate-200 p-3 text-right">${pct(l[1]/ultimo.faturamento*100)}</td></tr>`).join('');
+      el('formula').textContent='Custo total = tributos + pro-labore + INSS + custos da empresa + beneficios + reservas.';
+      el('resultadoVazio').classList.add('hidden');el('resultadoConteudo').classList.remove('hidden');el('resultado').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function limpar(){ids.forEach(id=>el(id).value='0');el('faturamento').value='10000';el('contabilidade').value='250';el('ferramentas').value='200';el('ferias').value='16.67';el('emergencia').value='5';el('resultadoVazio').textContent='Preencha os campos e calcule para ver seu custo mensal PJ.';el('resultadoVazio').classList.remove('hidden');el('resultadoConteudo').classList.add('hidden');ultimo=null}
+    async function copiar(){if(!ultimo)return;const texto=`Custo mensal PJ: ${brl(ultimo.total)}\nFaturamento: ${brl(ultimo.faturamento)}\nDisponivel: ${brl(ultimo.disponivel)}\nPonto de equilibrio: ${brl(ultimo.equilibrio)}`;try{await navigator.clipboard.writeText(texto);el('btnCopiar').textContent='Resultado copiado!'}catch(e){el('btnCopiar').textContent='Nao foi possivel copiar'}setTimeout(()=>el('btnCopiar').textContent='Copiar resultado',2000)}
+    el('btnCalcular').addEventListener('click',calcular);el('btnLimpar').addEventListener('click',limpar);el('btnCopiar').addEventListener('click',copiar);el('btnImprimir').addEventListener('click',()=>window.print());
+  </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "id": "indexnow-dry-run-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "executedAt": "2026-07-14",
+  "command": "node scripts/indexnow.js /calculadora-custo-mensal-pj/",
+  "mode": "dry-run",
+  "status": "passed",
+  "urlCount": 1,
+  "url": "https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/",
+  "externalRequestSent": false,
+  "sendFlagUsed": false
+}

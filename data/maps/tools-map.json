@@ -696,6 +696,22 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "low"
+    },
+    {
+      "id": "calculadora-custo-mensal-pj",
+      "slug": "/calculadora-custo-mensal-pj/",
+      "url": "/calculadora-custo-mensal-pj/",
+      "title": "Calculadora de Custo Mensal PJ",
+      "category": "PJ",
+      "domain": "PJ",
+      "runtime": "static-html",
+      "rulesUsed": [],
+      "dependencies": [],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "low"
     }
   ]
 }

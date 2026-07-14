@@ -1,0 +1,16 @@
+{
+  "id": "publishing-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-user-request-reconciled",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {"current":"published","previous":"unregistered-public-page","maximumAllowedInThisOperation":"published"},
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/",
+  "actions": {"publishes":true,"deploys":false,"modifiesSitemap":true,"createsPublicPage":true,"modifiesExistingPage":true,"callsIndexNow":false,"indexNowDryRunOnly":true},
+  "evidence": ["/calculadora-custo-mensal-pj/index.html", "/data/tools.json", "/data/maps/tools-map.json", "/sitemap.xml", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/final-operation-report.json"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "validation-plan-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "executed",
+  "createdAt": "2026-07-14",
+  "validationGates": ["unique-identity","calculator-blueprint-0.2.0","calculator-gold-standard-1.0","no-hardcoded-legal-rule","calculation-evidence","accessible-result-states","seo-and-jsonld","catalog-and-tools-map","single-sitemap-url","registry-and-publishing","no-home-guide-cluster-mutation","rollback-ready","replay-idempotent"],
+  "resultsReference": "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/validation-results.json"
+}

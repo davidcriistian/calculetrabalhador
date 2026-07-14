@@ -1,0 +1,21 @@
+{
+  "id": "final-operation-report-reconcile-calculator-calculadora-custo-mensal-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "POST_CREATION_AUDIT_RECONCILIATION",
+  "executionMode": "CONTROLLED_MINIMAL_FIX",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "completed-with-warnings",
+  "createdAt": "2026-07-14",
+  "result": "CALCULATOR DELIVERY RECONCILED WITH WARNINGS",
+  "workflowAssessment": {"initialCreationFullyCompliant":false,"reconciledToPhase5":true,"remainingWarning":"No rendered-browser visual test was available in the repository environment."},
+  "filesCreated": ["/calculadora-custo-mensal-pj/index.html", "/data/registry/by-type/calculator-calculadora-custo-mensal-pj.json", "/data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json", "/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/"],
+  "filesModified": ["/data/tools.json", "/data/maps/tools-map.json", "/data/registry/by-type/index.json", "/data/publishing/registry/index.json", "/sitemap.xml"],
+  "governance": {"blueprint":"/data/blueprints/calculator/index.json#0.2.0","goldStandard":"/data/gold-standards/calculator/index.json#1.0","registry":"registered-published","publishing":"registered-published","rollback":"ready"},
+  "relationships": {"primaryDomain":"pj","primaryNucleus":"nucleus:pj","primaryGuide":"guide:guide-pj","primaryCluster":null,"role":"secondary-supporting-calculator","primaryCalculatorPreserved":"calculator:calculadora-clt-ou-pj"},
+  "ruleAssessment": {"hardcodedLegalRule":false,"taxAndInss":"USER_INPUT","reserves":"USER_INPUT_WITH_BUSINESS_ASSUMPTION_DEFAULTS","formulas":"LOCAL_NON_LEGAL_FORMULA","centralRuleOrFallbackRequired":false},
+  "validation": "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/validation-results.json",
+  "rollback": "/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/rollback-plan.json",
+  "replay": "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/idempotency-replay.json",
+  "unchangedPublicAreas": ["existing calculators", "existing articles", "Home", "Guide PJ physical page", "clusters", "global CSS", "global JavaScript", "runtime bundles"],
+  "finalConfirmation": {"deployed":false,"indexNowSent":false,"gitWriteExecuted":false}
+}

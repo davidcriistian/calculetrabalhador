@@ -1,0 +1,14 @@
+{
+  "id": "calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "type": "calculator",
+  "slug": "calculadora-custo-mensal-pj",
+  "status": "published",
+  "approvalStatus": "approved-user-request-reconciled",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "references": ["/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/calculator-draft-specification.json", "/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/relationship-map.json", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/final-operation-report.json"]
+}

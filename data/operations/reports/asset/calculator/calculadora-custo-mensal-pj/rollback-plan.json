@@ -1,0 +1,13 @@
+{
+  "id": "rollback-plan-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "ready",
+  "createdAt": "2026-07-14",
+  "method": "Surgical removal by exact asset identity; do not restore or replace complete pre-existing files.",
+  "rollbackScope": {
+    "removeFiles": ["/calculadora-custo-mensal-pj/index.html", "/data/registry/by-type/calculator-calculadora-custo-mensal-pj.json", "/data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json", "/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/"],
+    "removeExactEntries": ["/data/tools.json#id=calculadora-custo-mensal-pj", "/data/maps/tools-map.json#id=calculadora-custo-mensal-pj", "/data/registry/by-type/index.json#assetId=calculator:calculadora-custo-mensal-pj", "/data/publishing/registry/index.json#assetId=calculator:calculadora-custo-mensal-pj", "/sitemap.xml#loc=https://calculetrabalhador.com.br/calculadora-custo-mensal-pj/"]
+  },
+  "unchangedAndExcluded": ["home", "Guide PJ physical page", "cluster registry", "global CSS", "global JavaScript", "existing assets"],
+  "confirmationSteps": ["Confirm physical page is absent", "Confirm exact catalog, map, registry, publishing and sitemap entries are absent", "Run JSON, governance, transform, shadow and git diff validations"]
+}

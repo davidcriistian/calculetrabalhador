@@ -1,0 +1,29 @@
+{
+  "id": "validation-results-reconcile-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "passed-with-warnings",
+  "createdAt": "2026-07-14",
+  "calculationTests": {"executed":17,"passed":17,"failed":0,"scenarios":["minimum","common","revenue-equals-costs","revenue-below-costs","zero-tax","high-valid-tax","zero-pro-labore","zero-fixed-costs","zero-reserves","empty-inputs","invalid-inputs","negative-inputs","decimals","break-even","memory-equals-total","percent-sum-100-blocked","inss-over-100-blocked"]},
+  "results": [
+    {"name":"JSON_VALID","status":"PASS","evidence":"All JSON files under data parsed."},
+    {"name":"INTERNAL_JSON_REFS_VALID","status":"PASS","evidence":"All references introduced by the asset resolve after report completion."},
+    {"name":"CALCULATION_TESTS","status":"PASS","evidence":"17 executed scenarios, 17 passed, 0 failed."},
+    {"name":"HTML_STRUCTURAL_VALID","status":"PASS","evidence":"Single H1, balanced section elements, canonical and required structural components checked."},
+    {"name":"BROWSER_VISUAL_VALIDATION","status":"WARNING","evidence":"Playwright and jsdom are not installed; responsive and visual behavior was assessed statically, not in a rendered browser."},
+    {"name":"ACCESSIBILITY_STATIC","status":"PASS","evidence":"Labels wrap controls, result has aria-live/status, visible focus style and semantic nav/fieldset/table/aside are present."},
+    {"name":"JSON_LD","status":"PASS","evidence":"SoftwareApplication, BreadcrumbList and FAQPage parse; visible FAQ matches FAQPage questions."},
+    {"name":"INTERNAL_LINKS","status":"PASS","evidence":"All seven unique internal physical targets linked by the page exist."},
+    {"name":"IDENTITY_AND_DUPLICATES","status":"PASS","evidence":"One page, tools entry, tools-map entry, registry entry, publishing entry and sitemap URL."},
+    {"name":"TOOLS_DISCOVERY","status":"PASS","evidence":"ferramentas/index.html fetches /data/tools.json and filters published entries."},
+    {"name":"HOME","status":"NOT_APPLICABLE","evidence":"showOnHome=false; no Home mutation."},
+    {"name":"GUIDE_AND_CLUSTER","status":"PASS","evidence":"No physical Guide or cluster mutation; primaryCluster remains null."},
+    {"name":"SITEMAP","status":"PASS","evidence":"XML parses, URL occurs once and canonical matches."},
+    {"name":"INDEXNOW_DRY_RUN","status":"PASS","evidence":"One-URL payload generated; no --send and no external request."},
+    {"name":"VALIDATE_GOVERNANCE","status":"PASS","evidence":"node scripts/validate-governance.js returned PASS."},
+    {"name":"TRANSFORM_RULES","status":"PASS","evidence":"Normal and --check modes returned equivalent aggregator."},
+    {"name":"SHADOW_VALIDATORS","status":"PASS","evidence":"Adicional Noturno 50/50 and Aviso Previo 60/60, zero divergences."},
+    {"name":"GIT_DIFF_CHECK","status":"PASS","evidence":"No whitespace errors; line-ending warnings only."},
+    {"name":"MUTATION_GUARD","status":"PASS","evidence":"Changes restricted to the calculator, its catalogs, governance records and sitemap."},
+    {"name":"IDEMPOTENCY_REPLAY","status":"PASS","evidence":"VALIDATE_ONLY returned REUSE and NO_CHANGE_REQUIRED."}
+  ]
+}

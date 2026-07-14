@@ -1,0 +1,14 @@
+{
+  "id": "preflight-audit-reconcile-calculator-calculadora-custo-mensal-pj",
+  "operation": "deliver-asset-end-to-end",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "executedAt": "2026-07-14",
+  "head": "06cf82192bd5a560eaf4c5acd210bb9f3a726cb6",
+  "originMain": "06cf82192bd5a560eaf4c5acd210bb9f3a726cb6",
+  "initialWorkingTree": ["M data/tools.json", "M sitemap.xml", "?? calculadora-custo-mensal-pj/"],
+  "initialDeliveryScope": ["/calculadora-custo-mensal-pj/index.html", "/data/tools.json", "/sitemap.xml"],
+  "finding": "The initial creation did not use the full Phase 5 workflow; governance, Registry, Publishing and tools-map were absent.",
+  "collision": false,
+  "unrelatedPreexistingChanges": false,
+  "gitWriteExecuted": false
+}

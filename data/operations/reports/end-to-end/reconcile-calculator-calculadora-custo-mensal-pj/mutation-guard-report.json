@@ -1,0 +1,11 @@
+{
+  "id": "mutation-guard-reconcile-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "passed",
+  "createdAt": "2026-07-14",
+  "allowedScopes": ["/calculadora-custo-mensal-pj/", "/data/tools.json", "/data/maps/tools-map.json", "/data/registry/by-type/", "/data/publishing/registry/", "/data/operations/reports/asset/calculator/calculadora-custo-mensal-pj/", "/data/operations/reports/end-to-end/reconcile-calculator-calculadora-custo-mensal-pj/", "/sitemap.xml"],
+  "outOfScopeMutations": [],
+  "globalFilesChanged": false,
+  "existingAssetsChanged": false,
+  "gitWriteExecuted": false
+}

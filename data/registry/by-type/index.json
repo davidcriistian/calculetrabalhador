@@ -132,6 +132,18 @@
                                        ]
                     },
                     {
+                        "id":  "calculadora-custo-mensal-pj",
+                        "assetId":  "calculator:calculadora-custo-mensal-pj",
+                        "type":  "calculator",
+                        "slug":  "calculadora-custo-mensal-pj",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-custo-mensal-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "guide-pj",
                         "assetId":  "guide:guide-pj",
                         "type":  "guide",

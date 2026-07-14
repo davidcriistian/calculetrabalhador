@@ -1,0 +1,12 @@
+{
+  "id": "publishing-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "publishingReference": "/data/publishing/registry/calculator-calculadora-custo-mensal-pj-published.json",
+  "actions": {"createdPublicPage":true,"updatedToolsCatalog":true,"updatedSitemap":true,"modifiedExistingPages":false,"sentIndexNow":false}
+}

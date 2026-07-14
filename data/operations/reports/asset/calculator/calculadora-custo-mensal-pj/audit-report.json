@@ -1,0 +1,14 @@
+{
+  "id": "audit-report-calculator-calculadora-custo-mensal-pj",
+  "assetId": "calculator:calculadora-custo-mensal-pj",
+  "status": "reconciled-with-warnings",
+  "createdAt": "2026-07-14",
+  "initialFinding": "Initial delivery created only the page, data/tools.json entry and sitemap entry; the official Phase 5 governance workflow was not fully represented.",
+  "fixesApplied": ["Removed unsourced default tax and INSS percentages", "Added strict numeric and percentage validation", "Added BreadcrumbList and visible breadcrumb", "Added explicit educational/legal limitation notice", "Added official governance, registry, publishing, tools-map, test, validation and rollback artifacts"],
+  "findings": [
+    {"item":"duplicate-identity","status":"passed","evidence":"Single physical page, tools entry, tools-map entry, registry entry, publishing entry and sitemap URL after reconciliation."},
+    {"item":"legal-rule-source","status":"passed","evidence":"Tax and INSS rates are empty/zero user inputs; no legal rate is selected by runtime."},
+    {"item":"business-assumptions","status":"warning","evidence":"16.67% vacation/13th and 5% emergency defaults are editable planning assumptions and explicitly described as such."},
+    {"item":"cluster-primary-calculator","status":"preserved","evidence":"calculator:calculadora-clt-ou-pj remains primary; no cluster membership was assigned."}
+  ]
+}

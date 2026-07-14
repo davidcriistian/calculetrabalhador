@@ -524,5 +524,29 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-13"
+  },
+  {
+    "id": "calculadora-custo-mensal-pj",
+    "title": "Calculadora de Custo Mensal PJ",
+    "slug": "/calculadora-custo-mensal-pj/",
+    "url": "/calculadora-custo-mensal-pj/",
+    "category": "PJ",
+    "domain": "Financeiro / PJ",
+    "description": "Calcule custos mensais de um PJ com impostos, pro-labore, INSS, contabilidade, beneficios e reservas.",
+    "keywords": ["custo mensal PJ", "custos PJ", "despesas PJ", "impostos PJ", "pro-labore", "quanto custa ser PJ"],
+    "icon": "PJ",
+    "icone": "PJ",
+    "priority": 87,
+    "relatedTools": ["calculadora-valor-hora-pj", "calculadora-clt-ou-pj", "calculadora-inss-autonomo"],
+    "relatedPages": ["/calculadora-valor-hora-pj/", "/calculadora-clt-ou-pj/", "/guias/pj/"],
+    "relatedArticles": ["/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/", "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/"],
+    "badge": "NOVO",
+    "badgeColor": "#16a34a",
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-14"
   }
 ]
