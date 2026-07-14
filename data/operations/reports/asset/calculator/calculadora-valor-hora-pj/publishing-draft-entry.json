@@ -1,0 +1,18 @@
+{
+  "id": "publishing-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "publishingReference": "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json",
+  "actions": {
+    "createdPublicPage": true,
+    "updatedToolsCatalog": true,
+    "updatedSitemap": true,
+    "modifiedExistingPages": false,
+    "sentIndexNow": false
+  }
+}

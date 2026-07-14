@@ -1,0 +1,60 @@
+{
+  "id": "final-operation-report-create-calculator-calculadora-valor-hora-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "completed",
+  "createdAt": "2026-07-13",
+  "result": "CONTROLLED CALCULATOR DELIVERY PASSED",
+  "decision": {
+    "candidateCreated": true,
+    "reason": "A safe PJ calculator gap was confirmed and no duplicate asset was found.",
+    "manualDecisionRequired": false
+  },
+  "filesCreated": [
+    "/calculadora-valor-hora-pj/index.html",
+    "/data/registry/by-type/calculator-calculadora-valor-hora-pj.json",
+    "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json",
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/",
+    "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/"
+  ],
+  "filesModified": [
+    "/data/tools.json",
+    "/data/registry/by-type/index.json",
+    "/data/publishing/registry/index.json",
+    "/sitemap.xml"
+  ],
+  "publicFilesChanged": [
+    "/calculadora-valor-hora-pj/index.html",
+    "/sitemap.xml"
+  ],
+  "catalogFilesChanged": [
+    "/data/tools.json",
+    "/data/maps/tools-map.json"
+  ],
+  "unchangedPublicAreas": [
+    "existing calculators",
+    "existing articles",
+    "home",
+    "category pages",
+    "guide-pj page",
+    "global css",
+    "global javascript",
+    "runtime bundles"
+  ],
+  "rollback": "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/rollback-plan.json",
+  "validations": "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/validation-results.json",
+  "finalConfirmation": {
+    "existingCalculatorsChanged": false,
+    "existingArticlesChanged": false,
+    "runtimeChanged": false,
+    "globalCssChanged": false,
+    "globalJavascriptChanged": false,
+    "guidePageChanged": false,
+    "categoryPagesChanged": false,
+    "homeChanged": false,
+    "indexNowSent": false,
+    "gitCommandExecuted": false
+  }
+}

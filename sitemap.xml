@@ -231,6 +231,13 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://calculetrabalhador.com.br/calculadora-valor-hora-pj/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url><loc>https://calculetrabalhador.com.br/sobre/</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://calculetrabalhador.com.br/contato/</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://calculetrabalhador.com.br/politica-de-privacidade/</loc><lastmod>2026-06-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

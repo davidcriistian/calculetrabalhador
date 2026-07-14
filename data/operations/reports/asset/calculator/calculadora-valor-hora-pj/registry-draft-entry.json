@@ -1,0 +1,15 @@
+{
+  "id": "calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "type": "calculator",
+  "slug": "calculadora-valor-hora-pj",
+  "status": "published",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "reference": "/data/registry/by-type/calculator-calculadora-valor-hora-pj.json",
+  "runtimeStatus": "not-consumed",
+  "notes": [
+    "Registry entry is an index only.",
+    "Calculation rules are defined in the physical calculator and operation report, not in the registry."
+  ]
+}

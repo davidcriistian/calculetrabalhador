@@ -120,6 +120,18 @@
                                        ]
                     },
                     {
+                        "id":  "calculadora-valor-hora-pj",
+                        "assetId":  "calculator:calculadora-valor-hora-pj",
+                        "type":  "calculator",
+                        "slug":  "calculadora-valor-hora-pj",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-valor-hora-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "guide-pj",
                         "assetId":  "guide:guide-pj",
                         "type":  "guide",

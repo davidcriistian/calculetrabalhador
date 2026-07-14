@@ -1,0 +1,16 @@
+{
+  "id": "idempotency-replay-create-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "passed",
+  "createdAt": "2026-07-13",
+  "expectedReplayResult": "NO_CHANGE_REQUIRED",
+  "actualReplayResult": "NO_CHANGE_REQUIRED",
+  "reuseChecks": [
+    "physical-page-exists",
+    "tools-entry-exists-once",
+    "registry-entry-exists-once",
+    "publishing-entry-exists-once",
+    "sitemap-url-exists-once"
+  ],
+  "duplicateCreated": false
+}

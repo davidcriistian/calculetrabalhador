@@ -1,0 +1,84 @@
+{
+  "id": "calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "assetType": "calculator",
+  "type": "calculator",
+  "version": "1.0.0",
+  "status": "published",
+  "lifecycle": "published",
+  "approvalStatus": "approved-controlled-execution",
+  "relationshipStatus": "approved-secondary",
+  "runtimeStatus": "catalog-consumed",
+  "publishingStatus": "published",
+  "createdAt": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "owner": "core-platform",
+  "source": "Fase 5.23 - Automated Calculator Creation Pilot",
+  "displayName": "Calculadora Valor Hora PJ",
+  "publicSlug": "calculadora-valor-hora-pj",
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/",
+  "gapAddressed": "PJ ecosystem had CLT versus PJ comparison but no calculator dedicated to converting desired monthly PJ income into hourly, daily and project prices.",
+  "duplicatePrevention": {
+    "physicalDirectoryExistsBeforeOperation": false,
+    "toolsCatalogDuplicate": false,
+    "registryDuplicate": false,
+    "sitemapDuplicate": false,
+    "searchedTerms": ["valor hora", "valor-hora", "hora pj", "preco hora", "preco hora pj", "honorario", "freelancer", "pro labore"]
+  },
+  "blueprint": {
+    "type": "calculator",
+    "reference": "/data/blueprints/calculator/index.json",
+    "version": "0.2.0"
+  },
+  "goldStandard": {
+    "type": "calculator",
+    "reference": "/data/gold-standards/calculator/index.json",
+    "version": "1.0",
+    "status": "active-foundation"
+  },
+  "calculationSpec": {
+    "inputs": [
+      "rendaDesejada",
+      "custosMensais",
+      "impostosPercentual",
+      "reservaPercentual",
+      "horasSemana",
+      "semanasMes",
+      "horasDia",
+      "horasProjeto"
+    ],
+    "formula": [
+      "baseLiquida = rendaDesejada + custosMensais",
+      "percentualTotal = impostosPercentual + reservaPercentual",
+      "faturamentoMensal = baseLiquida / (1 - percentualTotal / 100)",
+      "horasMes = horasSemana * semanasMes",
+      "valorHora = faturamentoMensal / horasMes",
+      "valorDia = valorHora * horasDia",
+      "valorProjeto = valorHora * horasProjeto"
+    ],
+    "blockedConditions": [
+      "rendaDesejada <= 0",
+      "horasMes <= 0",
+      "impostosPercentual + reservaPercentual >= 100"
+    ],
+    "ruleSources": [
+      "User-provided financial assumptions",
+      "Arithmetic only; no official tax table or legal rate embedded"
+    ]
+  },
+  "operationalBoundaries": {
+    "createsNewCalculator": true,
+    "modifiesExistingCalculator": false,
+    "modifiesExistingArticle": false,
+    "modifiesGlobalRuntime": false,
+    "modifiesGlobalCss": false,
+    "modifiesGlobalJavascript": false,
+    "modifiesHome": false,
+    "modifiesCategoryPages": false,
+    "modifiesGuidePage": false,
+    "modifiesSitemap": true,
+    "modifiesToolsCatalog": true,
+    "executesDeploy": false,
+    "sendsIndexNow": false
+  }
+}

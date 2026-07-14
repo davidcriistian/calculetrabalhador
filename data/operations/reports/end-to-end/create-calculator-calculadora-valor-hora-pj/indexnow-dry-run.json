@@ -1,0 +1,18 @@
+{
+  "id": "indexnow-dry-run-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "passed",
+  "createdAt": "2026-07-13",
+  "command": "node scripts/indexnow.js /calculadora-valor-hora-pj/",
+  "sendExecuted": false,
+  "expectedUrl": "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/",
+  "result": {
+    "mode": "dry-run",
+    "endpoint": "https://api.indexnow.org/indexnow",
+    "host": "calculetrabalhador.com.br",
+    "urlCount": 1,
+    "urlList": [
+      "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/"
+    ]
+  }
+}

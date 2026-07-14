@@ -482,5 +482,47 @@
     "showOnHome": false,
     "primaryIntent": "calculation",
     "updatedAt": "2026-07-05"
+  },
+  {
+    "id": "calculadora-valor-hora-pj",
+    "title": "Calculadora Valor Hora PJ",
+    "slug": "/calculadora-valor-hora-pj/",
+    "category": "PJ",
+    "description": "Calcule valor hora, diaria e projeto como PJ a partir de renda desejada, custos, impostos informados e horas faturaveis.",
+    "keywords": [
+      "calculadora valor hora PJ",
+      "valor hora PJ",
+      "preco hora PJ",
+      "quanto cobrar por hora PJ",
+      "calcular diaria PJ",
+      "calcular projeto PJ",
+      "freelancer PJ",
+      "contrato PJ",
+      "renda desejada PJ",
+      "custos PJ"
+    ],
+    "icon": "PJ",
+    "icone": "PJ",
+    "priority": 86,
+    "relatedTools": [
+      "calculadora-clt-ou-pj"
+    ],
+    "relatedPages": [
+      "/calculadora-clt-ou-pj/",
+      "/guias/pj/"
+    ],
+    "relatedArticles": [
+      "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+      "/blog/clt-ou-pj-vale-a-pena-em-2026/"
+    ],
+    "badge": null,
+    "badgeColor": null,
+    "published": true,
+    "status": "published",
+    "featured": false,
+    "showOnHome": false,
+    "primaryIntent": "calculation",
+    "updatedAt": "2026-07-13"
   }
 ]

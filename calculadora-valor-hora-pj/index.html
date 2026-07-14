@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Valor Hora PJ: Preco por Hora, Dia e Projeto</title>
+  <meta name="description" content="Calcule valor hora PJ, diaria e preco de projeto a partir da renda desejada, custos mensais, impostos informados, reservas e horas faturaveis." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://calculetrabalhador.com.br/calculadora-valor-hora-pj/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Calcule Trabalhador" />
+  <meta property="og:title" content="Calculadora Valor Hora PJ" />
+  <meta property="og:description" content="Estime valor hora, diaria e projeto como PJ usando suas proprias premissas de custos, impostos e horas faturaveis." />
+  <meta property="og:url" content="https://calculetrabalhador.com.br/calculadora-valor-hora-pj/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Inicio","item":"https://calculetrabalhador.com.br/"},
+      {"@type":"ListItem","position":2,"name":"Ferramentas","item":"https://calculetrabalhador.com.br/ferramentas/"},
+      {"@type":"ListItem","position":3,"name":"Calculadora Valor Hora PJ","item":"https://calculetrabalhador.com.br/calculadora-valor-hora-pj/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Calculadora Valor Hora PJ",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"BRL"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Como calcular valor hora PJ?","acceptedAnswer":{"@type":"Answer","text":"Informe a renda liquida mensal desejada, custos mensais, percentuais estimados de impostos e reservas, horas faturaveis por semana e semanas produtivas por mes. A calculadora estima o faturamento necessario e divide pelas horas faturaveis."}},
+      {"@type":"Question","name":"A calculadora usa uma aliquota oficial de imposto?","acceptedAnswer":{"@type":"Answer","text":"Nao. O percentual de imposto e informado pelo usuario, porque varia conforme atividade, regime, municipio, faturamento e orientacao contabil."}},
+      {"@type":"Question","name":"O resultado substitui contador ou advogado?","acceptedAnswer":{"@type":"Answer","text":"Nao. O resultado e educativo e depende das premissas informadas. Confirme impostos, contrato e enquadramento com profissionais habilitados."}}
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/global-layout.css">
+  <script src="/assets/js/global-layout.js" defer></script>
+  <style>
+    .ct-calculator-eyebrow {
+      display: block;
+      margin: 0 0 10px;
+      color: #047857;
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div id="global-header"></div>
+
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <p class="ct-calculator-eyebrow">PJ</p>
+    <h1 class="text-3xl font-bold text-slate-900 sm:text-4xl">Calculadora Valor Hora PJ</h1>
+
+    <section class="mt-6 rounded-2xl border border-emerald-100 bg-gradient-to-r from-emerald-50 to-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Estime quanto cobrar por hora, dia e projeto como PJ</h2>
+      <p class="mt-3 leading-relaxed text-slate-700">Use a calculadora para transformar uma meta mensal em valor hora PJ. Informe sua renda liquida desejada, custos, impostos estimados, reserva de seguranca e horas faturaveis.</p>
+      <p class="mt-3 leading-relaxed text-slate-700">A ferramenta nao define aliquota oficial nem substitui analise contabil. Ela organiza as premissas para ajudar na negociacao de contratos PJ.</p>
+      <a href="#calculadora" class="mt-5 inline-block rounded-lg bg-emerald-700 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800">Calcular valor hora PJ</a>
+    </section>
+
+    <section id="calculadora" class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Simulador de preco PJ</h2>
+      <p class="mt-2 text-slate-600">Preencha os campos com suas premissas. Percentuais de imposto e reserva devem refletir seu caso real.</p>
+
+      <div class="mt-5 grid gap-5 lg:grid-cols-2">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Meta e custos</h3>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="rendaDesejada">Renda liquida desejada (R$)</label>
+              <input id="rendaDesejada" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Ex: 10000" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="custosMensais">Custos mensais PJ (R$)</label>
+              <input id="custosMensais" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="impostosPercentual">Impostos estimados (%)</label>
+              <input id="impostosPercentual" type="number" min="0" max="99" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="reservaPercentual">Reserva desejada (%)</label>
+              <input id="reservaPercentual" type="number" min="0" max="99" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="0" />
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Tempo faturavel</h3>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="horasSemana">Horas faturaveis por semana</label>
+              <input id="horasSemana" type="number" min="0" step="0.5" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="30" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="semanasMes">Semanas produtivas por mes</label>
+              <input id="semanasMes" type="number" min="0" step="0.01" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="4.33" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="horasDia">Horas por diaria</label>
+              <input id="horasDia" type="number" min="0" step="0.5" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="8" />
+            </div>
+            <div>
+              <label class="mb-1 block text-sm font-semibold" for="horasProjeto">Horas estimadas do projeto</label>
+              <input id="horasProjeto" type="number" min="0" step="0.5" class="w-full rounded-lg border border-slate-300 px-3 py-2" value="40" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        <button id="btnCalcular" type="button" class="rounded-lg bg-emerald-700 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800">Calcular</button>
+        <button id="btnLimpar" type="button" class="rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100">Limpar</button>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm" aria-live="polite">
+      <h2 class="text-2xl font-bold text-slate-900">Resultado</h2>
+      <div id="resultadoVazio" class="mt-4 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-5 text-slate-600">Informe suas premissas e calcule para ver a estimativa.</div>
+      <div id="resultadoConteudo" class="mt-5 hidden">
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="rounded-xl border border-emerald-100 bg-emerald-50 p-4">
+            <p class="text-sm font-semibold text-emerald-900">Valor hora sugerido</p>
+            <p id="resValorHora" class="mt-2 text-2xl font-bold text-emerald-950">R$ 0,00</p>
+          </div>
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-4">
+            <p class="text-sm font-semibold text-blue-900">Diaria equivalente</p>
+            <p id="resValorDia" class="mt-2 text-2xl font-bold text-blue-950">R$ 0,00</p>
+          </div>
+          <div class="rounded-xl border border-violet-100 bg-violet-50 p-4">
+            <p class="text-sm font-semibold text-violet-900">Projeto estimado</p>
+            <p id="resValorProjeto" class="mt-2 text-2xl font-bold text-violet-950">R$ 0,00</p>
+          </div>
+        </div>
+
+        <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="text-lg font-bold text-slate-900">Memoria de calculo</h3>
+          <dl class="mt-3 grid gap-3 sm:grid-cols-2">
+            <div><dt class="text-sm text-slate-500">Faturamento mensal necessario</dt><dd id="memFaturamento" class="font-semibold text-slate-900">R$ 0,00</dd></div>
+            <div><dt class="text-sm text-slate-500">Horas faturaveis no mes</dt><dd id="memHorasMes" class="font-semibold text-slate-900">0 h</dd></div>
+            <div><dt class="text-sm text-slate-500">Custos mensais informados</dt><dd id="memCustos" class="font-semibold text-slate-900">R$ 0,00</dd></div>
+            <div><dt class="text-sm text-slate-500">Impostos e reserva</dt><dd id="memPercentuais" class="font-semibold text-slate-900">0%</dd></div>
+          </dl>
+          <p id="resInterpretacao" class="mt-4 text-slate-700"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 grid gap-5 lg:grid-cols-2">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Como usar a estimativa</h2>
+        <p class="mt-3 text-slate-700">O valor hora deve cobrir renda desejada, custos da pessoa juridica, impostos informados e reservas. Ajuste as horas faturaveis para refletir tempo comercial, reunioes, administracao, ferias e intervalos sem projeto.</p>
+        <p class="mt-3 text-slate-700">Para comparar uma proposta completa com carteira assinada, use tambem a <a class="font-semibold text-emerald-700 underline" href="/calculadora-clt-ou-pj/">Calculadora CLT ou PJ</a>.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900">Conteudos relacionados</h2>
+        <ul class="mt-3 space-y-2 text-slate-700">
+          <li><a class="font-semibold text-emerald-700 underline" href="/guias/pj/">Guia PJ</a></li>
+          <li><a class="font-semibold text-emerald-700 underline" href="/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/">Quanto preciso ganhar como PJ para compensar CLT</a></li>
+          <li><a class="font-semibold text-emerald-700 underline" href="/blog/contrato-pj-o-que-analisar-antes-de-aceitar/">Contrato PJ: o que analisar antes de aceitar</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-slate-900">Perguntas frequentes</h2>
+      <div class="mt-4 space-y-4">
+        <div>
+          <h3 class="font-bold text-slate-900">Como calcular valor hora PJ?</h3>
+          <p class="mt-1 text-slate-700">Some renda desejada e custos, ajuste por impostos e reservas informados, depois divida pelas horas faturaveis do mes.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900">Qual aliquota de imposto devo usar?</h3>
+          <p class="mt-1 text-slate-700">Use a estimativa do seu regime, atividade e orientacao contabil. A calculadora nao define aliquota oficial.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900">Posso usar para cobrar projeto fechado?</h3>
+          <p class="mt-1 text-slate-700">Sim. Informe as horas estimadas do projeto para obter uma referencia inicial de preco, mantendo margem para risco e escopo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="global-footer"></div>
+
+  <script>
+    const brl = (valor) => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const byId = (id) => document.getElementById(id);
+    const numberValue = (id) => {
+      const value = Number(String(byId(id).value || '').replace(',', '.'));
+      return Number.isFinite(value) ? value : 0;
+    };
+    const setMoney = (id, value) => {
+      byId(id).textContent = brl(value);
+    };
+
+    function calcularValorHoraPj(input) {
+      const rendaDesejada = Math.max(0, input.rendaDesejada);
+      const custosMensais = Math.max(0, input.custosMensais);
+      const impostosPercentual = Math.max(0, input.impostosPercentual);
+      const reservaPercentual = Math.max(0, input.reservaPercentual);
+      const horasSemana = Math.max(0, input.horasSemana);
+      const semanasMes = Math.max(0, input.semanasMes);
+      const horasDia = Math.max(0, input.horasDia);
+      const horasProjeto = Math.max(0, input.horasProjeto);
+      const percentualTotal = impostosPercentual + reservaPercentual;
+      const horasMes = horasSemana * semanasMes;
+
+      if (rendaDesejada <= 0 || horasMes <= 0) {
+        throw new Error('Informe renda desejada e horas faturaveis maiores que zero.');
+      }
+
+      if (percentualTotal >= 100) {
+        throw new Error('A soma de impostos e reserva precisa ser menor que 100%.');
+      }
+
+      const baseLiquida = rendaDesejada + custosMensais;
+      const fatorDisponivel = 1 - (percentualTotal / 100);
+      const faturamentoMensal = baseLiquida / fatorDisponivel;
+      const valorHora = faturamentoMensal / horasMes;
+      const valorDia = valorHora * horasDia;
+      const valorProjeto = valorHora * horasProjeto;
+
+      return {
+        faturamentoMensal,
+        horasMes,
+        valorHora,
+        valorDia,
+        valorProjeto,
+        custosMensais,
+        percentualTotal
+      };
+    }
+
+    function calcular() {
+      let resultado;
+      try {
+        resultado = calcularValorHoraPj({
+          rendaDesejada: numberValue('rendaDesejada'),
+          custosMensais: numberValue('custosMensais'),
+          impostosPercentual: numberValue('impostosPercentual'),
+          reservaPercentual: numberValue('reservaPercentual'),
+          horasSemana: numberValue('horasSemana'),
+          semanasMes: numberValue('semanasMes'),
+          horasDia: numberValue('horasDia'),
+          horasProjeto: numberValue('horasProjeto')
+        });
+      } catch (error) {
+        byId('resultadoVazio').textContent = error.message;
+        byId('resultadoVazio').classList.remove('hidden');
+        byId('resultadoConteudo').classList.add('hidden');
+        return;
+      }
+
+      setMoney('resValorHora', resultado.valorHora);
+      setMoney('resValorDia', resultado.valorDia);
+      setMoney('resValorProjeto', resultado.valorProjeto);
+      setMoney('memFaturamento', resultado.faturamentoMensal);
+      byId('memHorasMes').textContent = `${resultado.horasMes.toLocaleString('pt-BR', { maximumFractionDigits: 2 })} h`;
+      setMoney('memCustos', resultado.custosMensais);
+      byId('memPercentuais').textContent = `${resultado.percentualTotal.toLocaleString('pt-BR', { maximumFractionDigits: 2 })}%`;
+      byId('resInterpretacao').textContent = 'Use o valor como referencia inicial e ajuste conforme contrato, risco, escopo, inadimplencia, impostos efetivos e orientacao contabil.';
+      byId('resultadoVazio').classList.add('hidden');
+      byId('resultadoConteudo').classList.remove('hidden');
+    }
+
+    function limpar() {
+      ['rendaDesejada', 'custosMensais', 'impostosPercentual', 'reservaPercentual'].forEach((id) => {
+        byId(id).value = id === 'rendaDesejada' ? '' : '0';
+      });
+      byId('horasSemana').value = '30';
+      byId('semanasMes').value = '4.33';
+      byId('horasDia').value = '8';
+      byId('horasProjeto').value = '40';
+      byId('resultadoVazio').textContent = 'Informe suas premissas e calcule para ver a estimativa.';
+      byId('resultadoVazio').classList.remove('hidden');
+      byId('resultadoConteudo').classList.add('hidden');
+    }
+
+    byId('btnCalcular').addEventListener('click', calcular);
+    byId('btnLimpar').addEventListener('click', limpar);
+  </script>
+  <script src="/assets/js/editorial-metadata.js" defer></script>
+</body>
+</html>

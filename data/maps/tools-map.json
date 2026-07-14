@@ -680,6 +680,22 @@
       "clusterSize": 0,
       "reviewFrequency": "annual",
       "risk": "high"
+    },
+    {
+      "id": "calculadora-valor-hora-pj",
+      "slug": "/calculadora-valor-hora-pj/",
+      "url": "/calculadora-valor-hora-pj/",
+      "title": "Calculadora Valor Hora PJ",
+      "category": "PJ",
+      "domain": "PJ",
+      "runtime": "static-html",
+      "rulesUsed": [],
+      "dependencies": [],
+      "version": "1.0.0",
+      "type": "calculator",
+      "clusterSize": 0,
+      "reviewFrequency": "annual",
+      "risk": "low"
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "id": "testing-plan-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "executed",
+  "createdAt": "2026-07-13",
+  "requiredTests": [
+    "duplicate-prevention",
+    "json-valid",
+    "calculation-base-case",
+    "calculation-zero-income-block",
+    "calculation-zero-hours-block",
+    "calculation-percent-100-block",
+    "html-structure",
+    "canonical",
+    "robots",
+    "json-ld",
+    "tools-catalog",
+    "sitemap",
+    "indexnow-dry-run",
+    "governance",
+    "transform-rules",
+    "shadow-validators",
+    "git-diff-check",
+    "idempotency-replay"
+  ],
+  "resultsReference": "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/validation-results.json"
+}

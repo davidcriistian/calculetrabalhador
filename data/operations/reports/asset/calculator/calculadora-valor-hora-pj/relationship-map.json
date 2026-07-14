@@ -1,0 +1,35 @@
+{
+  "id": "relationship-map-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "approved-secondary",
+  "createdAt": "2026-07-13",
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": "cluster:clt-ou-pj",
+    "relatedPrimaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "relatedArticles": [
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:contrato-pj-o-que-analisar-antes-de-aceitar",
+      "article:clt-ou-pj-vale-a-pena-em-2026"
+    ]
+  },
+  "relationshipNature": {
+    "clusterRole": "secondary-supporting-calculator",
+    "officialPrimaryCalculatorUnchanged": true,
+    "guidePhysicalPageChanged": false,
+    "clusterPhysicalPageChanged": false
+  },
+  "evidence": [
+    "/data/brain/nuclei.json",
+    "/data/brain/clusters.json",
+    "/data/tools.json",
+    "/data/articles.json",
+    "/guias/pj/index.html"
+  ],
+  "notes": [
+    "No automatic relationship was created without checking existing slugs and catalogs.",
+    "Existing CLT ou PJ calculator remains the primary calculator for the cluster."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "publication-plan-create-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "executed",
+  "createdAt": "2026-07-13",
+  "steps": [
+    {
+      "step": "create-physical-page",
+      "target": "/calculadora-valor-hora-pj/index.html",
+      "status": "completed"
+    },
+    {
+      "step": "validate-page",
+      "target": "/calculadora-valor-hora-pj/index.html",
+      "status": "completed"
+    },
+    {
+      "step": "add-tools-catalog-entry",
+      "target": "/data/tools.json",
+      "status": "completed"
+    },
+    {
+      "step": "add-registry-entry",
+      "target": "/data/registry/by-type/",
+      "status": "completed"
+    },
+    {
+      "step": "add-publishing-entry",
+      "target": "/data/publishing/registry/",
+      "status": "completed"
+    },
+    {
+      "step": "add-sitemap-url",
+      "target": "/sitemap.xml",
+      "status": "completed"
+    },
+    {
+      "step": "indexnow-dry-run",
+      "target": "/calculadora-valor-hora-pj/",
+      "status": "completed-dry-run-only"
+    }
+  ],
+  "notExecuted": [
+    "git-add",
+    "git-commit",
+    "git-push",
+    "deploy",
+    "indexnow-send"
+  ]
+}

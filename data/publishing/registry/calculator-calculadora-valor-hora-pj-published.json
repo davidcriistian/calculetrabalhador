@@ -1,0 +1,33 @@
+{
+  "id": "publishing-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-controlled-execution",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "catalog-consumed",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "published",
+    "previous": "draft",
+    "maximumAllowedInThisOperation": "published"
+  },
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-valor-hora-pj/",
+  "actions": {
+    "publishes": true,
+    "deploys": false,
+    "modifiesSitemap": true,
+    "createsPublicPage": true,
+    "modifiesExistingPage": false,
+    "callsIndexNow": false,
+    "indexNowDryRunOnly": true
+  },
+  "evidence": [
+    "/calculadora-valor-hora-pj/index.html",
+    "/data/tools.json",
+    "/sitemap.xml",
+    "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/final-operation-report.json"
+  ]
+}

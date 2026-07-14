@@ -1,0 +1,39 @@
+{
+  "id": "operation-report-calculator-calculadora-valor-hora-pj",
+  "operation": "deliver-asset-end-to-end",
+  "requestType": "CREATE_SINGLE_ASSET",
+  "executionMode": "CONTROLLED_EXECUTION",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "completed",
+  "result": "CONTROLLED CALCULATOR DELIVERY PASSED",
+  "createdAt": "2026-07-13",
+  "filesCreated": [
+    "/calculadora-valor-hora-pj/index.html",
+    "/data/registry/by-type/calculator-calculadora-valor-hora-pj.json",
+    "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json",
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/",
+    "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/"
+  ],
+  "filesModified": [
+    "/data/tools.json",
+    "/data/registry/by-type/index.json",
+    "/data/publishing/registry/index.json",
+    "/sitemap.xml"
+  ],
+  "publicProductionFilesModified": [
+    "/sitemap.xml"
+  ],
+  "publicFilesCreated": [
+    "/calculadora-valor-hora-pj/index.html"
+  ],
+  "unchanged": [
+    "Existing calculators",
+    "Existing articles",
+    "Guide PJ page",
+    "Category pages",
+    "Home",
+    "Global CSS",
+    "Global JavaScript",
+    "Runtime bundles"
+  ]
+}

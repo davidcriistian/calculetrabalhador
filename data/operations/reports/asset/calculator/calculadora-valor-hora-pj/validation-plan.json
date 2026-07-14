@@ -1,0 +1,19 @@
+{
+  "id": "validation-plan-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "executed",
+  "createdAt": "2026-07-13",
+  "validationGates": [
+    "no-duplicate-asset",
+    "safe-slug",
+    "calculator-blueprint-compatible",
+    "gold-standard-compatible",
+    "no-central-legal-rule-invented",
+    "public-page-created",
+    "catalog-entry-created-after-page",
+    "sitemap-single-url",
+    "no-guide-or-cluster-physical-mutation",
+    "rollback-ready"
+  ],
+  "resultsReference": "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/validation-results.json"
+}

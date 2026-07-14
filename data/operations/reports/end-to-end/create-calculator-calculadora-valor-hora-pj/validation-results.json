@@ -1,0 +1,73 @@
+{
+  "id": "validation-results-create-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "passed",
+  "createdAt": "2026-07-13",
+  "results": [
+    {
+      "name": "JSON_VALID",
+      "status": "pass",
+      "evidence": "All JSON files under data parsed successfully."
+    },
+    {
+      "name": "HTML_STRUCTURAL_VALID",
+      "status": "pass",
+      "evidence": "Canonical, robots, required internal links, JSON-LD and inline JavaScript syntax validated."
+    },
+    {
+      "name": "CALCULATION_TESTS",
+      "status": "pass",
+      "evidence": "Base case and blocking edge cases passed."
+    },
+    {
+      "name": "CATALOG_AND_SITEMAP_VALID",
+      "status": "pass",
+      "evidence": "Single tools entry, single sitemap URL, featured=false and showOnHome=false."
+    },
+    {
+      "name": "INTERNAL_JSON_REFS_VALID",
+      "status": "pass",
+      "evidence": "Governance validator passed after tools-map entry was added."
+    },
+    {
+      "name": "validate-governance",
+      "status": "pass",
+      "evidence": "node scripts/validate-governance.js returned PASS."
+    },
+    {
+      "name": "transform-rules",
+      "status": "pass",
+      "evidence": "node scripts/transform-rules.js returned equivalent aggregator."
+    },
+    {
+      "name": "transform-rules-check",
+      "status": "pass",
+      "evidence": "node scripts/transform-rules.js --check returned equivalent aggregator."
+    },
+    {
+      "name": "shadow-adicional-noturno",
+      "status": "pass",
+      "evidence": "50 scenarios, 0 divergences."
+    },
+    {
+      "name": "shadow-aviso-previo",
+      "status": "pass",
+      "evidence": "60 scenarios, 0 divergences."
+    },
+    {
+      "name": "indexnow-dry-run",
+      "status": "pass",
+      "evidence": "Dry-run payload generated for one URL; no send executed."
+    },
+    {
+      "name": "idempotency-replay",
+      "status": "pass",
+      "evidence": "Replay result NO_CHANGE_REQUIRED; no duplicate created."
+    },
+    {
+      "name": "git-diff-check",
+      "status": "pass",
+      "evidence": "No whitespace errors; Git reported LF/CRLF normalization warnings only."
+    }
+  ]
+}

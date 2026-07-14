@@ -1,0 +1,24 @@
+{
+  "id": "calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "type": "calculator",
+  "slug": "calculadora-valor-hora-pj",
+  "status": "published",
+  "approvalStatus": "approved-controlled-execution",
+  "relationshipStatus": "approved-secondary",
+  "publishingStatus": "published",
+  "runtimeStatus": "not-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "references": [
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/calculator-draft-specification.json",
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/relationship-map.json",
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/registry-draft-entry.json",
+    "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/publishing-draft-entry.json",
+    "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/final-operation-report.json"
+  ],
+  "notes": [
+    "Lightweight by-type registry entry for controlled calculator delivery.",
+    "This registry entry does not define calculation rules, legal knowledge, SEO or runtime behavior."
+  ]
+}

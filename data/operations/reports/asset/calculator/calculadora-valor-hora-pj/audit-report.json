@@ -1,0 +1,29 @@
+{
+  "id": "audit-report-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "passed",
+  "createdAt": "2026-07-13",
+  "candidateDecision": {
+    "selectedCandidate": "calculadora-valor-hora-pj",
+    "reason": "Complements the PJ ecosystem by estimating hourly, daily and project pricing from user-provided assumptions.",
+    "notDuplicateOf": "calculator:calculadora-clt-ou-pj",
+    "manualDecisionRequired": false
+  },
+  "auditFindings": [
+    {
+      "item": "duplicate-slug",
+      "status": "passed",
+      "evidence": "No existing physical directory, tools entry, registry entry or sitemap URL for calculadora-valor-hora-pj."
+    },
+    {
+      "item": "legal-rule-source",
+      "status": "passed",
+      "evidence": "No legal tax rate was embedded; tax and reserve percentages are user inputs."
+    },
+    {
+      "item": "cluster-primary-calculator",
+      "status": "preserved",
+      "evidence": "calculadora-clt-ou-pj remains the primary calculator for cluster clt-ou-pj."
+    }
+  ]
+}

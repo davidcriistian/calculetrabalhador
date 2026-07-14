@@ -149,6 +149,18 @@
                              "reference":  "/data/publishing/registry/calculator-calculadora-clt-ou-pj-draft.json"
                          },
                          {
+                             "id":  "publishing-calculator-calculadora-valor-hora-pj",
+                             "assetId":  "calculator:calculadora-valor-hora-pj",
+                             "assetType":  "calculator",
+                             "status":  "published",
+                             "approvalStatus":  "approved-controlled-execution",
+                             "relationshipStatus":  "approved-secondary",
+                             "publishingStatus":  "published",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json"
+                         },
+                         {
                              "id":  "publishing-draft-guide-guide-pj",
                              "assetId":  "guide:guide-pj",
                              "assetType":  "guide",

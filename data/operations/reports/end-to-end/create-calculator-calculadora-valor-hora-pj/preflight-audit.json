@@ -1,0 +1,46 @@
+{
+  "id": "preflight-audit-create-calculator-calculadora-valor-hora-pj",
+  "operation": "deliver-asset-end-to-end",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "executedAt": "2026-07-13",
+  "inputs": {
+    "requestType": "CREATE_SINGLE_ASSET",
+    "assetType": "calculator",
+    "preferredDomain": "pj",
+    "preferredNucleus": "pj",
+    "preferredGuide": "guide-pj",
+    "preferredCluster": "clt-ou-pj"
+  },
+  "auditedSources": [
+    "/data/tools.json",
+    "/data/articles.json",
+    "/data/brain/nuclei.json",
+    "/data/brain/clusters.json",
+    "/data/registry/by-type/index.json",
+    "/data/registry/by-nucleus/pj.json",
+    "/data/registry/by-cluster/clt-ou-pj.json",
+    "/guias/pj/index.html",
+    "/calculadora-clt-ou-pj/index.html",
+    "/sitemap.xml"
+  ],
+  "existingAssets": {
+    "primaryCalculator": "calculator:calculadora-clt-ou-pj",
+    "guide": "guide:guide-pj",
+    "cluster": "cluster:clt-ou-pj",
+    "articles": [
+      "article:clt-ou-pj",
+      "article:como-calcular-clt-ou-pj",
+      "article:vantagens-e-desvantagens-clt-ou-pj",
+      "article:quanto-preciso-ganhar-como-pj-para-compensar-clt",
+      "article:clt-ou-pj-vale-a-pena-em-2026",
+      "article:contrato-pj-o-que-analisar-antes-de-aceitar"
+    ]
+  },
+  "gapDecision": {
+    "gapFound": true,
+    "gap": "No existing calculator focused on hourly, daily and project pricing for PJ work.",
+    "selectedCandidate": "calculator:calculadora-valor-hora-pj",
+    "duplicateFound": false,
+    "safeToCreate": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "rollback-plan-calculator-calculadora-valor-hora-pj",
+  "assetId": "calculator:calculadora-valor-hora-pj",
+  "status": "ready",
+  "createdAt": "2026-07-13",
+  "rollbackScope": {
+    "removeFiles": [
+      "/calculadora-valor-hora-pj/index.html",
+      "/data/registry/by-type/calculator-calculadora-valor-hora-pj.json",
+      "/data/publishing/registry/calculator-calculadora-valor-hora-pj-published.json",
+      "/data/operations/reports/asset/calculator/calculadora-valor-hora-pj/",
+      "/data/operations/reports/end-to-end/create-calculator-calculadora-valor-hora-pj/"
+    ],
+    "revertEdits": [
+      "/data/tools.json",
+      "/data/registry/by-type/index.json",
+      "/data/publishing/registry/index.json",
+      "/sitemap.xml"
+    ]
+  },
+  "confirmationSteps": [
+    "Confirm /calculadora-valor-hora-pj/ no longer exists.",
+    "Confirm data/tools.json has no calculadora-valor-hora-pj entry.",
+    "Confirm registry and publishing indexes have no calculadora-valor-hora-pj entry.",
+    "Confirm sitemap.xml has no calculadora-valor-hora-pj URL.",
+    "Run JSON validation, governance, transform-rules, shadow validators and git diff --check."
+  ]
+}
