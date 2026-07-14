@@ -1,9 +1,9 @@
 {
   "id": "operation-checklists",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
@@ -38,6 +38,7 @@
   },
   "notes": [
     "Checklists guide future operation execution.",
-    "Nucleus checklists include pre-operation, execution, post-operation, approval and rollback readiness."
+    "Nucleus checklists include pre-operation, execution, post-operation, approval and rollback readiness.",
+    "The end-to-end checklist includes conservative calculator migration and governed propagation gates."
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -30,6 +30,12 @@
     "VALIDATE_ONLY",
     "ROLLBACK"
   ],
+  "calculatorOperationKinds": {
+    "CREATE_NEW_CALCULATOR": "CREATE_SINGLE_ASSET or CREATE_ASSET_WITH_RELATIONSHIPS",
+    "MIGRATE_EXISTING_CALCULATOR": "MIGRATE_TO_NEW_STANDARD",
+    "PATCH_EXISTING_CALCULATOR": "UPDATE_EXISTING_ASSET",
+    "UPDATE_GOVERNED_RULE": "UPDATE_CENTRAL_RULE"
+  },
   "executionModes": [
     "DRY_RUN",
     "PLAN_ONLY",
@@ -90,6 +96,12 @@
       ,"articleRole"
       ,"internalLinkPlan"
       ,"inboundLinkAnalysis"
+      ,"operationKind"
+      ,"heritageSnapshot"
+      ,"regressionBaselineStatus"
+      ,"legalScopeClass"
+      ,"typedRuleConsumers"
+      ,"migrationFamily"
     ],
     "conditional": [
       "coreSource",
@@ -111,6 +123,10 @@
       ,"articleEditorialPlan"
       ,"sourceTraceabilityEvidence"
       ,"clusterPositionResolution"
+      ,"migrationHeritageResolution"
+      ,"regressionBaselineEvidence"
+      ,"singleSourceEvidence"
+      ,"governedImpactAnalysis"
     ],
     "manualDecision": [
       "missingDomain",
@@ -134,6 +150,10 @@
       ,"articleSourcesNotResolved"
       ,"articleClusterPositionNotResolved"
       ,"articleBidirectionalLinksNotResolved"
+      ,"migrationHeritageNotResolved"
+      ,"regressionBaselineNotResolved"
+      ,"legalScopeClassNotResolved"
+      ,"specializedReviewNotResolved"
     ],
     "prohibitedToInfer": [
       "assetId",
@@ -216,6 +236,12 @@
       ,"recommendationSlotResolution"
       ,"adaptiveReportResolution"
       ,"reportRenderValidation"
+      ,"calculatorMigrationContract"
+      ,"migrationHeritageResolution"
+      ,"regressionBaselineGate"
+      ,"typedDependencyPlan"
+      ,"governedImpactAnalysis"
+      ,"humanReviewRequirements"
       ,"articleEditorialContract"
       ,"articleEditorialPlan"
       ,"searchIntentResolution"
@@ -286,6 +312,12 @@
     "calculatorExperienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
     "calculatorExperienceValidator": "/scripts/validate-calculator-experience-contract.js",
     "calculatorExperienceFixtures": "/data/pos/validation/calculator-experience-fixtures.json"
+    ,"calculatorMigrationContract": "/data/blueprints/contracts/calculator-migration.contract.json"
+    ,"governedPropagationContract": "/data/core/update/governed-propagation.contract.json"
+    ,"calculatorMigrationValidator": "/scripts/validate-calculator-migration-foundation.js"
+    ,"calculatorMigrationFixtures": "/data/pos/validation/calculator-migration-foundation-fixtures.json"
+    ,"calculatorLegalSensitivity": "/data/core/update/calculator-legal-sensitivity.json"
+    ,"typedRuleConsumers": "/data/core/update/governed-rule-consumers.json"
     ,"articleEditorialContract": "/data/blueprints/article/editorial-automation.contract.json"
     ,"articleValidator": "/scripts/validate-article-automation.js"
     ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
@@ -307,6 +339,12 @@
     ,"Do not accept a non-institutional primary theme without approved variation evidence."
     ,"Do not invent or hide the governed visible updated-at value."
     ,"Do not accept screenshot, full-page capture, viewport-dependent or raster-only reports."
+    ,"Do not rewrite editorial or SEO heritage during technical calculator migration."
+    ,"Do not migrate an existing calculator without the regression baseline gate."
+    ,"Do not infer governed consumers from text search."
+    ,"Do not certify a governed engine with a stale visible rule representation."
+    ,"Do not force NO_CENTRAL_LEGAL_RULE_REQUIRED calculators into the legal update system."
+    ,"Do not automatically migrate SPECIALIZED_REVIEW_REQUIRED calculators."
     ,"Do not generate a NEW_ARTICLE or MIGRATED_ARTICLE with unresolved editorial, freshness, source, cluster or bidirectional-link gates."
     ,"Do not apply the new article standard retroactively without explicit migration scope."
     ,"Do not represent a Guide asset as an isolated Home card."

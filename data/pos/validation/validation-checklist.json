@@ -1,6 +1,6 @@
 {
   "id": "validation-checklist",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -10,6 +10,10 @@
   "source": "Project Operating System Phase 4 - Validation Engine",
   "description": "Official declarative checklist for future compliance validation.",
   "items": [
+    { "id": "calculator-migration-heritage", "required": true, "severity": "critical", "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"], "evidence": ["heritage-snapshot", "preservation-diff", "validator-report"] },
+    { "id": "calculator-migration-baseline", "required": true, "severity": "critical", "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"], "evidence": ["regression-baseline", "baseline-gate-decision"] },
+    { "id": "calculator-governed-propagation", "required": true, "severity": "critical", "evidence": ["typed-consumer-map", "single-source-check", "impact-analysis"] },
+    { "id": "calculator-migration-human-review", "required": true, "severity": "high", "evidence": ["deterministic-checks", "heuristic-warnings", "human-review-record"] },
     { "id": "seo", "required": true, "severity": "high", "evidence": ["seo-report", "manual-review"] },
     { "id": "canonical", "required": true, "severity": "high", "evidence": ["seo-report"] },
     { "id": "meta-description", "required": true, "severity": "medium", "evidence": ["seo-report"] },

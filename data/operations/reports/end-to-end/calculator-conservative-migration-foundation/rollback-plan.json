@@ -1,0 +1,11 @@
+{
+  "reportId": "calculator-migration-foundation-rollback-plan",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "READY_INTERNAL_ONLY",
+  "scope": "Revert only internal contracts, registries, validators, fixtures, workflow integrations and operation reports from this phase.",
+  "protectedAssets": ["22 calculator pages", "public articles", "Home", "Guides", "public catalogs and maps", "sitemap", "production legal rules", "public runtimes", "Registry and Publishing"],
+  "postRollbackChecks": ["parse all JSON", "node --check validators", "Calculator Experience Contract validator", "governance validator", "transform-rules --check", "shadow validators", "git diff --check", "mutation guard"],
+  "destructiveCommandRequired": false,
+  "publicRollbackRequired": false
+}

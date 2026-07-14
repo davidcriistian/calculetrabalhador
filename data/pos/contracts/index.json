@@ -1,9 +1,9 @@
 {
   "id": "pos-contracts-index",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
@@ -11,7 +11,8 @@
   "notes": [
     "Contracts define expected boundaries for future POS engines and workflows.",
     "No operational engine is implemented by these contracts.",
-    "Core contracts describe knowledge capabilities; POS contracts describe operational processes."
+    "Core contracts describe knowledge capabilities; POS contracts describe operational processes.",
+    "Calculator migration consumes the conservative migration and governed propagation contracts without changing production by itself."
   ],
   "boundary": {
     "coreContracts": "knowledge capabilities",

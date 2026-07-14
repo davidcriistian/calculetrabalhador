@@ -1,13 +1,22 @@
 {
   "id": "calculator-canonical-experience-contract",
-  "calculatorExperienceContractVersion": "1.1.0",
+  "calculatorExperienceContractVersion": "1.2.0",
   "status": "active-internal-standard",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-14",
   "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
-  "source": "Phase 5.28 - Calculator Experience Contract Final Refinement",
+  "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
   "principle": ["SAME_PRODUCT_SYSTEM", "SAME_QUALITY_FLOOR", "DOMAIN_SPECIFIC_ADAPTATION"],
+  "conservativeMigrationContract": {
+    "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "version": "1.0.0",
+    "requiredFor": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
+    "preservationIsDefault": true,
+    "editorialRewriteIsMigrationResponsibility": false,
+    "regressionBaselineGateRequired": true,
+    "governedPropagationContract": "/data/core/update/governed-propagation.contract.json"
+  },
   "canonicalReference": {
     "referenceId": "calculator-multa-40-fgts-reference",
     "assetId": "calculator:calculadora-multa-40-fgts",

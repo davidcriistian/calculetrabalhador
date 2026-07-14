@@ -1,0 +1,87 @@
+{
+  "id": "calculator-conservative-migration-foundation-fixtures",
+  "contractVersion": "1.0.0",
+  "propagationContractVersion": "1.0.0",
+  "status": "active-internal-test-fixtures",
+  "defaults": {
+    "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+    "technicalMigration": true,
+    "explicitScope": {
+      "editorialRewrite": false,
+      "seoRewrite": false,
+      "canonicalChange": false,
+      "urlChange": false,
+      "calculationChange": false
+    },
+    "preservation": {
+      "seo": true,
+      "editorialContent": true,
+      "internalLinks": true,
+      "url": true,
+      "canonical": true,
+      "validSchema": true,
+      "staticValidInformation": true,
+      "calculationBehavior": true
+    },
+    "baselineStatus": "REGRESSION_BASELINE_READY",
+    "calculationChanged": false,
+    "legalScopeClass": "LEGAL_UPDATE_REQUIRED",
+    "centralLegalDependencyForced": false,
+    "dependenciesDeclared": true,
+    "dependencyEvidence": "DECLARED_TYPED_RELATIONSHIP",
+    "governedDependencyConfirmed": true,
+    "ruleCoherence": {
+      "engineGoverned": true,
+      "visibleRulePresent": true,
+      "sameGovernedProjection": true,
+      "visibleDependencyDeclared": true
+    },
+    "example": {
+      "type": "RULE_DEPENDENT_EXAMPLE",
+      "handling": "DYNAMICALLY_DERIVED"
+    },
+    "canonicalDiffPatch": {
+      "componentAlreadyCompliant": true,
+      "componentPreserved": true
+    },
+    "consumerTypes": [
+      "CALCULATION_ENGINE",
+      "VISIBLE_TABLE"
+    ],
+    "specialized": {
+      "isException": false,
+      "automaticMigration": false,
+      "humanReviewRecorded": false
+    },
+    "publicMutation": false
+  },
+  "scenarios": [
+    {"id":"pass-preserves-seo-and-content","overrides":{},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-table-and-engine-share-rule","overrides":{},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-non-legal-remains-outside-central","overrides":{"legalScopeClass":"NO_CENTRAL_LEGAL_RULE_REQUIRED","dependenciesDeclared":false,"governedDependencyConfirmed":false,"ruleCoherence":{"engineGoverned":false,"visibleRulePresent":false,"sameGovernedProjection":true,"visibleDependencyDeclared":false}},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-rule-dependent-example-dynamic","overrides":{"example":{"type":"RULE_DEPENDENT_EXAMPLE","handling":"DYNAMICALLY_DERIVED"}},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-rule-dependent-example-review","overrides":{"example":{"type":"RULE_DEPENDENT_EXAMPLE","handling":"REVIEW_REQUIRED_ON_DEPENDENCY_CHANGE"}},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-baseline-ready","overrides":{"baselineStatus":"REGRESSION_BASELINE_READY"},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-canonical-diff-preserves-compliant-component","overrides":{},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"pass-rule-has-multiple-typed-consumers","overrides":{"consumerTypes":["CALCULATION_ENGINE","VISIBLE_TABLE","RESULT_EXPLANATION","VALIDATION_TEST"]},"expected":"PASS","expectedFailures":[],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-editorial-rewrite-during-technical-migration","overrides":{"preservation":{"editorialContent":false}},"expected":"FAIL","expectedFailures":["EDITORIAL_REWRITE_DURING_TECHNICAL_MIGRATION"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-internal-link-loss","overrides":{"preservation":{"internalLinks":false}},"expected":"FAIL","expectedFailures":["INTERNAL_LINK_LOSS"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-canonical-change-without-scope","overrides":{"preservation":{"canonical":false}},"expected":"FAIL","expectedFailures":["CANONICAL_CHANGE_WITHOUT_EXPLICIT_SCOPE"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-calculation-change-without-baseline","overrides":{"calculationChanged":true,"baselineStatus":"REGRESSION_BASELINE_PARTIAL"},"expected":"FAIL","expectedFailures":["CALCULATION_CHANGE_WITHOUT_BASELINE"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-governed-engine-stale-visible-table","overrides":{"ruleCoherence":{"sameGovernedProjection":false}},"expected":"FAIL","expectedFailures":["GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-visible-table-without-dependency","overrides":{"ruleCoherence":{"visibleDependencyDeclared":false}},"expected":"FAIL","expectedFailures":["VISIBLE_TABLE_WITHOUT_DECLARED_RULE_DEPENDENCY"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-rule-dependent-example-evergreen","overrides":{"example":{"handling":"EVERGREEN"}},"expected":"FAIL","expectedFailures":["RULE_DEPENDENT_EXAMPLE_MARKED_AS_EVERGREEN"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-text-heuristic-treated-as-governed","overrides":{"dependencyEvidence":"HEURISTIC_TEXT_MATCH","governedDependencyConfirmed":true},"expected":"FAIL","expectedFailures":["HEURISTIC_DEPENDENCY_TREATED_AS_GOVERNED"],"expectedCheckType":"HEURISTIC_WARNING"},
+    {"id":"fail-non-legal-forced-into-central","overrides":{"legalScopeClass":"NO_CENTRAL_LEGAL_RULE_REQUIRED","centralLegalDependencyForced":true,"dependenciesDeclared":false,"governedDependencyConfirmed":false,"ruleCoherence":{"engineGoverned":false,"visibleRulePresent":false,"sameGovernedProjection":true,"visibleDependencyDeclared":false}},"expected":"FAIL","expectedFailures":["NON_LEGAL_CALCULATOR_FORCED_INTO_LEGAL_UPDATE_SYSTEM"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-baseline-missing","overrides":{"baselineStatus":"REGRESSION_BASELINE_MISSING"},"expected":"FAIL","expectedFailures":["MIGRATION_WITHOUT_REGRESSION_BASELINE"],"expectedCheckType":"DETERMINISTIC_CHECK"},
+    {"id":"fail-specialized-auto-migration","overrides":{"legalScopeClass":"SPECIALIZED_REVIEW_REQUIRED","specialized":{"isException":true,"automaticMigration":true,"humanReviewRecorded":false}},"expected":"FAIL","expectedFailures":["SPECIALIZED_EXCEPTION_AUTO_MIGRATED"],"expectedCheckType":"HUMAN_REVIEW_REQUIRED"},
+    {"id":"fail-public-mutation-in-foundation","overrides":{"publicMutation":true},"expected":"FAIL","expectedFailures":["PUBLIC_MUTATION_DURING_FOUNDATION_PHASE"],"expectedCheckType":"DETERMINISTIC_CHECK"}
+  ],
+  "impactFixture": {
+    "ruleId": "inss",
+    "previousVersion": "2025",
+    "newVersion": "2026",
+    "effectiveDate": "2026-01-01",
+    "source": "https://www.gov.br/inss/pt-br"
+  }
+}

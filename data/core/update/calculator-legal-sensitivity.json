@@ -1,0 +1,45 @@
+{
+  "id": "calculator-legal-update-sensitivity-registry",
+  "version": "1.0.0",
+  "status": "initial-audit-backed-classification",
+  "runtimeStatus": "internal-governance-only",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "source": "/data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/update-sensitivity-matrix.json",
+  "classificationRule": "Specialized review overrides required legal update classification; calculators without legal dependencies remain outside the central legal rule system.",
+  "counts": {
+    "LEGAL_UPDATE_REQUIRED": 15,
+    "LEGAL_UPDATE_OPTIONAL": 0,
+    "NO_CENTRAL_LEGAL_RULE_REQUIRED": 4,
+    "SPECIALIZED_REVIEW_REQUIRED": 3
+  },
+  "calculators": [
+    {"calculatorId":"calculator:calculadora-aviso-previo","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:saque-aniversario-fgts","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-adicional-noturno","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-horas-extras-clt","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-seguro-desemprego","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-insalubridade","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-ferias-pj","class":"NO_CENTRAL_LEGAL_RULE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-reserva-financeira-pj","class":"NO_CENTRAL_LEGAL_RULE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-valor-hora-pj","class":"NO_CENTRAL_LEGAL_RULE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-custo-mensal-pj","class":"NO_CENTRAL_LEGAL_RULE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-multa-40-fgts","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:salario-liquido-clt","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-13-salario","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-ferias-clt","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-inss","class":"SPECIALIZED_REVIEW_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-inss-autonomo","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-inss-mei","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-das-mei-2026","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-limite-faturamento-mei-2026","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-das-mei-atraso-2026","class":"LEGAL_UPDATE_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-rescisao-clt","class":"SPECIALIZED_REVIEW_REQUIRED"},
+    {"calculatorId":"calculator:calculadora-clt-ou-pj","class":"SPECIALIZED_REVIEW_REQUIRED"}
+  ],
+  "boundaries": {
+    "changesCalculator": false,
+    "createsLegalDependency": false,
+    "classificationIsMigrationApproval": false
+  }
+}

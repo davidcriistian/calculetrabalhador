@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -80,6 +80,16 @@
     "recommendations": ["canonical-four-state-model", "configuration-state-resolved", "eligibility-verified", "approved-product-source-verified", "not-configured-and-not-eligible-hidden", "no-recommendation-invented"],
     "antiPatterns": ["no-applicable-blocker", "major-items-resolved-or-approved-exception"]
   },
+  "calculatorMigrationFoundation": {
+    "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
+    "operationRouting": ["CREATE_NEW_CALCULATOR", "MIGRATE_EXISTING_CALCULATOR", "PATCH_EXISTING_CALCULATOR", "UPDATE_GOVERNED_RULE"],
+    "heritage": ["SEO-preserved", "editorial-content-preserved", "internal-links-preserved", "URL-preserved", "canonical-preserved", "valid-schema-preserved", "static-valid-information-preserved", "calculation-behavior-preserved-until-baseline-proves-change"],
+    "baseline": ["status-declared", "inputs-covered", "outputs-covered", "rounding-covered", "boundaries-covered", "invalid-states-covered", "fallback-covered", "visible-result-covered"],
+    "dependencies": ["legal-scope-class-declared", "typed-consumers-declared", "heuristics-not-confirmed", "engine-and-visible-rule-share-source", "rule-dependent-example-dynamic-or-review"],
+    "families": ["LEGACY_CALCULATOR_FAMILY_V1-preserves-calculator-specific-semantics", "CANONICAL_DIFF_PATCH-preserves-compliant-components"],
+    "review": ["specialized-exception-not-auto-migrated", "semantic-law-change-reviewed", "formula-change-reviewed", "effective-date-ambiguity-reviewed"],
+    "gates": ["MIGRATION_HERITAGE_PRESERVED", "REGRESSION_BASELINE_RESOLVED", "LEGAL_SCOPE_CLASS_RESOLVED", "TYPED_CONSUMERS_RESOLVED", "SINGLE_SOURCE_RULE_RESOLVED", "MIGRATION_FAMILY_RESOLVED", "SPECIALIZED_REVIEW_RESOLVED"]
+  },
   "articleStandard": {
     "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
@@ -135,6 +145,13 @@
     ,"calculator-applicable-blocker-anti-pattern"
     ,"calculator-false-visual-pass"
     ,"calculator-recommendation-source-unapproved"
+    ,"calculator-migration-heritage-not-preserved"
+    ,"calculator-regression-baseline-missing"
+    ,"calculator-typed-dependencies-unresolved"
+    ,"governed-engine-with-stale-visible-rule"
+    ,"heuristic-dependency-treated-as-governed"
+    ,"non-legal-calculator-forced-into-legal-update-system"
+    ,"specialized-calculator-auto-migration"
     ,"article-search-intent-unresolved"
     ,"article-editorial-clarity-unresolved"
     ,"article-freshness-unresolved"

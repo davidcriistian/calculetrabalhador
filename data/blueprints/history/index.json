@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-history",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -95,6 +95,20 @@
         "Connected the refinements to internal automation without modifying public calculators."
       ],
       "notes": ["Legacy assets remain accepted pending migration."]
+    },
+    {
+      "id": "calculator-conservative-migration-foundation-1.0.0",
+      "phase": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
+      "version": "0.7.0",
+      "date": "2026-07-14",
+      "owner": "Calcule Trabalhador",
+      "status": "active-internal-standard",
+      "changes": [
+        "Formalized conservative preservation for existing calculator migration.",
+        "Added regression baseline and specialized review gates.",
+        "Connected typed rule consumers and governed impact analysis to existing automation."
+      ],
+      "notes": ["No public calculator, production rule or runtime was modified."]
     }
   ],
   "notes": [

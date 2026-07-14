@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-reports",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/operations/schemas/report.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -55,6 +55,21 @@
       "linkingStatus": null,
       "fixtureReport": null,
       "dryRunReport": null
+    },
+    "calculatorMigrationFoundation": {
+      "applicable": false,
+      "operationKind": null,
+      "migrationContractVersion": null,
+      "propagationContractVersion": null,
+      "heritagePreservationStatus": null,
+      "regressionBaselineStatus": null,
+      "legalScopeClass": null,
+      "migrationFamily": null,
+      "typedConsumerCount": 0,
+      "impactStates": [],
+      "checkTypes": {"DETERMINISTIC_CHECK": 0, "HEURISTIC_WARNING": 0, "HUMAN_REVIEW_REQUIRED": 0},
+      "fixtureReport": null,
+      "validatorReport": null
     },
     "manualDecisions": [],
     "warnings": [],

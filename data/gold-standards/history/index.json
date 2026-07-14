@@ -1,6 +1,6 @@
 {
   "id": "gold-standard-history",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -43,6 +43,18 @@
         "Added 800 to 1200 scoped editorial words and pre-calculation FAQ and methodology visibility.",
         "Added the stable canonical recommendation slot and four-state model.",
         "Required semantic A4 selectable adaptive reports with distinct copy, print and download actions."
+      ]
+    },
+    {
+      "id": "calculator-gold-standard-1.3",
+      "version": "1.3",
+      "date": "2026-07-14",
+      "status": "active-internal-standard",
+      "changes": [
+        "Added conservative migration heritage preservation.",
+        "Required regression baseline gates for existing calculator migration.",
+        "Required typed governed dependencies and single-source visible rule coherence.",
+        "Kept non-legal calculators outside the central legal update system and specialized exceptions under human review."
       ]
     }
   ]

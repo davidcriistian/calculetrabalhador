@@ -2,7 +2,7 @@
   "id": "calculator-gold-standard",
   "name": "Calculator Standard",
   "type": "calculator",
-  "version": "1.2",
+  "version": "1.3",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "active-foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -12,10 +12,19 @@
   "description": "Declarative quality standard for future calculator assets.",
   "canonicalExperienceContract": {
     "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "referenceBacked": true,
     "contextAware": true,
     "pixelIdenticalCopyRequired": false
+  },
+  "conservativeMigrationStandard": {
+    "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "version": "1.0.0",
+    "preserveByDefault": ["SEO", "editorial-content", "internal-links", "URL", "canonical", "valid-schema", "static-valid-information", "calculation-behavior"],
+    "baselineGateRequired": true,
+    "typedLegalDependenciesRequiredWhenApplicable": true,
+    "nonLegalCalculatorsRemainOutsideCentralLegalRules": true,
+    "specializedExceptionsRequireHumanReview": true
   },
   "mandatoryStructure": ["hero", "intro", "simulator", "field-groups", "editorial-or-methodology", "faq", "related-content", "sources", "footer", "dynamic-result-layer"],
   "optionalStructure": ["product-context", "cta-context", "downloads", "advanced-examples", "legal-notice"],
@@ -30,7 +39,10 @@
     "must-not-store-legal-source-outside-core",
     "must-not-copy-existing-calculator-html",
     "must-not-publish-without-testing-and-validation",
-    "must-not-use-unversioned-standard"
+    "must-not-use-unversioned-standard",
+    "must-not-rewrite-editorial-content-during-technical-migration",
+    "must-not-change-calculation-without-regression-baseline",
+    "must-not-certify-governed-engine-with-stale-visible-rule"
   ],
   "acceptanceCriteria": [
     "all mandatory sections present",
@@ -38,7 +50,9 @@
     "result states are defined",
     "SEO and JSON-LD are complete",
     "related content is intentional",
-    "publishing gates are declared"
+    "publishing gates are declared",
+    "migrated assets preserve declared heritage",
+    "legal dependencies are typed and auditable when required"
   ],
   "measurableApprovalCriteria": {
     "entryExperience": ["visible page context", "complete hero with value promise and output preview", "dominant entry CTA", "clear simulator transition"],
@@ -64,6 +78,7 @@
   },
   "migrationNotes": [
     "Assets on v1.0 or v1.1 may migrate to v1.2 for final experience and adaptive-report requirements.",
+    "Assets migrating to v1.3 must pass the conservative migration, regression baseline and governed propagation gates.",
     "Assets on v1.x may migrate to v2.0 only through Migration, Testing and Validation gates."
   ],
   "supersedes": null,
@@ -72,6 +87,7 @@
     "1.0": "Initial calculator quality standard.",
     "1.1": "Canonical reference-backed experience, result, memory, visual evidence and anti-pattern enforcement.",
     "1.2": "Institutional theme, visible freshness, permanent content, editorial depth, canonical recommendation slot and adaptive report enforcement.",
+    "1.3": "Conservative migration, editorial heritage preservation, baseline gating and typed governed propagation.",
     "2.0": "Reserved for future layout, publishing and monetization quality changes."
   }
 }

@@ -1,15 +1,15 @@
 {
   "id": "pos-contract-migration",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 2 - Migration Engine",
   "name": "Migration Contract",
-  "objective": "Define future migration responsibilities for moving assets between structures through a repeatable protocol without changing production behavior.",
+  "objective": "Define conservative migration responsibilities for existing calculators while preserving editorial heritage, SEO, identity and baseline-proven calculation behavior.",
   "scope": [
     "asset mapping",
     "source and destination mapping",
@@ -19,7 +19,12 @@
     "approval gates",
     "rollback metadata",
     "batch migration planning",
-    "audit trail"
+    "audit trail",
+    "PRESERVE-RESTRUCTURE_WITHOUT_REWRITING-MIGRATE-GOVERN-HUMAN_REVIEW_REQUIRED classification",
+    "regression baseline gate",
+    "typed governed dependency mapping",
+    "single-source engine and visible-rule validation",
+    "migration family selection"
   ],
   "expectedInputs": [
     "source asset reference",
@@ -36,12 +41,20 @@
     "gate decision record",
     "impact notes",
     "rollback reference",
-    "batch migration record"
+    "batch migration record",
+    "heritage preservation record",
+    "baseline gate decision",
+    "typed dependency plan",
+    "governed rule impact analysis",
+    "human review requirements"
   ],
   "dependencies": [
     "/data/pos/registry/index.json",
     "/data/pos/versioning/index.json",
-    "/data/pos/migration/index.json"
+    "/data/pos/migration/index.json",
+    "/data/blueprints/contracts/calculator-migration.contract.json",
+    "/data/core/update/governed-propagation.contract.json",
+    "/data/core/update/calculator-legal-sensitivity.json"
   ],
   "nonResponsibilities": [
     "execute migrations",
@@ -50,7 +63,10 @@
     "change calculators or articles",
     "change SEO",
     "change sitemap",
-    "implement batch execution"
+    "implement batch execution",
+    "rewrite editorial content",
+    "infer governed dependencies from text",
+    "publish rule changes automatically"
   ],
   "notes": [
     "This contract is declarative and does not execute a migration.",

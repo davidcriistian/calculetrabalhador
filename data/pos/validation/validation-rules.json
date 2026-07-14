@@ -1,6 +1,6 @@
 {
   "id": "validation-rules",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/pos/schemas/shared-metadata.schema.json",
   "status": "foundation",
   "runtimeStatus": "not-consumed",
@@ -10,6 +10,44 @@
   "source": "Project Operating System Phase 4 - Validation Engine",
   "description": "Declarative compliance rules for future validation decisions.",
   "rules": [
+    {
+      "id": "calculator-conservative-migration-preservation",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
+      "description": "SEO, editorial heritage, links, URL, canonical, valid schema and baseline-proven behavior must be preserved unless separately scoped."
+    },
+    {
+      "id": "calculator-regression-baseline-gate",
+      "required": true,
+      "blocksApproval": true,
+      "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
+      "description": "Migration requires a READY baseline or completion of a sufficient frozen baseline before calculator mutation."
+    },
+    {
+      "id": "governed-rule-consumers-typed",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Governed rule consumers must use declared typed relationships; heuristic text matches cannot confirm dependencies."
+    },
+    {
+      "id": "governed-engine-visible-rule-single-source",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Calculation engine and equivalent visible rule representations must share one governed source or deterministic projections."
+    },
+    {
+      "id": "non-legal-calculator-central-exclusion",
+      "required": true,
+      "blocksApproval": true,
+      "description": "Calculators classified NO_CENTRAL_LEGAL_RULE_REQUIRED must not receive artificial legal dependencies."
+    },
+    {
+      "id": "specialized-calculator-human-review",
+      "required": true,
+      "blocksApproval": true,
+      "description": "SPECIALIZED_REVIEW_REQUIRED calculators cannot be automatically migrated."
+    },
     {
       "id": "testing-approved-required",
       "required": true,

@@ -1,0 +1,30 @@
+{
+  "reportId": "calculator-conservative-migration-foundation-preflight",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "operation": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
+  "status": "PASS",
+  "git": {
+    "branch": "main",
+    "head": "5c4dafe5d97d2b93cf907cd0e4b93a93fdbaed6f",
+    "requiredBaseline": "5c4dafe5d97d2b93cf907cd0e4b93a93fdbaed6f",
+    "originMainAtPreflight": "de5ec9476a0959047e2ddfc10317779a8beb11fe",
+    "ahead": 1,
+    "behind": 0,
+    "staging": "EMPTY",
+    "workingTree": "CLEAN"
+  },
+  "scope": {
+    "internalFoundationOnly": true,
+    "calculatorMigrationCount": 0,
+    "publicPageMutationAllowed": false,
+    "productionFormulaMutationAllowed": false,
+    "productionLegalRuleMutationAllowed": false,
+    "commitAllowed": false,
+    "pushAllowed": false,
+    "deployAllowed": false,
+    "indexNowAllowed": false
+  },
+  "baselineEvidence": "/data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/",
+  "architectureDecision": "EXTEND_EXISTING_SYSTEM"
+}

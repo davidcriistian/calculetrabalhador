@@ -1,0 +1,30 @@
+{
+  "reportId": "calculator-conservative-migration-foundation-audit",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "PASS_WITH_FOUNDATION_WARNINGS",
+  "successCriteria": {
+    "calculatorPagesUnchanged": true,
+    "publicPagesUnchanged": true,
+    "productionLegalRulesUnchanged": true,
+    "conservativeMigrationFormalized": true,
+    "editorialPreservationValidated": true,
+    "staticAndRuleDependentContentDistinguished": true,
+    "typedRuleConsumersSupported": true,
+    "singleSourceEngineAndVisibleRuleSupported": true,
+    "staleVisibleRuleDetected": true,
+    "nonLegalCalculatorsExcludedFromCentralRules": true,
+    "baselineGateRequired": true,
+    "specializedExceptionsRequireReview": true,
+    "endToEndRecognizesMigration": true,
+    "positiveAndNegativeFixturesMatched": true,
+    "zeroPublicMutationProved": true
+  },
+  "warnings": [
+    "Twenty-nine observed rule-consumer relationships remain LEGACY_DECLARED_PENDING_MIGRATION; this phase does not certify them as governed.",
+    "Only the INSS deterministic transform currently supports confirmed governed calculation consumers in the initial registry.",
+    "READY_FOR_CONTROLLED_PILOT_1 means architecture readiness only; no pilot was started or approved."
+  ],
+  "blockers": [],
+  "browserStatus": "BROWSER_VISUAL_VALIDATION_NOT_REQUIRED_NO_PUBLIC_MUTATION"
+}

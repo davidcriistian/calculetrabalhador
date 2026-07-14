@@ -1,6 +1,6 @@
 {
   "id": "calculator-blueprint-template",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -12,9 +12,18 @@
   "blueprintType": "calculator",
   "calculatorExperienceContract": {
     "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
+  },
+  "conservativeMigrationContract": {
+    "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "version": "1.0.0",
+    "appliesTo": ["MIGRATE_EXISTING_CALCULATOR", "MIGRATED_ASSET"],
+    "families": ["LEGACY_CALCULATOR_FAMILY_V1", "CANONICAL_DIFF_PATCH"],
+    "baselineRequired": true,
+    "preserveEditorialHeritage": true,
+    "governedPropagation": "/data/core/update/governed-propagation.contract.json"
   },
   "clusterRole": {
     "belongsToCluster": true,

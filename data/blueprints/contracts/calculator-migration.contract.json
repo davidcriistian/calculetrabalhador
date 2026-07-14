@@ -1,0 +1,238 @@
+{
+  "id": "calculator-conservative-migration-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "consumed-by-calculator-automation",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "Calcule Trabalhador",
+  "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
+  "objective": "Migrate existing calculator experience without silently rewriting editorial heritage, SEO, identity or calculation behavior.",
+  "principles": [
+    "PRESERVE_EXISTING_SEO",
+    "PRESERVE_EXISTING_EDITORIAL_CONTENT",
+    "PRESERVE_EXISTING_INTERNAL_LINKS",
+    "PRESERVE_EXISTING_URL",
+    "PRESERVE_EXISTING_CANONICAL",
+    "PRESERVE_VALID_SCHEMA",
+    "PRESERVE_STATIC_VALID_INFORMATION",
+    "PRESERVE_CALCULATION_BEHAVIOR_UNTIL_BASELINE_PROVES_CHANGE",
+    "MIGRATE_CALCULATOR_EXPERIENCE",
+    "MIGRATE_RESULT_EXPERIENCE",
+    "CONNECT_LEGAL_DEPENDENCIES_WHEN_REQUIRED",
+    "DO_NOT_CONNECT_NON_LEGAL_CALCULATORS_UNNECESSARILY"
+  ],
+  "operationKinds": {
+    "CREATE_NEW_CALCULATOR": "Use the current Calculator Experience Contract without treating an existing page as migration input.",
+    "MIGRATE_EXISTING_CALCULATOR": "Preserve declared heritage, freeze a regression baseline and migrate only the confirmed experience gaps.",
+    "PATCH_EXISTING_CALCULATOR": "Patch only approved defects or contract gaps without broad migration or editorial rewrite.",
+    "UPDATE_GOVERNED_RULE": "Prepare, transform, test and report typed consumer impact; publication remains controlled."
+  },
+  "conservativeChangePolicy": {
+    "PRESERVE": [
+      "URL",
+      "slug",
+      "canonical",
+      "valid-title",
+      "valid-meta-description",
+      "existing-editorial-content",
+      "editorial-headings",
+      "FAQs",
+      "internal-links",
+      "examples",
+      "disclaimers",
+      "explanatory-content",
+      "valid-schema",
+      "correct-existing-integrations"
+    ],
+    "RESTRUCTURE_WITHOUT_REWRITING": [
+      "block-position",
+      "containers",
+      "cards",
+      "wrappers",
+      "structural-semantics",
+      "CSS-classes",
+      "visual-components",
+      "canonical-contract-order",
+      "accessibility",
+      "responsiveness"
+    ],
+    "MIGRATE": [
+      "hero-when-required",
+      "guided-journey",
+      "form",
+      "field-groups",
+      "steps",
+      "confirmation",
+      "primary-CTA",
+      "error-states",
+      "primary-result",
+      "secondary-indicators",
+      "interpretation",
+      "recommended-next-step",
+      "canonical-product-slot-when-applicable",
+      "calculation-memory",
+      "scenario-comparison-when-applicable",
+      "limitations",
+      "report-actions",
+      "adaptive-report",
+      "visible-updated-at",
+      "institutional-visual-standard"
+    ],
+    "GOVERN": [
+      "official-tables",
+      "brackets",
+      "rates",
+      "ceilings",
+      "floors",
+      "official-fixed-values",
+      "additional-installments",
+      "deductions",
+      "legal-percentages",
+      "effective-dates",
+      "eligibility-rules",
+      "legal-engine-parameters",
+      "short-text-directly-reproducing-governed-parameters"
+    ],
+    "HUMAN_REVIEW_REQUIRED": [
+      "semantic-law-change",
+      "structural-formula-change",
+      "official-source-conflict",
+      "non-deterministic-rule-dependent-example",
+      "historical-content",
+      "legal-exception",
+      "effective-date-ambiguity",
+      "SPECIALIZED_EXCEPTION_REVIEW"
+    ]
+  },
+  "contentTaxonomy": {
+    "STATIC_EDITORIAL": "Evergreen conceptual content without direct dependency on mutable official values.",
+    "GOVERNED_VALUE": "Individual official value consumed by calculation or interface.",
+    "GOVERNED_TABLE": "Visible table derived from the same governed source as its corresponding logic.",
+    "GOVERNED_RULE_SUMMARY": "Short text directly reproducing governed rule parameters.",
+    "TIME_SENSITIVE_EDITORIAL": "Content dependent on year, effective date, legislation or temporal context and requiring traceability or review.",
+    "STATIC_EXAMPLE": "Didactic example independent of mutable official parameters.",
+    "RULE_DEPENDENT_EXAMPLE": {
+      "description": "Example whose output depends on a mutable official rule, bracket, rate, ceiling, floor or value.",
+      "allowedHandling": [
+        "DYNAMICALLY_DERIVED",
+        "REVIEW_REQUIRED_ON_DEPENDENCY_CHANGE"
+      ],
+      "evergreenAllowed": false
+    }
+  },
+  "legalScopeClasses": [
+    "LEGAL_UPDATE_REQUIRED",
+    "LEGAL_UPDATE_OPTIONAL",
+    "NO_CENTRAL_LEGAL_RULE_REQUIRED",
+    "SPECIALIZED_REVIEW_REQUIRED"
+  ],
+  "regressionBaselineGate": {
+    "states": [
+      "REGRESSION_BASELINE_READY",
+      "REGRESSION_BASELINE_PARTIAL",
+      "REGRESSION_BASELINE_MISSING"
+    ],
+    "REGRESSION_BASELINE_READY": "Migration may proceed through normal gates.",
+    "REGRESSION_BASELINE_PARTIAL": "Freeze a sufficient baseline before changing the calculator.",
+    "REGRESSION_BASELINE_MISSING": "Migration is blocked.",
+    "coverage": [
+      "inputs",
+      "outputs",
+      "rounding",
+      "boundaries",
+      "invalid-states",
+      "legal-scenarios",
+      "fallback-behavior",
+      "current-formula",
+      "visible-result"
+    ]
+  },
+  "migrationFamilies": {
+    "LEGACY_CALCULATOR_FAMILY_V1": {
+      "sharedProtocol": true,
+      "mustRemainCalculatorSpecific": [
+        "formula",
+        "content",
+        "dependencies",
+        "result",
+        "report",
+        "exceptions"
+      ],
+      "rigidTemplateAllowed": false
+    },
+    "CANONICAL_DIFF_PATCH": {
+      "flow": [
+        "AUDIT",
+        "DIFF_AGAINST_CURRENT_CANONICAL_CONTRACT",
+        "PATCH_ONLY_CONFIRMED_GAPS"
+      ],
+      "preserveAlreadyCompliantComponents": true
+    }
+  },
+  "futurePilots": [
+    {
+      "id": "PILOT_1",
+      "calculator": "calculator:calculadora-aviso-previo",
+      "status": "REGISTERED_NOT_EXECUTED",
+      "objectives": [
+        "conservative-migration",
+        "editorial-preservation",
+        "visual-modernization",
+        "canonical-result",
+        "legal-integration",
+        "governed-propagation",
+        "baseline-regression"
+      ]
+    },
+    {
+      "id": "PILOT_2",
+      "calculator": "calculator:saque-aniversario-fgts",
+      "status": "REGISTERED_NOT_EXECUTED",
+      "objectives": [
+        "canonical-experience-rebuild",
+        "editorial-preservation",
+        "seven-bracket-preservation",
+        "single-source-engine-and-visible-table",
+        "complete-regression",
+        "governed-propagation-validation"
+      ]
+    }
+  ],
+  "blockingAntiPatterns": [
+    "EDITORIAL_REWRITE_DURING_TECHNICAL_MIGRATION",
+    "SEO_REWRITE_WITHOUT_EXPLICIT_SCOPE",
+    "INTERNAL_LINK_LOSS",
+    "CANONICAL_CHANGE_WITHOUT_EXPLICIT_SCOPE",
+    "URL_CHANGE_WITHOUT_EXPLICIT_SCOPE",
+    "CALCULATION_CHANGE_WITHOUT_BASELINE",
+    "LEGAL_RULE_HARDCODE_REINTRODUCTION",
+    "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
+    "VISIBLE_TABLE_WITHOUT_DECLARED_RULE_DEPENDENCY",
+    "RULE_DEPENDENT_EXAMPLE_MARKED_AS_EVERGREEN",
+    "UNDECLARED_RULE_CONSUMER",
+    "HEURISTIC_DEPENDENCY_TREATED_AS_GOVERNED",
+    "NON_LEGAL_CALCULATOR_FORCED_INTO_LEGAL_UPDATE_SYSTEM",
+    "MIGRATION_WITHOUT_REGRESSION_BASELINE",
+    "SPECIALIZED_EXCEPTION_AUTO_MIGRATED",
+    "PUBLIC_MUTATION_DURING_FOUNDATION_PHASE"
+  ],
+  "validationClasses": {
+    "DETERMINISTIC_CHECK": "Evidence is explicit and mechanically reproducible.",
+    "HEURISTIC_WARNING": "Evidence may nominate a review candidate but cannot confirm a governed dependency.",
+    "HUMAN_REVIEW_REQUIRED": "Semantic, legal or specialized judgment must be recorded before continuation."
+  },
+  "compatibility": {
+    "LEGACY_ACCEPTED_PENDING_MIGRATION": "Accepted without retroactive certification.",
+    "CANONICAL_COMPLIANT": "Preserve and patch only confirmed gaps.",
+    "PARTIALLY_CANONICAL": "Use conservative migration after baseline gate.",
+    "SPECIALIZED_EXCEPTION_REVIEW": "Automation cannot migrate without human review."
+  },
+  "boundaries": {
+    "rewritesEditorialContent": false,
+    "changesProductionCalculation": false,
+    "changesProductionLegalRules": false,
+    "publishesAutomatically": false,
+    "requiresControlledPublicationAfterValidation": true
+  }
+}

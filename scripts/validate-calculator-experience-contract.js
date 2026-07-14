@@ -6,6 +6,7 @@ const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(ROOT, re
 const CONTRACT_CONSUMERS = [
   'data/blueprints/calculator/index.json',
   'data/blueprints/contracts/calculator-experience.contract.json',
+  'data/blueprints/contracts/calculator-migration.contract.json',
   'data/blueprints/registry/index.json',
   'data/blueprints/versioning/index.json',
   'data/blueprints/history/index.json',
@@ -23,7 +24,8 @@ const CONTRACT_CONSUMERS = [
   'data/operations/checklists/end-to-end/index.json',
   'data/pos/contracts/calculator.contract.json',
   'data/pos/contracts/testing.contract.json',
-  'data/pos/contracts/validation.contract.json'
+  'data/pos/contracts/validation.contract.json',
+  'data/core/update/governed-propagation.contract.json'
 ];
 
 const REPORT_DECLARATIONS = [
@@ -82,7 +84,7 @@ function validateInternalReferences(files = CONTRACT_CONSUMERS) {
 
 function validateContract(contract) {
   const required = [
-    'calculatorExperienceContractVersion', 'canonicalReference', 'brandThemeContract',
+    'calculatorExperienceContractVersion', 'conservativeMigrationContract', 'canonicalReference', 'brandThemeContract',
     'visibleUpdatedAtContract', 'contentLayerContract', 'editorialDepthContract', 'faqContract',
     'requiredCoreModules', 'conditionalModules', 'formJourneyContract', 'resultExperienceContract',
     'calculationMemoryContract', 'adaptiveReportContract', 'postResultActionsContract',
@@ -91,7 +93,10 @@ function validateContract(contract) {
   ];
   const missing = required.filter((key) => contract[key] === undefined);
   if (missing.length) throw new Error(`Contract missing keys: ${missing.join(', ')}`);
-  if (contract.calculatorExperienceContractVersion !== '1.1.0') throw new Error('Unexpected contract version.');
+  if (contract.calculatorExperienceContractVersion !== '1.2.0') throw new Error('Unexpected contract version.');
+  if (contract.conservativeMigrationContract.version !== '1.0.0' || !contract.conservativeMigrationContract.regressionBaselineGateRequired) {
+    throw new Error('Conservative migration contract is not active.');
+  }
   if (contract.requiredCoreModules.length < 8) throw new Error('Required core module floor is incomplete.');
   if (!contract.canonicalReference.requiredStudyBeforeGeneration) throw new Error('Reference study is not mandatory.');
   if (contract.brandThemeContract.defaultPrimaryTheme !== 'INSTITUTIONAL_BLUE') throw new Error('Institutional blue default is missing.');

@@ -1,0 +1,22 @@
+{
+  "reportId": "calculator-migration-families-pilots-compatibility",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "REGISTERED_NOT_EXECUTED",
+  "families": {
+    "LEGACY_CALCULATOR_FAMILY_V1":"shared protocol with formula, content, dependencies, result, report and exceptions preserved per calculator",
+    "CANONICAL_DIFF_PATCH":"audit, diff against current canonical contract and patch only confirmed gaps"
+  },
+  "pilots": [
+    {"id":"PILOT_1","calculator":"calculator:calculadora-aviso-previo","executed":false},
+    {"id":"PILOT_2","calculator":"calculator:saque-aniversario-fgts","executed":false}
+  ],
+  "compatibility": {
+    "legacy":"LEGACY_ACCEPTED_PENDING_MIGRATION",
+    "canonical":"preserve compliant components",
+    "partiallyCanonical":"conservative migration after baseline",
+    "nonLegal":"no artificial central legal dependency",
+    "specialized":"human review required"
+  },
+  "calculatorMigrationCount": 0
+}

@@ -1,6 +1,6 @@
 {
   "id": "pos-contract-validation",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -30,6 +30,11 @@
     ,"nucleus Home role separation and governed article distribution"
     ,"mobile carousel six-card and desktop grid nine-card limits"
     ,"progressive nucleus provisioning and ambiguity guards"
+    ,"calculator conservative migration heritage preservation"
+    ,"calculator regression baseline gate"
+    ,"typed governed rule consumer validation"
+    ,"single-source engine and visible-rule validation"
+    ,"deterministic heuristic and human review separation"
   ],
   "expectedInputs": [
     "registry entry",
@@ -53,6 +58,8 @@
     ,"article seven-gate results"
     ,"deterministic heuristic and human-review classifications"
     ,"nucleus Home responsive distribution gate results"
+    ,"calculator migration foundation gate results"
+    ,"governed propagation impact states"
   ],
   "dependencies": [
     "/data/pos/schemas/index.json",
@@ -62,6 +69,8 @@
     ,"/data/blueprints/contracts/calculator-experience.contract.json"
     ,"/data/blueprints/article/editorial-automation.contract.json"
     ,"/data/blueprints/nucleus/home-distribution.contract.json"
+    ,"/data/blueprints/contracts/calculator-migration.contract.json"
+    ,"/data/core/update/governed-propagation.contract.json"
   ],
   "nonResponsibilities": [
     "execute validations",

@@ -1,6 +1,6 @@
 {
   "id": "update-checklist",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "status": "draft",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
@@ -61,6 +61,36 @@
       "label": "Documentacao",
       "required": true,
       "question": "A documentacao tecnica futura foi marcada se houver impacto?"
+    },
+    {
+      "id": "typed-consumers",
+      "label": "Consumidores tipados",
+      "required": true,
+      "question": "Cada consumidor confirmado possui tipo, caminho e evidencia declarados?"
+    },
+    {
+      "id": "single-source",
+      "label": "Fonte unica",
+      "required": true,
+      "question": "Motor e representacoes visiveis equivalentes derivam da mesma fonte governada?"
+    },
+    {
+      "id": "rule-dependent-examples",
+      "label": "Exemplos dependentes",
+      "required": true,
+      "question": "Exemplos dependentes sao dinamicos ou marcados para revisao na mudanca?"
+    },
+    {
+      "id": "required-tests",
+      "label": "Testes de impacto",
+      "required": true,
+      "question": "Testes e shadows obrigatorios foram derivados das dependencias tipadas?"
+    },
+    {
+      "id": "publication-boundary",
+      "label": "Publicacao controlada",
+      "required": true,
+      "question": "Preparacao e teste permanecem separados da publicacao?"
     }
   ],
   "notes": [

@@ -1,0 +1,15 @@
+{
+  "reportId": "calculator-migration-taxonomy-consumers-single-source",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "ESTABLISHED",
+  "contentTaxonomy": ["STATIC_EDITORIAL", "GOVERNED_VALUE", "GOVERNED_TABLE", "GOVERNED_RULE_SUMMARY", "TIME_SENSITIVE_EDITORIAL", "STATIC_EXAMPLE", "RULE_DEPENDENT_EXAMPLE"],
+  "ruleDependentExampleHandling": ["DYNAMICALLY_DERIVED", "REVIEW_REQUIRED_ON_DEPENDENCY_CHANGE"],
+  "consumerTypes": ["CALCULATION_ENGINE", "VISIBLE_TABLE", "VISIBLE_RULE_CARD", "RESULT_EXPLANATION", "RULE_SUMMARY", "RULE_DEPENDENT_EXAMPLE", "UPDATED_AT_METADATA", "VALIDATION_TEST", "SHADOW_TEST", "REPORT_OUTPUT"],
+  "typedDependencyDeclarations": 38,
+  "actualConsumerTypesCurrentlyDeclared": ["CALCULATION_ENGINE", "VALIDATION_TEST"],
+  "confirmedGovernedDependencies": 9,
+  "legacyDeclarationsPendingMigration": 29,
+  "singleSourcePolicy": "Engine and equivalent visible rule derive from one governed source or deterministic projections.",
+  "blockingAntiPattern": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE"
+}

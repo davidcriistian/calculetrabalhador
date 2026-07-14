@@ -1,6 +1,6 @@
 {
   "id": "asset-operation-manifests",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -35,8 +35,12 @@
       "goldStandard": "/data/gold-standards/calculator/index.json",
       "reference": "/data/references/calculators/index.json",
       "experienceContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+      "migrationContract": "/data/blueprints/contracts/calculator-migration.contract.json",
+      "propagationContract": "/data/core/update/governed-propagation.contract.json",
       "experienceValidator": "/scripts/validate-calculator-experience-contract.js",
+      "migrationValidator": "/scripts/validate-calculator-migration-foundation.js",
       "negativeFixtures": "/data/pos/validation/calculator-experience-fixtures.json",
+      "migrationFixtures": "/data/pos/validation/calculator-migration-foundation-fixtures.json",
       "testing": "/data/pos/testing/index.json",
       "validation": "/data/pos/validation/index.json",
       "publishing": "/data/publishing/registry/index.json",
@@ -143,6 +147,13 @@
     "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"],
     "fullStandardBlockedBy": ["VISUAL_VALIDATION_NOT_EXECUTED", "applicable-blocker-anti-pattern", "UNAPPROVED_PRIMARY_THEME", "invalid-or-invented-visible-updated-at", "editorial-depth-unresolved", "recommendation-slot-unresolved", "prohibited-report-pattern", "non-distinct-result-actions", "unapproved-recommendation-source"]
   },
+  "calculatorMigrationResolutionRequirements": {
+    "appliesTo": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
+    "contract": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "requiredBeforeSpecification": ["capture-heritage-snapshot", "classify-preserve-restructure-migrate-govern-review", "resolve-regression-baseline-gate", "resolve-legal-scope-class", "map-declared-typed-dependencies", "resolve-single-source-visible-rules", "select-migration-family", "record-human-review-requirements"],
+    "requiredGates": ["MIGRATION_HERITAGE_PRESERVED", "REGRESSION_BASELINE_RESOLVED", "LEGAL_SCOPE_CLASS_RESOLVED", "TYPED_CONSUMERS_RESOLVED", "SINGLE_SOURCE_RULE_RESOLVED", "MIGRATION_FAMILY_RESOLVED", "SPECIALIZED_REVIEW_RESOLVED"],
+    "fullStandardBlockedBy": ["EDITORIAL_REWRITE_DURING_TECHNICAL_MIGRATION", "INTERNAL_LINK_LOSS", "CANONICAL_CHANGE_WITHOUT_EXPLICIT_SCOPE", "CALCULATION_CHANGE_WITHOUT_BASELINE", "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE", "MIGRATION_WITHOUT_REGRESSION_BASELINE", "SPECIALIZED_EXCEPTION_AUTO_MIGRATED"]
+  },
   "articleResolutionRequirements": {
     "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
@@ -160,7 +171,7 @@
     "playbook": "/data/operations/playbooks/asset/index.json#create-asset",
     "workflow": "/data/operations/workflows/asset/index.json#create-asset-workflow",
     "reports": "/data/operations/reports/asset/index.json",
-    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"]
+    "expectedOutputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "migrationHeritageSnapshot", "regressionBaselineGate", "typedDependencyPlan", "governedImpactAnalysis", "humanReviewRequirements", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"]
   },
   "inheritance": {
     "create-calculator": "inherits-create-asset",

@@ -1,6 +1,6 @@
 {
   "id": "pos-contract-testing",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -27,6 +27,10 @@
     ,"distinct copy print and download behavior"
     ,"article editorial automation positive and negative fixtures"
     ,"article backward compatibility scenarios"
+    ,"calculator conservative migration positive and negative fixtures"
+    ,"typed governed consumer registry validation"
+    ,"single-source engine and visible-rule scenarios"
+    ,"regression baseline migration gates"
   ],
   "expectedInputs": [
     "asset reference",
@@ -52,6 +56,8 @@
     ,"adaptive report render test results"
     ,"article automation fixture results"
     ,"article dry-run readiness result"
+    ,"calculator migration foundation fixture results"
+    ,"governed propagation impact fixture result"
   ],
   "dependencies": [
     "/data/pos/registry/index.json",
@@ -60,6 +66,9 @@
     ,"/data/blueprints/contracts/calculator-experience.contract.json"
     ,"/data/pos/validation/article-automation-fixtures.json"
     ,"/data/blueprints/article/editorial-automation.contract.json"
+    ,"/data/pos/validation/calculator-migration-foundation-fixtures.json"
+    ,"/data/blueprints/contracts/calculator-migration.contract.json"
+    ,"/data/core/update/governed-propagation.contract.json"
   ],
   "nonResponsibilities": [
     "run automated tests",

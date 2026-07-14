@@ -1,6 +1,6 @@
 {
   "id": "asset-operation-playbooks",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -23,6 +23,12 @@
         "resolve-blueprint-by-assetType",
         "resolve-gold-standard-by-assetType-when-available",
         "resolve-reference-by-assetType-when-available",
+        "for-calculator-migration-load-conservative-migration-and-propagation-contracts",
+        "for-calculator-migration-capture-heritage-before-change",
+        "for-calculator-migration-resolve-regression-baseline-gate",
+        "for-calculator-migration-resolve-legal-scope-and-typed-consumers",
+        "for-calculator-migration-resolve-single-source-visible-rule-coherence",
+        "for-calculator-migration-select-family-and-human-review",
         "for-calculator-open-and-study-physical-reference",
         "for-calculator-create-reference-module-decomposition",
         "for-calculator-record-prohibited-literal-copy-review",
@@ -52,20 +58,24 @@
         "generate-audit-report",
         "keep-lifecycle-draft"
       ],
-      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"],
+      "outputs": ["assetSpecification", "relationshipMap", "registryEntry", "publishingEntry", "testingPlan", "validationPlan", "rollbackPlan", "operationReport", "auditReport", "referenceStudy", "moduleDecomposition", "calculatorExperiencePlan", "resultContractResolution", "brandThemeResolution", "visibleUpdatedAtResolution", "editorialDepthResolution", "recommendationSlotResolution", "adaptiveReportResolution", "reportRenderValidation", "visualValidationStatus", "migrationHeritageSnapshot", "regressionBaselineGate", "typedDependencyPlan", "governedImpactAnalysis", "humanReviewRequirements", "articleEditorialPlan", "searchIntentResolution", "freshnessResolution", "sourceTraceabilityMap", "clusterPositionResolution", "internalLinkPlan", "bidirectionalLinkResolution"],
       "forbiddenActions": ["create-public-page", "modify-public-catalogs", "modify-runtime", "modify-core", "modify-blueprints", "modify-gold-standards", "publish", "deploy"]
     }
   ],
   "specializationPolicy": {
     "create-calculator": "consume the canonical calculator experience contract in addition to calculation-specific requirements",
+    "migrate-calculator": "consume the conservative migration and governed propagation contracts before calculator experience planning",
     "create-article": "consume the canonical article editorial automation contract in addition to editorial and SEO requirements",
     "create-cluster": "add relationship and candidate-review requirements only",
     "create-guide": "add guide aggregation requirements only",
     "create-nucleus": "add domain-guide-cluster requirements only",
     "rule": "Specific operations must not duplicate generic create-asset flow.",
     "calculatorContract": "/data/blueprints/contracts/calculator-experience.contract.json",
+    "calculatorMigrationContract": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "governedPropagationContract": "/data/core/update/governed-propagation.contract.json",
     "articleContract": "/data/blueprints/article/editorial-automation.contract.json",
     "articleStopConditions": ["SEARCH_INTENT_RESOLVED failed", "EDITORIAL_CLARITY_RESOLVED failed", "CONTENT_FRESHNESS_RESOLVED failed", "OFFICIAL_SOURCES_RESOLVED failed", "CLUSTER_POSITION_RESOLVED failed or requires manual decision", "INTERNAL_LINK_PLAN_RESOLVED failed", "BIDIRECTIONAL_CLUSTER_LINKING_RESOLVED failed", "applicable blocker editorial anti-pattern", "legacy retrofit requested without migration approval"],
     "calculatorStopConditions": ["REFERENCE_STUDY_COMPLETE failed", "CALCULATOR_EXPERIENCE_PLAN_APPROVED failed", "RESULT_CONTRACT_RESOLVED failed", "BRAND_THEME_RESOLVED failed", "VISIBLE_UPDATED_AT_RESOLVED failed", "EDITORIAL_DEPTH_RESOLVED failed", "RECOMMENDATION_SLOT_RESOLVED failed", "ADAPTIVE_REPORT_CONTRACT_RESOLVED failed", "REPORT_RENDER_VALIDATED failed", "applicable blocker anti-pattern", "recommendation lacks approved source"]
+    ,"calculatorMigrationStopConditions": ["migration heritage not preserved", "regression baseline missing", "typed dependencies unresolved", "governed engine with stale visible rule", "heuristic dependency treated as governed", "non-legal calculator forced into legal system", "specialized exception auto migration"]
   }
 }

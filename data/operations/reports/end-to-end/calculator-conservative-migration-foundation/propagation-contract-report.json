@@ -1,0 +1,14 @@
+{
+  "reportId": "governed-rule-propagation-contract-report",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "ESTABLISHED",
+  "contract": "/data/core/update/governed-propagation.contract.json",
+  "contractVersion": "1.0.0",
+  "flow": ["RULE_SOURCE", "TRANSFORMED_GOVERNED_DATA", "TYPED_CONSUMERS"],
+  "declaredRelationshipRequired": true,
+  "textSearchIsPrimaryDependencyMechanism": false,
+  "heuristicsMayConfirmGovernedConsumer": false,
+  "impactStates": ["NO_CONSUMER_IMPACT", "DETERMINISTIC_UPDATE_READY", "TESTS_REQUIRED", "VISUAL_VALIDATION_REQUIRED", "EDITORIAL_REVIEW_REQUIRED", "LEGAL_REVIEW_REQUIRED", "BLOCKED_BY_AMBIGUITY"],
+  "automaticPublication": false
+}

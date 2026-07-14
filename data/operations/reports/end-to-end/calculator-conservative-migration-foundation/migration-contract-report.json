@@ -1,0 +1,14 @@
+{
+  "reportId": "calculator-conservative-migration-contract-report",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "ESTABLISHED",
+  "contract": "/data/blueprints/contracts/calculator-migration.contract.json",
+  "contractVersion": "1.0.0",
+  "operationKinds": ["CREATE_NEW_CALCULATOR", "MIGRATE_EXISTING_CALCULATOR", "PATCH_EXISTING_CALCULATOR", "UPDATE_GOVERNED_RULE"],
+  "changeClasses": ["PRESERVE", "RESTRUCTURE_WITHOUT_REWRITING", "MIGRATE", "GOVERN", "HUMAN_REVIEW_REQUIRED"],
+  "preservation": ["SEO", "editorial-content", "internal-links", "URL", "canonical", "valid-schema", "static-valid-information", "calculation-behavior-until-baseline-proves-change"],
+  "migrationIsEditorialRewrite": false,
+  "baselineRequired": true,
+  "specializedExceptionsRequireReview": true
+}

@@ -1,0 +1,17 @@
+{
+  "reportId": "calculator-migration-foundation-fixtures-and-validator",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "PASS",
+  "validator": "/scripts/validate-calculator-migration-foundation.js",
+  "fixtures": "/data/pos/validation/calculator-migration-foundation-fixtures.json",
+  "scenarioCount": 20,
+  "positiveScenarioCount": 8,
+  "negativeScenarioCount": 12,
+  "matched": 20,
+  "mismatches": 0,
+  "checkTypeCounts": {"DETERMINISTIC_CHECK":18,"HEURISTIC_WARNING":1,"HUMAN_REVIEW_REQUIRED":1},
+  "typedDependencyCount": 38,
+  "sensitivityClassificationCount": 22,
+  "impactFixture": {"rule":"inss","confirmedCalculatorConsumers":8,"states":["DETERMINISTIC_UPDATE_READY","TESTS_REQUIRED"]}
+}

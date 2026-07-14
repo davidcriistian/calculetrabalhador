@@ -1,0 +1,29 @@
+{
+  "reportId": "calculator-migration-foundation-mutation-guard",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "PASS_ZERO_PUBLIC_MUTATION",
+  "baselineCommit": "5c4dafe5d97d2b93cf907cd0e4b93a93fdbaed6f",
+  "groups": [
+    {"group":"calculatorPages","beforeCount":22,"afterCount":22,"beforeDigest":"263d451856b14f774a618db62c6c5f7fff2f8de214879b035b309038c37f9778","afterDigest":"263d451856b14f774a618db62c6c5f7fff2f8de214879b035b309038c37f9778","mutationCount":0},
+    {"group":"publicArticles","beforeCount":63,"afterCount":63,"beforeDigest":"2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924","afterDigest":"2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924","mutationCount":0},
+    {"group":"home","beforeCount":1,"afterCount":1,"beforeDigest":"7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa","afterDigest":"7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa","mutationCount":0},
+    {"group":"guides","beforeCount":1,"afterCount":1,"beforeDigest":"390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30","afterDigest":"390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30","mutationCount":0},
+    {"group":"publicCatalogsAndMaps","beforeCount":6,"afterCount":6,"beforeDigest":"151c80869ae3ed9eebebf1735b41dfbd3d16733692ebebd83ab32ab067dc0962","afterDigest":"151c80869ae3ed9eebebf1735b41dfbd3d16733692ebebd83ab32ab067dc0962","mutationCount":0},
+    {"group":"sitemap","beforeCount":1,"afterCount":1,"beforeDigest":"392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779","afterDigest":"392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779","mutationCount":0},
+    {"group":"legalRuleProduction","beforeCount":12,"afterCount":12,"beforeDigest":"74d469b477637f458f7b15e3d86f697d590b921cd09d3fa0747fac18b95d7cff","afterDigest":"74d469b477637f458f7b15e3d86f697d590b921cd09d3fa0747fac18b95d7cff","mutationCount":0},
+    {"group":"publicRuntimes","beforeCount":18,"afterCount":18,"beforeDigest":"47625c3b381877bfd98053b7354c803b91ae83015ec3b239cb78135a39ff2427","afterDigest":"47625c3b381877bfd98053b7354c803b91ae83015ec3b239cb78135a39ff2427","mutationCount":0},
+    {"group":"registryPublishing","beforeCount":99,"afterCount":99,"beforeDigest":"efe176031f220a22e1ba6bccf2f8fe66c775c3bda67ebd6c80e4ffb0f8b3ac6e","afterDigest":"efe176031f220a22e1ba6bccf2f8fe66c775c3bda67ebd6c80e4ffb0f8b3ac6e","mutationCount":0},
+    {"group":"allPublicHtml","beforeCount":96,"afterCount":96,"beforeDigest":"22d56c3ccf685f41a5e241f773628905e440daa437448f81323870756cafe3e1","afterDigest":"22d56c3ccf685f41a5e241f773628905e440daa437448f81323870756cafe3e1","mutationCount":0}
+  ],
+  "requiredCounters": {
+    "PUBLIC_PAGE_MUTATION_COUNT": 0,
+    "CALCULATOR_MUTATION_COUNT": 0,
+    "ARTICLE_MUTATION_COUNT": 0,
+    "HOME_MUTATION_COUNT": 0,
+    "GUIDE_MUTATION_COUNT": 0,
+    "LEGAL_RULE_PRODUCTION_MUTATION_COUNT": 0,
+    "PUBLIC_CATALOG_MUTATION_COUNT": 0,
+    "SITEMAP_MUTATION_COUNT": 0
+  }
+}

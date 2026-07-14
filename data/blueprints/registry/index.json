@@ -1,6 +1,6 @@
 {
   "id": "blueprint-system-registry",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/blueprints/schemas/blueprint.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
@@ -15,7 +15,8 @@
     "Cluster Blueprint is now the primary structural blueprint for calculator and article ecosystems.",
     "Nucleus Blueprint and Guide Blueprint model future nucleus organization and public guide pages without creating real assets.",
     "Platform Asset Model defines the shared base structure inherited by asset blueprints.",
-    "Calculator Experience Contract 1.1.0 is the active final-refinement authority for new and migrated calculators."
+    "Calculator Experience Contract 1.2.0 is the active authority for new and migrated calculators.",
+    "Conservative Migration Contract 1.0.0 preserves existing calculator heritage and requires baseline and typed-dependency gates."
   ],
   "blueprintTypes": [
     "nucleus",
@@ -33,6 +34,7 @@
     "articleBlueprints": ["/data/blueprints/article/index.json"],
     "sharedComponents": ["/data/blueprints/shared/index.json"],
     "calculatorExperienceContracts": ["/data/blueprints/contracts/calculator-experience.contract.json"],
+    "calculatorMigrationContracts": ["/data/blueprints/contracts/calculator-migration.contract.json"],
     "generatedAssets": []
   },
   "references": {

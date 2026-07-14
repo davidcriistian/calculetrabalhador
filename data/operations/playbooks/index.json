@@ -1,9 +1,9 @@
 {
   "id": "operation-playbooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
-  "runtimeStatus": "not-consumed",
+  "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
@@ -58,6 +58,7 @@
   "notes": [
     "Playbooks describe operations only and do not execute them.",
     "Generic asset operations are defined in the asset partition.",
-    "Nucleus operations are defined in the nucleus partition and inherit the generic asset flow when creating assets."
+    "Nucleus operations are defined in the nucleus partition and inherit the generic asset flow when creating assets.",
+    "Calculator migration consumes the conservative migration foundation through the end-to-end partition."
   ]
 }

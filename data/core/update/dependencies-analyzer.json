@@ -1,12 +1,12 @@
 {
   "id": "update-dependencies-analyzer",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "status": "draft",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
   "source": "Update Engine Phase 2.6",
-  "description": "Modelo declarativo para representar dependencias entre regras, tabelas, ferramentas, artigos e engines futuras.",
+  "description": "Modelo declarativo para representar dependencias tipadas e auditaveis entre fontes de regras, dados governados e consumidores.",
   "dependencyFlow": [
     {
       "from": "sourceChange",
@@ -44,7 +44,16 @@
     "tables": "/data/core/compatibility/tables-map.json",
     "tools": "/data/core/compatibility/tools-map.json",
     "articles": "/data/core/compatibility/articles-map.json",
-    "dependencies": "/data/core/compatibility/dependencies-map.json"
+    "dependencies": "/data/core/compatibility/dependencies-map.json",
+    "typedConsumers": "/data/core/update/governed-rule-consumers.json",
+    "propagationContract": "/data/core/update/governed-propagation.contract.json"
+  },
+  "typedDependencyPolicy": {
+    "primaryMechanism": "DECLARED_TYPED_RELATIONSHIP",
+    "textSearchCanConfirm": false,
+    "heuristicResult": "REVIEW_CANDIDATE",
+    "consumerTypesSource": "/data/core/update/governed-propagation.contract.json#consumerTypes",
+    "singleSourceBlocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE"
   },
   "outputModel": {
     "affectedRules": [],
@@ -57,6 +66,7 @@
     "notes": []
   },
   "notes": [
-    "Este analisador e um modelo declarativo, nao executa varredura automatica nesta fase."
+    "Este analisador e um modelo declarativo, nao executa varredura automatica nesta fase.",
+    "Busca textual pode produzir warning, mas nunca confirma vinculo governado."
   ]
 }

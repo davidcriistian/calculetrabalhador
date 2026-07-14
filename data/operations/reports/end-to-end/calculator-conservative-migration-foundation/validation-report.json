@@ -1,0 +1,28 @@
+{
+  "reportId": "calculator-migration-foundation-validation",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "PASS",
+  "validations": [
+    {"id":"all-json-parse","status":"PASS","evidence":"All repository data JSON files parsed after integration."},
+    {"id":"internal-references","status":"PASS","evidence":"Calculator Experience validator resolved 196 governed references with zero unresolved."},
+    {"id":"calculator-experience-contract","status":"PASS","evidence":"24/24 scenarios matched contract 1.2.0."},
+    {"id":"calculator-migration-foundation","status":"PASS","evidence":"20/20 scenarios matched; 8 positive and 12 expected negative."},
+    {"id":"typed-consumers","status":"PASS","evidence":"38 unique declarations validated; 22 calculator sensitivity classifications reconciled."},
+    {"id":"governance","status":"PASS","evidence":"Tools, Articles, Clusters, Update Map, Dependencies and Validation Rules OK."},
+    {"id":"transform-rules-check","status":"PASS","evidence":"INSS minimum wage, ceiling, brackets and rates equivalent."},
+    {"id":"transform-rules-dry-run","status":"PASS","evidence":"NO_CHANGE_REQUIRED; no production rule file written."},
+    {"id":"shadow-aviso-previo","status":"PASS","evidence":"60/60 scenarios equal; zero divergences."},
+    {"id":"shadow-adicional-noturno","status":"PASS","evidence":"50/50 scenarios equal; zero divergences."},
+    {"id":"reserva-financeira-pj-regression","status":"PASS","evidence":"9/9 cases, common scenario and structural checks passed."},
+    {"id":"ferias-pj-regression","status":"PASS","evidence":"9/9 cases and editorial, report, FAQ, link and structural checks passed."},
+    {"id":"node-check","status":"PASS","evidence":"Changed and governed scripts passed node --check."},
+    {"id":"secret-scan","status":"PASS","evidence":"No secret pattern found in changed textual files."},
+    {"id":"unexpected-artifacts","status":"PASS","evidence":"Only JSON and JavaScript source artifacts are pending."},
+    {"id":"large-files","status":"PASS","evidence":"No pending file exceeds 5 MiB."},
+    {"id":"git-diff-check","status":"PASS","evidence":"No whitespace errors."},
+    {"id":"mutation-guard","status":"PASS","evidence":"PASS_ZERO_PUBLIC_MUTATION across all protected groups."}
+  ],
+  "browserVisualValidation": "BROWSER_VISUAL_VALIDATION_NOT_REQUIRED_NO_PUBLIC_MUTATION",
+  "visualValidationClaimed": false
+}

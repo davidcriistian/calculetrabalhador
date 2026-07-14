@@ -1,6 +1,6 @@
 {
   "id": "calculator-experience-negative-fixtures",
-  "contractVersion": "1.1.0",
+  "contractVersion": "1.2.0",
   "status": "active-internal-test-fixtures",
   "defaults": {
     "referenceStudyComplete": true,

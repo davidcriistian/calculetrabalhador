@@ -1,6 +1,6 @@
 {
   "id": "end-to-end-operation-workflows",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
@@ -56,7 +56,18 @@
           "gates": ["assetId", "assetType", "blueprint", "gold-standard", "reference", "owner"],
           "stopConditions": ["identity-missing", "blueprint-missing", "gold-standard-missing", "reference-critical-missing"],
           "rollback": "none",
-          "nextStates": ["CALCULATOR_EXPERIENCE_RESOLUTION", "ARTICLE_AUTOMATION_RESOLUTION", "REUSE_OR_CREATE_DECISION"]
+          "nextStates": ["CALCULATOR_MIGRATION_RESOLUTION", "CALCULATOR_EXPERIENCE_RESOLUTION", "ARTICLE_AUTOMATION_RESOLUTION", "REUSE_OR_CREATE_DECISION"]
+        },
+        {
+          "id": "CALCULATOR_MIGRATION_RESOLUTION",
+          "appliesWhen": ["assetType=calculator", "operationKind=MIGRATE_EXISTING_CALCULATOR"],
+          "input": ["governance-resolution", "calculator-migration-contract", "current-calculator-inventory", "regression-baseline-evidence", "typed-rule-consumers"],
+          "output": ["migration-heritage-snapshot", "preserve-restructure-migrate-govern-review-classification", "regression-baseline-gate", "legal-scope-resolution", "typed-dependency-plan", "single-source-resolution", "migration-family-resolution", "human-review-requirements"],
+          "preconditions": ["existing-calculator-readable", "calculator-migration-contract-resolved", "public-mutation-guard-active"],
+          "gates": ["MIGRATION_HERITAGE_PRESERVED", "REGRESSION_BASELINE_RESOLVED", "LEGAL_SCOPE_CLASS_RESOLVED", "TYPED_CONSUMERS_RESOLVED", "SINGLE_SOURCE_RULE_RESOLVED", "MIGRATION_FAMILY_RESOLVED", "SPECIALIZED_REVIEW_RESOLVED"],
+          "stopConditions": ["editorial-rewrite-during-technical-migration", "seo-rewrite-without-explicit-scope", "internal-link-loss", "canonical-or-url-change-without-scope", "calculation-change-without-baseline", "governed-engine-with-stale-visible-rule", "heuristic-dependency-treated-as-governed", "non-legal-calculator-forced-into-legal-system", "regression-baseline-missing", "specialized-exception-auto-migration"],
+          "rollback": "discard-migration-foundation-plan-and-preserve-current-calculator",
+          "nextStates": ["CALCULATOR_EXPERIENCE_RESOLUTION"]
         },
         {
           "id": "CALCULATOR_EXPERIENCE_RESOLUTION",
@@ -187,7 +198,7 @@
           "input": ["sitemap-plan"],
           "output": ["testing-report"],
           "preconditions": ["tests-selected-by-scope"],
-          "gates": ["critical-tests-pass-or-not-applicable", "calculator-negative-standard-tests-pass-when-applicable", "article-contract-fixtures-pass-when-applicable", "result-action-functionality-tests-pass-when-applicable"],
+          "gates": ["critical-tests-pass-or-not-applicable", "calculator-negative-standard-tests-pass-when-applicable", "calculator-migration-foundation-fixtures-pass-when-applicable", "article-contract-fixtures-pass-when-applicable", "result-action-functionality-tests-pass-when-applicable"],
           "stopConditions": ["critical-test-failed"],
           "rollback": "none",
           "nextStates": ["VALIDATION"]
@@ -295,6 +306,12 @@
       ]
     }
   ],
+  "calculatorOperationRouting": {
+    "CREATE_NEW_CALCULATOR": ["CALCULATOR_EXPERIENCE_RESOLUTION", "REUSE_OR_CREATE_DECISION"],
+    "MIGRATE_EXISTING_CALCULATOR": ["CALCULATOR_MIGRATION_RESOLUTION", "CALCULATOR_EXPERIENCE_RESOLUTION", "REUSE_OR_CREATE_DECISION"],
+    "PATCH_EXISTING_CALCULATOR": ["REUSE_OR_CREATE_DECISION", "PHYSICAL_PLAN"],
+    "UPDATE_GOVERNED_RULE": ["GOVERNANCE_RESOLUTION", "TESTING", "VALIDATION", "MANUAL_APPROVAL"]
+  },
   "nucleusHomeDistributionFlow": {
     "contract": "/data/blueprints/nucleus/home-distribution.contract.json",
     "steps": ["resolve-nucleus-existence", "resolve-nucleus-candidate", "detect-first-article", "resolve-progressive-provisioning", "resolve-home-section-eligibility", "resolve-one-governed-article-collection", "deduplicate-and-order", "resolve-view-all-destination", "validate-mobile-carousel-six", "validate-desktop-grid-nine", "validate-cross-nucleus-isolation", "validate-idempotency", "prepare-surgical-rollback"],

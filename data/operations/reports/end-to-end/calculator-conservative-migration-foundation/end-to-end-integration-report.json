@@ -1,0 +1,16 @@
+{
+  "reportId": "calculator-migration-foundation-end-to-end-integration",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "INTEGRATED",
+  "operation": "deliver-asset-end-to-end",
+  "routing": {
+    "CREATE_NEW_CALCULATOR":"canonical experience flow",
+    "MIGRATE_EXISTING_CALCULATOR":"conservative migration resolution then canonical experience flow",
+    "PATCH_EXISTING_CALCULATOR":"confirmed gap patch flow",
+    "UPDATE_GOVERNED_RULE":"impact, testing, validation and controlled approval flow"
+  },
+  "migrationSteps": ["inventory", "classify", "freeze-baseline", "preserve-heritage", "map-typed-dependencies", "migrate-experience", "connect-required-rules", "validate-calculation", "validate-visible-dependent-elements", "validate-visual-when-public-impact", "validate-SEO-preservation", "validate-links", "generate-report", "await-controlled-publication"],
+  "foundationPhaseBrowserStatus": "BROWSER_VISUAL_VALIDATION_NOT_REQUIRED_NO_PUBLIC_MUTATION",
+  "automaticPublication": false
+}

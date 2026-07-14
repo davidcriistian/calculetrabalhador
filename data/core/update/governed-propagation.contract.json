@@ -1,0 +1,127 @@
+{
+  "id": "governed-rule-propagation-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "consumed-by-migration-foundation",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "Calcule Trabalhador",
+  "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
+  "objective": "Represent declared, typed and auditable dependencies from a rule source through transformed governed data to every confirmed consumer.",
+  "flow": [
+    "RULE_SOURCE",
+    "TRANSFORMED_GOVERNED_DATA",
+    "TYPED_CONSUMERS"
+  ],
+  "consumerTypes": [
+    "CALCULATION_ENGINE",
+    "VISIBLE_TABLE",
+    "VISIBLE_RULE_CARD",
+    "RESULT_EXPLANATION",
+    "RULE_SUMMARY",
+    "RULE_DEPENDENT_EXAMPLE",
+    "UPDATED_AT_METADATA",
+    "VALIDATION_TEST",
+    "SHADOW_TEST",
+    "REPORT_OUTPUT"
+  ],
+  "dependencyDeclaration": {
+    "requiredFields": [
+      "ruleId",
+      "sourcePath",
+      "transformedDataPath",
+      "consumerId",
+      "consumerType",
+      "consumerPath",
+      "confirmationStatus",
+      "evidence"
+    ],
+    "confirmationStatuses": [
+      "CONFIRMED_GOVERNED_CONSUMER",
+      "REVIEW_CANDIDATE",
+      "LEGACY_DECLARED_PENDING_MIGRATION"
+    ],
+    "primaryDependencyMechanism": "DECLARED_TYPED_RELATIONSHIP",
+    "textSearchMayConfirmDependency": false,
+    "heuristicsMayProduce": [
+      "HEURISTIC_WARNING",
+      "REVIEW_CANDIDATE"
+    ]
+  },
+  "singleSourcePolicy": {
+    "rule": "When calculation logic and a visible element reproduce the same official rule, both derive from one governed source or deterministic projections of it.",
+    "certificationBlocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
+    "visibleDependencyRequired": true,
+    "examples": {
+      "inss": [
+        "CALCULATION_ENGINE",
+        "VISIBLE_TABLE",
+        "RULE_SUMMARY",
+        "VALIDATION_TEST"
+      ],
+      "irrf": [
+        "CALCULATION_ENGINE",
+        "VISIBLE_TABLE",
+        "VISIBLE_RULE_CARD",
+        "VALIDATION_TEST"
+      ],
+      "fgts-saque-aniversario": [
+        "CALCULATION_ENGINE",
+        "VISIBLE_TABLE",
+        "RULE_SUMMARY",
+        "VALIDATION_TEST"
+      ]
+    }
+  },
+  "impactAnalysisContract": {
+    "requiredInput": [
+      "ruleId",
+      "previousVersion",
+      "newVersion",
+      "effectiveDate",
+      "source"
+    ],
+    "requiredOutput": [
+      "changedRule",
+      "previousVersion",
+      "newVersion",
+      "effectiveDate",
+      "source",
+      "consumerCalculators",
+      "affectedEngines",
+      "affectedVisibleTables",
+      "affectedVisibleCards",
+      "affectedExamples",
+      "affectedReports",
+      "requiredTests",
+      "requiredShadows",
+      "humanReviewRequired",
+      "states"
+    ],
+    "states": [
+      "NO_CONSUMER_IMPACT",
+      "DETERMINISTIC_UPDATE_READY",
+      "TESTS_REQUIRED",
+      "VISUAL_VALIDATION_REQUIRED",
+      "EDITORIAL_REVIEW_REQUIRED",
+      "LEGAL_REVIEW_REQUIRED",
+      "BLOCKED_BY_AMBIGUITY"
+    ]
+  },
+  "publicationBoundary": {
+    "ruleChangeMeansAutomaticPublication": false,
+    "allowedAutomation": [
+      "PREPARE",
+      "TRANSFORM",
+      "TEST",
+      "REPORT_IMPACT"
+    ],
+    "publication": "CONTROLLED_SEPARATE_STEP"
+  },
+  "references": {
+    "typedConsumers": "/data/core/update/governed-rule-consumers.json",
+    "calculatorSensitivity": "/data/core/update/calculator-legal-sensitivity.json",
+    "migrationContract": "/data/blueprints/contracts/calculator-migration.contract.json",
+    "validator": "/scripts/validate-calculator-migration-foundation.js"
+  }
+}

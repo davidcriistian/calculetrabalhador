@@ -1,0 +1,16 @@
+{
+  "reportId": "calculator-migration-sensitivity-and-baseline",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "status": "ESTABLISHED_FROM_AUDIT",
+  "calculatorCount": 22,
+  "legalScopeCounts": {"LEGAL_UPDATE_REQUIRED":15,"LEGAL_UPDATE_OPTIONAL":0,"NO_CENTRAL_LEGAL_RULE_REQUIRED":4,"SPECIALIZED_REVIEW_REQUIRED":3},
+  "baselineAuditCounts": {"REGRESSION_BASELINE_READY":8,"REGRESSION_BASELINE_PARTIAL":14,"REGRESSION_BASELINE_MISSING":0},
+  "baselineGate": {
+    "REGRESSION_BASELINE_READY":"normal gates may proceed",
+    "REGRESSION_BASELINE_PARTIAL":"freeze sufficient baseline before mutation",
+    "REGRESSION_BASELINE_MISSING":"migration blocked"
+  },
+  "nonLegalCalculators": ["calculator:calculadora-ferias-pj", "calculator:calculadora-reserva-financeira-pj", "calculator:calculadora-valor-hora-pj", "calculator:calculadora-custo-mensal-pj"],
+  "specializedCalculators": ["calculator:calculadora-inss", "calculator:calculadora-rescisao-clt", "calculator:calculadora-clt-ou-pj"]
+}

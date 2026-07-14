@@ -1,0 +1,27 @@
+{
+  "reportId": "calculator-conservative-migration-foundation-operation",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "operation": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
+  "status": [
+    "CALCULATOR CONSERVATIVE MIGRATION FOUNDATION ESTABLISHED",
+    "GOVERNED RULE PROPAGATION CONTRACT ESTABLISHED",
+    "READY_FOR_CONTROLLED_PILOT_1"
+  ],
+  "implementation": {
+    "pendingPathCount": 57,
+    "modifiedFileCount": 36,
+    "createdFileCount": 21,
+    "removedFileCount": 0,
+    "reportCount": 15,
+    "calculatorMigrationCount": 0,
+    "publicMutationCount": 0,
+    "productionFormulaMutationCount": 0,
+    "productionLegalRuleMutationCount": 0
+  },
+  "fixtures": {"total":20,"positive":8,"negative":12,"matched":20,"mismatches":0},
+  "governance": {"typedDependencies":38,"calculatorClassifications":22,"consumerTypesAvailable":10},
+  "publication": {"commit":false,"push":false,"deploy":false,"indexNow":false,"pilotStarted":false},
+  "git": {"branch":"main","head":"5c4dafe5d97d2b93cf907cd0e4b93a93fdbaed6f","originMain":"de5ec9476a0959047e2ddfc10317779a8beb11fe","ahead":1,"behind":0,"staging":"EMPTY","workingTree":"EXPECTED_INTERNAL_CHANGES_ONLY"},
+  "nextAction": "WAIT_FOR_EXPLICIT_AUTHORIZATION_BEFORE_ANY PILOT OR CHECKPOINT"
+}

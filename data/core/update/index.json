@@ -1,11 +1,11 @@
 {
   "id": "update-engine-index",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "schema": null,
   "status": "draft",
   "engineStatus": "declarative-only",
   "coreStatus": "isolated",
-  "runtimeStatus": "not-connected",
+  "runtimeStatus": "consumed-by-migration-foundation",
   "createdAt": "2026-07-09",
   "updatedAt": "2026-07-09",
   "owner": "Calcule Trabalhador",
@@ -19,7 +19,10 @@
     "planner": "/data/core/update/planner.json",
     "dependenciesAnalyzer": "/data/core/update/dependencies-analyzer.json",
     "updateChecklist": "/data/core/update/update-checklist.json",
-    "updateReportTemplate": "/data/core/update/update-report-template.json"
+    "updateReportTemplate": "/data/core/update/update-report-template.json",
+    "governedPropagationContract": "/data/core/update/governed-propagation.contract.json",
+    "typedConsumers": "/data/core/update/governed-rule-consumers.json",
+    "calculatorSensitivity": "/data/core/update/calculator-legal-sensitivity.json"
   },
   "upstreamEngines": {
     "legislation": "/data/core/legislation/index.json",
@@ -27,19 +30,21 @@
     "core": "/data/core/index.json"
   },
   "integrationBoundaries": {
-    "calculators": "not-connected",
+    "calculators": "typed-dependency-planning-only",
     "articles": "not-connected",
     "seo": "not-connected",
     "urls": "not-connected",
-    "runtime": "not-connected",
+    "runtime": "read-only-impact-analysis",
     "rules": "read-only-reference",
     "maps": "read-only-reference",
     "brain": "read-only-reference",
-    "tables": "read-only-reference"
+    "tables": "read-only-reference",
+    "publication": "controlled-separate-step"
   },
   "notes": [
     "Esta Engine cria planos de atualizacao, nao executa atualizacoes.",
-    "Nenhuma calculadora, artigo, regra, mapa, tabela ou arquivo de runtime deve consumir esta Engine nesta fase.",
+    "Nenhuma calculadora, artigo, regra, mapa, tabela ou arquivo de runtime e alterado por esta Engine.",
+    "A fundacao consome somente declaracoes tipadas para preparar analise de impacto; ela nao publica nem transforma producao.",
     "Planos futuros devem ser validados antes de qualquer execucao operacional."
   ]
 }
