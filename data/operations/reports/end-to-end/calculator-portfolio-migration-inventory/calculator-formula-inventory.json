@@ -1,0 +1,164 @@
+{
+  "reportId": "calculator-formula-inventory",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "method": "Formulas were traced from the inline runtime of each physical calculator page and cross-checked against data/maps/tools-map.json and assets/js/tabelas-trabalhistas.js.",
+  "calculators": [
+    {
+      "assetId": "calculator:saque-aniversario-fgts",
+      "inputs": ["saldo FGTS"],
+      "formulas": ["saque = saldo × aliquota da faixa + parcela adicional", "saldo restante = max(0, saldo - saque)"],
+      "outputs": ["saque permitido", "saldo restante", "faixa aplicada"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:salario-liquido-clt",
+      "inputs": ["salario bruto", "dependentes", "outros descontos"],
+      "formulas": ["INSS progressivo limitado ao teto", "base IRRF = bruto - INSS - outros - max(deducao dependentes, desconto simplificado)", "IRRF = faixa - deducao - redutor", "liquido = bruto - INSS - IRRF - outros"],
+      "outputs": ["salario liquido", "INSS", "IRRF", "memoria por faixa"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-rescisao-clt",
+      "inputs": ["salario", "datas/tempo", "tipo de desligamento", "aviso", "meses proporcionais"],
+      "formulas": ["saldo salario = salario/dias do mes × dias trabalhados", "ferias vencidas e proporcionais + 1/3", "13 proporcional = salario × meses/12", "FGTS acumulado = salario × 8% × meses", "multa = FGTS × 40% quando aplicavel", "aviso = salario/30 × dias"],
+      "outputs": ["verbas componentes", "FGTS", "multa", "aviso", "total estimado"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-13-salario",
+      "inputs": ["salario", "meses trabalhados", "adiantamento/primeira parcela"],
+      "formulas": ["13 bruto = salario × meses/12", "primeira parcela = 50% do bruto quando aplicavel", "segunda parcela = bruto - primeira - INSS - IRRF"],
+      "outputs": ["13 bruto", "parcelas", "INSS", "IRRF", "liquido"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-clt",
+      "inputs": ["salario", "dias", "abono", "adiantamento do 13"],
+      "formulas": ["ferias base proporcional aos dias", "terco constitucional = base/3", "abono e terco do abono quando escolhidos", "INSS e IRRF sobre a base aplicavel"],
+      "outputs": ["bruto de ferias", "abono", "INSS", "IRRF", "liquido"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-horas-extras-clt",
+      "inputs": ["salario", "jornada", "horas 50%", "horas 100%"],
+      "formulas": ["valor hora = salario/divisor mensal", "hora extra 50 = valor hora × 1,5", "hora extra 100 = valor hora × 2", "total = quantidades × valores"],
+      "outputs": ["valor hora", "subtotais 50/100", "total"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-seguro-desemprego",
+      "inputs": ["media salarial", "tempo/parcelas"],
+      "formulas": ["faixa 1 = media × 80%", "faixa 2 = base + 50% do excedente", "faixa 3 = teto", "resultado limitado por piso e teto"],
+      "outputs": ["valor da parcela", "quantidade", "total estimado"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-aviso-previo",
+      "inputs": ["salario", "anos completos"],
+      "formulas": ["dias = min(90, 30 + 3 × anos)", "valor diario = salario/30", "valor aviso = dias × valor diario"],
+      "outputs": ["dias base", "dias adicionais", "total de dias", "valor"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-adicional-noturno",
+      "inputs": ["salario", "horas mensais", "horas noturnas", "percentual"],
+      "formulas": ["valor hora = salario/horas mensais", "adicional por hora = valor hora × percentual", "total = adicional por hora × horas noturnas"],
+      "outputs": ["valor hora", "adicional por hora", "total"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-insalubridade",
+      "inputs": ["base", "grau"],
+      "formulas": ["mensal = base × percentual do grau (10%, 20% ou 40%)", "anual = mensal × 12"],
+      "outputs": ["percentual", "valor mensal", "valor anual"],
+      "componentClass": "CENTRAL_WITH_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "inputs": ["salario e beneficios CLT", "proposta/custos/imposto/reservas PJ"],
+      "formulas": ["CLT total = liquido + 13 mensal + ferias mensal + FGTS + beneficios", "PJ disponivel = faturamento - impostos - custos - reservas", "diferenca = PJ disponivel - CLT total", "PJ necessario = CLT total + custos + reservas"],
+      "outputs": ["valor CLT", "valor PJ", "diferenca mensal/anual", "PJ necessario"],
+      "componentClass": "SPECIALIZED_DERIVATION_WITH_CENTRAL_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-inss",
+      "inputs": ["regime", "salario/base", "atividade MEI"],
+      "formulas": ["CLT: contribuicao progressiva por faixa e teto", "autonomo: base limitada ao piso/teto × 20% ou piso × 11%", "MEI: salario minimo × 5% ou 12% + ICMS/ISS conforme atividade"],
+      "outputs": ["contribuicao", "base", "aliquota/plano", "memoria por regime"],
+      "componentClass": "SPECIALIZED_DERIVATION_WITH_CENTRAL_FALLBACK"
+    },
+    {
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "inputs": ["renda", "plano 20%/11%"],
+      "formulas": ["plano normal = clamp(renda, salario minimo, teto) × 20%", "plano simplificado = salario minimo × 11%"],
+      "outputs": ["base", "aliquota", "contribuicao mensal/anual"],
+      "componentClass": "CENTRAL_WITH_INCOMPLETE_FALLBACK_GOVERNANCE"
+    },
+    {
+      "assetId": "calculator:calculadora-inss-mei",
+      "inputs": ["tipo MEI", "atividade", "meses", "complementacao"],
+      "formulas": ["INSS = salario minimo × 5% ou 12%", "DAS = INSS + ICMS + ISS", "periodo = DAS × meses"],
+      "outputs": ["INSS", "ICMS", "ISS", "DAS mensal", "total do periodo"],
+      "componentClass": "HARDCODED_OFFICIAL_VALUE_WITH_PARTIAL_CENTRAL_SOURCE"
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "inputs": ["tipo MEI", "atividade", "meses"],
+      "formulas": ["INSS = salario minimo × 5% ou 12%", "DAS = INSS + ICMS + ISS", "total = DAS × meses"],
+      "outputs": ["componentes do DAS", "mensal", "periodo"],
+      "componentClass": "HARDCODED_OFFICIAL_VALUE_WITH_PARTIAL_CENTRAL_SOURCE"
+    },
+    {
+      "assetId": "calculator:calculadora-limite-faturamento-mei-2026",
+      "inputs": ["faturamento acumulado", "meses ativos", "projecao"],
+      "formulas": ["limite proporcional = limite anual/12 × meses ativos", "saldo = limite - faturamento", "projecao = media mensal × meses", "percentual usado = faturamento/limite"],
+      "outputs": ["limite", "saldo", "percentual", "projecao", "faixa de alerta"],
+      "componentClass": "HARDCODED_OFFICIAL_VALUE"
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-atraso-2026",
+      "inputs": ["valor original", "vencimento", "pagamento"],
+      "formulas": ["multa = min(valor × 0,33% × dias, valor × 20%)", "juros = valor × 1% × meses ou fracao", "atualizado = original + multa + juros"],
+      "outputs": ["dias", "multa", "juros", "valor atualizado"],
+      "componentClass": "HARDCODED_LEGAL_RULE"
+    },
+    {
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "inputs": ["saldo FGTS ou salario/meses", "tipo de desligamento"],
+      "formulas": ["saldo estimado = salario × 8% × meses", "multa = base FGTS × 40% ou 20%"],
+      "outputs": ["base FGTS", "percentual", "multa", "cenario"],
+      "componentClass": "CENTRAL_WITH_INCOMPLETE_FALLBACK_GOVERNANCE"
+    },
+    {
+      "assetId": "calculator:calculadora-valor-hora-pj",
+      "inputs": ["renda desejada", "custos", "impostos", "reserva", "horas faturaveis"],
+      "formulas": ["base liquida = renda + custos", "faturamento = base liquida/(1 - (impostos + reserva)/100)", "valor hora = faturamento/horas mes", "diaria/projeto = valor hora × horas"],
+      "outputs": ["faturamento", "valor hora", "diaria", "projeto"],
+      "componentClass": "USER_INPUT_ONLY_AND_LOCAL_NON_LEGAL_FORMULA"
+    },
+    {
+      "assetId": "calculator:calculadora-custo-mensal-pj",
+      "inputs": ["faturamento", "impostos", "pro-labore", "INSS informado", "custos", "beneficios", "reservas"],
+      "formulas": ["tributos = faturamento × percentual informado", "INSS = pro-labore × percentual informado", "total = tributos + pro-labore + INSS + custos + beneficios + reservas", "ponto equilibrio = fixos/(1 - percentuais sobre receita)"],
+      "outputs": ["custo total", "disponivel", "peso", "ponto de equilibrio"],
+      "componentClass": "USER_INPUT_ONLY_AND_LOCAL_NON_LEGAL_FORMULA"
+    },
+    {
+      "assetId": "calculator:calculadora-reserva-financeira-pj",
+      "inputs": ["custos essenciais", "meses", "objetivos planejados", "reserva atual", "aporte"],
+      "formulas": ["base mensal = soma dos compromissos essenciais", "reserva seguranca = base × meses", "meta = reserva seguranca + pausa + custos anuais", "faltante = max(0, meta - reserva atual)", "prazo = ceil(faltante/aporte)"],
+      "outputs": ["meta", "faltante", "cobertura", "progresso", "prazo", "cenarios 3/6/9/12"],
+      "componentClass": "USER_INPUT_ONLY_AND_LOCAL_NON_LEGAL_FORMULA"
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-pj",
+      "inputs": ["dias", "meses", "renda", "custos", "receita recorrente", "extras", "reserva", "faturamento"],
+      "formulas": ["fator = dias/30", "custo bruto = renda × fator + custos × fator + extras", "meta liquida = max(0, custo bruto - receita recorrente × fator)", "faltante = max(0, meta - reserva)", "aporte = faltante/meses"],
+      "outputs": ["meta liquida", "faltante", "aporte", "peso no faturamento", "cenarios 7/15/20/30 dias"],
+      "componentClass": "USER_INPUT_ONLY_AND_LOCAL_NON_LEGAL_FORMULA"
+    }
+  ]
+}

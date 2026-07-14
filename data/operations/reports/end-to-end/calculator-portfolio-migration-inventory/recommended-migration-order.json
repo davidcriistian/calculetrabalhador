@@ -1,0 +1,185 @@
+{
+  "reportId": "recommended-migration-order",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "RECOMMENDATION_ONLY_NO_MIGRATION",
+  "sequence": [
+    {
+      "order": 1,
+      "calculator": "calculator:calculadora-aviso-previo",
+      "wave": "PILOT_1",
+      "risk": "MEDIUM",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 2,
+      "calculator": "calculator:saque-aniversario-fgts",
+      "wave": "PILOT_2",
+      "risk": "MEDIUM",
+      "effort": "L",
+      "migrationClass": "D_FULL_CANONICAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 3,
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "wave": "BATCH_1",
+      "risk": "MEDIUM",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 4,
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "wave": "BATCH_1",
+      "risk": "MEDIUM",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 5,
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "wave": "BATCH_1",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 6,
+      "calculator": "calculator:calculadora-insalubridade",
+      "wave": "BATCH_1",
+      "risk": "MEDIUM",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 7,
+      "calculator": "calculator:calculadora-ferias-pj",
+      "wave": "BATCH_2",
+      "risk": "LOW",
+      "effort": "XS",
+      "migrationClass": "A_INTEGRATION_ONLY"
+    },
+    {
+      "order": 8,
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "wave": "BATCH_2",
+      "risk": "LOW",
+      "effort": "S",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION"
+    },
+    {
+      "order": 9,
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "wave": "BATCH_2",
+      "risk": "MEDIUM",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 10,
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "wave": "BATCH_2",
+      "risk": "LOW",
+      "effort": "S",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION"
+    },
+    {
+      "order": 11,
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "wave": "BATCH_3",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 12,
+      "calculator": "calculator:salario-liquido-clt",
+      "wave": "BATCH_3",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 13,
+      "calculator": "calculator:calculadora-13-salario",
+      "wave": "BATCH_3",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 14,
+      "calculator": "calculator:calculadora-ferias-clt",
+      "wave": "BATCH_3",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 15,
+      "calculator": "calculator:calculadora-inss",
+      "wave": "BATCH_4",
+      "risk": "HIGH",
+      "effort": "L",
+      "migrationClass": "E_SPECIALIZED_REVIEW"
+    },
+    {
+      "order": 16,
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "wave": "BATCH_4",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 17,
+      "calculator": "calculator:calculadora-inss-mei",
+      "wave": "BATCH_4",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 18,
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "wave": "BATCH_4",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 19,
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "wave": "BATCH_4",
+      "risk": "HIGH",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 20,
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "wave": "BATCH_4",
+      "risk": "CRITICAL",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION"
+    },
+    {
+      "order": 21,
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "wave": "BATCH_5",
+      "risk": "CRITICAL",
+      "effort": "XL",
+      "migrationClass": "E_SPECIALIZED_REVIEW"
+    },
+    {
+      "order": 22,
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "wave": "BATCH_5",
+      "risk": "CRITICAL",
+      "effort": "XL",
+      "migrationClass": "E_SPECIALIZED_REVIEW"
+    }
+  ]
+}

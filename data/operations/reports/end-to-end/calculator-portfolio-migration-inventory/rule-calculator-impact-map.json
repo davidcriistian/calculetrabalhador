@@ -1,0 +1,462 @@
+{
+  "reportId": "rule-calculator-impact-map",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "rules": [
+    {
+      "ruleId": "inss",
+      "sensitivity": "high",
+      "updateEvent": [
+        "teto INSS",
+        "tabela progressiva INSS",
+        "regras do MEI",
+        "regras de contribuinte individual/autonomo",
+        "planos do contribuinte individual",
+        "atualizacao previdenciaria",
+        "DAS MEI",
+        "INSS MEI 5%",
+        "INSS MEI Caminhoneiro 12%",
+        "ICMS MEI",
+        "ISS MEI",
+        "DAS MEI 2026",
+        "INSS MEI",
+        "MEI Caminhoneiro"
+      ],
+      "impactedCalculators": [
+        "calculator:salario-liquido-clt",
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-clt-ou-pj",
+        "calculator:calculadora-inss",
+        "calculator:calculadora-inss-autonomo",
+        "calculator:calculadora-inss-mei",
+        "calculator:calculadora-das-mei-2026"
+      ],
+      "propagationAutomatic": "PARTIAL_TRANSFORM_ONLY",
+      "requiresGeneration": true,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "irrf",
+      "sensitivity": "high",
+      "updateEvent": [
+        "annual"
+      ],
+      "impactedCalculators": [
+        "calculator:salario-liquido-clt",
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "salario-minimo",
+      "sensitivity": "high",
+      "updateEvent": [
+        "salario minimo",
+        "salario minimo para contribuinte individual",
+        "salario minimo para DAS MEI",
+        "atualizacao anual do DAS MEI"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-seguro-desemprego",
+        "calculator:calculadora-insalubridade",
+        "calculator:calculadora-inss",
+        "calculator:calculadora-inss-autonomo",
+        "calculator:calculadora-inss-mei",
+        "calculator:calculadora-das-mei-2026"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "tetoINSS",
+      "sensitivity": "high",
+      "updateEvent": [
+        "teto INSS",
+        "atualizacao previdenciaria",
+        "planos do contribuinte individual"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-inss-autonomo"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "fgts",
+      "sensitivity": "high",
+      "updateEvent": [
+        "occasional"
+      ],
+      "impactedCalculators": [
+        "calculator:saque-aniversario-fgts",
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-clt-ou-pj",
+        "calculator:calculadora-multa-40-fgts"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "seguro-desemprego",
+      "sensitivity": "high",
+      "updateEvent": [
+        "annual"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-seguro-desemprego"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "ferias",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "rare"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "decimo-terceiro",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "rare"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "horas-extras",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "rare"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-horas-extras-clt"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "adicional-noturno",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "rare"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-adicional-noturno"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "insalubridade",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "occasional"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-insalubridade"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "aviso-previo",
+      "sensitivity": "medium",
+      "updateEvent": [
+        "rare"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-aviso-previo"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "das-mei",
+      "sensitivity": "high",
+      "updateEvent": [
+        "DAS MEI",
+        "DAS MEI 2026",
+        "guia DAS",
+        "Simples Nacional MEI",
+        "ICMS MEI",
+        "ISS MEI",
+        "MEI Caminhoneiro"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-das-mei-2026",
+        "calculator:calculadora-inss-mei"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "limite-faturamento-mei",
+      "sensitivity": "high",
+      "updateEvent": [
+        "limite faturamento MEI",
+        "faturamento MEI 2026",
+        "limite proporcional MEI",
+        "limite anual MEI",
+        "desenquadramento MEI",
+        "DAS MEI"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-limite-faturamento-mei-2026"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "das-mei-atraso",
+      "sensitivity": "high",
+      "updateEvent": [
+        "DAS MEI em atraso",
+        "calcular DAS atrasado",
+        "multa DAS MEI",
+        "juros DAS MEI",
+        "guia DAS atualizada",
+        "calendario DAS",
+        "regras do DAS"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-das-mei-atraso-2026"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    },
+    {
+      "ruleId": "multa-fgts",
+      "sensitivity": "high",
+      "updateEvent": [
+        "multa de 40% do FGTS",
+        "multa de 20% do FGTS",
+        "acordo trabalhista",
+        "demissão sem justa causa",
+        "regras rescisórias",
+        "regras do FGTS",
+        "legislação trabalhista aplicável"
+      ],
+      "impactedCalculators": [
+        "calculator:calculadora-multa-40-fgts",
+        "calculator:calculadora-rescisao-clt"
+      ],
+      "propagationAutomatic": "NO_GENERATOR_CONFIRMED",
+      "requiresGeneration": false,
+      "requiresHumanLegalReview": true
+    }
+  ],
+  "calculatorUpdateDependencies": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "sensitivity": "MEDIUM_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "aviso-previo"
+      ]
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "sensitivity": "MEDIUM_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "fgts"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "sensitivity": "MEDIUM_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "adicional-noturno"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "sensitivity": "MEDIUM_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "horas-extras"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "sensitivity": "MEDIUM_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-pj",
+      "sensitivity": "NO_LEGAL_UPDATE_DEPENDENCY",
+      "dependencies": []
+    },
+    {
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "sensitivity": "NO_LEGAL_UPDATE_DEPENDENCY",
+      "dependencies": []
+    },
+    {
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "sensitivity": "NO_LEGAL_UPDATE_DEPENDENCY",
+      "dependencies": []
+    },
+    {
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "sensitivity": "NO_LEGAL_UPDATE_DEPENDENCY",
+      "dependencies": []
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "fgts",
+        "multa-fgts",
+        "rescisao"
+      ]
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "irrf"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "salario-minimo"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "salario-minimo",
+        "tetoINSS"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "salario-minimo"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "das-mei"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "das-mei",
+        "multa-das-mei",
+        "juros-das-mei",
+        "calendario-das-mei"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "sensitivity": "HIGH_LEGAL_UPDATE_SENSITIVITY",
+      "dependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ]
+    }
+  ]
+}

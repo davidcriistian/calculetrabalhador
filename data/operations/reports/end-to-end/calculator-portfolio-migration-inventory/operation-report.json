@@ -1,0 +1,72 @@
+{
+  "reportId": "operation-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "CALCULATOR_PORTFOLIO_MIGRATION_INVENTORY_COMPLETED_WITH_WARNINGS",
+  "branch": "main",
+  "head": "de5ec9476a0959047e2ddfc10317779a8beb11fe",
+  "originMain": "de5ec9476a0959047e2ddfc10317779a8beb11fe",
+  "expectedCalculatorCount": 22,
+  "discoveredCalculatorCount": 22,
+  "reconciledCalculatorCount": 22,
+  "classificationCounts": {
+    "PARTIALLY_CANONICAL": 10,
+    "LEGACY_REQUIRES_REBUILD": 1,
+    "CANONICAL_COMPLIANT": 1,
+    "MOSTLY_CANONICAL": 7,
+    "SPECIALIZED_EXCEPTION_REVIEW": 3
+  },
+  "integrationCounts": {
+    "GOVERNED_WITH_FALLBACK": 3,
+    "PARTIALLY_CONNECTED": 9,
+    "NO_CENTRAL_RULE_REQUIRED": 4,
+    "HARD_CODED_MIGRATION_REQUIRED": 6
+  },
+  "hardcodedLegalRuleCount": 37,
+  "hardcodedOfficialValueCount": 181,
+  "fallbackCount": 24,
+  "governedFallbackCount": 8,
+  "sensitivityCounts": {
+    "MEDIUM_LEGAL_UPDATE_SENSITIVITY": 5,
+    "HIGH_LEGAL_UPDATE_SENSITIVITY": 13,
+    "NO_LEGAL_UPDATE_DEPENDENCY": 4
+  },
+  "baselineCounts": {
+    "REGRESSION_BASELINE_READY": 8,
+    "REGRESSION_BASELINE_PARTIAL": 14
+  },
+  "pilot1": "calculator:calculadora-aviso-previo",
+  "pilot2": "calculator:saque-aniversario-fgts",
+  "filesCreated": 70,
+  "jsonReportsCreated": 26,
+  "visualEvidenceFilesCreated": 44,
+  "existingFilesAltered": 0,
+  "mutationGuard": "PASS_ZERO_PUBLIC_MUTATION",
+  "publicMutationCount": 0,
+  "calculationChangeCount": 0,
+  "legalRuleChangeCount": 0,
+  "publicationCount": 0,
+  "indexNowRealCount": 0,
+  "gitWriteCount": 0,
+  "workingTreeFinal": {
+    "trackedChanges": 0,
+    "stagedChanges": 0,
+    "untrackedInternalReportFiles": 70,
+    "pathsOutsideReportScope": 0,
+    "branch": "main",
+    "ahead": 0,
+    "behind": 0
+  },
+  "prohibitedActions": {
+    "calculatorMigration": 0,
+    "publicMutation": 0,
+    "calculationChange": 0,
+    "legalRuleChange": 0,
+    "publication": 0,
+    "deploy": 0,
+    "indexNowReal": 0,
+    "gitWrite": 0
+  },
+  "finalResult": "COMPLETED_WITH_WARNINGS"
+}

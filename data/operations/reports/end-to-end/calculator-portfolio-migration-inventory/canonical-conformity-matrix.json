@@ -1,0 +1,3448 @@
+{
+  "reportId": "canonical-conformity-matrix",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED_WITH_RENDERED_AND_STATIC_EVIDENCE",
+  "scoringMethod": {
+    "visual": "10 deterministic binary criteria, plus rendered no-overflow bonus capped at 100",
+    "structural": "20 contract-derived criteria with conditional comparison applicability",
+    "result": "18 contract-derived result/report criteria",
+    "classification": "specialized multi-domain calculators require specialized review; otherwise deterministic average thresholds 87/70/48 with full-standard rendered/adaptive gates"
+  },
+  "counts": {
+    "PARTIALLY_CANONICAL": 10,
+    "LEGACY_REQUIRES_REBUILD": 1,
+    "CANONICAL_COMPLIANT": 1,
+    "MOSTLY_CANONICAL": 7,
+    "SPECIALIZED_EXCEPTION_REVIEW": 3
+  },
+  "calculators": [
+    {
+      "assetId": "calculator:calculadora-aviso-previo",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 85,
+      "structuralScore": 42,
+      "resultScore": 22,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": false
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:saque-aniversario-fgts",
+      "status": "LEGACY_REQUIRES_REBUILD",
+      "visualScore": 85,
+      "structuralScore": 25,
+      "resultScore": 11,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-adicional-noturno",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 85,
+      "structuralScore": 42,
+      "resultScore": 22,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": false
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-horas-extras-clt",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 75,
+      "structuralScore": 60,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-seguro-desemprego",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 65,
+      "structuralScore": 45,
+      "resultScore": 33,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": false
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-insalubridade",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 85,
+      "structuralScore": 37,
+      "resultScore": 22,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": false
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-pj",
+      "status": "CANONICAL_COMPLIANT",
+      "visualScore": 95,
+      "structuralScore": 90,
+      "resultScore": 94,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": false
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": true
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "assetId": "calculator:calculadora-reserva-financeira-pj",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 75,
+      "resultScore": 78,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "assetId": "calculator:calculadora-valor-hora-pj",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 85,
+      "structuralScore": 55,
+      "resultScore": 56,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "assetId": "calculator:calculadora-custo-mensal-pj",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 65,
+      "resultScore": 61,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 80,
+      "resultScore": 56,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "assetId": "calculator:salario-liquido-clt",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 65,
+      "structuralScore": 45,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": false
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-13-salario",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 75,
+      "structuralScore": 60,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-clt",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 75,
+      "structuralScore": 55,
+      "resultScore": 39,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss",
+      "status": "SPECIALIZED_EXCEPTION_REVIEW",
+      "visualScore": 95,
+      "structuralScore": 75,
+      "resultScore": 67,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": false
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": true
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "CLUSTER_NOT_RESOLVED",
+        "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "status": "PARTIALLY_CANONICAL",
+      "visualScore": 85,
+      "structuralScore": 65,
+      "resultScore": 56,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": false
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING",
+        "CLUSTER_NOT_RESOLVED"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss-mei",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 80,
+      "resultScore": 44,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 75,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-limite-faturamento-mei-2026",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 80,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [
+        "CRITICAL_HARDCODE_REQUIRES_RULE_GOVERNANCE_BEFORE_MIGRATION"
+      ],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-atraso-2026",
+      "status": "MOSTLY_CANONICAL",
+      "visualScore": 95,
+      "structuralScore": 75,
+      "resultScore": 50,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": true
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": true
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [
+        "CRITICAL_HARDCODE_REQUIRES_RULE_GOVERNANCE_BEFORE_MIGRATION"
+      ],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-rescisao-clt",
+      "status": "SPECIALIZED_EXCEPTION_REVIEW",
+      "visualScore": 75,
+      "structuralScore": 55,
+      "resultScore": 33,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": true,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": [
+        "REGISTRY_ENTRY_MISSING",
+        "PUBLISHING_ENTRY_MISSING"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "status": "SPECIALIZED_EXCEPTION_REVIEW",
+      "visualScore": 75,
+      "structuralScore": 50,
+      "resultScore": 44,
+      "visualChecks": [
+        {
+          "id": "institutional-header",
+          "pass": true
+        },
+        {
+          "id": "breadcrumb",
+          "pass": false
+        },
+        {
+          "id": "complete-hero",
+          "pass": true
+        },
+        {
+          "id": "institutional-blue",
+          "pass": true
+        },
+        {
+          "id": "visible-updated-at",
+          "pass": false
+        },
+        {
+          "id": "responsive-rules",
+          "pass": true
+        },
+        {
+          "id": "visible-focus",
+          "pass": false
+        },
+        {
+          "id": "card-hierarchy",
+          "pass": true
+        },
+        {
+          "id": "footer",
+          "pass": true
+        },
+        {
+          "id": "semantic-labels",
+          "pass": true
+        }
+      ],
+      "structuralChecks": [
+        {
+          "id": "hero",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "intro",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "form",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "field-groups",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "input-validation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "dominant-primary-result",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "secondary-indicators",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "calculation-memory",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "comparison",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "limitations",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "result-actions",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "editorial-depth-estimate",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "faq",
+          "pass": true,
+          "applicable": true
+        },
+        {
+          "id": "sources",
+          "pass": false,
+          "applicable": true
+        },
+        {
+          "id": "related-content",
+          "pass": false,
+          "applicable": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    }
+  ]
+}

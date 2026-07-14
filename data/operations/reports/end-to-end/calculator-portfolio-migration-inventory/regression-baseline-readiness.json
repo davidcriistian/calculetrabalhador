@@ -1,0 +1,161 @@
+{
+  "reportId": "regression-baseline-readiness",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED_WITH_GAPS",
+  "counts": {
+    "REGRESSION_BASELINE_READY": 8,
+    "REGRESSION_BASELINE_PARTIAL": 14
+  },
+  "calculators": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "scripts/validate-shadow-aviso-previo.js"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "scripts/validate-shadow-adicional-noturno.js"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-pj",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "scripts/test-ferias-pj.js"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "scripts/test-reserva-financeira-pj.js"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "24 embedded expected-value assertions"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "10 embedded expected-value assertions"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "13 embedded expected-value assertions"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "status": "REGRESSION_BASELINE_READY",
+      "evidence": [
+        "13 embedded expected-value assertions"
+      ],
+      "action": "PRESERVE_BASELINE"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "status": "REGRESSION_BASELINE_PARTIAL",
+      "evidence": [],
+      "action": "BASELINE_BEFORE_MIGRATION"
+    }
+  ]
+}

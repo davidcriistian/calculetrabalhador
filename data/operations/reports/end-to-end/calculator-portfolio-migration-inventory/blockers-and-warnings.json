@@ -1,0 +1,185 @@
+{
+  "reportId": "blockers-and-warnings",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "MANUAL_REVIEW_REQUIRED",
+  "blockers": [
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "blocker": "CRITICAL_HARDCODE_REQUIRES_RULE_GOVERNANCE_BEFORE_MIGRATION"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "blocker": "CRITICAL_HARDCODE_REQUIRES_RULE_GOVERNANCE_BEFORE_MIGRATION"
+    }
+  ],
+  "warnings": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "warning": "CLUSTER_NOT_RESOLVED"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "warning": "RESULT_STATE_VISUAL_REVIEW_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "warning": "CLUSTER_NOT_RESOLVED"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "warning": "REGISTRY_ENTRY_MISSING"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "warning": "PUBLISHING_ENTRY_MISSING"
+    }
+  ],
+  "portfolioWarnings": [
+    "Registry and Publishing each cover only 6 of 22 public calculators.",
+    "MEI rule metadata declares central sources that do not contain/propagate all runtime fields.",
+    "Current Calculator Gold Standard 1.2 is newer than several published/reference implementations.",
+    "Rendered result state may require calculator-specific follow-up where generic safe submission could not exercise it."
+  ]
+}

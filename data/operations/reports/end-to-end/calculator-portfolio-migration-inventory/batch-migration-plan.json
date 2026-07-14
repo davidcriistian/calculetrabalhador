@@ -1,0 +1,44 @@
+{
+  "reportId": "batch-migration-plan",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "PLAN_ONLY",
+  "batches": {
+    "BATCH_1": [
+      "calculator:calculadora-adicional-noturno",
+      "calculator:calculadora-horas-extras-clt",
+      "calculator:calculadora-seguro-desemprego",
+      "calculator:calculadora-insalubridade"
+    ],
+    "BATCH_2": [
+      "calculator:calculadora-ferias-pj",
+      "calculator:calculadora-reserva-financeira-pj",
+      "calculator:calculadora-valor-hora-pj",
+      "calculator:calculadora-custo-mensal-pj"
+    ],
+    "BATCH_3": [
+      "calculator:calculadora-multa-40-fgts",
+      "calculator:salario-liquido-clt",
+      "calculator:calculadora-13-salario",
+      "calculator:calculadora-ferias-clt"
+    ],
+    "BATCH_4": [
+      "calculator:calculadora-inss",
+      "calculator:calculadora-inss-autonomo",
+      "calculator:calculadora-inss-mei",
+      "calculator:calculadora-das-mei-2026",
+      "calculator:calculadora-limite-faturamento-mei-2026",
+      "calculator:calculadora-das-mei-atraso-2026"
+    ],
+    "BATCH_5": [
+      "calculator:calculadora-rescisao-clt",
+      "calculator:calculadora-clt-ou-pj"
+    ]
+  },
+  "boundaries": [
+    "VISUAL_REBUILD != CALCULATION_CHANGE",
+    "preserve URL/SEO/catalog/Registry/Publishing/sitemap",
+    "each batch requires human approval before mutation"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "reportId": "rule-source-inventory",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED_WITH_GAPS",
+  "canonicalRuleFiles": [
+    {
+      "ruleId": "adicional-noturno",
+      "canonicalFile": "data/rules/adicional-noturno.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-adicional-noturno"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "aviso-previo",
+      "canonicalFile": "data/rules/aviso-previo.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-aviso-previo",
+        "calculator:calculadora-rescisao-clt"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "decimo-terceiro",
+      "canonicalFile": "data/rules/decimo-terceiro.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "ferias",
+      "canonicalFile": "data/rules/ferias.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "fgts",
+      "canonicalFile": "data/rules/fgts.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:saque-aniversario-fgts",
+        "calculator:calculadora-multa-40-fgts",
+        "calculator:calculadora-rescisao-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "horas-extras",
+      "canonicalFile": "data/rules/horas-extras.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-horas-extras-clt"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "insalubridade",
+      "canonicalFile": "data/rules/insalubridade.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-insalubridade"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "inss",
+      "canonicalFile": "data/rules/inss.json",
+      "status": "draft",
+      "currentYear": 2026,
+      "source": "https://www.gov.br/inss/pt-br",
+      "consumers": [
+        "calculator:salario-liquido-clt",
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-inss",
+        "calculator:calculadora-inss-autonomo",
+        "calculator:calculadora-inss-mei",
+        "calculator:calculadora-das-mei-2026",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "generationAvailable": true,
+      "validationAvailable": true
+    },
+    {
+      "ruleId": "irrf",
+      "canonicalFile": "data/rules/irrf.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:salario-liquido-clt",
+        "calculator:calculadora-13-salario",
+        "calculator:calculadora-ferias-clt",
+        "calculator:calculadora-clt-ou-pj"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "salario-minimo",
+      "canonicalFile": "data/rules/salario-minimo.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-seguro-desemprego",
+        "calculator:calculadora-insalubridade",
+        "calculator:calculadora-inss",
+        "calculator:calculadora-inss-autonomo",
+        "calculator:calculadora-inss-mei",
+        "calculator:calculadora-das-mei-2026"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    },
+    {
+      "ruleId": "seguro-desemprego",
+      "canonicalFile": "data/rules/seguro-desemprego.json",
+      "status": "draft",
+      "currentYear": null,
+      "source": null,
+      "consumers": [
+        "calculator:calculadora-seguro-desemprego"
+      ],
+      "generationAvailable": false,
+      "validationAvailable": false
+    }
+  ],
+  "aggregate": {
+    "file": "data/tabelas-trabalhistas.json",
+    "year": 2026,
+    "status": "derived-mixed-authority"
+  },
+  "runtime": {
+    "file": "assets/js/tabelas-trabalhistas.js",
+    "consumes": "/data/tabelas-trabalhistas.json"
+  },
+  "transform": {
+    "file": "scripts/transform-rules.js",
+    "currentlyTransforms": [
+      "inss",
+      "salario-minimo"
+    ],
+    "missingPropagation": [
+      "mei rates and fixed taxes",
+      "MEI revenue limit",
+      "DAS overdue fine/interest",
+      "FGTS agreement 20%"
+    ]
+  }
+}

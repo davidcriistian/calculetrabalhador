@@ -1,0 +1,2006 @@
+{
+  "reportId": "result-experience-audit",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "counts": {
+    "BASIC_RESULT": 7,
+    "BROKEN_OR_UNCERTAIN": 1,
+    "BASIC_RESULT_WITH_MEMORY": 12,
+    "COMPLETE_CALCULATION_REPORT": 2
+  },
+  "calculators": [
+    {
+      "assetId": "calculator:calculadora-aviso-previo",
+      "resultScore": 22,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "comparison",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:saque-aniversario-fgts",
+      "resultScore": 11,
+      "resultClassification": "BROKEN_OR_UNCERTAIN",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": false
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "comparison",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-adicional-noturno",
+      "resultScore": 22,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-horas-extras-clt",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": true
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-seguro-desemprego",
+      "resultScore": 33,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "comparison",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-insalubridade",
+      "resultScore": 22,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": false
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-pj",
+      "resultScore": 94,
+      "resultClassification": "COMPLETE_CALCULATION_REPORT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": true
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": true
+        },
+        {
+          "id": "specific-report",
+          "pass": true
+        },
+        {
+          "id": "methodology",
+          "pass": true
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "next-steps"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-reserva-financeira-pj",
+      "resultScore": 78,
+      "resultClassification": "COMPLETE_CALCULATION_REPORT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": true
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "next-steps",
+        "recommendation-slot",
+        "adaptive-report",
+        "specific-report"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-valor-hora-pj",
+      "resultScore": 56,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": true
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "next-steps",
+        "recommendation-slot",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-custo-mensal-pj",
+      "resultScore": 61,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "interpretation",
+        "recommendation-slot",
+        "comparison",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-multa-40-fgts",
+      "resultScore": 56,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:salario-liquido-clt",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": true
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "secondary-results",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-13-salario",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": true
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "secondary-results",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-ferias-clt",
+      "resultScore": 39,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "secondary-results",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss",
+      "resultScore": 67,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": true
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": true
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": true
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "interpretation",
+        "result-meaning",
+        "recommendation-slot",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss-autonomo",
+      "resultScore": 56,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": true
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "download",
+        "adaptive-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-inss-mei",
+      "resultScore": 44,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-2026",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": true
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "comparison",
+        "download",
+        "adaptive-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-limite-faturamento-mei-2026",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": false
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "result-context",
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-das-mei-atraso-2026",
+      "resultScore": 50,
+      "resultClassification": "BASIC_RESULT_WITH_MEMORY",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": false
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": true
+        },
+        {
+          "id": "comparison",
+          "pass": false
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": true
+        },
+        {
+          "id": "print",
+          "pass": true
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": true
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "next-steps",
+        "recommendation-slot",
+        "comparison",
+        "download",
+        "adaptive-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-rescisao-clt",
+      "resultScore": 33,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": false
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": false
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    },
+    {
+      "assetId": "calculator:calculadora-clt-ou-pj",
+      "resultScore": 44,
+      "resultClassification": "BASIC_RESULT",
+      "checks": [
+        {
+          "id": "result-context",
+          "pass": true
+        },
+        {
+          "id": "primary-result",
+          "pass": true
+        },
+        {
+          "id": "secondary-results",
+          "pass": true
+        },
+        {
+          "id": "premises",
+          "pass": false
+        },
+        {
+          "id": "interpretation",
+          "pass": true
+        },
+        {
+          "id": "result-meaning",
+          "pass": true
+        },
+        {
+          "id": "next-steps",
+          "pass": false
+        },
+        {
+          "id": "recommendation-slot",
+          "pass": false
+        },
+        {
+          "id": "memory",
+          "pass": false
+        },
+        {
+          "id": "comparison",
+          "pass": true
+        },
+        {
+          "id": "limitations",
+          "pass": true
+        },
+        {
+          "id": "copy",
+          "pass": false
+        },
+        {
+          "id": "print",
+          "pass": false
+        },
+        {
+          "id": "download",
+          "pass": false
+        },
+        {
+          "id": "adaptive-report",
+          "pass": false
+        },
+        {
+          "id": "specific-report",
+          "pass": false
+        },
+        {
+          "id": "methodology",
+          "pass": false
+        },
+        {
+          "id": "responsive-result",
+          "pass": true
+        }
+      ],
+      "exactGaps": [
+        "premises",
+        "next-steps",
+        "recommendation-slot",
+        "memory",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology"
+      ]
+    }
+  ]
+}

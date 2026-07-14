@@ -1,0 +1,25 @@
+{
+  "reportId": "pilot-selection-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "RECOMMENDED",
+  "pilot1": {
+    "calculator": "calculator:calculadora-aviso-previo",
+    "purpose": "Validate governed central-rule integration with a single legal rule, existing shadow validator and bounded complexity.",
+    "prerequisites": [
+      "freeze existing shadow baseline",
+      "register fallback governance",
+      "render result states"
+    ]
+  },
+  "pilot2": {
+    "calculator": "calculator:saque-aniversario-fgts",
+    "purpose": "Validate full canonical rebuild of a legacy page while preserving a finite official table and URL.",
+    "prerequisites": [
+      "freeze seven-bracket calculation baseline",
+      "govern table fallback",
+      "render mobile/desktop result report"
+    ]
+  }
+}

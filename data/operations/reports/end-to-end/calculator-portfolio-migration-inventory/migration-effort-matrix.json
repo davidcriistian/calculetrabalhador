@@ -1,0 +1,148 @@
+{
+  "reportId": "migration-effort-matrix",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "counts": {
+    "M": 15,
+    "L": 2,
+    "XS": 1,
+    "S": 2,
+    "XL": 2
+  },
+  "calculators": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "effort": "L",
+      "migrationClass": "D_FULL_CANONICAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-pj",
+      "effort": "XS",
+      "migrationClass": "A_INTEGRATION_ONLY",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "effort": "S",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "effort": "S",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "effort": "L",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "effort": "M",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "effort": "XL",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "effort": "XL",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "reason": "Derived from rebuild depth, rule architecture, result/report gaps and baseline status; not line count."
+    }
+  ]
+}

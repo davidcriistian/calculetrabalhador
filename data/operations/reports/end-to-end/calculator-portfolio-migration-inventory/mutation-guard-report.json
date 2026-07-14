@@ -1,0 +1,126 @@
+{
+  "reportId": "mutation-guard-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "PASS_ZERO_PUBLIC_MUTATION",
+  "groups": [
+    {
+      "group": "calculators",
+      "beforeCount": 22,
+      "afterCount": 22,
+      "beforeDigest": "a8e8a46b944aadcd95ba1f663e67669c912f9f088c950cf4cb8c27baced6088f",
+      "afterDigest": "a8e8a46b944aadcd95ba1f663e67669c912f9f088c950cf4cb8c27baced6088f",
+      "mutationCount": 0
+    },
+    {
+      "group": "articles",
+      "beforeCount": 63,
+      "afterCount": 63,
+      "beforeDigest": "5fd57dd3f4ccf655b8fc8e4fa29ffd522117cc409605c6c2dba6160f8e733f17",
+      "afterDigest": "5fd57dd3f4ccf655b8fc8e4fa29ffd522117cc409605c6c2dba6160f8e733f17",
+      "mutationCount": 0
+    },
+    {
+      "group": "home",
+      "beforeCount": 1,
+      "afterCount": 1,
+      "beforeDigest": "5f322ad949175832e900d2210685aca1067da2de3ae1ae387c84e16432d687e2",
+      "afterDigest": "5f322ad949175832e900d2210685aca1067da2de3ae1ae387c84e16432d687e2",
+      "mutationCount": 0
+    },
+    {
+      "group": "guides",
+      "beforeCount": 1,
+      "afterCount": 1,
+      "beforeDigest": "acf44443673a3bc60abff7e525c628bc4879c9405f7fd5d492f91a6137939d82",
+      "afterDigest": "acf44443673a3bc60abff7e525c628bc4879c9405f7fd5d492f91a6137939d82",
+      "mutationCount": 0
+    },
+    {
+      "group": "categories",
+      "beforeCount": 1,
+      "afterCount": 1,
+      "beforeDigest": "f8fef8c618e2fce7d725173a2888a1353407d9fcd93eb0f9206dd89ea022b952",
+      "afterDigest": "f8fef8c618e2fce7d725173a2888a1353407d9fcd93eb0f9206dd89ea022b952",
+      "mutationCount": 0
+    },
+    {
+      "group": "catalogsAndMaps",
+      "beforeCount": 5,
+      "afterCount": 5,
+      "beforeDigest": "b387ee2d94750317588c7043351cc2c6a0a18b3715d6ce07fdf08a9eec26a7fe",
+      "afterDigest": "b387ee2d94750317588c7043351cc2c6a0a18b3715d6ce07fdf08a9eec26a7fe",
+      "mutationCount": 0
+    },
+    {
+      "group": "sitemap",
+      "beforeCount": 1,
+      "afterCount": 1,
+      "beforeDigest": "16a6d439ed2e1a11aba4ad8498511216eedf9ea1854b75f3e294ee01a5f52725",
+      "afterDigest": "16a6d439ed2e1a11aba4ad8498511216eedf9ea1854b75f3e294ee01a5f52725",
+      "mutationCount": 0
+    },
+    {
+      "group": "registryPublishing",
+      "beforeCount": 99,
+      "afterCount": 99,
+      "beforeDigest": "3df5e0339dbef190fa04b46d3d52be085073712ac589a895617ee283456bcf2d",
+      "afterDigest": "3df5e0339dbef190fa04b46d3d52be085073712ac589a895617ee283456bcf2d",
+      "mutationCount": 0
+    },
+    {
+      "group": "rules",
+      "beforeCount": 12,
+      "afterCount": 12,
+      "beforeDigest": "ee52b3e42d3a709e5a98534c5f66c4418acdeb5db6326701d591f156053f886d",
+      "afterDigest": "ee52b3e42d3a709e5a98534c5f66c4418acdeb5db6326701d591f156053f886d",
+      "mutationCount": 0
+    },
+    {
+      "group": "derivedRuntime",
+      "beforeCount": 1,
+      "afterCount": 1,
+      "beforeDigest": "55ffe44e26afc5de827bbdaba9d933256eb18f5ec3d68e37d47139e747bdd997",
+      "afterDigest": "55ffe44e26afc5de827bbdaba9d933256eb18f5ec3d68e37d47139e747bdd997",
+      "mutationCount": 0
+    },
+    {
+      "group": "calculationScripts",
+      "beforeCount": 23,
+      "afterCount": 23,
+      "beforeDigest": "c0f261def3e491b88c72d4f48dba715bba111091e2d16602354218e29f381d7a",
+      "afterDigest": "c0f261def3e491b88c72d4f48dba715bba111091e2d16602354218e29f381d7a",
+      "mutationCount": 0
+    },
+    {
+      "group": "publicCssJs",
+      "beforeCount": 18,
+      "afterCount": 18,
+      "beforeDigest": "6c7be0e3758c8e4dcb88ea5529f11bf9604fc03d8a81743b2428d5599d782ef1",
+      "afterDigest": "6c7be0e3758c8e4dcb88ea5529f11bf9604fc03d8a81743b2428d5599d782ef1",
+      "mutationCount": 0
+    },
+    {
+      "group": "legalPages",
+      "beforeCount": 2,
+      "afterCount": 2,
+      "beforeDigest": "72139ac53f6679dff14daa9ede3b191191d5ea49679f7ea0d676e2072962ba6a",
+      "afterDigest": "72139ac53f6679dff14daa9ede3b191191d5ea49679f7ea0d676e2072962ba6a",
+      "mutationCount": 0
+    }
+  ],
+  "requiredCounters": {
+    "PUBLIC_CALCULATOR_MUTATION_COUNT": 0,
+    "PUBLIC_ARTICLE_MUTATION_COUNT": 0,
+    "HOME_MUTATION_COUNT": 0,
+    "GUIDE_MUTATION_COUNT": 0,
+    "CATALOG_MUTATION_COUNT": 0,
+    "SITEMAP_MUTATION_COUNT": 0,
+    "LEGAL_RULE_MUTATION_COUNT": 0,
+    "DERIVED_RUNTIME_MUTATION_COUNT": 0,
+    "CALCULATION_SCRIPT_MUTATION_COUNT": 0,
+    "GIT_WRITE_COUNT": 0
+  },
+  "reportsDirectoryExcludedFromGuard": "data/operations/reports/end-to-end/calculator-portfolio-migration-inventory"
+}

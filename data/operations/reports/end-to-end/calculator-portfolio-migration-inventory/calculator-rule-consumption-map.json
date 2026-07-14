@@ -1,0 +1,1074 @@
+{
+  "reportId": "calculator-rule-consumption-map",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "distinction": [
+    "SOURCE_EXISTS is not SOURCE_IS_ACTUALLY_CONSUMED",
+    "CENTRALIZED is not DUPLICATED_BUT_EQUAL"
+  ],
+  "calculators": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "inputs": 4,
+      "formulas": [
+        "aviso-previo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "aviso-previo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/aviso-previo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Regra local com shadow validator",
+          "governed": true,
+          "governanceEvidence": "embedded-shadow-equivalence"
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "result-meaning",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "inputs": 2,
+      "formulas": [
+        "fgts"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "fgts",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/fgts.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Tabela local de saque-aniversario",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "inputs": 5,
+      "formulas": [
+        "adicional-noturno"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "adicional-noturno",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/adicional-noturno.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Regra local com shadow validator",
+          "governed": true,
+          "governanceEvidence": "embedded-shadow-equivalence"
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "inputs": 5,
+      "formulas": [
+        "horas-extras"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "horas-extras",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/horas-extras.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Percentuais e divisores locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "result-meaning",
+        "comparison",
+        "limitations",
+        "methodology",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "inputs": 4,
+      "formulas": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "seguro-desemprego",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/seguro-desemprego.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Tabela e parcelas locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "memory",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "inputs": 2,
+      "formulas": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "insalubridade",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/insalubridade.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Percentuais locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "premises",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-pj",
+      "inputs": 8,
+      "formulas": [],
+      "ruleSources": [],
+      "derivedRuntime": null,
+      "fallbacks": [],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "recommendation-slot",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "download",
+        "adaptive-report",
+        "specific-report",
+        "methodology",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "inputs": 9,
+      "formulas": [],
+      "ruleSources": [],
+      "derivedRuntime": null,
+      "fallbacks": [],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "download",
+        "methodology",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "inputs": 8,
+      "formulas": [],
+      "ruleSources": [],
+      "derivedRuntime": null,
+      "fallbacks": [],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "interpretation",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "inputs": 12,
+      "formulas": [],
+      "ruleSources": [],
+      "derivedRuntime": null,
+      "fallbacks": [],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "result-meaning",
+        "next-steps",
+        "memory",
+        "limitations",
+        "copy",
+        "print",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "inputs": 6,
+      "formulas": [
+        "fgts",
+        "multa-fgts",
+        "rescisao"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "fgts",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/fgts.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "multa-fgts",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_EXISTS_NOT_ACTUALLY_CONSUMED",
+          "fallback": true
+        },
+        {
+          "ruleId": "rescisao",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Percentuais FGTS locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "inputs": 2,
+      "formulas": [
+        "inss",
+        "irrf"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "irrf",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/irrf.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "INSS local",
+          "governed": false,
+          "governanceEvidence": null
+        },
+        {
+          "description": "IRRF local",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "premises",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "methodology",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "inputs": 4,
+      "formulas": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "decimo-terceiro",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/decimo-terceiro.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "irrf",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/irrf.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "INSS local",
+          "governed": false,
+          "governanceEvidence": null
+        },
+        {
+          "description": "IRRF local",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "premises",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "methodology",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "inputs": 4,
+      "formulas": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "ferias",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/ferias.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "irrf",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/irrf.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "decimo-terceiro",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/decimo-terceiro.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "INSS local",
+          "governed": false,
+          "governanceEvidence": null
+        },
+        {
+          "description": "IRRF local",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "premises",
+        "result-meaning",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "inputs": 16,
+      "formulas": [
+        "inss",
+        "salario-minimo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "INSS CLT local",
+          "governed": true,
+          "governanceEvidence": "embedded-shadow-equivalence"
+        },
+        {
+          "description": "Planos autonomo locais",
+          "governed": true,
+          "governanceEvidence": "embedded-shadow-equivalence"
+        },
+        {
+          "description": "MEI local",
+          "governed": true,
+          "governanceEvidence": "embedded-shadow-equivalence"
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "premises",
+        "next-steps",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "download",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "inputs": 4,
+      "formulas": [
+        "inss",
+        "salario-minimo",
+        "tetoINSS"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "tetoINSS",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Bases e planos locais",
+          "governed": true,
+          "governanceEvidence": "embedded-deterministic-cases"
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "secondary-results",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "specific-report",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "inputs": 6,
+      "formulas": [
+        "inss",
+        "salario-minimo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "DAS/INSS MEI local",
+          "governed": true,
+          "governanceEvidence": "embedded-deterministic-cases"
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "secondary-results",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "inputs": 4,
+      "formulas": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "salario-minimo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/salario-minimo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "das-mei",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_EXISTS_NOT_ACTUALLY_CONSUMED",
+          "fallback": true
+        },
+        {
+          "ruleId": "icms",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        },
+        {
+          "ruleId": "iss",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "DAS/INSS MEI local",
+          "governed": true,
+          "governanceEvidence": "embedded-deterministic-cases"
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "secondary-results",
+        "result-meaning",
+        "memory",
+        "limitations",
+        "copy",
+        "print",
+        "specific-report",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "inputs": 6,
+      "formulas": [
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "das-mei"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "limite-faturamento-mei",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_EXISTS_NOT_ACTUALLY_CONSUMED",
+          "fallback": true
+        },
+        {
+          "ruleId": "faturamento-mei",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        },
+        {
+          "ruleId": "das-mei",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_EXISTS_NOT_ACTUALLY_CONSUMED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Limite anual MEI local",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "primary-result",
+        "secondary-results",
+        "result-meaning",
+        "memory",
+        "comparison",
+        "limitations",
+        "copy",
+        "print",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "inputs": 5,
+      "formulas": [
+        "das-mei",
+        "multa-das-mei",
+        "juros-das-mei",
+        "calendario-das-mei"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "das-mei",
+          "sourceExists": true,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_EXISTS_NOT_ACTUALLY_CONSUMED",
+          "fallback": true
+        },
+        {
+          "ruleId": "multa-das-mei",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        },
+        {
+          "ruleId": "juros-das-mei",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        },
+        {
+          "ruleId": "calendario-das-mei",
+          "sourceExists": false,
+          "canonicalFile": "data/tabelas-trabalhistas.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": false,
+          "centralStatus": "SOURCE_MISSING",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Multa e juros locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "memory",
+        "limitations",
+        "copy",
+        "print",
+        "specific-report",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "inputs": 5,
+      "formulas": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "fgts",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/fgts.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "ferias",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/ferias.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "decimo-terceiro",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/decimo-terceiro.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "aviso-previo",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/aviso-previo.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "Calculo rescisorio legado",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "result-meaning",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "inputs": 15,
+      "formulas": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "ruleSources": [
+        {
+          "ruleId": "inss",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/inss.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "irrf",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/irrf.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "fgts",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/fgts.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "ferias",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/ferias.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        },
+        {
+          "ruleId": "decimo-terceiro",
+          "sourceExists": true,
+          "canonicalFile": "data/rules/decimo-terceiro.json",
+          "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+          "sourceIsActuallyConsumed": true,
+          "centralStatus": "DUPLICATED_BUT_EQUAL_OR_SHADOWED",
+          "fallback": true
+        }
+      ],
+      "derivedRuntime": "assets/js/tabelas-trabalhistas.js",
+      "fallbacks": [
+        {
+          "description": "INSS/IRRF locais",
+          "governed": false,
+          "governanceEvidence": null
+        },
+        {
+          "description": "Verbas CLT locais",
+          "governed": false,
+          "governanceEvidence": null
+        }
+      ],
+      "outputs": [
+        "result-context",
+        "primary-result",
+        "secondary-results",
+        "interpretation",
+        "result-meaning",
+        "comparison",
+        "limitations",
+        "responsive-result"
+      ]
+    }
+  ]
+}

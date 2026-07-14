@@ -1,0 +1,170 @@
+{
+  "reportId": "migration-classification-matrix",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED",
+  "counts": {
+    "C_PARTIAL_REBUILD_AND_INTEGRATION": 15,
+    "D_FULL_CANONICAL_REBUILD_AND_INTEGRATION": 1,
+    "A_INTEGRATION_ONLY": 1,
+    "B_LIGHT_REFINEMENT_AND_INTEGRATION": 2,
+    "E_SPECIALIZED_REVIEW": 3
+  },
+  "calculators": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "GOVERNED_WITH_FALLBACK",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; GOVERNED_WITH_FALLBACK"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "canonicalStatus": "LEGACY_REQUIRES_REBUILD",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "D_FULL_CANONICAL_REBUILD_AND_INTEGRATION",
+      "rationale": "LEGACY_REQUIRES_REBUILD; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "GOVERNED_WITH_FALLBACK",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; GOVERNED_WITH_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-pj",
+      "canonicalStatus": "CANONICAL_COMPLIANT",
+      "integrationStatus": "NO_CENTRAL_RULE_REQUIRED",
+      "migrationClass": "A_INTEGRATION_ONLY",
+      "rationale": "CANONICAL_COMPLIANT; NO_CENTRAL_RULE_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-reserva-financeira-pj",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "NO_CENTRAL_RULE_REQUIRED",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; NO_CENTRAL_RULE_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-valor-hora-pj",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "NO_CENTRAL_RULE_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; NO_CENTRAL_RULE_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-custo-mensal-pj",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "NO_CENTRAL_RULE_REQUIRED",
+      "migrationClass": "B_LIGHT_REFINEMENT_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; NO_CENTRAL_RULE_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "canonicalStatus": "SPECIALIZED_EXCEPTION_REVIEW",
+      "integrationStatus": "GOVERNED_WITH_FALLBACK",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "rationale": "SPECIALIZED_EXCEPTION_REVIEW; GOVERNED_WITH_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "canonicalStatus": "PARTIALLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "PARTIALLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "canonicalStatus": "MOSTLY_CANONICAL",
+      "integrationStatus": "HARD_CODED_MIGRATION_REQUIRED",
+      "migrationClass": "C_PARTIAL_REBUILD_AND_INTEGRATION",
+      "rationale": "MOSTLY_CANONICAL; HARD_CODED_MIGRATION_REQUIRED"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "canonicalStatus": "SPECIALIZED_EXCEPTION_REVIEW",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "rationale": "SPECIALIZED_EXCEPTION_REVIEW; PARTIALLY_CONNECTED"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "canonicalStatus": "SPECIALIZED_EXCEPTION_REVIEW",
+      "integrationStatus": "PARTIALLY_CONNECTED",
+      "migrationClass": "E_SPECIALIZED_REVIEW",
+      "rationale": "SPECIALIZED_EXCEPTION_REVIEW; PARTIALLY_CONNECTED"
+    }
+  ]
+}

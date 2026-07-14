@@ -1,0 +1,95 @@
+{
+  "reportId": "validation-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "PASS_WITH_AUDIT_WARNINGS",
+  "jsonValid": true,
+  "jsonFileCount": 1324,
+  "reportJsonFileCount": 26,
+  "totalJsonFilesAfterReports": 1350,
+  "jsonErrors": [],
+  "executionNote": "Commands were executed by the outer governed shell because nested child-process execution is blocked by the workspace sandbox (EPERM). The EPERM condition was tooling isolation, not a validator failure.",
+  "validations": [
+    {
+      "id": "calculator-experience-contract",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "Contract 1.1.0; 24/24 fixtures matched; 165 internal references; 0 unresolved."
+    },
+    {
+      "id": "governance",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "JSON, tools, articles, clusters, update map, dependencies and validation rules OK."
+    },
+    {
+      "id": "transform-rules-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "INSS minimum wage, ceiling, brackets and rates are equivalent to the aggregate."
+    },
+    {
+      "id": "transform-rules-dry-run",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "NO_CHANGE_REQUIRED; no file written."
+    },
+    {
+      "id": "shadow-aviso-previo",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "60/60 scenarios equal; 0 divergences; user-facing source remains legacy-runtime."
+    },
+    {
+      "id": "shadow-adicional-noturno",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "50/50 scenarios equal; 0 divergences; user-facing source remains legacy-runtime."
+    },
+    {
+      "id": "reserva-financeira-regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "9/9 calculation cases plus common scenario, JSON-LD, links, catalogs and structure."
+    },
+    {
+      "id": "ferias-pj-regression",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "9/9 calculation cases, 850 editorial words, HTML/PDF report, FAQ, links, catalogs and structure."
+    },
+    {
+      "id": "runtime-node-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "node --check assets/js/tabelas-trabalhistas.js"
+    },
+    {
+      "id": "transform-node-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "node --check scripts/transform-rules.js"
+    },
+    {
+      "id": "git-diff-check",
+      "status": "PASS",
+      "exitCode": 0,
+      "evidence": "No whitespace error in tracked changes."
+    }
+  ],
+  "renderedAudit": {
+    "browser": "Microsoft Edge headless",
+    "calculatorsAudited": 22,
+    "viewportStateChecks": 88,
+    "screenshots": 44,
+    "mobileOverflowCount": 0,
+    "desktopOverflowCount": 0,
+    "resultExercisedBothViewports": 16,
+    "resultRequiresSpecificReview": 6
+  },
+  "warnings": [
+    "Six calculators require calculator-specific rendered result review because safe generic submission did not establish a complete result state.",
+    "Inventory, Registry/Publishing and fallback governance gaps remain findings; they were not modified in this audit."
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "reportId": "inventory-reconciliation-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "INVENTORY_INCONSISTENCY_DETECTED",
+  "sourceCounts": {
+    "physicalPages": 22,
+    "catalog": 22,
+    "toolsMap": 22,
+    "registry": 6,
+    "publishing": 6,
+    "sitemap": 22
+  },
+  "inconsistencies": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "public page/catalog published but Registry says draft"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "public page/catalog published but Publishing says draft"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "missing"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Registry",
+      "issue": "public page/catalog published but Registry says draft"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "type": "INVENTORY_INCONSISTENCY",
+      "source": "Publishing",
+      "issue": "public page/catalog published but Publishing says draft"
+    }
+  ]
+}

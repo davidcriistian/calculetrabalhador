@@ -1,0 +1,51 @@
+{
+  "reportId": "audit-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "CALCULATOR_PORTFOLIO_MIGRATION_INVENTORY_COMPLETED_WITH_WARNINGS",
+  "inventory": {
+    "expected": 22,
+    "discovered": 22,
+    "reconciled": 22
+  },
+  "canonicalCounts": {
+    "PARTIALLY_CANONICAL": 10,
+    "LEGACY_REQUIRES_REBUILD": 1,
+    "CANONICAL_COMPLIANT": 1,
+    "MOSTLY_CANONICAL": 7,
+    "SPECIALIZED_EXCEPTION_REVIEW": 3
+  },
+  "integrationCounts": {
+    "GOVERNED_WITH_FALLBACK": 3,
+    "PARTIALLY_CONNECTED": 9,
+    "NO_CENTRAL_RULE_REQUIRED": 4,
+    "HARD_CODED_MIGRATION_REQUIRED": 6
+  },
+  "baselineCounts": {
+    "REGRESSION_BASELINE_READY": 8,
+    "REGRESSION_BASELINE_PARTIAL": 14
+  },
+  "migrationCounts": {
+    "C_PARTIAL_REBUILD_AND_INTEGRATION": 15,
+    "D_FULL_CANONICAL_REBUILD_AND_INTEGRATION": 1,
+    "A_INTEGRATION_ONLY": 1,
+    "B_LIGHT_REFINEMENT_AND_INTEGRATION": 2,
+    "E_SPECIALIZED_REVIEW": 3
+  },
+  "riskCounts": {
+    "MEDIUM": 6,
+    "HIGH": 10,
+    "LOW": 3,
+    "CRITICAL": 3
+  },
+  "effortCounts": {
+    "M": 15,
+    "L": 2,
+    "XS": 1,
+    "S": 2,
+    "XL": 2
+  },
+  "blockers": 2,
+  "warnings": 44
+}

@@ -1,0 +1,108 @@
+{
+  "reportId": "preflight-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "PASS_CLEAN_BASELINE",
+  "git": {
+    "branchAndStatus": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": "## main...origin/main"
+    },
+    "diffStat": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": ""
+    },
+    "diffNameStatus": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": ""
+    },
+    "diffCheck": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": ""
+    },
+    "cachedNameStatus": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": ""
+    },
+    "head": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": "de5ec9476a0959047e2ddfc10317779a8beb11fe"
+    },
+    "originMain": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": "de5ec9476a0959047e2ddfc10317779a8beb11fe"
+    },
+    "aheadBehind": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": "0\t0"
+    },
+    "recentLog": {
+      "status": "PASS",
+      "exitCode": 0,
+      "output": "de5ec94 feat(article): add governed PJ emergency reserve article\na3fa6f3 feat(article): add governed PJ finance organization article\naaae7a5 feat(home): add responsive nucleus article sections\n5f7b70b feat(article): harden editorial freshness and cluster automation\n1a92520 feat(calculator): add governed PJ vacation calculator"
+    }
+  },
+  "protectedBaseline": {
+    "calculators": {
+      "fileCount": 22,
+      "digest": "a8e8a46b944aadcd95ba1f663e67669c912f9f088c950cf4cb8c27baced6088f"
+    },
+    "articles": {
+      "fileCount": 63,
+      "digest": "5fd57dd3f4ccf655b8fc8e4fa29ffd522117cc409605c6c2dba6160f8e733f17"
+    },
+    "home": {
+      "fileCount": 1,
+      "digest": "5f322ad949175832e900d2210685aca1067da2de3ae1ae387c84e16432d687e2"
+    },
+    "guides": {
+      "fileCount": 1,
+      "digest": "acf44443673a3bc60abff7e525c628bc4879c9405f7fd5d492f91a6137939d82"
+    },
+    "categories": {
+      "fileCount": 1,
+      "digest": "f8fef8c618e2fce7d725173a2888a1353407d9fcd93eb0f9206dd89ea022b952"
+    },
+    "catalogsAndMaps": {
+      "fileCount": 5,
+      "digest": "b387ee2d94750317588c7043351cc2c6a0a18b3715d6ce07fdf08a9eec26a7fe"
+    },
+    "sitemap": {
+      "fileCount": 1,
+      "digest": "16a6d439ed2e1a11aba4ad8498511216eedf9ea1854b75f3e294ee01a5f52725"
+    },
+    "registryPublishing": {
+      "fileCount": 99,
+      "digest": "3df5e0339dbef190fa04b46d3d52be085073712ac589a895617ee283456bcf2d"
+    },
+    "rules": {
+      "fileCount": 12,
+      "digest": "ee52b3e42d3a709e5a98534c5f66c4418acdeb5db6326701d591f156053f886d"
+    },
+    "derivedRuntime": {
+      "fileCount": 1,
+      "digest": "55ffe44e26afc5de827bbdaba9d933256eb18f5ec3d68e37d47139e747bdd997"
+    },
+    "calculationScripts": {
+      "fileCount": 23,
+      "digest": "c0f261def3e491b88c72d4f48dba715bba111091e2d16602354218e29f381d7a"
+    },
+    "publicCssJs": {
+      "fileCount": 18,
+      "digest": "6c7be0e3758c8e4dcb88ea5529f11bf9604fc03d8a81743b2428d5599d782ef1"
+    },
+    "legalPages": {
+      "fileCount": 2,
+      "digest": "72139ac53f6679dff14daa9ede3b191191d5ea49679f7ea0d676e2072962ba6a"
+    }
+  }
+}

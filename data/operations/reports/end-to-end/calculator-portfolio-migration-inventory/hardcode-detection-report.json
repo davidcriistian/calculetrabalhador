@@ -1,0 +1,308 @@
+{
+  "reportId": "hardcode-detection-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "HARDCODES_DETECTED",
+  "countingMethod": "Counts logical legal/official rule groups and enumerated official scalar values; editorial examples, user inputs and pure mathematical constants are excluded.",
+  "hardcodedLegalRuleCount": 37,
+  "hardcodedOfficialValueCount": 181,
+  "findings": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "ruleId": "aviso-previo",
+      "description": "Dias base, dias por ano e teto local",
+      "officialValueCount": 3,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "ruleId": "fgts-saque-aniversario",
+      "description": "Tabela local de sete faixas, aliquotas e parcelas adicionais",
+      "officialValueCount": 21,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "ruleId": "adicional-noturno",
+      "description": "Percentual legal padrao local",
+      "officialValueCount": 1,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "ruleId": "horas-extras",
+      "description": "Percentuais e divisores mensais locais",
+      "officialValueCount": 4,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "ruleId": "seguro-desemprego",
+      "description": "Piso, teto, faixas e base da segunda faixa locais",
+      "officialValueCount": 5,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "ruleId": "seguro-desemprego-parcelas",
+      "description": "Faixas de quantidade de parcelas",
+      "officialValueCount": 3,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "ruleId": "insalubridade",
+      "description": "Percentuais por grau locais",
+      "officialValueCount": 3,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "ruleId": "fgts",
+      "description": "Deposito mensal local",
+      "officialValueCount": 1,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "ruleId": "multa-fgts",
+      "description": "Multas de 40% e 20% locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "ruleId": "inss",
+      "description": "Tabela progressiva INSS local",
+      "officialValueCount": 9,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "ruleId": "irrf",
+      "description": "Tabela, deducoes e redutor IRRF locais",
+      "officialValueCount": 12,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "ruleId": "inss",
+      "description": "Tabela progressiva INSS local",
+      "officialValueCount": 9,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "ruleId": "irrf",
+      "description": "Tabela IRRF local",
+      "officialValueCount": 10,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "ruleId": "decimo-terceiro",
+      "description": "Regra proporcional e parcelas",
+      "officialValueCount": 2,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "ruleId": "inss",
+      "description": "Tabela progressiva INSS local",
+      "officialValueCount": 9,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "ruleId": "irrf",
+      "description": "Tabela IRRF local",
+      "officialValueCount": 10,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "ruleId": "ferias",
+      "description": "Terco, abono e proporcionalidade",
+      "officialValueCount": 3,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "ruleId": "inss-clt",
+      "description": "Tabela progressiva INSS local",
+      "officialValueCount": 12,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "ruleId": "inss-autonomo",
+      "description": "Planos 20% e 11% locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "ruleId": "inss-mei",
+      "description": "Aliquotas 5% e 12% e valores por atividade locais",
+      "officialValueCount": 7,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "ruleId": "inss-bases",
+      "description": "Salario minimo e teto locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "ruleId": "inss-autonomo",
+      "description": "Planos 20% e 11% locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "ruleId": "inss-mei",
+      "description": "Aliquotas 5% e 12% locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "ruleId": "das-mei",
+      "description": "ICMS, ISS e bases locais",
+      "officialValueCount": 3,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "ruleId": "inss-mei",
+      "description": "Aliquotas 5% e 12% locais",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "ruleId": "das-mei",
+      "description": "ICMS, ISS e bases locais",
+      "officialValueCount": 3,
+      "severity": "HIGH",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "ruleId": "limite-faturamento-mei",
+      "description": "Limite anual oficial local",
+      "officialValueCount": 1,
+      "severity": "CRITICAL",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "ruleId": "das-mei-atraso",
+      "description": "Multa diaria, teto e juros mensal locais",
+      "officialValueCount": 3,
+      "severity": "CRITICAL",
+      "migrationAction": "CENTRALIZE"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "ruleId": "fgts",
+      "description": "Deposito e multa rescisoria no fallback",
+      "officialValueCount": 2,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "ruleId": "ferias",
+      "description": "Proporcionalidade e terco no fallback",
+      "officialValueCount": 3,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "ruleId": "decimo-terceiro",
+      "description": "Proporcionalidade no fallback",
+      "officialValueCount": 2,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "ruleId": "aviso-previo",
+      "description": "Dias base, progressao e teto no fallback",
+      "officialValueCount": 3,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "ruleId": "inss",
+      "description": "Tabela progressiva INSS local",
+      "officialValueCount": 9,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "ruleId": "irrf",
+      "description": "Tabela e deducoes IRRF locais",
+      "officialValueCount": 12,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "ruleId": "fgts",
+      "description": "Deposito mensal local",
+      "officialValueCount": 1,
+      "severity": "HIGH",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "ruleId": "ferias",
+      "description": "Terco e mensalizacao locais",
+      "officialValueCount": 2,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "ruleId": "decimo-terceiro",
+      "description": "Mensalizacao local",
+      "officialValueCount": 1,
+      "severity": "MEDIUM",
+      "migrationAction": "GOVERN_FALLBACK"
+    }
+  ]
+}

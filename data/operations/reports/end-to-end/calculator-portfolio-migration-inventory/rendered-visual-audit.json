@@ -1,0 +1,1651 @@
+{
+  "reportId": "rendered-visual-audit",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_RENDER_AUDIT",
+  "status": "COMPLETED",
+  "summary": {
+    "browser": "Microsoft Edge headless",
+    "calculatorsAudited": 22,
+    "viewportStateChecks": 88,
+    "screenshots": 44,
+    "mobileOverflowCount": 0,
+    "desktopOverflowCount": 0,
+    "resultExercisedBothViewports": 16,
+    "resultRequiresSpecificReview": 6
+  },
+  "calculators": [
+    {
+      "id": "saque-aniversario-fgts",
+      "slug": "/saque-aniversario-fgts/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Saque Aniversário FGTS 2026",
+        "h1": "Calculadora de Saque Aniversário FGTS 2026",
+        "formCount": 0,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 17,
+        "initialResultTextLength": 977,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 7477,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Saque Aniversário FGTS 2026",
+        "h1": "Calculadora de Saque Aniversário FGTS 2026",
+        "formCount": 0,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 17,
+        "initialResultTextLength": 977,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 4162,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": false,
+          "visibleResultElements": 17,
+          "resultTextLength": 996,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": false,
+          "visibleResultElements": 17,
+          "resultTextLength": 996,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/saque-aniversario-fgts-mobile-entry.png",
+        "visual/saque-aniversario-fgts-desktop-result.png"
+      ]
+    },
+    {
+      "id": "salario-liquido-clt",
+      "slug": "/salario-liquido-clt/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Salário Líquido CLT 2026: Calculadora com INSS e IRRF Atualizados | Calcule Trabalhador",
+        "h1": "Calculadora de Salário Líquido CLT 2026",
+        "formCount": 0,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 45,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 437,
+          "height": 946
+        },
+        "bodyHeight": 8169,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Salário Líquido CLT 2026: Calculadora com INSS e IRRF Atualizados | Calcule Trabalhador",
+        "h1": "Calculadora de Salário Líquido CLT 2026",
+        "formCount": 0,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 45,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5232,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": false,
+          "visibleResultElements": 2,
+          "resultTextLength": 870,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": false,
+          "visibleResultElements": 2,
+          "resultTextLength": 870,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/salario-liquido-clt-mobile-entry.png",
+        "visual/salario-liquido-clt-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-rescisao-clt",
+      "slug": "/calculadora-rescisao-clt/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Rescisão CLT 2026 - Calcule Seus Direitos Trabalhistas",
+        "h1": "Calculadora de Rescisão CLT 2026",
+        "formCount": 0,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 11002,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Rescisão CLT 2026 - Calcule Seus Direitos Trabalhistas",
+        "h1": "Calculadora de Rescisão CLT 2026",
+        "formCount": 0,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5988,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 445,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 445,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-rescisao-clt-mobile-entry.png",
+        "visual/calculadora-rescisao-clt-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-13-salario",
+      "slug": "/calculadora-13-salario/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de 13º Salário 2026 - Calcule Parcelas e Descontos",
+        "h1": "Calculadora de 13º Salário 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 12811,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de 13º Salário 2026 - Calcule Parcelas e Descontos",
+        "h1": "Calculadora de 13º Salário 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 6775,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 1043,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 1043,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-13-salario-mobile-entry.png",
+        "visual/calculadora-13-salario-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-ferias-clt",
+      "slug": "/calculadora-ferias-clt/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Férias CLT 2026 - Calcule com Adicional de 1/3",
+        "h1": "Calculadora de Férias CLT 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 14062,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Férias CLT 2026 - Calcule com Adicional de 1/3",
+        "h1": "Calculadora de Férias CLT 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 7333,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 750,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 750,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-ferias-clt-mobile-entry.png",
+        "visual/calculadora-ferias-clt-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-horas-extras-clt",
+      "slug": "/calculadora-horas-extras-clt/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Horas Extras CLT 2026 - Adicional 50% e 100%",
+        "h1": "Calculadora de Horas Extras CLT 2026",
+        "formCount": 0,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 11885,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Horas Extras CLT 2026 - Adicional 50% e 100%",
+        "h1": "Calculadora de Horas Extras CLT 2026",
+        "formCount": 0,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 6307,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 984,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 984,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-horas-extras-clt-mobile-entry.png",
+        "visual/calculadora-horas-extras-clt-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-seguro-desemprego",
+      "slug": "/calculadora-seguro-desemprego/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora Seguro-Desemprego 2026 Atualizada | Valor e Parcelas | Calcule Trabalhador",
+        "h1": "Calculadora Seguro-Desemprego 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 42,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 8785,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora Seguro-Desemprego 2026 Atualizada | Valor e Parcelas | Calcule Trabalhador",
+        "h1": "Calculadora Seguro-Desemprego 2026",
+        "formCount": 0,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 42,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5739,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 628,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 628,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-seguro-desemprego-mobile-entry.png",
+        "visual/calculadora-seguro-desemprego-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-aviso-previo",
+      "slug": "/calculadora-aviso-previo/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Aviso Prévio 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Aviso Prévio 2026",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 6039,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Aviso Prévio 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Aviso Prévio 2026",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 2971,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-aviso-previo-mobile-entry.png",
+        "visual/calculadora-aviso-previo-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-adicional-noturno",
+      "slug": "/calculadora-adicional-noturno/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Adicional Noturno 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Adicional Noturno 2026",
+        "formCount": 1,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 6249,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Adicional Noturno 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Adicional Noturno 2026",
+        "formCount": 1,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 3087,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-adicional-noturno-mobile-entry.png",
+        "visual/calculadora-adicional-noturno-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-insalubridade",
+      "slug": "/calculadora-insalubridade/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Insalubridade 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Insalubridade 2026",
+        "formCount": 1,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 6293,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Insalubridade 2026 | Calcule Trabalhador",
+        "h1": "Calculadora de Insalubridade 2026",
+        "formCount": 1,
+        "inputCount": 2,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 3039,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-insalubridade-mobile-entry.png",
+        "visual/calculadora-insalubridade-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-clt-ou-pj",
+      "slug": "/calculadora-clt-ou-pj/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora CLT ou PJ 2026: Compare Salário, Benefícios e Custos",
+        "h1": "Calculadora CLT ou PJ",
+        "formCount": 0,
+        "inputCount": 15,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 2,
+        "initialResultTextLength": 56,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 8970,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora CLT ou PJ 2026: Compare Salário, Benefícios e Custos",
+        "h1": "Calculadora CLT ou PJ",
+        "formCount": 0,
+        "inputCount": 15,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 2,
+        "initialResultTextLength": 56,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5109,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 1660,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 1660,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-clt-ou-pj-mobile-entry.png",
+        "visual/calculadora-clt-ou-pj-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-inss",
+      "slug": "/calculadora-inss/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Simulador de INSS 2026 | Calcule Trabalhador",
+        "h1": "Simulador de INSS 2026",
+        "formCount": 1,
+        "inputCount": 16,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 15128,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Simulador de INSS 2026 | Calcule Trabalhador",
+        "h1": "Simulador de INSS 2026",
+        "formCount": 1,
+        "inputCount": 16,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 8653,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "PARTIAL_OR_NOT_EXERCISED",
+        "mobile": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": true
+        },
+        "desktop": {
+          "status": "NOT_EXERCISED_SAFE_GENERIC_INPUT",
+          "submitted": true,
+          "visibleResultElements": 0,
+          "resultTextLength": 0,
+          "numericResult": false,
+          "memoryVisible": false,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": true
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-inss-mobile-entry.png",
+        "visual/calculadora-inss-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-inss-autonomo",
+      "slug": "/calculadora-inss-autonomo/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de INSS para Autônomo | Calcule Trabalhador",
+        "h1": "Calculadora de INSS para Autônomo",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 7556,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de INSS para Autônomo | Calcule Trabalhador",
+        "h1": "Calculadora de INSS para Autônomo",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 4640,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 3,
+          "resultTextLength": 1299,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 3,
+          "resultTextLength": 1299,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-inss-autonomo-mobile-entry.png",
+        "visual/calculadora-inss-autonomo-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-inss-mei",
+      "slug": "/calculadora-inss-mei/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora INSS MEI | Calcule Trabalhador",
+        "h1": "Calculadora INSS MEI",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 10200,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora INSS MEI | Calcule Trabalhador",
+        "h1": "Calculadora INSS MEI",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5986,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2317,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2317,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-inss-mei-mobile-entry.png",
+        "visual/calculadora-inss-mei-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-das-mei-2026",
+      "slug": "/calculadora-das-mei-2026/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora DAS MEI 2026 | Calcule Trabalhador",
+        "h1": "Calculadora DAS MEI 2026",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 9681,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora DAS MEI 2026 | Calcule Trabalhador",
+        "h1": "Calculadora DAS MEI 2026",
+        "formCount": 1,
+        "inputCount": 4,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5662,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2063,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2063,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Baixar relatório",
+            "Imprimir",
+            "Copiar resultado"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-das-mei-2026-mobile-entry.png",
+        "visual/calculadora-das-mei-2026-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-limite-faturamento-mei-2026",
+      "slug": "/calculadora-limite-faturamento-mei-2026/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora Limite de Faturamento MEI 2026 | Calcule Trabalhador",
+        "h1": "Calculadora Limite de Faturamento MEI 2026",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 11011,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora Limite de Faturamento MEI 2026 | Calcule Trabalhador",
+        "h1": "Calculadora Limite de Faturamento MEI 2026",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 6140,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 3067,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 3067,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-limite-faturamento-mei-2026-mobile-entry.png",
+        "visual/calculadora-limite-faturamento-mei-2026-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-das-mei-atraso-2026",
+      "slug": "/calculadora-das-mei-atraso-2026/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora DAS MEI em Atraso 2026 | Calcule Trabalhador",
+        "h1": "Calculadora DAS MEI em Atraso 2026",
+        "formCount": 1,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 9399,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora DAS MEI em Atraso 2026 | Calcule Trabalhador",
+        "h1": "Calculadora DAS MEI em Atraso 2026",
+        "formCount": 1,
+        "inputCount": 5,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5380,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2117,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2117,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-das-mei-atraso-2026-mobile-entry.png",
+        "visual/calculadora-das-mei-atraso-2026-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-multa-40-fgts",
+      "slug": "/calculadora-multa-40-fgts/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora Multa de 40% do FGTS | Calcule Trabalhador",
+        "h1": "Calculadora Multa de 40% do FGTS",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 10226,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora Multa de 40% do FGTS | Calcule Trabalhador",
+        "h1": "Calculadora Multa de 40% do FGTS",
+        "formCount": 1,
+        "inputCount": 6,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 0,
+        "initialResultTextLength": 0,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 5796,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2540,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 5,
+          "resultTextLength": 2540,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "BAIXAR RELATÓRIO",
+            "IMPRIMIR",
+            "COPIAR RESULTADO"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-multa-40-fgts-mobile-entry.png",
+        "visual/calculadora-multa-40-fgts-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-valor-hora-pj",
+      "slug": "/calculadora-valor-hora-pj/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora Valor Hora PJ: Preco por Hora, Dia e Projeto",
+        "h1": "Calculadora Valor Hora PJ",
+        "formCount": 0,
+        "inputCount": 8,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 55,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 3393,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora Valor Hora PJ: Preco por Hora, Dia e Projeto",
+        "h1": "Calculadora Valor Hora PJ",
+        "formCount": 0,
+        "inputCount": 8,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 55,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 1876,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 383,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 1,
+          "resultTextLength": 383,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-valor-hora-pj-mobile-entry.png",
+        "visual/calculadora-valor-hora-pj-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-custo-mensal-pj",
+      "slug": "/calculadora-custo-mensal-pj/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Custo Mensal PJ: despesas, impostos e reservas",
+        "h1": "Calculadora de Custo Mensal PJ",
+        "formCount": 0,
+        "inputCount": 12,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 2,
+        "initialResultTextLength": 126,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 6088,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Custo Mensal PJ: despesas, impostos e reservas",
+        "h1": "Calculadora de Custo Mensal PJ",
+        "formCount": 0,
+        "inputCount": 12,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 2,
+        "initialResultTextLength": 126,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 3080,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 1482,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Copiar resultado",
+            "Imprimir / salvar PDF"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 2,
+          "resultTextLength": 1482,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": false,
+          "actionLabels": [
+            "Copiar resultado",
+            "Imprimir / salvar PDF"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-custo-mensal-pj-mobile-entry.png",
+        "visual/calculadora-custo-mensal-pj-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-reserva-financeira-pj",
+      "slug": "/calculadora-reserva-financeira-pj/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Reserva Financeira PJ | Calcule Trabalhador",
+        "h1": "Calculadora de Reserva Financeira PJ",
+        "formCount": 1,
+        "inputCount": 9,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 157,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 8162,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Reserva Financeira PJ | Calcule Trabalhador",
+        "h1": "Calculadora de Reserva Financeira PJ",
+        "formCount": 1,
+        "inputCount": 9,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 157,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 4622,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 4,
+          "resultTextLength": 2731,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Copiar resultado",
+            "Imprimir / salvar PDF",
+            "Baixar resumo (.txt)"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 4,
+          "resultTextLength": 2731,
+          "numericResult": true,
+          "memoryVisible": true,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Copiar resultado",
+            "Imprimir / salvar PDF",
+            "Baixar resumo (.txt)"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-reserva-financeira-pj-mobile-entry.png",
+        "visual/calculadora-reserva-financeira-pj-desktop-result.png"
+      ]
+    },
+    {
+      "id": "calculadora-ferias-pj",
+      "slug": "/calculadora-ferias-pj/",
+      "mobile": {
+        "ready": "complete",
+        "title": "Calculadora de Férias PJ | Planeje sua pausa",
+        "h1": "Calculadora de Férias PJ",
+        "formCount": 1,
+        "inputCount": 8,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 145,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "bodyHeight": 11645,
+        "overflow": false
+      },
+      "desktop": {
+        "ready": "complete",
+        "title": "Calculadora de Férias PJ | Planeje sua pausa",
+        "h1": "Calculadora de Férias PJ",
+        "formCount": 1,
+        "inputCount": 8,
+        "header": true,
+        "footer": true,
+        "initialVisibleResultElements": 1,
+        "initialResultTextLength": 145,
+        "pageOverflow": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bodyHeight": 6308,
+        "overflow": false
+      },
+      "resultState": {
+        "status": "EXERCISED",
+        "mobile": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 4,
+          "resultTextLength": 2438,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Copiar resumo",
+            "Imprimir relatório",
+            "Baixar PDF"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        },
+        "desktop": {
+          "status": "EXERCISED",
+          "submitted": true,
+          "visibleResultElements": 4,
+          "resultTextLength": 2438,
+          "numericResult": true,
+          "memoryVisible": false,
+          "interpretationVisible": true,
+          "actionLabels": [
+            "Copiar resumo",
+            "Imprimir relatório",
+            "Baixar PDF"
+          ],
+          "pageOverflow": false,
+          "errorVisible": false
+        }
+      },
+      "screenshots": [
+        "visual/calculadora-ferias-pj-mobile-entry.png",
+        "visual/calculadora-ferias-pj-desktop-result.png"
+      ]
+    }
+  ]
+}

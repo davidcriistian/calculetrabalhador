@@ -1,0 +1,157 @@
+{
+  "reportId": "fallback-governance-report",
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_AUDIT_ZERO_PUBLIC_MUTATION",
+  "status": "COMPLETED_WITH_GAPS",
+  "fallbackCount": 24,
+  "governedFallbackCount": 8,
+  "ungovernedFallbackCount": 16,
+  "governanceDefinition": "Dedicated shadow validator or deterministic embedded expected-value cases plus actual central consumer.",
+  "findings": [
+    {
+      "calculator": "calculator:calculadora-aviso-previo",
+      "description": "Regra local com shadow validator",
+      "governed": true,
+      "governanceEvidence": "embedded-shadow-equivalence"
+    },
+    {
+      "calculator": "calculator:saque-aniversario-fgts",
+      "description": "Tabela local de saque-aniversario",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-adicional-noturno",
+      "description": "Regra local com shadow validator",
+      "governed": true,
+      "governanceEvidence": "embedded-shadow-equivalence"
+    },
+    {
+      "calculator": "calculator:calculadora-horas-extras-clt",
+      "description": "Percentuais e divisores locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-seguro-desemprego",
+      "description": "Tabela e parcelas locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-insalubridade",
+      "description": "Percentuais locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-multa-40-fgts",
+      "description": "Percentuais FGTS locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "description": "INSS local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:salario-liquido-clt",
+      "description": "IRRF local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "description": "INSS local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-13-salario",
+      "description": "IRRF local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "description": "INSS local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-ferias-clt",
+      "description": "IRRF local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "description": "INSS CLT local",
+      "governed": true,
+      "governanceEvidence": "embedded-shadow-equivalence"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "description": "Planos autonomo locais",
+      "governed": true,
+      "governanceEvidence": "embedded-shadow-equivalence"
+    },
+    {
+      "calculator": "calculator:calculadora-inss",
+      "description": "MEI local",
+      "governed": true,
+      "governanceEvidence": "embedded-shadow-equivalence"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-autonomo",
+      "description": "Bases e planos locais",
+      "governed": true,
+      "governanceEvidence": "embedded-deterministic-cases"
+    },
+    {
+      "calculator": "calculator:calculadora-inss-mei",
+      "description": "DAS/INSS MEI local",
+      "governed": true,
+      "governanceEvidence": "embedded-deterministic-cases"
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-2026",
+      "description": "DAS/INSS MEI local",
+      "governed": true,
+      "governanceEvidence": "embedded-deterministic-cases"
+    },
+    {
+      "calculator": "calculator:calculadora-limite-faturamento-mei-2026",
+      "description": "Limite anual MEI local",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-das-mei-atraso-2026",
+      "description": "Multa e juros locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-rescisao-clt",
+      "description": "Calculo rescisorio legado",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "description": "INSS/IRRF locais",
+      "governed": false,
+      "governanceEvidence": null
+    },
+    {
+      "calculator": "calculator:calculadora-clt-ou-pj",
+      "description": "Verbas CLT locais",
+      "governed": false,
+      "governanceEvidence": null
+    }
+  ]
+}
