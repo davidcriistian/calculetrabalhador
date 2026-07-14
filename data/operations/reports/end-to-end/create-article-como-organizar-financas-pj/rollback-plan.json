@@ -1,0 +1,12 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "ready",
+  "rollbackType": "local-file-reversal",
+  "steps": [
+    "Remove the article page and operation-specific records.",
+    "Remove the exact article entries from all updated catalogs and maps.",
+    "Re-run JSON parsing, identity checks and git diff validation."
+  ],
+  "productionAction": false,
+  "externalAction": false
+}

@@ -1,0 +1,8 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "recorded",
+  "date": "2026-07-14",
+  "preOperationGitStatus": "clean",
+  "rollbackReference": "/data/operations/reports/asset/article/como-organizar-as-financas-sendo-pj/rollback-plan.json",
+  "productionSnapshotRequired": false
+}

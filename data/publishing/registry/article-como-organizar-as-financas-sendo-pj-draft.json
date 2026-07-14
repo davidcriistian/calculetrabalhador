@@ -1,0 +1,30 @@
+{
+  "id": "publishing-draft-article-como-organizar-as-financas-sendo-pj",
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "assetType": "article",
+  "status": "draft",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "publishingStatus": "draft",
+  "runtimeStatus": "not-consumed",
+  "version": "0.1.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "draft",
+    "maximumAllowedInThisOperation": "public-page-created-with-controlled-distribution"
+  },
+  "actions": {
+    "publishes": true,
+    "deploys": false,
+    "modifiesSitemap": true,
+    "createsPublicPage": true,
+    "modifiesExistingPage": true,
+    "callsIndexNow": false
+  },
+  "publicRepresentation": {
+    "path": "/blog/como-organizar-as-financas-sendo-pj/",
+    "canonical": "https://calculetrabalhador.com.br/blog/como-organizar-as-financas-sendo-pj/",
+    "catalogStatus": "prepared",
+    "sitemapStatus": "prepared"
+  }
+}

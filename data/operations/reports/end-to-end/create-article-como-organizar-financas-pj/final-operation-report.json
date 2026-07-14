@@ -1,0 +1,23 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "complete",
+  "date": "2026-07-14",
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "publicPath": "/blog/como-organizar-as-financas-sendo-pj/",
+  "primaryCalculator": "calculator:calculadora-custo-mensal-pj",
+  "relationship": "standalone support article in the PJ nucleus and guide",
+  "quality": {
+    "contentTest": "pass",
+    "jsonValidation": "pass",
+    "visualValidation": "pass",
+    "idempotency": "pass"
+  },
+  "distribution": {
+    "articleCatalog": "prepared",
+    "pjGuide": "prepared",
+    "sitemap": "prepared",
+    "home": "not-requested",
+    "deploy": "not-executed",
+    "indexNow": "not-sent"
+  }
+}

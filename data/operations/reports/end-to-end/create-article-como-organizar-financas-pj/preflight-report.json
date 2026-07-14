@@ -1,0 +1,18 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "date": "2026-07-14",
+  "status": "pass",
+  "request": "Create the article Como organizar as finanças sendo PJ using deliver-asset-end-to-end.",
+  "workspaceWasClean": true,
+  "duplicateChecks": {
+    "slug": "not-found-before-creation",
+    "assetId": "not-found-before-creation",
+    "canonical": "not-found-before-creation"
+  },
+  "boundaries": {
+    "deploy": false,
+    "indexNow": false,
+    "homePromotion": false,
+    "runtimeChanges": false
+  }
+}

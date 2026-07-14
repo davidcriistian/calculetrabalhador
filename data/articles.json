@@ -881,5 +881,20 @@
     "publishedAt": "2026-07-12",
     "updatedAt": "2026-07-12",
     "showOnHome": false
+  },
+  {
+    "id": "como-organizar-as-financas-sendo-pj",
+    "title": "Como Organizar as Financas Sendo PJ",
+    "slug": "/blog/como-organizar-as-financas-sendo-pj",
+    "url": "https://calculetrabalhador.com.br/blog/como-organizar-as-financas-sendo-pj/",
+    "category": "Carreira",
+    "description": "Aprenda a separar contas, controlar o caixa e planejar retiradas, tributos, custos e reservas com uma rotina financeira pratica para PJ.",
+    "relatedTool": "/calculadora-custo-mensal-pj/",
+    "tempo": "16 min",
+    "cor": "#1d4ed8",
+    "corBg": "#dbeafe",
+    "publishedAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "showOnHome": false
   }
 ]

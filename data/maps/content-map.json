@@ -885,6 +885,21 @@
       "dependencies": ["inss", "irrf", "fgts", "ferias", "decimo-terceiro"],
       "internalLinksRequired": ["/calculadora-clt-ou-pj/", "/blog/clt-ou-pj/", "/blog/como-calcular-clt-ou-pj/", "/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/"],
       "status": "published"
+    },
+    {
+      "id": "como-organizar-as-financas-sendo-pj",
+      "slug": "/blog/como-organizar-as-financas-sendo-pj",
+      "url": "https://calculetrabalhador.com.br/blog/como-organizar-as-financas-sendo-pj/",
+      "category": "Carreira",
+      "primaryTool": "calculadora-custo-mensal-pj",
+      "clusterId": "calculadora-custo-mensal-pj",
+      "contentType": "guide",
+      "intent": "education",
+      "funnelStage": "middle",
+      "requiresAnnualReview": true,
+      "dependencies": ["financial-planning-pj"],
+      "internalLinksRequired": ["/calculadora-custo-mensal-pj/", "/calculadora-reserva-financeira-pj/", "/calculadora-ferias-pj/", "/calculadora-valor-hora-pj/", "/guias/pj/"],
+      "status": "published"
     }
   ]
 }

@@ -1,0 +1,25 @@
+{
+  "id": "relationship-map-article-como-organizar-as-financas-sendo-pj",
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "status": "approved",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "relationships": {
+    "domain": {"assetId": "domain:pj", "slug": "pj", "decision": "reuse"},
+    "nucleus": {"assetId": "nucleus:pj", "slug": "pj", "decision": "reuse"},
+    "guide": {"assetId": "guide:guide-pj", "slug": "pj", "decision": "reuse"},
+    "cluster": {"assetId": null, "slug": null, "decision": "standalone"},
+    "primaryCalculator": {"assetId": "calculator:calculadora-custo-mensal-pj", "slug": "calculadora-custo-mensal-pj", "decision": "reuse"},
+    "relatedCalculators": [
+      {"assetId": "calculator:calculadora-reserva-financeira-pj", "decision": "reuse"},
+      {"assetId": "calculator:calculadora-ferias-pj", "decision": "reuse"},
+      {"assetId": "calculator:calculadora-valor-hora-pj", "decision": "reuse"}
+    ]
+  },
+  "relationshipType": "standalone-support-article",
+  "officialRelationship": true,
+  "notes": [
+    "The content map groups the article logically under the monthly-cost tool; governance does not create a formal cluster.",
+    "Registry and relationship data remain non-runtime governance artifacts."
+  ]
+}

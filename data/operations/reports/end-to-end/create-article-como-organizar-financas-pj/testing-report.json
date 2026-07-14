@@ -1,0 +1,16 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "pass",
+  "date": "2026-07-14",
+  "command": "node scripts/test-como-organizar-financas-pj.js",
+  "results": {
+    "visibleWordCount": 2994,
+    "h1Count": 1,
+    "faqPairs": 8,
+    "structuredData": ["Article", "FAQPage", "BreadcrumbList"],
+    "ctaPositions": ["beginning", "middle", "end"],
+    "catalogAndGovernance": "pass",
+    "internalDestinations": "pass",
+    "utf8": "pass"
+  }
+}

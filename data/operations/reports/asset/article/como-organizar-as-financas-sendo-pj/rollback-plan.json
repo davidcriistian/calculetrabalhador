@@ -1,0 +1,11 @@
+{
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "status": "ready",
+  "scope": [
+    "Remove the public article directory.",
+    "Remove its entries from article catalog, content map, nucleus filter, guide, sitemap and editorial metadata.",
+    "Remove registry, publishing and operational records created by this operation."
+  ],
+  "deployRollbackRequired": false,
+  "externalIndexRollbackRequired": false
+}

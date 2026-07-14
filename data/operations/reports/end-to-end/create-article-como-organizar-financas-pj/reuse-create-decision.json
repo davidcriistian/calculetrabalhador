@@ -1,0 +1,8 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "decision": "create-article-reuse-ecosystem",
+  "reason": "No existing article covers integrated PJ financial organization. Existing domain, nucleus, guide and calculators are reused.",
+  "formalClusterCreated": false,
+  "primaryCalculator": "calculator:calculadora-custo-mensal-pj",
+  "cannibalizationRisk": "low"
+}

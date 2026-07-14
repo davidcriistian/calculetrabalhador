@@ -108,6 +108,18 @@
                                        ]
                     },
                     {
+                        "id":  "como-organizar-as-financas-sendo-pj",
+                        "assetId":  "article:como-organizar-as-financas-sendo-pj",
+                        "type":  "article",
+                        "slug":  "como-organizar-as-financas-sendo-pj",
+                        "status":  "draft",
+                        "owner":  "core-platform",
+                        "version":  "0.1.0",
+                        "references":  [
+                                           "/data/registry/by-type/article-como-organizar-as-financas-sendo-pj.json"
+                                       ]
+                    },
+                    {
                         "id":  "calculadora-clt-ou-pj",
                         "assetId":  "calculator:calculadora-clt-ou-pj",
                         "type":  "calculator",

@@ -1,0 +1,8 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "pass",
+  "date": "2026-07-14",
+  "method": "Repeated read-only asset validation and exact identity-count assertions.",
+  "expected": "One catalog, content-map, nucleus, registry, publishing and sitemap identity.",
+  "result": "No duplicates and no mutations during replay."
+}

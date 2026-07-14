@@ -137,6 +137,18 @@
                              "reference":  "/data/publishing/registry/article-contrato-pj-o-que-analisar-antes-de-aceitar-draft.json"
                          },
                          {
+                             "id":  "publishing-draft-article-como-organizar-as-financas-sendo-pj",
+                             "assetId":  "article:como-organizar-as-financas-sendo-pj",
+                             "assetType":  "article",
+                             "status":  "draft",
+                             "approvalStatus":  "approved-user-request",
+                             "relationshipStatus":  "approved",
+                             "publishingStatus":  "draft",
+                             "owner":  "core-platform",
+                             "version":  "0.1.0",
+                             "reference":  "/data/publishing/registry/article-como-organizar-as-financas-sendo-pj-draft.json"
+                         },
+                         {
                              "id":  "publishing-draft-calculator-calculadora-clt-ou-pj",
                              "assetId":  "calculator:calculadora-clt-ou-pj",
                              "assetType":  "calculator",

@@ -1,0 +1,7 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "executed",
+  "creates": ["article page", "asset reports", "registry record", "publishing draft", "validation scripts", "visual evidence"],
+  "updates": ["article catalog", "content map", "PJ nucleus", "PJ guide", "sitemap", "editorial metadata", "registry indexes"],
+  "excludes": ["deploy", "IndexNow request", "home promotion", "formal CLT-versus-PJ cluster membership"]
+}

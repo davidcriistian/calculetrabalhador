@@ -1,0 +1,20 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "complete",
+  "officialPhysicalReference": "/blog/clt-ou-pj-vale-a-pena-em-2026/index.html",
+  "reusedPatterns": [
+    "institutional hero and breadcrumb",
+    "summary and table of contents",
+    "calculator CTAs at beginning, middle and end",
+    "FAQ mirrored in structured data",
+    "sources, related content and educational disclaimer"
+  ],
+  "literalCopy": false,
+  "externalSources": [
+    "https://www.bcb.gov.br/cidadaniafinanceira/letramento_financeiro",
+    "https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Cuidando_do_seu_dinheiro_Gestao_de_Financas_Pessoais/caderno_cidadania_financeira.pdf",
+    "https://meuatendimento.sebrae.com.br/sites/PortalSebrae/ufs/ms/artigos/aprenda-a-separar-as-contas-pessoais-e-as-contas-da-empresa%2C97007b0c4b82c710VgnVCM100000d701210aRCRD",
+    "https://sebrae.com.br/sites/PortalSebrae/bis/implantando-a-planilha-de-fluxo-de-caixa-no-seu-dia-a-dia%2C9b183adc5f62d410VgnVCM2000003c74010aRCRD",
+    "https://www.gov.br/receitafederal/pt-br/canais_atendimento/digital"
+  ]
+}

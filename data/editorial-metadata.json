@@ -208,5 +208,15 @@
     "anoBase": 2026,
     "fonteResumo": "Planejamento financeiro baseado nos valores informados pelo usuário.",
     "aviso": "A simulação não aplica verbas de férias CLT nem substitui a conferência do contrato."
+  },
+  "/blog/como-organizar-as-financas-sendo-pj/": {
+    "tipo": "artigo",
+    "titulo": "Como Organizar as Finanças Sendo PJ",
+    "publicadoEm": "2026-07-14",
+    "atualizadoEm": "2026-07-14",
+    "revisadoEm": "2026-07-14",
+    "anoBase": 2026,
+    "fonteResumo": "Conteúdo educativo baseado em materiais do Banco Central, Sebrae e canais oficiais da Receita Federal.",
+    "aviso": "Este conteúdo não substitui orientação contábil, tributária, jurídica ou financeira individualizada."
   }
 }

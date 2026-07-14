@@ -1,0 +1,68 @@
+{
+  "id": "como-organizar-as-financas-sendo-pj",
+  "assetId": "article:como-organizar-as-financas-sendo-pj",
+  "assetType": "article",
+  "version": "0.1.0",
+  "status": "draft",
+  "lifecycle": "draft",
+  "approvalStatus": "approved-user-request",
+  "relationshipStatus": "approved",
+  "runtimeStatus": "not-consumed",
+  "publishingStatus": "draft",
+  "visibility": "public-page-created",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "owner": "core-platform",
+  "source": "Operational Capabilities deliver-asset-end-to-end controlled creation",
+  "displayName": "Como Organizar as Finanças Sendo PJ",
+  "publicSlug": "como-organizar-as-financas-sendo-pj",
+  "publicUrl": "https://calculetrabalhador.com.br/blog/como-organizar-as-financas-sendo-pj/",
+  "relationshipType": "standalone-support-article",
+  "referenceStatus": "generated-from-approved-pattern",
+  "manualReviewRequired": false,
+  "blueprint": {
+    "type": "article",
+    "reference": "/data/blueprints/article/index.json",
+    "version": "0.2.0"
+  },
+  "goldStandard": {
+    "type": "article",
+    "reference": "/data/gold-standards/article/index.json",
+    "version": "1.0"
+  },
+  "relationships": {
+    "primaryDomain": "pj",
+    "primaryNucleus": "nucleus:pj",
+    "primaryGuide": "guide:guide-pj",
+    "primaryCluster": null,
+    "primaryCalculator": "calculator:calculadora-custo-mensal-pj",
+    "relatedCalculators": [
+      "calculator:calculadora-reserva-financeira-pj",
+      "calculator:calculadora-ferias-pj",
+      "calculator:calculadora-valor-hora-pj"
+    ]
+  },
+  "gapAnalysis": {
+    "selectedGap": "pj-financial-organization",
+    "reason": "Existing PJ content compares hiring models and provides individual calculators, but does not provide an integrated operational finance routine.",
+    "cannibalizationRisk": "low",
+    "duplicateSlugFound": false
+  },
+  "ctaAnalysis": {
+    "ctaBeginning": "present",
+    "ctaMiddle": "present",
+    "ctaEnd": "present",
+    "ctaDestination": "/calculadora-custo-mensal-pj/",
+    "ctaComplianceStatus": "pass"
+  },
+  "operationalBoundaries": {
+    "createsNewArticle": true,
+    "modifiesExistingPublicPage": true,
+    "modifiesSeo": true,
+    "modifiesSitemap": true,
+    "deploys": false,
+    "callsIndexNow": false,
+    "feedsRuntime": false
+  },
+  "warnings": []
+}

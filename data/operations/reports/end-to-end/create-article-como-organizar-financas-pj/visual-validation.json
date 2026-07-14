@@ -1,0 +1,14 @@
+{
+  "operation": "create-article-como-organizar-financas-pj",
+  "status": "pass",
+  "date": "2026-07-14",
+  "command": "node scripts/capture-como-organizar-financas-pj-visuals.js",
+  "matrix": {
+    "viewports": ["320x800", "430x900", "768x1024", "1440x1000"],
+    "sections": ["entry", "summary-toc", "cashflow-table", "plan-faq", "sources-footer"],
+    "screenshots": 20
+  },
+  "automatedChecks": {"bodyOverflow": false, "globalHeader": true, "globalFooter": true, "singleH1": true},
+  "manualInspection": ["small-mobile entry", "small-mobile summary and TOC", "desktop cash-flow table", "desktop sources and disclaimer"],
+  "evidencePath": "/data/operations/reports/end-to-end/create-article-como-organizar-financas-pj/visual/"
+}
