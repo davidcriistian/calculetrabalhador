@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-boundaries",
+  "status": "PASS",
+  "scenarioSource": "regression-baseline.json",
+  "coveredBoundaries": [
+    0,
+    500,
+    1000,
+    5000,
+    10000,
+    15000,
+    20000
+  ],
+  "offsets": [
+    -0.01,
+    0,
+    0.01
+  ],
+  "behavior": "Upper bounds are inclusive; the next band begins at the next cent. The schedule is continuous at all six positive transitions before currency rounding.",
+  "zero": "empty UI state",
+  "negativeNumeric": "empty UI state",
+  "invalidText": "parser yields zero/empty UI",
+  "highValues": "unbounded final 5% band plus R$ 2.900",
+  "unexplainedDivergences": 0
+}

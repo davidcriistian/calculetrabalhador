@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-registry-publishing",
+  "status": "MISSING_ENTRIES",
+  "registry": {
+    "entry": false,
+    "expectedId": "calculator:saque-aniversario-fgts",
+    "index": "data/registry/index.json"
+  },
+  "publishing": {
+    "entry": false,
+    "expectedId": "calculator:saque-aniversario-fgts",
+    "index": "data/publishing/registry/index.json"
+  },
+  "publicSignals": {
+    "toolsCatalog": true,
+    "editorialMetadata": true,
+    "sitemap": true,
+    "publicRoute": true
+  },
+  "inconsistency": "Public/published asset has no first-class Registry or Publishing record.",
+  "futureReadiness": "Create/reconcile governed entries during authorized migration; do not change them in pre-migration."
+}

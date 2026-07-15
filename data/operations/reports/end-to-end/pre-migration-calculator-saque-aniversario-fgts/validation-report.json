@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-validation",
+  "status": "PASS_WITH_CANONICAL_RULE_GUARDS",
+  "validations": [
+    {"id": "LEGACY_BASELINE_REPRODUCIBLE", "status": "PASS", "evidence": "42/42 scenarios; 7/7 bands; checksum 33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841"},
+    {"id": "OFFICIAL_RULE_RECONCILIATION", "status": "PASS_WITH_PRECISION_GUARDS", "evidence": "Seven mathematical bands and formula equivalent; no objective legal/math divergence."},
+    {"id": "REAL_BROWSER_VISUAL_MATRIX", "status": "PASS", "evidence": "Microsoft Edge; mobile/tablet/desktop x entry/focus/invalid/result/table/editorial/FAQ; 21 PNGs."},
+    {"id": "OVERFLOW_AND_RUNTIME_ERRORS", "status": "PASS", "evidence": "0 blocking overflow; 0 runtime errors."},
+    {"id": "VISUAL_MANUAL_INSPECTION", "status": "PASS_WITH_MIGRATION_GAPS", "evidence": "Mobile entry, tablet result, desktop table and FAQ inspected."},
+    {"id": "JSON_REPOSITORY", "status": "PASS", "evidence": "1,474/1,474 JSON files parseable before final report addition."},
+    {"id": "JSON_LD_FAQPAGE", "status": "PASS", "evidence": "FAQPage parseable; 5 structured questions; 5 visible FAQ items."},
+    {"id": "SEO_IDENTITY", "status": "PASS", "evidence": "Exactly one title, description, canonical and H1; route unchanged."},
+    {"id": "RELATED_INTERNAL_LINKS", "status": "PASS_WITH_GUARD", "evidence": "6/6 inherited year-suffixed routes resolve through existing .htaccess redirects; future migration should prefer canonical routes without losing link intent."},
+    {"id": "GOVERNANCE_VALIDATOR", "status": "PASS"},
+    {"id": "CALCULATOR_EXPERIENCE_CONTRACT", "status": "PASS", "evidence": "24/24 fixtures; 197 references; 0 unresolved."},
+    {"id": "CALCULATOR_MIGRATION_FOUNDATION", "status": "PASS", "evidence": "20/20 fixtures; 47 typed dependencies; 22 calculator classifications."},
+    {"id": "TRANSFORM_RULES_CHECK", "status": "PASS", "evidence": "INSS and Aviso Prévio equivalent; FGTS/Saque-Aniversário is not transformed, recorded as canonical-rule guard."},
+    {"id": "TRANSFORM_RULES_DRY_RUN", "status": "PASS", "evidence": "NO_CHANGE_REQUIRED for currently supported projections."},
+    {"id": "CANONICAL_CALCULATOR_CONTROL_AVISO_PREVIO", "status": "PASS", "evidence": "60/60 reconciled; 18 intentional corrections; 0 unexplained divergences."},
+    {"id": "CANONICAL_CALCULATOR_CONTROL_RESERVA_PJ", "status": "PASS", "evidence": "9/9 calculations plus structural checks."},
+    {"id": "CANONICAL_CALCULATOR_CONTROL_FERIAS_PJ", "status": "PASS", "evidence": "9/9 calculations plus report, FAQ, link, catalog and structural checks."},
+    {"id": "NODE_CHECK", "status": "PASS", "evidence": "24 audited JavaScript files; 0 syntax errors."},
+    {"id": "PNG_VALID", "status": "PASS", "evidence": "21/21 non-empty PNG files with valid signature."},
+    {"id": "SECRET_SCAN", "status": "PASS", "evidence": "0 known credential/private-key patterns in operation artifacts."},
+    {"id": "LARGE_FILE_SCAN", "status": "PASS", "evidence": "0 operation artifacts over 5 MiB."},
+    {"id": "UNEXPECTED_ARTIFACT_SCAN", "status": "PASS", "evidence": "Only JSON, JavaScript audit helpers and PNG evidence."},
+    {"id": "GIT_DIFF_CHECK", "status": "PASS"},
+    {"id": "STAGING", "status": "PASS", "evidence": "Empty."},
+    {"id": "TARGET_BYTE_IDENTITY", "status": "PASS", "evidence": "D9BDA7811AF31A25BCFE4439A6C83910C6A80B294093A78B126EAF67575066CE before and after."},
+    {"id": "MUTATION_GUARD", "status": "PASS_ZERO_PUBLIC_MUTATION"}
+  ],
+  "nonPassingMigrationGate": {
+    "id": "USABLE_CANONICAL_RULE",
+    "status": "NOT_READY",
+    "reason": "data/rules/fgts.json is an empty draft and scripts/transform-rules.js has no Saque-Aniversário projection. This blocks public migration, not pre-migration completion."
+  }
+}

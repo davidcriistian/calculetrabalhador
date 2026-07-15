@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-visual",
+  "status": "PASS_WITH_MIGRATION_GAPS",
+  "browser": "Microsoft Edge headless via local HTTP",
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "runtimeErrors": [],
+      "evidence": [
+        "mobile-entry.png",
+        "mobile-focus.png",
+        "mobile-invalid-empty-state.png",
+        "mobile-result.png",
+        "mobile-rates-table.png",
+        "mobile-editorial.png",
+        "mobile-faq.png"
+      ]
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "runtimeErrors": [],
+      "evidence": [
+        "tablet-entry.png",
+        "tablet-focus.png",
+        "tablet-invalid-empty-state.png",
+        "tablet-result.png",
+        "tablet-rates-table.png",
+        "tablet-editorial.png",
+        "tablet-faq.png"
+      ]
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "runtimeErrors": [],
+      "evidence": [
+        "desktop-entry.png",
+        "desktop-focus.png",
+        "desktop-invalid-empty-state.png",
+        "desktop-result.png",
+        "desktop-rates-table.png",
+        "desktop-editorial.png",
+        "desktop-faq.png"
+      ]
+    }
+  ],
+  "evidenceCount": 21,
+  "preservedStrengths": [
+    "clear blue identity",
+    "two-panel desktop layout",
+    "simple live calculation",
+    "visible seven-band table",
+    "substantial editorial comparison/how-to/FAQ",
+    "responsive layout without blocking overflow"
+  ],
+  "gaps": [
+    "no submit/confirmation journey",
+    "no explicit error component or aria-invalid",
+    "no memory of calculation",
+    "no interpretation block",
+    "no adaptive report/copy/print/download",
+    "no recommendation slot",
+    "result lacks applied band label",
+    "accent-stripped Portuguese in visible copy"
+  ],
+  "invalidStateFinding": "Invalid input is silently normalized to the same empty state; no explicit error is rendered."
+}

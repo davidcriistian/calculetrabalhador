@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-input-contract",
+  "status": "RESOLVED",
+  "inputs": [
+    {
+      "id": "balance",
+      "type": "text",
+      "inputMode": "numeric",
+      "default": "",
+      "requiredAttribute": false,
+      "normalization": "remove every non-digit and divide by 100",
+      "validation": "parsed balance <= 0 returns empty state",
+      "liveCalculation": true,
+      "guards": [
+        "minus sign is discarded",
+        "letters become zero",
+        "one typed digit means R$ 0,01"
+      ]
+    },
+    {
+      "id": "birth-month",
+      "type": "select",
+      "default": "",
+      "options": [
+        "Janeiro",
+        "Fevereiro",
+        "Marco",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+      ],
+      "requiredAttribute": false,
+      "validation": "none",
+      "effect": "availability copy only; never changes withdrawal math"
+    }
+  ],
+  "explicitErrorState": false,
+  "invalidState": "same empty state used for missing, invalid, zero and negative numeric engine values"
+}

@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-formula",
+  "status": "RESOLVED_WITH_GUARDS",
+  "pipeline": [
+    "parse displayed currency to balance",
+    "select first band whose upper bound is null or balance <= upper bound",
+    "withdrawal = balance * rate + fixed additional",
+    "central runtime rounds withdrawal to cents",
+    "remaining = max(balance - withdrawal, 0), rounded to cents",
+    "display with Intl.NumberFormat pt-BR/BRL"
+  ],
+  "activeAuthorityGate": "Central result is accepted only when its percentage and additional parcel equal getRuleLegacy; any future central divergence activates legacy.",
+  "zeroNegativeInvalid": "UI does not call rule for parsed balance <= 0 and renders empty state.",
+  "rounding": {
+    "central": "Math.round((value + Number.EPSILON) * 100) / 100",
+    "legacyFallback": "raw Number arithmetic, rounded only by currency display"
+  },
+  "legalAuthority": false,
+  "classification": "LEGACY_BEHAVIOR_BASELINE"
+}

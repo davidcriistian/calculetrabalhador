@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-plan",
+  "status": "SURGICAL_PLAN_READY_AFTER_RULE_RECONCILIATION",
+  "phases": {
+    "preserve": [
+      "route/canonical/title/description/H1",
+      "useful editorial sections",
+      "FAQ intent and FAQPage synchronization",
+      "internal-link intent",
+      "confirmed seven-band math",
+      "four current result values"
+    ],
+    "reconcile": [
+      "authoritative rule source and version",
+      "seven bands and boundary labels",
+      "rounding policy",
+      "canonical projection/fingerprint",
+      "fallback derived from canonical rule",
+      "stale detection",
+      "legal-copy dependencies"
+    ],
+    "reconstruct": [
+      "canonical calculator experience",
+      "guided form and validation",
+      "result hierarchy",
+      "band/formula/memory/interpretation",
+      "adaptive report and actions",
+      "recommendation slot",
+      "responsive/accessibility states"
+    ],
+    "integrate": [
+      "governed rule consumer",
+      "central update map",
+      "Registry",
+      "Publishing",
+      "catalog/sitemap only if identity metadata requires reconciliation"
+    ]
+  },
+  "acceptance": [
+    "official reconciliation approved",
+    "baseline preserved as historical evidence",
+    "no unexplained divergence",
+    "real canonical consumption",
+    "derived fallback cannot outlive canonical version",
+    "visual matrix and controls pass",
+    "SEO/content preservation diff approved"
+  ]
+}

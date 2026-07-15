@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-mutation-guard",
+  "status": "PASS_ZERO_PUBLIC_MUTATION",
+  "baselineCommit": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
+  "targetBeforeSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+  "targetAfterSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+  "targetByteIdentical": true,
+  "counters": {
+    "TARGET_CALCULATOR_MUTATION_COUNT": 0,
+    "OTHER_CALCULATOR_MUTATION_COUNT": 0,
+    "PUBLIC_PAGE_MUTATION_COUNT": 0,
+    "PUBLIC_RUNTIME_MUTATION_COUNT": 0,
+    "ARTICLE_MUTATION_COUNT": 0,
+    "HOME_MUTATION_COUNT": 0,
+    "GUIDE_MUTATION_COUNT": 0,
+    "CATALOG_MUTATION_COUNT": 0,
+    "SITEMAP_MUTATION_COUNT": 0,
+    "PUBLIC_REGISTRY_MUTATION_COUNT": 0,
+    "PUBLIC_PUBLISHING_MUTATION_COUNT": 0,
+    "LEGAL_RULE_MUTATION_COUNT": 0,
+    "PUBLICATION_COUNT": 0,
+    "INDEXNOW_SEND_COUNT": 0,
+    "GIT_WRITE_COUNT": 0
+  },
+  "allowedPendingPrefix": "data/operations/reports/end-to-end/pre-migration-calculator-saque-aniversario-fgts/"
+}

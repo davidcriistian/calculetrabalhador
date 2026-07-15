@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-gates",
+  "status": "READY_FOR_CANONICAL_RULE_RECONCILIATION",
+  "gates": [
+    {
+      "gate": "ASSET_IDENTITY",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "LEGACY_BASELINE",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "SEVEN_BANDS_AND_BOUNDARIES",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "OFFICIAL_EVIDENCE",
+      "status": "RESOLVED_WITH_PRECISION_GUARDS"
+    },
+    {
+      "gate": "REAL_CONSUMPTION",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "CANONICAL_RULE",
+      "status": "NOT_READY",
+      "reason": "empty draft and no governed projection"
+    },
+    {
+      "gate": "SEO_EDITORIAL_PRESERVATION",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "VISUAL_BASELINE",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "ROLLBACK",
+      "status": "RESOLVED"
+    }
+  ],
+  "migrationBlocked": true,
+  "blockingGuards": [
+    "legally approve and version a Saque-Aniversário-specific canonical rule",
+    "derive aggregate and fallback from that rule with stale detection",
+    "resolve last-band wording precision",
+    "create Registry/Publishing integration plan without changing identity"
+  ]
+}

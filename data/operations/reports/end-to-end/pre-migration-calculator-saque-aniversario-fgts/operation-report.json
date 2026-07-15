@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-operation",
+  "operation": "PILOT_2_CONTROLLED_PRE_MIGRATION_SAQUE_ANIVERSARIO_FGTS",
+  "status": "READY_FOR_CANONICAL_RULE_RECONCILIATION",
+  "summary": {
+    "baseline": "42/42",
+    "bands": "7/7",
+    "mathDivergences": 0,
+    "visual": "3 viewports x 7 states",
+    "overflow": 0,
+    "runtimeErrors": 0,
+    "targetMutation": 0,
+    "publicMutation": 0,
+    "gitWrite": 0
+  },
+  "decision": "Do not start public reconstruction. Reconcile and approve a specific canonical rule first.",
+  "nextAction": "WAIT_FOR_HUMAN_EVALUATION"
+}

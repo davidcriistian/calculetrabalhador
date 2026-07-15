@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-checksums",
+  "status": "LEGACY_BEHAVIOR_BASELINE_FROZEN",
+  "algorithm": "SHA-256",
+  "snapshotCommit": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
+  "files": [
+    {
+      "path": "saque-aniversario-fgts/index.html",
+      "bytes": 34945,
+      "sha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce"
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "sha256": "f640bacd06414ddcf5f5c071132eb52d390207fe1d95058fe7509aeba65b0e68"
+    },
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "sha256": "2b5cdf742e731d68c192e181c5c3e76c89e6d84b21a0b7a3c2b76240f622d436"
+    },
+    {
+      "path": "data/rules/fgts.json",
+      "sha256": "43b26a971f055e5561706016757867b190d097d445045f0c96b108ebceb1f958"
+    },
+    {
+      "path": "data/tools.json",
+      "sha256": "792b8b286838ea794eff63872d12e06ca91885865568f9ed90994c7d9b0ae268"
+    },
+    {
+      "path": "data/maps/tools-map.json",
+      "sha256": "19f0441c977f354c93c055e9226267a1d21bbc1569053e46727256ed29996627"
+    },
+    {
+      "path": "data/core/update/governed-rule-consumers.json",
+      "sha256": "7b19a23a3f5d7b735b217835615434b2d84d19068165c266e1ef90755c724c64"
+    },
+    {
+      "path": "sitemap.xml",
+      "sha256": "06f65f96c068b194219d6b6de0a348a1cfcfd3bd513767216ce2d01c3407e668"
+    }
+  ],
+  "targetExpectedSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+  "targetMatchesExpected": true,
+  "regressionLogicalChecksum": "33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841"
+}

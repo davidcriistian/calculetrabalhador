@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-identity",
+  "status": "RESOLVED_WITH_GUARDS",
+  "identity": {
+    "assetId": "calculator:saque-aniversario-fgts",
+    "physicalPage": "saque-aniversario-fgts/index.html",
+    "slug": "/saque-aniversario-fgts/",
+    "route": "/saque-aniversario-fgts/",
+    "title": "Calculadora de Saque Aniversário FGTS 2026",
+    "canonical": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+    "domain": "fgts",
+    "nucleus": null,
+    "currentLifecycle": "PUBLIC_AND_CATALOG_PUBLISHED_BUT_NOT_IN_REGISTRY_OR_PUBLISHING"
+  },
+  "systems": {
+    "toolsCatalog": "present/published/featured/home",
+    "toolsMap": "present",
+    "compatibilityMap": "present/core-not-connected/future",
+    "sitemap": "present",
+    "editorialMetadata": "present",
+    "registry": "absent",
+    "publishing": "absent",
+    "coreDomain": "fgts planned",
+    "cluster": null
+  },
+  "guard": "Do not silently substitute calculator:calculadora-multa-40-fgts or create a nucleus during migration."
+}

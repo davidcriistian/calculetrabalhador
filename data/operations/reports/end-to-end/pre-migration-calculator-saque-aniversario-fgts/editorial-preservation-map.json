@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-editorial",
+  "status": "RESOLVED_WITH_GUARDS",
+  "sections": [
+    {
+      "name": "How it works notice",
+      "classification": "PRESERVE_SEMANTICALLY"
+    },
+    {
+      "name": "Seven-band table",
+      "classification": "REORGANIZE_WITHOUT_CONTENT_LOSS",
+      "guard": "derive from governed rule"
+    },
+    {
+      "name": "Saque Aniversário vs Saque Rescisão",
+      "classification": "PRESERVE_SEMANTICALLY"
+    },
+    {
+      "name": "2026 anticipation changes",
+      "classification": "PRESERVE_SEMANTICALLY",
+      "guard": "official-update-sensitive"
+    },
+    {
+      "name": "What it is/how to use/worth it",
+      "classification": "REORGANIZE_WITHOUT_CONTENT_LOSS"
+    },
+    {
+      "name": "FAQ",
+      "classification": "PRESERVE_SEMANTICALLY"
+    },
+    {
+      "name": "Related calculators",
+      "classification": "REVIEW_REQUIRED",
+      "guard": "preserve link intent; replace redirects with canonical routes only under migration authorization"
+    }
+  ],
+  "contentLossAllowed": false
+}

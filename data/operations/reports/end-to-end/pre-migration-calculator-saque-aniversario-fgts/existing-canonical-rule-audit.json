@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-canonical-rule",
+  "status": "NO_USABLE_CANONICAL_RULE",
+  "candidate": {
+    "path": "data/rules/fgts.json",
+    "version": 1,
+    "status": "draft",
+    "source": null,
+    "year": null,
+    "data": {},
+    "containsSevenBands": false,
+    "consumed": false
+  },
+  "aggregate": {
+    "path": "data/tabelas-trabalhistas.json#saqueAniversario",
+    "status": "PARTIAL_STRUCTURED_RUNTIME",
+    "containsSevenBands": true,
+    "sourceSummaryOnly": true,
+    "sourceUrl": false,
+    "ruleVersion": false,
+    "fingerprint": false,
+    "generatedByTransformRules": false
+  },
+  "decision": "Create/reconcile a specific governed Saque-Aniversário rule before public migration; do not certify the aggregate as canonical."
+}

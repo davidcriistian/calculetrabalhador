@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-rollback",
+  "status": "READY",
+  "anchor": {
+    "commit": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
+    "targetSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+    "baselineChecksum": "33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841"
+  },
+  "futureRollback": [
+    "restore only migration-owned public/runtime/rule/registry/publishing changes from the approved pre-migration hashes",
+    "retain LEGACY_BEHAVIOR_BASELINE as audit evidence",
+    "re-run baseline, source/runtime equivalence, governance, visual, SEO and mutation checks",
+    "never use reset --hard or clean"
+  ],
+  "currentOperationRollback": "Delete only data/operations/reports/end-to-end/pre-migration-calculator-saque-aniversario-fgts/; no public restore is necessary."
+}

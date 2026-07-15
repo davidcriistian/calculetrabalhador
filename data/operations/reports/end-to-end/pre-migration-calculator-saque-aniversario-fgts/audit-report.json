@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-audit",
+  "status": "PASS_WITH_RECONCILIATION_GUARDS",
+  "findings": [
+    {
+      "severity": "BLOCKING_FOR_MIGRATION",
+      "finding": "No usable canonical rule exists; data/rules/fgts.json is empty draft."
+    },
+    {
+      "severity": "HIGH",
+      "finding": "Legacy equality gate overrides central changes and can preserve stale values."
+    },
+    {
+      "severity": "MEDIUM",
+      "finding": "Same seven values are duplicated in inline math, static HTML and aggregate JSON."
+    },
+    {
+      "severity": "MEDIUM",
+      "finding": "No Registry/Publishing entries despite public lifecycle signals."
+    },
+    {
+      "severity": "LOW",
+      "finding": "Last visible band wording is less precise than executable boundary."
+    },
+    {
+      "severity": "LOW",
+      "finding": "Invalid input has no explicit error state."
+    },
+    {
+      "severity": "INFO",
+      "finding": "All seven mathematical bands and current official formula are equivalent."
+    },
+    {
+      "severity": "INFO",
+      "finding": "Six related links use working .htaccess redirects instead of canonical routes."
+    }
+  ],
+  "unexplainedLegalOrMathDivergences": 0
+}

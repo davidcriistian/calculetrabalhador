@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-result",
+  "status": "BASIC_RESULT",
+  "current": {
+    "primary": "Valor disponível para saque",
+    "secondary": [
+      "Percentual aplicado",
+      "Parcela adicional",
+      "Saldo restante no FGTS"
+    ],
+    "availability": "month-specific window text",
+    "appliedBand": false,
+    "formula": false,
+    "memory": false,
+    "interpretation": false,
+    "limitations": "editorial sections outside result",
+    "actions": [],
+    "report": false
+  },
+  "futurePlan": [
+    "preserve four current numeric outcomes",
+    "add selected band and formula trace",
+    "add auditable memory with source/version",
+    "add interpretation and limitations",
+    "add governed recommendation slot",
+    "add accessible copy/print/download adaptive report"
+  ]
+}

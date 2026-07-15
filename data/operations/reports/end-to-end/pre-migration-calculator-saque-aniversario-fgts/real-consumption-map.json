@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-consumption",
+  "status": "HYBRID_LEGACY_CENTRAL_WITH_LEGACY_AUTHORITY",
+  "flow": [
+    "data/tabelas-trabalhistas.json#saqueAniversario",
+    "assets/js/tabelas-trabalhistas.js#calcularSaqueAniversarioFGTS",
+    "saque-aniversario-fgts/index.html"
+  ],
+  "actual": {
+    "http": "aggregate JSON is fetched and computed; accepted only after legacy equality gate",
+    "fetchFailure": "inline legacy function",
+    "centralDivergence": "inline legacy function overrides central",
+    "visibleTable": "aggregate when fetch succeeds; static HTML otherwise",
+    "canonicalRule": "data/rules/fgts.json is not consumed and is empty draft"
+  },
+  "consumersToGovern": [
+    "calculation engine",
+    "band selector",
+    "visible table",
+    "formula/memory",
+    "dependent examples",
+    "legal update copy",
+    "report output",
+    "fallback",
+    "stale detection"
+  ],
+  "declaredConsumer": {
+    "path": "data/core/update/governed-rule-consumers.json",
+    "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+    "claimCertified": false
+  }
+}

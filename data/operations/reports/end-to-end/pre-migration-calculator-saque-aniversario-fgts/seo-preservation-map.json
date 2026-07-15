@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-seo",
+  "status": "RESOLVED_WITH_GUARDS",
+  "elements": [
+    {
+      "element": "URL/route",
+      "value": "/saque-aniversario-fgts/",
+      "classification": "PRESERVE_EXACTLY"
+    },
+    {
+      "element": "canonical",
+      "value": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+      "classification": "PRESERVE_EXACTLY"
+    },
+    {
+      "element": "title",
+      "value": "Calculadora de Saque Aniversário FGTS 2026",
+      "classification": "PRESERVE_EXACTLY"
+    },
+    {
+      "element": "meta description",
+      "value": "Calcule o valor do seu saque aniversário FGTS 2026 com base nas alíquotas oficiais da Lei 8.036/90. Simule quanto você pode sacar do seu FGTS.",
+      "classification": "PRESERVE_EXACTLY"
+    },
+    {
+      "element": "H1",
+      "value": "Calculadora de Saque Aniversário FGTS 2026",
+      "classification": "PRESERVE_EXACTLY"
+    },
+    {
+      "element": "FAQPage",
+      "value": "5 questions",
+      "classification": "PRESERVE_SEMANTICALLY"
+    },
+    {
+      "element": "visible FAQ",
+      "value": "5 details",
+      "classification": "PRESERVE_SEMANTICALLY"
+    },
+    {
+      "element": "internal links",
+      "value": "6 legacy-year routes resolved by .htaccess redirects",
+      "classification": "REVIEW_REQUIRED"
+    },
+    {
+      "element": "additional schemas",
+      "value": "none",
+      "classification": "REVIEW_REQUIRED"
+    }
+  ],
+  "faqSynchronization": "5 visible/5 structured; semantically aligned, wording not byte-identical"
+}

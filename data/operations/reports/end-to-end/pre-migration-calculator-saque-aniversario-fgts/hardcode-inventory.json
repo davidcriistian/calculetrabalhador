@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-hardcodes",
+  "status": "RESOLVED",
+  "findings": [
+    {
+      "kind": "MATH",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "980-987",
+      "content": "seven-band getRuleLegacy",
+      "active": true
+    },
+    {
+      "kind": "VISIBLE_TABLE",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "796-802",
+      "content": "seven static rows",
+      "active": true
+    },
+    {
+      "kind": "AGGREGATE_RULE",
+      "path": "data/tabelas-trabalhistas.json",
+      "pointer": "#saqueAniversario.faixas",
+      "active": true,
+      "governed": false
+    },
+    {
+      "kind": "RUNTIME_SELECTION",
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "lines": "204-240",
+      "active": true,
+      "guard": "lower bounds ignored; relies on ordering"
+    },
+    {
+      "kind": "MONTH_WINDOWS",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "953-966",
+      "active": true
+    },
+    {
+      "kind": "LEGAL_COPY",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "741,835-850,903",
+      "active": true
+    },
+    {
+      "kind": "FAQ_JSON_LD",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "24-65",
+      "active": true
+    },
+    {
+      "kind": "VISIBLE_FAQ",
+      "path": "saque-aniversario-fgts/index.html",
+      "lines": "891-911",
+      "active": true
+    }
+  ]
+}

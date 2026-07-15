@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-official-reconciliation",
+  "status": "CONFIRMED_EQUIVALENT_WITH_EDITORIAL_GUARDS",
+  "legalCorrectnessPolicy": "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+  "sources": [
+    {
+      "authority": "FGTS/Agente Operador",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/saque/saque-aniversario.aspx",
+      "scope": "formula, seven bands, withdrawal window, anticipation transition"
+    },
+    {
+      "authority": "Lei 8.036/1990 compilada, art. 20-D e Anexo",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8036compilada.htm",
+      "scope": "sum of linked-account balances, rate and additional parcel"
+    },
+    {
+      "authority": "CAIXA",
+      "url": "https://www.caixa.gov.br/voce/credito-financiamento/emprestimo/antecipacao-saque-aniversario-FGTS/perguntas-frequentes/Paginas/default.aspx",
+      "scope": "institutional table and anticipation conditions"
+    },
+    {
+      "authority": "FGTS FAQ",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/perguntas-frequentes.aspx",
+      "scope": "25th-month effectiveness and withdrawal window"
+    },
+    {
+      "authority": "Resolução CCFGTS 1.130/2025",
+      "url": "https://anttlegis.antt.gov.br/action/ActionDatalegis.php?acao=abrirTextoAto&numeroAto=00001130&orgao=CCFGTS%2FMTE&tipo=RES&valorAno=2025",
+      "scope": "five installments through 31/10/2026; three after; R$100–R$500 each"
+    }
+  ],
+  "comparisons": [
+    {
+      "item": "seven bands/rates/additional parcels",
+      "classification": "CONFIRMED_EQUIVALENT"
+    },
+    {
+      "item": "formula over sum of active and inactive linked accounts",
+      "classification": "CONFIRMED_EQUIVALENT"
+    },
+    {
+      "item": "annual withdrawal window",
+      "classification": "CONFIRMED_EQUIVALENT"
+    },
+    {
+      "item": "three anticipations and aggregate R$1,500 from 01/11/2026",
+      "classification": "CONFIRMED_EQUIVALENT"
+    },
+    {
+      "item": "24-month waiting copy versus effectiveness on first business day of 25th month",
+      "classification": "CONFIRMED_EQUIVALENT_WITH_PRECISION_GUARD"
+    },
+    {
+      "item": "zero balance in internal first band",
+      "classification": "NOT_APPLICABLE",
+      "reason": "UI returns empty state; official table begins at R$0.01."
+    },
+    {
+      "item": "last visible band wording",
+      "classification": "SOURCE_AMBIGUITY_REQUIRES_REVIEW",
+      "reason": "Execution is correct for > R$20,000.00; visible “Acima de R$20.000,01” can be read as excluding R$20,000.01."
+    }
+  ],
+  "objectiveLegalOrMathDivergence": 0
+}

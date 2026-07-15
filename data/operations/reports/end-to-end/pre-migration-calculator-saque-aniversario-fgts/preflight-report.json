@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-preflight",
+  "status": "PASS",
+  "git": {
+    "branch": "main",
+    "head": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
+    "originMain": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
+    "ahead": 0,
+    "behind": 0,
+    "stagingInitial": "EMPTY",
+    "workingTreeInitial": "CLEAN",
+    "preexistingChanges": [],
+    "untrackedInitial": []
+  },
+  "constraints": {
+    "targetPageBytePreservation": true,
+    "publicMutation": false,
+    "ruleMutation": false,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "indexNow": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "reportId": "pre-migration-saque-aniversario-update-sensitivity",
+  "status": "LEGAL_UPDATE_REQUIRED",
+  "governed": [
+    "seven balance bands",
+    "upper/lower boundaries",
+    "rates",
+    "additional parcels",
+    "formula",
+    "rounding policy",
+    "visible table",
+    "formula memory",
+    "dependent numeric examples",
+    "official-source metadata/version/fingerprint",
+    "anticipation legal copy",
+    "generated report"
+  ],
+  "notGoverned": [
+    "colors",
+    "spacing",
+    "layout",
+    "evergreen explanatory prose not dependent on mutable thresholds",
+    "month names"
+  ],
+  "currentRisk": "Future official changes to aggregate are suppressed by legacy equivalence gate, silently keeping stale legacy values."
+}

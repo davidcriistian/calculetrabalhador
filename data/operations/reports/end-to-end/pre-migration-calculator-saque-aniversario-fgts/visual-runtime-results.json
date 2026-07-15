@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "page": "http://127.0.0.1:4174/saque-aniversario-fgts/",
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "readiness": {
+        "ready": "complete",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "runtime": true,
+        "rows": 7
+      },
+      "result": {
+        "withdrawal": "R$ 450,00",
+        "percentage": "40%",
+        "additional": "R$ 50,00",
+        "remaining": "R$ 550,00",
+        "visible": true,
+        "emptyHidden": true,
+        "month": "Saque disponivel em julho, agosto e setembro."
+      },
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 390,
+        "viewport": 390,
+        "errors": [],
+        "faqCount": 5,
+        "tableRows": 7,
+        "explicitErrorNode": false,
+        "resultVisible": true
+      },
+      "evidence": [
+        "mobile-entry.png",
+        "mobile-focus.png",
+        "mobile-invalid-empty-state.png",
+        "mobile-result.png",
+        "mobile-rates-table.png",
+        "mobile-editorial.png",
+        "mobile-faq.png"
+      ]
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "readiness": {
+        "ready": "complete",
+        "bodyWidth": 753,
+        "viewport": 768,
+        "runtime": true,
+        "rows": 7
+      },
+      "result": {
+        "withdrawal": "R$ 450,00",
+        "percentage": "40%",
+        "additional": "R$ 50,00",
+        "remaining": "R$ 550,00",
+        "visible": true,
+        "emptyHidden": true,
+        "month": "Saque disponivel em julho, agosto e setembro."
+      },
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 753,
+        "viewport": 768,
+        "errors": [],
+        "faqCount": 5,
+        "tableRows": 7,
+        "explicitErrorNode": false,
+        "resultVisible": true
+      },
+      "evidence": [
+        "tablet-entry.png",
+        "tablet-focus.png",
+        "tablet-invalid-empty-state.png",
+        "tablet-result.png",
+        "tablet-rates-table.png",
+        "tablet-editorial.png",
+        "tablet-faq.png"
+      ]
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "readiness": {
+        "ready": "complete",
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "runtime": true,
+        "rows": 7
+      },
+      "result": {
+        "withdrawal": "R$ 450,00",
+        "percentage": "40%",
+        "additional": "R$ 50,00",
+        "remaining": "R$ 550,00",
+        "visible": true,
+        "emptyHidden": true,
+        "month": "Saque disponivel em julho, agosto e setembro."
+      },
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "errors": [],
+        "faqCount": 5,
+        "tableRows": 7,
+        "explicitErrorNode": false,
+        "resultVisible": true
+      },
+      "evidence": [
+        "desktop-entry.png",
+        "desktop-focus.png",
+        "desktop-invalid-empty-state.png",
+        "desktop-result.png",
+        "desktop-rates-table.png",
+        "desktop-editorial.png",
+        "desktop-faq.png"
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "status": "PASS"
+}

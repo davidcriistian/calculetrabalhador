@@ -1,0 +1,969 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "classification": "LEGACY_BEHAVIOR_BASELINE",
+  "normativeAuthority": false,
+  "assetId": "calculator:saque-aniversario-fgts",
+  "status": "BASELINE_REPRODUCED",
+  "source": {
+    "page": "saque-aniversario-fgts/index.html",
+    "pageSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+    "runtime": "assets/js/tabelas-trabalhistas.js",
+    "aggregate": "data/tabelas-trabalhistas.json#saqueAniversario"
+  },
+  "summary": {
+    "numericScenarioCount": 34,
+    "parserScenarioCount": 8,
+    "totalScenarioCount": 42,
+    "centralLegacyEquivalentPositiveScenarios": 32,
+    "unexplainedDivergences": 0,
+    "allSevenBandsCovered": true,
+    "boundariesCovered": [
+      0,
+      500,
+      1000,
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "numericScenarios": [
+    {
+      "scenarioId": "saque-aniversario-001",
+      "id": "boundary-0-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": -0.01
+      },
+      "selectedBand": null,
+      "percentage": 0,
+      "additional": 0,
+      "output": {
+        "state": "EMPTY",
+        "withdrawalRaw": 0,
+        "withdrawalDisplayed": 0,
+        "remainingRaw": 0,
+        "remainingDisplayed": 0
+      },
+      "rounding": "LEGACY_RAW_NUMBER_THEN_INTL_DISPLAY",
+      "runtimeSource": "LEGACY_FALLBACK",
+      "centralVsLegacyEquivalent": false,
+      "logicalChecksum": "b0803097b7db65d1bbd3fc0c849fbfcce22a8c72cd4e7970ea4f743149942f24"
+    },
+    {
+      "scenarioId": "saque-aniversario-002",
+      "id": "boundary-0-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 0
+      },
+      "selectedBand": null,
+      "percentage": 0,
+      "additional": 0,
+      "output": {
+        "state": "EMPTY",
+        "withdrawalRaw": 0,
+        "withdrawalDisplayed": 0,
+        "remainingRaw": 0,
+        "remainingDisplayed": 0
+      },
+      "rounding": "LEGACY_RAW_NUMBER_THEN_INTL_DISPLAY",
+      "runtimeSource": "LEGACY_FALLBACK",
+      "centralVsLegacyEquivalent": false,
+      "logicalChecksum": "c9c521266e48a84c6b635da576bc3c1fcff0c69780333d08f4d0ef9f7d6de7fd"
+    },
+    {
+      "scenarioId": "saque-aniversario-003",
+      "id": "boundary-0-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 0.01
+      },
+      "selectedBand": {
+        "de": 0,
+        "ate": 500,
+        "rotulo": "Até R$ 500,00"
+      },
+      "percentage": 50,
+      "additional": 0,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 0.01,
+        "withdrawalDisplayed": 0.01,
+        "remainingRaw": 0,
+        "remainingDisplayed": 0
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "4c9dc1f8d1310bd7128c8b6645aa66b49b516ff61f19de027d63495f5c72252c"
+    },
+    {
+      "scenarioId": "saque-aniversario-004",
+      "id": "boundary-500-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 499.99
+      },
+      "selectedBand": {
+        "de": 0,
+        "ate": 500,
+        "rotulo": "Até R$ 500,00"
+      },
+      "percentage": 50,
+      "additional": 0,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 250,
+        "withdrawalDisplayed": 250,
+        "remainingRaw": 249.99,
+        "remainingDisplayed": 249.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "ea582c00462b392cff74d93b3d7a870de8a1a9afb5b4f86d76f7f0bdfae2de03"
+    },
+    {
+      "scenarioId": "saque-aniversario-005",
+      "id": "boundary-500-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 500
+      },
+      "selectedBand": {
+        "de": 0,
+        "ate": 500,
+        "rotulo": "Até R$ 500,00"
+      },
+      "percentage": 50,
+      "additional": 0,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 250,
+        "withdrawalDisplayed": 250,
+        "remainingRaw": 250,
+        "remainingDisplayed": 250
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "7cdb46502f63d260c5765fe2653e5cca407b0001b035c8a957f123dcb612fd58"
+    },
+    {
+      "scenarioId": "saque-aniversario-006",
+      "id": "boundary-500-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 500.01
+      },
+      "selectedBand": {
+        "de": 500.01,
+        "ate": 1000,
+        "rotulo": "R$ 500,01 a R$ 1.000,00"
+      },
+      "percentage": 40,
+      "additional": 50,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 250,
+        "withdrawalDisplayed": 250,
+        "remainingRaw": 250.01,
+        "remainingDisplayed": 250.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "1e45d4edfc7258330ab501c9a1b94b355556321af2c48216b8f1b6972f3ed59e"
+    },
+    {
+      "scenarioId": "saque-aniversario-007",
+      "id": "boundary-1000-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 999.99
+      },
+      "selectedBand": {
+        "de": 500.01,
+        "ate": 1000,
+        "rotulo": "R$ 500,01 a R$ 1.000,00"
+      },
+      "percentage": 40,
+      "additional": 50,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 450,
+        "withdrawalDisplayed": 450,
+        "remainingRaw": 549.99,
+        "remainingDisplayed": 549.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "92a5326932698d2400c028038c30fc25cea9440e1865c8f137f2591987dfe1a3"
+    },
+    {
+      "scenarioId": "saque-aniversario-008",
+      "id": "boundary-1000-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 1000
+      },
+      "selectedBand": {
+        "de": 500.01,
+        "ate": 1000,
+        "rotulo": "R$ 500,01 a R$ 1.000,00"
+      },
+      "percentage": 40,
+      "additional": 50,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 450,
+        "withdrawalDisplayed": 450,
+        "remainingRaw": 550,
+        "remainingDisplayed": 550
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "d169eb56e900401fe45408c08694caa9d5b9aae708fcd2ebf1ced2c1ebe45ff3"
+    },
+    {
+      "scenarioId": "saque-aniversario-009",
+      "id": "boundary-1000-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 1000.01
+      },
+      "selectedBand": {
+        "de": 1000.01,
+        "ate": 5000,
+        "rotulo": "R$ 1.000,01 a R$ 5.000,00"
+      },
+      "percentage": 30,
+      "additional": 150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 450,
+        "withdrawalDisplayed": 450,
+        "remainingRaw": 550.01,
+        "remainingDisplayed": 550.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "22099213ac7c1298557b6af19d9a9fc2d1eae28e05ff709c78c72f2a830662c6"
+    },
+    {
+      "scenarioId": "saque-aniversario-010",
+      "id": "boundary-5000-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 4999.99
+      },
+      "selectedBand": {
+        "de": 1000.01,
+        "ate": 5000,
+        "rotulo": "R$ 1.000,01 a R$ 5.000,00"
+      },
+      "percentage": 30,
+      "additional": 150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 1650,
+        "withdrawalDisplayed": 1650,
+        "remainingRaw": 3349.99,
+        "remainingDisplayed": 3349.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "4ce222c4a1588e8dc3c199520010b275c2652b6702c03640340f7e6598d58c57"
+    },
+    {
+      "scenarioId": "saque-aniversario-011",
+      "id": "boundary-5000-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 5000
+      },
+      "selectedBand": {
+        "de": 1000.01,
+        "ate": 5000,
+        "rotulo": "R$ 1.000,01 a R$ 5.000,00"
+      },
+      "percentage": 30,
+      "additional": 150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 1650,
+        "withdrawalDisplayed": 1650,
+        "remainingRaw": 3350,
+        "remainingDisplayed": 3350
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "d20936314df830675f2a2abb2c40a58e9819fbf31773c1e3ab570fc0c1200f19"
+    },
+    {
+      "scenarioId": "saque-aniversario-012",
+      "id": "boundary-5000-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 5000.01
+      },
+      "selectedBand": {
+        "de": 5000.01,
+        "ate": 10000,
+        "rotulo": "R$ 5.000,01 a R$ 10.000,00"
+      },
+      "percentage": 20,
+      "additional": 650,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 1650,
+        "withdrawalDisplayed": 1650,
+        "remainingRaw": 3350.01,
+        "remainingDisplayed": 3350.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "e9fbe8167e4bc257a8d35d2bd1d93d1d5b93520dae90f57b0cfb5214a19d50fc"
+    },
+    {
+      "scenarioId": "saque-aniversario-013",
+      "id": "boundary-10000-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 9999.99
+      },
+      "selectedBand": {
+        "de": 5000.01,
+        "ate": 10000,
+        "rotulo": "R$ 5.000,01 a R$ 10.000,00"
+      },
+      "percentage": 20,
+      "additional": 650,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 2650,
+        "withdrawalDisplayed": 2650,
+        "remainingRaw": 7349.99,
+        "remainingDisplayed": 7349.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "e314df0e8c912f4306e6653214963f70952f70dc41176965820f445dd20928f0"
+    },
+    {
+      "scenarioId": "saque-aniversario-014",
+      "id": "boundary-10000-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 10000
+      },
+      "selectedBand": {
+        "de": 5000.01,
+        "ate": 10000,
+        "rotulo": "R$ 5.000,01 a R$ 10.000,00"
+      },
+      "percentage": 20,
+      "additional": 650,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 2650,
+        "withdrawalDisplayed": 2650,
+        "remainingRaw": 7350,
+        "remainingDisplayed": 7350
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "1b3cea379fa042004c625705cfba730325f7dbfb203d5672b4b40c3528f5cbcd"
+    },
+    {
+      "scenarioId": "saque-aniversario-015",
+      "id": "boundary-10000-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 10000.01
+      },
+      "selectedBand": {
+        "de": 10000.01,
+        "ate": 15000,
+        "rotulo": "R$ 10.000,01 a R$ 15.000,00"
+      },
+      "percentage": 15,
+      "additional": 1150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 2650,
+        "withdrawalDisplayed": 2650,
+        "remainingRaw": 7350.01,
+        "remainingDisplayed": 7350.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "9d63d46c27f1417061f78535bcf036da0378bb88ad7349e35c98faa3cff0aac4"
+    },
+    {
+      "scenarioId": "saque-aniversario-016",
+      "id": "boundary-15000-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 14999.99
+      },
+      "selectedBand": {
+        "de": 10000.01,
+        "ate": 15000,
+        "rotulo": "R$ 10.000,01 a R$ 15.000,00"
+      },
+      "percentage": 15,
+      "additional": 1150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3400,
+        "withdrawalDisplayed": 3400,
+        "remainingRaw": 11599.99,
+        "remainingDisplayed": 11599.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "af5e6e04e5c6c98352ebce7f044a4c908996b434f75aca76c2282d122821930b"
+    },
+    {
+      "scenarioId": "saque-aniversario-017",
+      "id": "boundary-15000-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 15000
+      },
+      "selectedBand": {
+        "de": 10000.01,
+        "ate": 15000,
+        "rotulo": "R$ 10.000,01 a R$ 15.000,00"
+      },
+      "percentage": 15,
+      "additional": 1150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3400,
+        "withdrawalDisplayed": 3400,
+        "remainingRaw": 11600,
+        "remainingDisplayed": 11600
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "fb4dc103a83645dd732b62ea0bfa926b8cae9eb2f553a798f94d54bccba45fd9"
+    },
+    {
+      "scenarioId": "saque-aniversario-018",
+      "id": "boundary-15000-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 15000.01
+      },
+      "selectedBand": {
+        "de": 15000.01,
+        "ate": 20000,
+        "rotulo": "R$ 15.000,01 a R$ 20.000,00"
+      },
+      "percentage": 10,
+      "additional": 1900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3400,
+        "withdrawalDisplayed": 3400,
+        "remainingRaw": 11600.01,
+        "remainingDisplayed": 11600.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "a39c55c87abd819960ff874ce121652dfbaadb3d5bec869fc9e2e7056f29790d"
+    },
+    {
+      "scenarioId": "saque-aniversario-019",
+      "id": "boundary-20000-below",
+      "coverage": "immediately-below-boundary",
+      "input": {
+        "balance": 19999.99
+      },
+      "selectedBand": {
+        "de": 15000.01,
+        "ate": 20000,
+        "rotulo": "R$ 15.000,01 a R$ 20.000,00"
+      },
+      "percentage": 10,
+      "additional": 1900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3900,
+        "withdrawalDisplayed": 3900,
+        "remainingRaw": 16099.99,
+        "remainingDisplayed": 16099.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "bf697fe64af847a69d7a4d961e790b65d9f3eea7ed09f5e85592d90a885615bc"
+    },
+    {
+      "scenarioId": "saque-aniversario-020",
+      "id": "boundary-20000-exact",
+      "coverage": "exact-boundary",
+      "input": {
+        "balance": 20000
+      },
+      "selectedBand": {
+        "de": 15000.01,
+        "ate": 20000,
+        "rotulo": "R$ 15.000,01 a R$ 20.000,00"
+      },
+      "percentage": 10,
+      "additional": 1900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3900,
+        "withdrawalDisplayed": 3900,
+        "remainingRaw": 16100,
+        "remainingDisplayed": 16100
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "355adf7d44755c5e314f28cfe26210a9fcd39d719d9a2f2e3cf5cb78b2617e2e"
+    },
+    {
+      "scenarioId": "saque-aniversario-021",
+      "id": "boundary-20000-above",
+      "coverage": "immediately-above-boundary",
+      "input": {
+        "balance": 20000.01
+      },
+      "selectedBand": {
+        "de": 20000.01,
+        "ate": null,
+        "rotulo": "Acima de R$ 20.000,01"
+      },
+      "percentage": 5,
+      "additional": 2900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3900,
+        "withdrawalDisplayed": 3900,
+        "remainingRaw": 16100.01,
+        "remainingDisplayed": 16100.01
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "8eefa27919c0dec3c8c54f3f824bf252e979520bcfe276895f21a9c698d88c03"
+    },
+    {
+      "scenarioId": "saque-aniversario-022",
+      "id": "band-1-center",
+      "coverage": "band-1-center",
+      "input": {
+        "balance": 250
+      },
+      "selectedBand": {
+        "de": 0,
+        "ate": 500,
+        "rotulo": "Até R$ 500,00"
+      },
+      "percentage": 50,
+      "additional": 0,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 125,
+        "withdrawalDisplayed": 125,
+        "remainingRaw": 125,
+        "remainingDisplayed": 125
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "120f7845ca3e1b9b0dac3a602914e691e0f089349a3f06f0ba8238b856a7dcdf"
+    },
+    {
+      "scenarioId": "saque-aniversario-023",
+      "id": "band-2-center",
+      "coverage": "band-2-center",
+      "input": {
+        "balance": 750
+      },
+      "selectedBand": {
+        "de": 500.01,
+        "ate": 1000,
+        "rotulo": "R$ 500,01 a R$ 1.000,00"
+      },
+      "percentage": 40,
+      "additional": 50,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 350,
+        "withdrawalDisplayed": 350,
+        "remainingRaw": 400,
+        "remainingDisplayed": 400
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "c0a30b4eeb2bb73f3fecee0c031e513ad0ec2dd803832d33db97284d3e3cb669"
+    },
+    {
+      "scenarioId": "saque-aniversario-024",
+      "id": "band-3-center",
+      "coverage": "band-3-center",
+      "input": {
+        "balance": 3000
+      },
+      "selectedBand": {
+        "de": 1000.01,
+        "ate": 5000,
+        "rotulo": "R$ 1.000,01 a R$ 5.000,00"
+      },
+      "percentage": 30,
+      "additional": 150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 1050,
+        "withdrawalDisplayed": 1050,
+        "remainingRaw": 1950,
+        "remainingDisplayed": 1950
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "f592e4b68a6734bd9595562ac248f259cdd8156a387225ab9b75d4e9722364d1"
+    },
+    {
+      "scenarioId": "saque-aniversario-025",
+      "id": "band-4-center",
+      "coverage": "band-4-center",
+      "input": {
+        "balance": 7500
+      },
+      "selectedBand": {
+        "de": 5000.01,
+        "ate": 10000,
+        "rotulo": "R$ 5.000,01 a R$ 10.000,00"
+      },
+      "percentage": 20,
+      "additional": 650,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 2150,
+        "withdrawalDisplayed": 2150,
+        "remainingRaw": 5350,
+        "remainingDisplayed": 5350
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "5ad1aa5fdd67c3fb8dc8020976eff536c1e84f4b1c80e8097b417837e197266c"
+    },
+    {
+      "scenarioId": "saque-aniversario-026",
+      "id": "band-5-center",
+      "coverage": "band-5-center",
+      "input": {
+        "balance": 12500
+      },
+      "selectedBand": {
+        "de": 10000.01,
+        "ate": 15000,
+        "rotulo": "R$ 10.000,01 a R$ 15.000,00"
+      },
+      "percentage": 15,
+      "additional": 1150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3025,
+        "withdrawalDisplayed": 3025,
+        "remainingRaw": 9475,
+        "remainingDisplayed": 9475
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "b688b7ed94beae2255d952ae05ed26124dc6c5ddc609b8ed3f026f68ffb57178"
+    },
+    {
+      "scenarioId": "saque-aniversario-027",
+      "id": "band-6-center",
+      "coverage": "band-6-center",
+      "input": {
+        "balance": 17500
+      },
+      "selectedBand": {
+        "de": 15000.01,
+        "ate": 20000,
+        "rotulo": "R$ 15.000,01 a R$ 20.000,00"
+      },
+      "percentage": 10,
+      "additional": 1900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3650,
+        "withdrawalDisplayed": 3650,
+        "remainingRaw": 13850,
+        "remainingDisplayed": 13850
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "2801cf1bb939d2c642c3385b41297d5bb813e0272484bbfd9c5a5d8aab309bcd"
+    },
+    {
+      "scenarioId": "saque-aniversario-028",
+      "id": "band-7-center",
+      "coverage": "band-7-center",
+      "input": {
+        "balance": 25000
+      },
+      "selectedBand": {
+        "de": 20000.01,
+        "ate": null,
+        "rotulo": "Acima de R$ 20.000,01"
+      },
+      "percentage": 5,
+      "additional": 2900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 4150,
+        "withdrawalDisplayed": 4150,
+        "remainingRaw": 20850,
+        "remainingDisplayed": 20850
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "43825176f9feeaa9d200191c141a6a4dfd515df6fa4e678f1622084c8f9f2bd3"
+    },
+    {
+      "scenarioId": "saque-aniversario-029",
+      "id": "cent-value",
+      "coverage": "cent-value",
+      "input": {
+        "balance": 123.45
+      },
+      "selectedBand": {
+        "de": 0,
+        "ate": 500,
+        "rotulo": "Até R$ 500,00"
+      },
+      "percentage": 50,
+      "additional": 0,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 61.73,
+        "withdrawalDisplayed": 61.73,
+        "remainingRaw": 61.72,
+        "remainingDisplayed": 61.72
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "cc841683d2a4b2471a0457563cd68cf0fad1f7d9401e5b9a7970b4476fab8110"
+    },
+    {
+      "scenarioId": "saque-aniversario-030",
+      "id": "cent-value",
+      "coverage": "cent-value",
+      "input": {
+        "balance": 999.99
+      },
+      "selectedBand": {
+        "de": 500.01,
+        "ate": 1000,
+        "rotulo": "R$ 500,01 a R$ 1.000,00"
+      },
+      "percentage": 40,
+      "additional": 50,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 450,
+        "withdrawalDisplayed": 450,
+        "remainingRaw": 549.99,
+        "remainingDisplayed": 549.99
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "8e9e0a1d45e9fb7a4a9478966cdf4a0eaaeef418e9a47b62c7a9c6698e387bdf"
+    },
+    {
+      "scenarioId": "saque-aniversario-031",
+      "id": "cent-value",
+      "coverage": "cent-value",
+      "input": {
+        "balance": 1000.99
+      },
+      "selectedBand": {
+        "de": 1000.01,
+        "ate": 5000,
+        "rotulo": "R$ 1.000,01 a R$ 5.000,00"
+      },
+      "percentage": 30,
+      "additional": 150,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 450.3,
+        "withdrawalDisplayed": 450.3,
+        "remainingRaw": 550.69,
+        "remainingDisplayed": 550.69
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "948587c589e8c0ebb6d3eb620becfb41c37e68f6548a689694ff33c2cea2f178"
+    },
+    {
+      "scenarioId": "saque-aniversario-032",
+      "id": "cent-value",
+      "coverage": "cent-value",
+      "input": {
+        "balance": 20000.99
+      },
+      "selectedBand": {
+        "de": 20000.01,
+        "ate": null,
+        "rotulo": "Acima de R$ 20.000,01"
+      },
+      "percentage": 5,
+      "additional": 2900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 3900.05,
+        "withdrawalDisplayed": 3900.05,
+        "remainingRaw": 16100.94,
+        "remainingDisplayed": 16100.94
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "503ee9fd5d828144f9f15f423e28f4d4d10f68e31cd3f15fde6b7509f24e3055"
+    },
+    {
+      "scenarioId": "saque-aniversario-033",
+      "id": "high-value",
+      "coverage": "high-value",
+      "input": {
+        "balance": 100000
+      },
+      "selectedBand": {
+        "de": 20000.01,
+        "ate": null,
+        "rotulo": "Acima de R$ 20.000,01"
+      },
+      "percentage": 5,
+      "additional": 2900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 7900,
+        "withdrawalDisplayed": 7900,
+        "remainingRaw": 92100,
+        "remainingDisplayed": 92100
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "90eac4bd9b4173cb3eb1e4078a9a31dd5fbc3915c38728596bc3ab5049e389e3"
+    },
+    {
+      "scenarioId": "saque-aniversario-034",
+      "id": "very-high-value",
+      "coverage": "very-high-value",
+      "input": {
+        "balance": 1000000
+      },
+      "selectedBand": {
+        "de": 20000.01,
+        "ate": null,
+        "rotulo": "Acima de R$ 20.000,01"
+      },
+      "percentage": 5,
+      "additional": 2900,
+      "output": {
+        "state": "RESULT",
+        "withdrawalRaw": 52900,
+        "withdrawalDisplayed": 52900,
+        "remainingRaw": 947100,
+        "remainingDisplayed": 947100
+      },
+      "rounding": "CENTRAL_ROUND_HALF_AWAY_BY_MATH_ROUND_TO_CENTS",
+      "runtimeSource": "CENTRAL_AGGREGATE_ACCEPTED_AFTER_LEGACY_EQUIVALENCE_GATE",
+      "centralVsLegacyEquivalent": true,
+      "logicalChecksum": "b8f6ef8fc8e0d1623a80e226939f27025de888fbfa04520b643724f2e2c409d0"
+    }
+  ],
+  "parserScenarios": [
+    {
+      "scenarioId": "currency-parser-001",
+      "input": "",
+      "parsedBalance": 0,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "7c812e04f9ed95e5436450b5c5a7df4cac93558407f403a3957c8eaf2ce33913"
+    },
+    {
+      "scenarioId": "currency-parser-002",
+      "input": "abc",
+      "parsedBalance": 0,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "bd8912f3f22373495bc82bbb45ea20c461f80a3cc211a8ddb17f0a04e84bfa70"
+    },
+    {
+      "scenarioId": "currency-parser-003",
+      "input": "1",
+      "parsedBalance": 0.01,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "65ca524239846fc5c253c95f0387cadadc6a6e4e6cc03bd00e27cd634269e8fa"
+    },
+    {
+      "scenarioId": "currency-parser-004",
+      "input": "R$ 1.234,56",
+      "parsedBalance": 1234.56,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "21aa44a0ff4d8e5fec27c5e64ec0705175b9286c53bef2df7d8d0bd26f50981e"
+    },
+    {
+      "scenarioId": "currency-parser-005",
+      "input": "-100,00",
+      "parsedBalance": 100,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "c7528cad84cf948449ed9aad1697d935176c2de094d932235fd8888213957f5b"
+    },
+    {
+      "scenarioId": "currency-parser-006",
+      "input": "500,005",
+      "parsedBalance": 5000.05,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "a54a4644946be85ac82344fcc3019b1f57e25cbd858c2535032c9f3e371b7bb7"
+    },
+    {
+      "scenarioId": "currency-parser-007",
+      "input": "000",
+      "parsedBalance": 0,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "682f318f88cbb5e9b0dca80f178c4370501f55bbfe128a08771163a8a9ef056c"
+    },
+    {
+      "scenarioId": "currency-parser-008",
+      "input": null,
+      "parsedBalance": 0,
+      "behavior": "Strip every non-digit character and divide remaining integer by 100.",
+      "logicalChecksum": "54ba87d3faafc8a8f9685054b8bd5c9c1299f9c382db5516229965b3cf7b5d46"
+    }
+  ],
+  "logicalChecksum": "33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841"
+}
