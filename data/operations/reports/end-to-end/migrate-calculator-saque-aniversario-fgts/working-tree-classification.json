@@ -1,0 +1,922 @@
+{
+  "status": "PASS",
+  "sourceHead": "2204a2da525ab5c765982965d803041c1f237b2f",
+  "totalPaths": 89,
+  "counts": {
+    "SAQUE_ANIVERSARIO_FGTS_MIGRATION": 89,
+    "PREEXISTING": 0,
+    "UNRELATED": 0,
+    "UNCERTAIN": 0
+  },
+  "categories": {
+    "SAQUE_ANIVERSARIO_FGTS_MIGRATION": [
+      "saque-aniversario-fgts/index.html",
+      "assets/js/saque-aniversario-fgts.js",
+      "assets/js/tabelas-trabalhistas.js",
+      "data/core/compatibility/migration-readiness.json",
+      "data/core/compatibility/tools-map.json",
+      "data/core/update/fgts-saque-aniversario-projection.contract.json",
+      "data/core/update/governed-rule-consumers.json",
+      "data/editorial-metadata.json",
+      "data/tabelas-trabalhistas.json",
+      "data/tools.json",
+      "scripts/transform-rules.js",
+      "data/publishing/registry/index.json",
+      "data/publishing/registry/calculator-saque-aniversario-fgts-published.json",
+      "data/registry/by-type/index.json",
+      "data/registry/by-type/calculator-saque-aniversario-fgts.json",
+      "sitemap.xml",
+      "scripts/apply-saque-aniversario-fgts-canonical-visual-family.js",
+      "scripts/capture-saque-aniversario-fgts-migration-visuals.js",
+      "scripts/generate-saque-aniversario-fgts-migration-reports.js",
+      "scripts/migrate-saque-aniversario-fgts-public-runtime.js",
+      "scripts/validate-canonical-visual-family-conformance.js",
+      "scripts/validate-migrated-saque-aniversario-fgts.js",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/approval-record.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/audit-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/browser-runtime-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/calculator-experience-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-conformance-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-gap-matrix.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/execution-scope-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/final-operation-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governance-resolution.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governed-integration-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/idempotency-replay.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/indexnow-dry-run.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/migration-heritage-snapshot.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/mutation-guard-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/physical-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/preflight-audit.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/reference-study.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/request-manifest.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/rollback-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/validation-results.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-corrective-refinement-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-validation-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/working-tree-classification.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop-aviso-approved-source.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile-aviso-approved-source.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile.png",
+      "assets/js/global-layout.js",
+      "assets/js/editorial-metadata.js",
+      "scripts/validate-public-asset-integrity.js",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/public-asset-integrity-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-footer.png"
+    ],
+    "PREEXISTING": [],
+    "UNRELATED": [],
+    "UNCERTAIN": []
+  },
+  "scopeGroups": {
+    "TARGET_CALCULATOR": [
+      "saque-aniversario-fgts/index.html",
+      "assets/js/saque-aniversario-fgts.js"
+    ],
+    "GOVERNED_INTEGRATION": [
+      "assets/js/tabelas-trabalhistas.js",
+      "data/core/compatibility/migration-readiness.json",
+      "data/core/compatibility/tools-map.json",
+      "data/core/update/fgts-saque-aniversario-projection.contract.json",
+      "data/core/update/governed-rule-consumers.json",
+      "data/editorial-metadata.json",
+      "data/tabelas-trabalhistas.json",
+      "data/tools.json",
+      "scripts/transform-rules.js"
+    ],
+    "REGISTRY_PUBLISHING": [
+      "data/publishing/registry/index.json",
+      "data/publishing/registry/calculator-saque-aniversario-fgts-published.json",
+      "data/registry/by-type/index.json",
+      "data/registry/by-type/calculator-saque-aniversario-fgts.json",
+      "sitemap.xml"
+    ],
+    "TESTS_AND_REPORTS": [
+      "scripts/apply-saque-aniversario-fgts-canonical-visual-family.js",
+      "scripts/capture-saque-aniversario-fgts-migration-visuals.js",
+      "scripts/generate-saque-aniversario-fgts-migration-reports.js",
+      "scripts/migrate-saque-aniversario-fgts-public-runtime.js",
+      "scripts/validate-canonical-visual-family-conformance.js",
+      "scripts/validate-migrated-saque-aniversario-fgts.js",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/approval-record.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/audit-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/browser-runtime-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/calculator-experience-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-conformance-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-gap-matrix.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/execution-scope-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/final-operation-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governance-resolution.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governed-integration-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/idempotency-replay.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/indexnow-dry-run.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/migration-heritage-snapshot.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/mutation-guard-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/physical-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/preflight-audit.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/reference-study.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/request-manifest.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/rollback-plan.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/validation-results.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-corrective-refinement-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-validation-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/working-tree-classification.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-entry.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-form-focus.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-empty-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-error-state.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result-actions.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-adaptive-report.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop-aviso-approved-source.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile-aviso-approved-source.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile.png"
+    ],
+    "PUBLIC_ASSET_INTEGRITY": [
+      "assets/js/global-layout.js",
+      "assets/js/editorial-metadata.js",
+      "scripts/validate-public-asset-integrity.js",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/public-asset-integrity-report.json",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-footer.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-header.png",
+      "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-footer.png"
+    ]
+  },
+  "paths": [
+    {
+      "gitStatus": " M",
+      "path": "saque-aniversario-fgts/index.html",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved target page and dedicated governed runtime.",
+      "evidence": "scopeGroups.TARGET_CALCULATOR",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "assets/js/saque-aniversario-fgts.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved target page and dedicated governed runtime.",
+      "evidence": "scopeGroups.TARGET_CALCULATOR",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/core/compatibility/migration-readiness.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/core/compatibility/tools-map.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/core/update/fgts-saque-aniversario-projection.contract.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/core/update/governed-rule-consumers.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/editorial-metadata.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/tabelas-trabalhistas.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/tools.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "scripts/transform-rules.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Required canonical projection, consumer contract, aggregate or target metadata integration.",
+      "evidence": "scopeGroups.GOVERNED_INTEGRATION",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/publishing/registry/index.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Target-only Registry, Publishing, catalog or sitemap integration.",
+      "evidence": "scopeGroups.REGISTRY_PUBLISHING",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/publishing/registry/calculator-saque-aniversario-fgts-published.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Target-only Registry, Publishing, catalog or sitemap integration.",
+      "evidence": "scopeGroups.REGISTRY_PUBLISHING",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "data/registry/by-type/index.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Target-only Registry, Publishing, catalog or sitemap integration.",
+      "evidence": "scopeGroups.REGISTRY_PUBLISHING",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/registry/by-type/calculator-saque-aniversario-fgts.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Target-only Registry, Publishing, catalog or sitemap integration.",
+      "evidence": "scopeGroups.REGISTRY_PUBLISHING",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "sitemap.xml",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Target-only Registry, Publishing, catalog or sitemap integration.",
+      "evidence": "scopeGroups.REGISTRY_PUBLISHING",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/apply-saque-aniversario-fgts-canonical-visual-family.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/capture-saque-aniversario-fgts-migration-visuals.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/generate-saque-aniversario-fgts-migration-reports.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/migrate-saque-aniversario-fgts-public-runtime.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/validate-canonical-visual-family-conformance.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/validate-migrated-saque-aniversario-fgts.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/approval-record.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/audit-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/browser-runtime-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/calculator-experience-plan.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-conformance-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/canonical-visual-family-gap-matrix.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/execution-scope-plan.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/final-operation-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governance-resolution.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/governed-integration-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/idempotency-replay.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/indexnow-dry-run.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/migration-heritage-snapshot.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/mutation-guard-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/physical-plan.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/preflight-audit.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/reference-study.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/request-manifest.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/rollback-plan.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/validation-results.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-corrective-refinement-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual-validation-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/working-tree-classification.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-entry.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-form-focus.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-empty-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-error-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-result-actions.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/small-mobile-adaptive-report.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-entry.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-form-focus.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-empty-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-error-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-result-actions.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/large-mobile-adaptive-report.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-entry.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-form-focus.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-empty-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-error-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-result-actions.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/tablet-adaptive-report.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-entry.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-form-focus.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-empty-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-error-state.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-result-actions.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/desktop-adaptive-report.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop-aviso-approved-source.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile-aviso-approved-source.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-desktop.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/comparison-mobile.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Operation-specific validator, transform, governed report or approved visual evidence.",
+      "evidence": "scopeGroups.TESTS_AND_REPORTS",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "assets/js/global-layout.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": " M",
+      "path": "assets/js/editorial-metadata.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "scripts/validate-public-asset-integrity.js",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/public-asset-integrity-report.json",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-header.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-mobile-footer.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-header.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-file-desktop-footer.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-header.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-mobile-footer.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-header.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    },
+    {
+      "gitStatus": "??",
+      "path": "data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/asset-integrity-http-desktop-footer.png",
+      "classification": "SAQUE_ANIVERSARIO_FGTS_MIGRATION",
+      "reason": "Approved shared asset-resolution correction, protocol gate or its visual evidence.",
+      "evidence": "scopeGroups.PUBLIC_ASSET_INTEGRITY",
+      "includeInCommit": true
+    }
+  ]
+}

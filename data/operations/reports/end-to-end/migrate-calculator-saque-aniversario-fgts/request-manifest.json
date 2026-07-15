@@ -1,0 +1,30 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "requestType": "MIGRATE_TO_NEW_STANDARD",
+  "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+  "executionMode": "CONTROLLED_EXECUTION_LOCAL_NOT_DEPLOYED",
+  "requestedBy": "user",
+  "objective": "Migrate the existing Saque-Aniversario FGTS calculator to the canonical calculator experience and fgts.saque-aniversario@1.0.0-rc.1.",
+  "assetScope": [
+    "calculator:saque-aniversario-fgts"
+  ],
+  "assetTypes": [
+    "calculator"
+  ],
+  "publicationIntent": false,
+  "indexingIntent": "DRY_RUN_ONLY",
+  "manualApprovalRequired": true,
+  "manualApprovalSource": "explicit user request dated 2026-07-15",
+  "rollbackRequired": true,
+  "dryRun": false,
+  "constraints": [
+    "preserve URL, canonical, title, description and H1",
+    "preserve useful editorial heritage, FAQ, disclaimer and internal links",
+    "consume the reconciled governed rule",
+    "no commit",
+    "no push",
+    "no deploy",
+    "no publication",
+    "no real IndexNow"
+  ]
+}

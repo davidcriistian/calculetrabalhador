@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "calculator:saque-aniversario-fgts and required governed integrations",
+  "historicalBaselineChanged": false,
+  "canonicalRuleFileChanged": false,
+  "otherCalculatorPagesChanged": 0,
+  "otherRuleFilesChanged": 0,
+  "articlesChanged": 0,
+  "homeChanged": false,
+  "guidesChanged": 0,
+  "otherCatalogEntriesChanged": 0,
+  "otherSitemapEntriesChanged": 0,
+  "unrelatedPathsChanged": 0,
+  "commit": false,
+  "push": false,
+  "deploy": false,
+  "publication": false,
+  "indexNowSend": false,
+  "tag": false,
+  "amend": false
+}

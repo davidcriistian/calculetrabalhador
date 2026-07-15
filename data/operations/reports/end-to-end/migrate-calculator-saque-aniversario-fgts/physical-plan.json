@@ -1,0 +1,20 @@
+{
+  "status": "EXECUTED_WITHIN_ALLOWED_SCOPE",
+  "changeType": "EXISTING_PAGE_CONTROLLED_UPDATE",
+  "publicRoute": "/saque-aniversario-fgts/",
+  "allowedAreas": [
+    "target page",
+    "target runtime",
+    "governed rule projection",
+    "shared rule helper",
+    "typed consumers",
+    "target metadata",
+    "target catalog metadata",
+    "target Registry and Publishing",
+    "target sitemap entry",
+    "validators",
+    "operation reports and visual evidence"
+  ],
+  "unrelatedPublicPages": "UNCHANGED",
+  "rollback": "/data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/rollback-plan.json"
+}

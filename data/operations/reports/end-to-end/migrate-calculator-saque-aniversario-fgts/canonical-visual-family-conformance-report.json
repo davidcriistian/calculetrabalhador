@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "gate": "CANONICAL_VISUAL_FAMILY_CONFORMANCE",
+  "previousHumanDecision": "PASS_WITH_BLOCKING_ASSET_BUG",
+  "finalHumanDecision": "PASS",
+  "assetBugResolution": "PUBLIC_ASSET_INTEGRITY_PASS",
+  "previousImplementationStatus": "MIGRATION_VISUAL_IMPLEMENTATION_INCOMPLETE",
+  "reference": "calculator:calculadora-aviso-previo",
+  "target": "calculator:saque-aniversario-fgts",
+  "deterministicChecks": "28/28",
+  "sharedSystem": [
+    "Tailwind visual tokens",
+    "global identity",
+    "dark layered hero",
+    "breadcrumb and badge",
+    "benefit cards and initial CTA",
+    "discovery block",
+    "max-w-6xl rhythm",
+    "guided simulator plus aside",
+    "numbered step cards",
+    "conference action card",
+    "sequential empty and result states",
+    "dominant primary result",
+    "secondary metrics",
+    "interpretation",
+    "auditable memory",
+    "reproducible summary",
+    "limitations and next steps",
+    "distinct actions",
+    "adaptive report",
+    "editorial and FAQ cards",
+    "responsive breakpoints"
+  ],
+  "legacyShellMarkers": 0,
+  "comparisonEvidence": {
+    "desktop": "visual/comparison-desktop.png",
+    "mobile": "visual/comparison-mobile.png"
+  },
+  "publicAssetIntegrity": "PASS",
+  "humanVisualReviewReady": true,
+  "humanApprovalAfterAssetCorrection": "PASS"
+}

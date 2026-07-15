@@ -1,0 +1,100 @@
+{
+  "status": "VISUAL_VALIDATION_PASSED",
+  "previousEvidenceDecision": "INVALIDATED_AS_CANONICAL_CONFORMANCE_PROOF",
+  "previousHumanConformance": "FAIL",
+  "humanVisualReconstructionDecision": "APPROVED_WITH_BLOCKING_ASSET_BUG_CORRECTED",
+  "browserExecuted": true,
+  "browser": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "viewports": [
+    {
+      "id": "small-mobile",
+      "width": 320,
+      "height": 800
+    },
+    {
+      "id": "large-mobile",
+      "width": 430,
+      "height": 900
+    },
+    {
+      "id": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "statesPerViewport": [
+    "entry",
+    "form-focus",
+    "empty-state",
+    "error-state",
+    "result",
+    "result-actions",
+    "adaptive-report"
+  ],
+  "stateEvidenceCount": 28,
+  "comparisonEvidence": [
+    "comparison-desktop.png",
+    "comparison-mobile.png"
+  ],
+  "comparisonSourceEvidence": [
+    "comparison-desktop-aviso-approved-source.png",
+    "comparison-mobile-aviso-approved-source.png"
+  ],
+  "assetIntegrityEvidence": [
+    "asset-integrity-file-mobile-header.png",
+    "asset-integrity-file-mobile-footer.png",
+    "asset-integrity-file-desktop-header.png",
+    "asset-integrity-file-desktop-footer.png",
+    "asset-integrity-http-mobile-header.png",
+    "asset-integrity-http-mobile-footer.png",
+    "asset-integrity-http-desktop-header.png",
+    "asset-integrity-http-desktop-footer.png"
+  ],
+  "totalEvidenceCount": 40,
+  "evidenceDirectory": "/data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/visual/",
+  "checks": {
+    "bodyOverflow": "PASS",
+    "documentOverflow": "PASS",
+    "horizontalScrollShift": "PASS_ZERO",
+    "focus": "PASS",
+    "error": "PASS",
+    "empty": "PASS",
+    "validResult": "PASS_STATE_WAITED_AND_ASSERTED",
+    "actions": "PASS",
+    "A4Report": "PASS_STATE_WAITED_AND_ASSERTED",
+    "recommendationHidden": "PASS",
+    "canonicalVisualFamilyConformance": "PASS_28_OF_28",
+    "publicAssetIntegrity": "PASS"
+  },
+  "runtimeModes": {
+    "fileProtocol": {
+      "status": "PASS",
+      "ruleSource": "governed-derived-fallback"
+    },
+    "httpLocal": {
+      "status": "PASS",
+      "ruleSource": "governed-aggregate-json"
+    }
+  },
+  "manualInspection": [
+    "desktop comparison",
+    "mobile comparison",
+    "desktop entry",
+    "desktop result",
+    "desktop actions",
+    "desktop adaptive report",
+    "large mobile entry",
+    "large mobile result",
+    "file mobile header and footer logos",
+    "HTTP desktop header and footer logos"
+  ],
+  "publicGovernanceMetadataVisible": false,
+  "falseVisualPass": false,
+  "humanVisualReviewReady": true,
+  "humanApprovalAfterAssetCorrection": "PASS"
+}

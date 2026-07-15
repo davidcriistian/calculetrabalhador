@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "gate": "PUBLIC_ASSET_INTEGRITY",
+  "target": "calculator:saque-aniversario-fgts",
+  "humanAcceptance": "PASS",
+  "rootCause": "The shared global layout emitted root-absolute /assets URLs. Under file:// the browser resolved them against the disk root as file:///C:/assets instead of the project root.",
+  "previousPaths": {
+    "header": "/assets/images/logo-header.png",
+    "footer": "/assets/images/logo-footer.png",
+    "drawerIcons": "/assets/images/menu-icons/*.png",
+    "favicons": "/<favicon-or-touch-file>"
+  },
+  "correctedResolution": {
+    "strategy": "Resolve institutional image URLs relative to document.currentScript.src in global-layout.js; use route-relative ../ root favicon URLs on the target page.",
+    "fileProtocol": {
+      "header": "file://<workspace>/assets/images/logo-header.png",
+      "footer": "file://<workspace>/assets/images/logo-footer.png"
+    },
+    "httpAndPublicProtocol": {
+      "header": "/assets/images/logo-header.png",
+      "footer": "/assets/images/logo-footer.png"
+    }
+  },
+  "officialAssetsReused": [
+    "assets/images/logo-header.png",
+    "assets/images/logo-footer.png",
+    "assets/images/menu-icons/*.png"
+  ],
+  "newBrandCopiesCreated": 0,
+  "protocolViewportMatrix": {
+    "fileMobile": "PASS",
+    "fileDesktop": "PASS",
+    "httpMobile": "PASS",
+    "httpDesktop": "PASS"
+  },
+  "checks": {
+    "headerLogo": {
+      "status": "PASS",
+      "naturalWidth": 1482
+    },
+    "footerLogo": {
+      "status": "PASS",
+      "naturalWidth": 1516
+    },
+    "requiredImages": "6/6 PASS",
+    "iconsAndTouchImages": "5/5 PASS",
+    "fonts": "PASS",
+    "asset404": 0,
+    "networkFailures": 0,
+    "consolePathErrors": 0,
+    "horizontalOverflow": false
+  },
+  "evidence": [
+    "visual/asset-integrity-file-mobile-header.png",
+    "visual/asset-integrity-file-mobile-footer.png",
+    "visual/asset-integrity-file-desktop-header.png",
+    "visual/asset-integrity-file-desktop-footer.png",
+    "visual/asset-integrity-http-mobile-header.png",
+    "visual/asset-integrity-http-mobile-footer.png",
+    "visual/asset-integrity-http-desktop-header.png",
+    "visual/asset-integrity-http-desktop-footer.png"
+  ],
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false,
+    "indexNowSend": false,
+    "tag": false,
+    "amend": false
+  }
+}

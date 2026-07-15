@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "outcome": "MIGRATED_SAQUE_ANIVERSARIO_FGTS_VALIDATED",
+  "legallyReconciledBaseline": "42/42",
+  "baselineLogicalChecksum": "33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841",
+  "canonicalBands": "7/7",
+  "boundaryScenarios": "17/17",
+  "canonicalFixtures": "26/26",
+  "unexplainedDivergences": 0,
+  "mathematicalDivergences": 0,
+  "migrationFoundationFixtures": "20/20",
+  "calculatorExperienceFixtures": "24/24",
+  "canonicalVisualFamilyConformance": "28/28 PASS",
+  "publicAssetIntegrity": "PASS_FILE_AND_HTTP_MOBILE_AND_DESKTOP",
+  "humanAcceptance": {
+    "visual": "PASS",
+    "calculation": "PASS"
+  },
+  "governance": "PASS",
+  "portfolioRegressions": {
+    "avisoPrevio": "60/60 plus 18 intentional corrections",
+    "reservaFinanceiraPj": "9/9",
+    "feriasPj": "9/9",
+    "reservaEmergenciaPjArticle": "PASS"
+  },
+  "homeDistribution": {
+    "static": "16/16",
+    "fixtures": "24/24",
+    "browser": "PASS_4_VIEWPORTS_PLUS_2_FAIL_SAFE",
+    "mobileTablet": "CAROUSEL_MAX_6",
+    "desktop": "GRID_MAX_9",
+    "duplicates": 0,
+    "crossNucleusOverlap": 0,
+    "pageOverflow": false
+  },
+  "editorialWords": 1183,
+  "faqVisibleSchemaParity": "EXACT",
+  "internalLinks": "6 inherited plus canonical breadcrumb PASS",
+  "seoHeritage": "PASS",
+  "registryPublishing": "PASS",
+  "sitemap": "PASS",
+  "reportActions": "PASS",
+  "visualEvidence": "PASS_4_VIEWPORTS_7_STATES_28_PNG_PLUS_2_COMPARISONS_PLUS_8_ASSET_INTEGRITY_PNG",
+  "publicExperienceBoundary": "PASS_NO_INTERNAL_GOVERNANCE_METADATA_VISIBLE",
+  "localRuntime": {
+    "fileProtocol": "PASS_GOVERNED_DERIVED_FALLBACK",
+    "httpLocal": "PASS_GOVERNED_AGGREGATE_JSON"
+  },
+  "renderedFormCases": "17/17",
+  "idempotency": "PASS_NO_CHANGE_REQUIRED"
+}

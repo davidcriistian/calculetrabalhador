@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "sourceHead": "2204a2da525ab5c765982965d803041c1f237b2f",
+  "workingTreeInitially": "CLEAN",
+  "stagingInitially": "EMPTY",
+  "pendingPathsOwnership": "EXCLUSIVE_TO_MIGRATION_OPERATION",
+  "expectedSharedIntegrations": [
+    "assets/js/tabelas-trabalhistas.js",
+    "data/tabelas-trabalhistas.json",
+    "scripts/transform-rules.js",
+    "data/core/update/governed-rule-consumers.json",
+    "data/core/update/fgts-saque-aniversario-projection.contract.json",
+    "target-only catalog, metadata, Registry, Publishing and sitemap records"
+  ],
+  "unexpectedPaths": [],
+  "publicMutation": {
+    "targetCalculator": true,
+    "otherCalculators": false,
+    "articles": false,
+    "home": false,
+    "guides": false
+  },
+  "ruleMutation": false,
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false,
+    "indexNowSend": false,
+    "tag": false,
+    "amend": false
+  }
+}

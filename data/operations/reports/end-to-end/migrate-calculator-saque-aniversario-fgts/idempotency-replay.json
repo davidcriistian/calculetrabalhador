@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "migrationScript": "NO_CHANGE_REQUIRED",
+  "canonicalProjection": "NO_CHANGE_REQUIRED",
+  "assetDuplicates": 0,
+  "catalogDuplicates": 0,
+  "registryDuplicates": 0,
+  "publishingDuplicates": 0,
+  "sitemapUrlCount": 1,
+  "replayDecision": "SKIPPED_ALREADY_COMPLIANT"
+}

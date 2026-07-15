@@ -1,0 +1,46 @@
+{
+  "status": "PASS_HUMAN_APPROVED",
+  "provisionalStatusBeforeCorrection": "MIGRATION_VISUAL_IMPLEMENTATION_INCOMPLETE",
+  "rootCause": "The target used a bespoke legacy CSS shell and simultaneous form/result columns; the previous validator measured rendering and overflow but did not compare against an approved canonical calculator.",
+  "correction": [
+    "replaced legacy shell with the approved dark gradient hero",
+    "added breadcrumb, contextual badge, four benefits and initial CTA",
+    "added O que voce vai descobrir",
+    "converted simulator into numbered guided cards and a conference card",
+    "moved empty state and result into a sequential report journey",
+    "adopted dominant result, secondary metrics, interpretation, memory, summary, limitations, next steps and canonical actions",
+    "wrapped preserved editorial content and FAQ in canonical cards",
+    "added deterministic family-conformance gate and real desktop/mobile comparisons",
+    "hardened visual capture to wait for result and report states"
+  ],
+  "preserved": [
+    "URL",
+    "canonical",
+    "title",
+    "description",
+    "H1",
+    "governed rule and projection",
+    "42/42 baseline",
+    "7/7 bands",
+    "17/17 boundaries",
+    "visible governed table",
+    "FAQ and FAQPage",
+    "useful editorial content",
+    "six inherited internal calculator links",
+    "disclaimer"
+  ],
+  "previousEvidence": "INVALIDATED",
+  "regeneratedEvidence": "28 state PNGs plus desktop/mobile comparisons",
+  "canonicalVisualFamilyConformance": "PASS",
+  "humanVisualReviewReady": true,
+  "humanApprovalAfterCorrection": "PASS",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false,
+    "indexNowSend": false,
+    "tag": false,
+    "amend": false
+  }
+}

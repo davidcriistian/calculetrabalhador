@@ -1,0 +1,23 @@
+{
+  "status": "PILOT_2_APPROVED_FOR_SELECTIVE_LOCAL_CHECKPOINT",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-15",
+  "approvedScope": "Migrate calculator:saque-aniversario-fgts using fgts.saque-aniversario@1.0.0-rc.1 and deliver-asset-end-to-end.",
+  "approvedUrl": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+  "humanAcceptance": {
+    "visual": "PASS",
+    "calculation": "PASS",
+    "publicAssetIntegrity": "PASS",
+    "canonicalVisualFamilyConformance": "PASS"
+  },
+  "checkpointCommitAuthorized": true,
+  "excludedScope": [
+    "push",
+    "deploy",
+    "publication",
+    "real IndexNow",
+    "tag",
+    "amend"
+  ],
+  "canonicalRuleApproval": "inherited from completed canonical reconciliation"
+}

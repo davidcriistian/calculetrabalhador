@@ -1,0 +1,30 @@
+{
+  "id": "saque-aniversario-fgts",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "type": "calculator",
+  "slug": "saque-aniversario-fgts",
+  "status": "published",
+  "approvalStatus": "approved-explicit-controlled-migration",
+  "relationshipStatus": "existing-fgts-cluster-preserved",
+  "publishingStatus": "published-local-migration-not-deployed",
+  "runtimeStatus": "governed-public-consumer",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "calculatorStandard": "1.3",
+  "calculatorExperienceContract": "1.2.0",
+  "migrationContract": "1.0.0",
+  "governedRule": "fgts.saque-aniversario@1.0.0-rc.1",
+  "references": [
+    "/saque-aniversario-fgts/index.html",
+    "/data/rules/fgts.json",
+    "/data/core/update/fgts-saque-aniversario-projection.contract.json",
+    "/data/tabelas-trabalhistas.json",
+    "/assets/js/saque-aniversario-fgts.js",
+    "/data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/final-operation-report.json"
+  ],
+  "notes": [
+    "Existing URL, SEO identity, useful editorial heritage and internal-link intent are preserved.",
+    "Calculation, visible table, memory and report consume the same governed FGTS projection.",
+    "The public asset is migrated locally; deploy and external publication are outside this operation."
+  ]
+}

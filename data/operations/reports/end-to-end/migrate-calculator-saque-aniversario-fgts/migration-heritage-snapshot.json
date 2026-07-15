@@ -1,0 +1,24 @@
+{
+  "status": "MIGRATION_HERITAGE_PRESERVED",
+  "sourceHead": "2204a2da525ab5c765982965d803041c1f237b2f",
+  "sourcePageSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+  "migratedPageSha256": "8ff2e8d3a915797b52f658bcb669b66d3f0b8b4c06937061bd40c5ea608616b2",
+  "preserved": {
+    "url": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+    "canonical": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+    "title": "Calculadora de Saque Aniversario FGTS 2026",
+    "description": "Calcule o valor do seu saque aniversario FGTS 2026 com base nas aliquotas oficiais da Lei 8.036/90. Simule quanto voce pode sacar do seu FGTS.",
+    "h1": "Calculadora de Saque Aniversario FGTS 2026",
+    "inheritedInternalLinks": 6,
+    "faqQuestions": 5,
+    "disclaimer": true,
+    "editorialWords": 1183
+  },
+  "governedCorrections": [
+    "visible final band label is Acima de R$ 20.000,00",
+    "visible FAQ and FAQPage are synchronized",
+    "return-to-rescission wording uses first day of the 25th month"
+  ],
+  "visualCorrection": "Public information was regrouped into the approved calculator experience without changing governed mathematics.",
+  "silentDeletions": 0
+}

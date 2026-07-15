@@ -1,0 +1,15 @@
+{
+  "status": "READY",
+  "sourceHead": "2204a2da525ab5c765982965d803041c1f237b2f",
+  "targetPageSnapshotSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+  "migratedPageSha256": "8ff2e8d3a915797b52f658bcb669b66d3f0b8b4c06937061bd40c5ea608616b2",
+  "historicalBaselineSha256": "b47f94aec3f60287def6c108dc39a3ff59b1019e364d3c7fca40a349a51d5571",
+  "strategy": "Restore only operation-modified tracked paths from sourceHead and remove only operation-created runtime, Registry, Publishing, validators, capture scripts, reports and visual evidence after explicit approval.",
+  "safety": [
+    "do not use destructive reset",
+    "do not activate an ungoverned legacy fallback",
+    "preserve the historical baseline",
+    "require explicit approval before rollback"
+  ],
+  "canonicalGuard": "The canonical rule reconciliation is already part of sourceHead and must not be rolled back by this public migration rollback."
+}

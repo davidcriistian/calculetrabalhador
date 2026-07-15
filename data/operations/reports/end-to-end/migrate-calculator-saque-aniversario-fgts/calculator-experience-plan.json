@@ -1,0 +1,30 @@
+{
+  "status": "CALCULATOR_EXPERIENCE_PLAN_APPROVED",
+  "formComplexityClass": "GUIDED_SINGLE_FINANCIAL_INPUT",
+  "formJustification": "One essential balance input with optional birth-month context.",
+  "resultExperienceClass": "AUDITABLE_FINANCIAL_REPORT",
+  "resultJustification": "The result must expose band, percentage, additional amount, remaining balance, interpretation and memory.",
+  "calculationMemoryLevel": "AUDITABLE_MEMORY",
+  "brandTheme": "INSTITUTIONAL_BLUE",
+  "visualFamilyReference": "calculator:calculadora-aviso-previo",
+  "updatedAt": "2026-07-15",
+  "editorialWords": 1183,
+  "recommendationSlot": {
+    "id": "CANONICAL_RESULT_RECOMMENDATION_SLOT",
+    "state": "NOT_CONFIGURED",
+    "rendering": "HIDDEN"
+  },
+  "adaptiveReportDeclarations": [
+    "REPORT_INPUT_FIELDS",
+    "REPORT_PRIMARY_RESULT",
+    "REPORT_SECONDARY_RESULTS",
+    "REPORT_MEMORY_SECTIONS",
+    "REPORT_INTERPRETATION",
+    "REPORT_LIMITATIONS"
+  ],
+  "actions": {
+    "COPY_RESULT": "short calculation summary",
+    "PRINT_RESULT": "isolated A4 HTML report",
+    "DOWNLOAD_REPORT": "structured selectable PDF"
+  }
+}

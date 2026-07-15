@@ -19,18 +19,18 @@
       "cluster": null,
       "currentSource": "data/tools.json",
       "existingDependencies": [
-        "fgts"
+        "fgts.saque-aniversario"
       ],
       "primaryCoreDomain": "fgts",
       "secondaryCoreDomains": [],
       "relatedRules": [
-        "fgts"
+        "fgts.saque-aniversario"
       ],
       "migrationReadiness": "ready",
-      "migrationStatus": "future",
-      "coreStatus": "not-connected",
-      "risk": "medium",
-      "observations": "Sem dependência explícita de arquivo de runtime no mapa atual."
+      "migrationStatus": "migrated",
+      "coreStatus": "connected",
+      "risk": "low",
+      "observations": "Cálculo, tabela visível, memória e relatório consomem a projeção governada fgts.saque-aniversario@1.0.0-rc.1."
     },
     {
       "id": "salario-liquido-clt",

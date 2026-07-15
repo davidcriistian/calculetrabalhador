@@ -1,8 +1,8 @@
 {
   "id": "fgts-saque-aniversario-governed-projection-contract",
-  "version": "1.0.0",
-  "status": "canonical-rule-ready-public-migration-pending",
-  "runtimeStatus": "internal-governance-only",
+  "version": "1.1.0",
+  "status": "migrated-governed-public-consumer",
+  "runtimeStatus": "public-governed-runtime-connected",
   "createdAt": "2026-07-15",
   "updatedAt": "2026-07-15",
   "sourceRuleId": "fgts.saque-aniversario",
@@ -23,28 +23,28 @@
     "calculationAndVisibleTableShareBands": true,
     "independentBandHardcodesAllowedAfterMigration": false,
     "forbiddenState": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_TABLE",
-    "publicConnectionAuthorizedThisPhase": false
+    "publicConnectionAuthorizedThisPhase": true
   },
   "projections": {
     "SAQUE_ANIVERSARIO_CALCULATION_PROJECTION": {
-      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "status": "GOVERNED_PUBLIC_CONNECTED",
       "source": "projectionPayload.bands + projectionPayload.formula + projectionPayload.rounding",
       "futureTarget": "data/tabelas-trabalhistas.json#saqueAniversario through assets/js/tabelas-trabalhistas.js",
-      "currentPublicMode": "LEGACY_DECLARED_PENDING_MIGRATION",
-      "publicConnectionAuthorized": false
+      "currentPublicMode": "GOVERNED_PUBLIC_CONSUMER",
+      "publicConnectionAuthorized": true
     },
     "VISIBLE_TABLE_PROJECTION": {
-      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "status": "GOVERNED_PUBLIC_CONNECTED",
       "source": "projectionPayload.bands",
       "futureTarget": "saque-aniversario-fgts/index.html#fgts-rates-body",
       "lastBandLabel": "Acima de R$ 20.000,00",
-      "currentPublicLabel": "Acima de R$ 20.000,01",
-      "currentDifference": "APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION",
+      "currentPublicLabel": "Acima de R$ 20.000,00",
+      "currentDifference": "NONE",
       "mathematicalImpact": false,
-      "publicConnectionAuthorized": false
+      "publicConnectionAuthorized": true
     },
     "MEMORY_PROJECTION": {
-      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "status": "GOVERNED_PUBLIC_CONNECTED",
       "source": "same selected band and calculation result",
       "fields": [
         "inputBalance",
@@ -58,14 +58,14 @@
         "fingerprint"
       ],
       "independentHardcodesAllowed": false,
-      "publicConnectionAuthorized": false
+      "publicConnectionAuthorized": true
     },
     "REPORT_PROJECTION": {
-      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "status": "GOVERNED_PUBLIC_CONNECTED",
       "source": "same calculation and memory projection",
       "futureTarget": "adaptive calculator report",
       "mustInclude": ["ruleVersion", "fingerprint", "selectedBand", "formula", "rounding"],
-      "publicConnectionAuthorized": false
+      "publicConnectionAuthorized": true
     },
     "VALIDATION_PROJECTION": {
       "status": "GOVERNED_CONFIRMED",
@@ -80,7 +80,7 @@
   },
   "fallback": {
     "decision": "REPLACE_WITH_DERIVED_FALLBACK",
-    "currentPublicFallbackStatus": "LEGACY_DECLARED_PENDING_MIGRATION",
+    "currentPublicFallbackStatus": "GOVERNED_DERIVED_FALLBACK_ACTIVE_ONLY_ON_SOURCE_UNAVAILABLE",
     "legacyFallbackAllowedAfterMigration": false,
     "futureFallback": {
       "origin": "data/rules/fgts.json#rules.saqueAniversario.projectionPayload",
@@ -98,7 +98,7 @@
     },
     "silentFallbackAllowed": false,
     "fallbackMayOverrideCanonicalSource": false,
-    "publicMutationThisPhase": false
+    "publicMutationThisPhase": true
   },
   "staleDetection": {
     "states": [
@@ -121,8 +121,8 @@
       "unregisteredVersion": "UNKNOWN_VERSION",
       "allInternalVersionsFingerprintsAndFixturesMatch": "SYNCED"
     },
-    "knownPublicLegacyState": "LEGACY_DECLARED_PENDING_MIGRATION",
-    "knownPublicLabelDifference": "APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION",
+    "knownPublicLegacyState": "INACTIVE",
+    "knownPublicLabelDifference": "NONE",
     "publicationOnStale": "BLOCKED",
     "automaticPublication": false
   },
@@ -130,12 +130,12 @@
     "status": "LEGAL_REVIEW_RESOLVED",
     "unresolvedObjectiveLegalOrMathDivergences": 0,
     "controlledMigrationReadiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION",
-    "publicMigrationExecuted": false
+    "publicMigrationExecuted": true
   },
   "boundaries": {
-    "changesPublicCalculator": false,
-    "changesPublicRuntime": false,
-    "changesPublicContent": false,
+    "changesPublicCalculator": true,
+    "changesPublicRuntime": true,
+    "changesPublicContent": true,
     "changesCatalog": false,
     "changesSitemap": false,
     "changesRegistryPublishing": false,

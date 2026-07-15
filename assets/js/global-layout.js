@@ -1,9 +1,14 @@
 (function () {
+  const scriptUrl = document.currentScript && document.currentScript.src
+    ? new URL(document.currentScript.src)
+    : new URL('assets/js/global-layout.js', document.baseURI);
+  const institutionalAsset = (relativePath) => new URL(`../${relativePath.replace(/^\/+/, '')}`, scriptUrl).href;
+
   const NAV_ITEMS = [
-    { href: '/ferramentas/', label: 'Calculadoras', icon: '/assets/images/menu-icons/calculator.png', match: ['calculadora-', 'salario-liquido', 'saque-aniversario-fgts', 'ferramentas'] },
-    { href: '/blog/', label: 'Blog', icon: '/assets/images/menu-icons/blog.png', match: ['blog'] },
-    { href: '/sobre/', label: 'Sobre', icon: '/assets/images/menu-icons/user.png', match: ['sobre'] },
-    { href: '/contato/', label: 'Contato', icon: '/assets/images/menu-icons/contact.png', match: ['contato'] }
+    { href: '/ferramentas/', label: 'Calculadoras', icon: institutionalAsset('images/menu-icons/calculator.png'), match: ['calculadora-', 'salario-liquido', 'saque-aniversario-fgts', 'ferramentas'] },
+    { href: '/blog/', label: 'Blog', icon: institutionalAsset('images/menu-icons/blog.png'), match: ['blog'] },
+    { href: '/sobre/', label: 'Sobre', icon: institutionalAsset('images/menu-icons/user.png'), match: ['sobre'] },
+    { href: '/contato/', label: 'Contato', icon: institutionalAsset('images/menu-icons/contact.png'), match: ['contato'] }
   ];
 
   const FOOTER_LINKS = [
@@ -53,7 +58,7 @@
           </button>
 
           <a class="ct-global-logo" href="/" aria-label="Calcule Trabalhador">
-            <img class="ct-global-logo__img" src="/assets/images/logo-header.png" alt="Calcule Trabalhador">
+            <img class="ct-global-logo__img" src="${institutionalAsset('images/logo-header.png')}" alt="Calcule Trabalhador">
           </a>
 
           <nav class="ct-global-nav" aria-label="Navegação principal">
@@ -87,7 +92,7 @@
         <div class="ct-global-footer__inner">
           <div class="ct-global-footer__top">
             <a class="ct-global-footer__brand" href="/" aria-label="Calcule Trabalhador">
-              <img class="ct-global-footer__logo" src="/assets/images/logo-footer.png" alt="Calcule Trabalhador">
+              <img class="ct-global-footer__logo" src="${institutionalAsset('images/logo-footer.png')}" alt="Calcule Trabalhador">
             </a>
             <nav class="ct-global-footer__links" aria-label="Links institucionais">
               ${footerLinks()}

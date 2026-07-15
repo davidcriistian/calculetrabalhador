@@ -208,9 +208,24 @@
         "aliquota": 0.05,
         "percentual": 5,
         "parcelaAdicional": 2900,
-        "rotulo": "Acima de R$ 20.000,01"
+        "rotulo": "Acima de R$ 20.000,00"
       }
-    ]
+    ],
+    "ruleId": "fgts.saque-aniversario",
+    "ruleVersion": "1.0.0-rc.1",
+    "sourceProjectionFingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+    "updatedAt": "2026-07-15",
+    "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+    "formula": {
+      "withdrawal": "balance * rate + additionalAmount",
+      "remainingBalance": "max(balance - withdrawal, 0)"
+    },
+    "rounding": {
+      "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+      "stage": "final outputs",
+      "moneyScale": 2
+    },
+    "invalidBehavior": "EMPTY_ZERO_OUTPUT"
   },
   "ferias": {
     "tercoConstitucional": 0.3333333333333333,

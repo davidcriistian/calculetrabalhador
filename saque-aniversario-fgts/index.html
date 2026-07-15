@@ -7,1102 +7,180 @@
   <meta name="description" content="Calcule o valor do seu saque anivers&aacute;rio FGTS 2026 com base nas al&iacute;quotas oficiais da Lei 8.036/90. Simule quanto voc&ecirc; pode sacar do seu FGTS." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://calculetrabalhador.com.br/saque-aniversario-fgts/" />
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Calcule Trabalhador" />
   <meta property="og:title" content="Calculadora de Saque Anivers&aacute;rio FGTS 2026" />
   <meta property="og:description" content="Simule quanto voc&ecirc; pode sacar do FGTS pelo Saque Anivers&aacute;rio 2026 com tabela de al&iacute;quotas e parcela adicional." />
   <meta property="og:url" content="https://calculetrabalhador.com.br/saque-aniversario-fgts/" />
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/global-layout.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    input, select, button { box-sizing: border-box; line-height: 1.35; }
+    input, select { min-height: 50px; min-width: 0; max-width: 100%; }
+    select { padding-right: 2.75rem; }
+    .editorial-metadata-line { margin: 14px 0 0; color: #dbeafe; font-size: .82rem; font-weight: 700; }
+    [hidden] { display: none !important; }
+    .report-only { display: none; }
+    @media print {
+      #global-header, #global-footer, main { display: none !important; }
+      .report-only { display: block; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Posso sacar o FGTS se pedir demissao estando no Saque Aniversario?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nao. Quem esta no Saque Aniversario e pede demissao ou e demitido por justa causa perde o direito ao saldo total do FGTS. Em caso de demissao sem justa causa, recebe apenas a multa rescisoria de 40% sobre o saldo, mas nao pode sacar o restante."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como aderir ao Saque Aniversario?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A adesao pode ser feita pelo aplicativo FGTS, pelo site da Caixa Economica Federal ou presencialmente em uma agencia da Caixa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso voltar para o Saque Rescisao depois de aderir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, mas existe um periodo de carencia de 24 meses apos a solicitacao de cancelamento. Durante esse periodo, o trabalhador ainda segue as regras do Saque Aniversario."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que acontece se eu nao sacar no meu mes de aniversario?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O trabalhador tem o mes de aniversario e os dois meses seguintes para realizar o saque. Se nao sacar dentro do prazo, o valor retorna para a conta do FGTS."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O calculo considera contas ativas e inativas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. O calculo considera a soma dos saldos das contas ativas e inativas do FGTS."
-        }
-      }
+      {"@type":"Question","name":"Posso sacar o FGTS se pedir demissao estando no Saque Aniversario?","acceptedAnswer":{"@type":"Answer","text":"Nao. Quem esta no Saque Aniversario e pede demissao ou e demitido por justa causa nao pode sacar o saldo total do FGTS. Em caso de demissao sem justa causa, recebe a multa rescisoria de 40%, mas o restante do saldo permanece na conta."}},
+      {"@type":"Question","name":"Como aderir ao Saque Aniversario?","acceptedAnswer":{"@type":"Answer","text":"A adesao pode ser feita pelo aplicativo FGTS, pelo site da Caixa Economica Federal ou presencialmente em uma agencia da Caixa."}},
+      {"@type":"Question","name":"Posso voltar para o Saque Rescisao depois de aderir?","acceptedAnswer":{"@type":"Answer","text":"Sim. A mudanca para o Saque Rescisao produz efeito no primeiro dia do 25o mes apos a solicitacao, desde que nao exista operacao de antecipacao impeditiva. Ate la, continuam valendo as regras do Saque Aniversario."}},
+      {"@type":"Question","name":"O que acontece se eu nao sacar no meu mes de aniversario?","acceptedAnswer":{"@type":"Answer","text":"O trabalhador tem o mes de aniversario e os dois meses seguintes para realizar o saque. Se nao sacar dentro do prazo, o valor retorna para a conta do FGTS."}},
+      {"@type":"Question","name":"O calculo considera contas ativas e inativas?","acceptedAnswer":{"@type":"Answer","text":"Sim. O calculo considera a soma dos saldos das contas ativas e inativas do FGTS."}}
     ]
   }
   </script>
-
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --surface-soft: #eff6ff;
-      --text: #0f172a;
-      --muted: #475569;
-      --line: #dbe3ef;
-      --blue: #1d4ed8;
-      --blue-dark: #1e40af;
-      --green: #15803d;
-      --red-bg: #fef2f2;
-      --red-line: #fecaca;
-      --red-text: #991b1b;
-      --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
-    }
-
-    .site-header-inner {
-      max-width: 1180px;
-      height: 68px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .site-menu-button,
-    .site-menu-close {
-      width: 40px;
-      height: 40px;
-      border: 0;
-      border-radius: 10px;
-      background: transparent;
-      color: #334155;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      padding: 0;
-      flex-shrink: 0;
-    }
-
-    .site-menu-button:hover,
-    .site-menu-close:hover {
-      background: #f1f5f9;
-      color: var(--blue);
-    }
-
-    .site-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--text);
-    }
-
-    .site-logo-icon {
-      width: 44px;
-      height: 44px;
-      border: 2.5px solid var(--blue);
-      border-radius: 12px;
-      background: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .site-logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
-
-    .site-logo-main {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 0;
-    }
-
-    .site-logo-sub {
-      margin-top: 3px;
-      font-size: 11px;
-      font-weight: 800;
-      color: var(--blue);
-      letter-spacing: 0.12em;
-    }
-
-    .site-menu-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 40;
-      background: rgba(15, 23, 42, 0.42);
-      backdrop-filter: blur(2px);
-    }
-
-    .site-menu-overlay[hidden] {
-      display: none;
-    }
-
-    .site-menu-drawer {
-      position: fixed;
-      inset: 0 auto 0 0;
-      z-index: 50;
-      width: min(280px, 88vw);
-      background: #fff;
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
-      transform: translateX(-100%);
-      transition: transform 0.2s ease-out;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .site-menu-drawer.is-open {
-      transform: translateX(0);
-    }
-
-    .site-menu-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .site-menu-nav {
-      flex: 1;
-      overflow-y: auto;
-      padding: 12px;
-    }
-
-    .site-menu-nav a {
-      display: block;
-      border-radius: 10px;
-      padding: 12px 16px;
-      color: #334155;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .site-menu-nav a:hover {
-      background: #eff6ff;
-      color: var(--blue);
-    }
-
-    .site-menu-nav a[aria-current="page"] {
-      background: #eff6ff;
-      color: var(--blue);
-      font-weight: 800;
-    }
-
-    .site-menu-footer {
-      border-top: 1px solid var(--line);
-      padding: 16px 20px;
-      color: #94a3b8;
-      font-size: 12px;
-    }
-
-    .hero {
-      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 44px 20px 34px;
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    h1 {
-      max-width: 840px;
-      margin: 0 0 14px;
-      color: var(--text);
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-
-    .hero p {
-      max-width: 820px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    main {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 34px 20px 56px;
-    }
-
-    .notice {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 14px;
-      padding: 18px;
-      margin-bottom: 28px;
-      background: var(--surface-soft);
-      border: 1px solid #bfdbfe;
-      border-radius: 8px;
-    }
-
-    .notice strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--blue-dark);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(280px, 390px) 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    .panel-header {
-      padding: 22px 22px 0;
-    }
-
-    .panel-header h2,
-    section h2 {
-      margin: 0 0 8px;
-      font-size: 24px;
-      line-height: 1.25;
-      color: var(--text);
-      letter-spacing: 0;
-    }
-
-    .panel-header p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .panel-body {
-      padding: 22px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    input,
-    select {
-      width: 100%;
-      min-height: 46px;
-      padding: 11px 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      color: var(--text);
-      font: inherit;
-      background: #fff;
-    }
-
-    input:focus,
-    select:focus {
-      outline: 2px solid #bfdbfe;
-      border-color: var(--blue);
-    }
-
-    .field + .field {
-      margin-top: 18px;
-    }
-
-    .field-help {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .results {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .result-card {
-      min-height: 118px;
-      padding: 18px;
-      background: #f8fafc;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .result-card.primary {
-      background: #eff6ff;
-      border-color: #bfdbfe;
-    }
-
-    .result-label {
-      margin: 0 0 8px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .result-value {
-      margin: 0;
-      color: var(--text);
-      font-size: 25px;
-      font-weight: 800;
-      line-height: 1.15;
-      overflow-wrap: anywhere;
-    }
-
-    .result-card.primary .result-value {
-      color: var(--blue);
-    }
-
-    .result-help {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .empty-state {
-      padding: 20px;
-      background: #f8fafc;
-      border: 1px dashed #cbd5e1;
-      border-radius: 8px;
-    }
-
-    .empty-state strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--text);
-      font-size: 18px;
-    }
-
-    .empty-state p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .availability {
-      margin-top: 16px;
-      padding: 16px;
-      background: #eef2ff;
-      border: 1px solid #c7d2fe;
-      border-radius: 8px;
-      color: #312e81;
-      font-size: 14px;
-    }
-
-    .availability strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .highlight-card {
-      padding: 18px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .highlight-card strong {
-      display: block;
-      color: var(--blue-dark);
-      font-size: 22px;
-      line-height: 1.2;
-    }
-
-    .highlight-card span {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .warning {
-      margin-top: 18px;
-      padding: 16px;
-      background: var(--red-bg);
-      border: 1px solid var(--red-line);
-      border-radius: 8px;
-      color: var(--red-text);
-      font-size: 14px;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    section > p {
-      color: var(--muted);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th,
-    td {
-      padding: 13px 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
-    }
-
-    th {
-      background: var(--blue);
-      color: #fff;
-      font-size: 14px;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .comparison {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .comparison-card {
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .comparison-card h3 {
-      margin: 0 0 12px;
-      font-size: 18px;
-    }
-
-    .comparison-card ul {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 34px 1fr;
-      gap: 14px;
-      padding: 16px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .step-number {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      display: inline-grid;
-      place-items: center;
-      background: var(--blue);
-      color: #fff;
-      font-weight: 800;
-    }
-
-    .internal-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-    }
-
-    .internal-links a {
-      display: block;
-      padding: 14px 16px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      color: var(--blue);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    details + details {
-      margin-top: 12px;
-    }
-
-    summary {
-      cursor: pointer;
-      padding: 16px 18px;
-      background: #f8fafc;
-      color: var(--text);
-      font-weight: 800;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details p {
-      margin: 0;
-      padding: 16px 18px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-    }
-
-    footer {
-      background: #020617;
-      color: #cbd5e1;
-      padding: 34px 20px;
-    }
-
-    .footer-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-bottom: 16px;
-    }
-
-    .footer-links a {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .disclaimer {
-      margin: 0;
-      color: #94a3b8;
-      font-size: 13px;
-    }
-
-    @media (max-width: 840px) {
-      .grid,
-      .comparison,
-      .results {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-inner {
-        padding-top: 32px;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="/assets/css/global-layout.css">
-  <script src="/assets/js/global-layout.js" defer></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
   <div id="global-header"></div>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">FGTS 2026</p>
-      <h1>Calculadora de Saque Anivers&aacute;rio FGTS 2026</h1>
-      <p>Calcule quanto voce pode sacar do FGTS pelo Saque Aniversario com base nas aliquotas oficiais e veja quanto permanece na sua conta.</p>
-    </div>
-  </section>
-
   <main>
-    <div class="notice">
-      <div aria-hidden="true">i</div>
-      <div>
-        <strong>Como funciona o Saque Anivers&aacute;rio</strong>
-        O Saque Aniversario permite retirar parte do saldo do FGTS anualmente, no mes do aniversario. O valor disponivel depende da faixa de saldo, da aliquota aplicada e da parcela adicional prevista na Lei 8.036/90.
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-800 to-blue-600">
+      <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle at 18% 32%,rgba(255,255,255,.10),transparent 34%),radial-gradient(circle at 86% 12%,rgba(255,255,255,.12),transparent 32%)"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-10 sm:py-14">
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-semibold text-blue-100" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">In&iacute;cio</a><span aria-hidden="true">›</span>
+          <a href="/ferramentas/" class="hover:text-white">Ferramentas</a><span aria-hidden="true">›</span>
+          <span class="text-white">Calculadora de Saque Anivers&aacute;rio FGTS</span>
+        </nav>
+        <div class="mt-6 max-w-4xl">
+          <span class="inline-flex rounded-full bg-white/15 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-white ring-1 ring-white/25">FGTS 2026</span>
+          <h1 class="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-5xl">Calculadora de Saque Anivers&aacute;rio FGTS 2026</h1>
+          <p class="editorial-metadata-line" data-updated-at="2026-07-15">Atualizado em julho de 2026</p>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-blue-50">Calcule quanto voc&ecirc; pode sacar do FGTS pelo Saque Anivers&aacute;rio. A simula&ccedil;&atilde;o identifica sua faixa, aplica a al&iacute;quota correspondente, soma a parcela adicional e mostra quanto permanece na conta.</p>
+          <div class="mt-5 grid gap-2 text-sm font-semibold text-blue-50 sm:grid-cols-2 lg:max-w-3xl">
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Valor estimado do saque</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Faixa e al&iacute;quota aplicadas</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Parcela adicional e saldo restante</span>
+            <span class="rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">Mem&oacute;ria de c&aacute;lculo audit&aacute;vel</span>
+          </div>
+          <a href="#simulador" class="mt-7 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-blue-900 shadow-sm transition hover:bg-blue-50 sm:w-auto">Simular Saque Anivers&aacute;rio</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="grid">
-      <section class="panel" aria-labelledby="form-title">
-        <div class="panel-header">
-          <h2 id="form-title">Dados para c&aacute;lculo</h2>
-          <p>Informe seu saldo total do FGTS e o mes de nascimento.</p>
+    <section class="mx-auto max-w-6xl px-4 pt-8 sm:pt-10" aria-labelledby="descobrir-title">
+      <div class="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">O que voc&ecirc; vai descobrir</p><h2 id="descobrir-title" class="mt-1 text-2xl font-extrabold text-slate-950">Como seu saldo define o saque anual e o valor que permanece no FGTS</h2></div>
+          <span class="inline-flex w-full items-center justify-center rounded-xl bg-blue-50 px-4 py-3 text-sm font-bold text-blue-900 ring-1 ring-blue-100 sm:w-auto">Tempo estimado: menos de 1 minuto</span>
         </div>
-        <div class="panel-body">
-          <div class="field">
-            <label for="balance">Saldo do FGTS</label>
-            <input id="balance" type="text" inputmode="numeric" autocomplete="off" placeholder="R$ 0,00" />
-          </div>
-
-          <div class="field">
-            <label for="birth-month">Mes de nascimento</label>
-            <select id="birth-month">
-              <option value="">Selecione</option>
-              <option>Janeiro</option>
-              <option>Fevereiro</option>
-              <option>Marco</option>
-              <option>Abril</option>
-              <option>Maio</option>
-              <option>Junho</option>
-              <option>Julho</option>
-              <option>Agosto</option>
-              <option>Setembro</option>
-              <option>Outubro</option>
-              <option>Novembro</option>
-              <option>Dezembro</option>
-            </select>
-            <p class="field-help" id="month-help">Selecione o mes de nascimento para ver a janela de saque.</p>
-          </div>
-
-          <div class="warning">
-            Ao aderir ao Saque Aniversario, voce perde o direito de sacar o saldo total do FGTS em caso de demissao sem justa causa. Nesse caso, recebe apenas a multa rescisoria de 40%. Para voltar ao Saque Rescisao, e necessario aguardar 24 meses apos solicitar o cancelamento.
-          </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl bg-slate-50 p-4 font-bold text-slate-950">Faixa correspondente ao saldo</div>
+          <div class="rounded-xl bg-slate-50 p-4 font-bold text-slate-950">Al&iacute;quota e parcela adicional</div>
+          <div class="rounded-xl bg-slate-50 p-4 font-bold text-slate-950">Valor estimado do saque</div>
+          <div class="rounded-xl bg-slate-50 p-4 font-bold text-slate-950">Saldo restante estimado</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="panel" aria-labelledby="result-title">
-        <div class="panel-header">
-          <h2 id="result-title">Resultado da simula&ccedil;&atilde;o</h2>
-          <p id="month-info">Informe o saldo para visualizar os resultados.</p>
-        </div>
-        <div class="panel-body">
-          <div class="empty-state" id="empty-state">
-            <strong>Aguardando dados</strong>
-            <p>Informe o saldo do seu FGTS para visualizar os resultados detalhados da sua simulacao.</p>
+    <section id="simulador" class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
+        <div class="min-w-0">
+          <div class="mb-6">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Simulador</p>
+            <h2 class="mt-2 text-2xl font-extrabold text-slate-950 sm:text-3xl">Informe o saldo e confira sua estimativa</h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">A jornada tem duas etapas curtas. O saldo determina o c&aacute;lculo; o m&ecirc;s de nascimento ajuda a contextualizar a janela estimada de saque.</p>
           </div>
 
-          <div class="results" id="results-grid" hidden>
-            <div class="result-card primary">
-              <p class="result-label">Valor disponivel para saque</p>
-              <p class="result-value" id="withdrawal">R$ 0,00</p>
-              <p class="result-help">Disponivel para saque conforme saldo, aliquota e parcela adicional.</p>
+          <form id="calculator-form" class="min-w-0 space-y-6" aria-label="Calculadora de Saque Aniversario FGTS" novalidate>
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="saldo-title">
+              <div class="flex items-start gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 font-extrabold text-white">1</span><div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Saldo do FGTS</p><h3 id="saldo-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Quanto voc&ecirc; tem nas contas do FGTS?</h3><p class="mt-2 leading-7 text-slate-600">Informe a soma dos saldos das contas ativas e inativas que deseja considerar.</p></div></div>
+              <label class="mt-6 block" for="balance"><span class="text-sm font-bold text-slate-700">Saldo total considerado</span><input id="balance" type="text" inputmode="decimal" autocomplete="off" placeholder="R$ 0,00" aria-describedby="balance-help" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4" /></label>
+              <p id="balance-help" class="mt-2 text-sm leading-6 text-slate-600">Use o valor dispon&iacute;vel mostrado no aplicativo FGTS ou a soma que deseja simular.</p>
+            </section>
+
+            <section class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="nascimento-title">
+              <div class="flex items-start gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-700 font-extrabold text-white">2</span><div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Janela de saque</p><h3 id="nascimento-title" class="mt-1 text-xl font-bold text-slate-950 sm:text-2xl">Qual &eacute; seu m&ecirc;s de nascimento?</h3><p class="mt-2 leading-7 text-slate-600">O campo &eacute; opcional e serve para explicar quando o saque costuma ficar dispon&iacute;vel.</p></div></div>
+              <label class="mt-6 block" for="birth-month"><span class="text-sm font-bold text-slate-700">M&ecirc;s de nascimento</span><select id="birth-month" class="mt-2 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-950 outline-none ring-blue-200 transition focus:border-blue-600 focus:ring-4"><option value="">Selecione</option><option>Janeiro</option><option>Fevereiro</option><option>Marco</option><option>Abril</option><option>Maio</option><option>Junho</option><option>Julho</option><option>Agosto</option><option>Setembro</option><option>Outubro</option><option>Novembro</option><option>Dezembro</option></select></label>
+              <p id="month-help" class="mt-2 text-sm leading-6 text-slate-600">Selecione o m&ecirc;s de nascimento para ver a janela de saque.</p>
+              <div class="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">Ao aderir ao Saque Anivers&aacute;rio, voc&ecirc; deixa de sacar o saldo total em uma demiss&atilde;o sem justa causa e mant&eacute;m o direito &agrave; multa rescis&oacute;ria. A mudan&ccedil;a para o Saque Rescis&atilde;o produz efeito no primeiro dia do 25&ordm; m&ecirc;s ap&oacute;s a solicita&ccedil;&atilde;o, observadas as restri&ccedil;&otilde;es aplic&aacute;veis.</div>
+            </section>
+
+            <div class="rounded-3xl border border-blue-100 bg-blue-50 p-5 shadow-sm sm:p-6">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Confer&ecirc;ncia</p>
+              <h3 class="mt-1 text-xl font-extrabold text-blue-950">Confira o saldo e veja sua estimativa</h3>
+              <p class="mt-2 leading-7 text-blue-900">Revise o valor informado e clique em <strong>Calcular Saque Anivers&aacute;rio</strong> para ver a faixa, a al&iacute;quota, o adicional e a mem&oacute;ria completa.</p>
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row"><button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-sm transition hover:bg-blue-800 sm:w-auto">Calcular Saque Anivers&aacute;rio</button><button id="clear-button" type="button" class="inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-4 text-sm font-extrabold uppercase tracking-wide text-slate-700 ring-1 ring-slate-300 transition hover:bg-slate-50 sm:w-auto">Limpar</button></div>
+              <p id="form-error" class="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-800" role="alert" tabindex="-1" hidden></p>
             </div>
-            <div class="result-card">
-              <p class="result-label">Percentual aplicado</p>
-              <p class="result-value" id="percentage">0%</p>
-              <p class="result-help">Percentual sobre o saldo total informado.</p>
+          </form>
+
+          <section id="empty-state" class="mt-8 rounded-3xl border border-dashed border-slate-300 bg-white p-6 text-center" aria-live="polite"><p class="font-extrabold text-slate-950">Seu relat&oacute;rio aparecer&aacute; aqui</p><p class="mt-2 text-sm leading-6 text-slate-600">Informe o saldo para ver saque estimado, faixa, saldo restante, interpreta&ccedil;&atilde;o e mem&oacute;ria de c&aacute;lculo.</p></section>
+
+          <section id="result-content" class="mt-8 min-w-0 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7" aria-live="polite" aria-labelledby="result-title" hidden>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Resultado</p><h2 id="result-title" class="mt-1 text-2xl font-extrabold text-slate-950 sm:text-3xl">Relat&oacute;rio do Saque Anivers&aacute;rio</h2><p id="month-info" class="mt-2 max-w-3xl leading-7 text-slate-600">Informe o saldo para visualizar os resultados.</p></div><span class="inline-flex rounded-xl bg-slate-100 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-slate-600">Estimativa educativa</span></div>
+
+            <div class="mt-6 rounded-3xl bg-blue-700 p-5 text-white sm:p-6"><p class="text-sm font-bold uppercase tracking-wide text-blue-100">Valor estimado do saque</p><p id="withdrawal" class="mt-2 break-words text-4xl font-extrabold sm:text-5xl">R$ 0,00</p><p class="mt-3 leading-7 text-blue-50">Estimativa anual conforme o saldo, a al&iacute;quota e a parcela adicional da faixa.</p></div>
+            <div class="mt-5 grid gap-4 sm:grid-cols-2"><div class="rounded-2xl bg-emerald-50 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-emerald-700">Saldo restante estimado</p><p id="remaining" class="mt-2 break-words text-3xl font-extrabold text-emerald-900">R$ 0,00</p></div><div class="rounded-2xl bg-slate-50 p-5"><p class="text-xs font-extrabold uppercase tracking-wide text-slate-500">Saldo informado</p><p id="balance-result" class="mt-2 break-words text-3xl font-extrabold text-slate-950">R$ 0,00</p></div></div>
+            <div class="mt-5 grid gap-3 sm:grid-cols-3"><div class="rounded-xl bg-slate-50 p-4"><p class="text-xs font-bold uppercase tracking-wide text-slate-500">Faixa aplicada</p><p id="band-result" class="mt-1 text-lg font-extrabold text-slate-950">--</p></div><div class="rounded-xl bg-slate-50 p-4"><p class="text-xs font-bold uppercase tracking-wide text-slate-500">Al&iacute;quota</p><p id="percentage" class="mt-1 text-xl font-extrabold text-slate-950">0%</p></div><div class="rounded-xl bg-slate-50 p-4"><p class="text-xs font-bold uppercase tracking-wide text-slate-500">Parcela adicional</p><p id="additional" class="mt-1 text-xl font-extrabold text-slate-950">R$ 0,00</p></div></div>
+            <div id="availability-info" class="mt-5 rounded-2xl border border-indigo-100 bg-indigo-50 p-4 text-sm leading-6 text-indigo-900" hidden></div>
+
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="interpretation-title"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Interpreta&ccedil;&atilde;o</p><h3 id="interpretation-title" class="mt-1 text-xl font-extrabold text-blue-950">O que este resultado significa</h3><p id="interpretation-text" class="mt-2 leading-7 text-blue-900"></p></section>
+            <div id="CANONICAL_RESULT_RECOMMENDATION_SLOT" data-state="NOT_CONFIGURED" hidden aria-hidden="true"></div>
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-5" aria-labelledby="memory-title"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Mem&oacute;ria de c&aacute;lculo</p><h3 id="memory-title" class="mt-1 text-xl font-extrabold text-slate-950">Passo a passo audit&aacute;vel</h3><ol id="memory-list" class="mt-4 space-y-3 text-sm leading-6 text-slate-700"></ol></section>
+            <section class="mt-7 rounded-3xl border border-slate-200 bg-white p-5" aria-labelledby="summary-title"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Resumo reproduz&iacute;vel</p><h3 id="summary-title" class="mt-1 text-xl font-extrabold text-slate-950">Itens considerados e valores</h3><div class="mt-4 max-w-full overflow-x-auto"><table class="w-full min-w-[560px] border-collapse text-left text-sm"><thead class="bg-slate-100 text-slate-700"><tr><th class="px-4 py-3">Item</th><th class="px-4 py-3">Como foi considerado</th><th class="px-4 py-3">Valor</th></tr></thead><tbody id="result-table" class="divide-y divide-slate-200"></tbody></table></div></section>
+            <section class="mt-7 rounded-3xl border border-amber-200 bg-amber-50 p-5" aria-labelledby="limitations-title"><p class="text-sm font-extrabold uppercase tracking-wide text-amber-700">Limita&ccedil;&otilde;es</p><h3 id="limitations-title" class="mt-1 text-xl font-extrabold text-amber-950">Use como estimativa</h3><p class="mt-2 leading-7 text-amber-900">O saldo real, bloqueios, antecipa&ccedil;&otilde;es contratadas e outras condi&ccedil;&otilde;es da conta podem alterar o valor efetivamente dispon&iacute;vel.</p></section>
+            <section class="mt-7 rounded-3xl border border-blue-100 bg-blue-50 p-5" aria-labelledby="next-title"><p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Pr&oacute;ximos passos</p><h3 id="next-title" class="mt-1 text-xl font-extrabold text-blue-950">Compare com o aplicativo FGTS</h3><p class="mt-2 leading-7 text-blue-900">Guarde o relat&oacute;rio e confira saldo, ades&atilde;o, bloqueios e datas diretamente nos canais oficiais do FGTS.</p></section>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row"><button id="btn-copy" type="button" class="rounded-xl bg-slate-900 px-5 py-3 font-extrabold text-white hover:bg-slate-800">Copiar resumo</button><button id="btn-print" type="button" class="rounded-xl bg-white px-5 py-3 font-extrabold text-slate-800 ring-1 ring-slate-300 hover:bg-slate-50">Imprimir relat&oacute;rio</button><button id="btn-download" type="button" class="rounded-xl bg-white px-5 py-3 font-extrabold text-slate-800 ring-1 ring-slate-300 hover:bg-slate-50">Baixar PDF</button></div>
+          </section>
+
+          <section id="conteudo-editorial" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">Guia do c&aacute;lculo</p><h2 class="mt-2 text-2xl font-extrabold text-slate-950">Entenda o Saque Anivers&aacute;rio e a estimativa</h2>
+            <div class="mt-5 space-y-7 leading-8 text-slate-700">
+              <article><h3 id="rates-title" class="text-xl font-extrabold text-slate-950">Tabela de al&iacute;quotas do Saque Anivers&aacute;rio</h3><p class="mt-2">As faixas abaixo seguem a regra progressiva usada para estimar o valor anual dispon&iacute;vel. A tabela &eacute; apresentada dentro da jornada para facilitar a confer&ecirc;ncia da faixa usada no resultado.</p><div class="mt-4 max-w-full overflow-x-auto rounded-xl border border-slate-200"><table class="w-full min-w-[560px] border-collapse text-left text-sm"><thead class="bg-blue-700 text-white"><tr><th class="px-4 py-3">Faixa de saldo</th><th class="px-4 py-3">Al&iacute;quota</th><th class="px-4 py-3">Parcela adicional</th></tr></thead><tbody id="fgts-rates-body" class="divide-y divide-slate-200 bg-white"><tr><td class="px-4 py-3" colspan="3">Carregando as faixas do Saque Anivers&aacute;rio...</td></tr></tbody></table></div></article>
+              <article><h3 class="text-xl font-extrabold text-slate-950">Saque Anivers&aacute;rio ou Saque Rescis&atilde;o</h3><p class="mt-2">No Saque Anivers&aacute;rio, parte do FGTS pode ser retirada anualmente no m&ecirc;s de nascimento e nos dois meses seguintes. Em caso de demiss&atilde;o sem justa causa, o trabalhador recebe a multa rescis&oacute;ria de 40%, mas n&atilde;o retira o saldo integral. O Saque Rescis&atilde;o preserva a possibilidade de saque integral nas hip&oacute;teses previstas.</p><p class="mt-3">A escolha depende da situa&ccedil;&atilde;o profissional e financeira. Quem enfrenta maior risco de desligamento pode valorizar a prote&ccedil;&atilde;o do Saque Rescis&atilde;o; quem busca acesso anual a parte do saldo pode considerar o Saque Anivers&aacute;rio.</p></article>
+              <article><h3 class="text-xl font-extrabold text-slate-950">Mudan&ccedil;as nas regras em 2026</h3><p class="mt-2">A partir de novembro de 2026, as regras de antecipa&ccedil;&atilde;o do Saque Anivers&aacute;rio passam a ter limite menor de parcelas e teto de valor. Antes de aderir ou antecipar valores, confira as condi&ccedil;&otilde;es diretamente no aplicativo FGTS, na Caixa Econ&ocirc;mica Federal ou no banco contratado.</p><p class="mt-3">As regras de antecipa&ccedil;&atilde;o e o prazo para retorno ao Saque Rescis&atilde;o n&atilde;o mudam a f&oacute;rmula anual desta calculadora. A estimativa usa apenas saldo, al&iacute;quota e parcela adicional.</p></article>
+              <article><h3 class="text-xl font-extrabold text-slate-950">O que &eacute; o Saque Anivers&aacute;rio do FGTS</h3><p class="mt-2">O Saque Anivers&aacute;rio &eacute; uma modalidade opcional que permite retirar anualmente uma parte do saldo do FGTS. O valor depende do saldo total: quanto maior o saldo, menor a al&iacute;quota percentual e maior a parcela adicional fixa.</p><p class="mt-3">A ades&atilde;o &eacute; volunt&aacute;ria e pode ser feita pelos canais oficiais. A mudan&ccedil;a de volta para o Saque Rescis&atilde;o produz efeito no primeiro dia do 25&ordm; m&ecirc;s ap&oacute;s a solicita&ccedil;&atilde;o, desde que n&atilde;o exista opera&ccedil;&atilde;o de antecipa&ccedil;&atilde;o impeditiva.</p></article>
+              <article><h3 class="text-xl font-extrabold text-slate-950">Como usar esta calculadora</h3><p class="mt-2">Primeiro, informe a soma dos saldos das contas ativas e inativas. Depois, selecione opcionalmente o m&ecirc;s de nascimento. Ao calcular, a ferramenta identifica a faixa, multiplica o saldo pela al&iacute;quota e soma a parcela adicional.</p><p class="mt-3">O relat&oacute;rio mostra o valor estimado do saque, o saldo restante, a faixa aplicada e uma mem&oacute;ria reproduz&iacute;vel. Compare sempre a estimativa com as informa&ccedil;&otilde;es do aplicativo FGTS.</p></article>
+              <article><h3 class="text-xl font-extrabold text-slate-950">Saque Anivers&aacute;rio vale a pena?</h3><p class="mt-2">Depende da sua situa&ccedil;&atilde;o profissional e financeira. Para quem tem estabilidade e deseja acesso anual a uma parte do FGTS, pode ser uma forma de complementar renda, organizar d&iacute;vidas ou planejar gastos.</p><p class="mt-3">Para quem trabalha em setor com maior risco de demiss&atilde;o, o Saque Rescis&atilde;o pode oferecer mais seguran&ccedil;a, pois preserva o direito ao saque integral do saldo nas situa&ccedil;&otilde;es previstas.</p></article>
             </div>
-            <div class="result-card">
-              <p class="result-label">Parcela adicional</p>
-              <p class="result-value" id="additional">R$ 0,00</p>
-              <p class="result-help">Valor fixo adicional somado ao calculo da faixa.</p>
+          </section>
+
+          <section id="faq" class="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <p class="text-sm font-extrabold uppercase tracking-wide text-blue-700">D&uacute;vidas comuns</p><h2 id="faq-title" class="mt-2 text-2xl font-extrabold text-slate-950">Perguntas frequentes</h2>
+            <div class="mt-5 space-y-3">
+              <details class="rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-bold text-slate-950">Posso sacar o FGTS se pedir demissao estando no Saque Aniversario?</summary><p class="mt-3 leading-7 text-slate-700">Nao. Quem esta no Saque Aniversario e pede demissao ou e demitido por justa causa nao pode sacar o saldo total do FGTS. Em caso de demissao sem justa causa, recebe a multa rescisoria de 40%, mas o restante do saldo permanece na conta.</p></details>
+              <details class="rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-bold text-slate-950">Como aderir ao Saque Aniversario?</summary><p class="mt-3 leading-7 text-slate-700">A adesao pode ser feita pelo aplicativo FGTS, pelo site da Caixa Economica Federal ou presencialmente em uma agencia da Caixa.</p></details>
+              <details class="rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-bold text-slate-950">Posso voltar para o Saque Rescisao depois de aderir?</summary><p class="mt-3 leading-7 text-slate-700">Sim. A mudanca para o Saque Rescisao produz efeito no primeiro dia do 25o mes apos a solicitacao, desde que nao exista operacao de antecipacao impeditiva. Ate la, continuam valendo as regras do Saque Aniversario.</p></details>
+              <details class="rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-bold text-slate-950">O que acontece se eu nao sacar no meu mes de aniversario?</summary><p class="mt-3 leading-7 text-slate-700">O trabalhador tem o mes de aniversario e os dois meses seguintes para realizar o saque. Se nao sacar dentro do prazo, o valor retorna para a conta do FGTS.</p></details>
+              <details class="rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-bold text-slate-950">O calculo considera contas ativas e inativas?</summary><p class="mt-3 leading-7 text-slate-700">Sim. O calculo considera a soma dos saldos das contas ativas e inativas do FGTS.</p></details>
             </div>
-            <div class="result-card">
-              <p class="result-label">Saldo restante no FGTS</p>
-              <p class="result-value" id="remaining">R$ 0,00</p>
-              <p class="result-help">Permanece na conta do FGTS apos o saque estimado.</p>
-            </div>
-          </div>
-          <div class="availability" id="availability-info" hidden></div>
+          </section>
         </div>
-      </section>
-    </div>
 
-    <section aria-labelledby="rates-title">
-      <h2 id="rates-title">Tabela de al&iacute;quotas do Saque Anivers&aacute;rio</h2>
-      <p>As faixas abaixo seguem a regra progressiva usada para estimar o valor anual disponivel.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Faixa de saldo</th>
-            <th>Aliquota</th>
-            <th>Parcela adicional</th>
-          </tr>
-        </thead>
-        <tbody id="fgts-rates-body">
-          <tr><td>Ate R$ 500,00</td><td>50%</td><td>R$ 0,00</td></tr>
-          <tr><td>R$ 500,01 a R$ 1.000,00</td><td>40%</td><td>R$ 50,00</td></tr>
-          <tr><td>R$ 1.000,01 a R$ 5.000,00</td><td>30%</td><td>R$ 150,00</td></tr>
-          <tr><td>R$ 5.000,01 a R$ 10.000,00</td><td>20%</td><td>R$ 650,00</td></tr>
-          <tr><td>R$ 10.000,01 a R$ 15.000,00</td><td>15%</td><td>R$ 1.150,00</td></tr>
-          <tr><td>R$ 15.000,01 a R$ 20.000,00</td><td>10%</td><td>R$ 1.900,00</td></tr>
-          <tr><td>Acima de R$ 20.000,01</td><td>5%</td><td>R$ 2.900,00</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section aria-labelledby="comparison-title">
-      <h2 id="comparison-title">Saque Anivers&aacute;rio ou Saque Rescis&atilde;o</h2>
-      <div class="comparison">
-        <div class="comparison-card">
-          <h3>Saque Aniversario</h3>
-          <ul>
-            <li>Recebe parte do FGTS todo ano, no mes do aniversario e nos dois meses seguintes.</li>
-            <li>O saque anual e previsivel e pode ajudar no planejamento financeiro.</li>
-            <li>Pode antecipar valores via emprestimo, conforme regras do banco contratado.</li>
-            <li>Perde o direito ao saque integral se for demitido sem justa causa.</li>
-            <li>Em caso de demissao sem justa causa, mantem apenas o direito a multa rescisoria de 40%.</li>
-          </ul>
-        </div>
-        <div class="comparison-card">
-          <h3>Saque Rescisao</h3>
-          <ul>
-            <li>Modelo padrao para quem nao adere ao Saque Aniversario.</li>
-            <li>Permite saque integral em caso de demissao sem justa causa.</li>
-            <li>Mantem maior protecao para quem tem risco de desligamento.</li>
-            <li>Nao oferece retirada anual programada.</li>
-            <li>Nao permite antecipacao do Saque Aniversario por emprestimo.</li>
-          </ul>
-        </div>
+        <aside class="lg:sticky lg:top-6"><div class="rounded-3xl border border-amber-200 bg-amber-50 p-5"><p class="font-extrabold text-amber-950">Ferramenta educativa</p><p class="mt-2 text-sm leading-6 text-amber-900">Saldo bloqueado, antecipa&ccedil;&otilde;es contratadas, atualiza&ccedil;&otilde;es da conta e condi&ccedil;&otilde;es oficiais podem alterar o valor dispon&iacute;vel.</p></div></aside>
       </div>
     </section>
 
-    <section aria-labelledby="changes-title">
-      <h2 id="changes-title">Mudan&ccedil;as nas regras em 2026</h2>
-      <p>A partir de novembro de 2026, as regras de antecipacao do Saque Aniversario passam a ter limite menor de parcelas e teto de valor. Antes de aderir ou antecipar valores, confira as condicoes diretamente no aplicativo FGTS, na Caixa Economica Federal ou no banco contratado.</p>
-      <div class="highlights">
-        <div class="highlight-card">
-          <strong>3 parcelas anuais</strong>
-          <span>Limite previsto para antecipacao, reduzindo a quantidade anteriormente praticada em algumas operacoes.</span>
-        </div>
-        <div class="highlight-card">
-          <strong>R$ 1.500</strong>
-          <span>Teto citado para operacoes de antecipacao, sujeito as regras oficiais e condicoes da instituicao financeira.</span>
-        </div>
-        <div class="highlight-card">
-          <strong>24 meses</strong>
-          <span>Periodo de carencia para retornar ao Saque Rescisao depois de cancelar o Saque Aniversario.</span>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="what-title">
-      <h2 id="what-title">O que &eacute; o Saque Anivers&aacute;rio do FGTS</h2>
-      <p>O Saque Aniversario do FGTS e uma modalidade opcional que permite ao trabalhador retirar uma parte do saldo do Fundo de Garantia todos os anos, no mes em que nasceu. Quem nao faz adesao permanece automaticamente no modelo tradicional, conhecido como Saque Rescisao.</p>
-      <p>O valor disponivel varia conforme o saldo total acumulado. Quanto maior o saldo, menor a aliquota aplicada, mas maior a parcela adicional fixa somada ao calculo.</p>
-    </section>
-
-    <section aria-labelledby="how-title">
-      <h2 id="how-title">Como usar esta calculadora</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="step-number">1</span>
-          <div>
-            <strong>Informe o saldo total do FGTS</strong>
-            <p>Digite o valor atual da sua conta. Voce pode consultar o saldo pelo aplicativo FGTS ou canais da Caixa.</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-number">2</span>
-          <div>
-            <strong>Selecione o mes de nascimento</strong>
-            <p>O saque fica disponivel no mes do aniversario e nos dois meses seguintes.</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-number">3</span>
-          <div>
-            <strong>Veja o resultado automatico</strong>
-            <p>A ferramenta exibe valor de saque, percentual, parcela adicional e saldo restante.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="worth-title">
-      <h2 id="worth-title">Saque Anivers&aacute;rio vale a pena?</h2>
-      <p>Depende da sua situacao profissional e financeira. Para quem tem estabilidade e deseja acesso anual a uma parte do FGTS, pode ser uma forma de complementar renda, organizar dividas ou planejar gastos.</p>
-      <p>Para quem trabalha em setor com maior risco de demissao, o Saque Rescisao pode oferecer mais seguranca, pois preserva o direito ao saque integral do saldo em caso de demissao sem justa causa.</p>
-    </section>
-
-    <section aria-labelledby="faq-title">
-      <h2 id="faq-title">Perguntas frequentes</h2>
-      <details>
-        <summary>Posso sacar o FGTS se pedir demissao estando no Saque Aniversario?</summary>
-        <p>Nao. Quem esta no Saque Aniversario e pede demissao ou e demitido por justa causa nao pode sacar o saldo total do FGTS. Em caso de demissao sem justa causa, recebe apenas a multa de 40%.</p>
-      </details>
-      <details>
-        <summary>Como aderir ao Saque Aniversario?</summary>
-        <p>A adesao pode ser feita pelo aplicativo FGTS, pelo site da Caixa Economica Federal ou presencialmente em uma agencia da Caixa.</p>
-      </details>
-      <details>
-        <summary>Posso voltar para o Saque Rescisao depois de aderir?</summary>
-        <p>Sim, mas existe carencia de 24 meses apos a solicitacao de cancelamento. Durante esse periodo, continuam valendo as regras do Saque Aniversario.</p>
-      </details>
-      <details>
-        <summary>O que acontece se eu nao sacar no meu mes de aniversario?</summary>
-        <p>Voce tem o mes de aniversario e os dois meses seguintes para sacar. Se nao retirar dentro do prazo, o valor retorna para a conta do FGTS.</p>
-      </details>
-      <details>
-        <summary>O calculo considera contas ativas e inativas?</summary>
-        <p>Sim. A estimativa considera a soma dos saldos das contas ativas e inativas do FGTS.</p>
-      </details>
-    </section>
-
-    <section aria-labelledby="links-title">
-      <h2 id="links-title">Outras calculadoras trabalhistas</h2>
-      <div class="internal-links">
-        <a href="/salario-liquido-clt-2026">Calculadora de Salario Liquido</a>
-        <a href="/calculadora-rescisao-clt-2026">Calculadora de Rescisao</a>
-        <a href="/calculadora-ferias-clt-2026">Calculadora de Ferias</a>
-        <a href="/calculadora-13-salario-2026">Calculadora de 13o Salario</a>
-        <a href="/calculadora-horas-extras-clt-2026">Calculadora de Horas Extras</a>
-        <a href="/calculadora-seguro-desemprego-2026">Calculadora Seguro-Desemprego</a>
-      </div>
+    <section class="mx-auto max-w-6xl px-4 pb-10">
+      <div class="rounded-2xl border border-red-200 bg-red-50 p-6"><h2 class="text-2xl font-bold text-red-900">Aviso legal / Disclaimer</h2><p class="mt-3 text-red-900">Esta calculadora tem finalidade informativa e educacional. Os valores exibidos s&atilde;o estimativas e n&atilde;o substituem o aplicativo FGTS, extratos oficiais, regras vigentes ou orienta&ccedil;&atilde;o profissional.</p></div>
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 id="links-title" class="text-2xl font-bold text-slate-900">Outras calculadoras trabalhistas</h2><p class="mt-3 text-slate-600">Continue simulando direitos, benef&iacute;cios e verbas trabalhistas com as ferramentas gratuitas do Calcule Trabalhador.</p><div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3"><a href="/salario-liquido-clt/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold hover:bg-blue-50">Calculadora de Sal&aacute;rio L&iacute;quido</a><a href="/calculadora-rescisao-clt/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold hover:bg-blue-50">Calculadora de Rescis&atilde;o</a><a href="/calculadora-ferias-clt/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold hover:bg-blue-50">Calculadora de F&eacute;rias</a><a href="/calculadora-13-salario/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold hover:bg-blue-50">Calculadora de 13&ordm; Sal&aacute;rio</a><a href="/calculadora-horas-extras-clt/" class="rounded-xl border border-slate-200 bg-slate-50 p-4 font-semibold hover:bg-blue-50">Calculadora de Horas Extras</a><a href="/calculadora-seguro-desemprego/" class="rounded-xl border border-blue-200 bg-blue-50 p-4 font-semibold text-blue-800 hover:bg-blue-100">Calculadora Seguro-Desemprego</a></div></div>
     </section>
   </main>
 
   <div id="global-footer"></div>
-
-
-  <script src="/assets/js/tabelas-trabalhistas.js"></script>
-  <script>
-    const balanceInput = document.getElementById('balance');
-    const monthSelect = document.getElementById('birth-month');
-    const withdrawalEl = document.getElementById('withdrawal');
-    const percentageEl = document.getElementById('percentage');
-    const additionalEl = document.getElementById('additional');
-    const remainingEl = document.getElementById('remaining');
-    const monthInfoEl = document.getElementById('month-info');
-    const monthHelpEl = document.getElementById('month-help');
-    const emptyStateEl = document.getElementById('empty-state');
-    const resultsGridEl = document.getElementById('results-grid');
-    const availabilityInfoEl = document.getElementById('availability-info');
-
-    const ratesBodyEl = document.getElementById('fgts-rates-body');
-    const tabelasFGTSPromise = window.CalculeTrabalhadorTabelas
-      ? window.CalculeTrabalhadorTabelas.carregarTabelasTrabalhistas().catch(function (error) {
-          console.warn('[Calcule Trabalhador] Tabela central do FGTS não carregada. Usando cálculo legado.', error);
-          return null;
-        })
-      : Promise.resolve(null);
-
-    const monthWindows = {
-      Janeiro: { start: 'Janeiro', window: 'janeiro, fevereiro e marco' },
-      Fevereiro: { start: 'Fevereiro', window: 'fevereiro, marco e abril' },
-      Marco: { start: 'Marco', window: 'marco, abril e maio' },
-      Abril: { start: 'Abril', window: 'abril, maio e junho' },
-      Maio: { start: 'Maio', window: 'maio, junho e julho' },
-      Junho: { start: 'Junho', window: 'junho, julho e agosto' },
-      Julho: { start: 'Julho', window: 'julho, agosto e setembro' },
-      Agosto: { start: 'Agosto', window: 'agosto, setembro e outubro' },
-      Setembro: { start: 'Setembro', window: 'setembro, outubro e novembro' },
-      Outubro: { start: 'Outubro', window: 'outubro, novembro e dezembro' },
-      Novembro: { start: 'Novembro', window: 'novembro, dezembro e janeiro do ano seguinte' },
-      Dezembro: { start: 'Dezembro', window: 'dezembro, janeiro e fevereiro do ano seguinte' }
-    };
-
-    function formatCurrency(value) {
-      return new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-      }).format(value);
-    }
-
-    function parseCurrency(value) {
-      const digits = String(value || '').replace(/\D/g, '');
-      return digits ? Number(digits) / 100 : 0;
-    }
-
-    function getRuleLegacy(balance) {
-      if (balance <= 500) return { percentage: 50, additional: 0 };
-      if (balance <= 1000) return { percentage: 40, additional: 50 };
-      if (balance <= 5000) return { percentage: 30, additional: 150 };
-      if (balance <= 10000) return { percentage: 20, additional: 650 };
-      if (balance <= 15000) return { percentage: 15, additional: 1150 };
-      if (balance <= 20000) return { percentage: 10, additional: 1900 };
-      return { percentage: 5, additional: 2900 };
-    }
-
-
-    function rulesAreEquivalent(legacyRule, centralResult) {
-      if (!centralResult) return false;
-      const samePercentage = Math.abs((Number(legacyRule.percentage) || 0) - (Number(centralResult.percentual) || 0)) <= 0.001;
-      const sameAdditional = Math.abs((Number(legacyRule.additional) || 0) - (Number(centralResult.parcelaAdicional) || 0)) <= 0.01;
-      return samePercentage && sameAdditional;
-    }
-
-    async function getRule(balance) {
-      const legacyRule = getRuleLegacy(balance);
-      const tabelas = await tabelasFGTSPromise;
-      const central = window.CalculeTrabalhadorTabelas && tabelas
-        ? window.CalculeTrabalhadorTabelas.calcularSaqueAniversarioFGTS(balance, tabelas)
-        : null;
-
-      if (!central || !rulesAreEquivalent(legacyRule, central)) {
-        if (central) {
-          console.warn('[Calcule Trabalhador] Divergência entre Saque-Aniversário legado e centralizado. Usando legado.', { legacyRule, central });
-        }
-        return legacyRule;
-      }
-
-      return {
-        percentage: central.percentual,
-        additional: central.parcelaAdicional,
-        withdrawal: central.saquePermitido,
-        remaining: central.saldoRestante
-      };
-    }
-
-    function renderRatesTableFromCentral(tabelas) {
-      const tabela = window.CalculeTrabalhadorTabelas && tabelas
-        ? window.CalculeTrabalhadorTabelas.obterTabelaSaqueAniversario(tabelas)
-        : null;
-      const faixas = Array.isArray(tabela?.faixas) ? tabela.faixas : [];
-      if (!ratesBodyEl || !faixas.length) return;
-
-      ratesBodyEl.innerHTML = faixas.map(function (faixa) {
-        return '<tr><td>' + faixa.rotulo + '</td><td>' + faixa.percentual + '%</td><td>' + formatCurrency(faixa.parcelaAdicional) + '</td></tr>';
-      }).join('');
-    }
-
-    function updateMonthHelp() {
-      const selectedMonth = monthSelect.value;
-      const monthData = monthWindows[selectedMonth];
-
-      if (!monthData) {
-        monthHelpEl.textContent = 'Selecione o mes de nascimento para ver a janela de saque.';
-        return;
-      }
-
-      monthHelpEl.textContent = 'Para nascidos em ' + selectedMonth + ', a janela estimada de saque e: ' + monthData.window + '.';
-    }
-
-    async function calculate() {
-      const balance = parseCurrency(balanceInput.value);
-      const selectedMonth = monthSelect.value;
-      const monthData = monthWindows[selectedMonth];
-
-      updateMonthHelp();
-
-      if (balance <= 0) {
-        withdrawalEl.textContent = formatCurrency(0);
-        percentageEl.textContent = '0%';
-        additionalEl.textContent = formatCurrency(0);
-        remainingEl.textContent = formatCurrency(0);
-        emptyStateEl.hidden = false;
-        resultsGridEl.hidden = true;
-        availabilityInfoEl.hidden = true;
-        availabilityInfoEl.innerHTML = '';
-        monthInfoEl.textContent = 'Informe o saldo para visualizar os resultados.';
-        return;
-      }
-
-      const rule = await getRule(balance);
-      const withdrawal = Number.isFinite(Number(rule.withdrawal)) ? Number(rule.withdrawal) : balance * (rule.percentage / 100) + rule.additional;
-      const remaining = Number.isFinite(Number(rule.remaining)) ? Number(rule.remaining) : Math.max(balance - withdrawal, 0);
-
-      emptyStateEl.hidden = true;
-      resultsGridEl.hidden = false;
-      withdrawalEl.textContent = formatCurrency(withdrawal);
-      percentageEl.textContent = rule.percentage + '%';
-      additionalEl.textContent = formatCurrency(rule.additional);
-      remainingEl.textContent = formatCurrency(remaining);
-
-      monthInfoEl.textContent = monthData
-        ? 'Saque disponivel em ' + monthData.window + '.'
-        : 'Selecione o mes de nascimento para complementar a simulacao.';
-
-      if (monthData) {
-        availabilityInfoEl.hidden = false;
-        availabilityInfoEl.innerHTML =
-          '<strong>Disponibilidade para nascidos em ' + selectedMonth + '</strong>' +
-          'O saque aniversario fica disponivel a partir do 1o dia util de ' + monthData.start + ' de 2026. ' +
-          'Voce tem prazo de 3 meses para sacar, dentro da janela de ' + monthData.window + '. ' +
-          'Apos esse prazo, o valor nao sacado retorna automaticamente para a conta do FGTS.';
-      } else {
-        availabilityInfoEl.hidden = true;
-        availabilityInfoEl.innerHTML = '';
-      }
-    }
-
-    balanceInput.addEventListener('input', function (event) {
-      const value = parseCurrency(event.target.value);
-      event.target.value = value ? formatCurrency(value) : '';
-      calculate();
-    });
-
-    monthSelect.addEventListener('change', calculate);
-
-
-    tabelasFGTSPromise.then(function (tabelas) {
-      renderRatesTableFromCentral(tabelas);
-      calculate();
-    });
-  </script>
-  <script src="/assets/js/editorial-metadata.js" defer></script>
+  <div class="report-only" id="print-report"></div>
+  <script src="../assets/js/tabelas-trabalhistas.js"></script>
+  <script src="../assets/js/saque-aniversario-fgts.js"></script>
+  <script src="../assets/js/editorial-metadata.js" defer></script>
+  <script src="../assets/js/global-layout.js" defer></script>
 </body>
 </html>

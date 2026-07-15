@@ -1,0 +1,32 @@
+{
+  "status": "REFERENCE_STUDY_COMPLETE",
+  "referenceId": "calculator-pilot-1-canonical-experience",
+  "physicalPath": "/calculadora-aviso-previo/index.html",
+  "studiedModules": [
+    "institutional hero",
+    "guided form",
+    "dominant result",
+    "secondary indicators",
+    "interpretation",
+    "calculation memory",
+    "summary table",
+    "limitations",
+    "distinct actions",
+    "adaptive A4 report",
+    "responsive shell"
+  ],
+  "adaptedForSaqueAniversario": [
+    "single balance journey",
+    "seven-band visible table",
+    "annual withdrawal interpretation",
+    "remaining balance",
+    "birth-month availability context"
+  ],
+  "literalCopy": false,
+  "parity": [
+    "STRUCTURAL_PARITY",
+    "DESIGN_SYSTEM_PARITY",
+    "QUALITY_PARITY",
+    "RESPONSIVE_PARITY"
+  ]
+}

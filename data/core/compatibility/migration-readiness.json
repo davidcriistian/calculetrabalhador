@@ -23,17 +23,17 @@
       "id": "saque-aniversario-fgts",
       "slug": "/saque-aniversario-fgts/",
       "title": "Saque-Aniversário FGTS",
-      "level": "ready",
-      "coreStatus": "not-connected",
-      "migrationStatus": "future",
+      "level": "migrated",
+      "coreStatus": "connected",
+      "migrationStatus": "migrated",
       "criteria": {
         "rules": [
-          "fgts"
+          "fgts.saque-aniversario"
         ],
-        "risk": "medium",
+        "risk": "low",
         "missingRules": []
       },
-      "notes": "Pode ser avaliado em piloto futuro após validação de equivalência e fontes."
+      "notes": "Piloto 2 migrado localmente para consumo governado; deploy e publicação externa permanecem fora do escopo."
     },
     {
       "type": "tool",

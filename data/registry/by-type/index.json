@@ -204,6 +204,18 @@
                                        ]
                     },
                     {
+                        "id":  "saque-aniversario-fgts",
+                        "assetId":  "calculator:saque-aniversario-fgts",
+                        "type":  "calculator",
+                        "slug":  "saque-aniversario-fgts",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-saque-aniversario-fgts.json"
+                                       ]
+                    },
+                    {
                         "id":  "calculadora-aviso-previo",
                         "assetId":  "calculator:calculadora-aviso-previo",
                         "type":  "calculator",

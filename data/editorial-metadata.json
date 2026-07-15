@@ -3,10 +3,10 @@
     "tipo": "calculadora",
     "titulo": "Calculadora de Saque Anivers&aacute;rio FGTS 2026",
     "publicadoEm": "2026-06-10",
-    "atualizadoEm": "2026-06-10",
-    "revisadoEm": "2026-06-10",
+    "atualizadoEm": "2026-07-15",
+    "revisadoEm": "2026-07-15",
     "anoBase": 2026,
-    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "fonteResumo": "Faixas oficiais do Saque-Aniversário FGTS, com cálculo e tabela derivados da mesma regra.",
     "aviso": "Resultado estimado para fins educativos."
   },
   "/salario-liquido-clt/": {

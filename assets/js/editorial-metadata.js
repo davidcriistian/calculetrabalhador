@@ -146,6 +146,7 @@
   }
 
   async function inicializarFaixaEditorial() {
+    if (window.location.protocol === 'file:') return;
     try {
       const todosMetadados = await carregarEditorialMetadata();
       const pathAtual = normalizarPathAtual();

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "flow": [
+    "data/rules/fgts.json#rules.saqueAniversario",
+    "scripts/transform-rules.js",
+    "data/tabelas-trabalhistas.json#saqueAniversario",
+    "assets/js/tabelas-trabalhistas.js",
+    "assets/js/saque-aniversario-fgts.js",
+    "saque-aniversario-fgts/index.html"
+  ],
+  "ruleVersion": "1.0.0-rc.1",
+  "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+  "publicConsumers": [
+    "CALCULATION_ENGINE",
+    "VISIBLE_TABLE",
+    "RESULT_EXPLANATION",
+    "RULE_SUMMARY",
+    "UPDATED_AT_METADATA"
+  ],
+  "sameProjectionConsumers": [
+    "calculation",
+    "visible table",
+    "memory",
+    "interpretation",
+    "summary report",
+    "adaptive report",
+    "validation"
+  ],
+  "activeLegacyFallback": false,
+  "derivedFallback": "100_PERCENT_CANONICAL_EQUIVALENT",
+  "staleState": "SYNCED",
+  "publicHttpSource": "governed-aggregate-json",
+  "publicFileSource": "governed-derived-fallback",
+  "historicalBaselineRuntimeAuthority": false
+}

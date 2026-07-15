@@ -250,6 +250,16 @@ function applyAvisoPrevioToAggregate(aggregate, transformed) {
   };
 }
 
+function applyFgtsSaqueAniversarioToAggregate(aggregate, transformed) {
+  return {
+    ...aggregate,
+    saqueAniversario: {
+      ...(aggregate.saqueAniversario || {}),
+      ...transformed.saqueAniversario
+    }
+  };
+}
+
 function sameNumber(left, right) {
   return Object.is(left, right);
 }
@@ -346,7 +356,10 @@ function validateFgtsSaqueAniversario(transformed, aggregate) {
     && expectedBands.every((band, index) => JSON.stringify(band[field]) === JSON.stringify(actualBands[index][field]));
   const lastActualLabel = actualBands[6] && actualBands[6].rotulo;
   const checks = [
-    {label:'Regra e versao canonicas internas', pass:expected.ruleId === 'fgts.saque-aniversario' && expected.ruleVersion === '1.0.0-rc.1'},
+    {label:'Regra canonica publica', pass:actual && actual.ruleId === expected.ruleId},
+    {label:'Versao canonica publica', pass:actual && actual.ruleVersion === expected.ruleVersion},
+    {label:'Fingerprint canonico publico', pass:actual && actual.sourceProjectionFingerprint === expected.sourceProjectionFingerprint},
+    {label:'Revisao juridica publica', pass:actual && actual.reviewStatus === expected.reviewStatus},
     {label:'Sete faixas', pass:expectedBands.length === 7 && actualBands.length === 7},
     {label:'Limites inferiores compativeis', pass:sameBandField('de')},
     {label:'Limites superiores', pass:sameBandField('ate')},
@@ -355,22 +368,25 @@ function validateFgtsSaqueAniversario(transformed, aggregate) {
     {label:'Parcelas adicionais', pass:sameBandField('parcelaAdicional')},
     {label:'Rotulos 1 a 6', pass:expectedBands.slice(0, 6).every((band, index) => band.rotulo === actualBands[index].rotulo)},
     {label:'Ultima faixa canonica acima de R$ 20.000,00', pass:expectedBands[6] && expectedBands[6].rotulo === 'Acima de R$ 20.000,00'},
-    {label:'Diferenca publica conhecida e restrita ao rotulo', pass:lastActualLabel === 'Acima de R$ 20.000,01' || lastActualLabel === 'Acima de R$ 20.000,00'}
+    {label:'Ultimo rotulo publico sincronizado', pass:lastActualLabel === 'Acima de R$ 20.000,00'}
   ];
   return {
     domain:'FGTS SAQUE-ANIVERSARIO',
     checks,
     equivalent:checks.every((check) => check.pass),
-    publicConnectionStatus:'LEGACY_DECLARED_PENDING_MIGRATION',
+    publicConnectionStatus:'GOVERNED_PUBLIC_CONSUMER',
     publicLabelCorrectionStatus:lastActualLabel === 'Acima de R$ 20.000,00'
       ? 'ALREADY_CORRECT'
-      : 'APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION'
+      : 'STALE_VISIBLE_TABLE'
   };
 }
 
 function buildGenerationPlan(ruleSets, aggregate) {
   const transformed = transformRules(ruleSets);
-  const nextAggregate = applyAvisoPrevioToAggregate(applyInssToAggregate(aggregate, transformed), transformed);
+  const nextAggregate = applyFgtsSaqueAniversarioToAggregate(
+    applyAvisoPrevioToAggregate(applyInssToAggregate(aggregate, transformed), transformed),
+    transformed
+  );
   const beforeReport = validateInss(transformed, aggregate);
   const afterReport = validateInss(transformed, nextAggregate);
   const avisoBeforeReport = validateAvisoPrevio(transformed, aggregate);
@@ -387,7 +403,7 @@ function buildGenerationPlan(ruleSets, aggregate) {
     avisoAfterReport,
     fgtsBeforeReport,
     fgtsAfterReport,
-    fgtsPublicProjectionWriteAuthorized: false,
+    fgtsPublicProjectionWriteAuthorized: true,
     changed: JSON.stringify(aggregate) !== JSON.stringify(nextAggregate)
   };
 }
@@ -410,7 +426,7 @@ function printUsage() {
   console.log('');
   console.log('Sem argumentos ou --check: valida INSS, aviso previo e a equivalencia matematica interna do Saque-Aniversario FGTS.');
   console.log('--dry-run: calcula a geracao derivada sem escrever arquivos.');
-  console.log('--generate: atualiza somente INSS/salarioMinimo e aviso previo; FGTS permanece bloqueado ate a migracao publica controlada.');
+  console.log('--generate: atualiza INSS/salarioMinimo, aviso previo e a projecao publica governada do Saque-Aniversario FGTS.');
 }
 
 function runCheck() {
@@ -455,7 +471,7 @@ function runGenerate({ dryRun = false } = {}) {
     console.log(`Conexao publica FGTS: ${plan.fgtsBeforeReport.publicConnectionStatus}`);
     console.log(`Correcao de rotulo: ${plan.fgtsBeforeReport.publicLabelCorrectionStatus}`);
     console.log('');
-    console.log('Geracao derivada INSS + Aviso Previo:');
+    console.log('Geracao derivada INSS + Aviso Previo + FGTS Saque-Aniversario:');
 
     if (!plan.changed) {
       console.log('NO_CHANGE_REQUIRED');
@@ -524,6 +540,7 @@ module.exports = {
   transformInss,
   transformAvisoPrevio,
   transformFgtsSaqueAniversario,
+  applyFgtsSaqueAniversarioToAggregate,
   transformRules,
   validateInss,
   validateInssRules,

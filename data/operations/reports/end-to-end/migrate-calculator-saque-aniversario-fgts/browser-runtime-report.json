@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "browser": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "fileProtocol": {
+    "status": "PASS",
+    "ruleSource": "governed-derived-fallback",
+    "staleState": "SYNCED",
+    "legacyFallbackActive": false,
+    "visibleTableRows": 7,
+    "memoryItems": 7,
+    "copy": "PASS",
+    "print": "PASS",
+    "selectablePdf": "PASS"
+  },
+  "httpLocal": {
+    "status": "PASS",
+    "ruleSource": "governed-aggregate-json",
+    "staleState": "SYNCED",
+    "legacyFallbackActive": false
+  },
+  "realFormCases": {
+    "valid": "14/14",
+    "invalid": "3/3",
+    "validBalances": [
+      500,
+      500.01,
+      1000,
+      1000.01,
+      5000,
+      5000.01,
+      10000,
+      10000.01,
+      15000,
+      15000.01,
+      20000,
+      20000.01,
+      123.45,
+      100000
+    ],
+    "invalidStates": [
+      "empty",
+      "invalid",
+      "zero"
+    ]
+  },
+  "accessibility": {
+    "labels": "PASS",
+    "keyboardJourney": "PASS_BALANCE_TO_BIRTH_MONTH"
+  },
+  "publicLayers": {
+    "footer": "PASS",
+    "ratesTable": "PASS",
+    "faq": "PASS",
+    "internalLinks": "PASS"
+  },
+  "resultContract": {
+    "memoryItems": 7,
+    "summaryRows": 6,
+    "copy": "PASS",
+    "print": "PASS",
+    "selectablePdf": "PASS",
+    "recommendationSlot": "HIDDEN_NOT_CONFIGURED"
+  },
+  "publicGovernanceMetadataVisible": false
+}

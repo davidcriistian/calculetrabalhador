@@ -1,0 +1,43 @@
+{
+  "status": "RESOLVED",
+  "required": [
+    "existing page controlled update",
+    "canonical calculator experience",
+    "governed rule projection",
+    "derived governed fallback",
+    "stale detection",
+    "typed consumers",
+    "Registry",
+    "Publishing",
+    "metadata",
+    "catalog",
+    "sitemap plan",
+    "testing",
+    "visual evidence",
+    "rollback"
+  ],
+  "reused": [
+    "domain:fgts",
+    "calculator:saque-aniversario-fgts",
+    "existing public route",
+    "existing catalog entry",
+    "existing sitemap URL",
+    "LEGALLY_RECONCILED_BASELINE"
+  ],
+  "notApplicable": [
+    "new URL",
+    "new cluster",
+    "new nucleus",
+    "new recommendation product",
+    "Home distribution change",
+    "real publication",
+    "deploy",
+    "real IndexNow"
+  ],
+  "forbidden": [
+    "legacy legal runtime authority",
+    "legacy fallback",
+    "editorial heritage deletion",
+    "unrelated file mutation"
+  ]
+}

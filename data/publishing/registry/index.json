@@ -233,6 +233,18 @@
                              "reference":  "/data/publishing/registry/calculator-calculadora-ferias-pj-published.json"
                          },
                          {
+                             "id":  "publishing-calculator-saque-aniversario-fgts",
+                             "assetId":  "calculator:saque-aniversario-fgts",
+                             "assetType":  "calculator",
+                             "status":  "published",
+                             "approvalStatus":  "approved-explicit-controlled-migration",
+                             "relationshipStatus":  "existing-fgts-cluster-preserved",
+                             "publishingStatus":  "published-local-migration-not-deployed",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/calculator-saque-aniversario-fgts-published.json"
+                         },
+                         {
                              "id":  "publishing-calculator-calculadora-aviso-previo",
                              "assetId":  "calculator:calculadora-aviso-previo",
                              "assetType":  "calculator",

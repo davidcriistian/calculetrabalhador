@@ -34,6 +34,35 @@
       }
     }
   });
+  const FGTS_SAQUE_ANIVERSARIO_RULE_ID = 'fgts.saque-aniversario';
+  const FGTS_SAQUE_ANIVERSARIO_RULE_VERSION = '1.0.0-rc.1';
+  const FGTS_SAQUE_ANIVERSARIO_FINGERPRINT = '966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd';
+  const FGTS_SAQUE_ANIVERSARIO_GOVERNED_FALLBACK = Object.freeze({
+    ruleId: FGTS_SAQUE_ANIVERSARIO_RULE_ID,
+    ruleVersion: FGTS_SAQUE_ANIVERSARIO_RULE_VERSION,
+    sourceProjectionFingerprint: FGTS_SAQUE_ANIVERSARIO_FINGERPRINT,
+    updatedAt: '2026-07-15',
+    reviewStatus: 'LEGAL_REVIEW_RESOLVED',
+    formula: Object.freeze({
+      withdrawal: 'balance * rate + additionalAmount',
+      remainingBalance: 'max(balance - withdrawal, 0)'
+    }),
+    rounding: Object.freeze({
+      method: 'Math.round((value + Number.EPSILON) * 100) / 100',
+      stage: 'final outputs',
+      moneyScale: 2
+    }),
+    invalidBehavior: 'EMPTY_ZERO_OUTPUT',
+    faixas: Object.freeze([
+      Object.freeze({de:0,ate:500,aliquota:0.5,percentual:50,parcelaAdicional:0,rotulo:'At\u00e9 R$ 500,00'}),
+      Object.freeze({de:500.01,ate:1000,aliquota:0.4,percentual:40,parcelaAdicional:50,rotulo:'R$ 500,01 a R$ 1.000,00'}),
+      Object.freeze({de:1000.01,ate:5000,aliquota:0.3,percentual:30,parcelaAdicional:150,rotulo:'R$ 1.000,01 a R$ 5.000,00'}),
+      Object.freeze({de:5000.01,ate:10000,aliquota:0.2,percentual:20,parcelaAdicional:650,rotulo:'R$ 5.000,01 a R$ 10.000,00'}),
+      Object.freeze({de:10000.01,ate:15000,aliquota:0.15,percentual:15,parcelaAdicional:1150,rotulo:'R$ 10.000,01 a R$ 15.000,00'}),
+      Object.freeze({de:15000.01,ate:20000,aliquota:0.1,percentual:10,parcelaAdicional:1900,rotulo:'R$ 15.000,01 a R$ 20.000,00'}),
+      Object.freeze({de:20000.01,ate:null,aliquota:0.05,percentual:5,parcelaAdicional:2900,rotulo:'Acima de R$ 20.000,00'})
+    ])
+  });
 
   function arredondarCentavos(valor) {
     return Math.round((Number(valor) + Number.EPSILON) * 100) / 100;
@@ -203,6 +232,31 @@
 
   function obterTabelaSaqueAniversario(tabelas) {
     return tabelas?.saqueAniversario || null;
+  }
+
+  function diagnosticarProjecaoSaqueAniversario(tabela) {
+    if (!tabela || tabela.ruleId !== FGTS_SAQUE_ANIVERSARIO_RULE_ID || tabela.ruleVersion !== FGTS_SAQUE_ANIVERSARIO_RULE_VERSION) {
+      return 'UNKNOWN_VERSION';
+    }
+    if (tabela.sourceProjectionFingerprint !== FGTS_SAQUE_ANIVERSARIO_FINGERPRINT) return 'STALE_DERIVED_OUTPUT';
+    const faixas = Array.isArray(tabela.faixas) ? tabela.faixas : [];
+    if (faixas.length !== 7 || !faixas[6] || faixas[6].rotulo !== 'Acima de R$ 20.000,00') return 'STALE_VISIBLE_TABLE';
+    const expected = FGTS_SAQUE_ANIVERSARIO_GOVERNED_FALLBACK.faixas;
+    const synchronized = expected.every((band, index) => {
+      const current = faixas[index] || {};
+      return ['de','ate','aliquota','percentual','parcelaAdicional','rotulo'].every((field) => current[field] === band[field]);
+    });
+    return synchronized ? 'SYNCED' : 'STALE_DERIVED_OUTPUT';
+  }
+
+  function validarProjecaoSaqueAniversario(tabela) {
+    const state = diagnosticarProjecaoSaqueAniversario(tabela);
+    if (state !== 'SYNCED') throw new Error(`FGTS_SAQUE_ANIVERSARIO_${state}`);
+    return tabela;
+  }
+
+  function obterFallbackSaqueAniversario() {
+    return FGTS_SAQUE_ANIVERSARIO_GOVERNED_FALLBACK;
   }
 
   function calcularSaqueAniversarioFGTS(saldoFGTS, tabelas) {
@@ -647,6 +701,9 @@
     calcularParcelasSeguroDesemprego,
     obterTabelaFGTS,
     obterTabelaSaqueAniversario,
+    obterFallbackSaqueAniversario,
+    diagnosticarProjecaoSaqueAniversario,
+    validarProjecaoSaqueAniversario,
     calcularSaqueAniversarioFGTS,
     obterPercentualInsalubridade,
     obterPercentualAdicionalNoturno,

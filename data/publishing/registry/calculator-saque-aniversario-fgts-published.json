@@ -1,0 +1,35 @@
+{
+  "id": "publishing-calculator-saque-aniversario-fgts",
+  "assetId": "calculator:saque-aniversario-fgts",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-explicit-controlled-migration",
+  "relationshipStatus": "existing-fgts-cluster-preserved",
+  "publishingStatus": "published-local-migration-not-deployed",
+  "runtimeStatus": "governed-public-consumer",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "published",
+    "migrationState": "MIGRATED_LOCAL_NOT_DEPLOYED",
+    "maximumAllowedInThisOperation": "local-working-tree"
+  },
+  "publicUrl": "https://calculetrabalhador.com.br/saque-aniversario-fgts/",
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemapPlan": true,
+    "createsPublicPage": false,
+    "modifiesExistingPage": true,
+    "callsIndexNow": false,
+    "indexNowDryRunOnly": true
+  },
+  "evidence": [
+    "/saque-aniversario-fgts/index.html",
+    "/data/tools.json",
+    "/data/editorial-metadata.json",
+    "/data/tabelas-trabalhistas.json",
+    "/sitemap.xml",
+    "/data/operations/reports/end-to-end/migrate-calculator-saque-aniversario-fgts/final-operation-report.json"
+  ]
+}
