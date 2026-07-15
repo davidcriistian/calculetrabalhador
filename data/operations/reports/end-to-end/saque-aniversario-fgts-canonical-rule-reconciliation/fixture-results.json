@@ -1,0 +1,239 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "passed": 26,
+  "total": 26,
+  "categories": [
+    "DETERMINISTIC",
+    "HEURISTIC",
+    "HUMAN_REVIEW_REQUIRED"
+  ],
+  "results": [
+    {
+      "id": "valid-rule-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-rule",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "seven-complete-bands-pass",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-bands",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "baseline-42-equivalent-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-baseline",
+      "expectedStatus": "42/42 EQUIVALENT",
+      "actualStatus": "42/42 EQUIVALENT",
+      "matched": true
+    },
+    {
+      "id": "last-band-label-correct-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-last-label",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "typed-consumers-pass",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-consumers",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "derived-fallback-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-fallback",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "stale-detection-synced-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "expectedStatus": "SYNCED",
+      "actualStatus": "SYNCED",
+      "matched": true
+    },
+    {
+      "id": "boundary-suite-passes",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-boundaries",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "matched": true
+    },
+    {
+      "id": "empty-rule-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-rule",
+      "mutation": "EMPTY_RULE",
+      "expectedStatus": "BLOCKED_BY_INVALID_RULE",
+      "actualStatus": "BLOCKED_BY_INVALID_RULE",
+      "matched": true
+    },
+    {
+      "id": "missing-band-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-bands",
+      "mutation": "REMOVE_BAND_4",
+      "expectedStatus": "BAND_COUNT_INVALID",
+      "actualStatus": "BAND_COUNT_INVALID",
+      "matched": true
+    },
+    {
+      "id": "overlapping-band-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-bands",
+      "mutation": "OVERLAP_BAND_3",
+      "expectedStatus": "BAND_OVERLAP",
+      "actualStatus": "BAND_OVERLAP",
+      "matched": true
+    },
+    {
+      "id": "band-gap-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-bands",
+      "mutation": "GAP_BAND_3",
+      "expectedStatus": "BAND_GAP",
+      "actualStatus": "BAND_GAP",
+      "matched": true
+    },
+    {
+      "id": "divergent-rate-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-baseline",
+      "mutation": "RATE_BAND_2",
+      "expectedStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "actualStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "matched": true
+    },
+    {
+      "id": "divergent-additional-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-baseline",
+      "mutation": "ADDITIONAL_BAND_5",
+      "expectedStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "actualStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "matched": true
+    },
+    {
+      "id": "wrong-final-label-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-last-label",
+      "mutation": "LEGACY_LABEL",
+      "expectedStatus": "LAST_BAND_LABEL_INVALID",
+      "actualStatus": "LAST_BAND_LABEL_INVALID",
+      "matched": true
+    },
+    {
+      "id": "visible-table-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "VISIBLE_TABLE_OLD",
+      "expectedStatus": "STALE_VISIBLE_TABLE",
+      "actualStatus": "STALE_VISIBLE_TABLE",
+      "matched": true
+    },
+    {
+      "id": "fallback-precedence-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-fallback",
+      "mutation": "FALLBACK_OVERRIDES_SOURCE",
+      "expectedStatus": "FALLBACK_POLICY_INVALID",
+      "actualStatus": "FALLBACK_POLICY_INVALID",
+      "matched": true
+    },
+    {
+      "id": "fallback-fingerprint-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "FALLBACK_FINGERPRINT_OLD",
+      "expectedStatus": "STALE_FALLBACK",
+      "actualStatus": "STALE_FALLBACK",
+      "matched": true
+    },
+    {
+      "id": "derived-output-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "CANONICAL_RATE_CHANGED",
+      "expectedStatus": "STALE_DERIVED_OUTPUT",
+      "actualStatus": "STALE_DERIVED_OUTPUT",
+      "matched": true
+    },
+    {
+      "id": "memory-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "MEMORY_VERSION_OLD",
+      "expectedStatus": "STALE_MEMORY",
+      "actualStatus": "STALE_MEMORY",
+      "matched": true
+    },
+    {
+      "id": "report-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "REPORT_FINGERPRINT_OLD",
+      "expectedStatus": "STALE_REPORT",
+      "actualStatus": "STALE_REPORT",
+      "matched": true
+    },
+    {
+      "id": "test-expectation-stale-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "BASELINE_CHECKSUM_OLD",
+      "expectedStatus": "STALE_TEST_EXPECTATION",
+      "actualStatus": "STALE_TEST_EXPECTATION",
+      "matched": true
+    },
+    {
+      "id": "unknown-version-detected",
+      "classification": "DETERMINISTIC",
+      "operation": "detect-stale",
+      "mutation": "UNKNOWN_RULE_VERSION",
+      "expectedStatus": "UNKNOWN_VERSION",
+      "actualStatus": "UNKNOWN_VERSION",
+      "matched": true
+    },
+    {
+      "id": "baseline-output-divergence-fails",
+      "classification": "DETERMINISTIC",
+      "operation": "validate-baseline",
+      "mutation": "EXPECTED_OUTPUT_CHANGED",
+      "expectedStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "actualStatus": "FGTS_CANONICAL_RULE_EQUIVALENCE_FAILED",
+      "matched": true
+    },
+    {
+      "id": "temporal-copy-heuristic-warning",
+      "classification": "HEURISTIC",
+      "operation": "classify-temporal-copy",
+      "expectedStatus": "HEURISTIC_WARNING",
+      "actualStatus": "HEURISTIC_WARNING",
+      "matched": true
+    },
+    {
+      "id": "future-official-source-change-review",
+      "classification": "HUMAN_REVIEW_REQUIRED",
+      "operation": "official-source-change",
+      "expectedStatus": "HUMAN_REVIEW_REQUIRED",
+      "actualStatus": "HUMAN_REVIEW_REQUIRED",
+      "matched": true
+    }
+  ]
+}

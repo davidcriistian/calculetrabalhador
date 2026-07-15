@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "decision": "REPLACE_WITH_DERIVED_FALLBACK",
+  "currentFallback": "LEGACY_DECLARED_PENDING_MIGRATION",
+  "futureFallback": {
+    "origin": "data/rules/fgts.json#rules.saqueAniversario.projectionPayload",
+    "ruleVersion": "1.0.0-rc.1",
+    "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+    "equivalenceRequired": "42/42 LEGACY_BEHAVIOR_BASELINE",
+    "useWhen": "canonical source loading fails and a registered last-known-good projection has the same version and fingerprint",
+    "blockWhen": [
+      "fingerprint mismatch",
+      "unknown version",
+      "invalid bands",
+      "baseline failure",
+      "fallback attempts to override an available canonical source"
+    ]
+  },
+  "silent": false,
+  "mayOverrideCanonical": false,
+  "derivedFromSameCanonicalProjection": true
+}

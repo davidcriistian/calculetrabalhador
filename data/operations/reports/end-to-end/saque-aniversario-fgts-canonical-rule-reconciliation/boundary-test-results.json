@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "passed": 17,
+  "total": 17,
+  "results": [
+    {
+      "balance": -1,
+      "expectedOrder": null,
+      "actualOrder": null,
+      "status": "PASS"
+    },
+    {
+      "balance": 0,
+      "expectedOrder": null,
+      "actualOrder": null,
+      "status": "PASS"
+    },
+    {
+      "balance": 0.01,
+      "expectedOrder": 1,
+      "actualOrder": 1,
+      "status": "PASS"
+    },
+    {
+      "balance": 500,
+      "expectedOrder": 1,
+      "actualOrder": 1,
+      "status": "PASS"
+    },
+    {
+      "balance": 500.01,
+      "expectedOrder": 2,
+      "actualOrder": 2,
+      "status": "PASS"
+    },
+    {
+      "balance": 1000,
+      "expectedOrder": 2,
+      "actualOrder": 2,
+      "status": "PASS"
+    },
+    {
+      "balance": 1000.01,
+      "expectedOrder": 3,
+      "actualOrder": 3,
+      "status": "PASS"
+    },
+    {
+      "balance": 5000,
+      "expectedOrder": 3,
+      "actualOrder": 3,
+      "status": "PASS"
+    },
+    {
+      "balance": 5000.01,
+      "expectedOrder": 4,
+      "actualOrder": 4,
+      "status": "PASS"
+    },
+    {
+      "balance": 10000,
+      "expectedOrder": 4,
+      "actualOrder": 4,
+      "status": "PASS"
+    },
+    {
+      "balance": 10000.01,
+      "expectedOrder": 5,
+      "actualOrder": 5,
+      "status": "PASS"
+    },
+    {
+      "balance": 15000,
+      "expectedOrder": 5,
+      "actualOrder": 5,
+      "status": "PASS"
+    },
+    {
+      "balance": 15000.01,
+      "expectedOrder": 6,
+      "actualOrder": 6,
+      "status": "PASS"
+    },
+    {
+      "balance": 20000,
+      "expectedOrder": 6,
+      "actualOrder": 6,
+      "status": "PASS"
+    },
+    {
+      "balance": 20000.01,
+      "expectedOrder": 7,
+      "actualOrder": 7,
+      "status": "PASS"
+    },
+    {
+      "balance": 123.45,
+      "expectedOrder": 1,
+      "actualOrder": 1,
+      "status": "PASS"
+    },
+    {
+      "balance": 1000000,
+      "expectedOrder": 7,
+      "actualOrder": 7,
+      "status": "PASS"
+    }
+  ]
+}

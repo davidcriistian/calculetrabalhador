@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_READY",
+  "ruleValidation": "PASS",
+  "bands": "PASS",
+  "baseline": "42/42 EQUIVALENT",
+  "consumers": "PASS",
+  "fallback": "PASS",
+  "stale": "SYNCED",
+  "boundaries": "PASS",
+  "lastBandLabel": "PASS",
+  "fixtureFailures": [],
+  "failures": []
+}

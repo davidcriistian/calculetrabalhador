@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "ROLLBACK_READY",
+  "method": "revert only the internal paths from this uncommitted operation using the preserved HEAD version or remove only operation-created internal files after explicit authorization",
+  "restoreFromHead": [
+    "data/core/domains/fgts/rules/index.json",
+    "data/core/update/governed-propagation.contract.json",
+    "data/core/update/governed-rule-consumers.json",
+    "data/rules/fgts.json",
+    "scripts/transform-rules.js"
+  ],
+  "removeCreatedInternalPaths": [
+    "data/core/update/fgts-saque-aniversario-projection.contract.json",
+    "data/pos/validation/fgts-saque-aniversario-canonical-rule-fixtures.json",
+    "scripts/validate-fgts-saque-aniversario-canonical-rule.js",
+    "data/operations/reports/end-to-end/saque-aniversario-fgts-canonical-rule-reconciliation"
+  ],
+  "publicPathsTouched": [],
+  "destructiveCommandExecuted": false
+}

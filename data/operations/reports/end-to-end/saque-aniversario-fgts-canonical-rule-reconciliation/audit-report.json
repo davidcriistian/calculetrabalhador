@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "trace": [
+    "preflight clean",
+    "pre-migration baseline read",
+    "empty draft classified",
+    "official sources resolved",
+    "canonical subrule modeled",
+    "seven bands formalized",
+    "permanent and temporal rules separated",
+    "governed projection modeled",
+    "consumers typed",
+    "derived fallback selected",
+    "stale detection tested",
+    "42/42 equivalence proved",
+    "mutation guard proved"
+  ],
+  "warnings": [
+    "Public calculator remains on legacy declared consumption until a separately authorized migration.",
+    "Git may normalize LF to CRLF when it next writes affected tracked files."
+  ],
+  "blockers": [],
+  "publicMutation": false,
+  "publication": false,
+  "indexNow": false,
+  "gitWrite": false
+}

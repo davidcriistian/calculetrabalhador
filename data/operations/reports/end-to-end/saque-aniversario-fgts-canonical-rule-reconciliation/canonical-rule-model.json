@@ -1,0 +1,296 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "domain": {
+    "domainId": "fgts",
+    "ruleId": "fgts",
+    "title": "Regras canônicas do Fundo de Garantia do Tempo de Serviço",
+    "version": "1.0.0-rc.1"
+  },
+  "canonicalSubrule": {
+    "ruleId": "fgts.saque-aniversario",
+    "title": "Cálculo anual do Saque-Aniversário FGTS",
+    "status": "candidate",
+    "version": "1.0.0-rc.1",
+    "effectiveFrom": "2019-07-24",
+    "jurisdiction": {
+      "country": "BR",
+      "scope": "titulares de contas vinculadas do FGTS optantes pelo Saque-Aniversário",
+      "locale": "pt-BR",
+      "timezone": "America/Sao_Paulo"
+    },
+    "officialSources": [
+      "lei-8036-1990-art-20d-anexo",
+      "lei-13932-2019",
+      "fgts-saque-aniversario-institucional"
+    ],
+    "scope": {
+      "input": "soma dos saldos das contas vinculadas do titular na data do débito",
+      "output": "valor anual estimado e saldo restante estimado",
+      "notIncluded": [
+        "antecipação de crédito",
+        "multa rescisória",
+        "Saque-Rescisão",
+        "calendário operacional por instituição"
+      ]
+    },
+    "parameters": {
+      "currency": "BRL",
+      "moneyScale": 2,
+      "minimumPositiveBalance": 0.01,
+      "comparisonTolerance": 0.001,
+      "additionalAmountTolerance": 0.01
+    },
+    "bands": [
+      {
+        "bandId": "saque-aniversario-band-01",
+        "lowerBound": 0,
+        "lowerInclusive": false,
+        "upperBound": 500,
+        "upperInclusive": true,
+        "rate": 0.5,
+        "additionalAmount": 0,
+        "displayLabel": "Até R$ 500,00",
+        "order": 1
+      },
+      {
+        "bandId": "saque-aniversario-band-02",
+        "lowerBound": 500,
+        "lowerInclusive": false,
+        "upperBound": 1000,
+        "upperInclusive": true,
+        "rate": 0.4,
+        "additionalAmount": 50,
+        "displayLabel": "R$ 500,01 a R$ 1.000,00",
+        "order": 2
+      },
+      {
+        "bandId": "saque-aniversario-band-03",
+        "lowerBound": 1000,
+        "lowerInclusive": false,
+        "upperBound": 5000,
+        "upperInclusive": true,
+        "rate": 0.3,
+        "additionalAmount": 150,
+        "displayLabel": "R$ 1.000,01 a R$ 5.000,00",
+        "order": 3
+      },
+      {
+        "bandId": "saque-aniversario-band-04",
+        "lowerBound": 5000,
+        "lowerInclusive": false,
+        "upperBound": 10000,
+        "upperInclusive": true,
+        "rate": 0.2,
+        "additionalAmount": 650,
+        "displayLabel": "R$ 5.000,01 a R$ 10.000,00",
+        "order": 4
+      },
+      {
+        "bandId": "saque-aniversario-band-05",
+        "lowerBound": 10000,
+        "lowerInclusive": false,
+        "upperBound": 15000,
+        "upperInclusive": true,
+        "rate": 0.15,
+        "additionalAmount": 1150,
+        "displayLabel": "R$ 10.000,01 a R$ 15.000,00",
+        "order": 5
+      },
+      {
+        "bandId": "saque-aniversario-band-06",
+        "lowerBound": 15000,
+        "lowerInclusive": false,
+        "upperBound": 20000,
+        "upperInclusive": true,
+        "rate": 0.1,
+        "additionalAmount": 1900,
+        "displayLabel": "R$ 15.000,01 a R$ 20.000,00",
+        "order": 6
+      },
+      {
+        "bandId": "saque-aniversario-band-07",
+        "lowerBound": 20000,
+        "lowerInclusive": false,
+        "upperBound": null,
+        "upperInclusive": false,
+        "rate": 0.05,
+        "additionalAmount": 2900,
+        "displayLabel": "Acima de R$ 20.000,00",
+        "order": 7
+      }
+    ],
+    "formula": {
+      "bandSelection": "select the only band whose lower and upper boundary predicates accept balance",
+      "withdrawal": "balance * band.rate + band.additionalAmount",
+      "remainingBalance": "max(balance - withdrawal, 0)",
+      "intermediateCalculation": "raw JavaScript Number arithmetic",
+      "finalResult": "round withdrawal and remaining balance to two decimal places"
+    },
+    "rounding": {
+      "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+      "stage": "withdrawal and remaining balance final outputs",
+      "intermediateRounding": false,
+      "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+      "moneyScale": 2
+    },
+    "validation": {
+      "validWhen": "balance is a finite number greater than zero",
+      "invalidWhen": [
+        "balance is missing",
+        "balance is not finite",
+        "balance is zero or negative"
+      ],
+      "invalidResult": {
+        "state": "EMPTY",
+        "withdrawal": 0,
+        "remainingBalance": 0,
+        "band": null
+      },
+      "inputParserCompatibility": {
+        "mode": "DIGITS_AS_CENTS",
+        "algorithm": "remove every non-digit character and divide the remaining integer by 100",
+        "normativeAuthority": false,
+        "preservationReason": "immutable LEGACY_BEHAVIOR_BASELINE parser contract"
+      },
+      "bandRequirements": {
+        "count": 7,
+        "ordered": true,
+        "noOverlap": true,
+        "noGap": true,
+        "lastBandOpenEnded": true
+      }
+    },
+    "consumerContracts": {
+      "registry": "/data/core/update/governed-rule-consumers.json",
+      "projection": "/data/core/update/fgts-saque-aniversario-projection.contract.json",
+      "validator": "/scripts/validate-fgts-saque-aniversario-canonical-rule.js",
+      "fixtures": "/data/pos/validation/fgts-saque-aniversario-canonical-rule-fixtures.json",
+      "legacyBaseline": "/data/operations/reports/end-to-end/pre-migration-calculator-saque-aniversario-fgts/regression-baseline.json",
+      "publicConnectionAuthorized": false
+    },
+    "updateSensitivity": {
+      "class": "LEGAL_UPDATE_REQUIRED",
+      "staleOn": [
+        "version change",
+        "official source change",
+        "band boundary change",
+        "rate change",
+        "additional amount change",
+        "formula change",
+        "rounding change",
+        "validation change"
+      ],
+      "publicationAfterChange": "controlled-separate-step"
+    },
+    "temporalRuleReferences": [
+      "rules.withdrawalWindow",
+      "rules.returnToSaqueRescisao",
+      "rules.antecipacao"
+    ],
+    "projectionPayload": {
+      "ruleId": "fgts.saque-aniversario",
+      "ruleVersion": "1.0.0-rc.1",
+      "effectiveFrom": "2019-07-24",
+      "lastReviewedAt": "2026-07-15",
+      "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+      "balanceAggregation": "sum of all linked-account balances at debit date",
+      "minimumPositiveBalance": 0.01,
+      "formula": {
+        "withdrawal": "balance * rate + additionalAmount",
+        "remainingBalance": "max(balance - withdrawal, 0)"
+      },
+      "rounding": {
+        "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+        "stage": "final outputs",
+        "moneyScale": 2
+      },
+      "invalidBehavior": "EMPTY_ZERO_OUTPUT",
+      "bands": [
+        {
+          "bandId": "saque-aniversario-band-01",
+          "lowerBound": 0,
+          "lowerInclusive": false,
+          "upperBound": 500,
+          "upperInclusive": true,
+          "rate": 0.5,
+          "additionalAmount": 0,
+          "displayLabel": "Até R$ 500,00",
+          "order": 1
+        },
+        {
+          "bandId": "saque-aniversario-band-02",
+          "lowerBound": 500,
+          "lowerInclusive": false,
+          "upperBound": 1000,
+          "upperInclusive": true,
+          "rate": 0.4,
+          "additionalAmount": 50,
+          "displayLabel": "R$ 500,01 a R$ 1.000,00",
+          "order": 2
+        },
+        {
+          "bandId": "saque-aniversario-band-03",
+          "lowerBound": 1000,
+          "lowerInclusive": false,
+          "upperBound": 5000,
+          "upperInclusive": true,
+          "rate": 0.3,
+          "additionalAmount": 150,
+          "displayLabel": "R$ 1.000,01 a R$ 5.000,00",
+          "order": 3
+        },
+        {
+          "bandId": "saque-aniversario-band-04",
+          "lowerBound": 5000,
+          "lowerInclusive": false,
+          "upperBound": 10000,
+          "upperInclusive": true,
+          "rate": 0.2,
+          "additionalAmount": 650,
+          "displayLabel": "R$ 5.000,01 a R$ 10.000,00",
+          "order": 4
+        },
+        {
+          "bandId": "saque-aniversario-band-05",
+          "lowerBound": 10000,
+          "lowerInclusive": false,
+          "upperBound": 15000,
+          "upperInclusive": true,
+          "rate": 0.15,
+          "additionalAmount": 1150,
+          "displayLabel": "R$ 10.000,01 a R$ 15.000,00",
+          "order": 5
+        },
+        {
+          "bandId": "saque-aniversario-band-06",
+          "lowerBound": 15000,
+          "lowerInclusive": false,
+          "upperBound": 20000,
+          "upperInclusive": true,
+          "rate": 0.1,
+          "additionalAmount": 1900,
+          "displayLabel": "R$ 15.000,01 a R$ 20.000,00",
+          "order": 6
+        },
+        {
+          "bandId": "saque-aniversario-band-07",
+          "lowerBound": 20000,
+          "lowerInclusive": false,
+          "upperBound": null,
+          "upperInclusive": false,
+          "rate": 0.05,
+          "additionalAmount": 2900,
+          "displayLabel": "Acima de R$ 20.000,00",
+          "order": 7
+        }
+      ]
+    },
+    "lastReviewedAt": "2026-07-15",
+    "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+    "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd"
+  },
+  "publicConnectionAuthorized": false
+}

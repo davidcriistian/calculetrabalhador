@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "SYNCED",
+  "states": [
+    "SYNCED",
+    "STALE_DERIVED_OUTPUT",
+    "STALE_VISIBLE_TABLE",
+    "STALE_FALLBACK",
+    "STALE_MEMORY",
+    "STALE_REPORT",
+    "STALE_TEST_EXPECTATION",
+    "UNKNOWN_VERSION"
+  ],
+  "checks": {
+    "canonicalChangedProjectionNotRegenerated": "STALE_DERIVED_OUTPUT",
+    "visibleTableFingerprintMismatch": "STALE_VISIBLE_TABLE",
+    "fallbackFingerprintMismatch": "STALE_FALLBACK",
+    "memoryVersionOrFingerprintMismatch": "STALE_MEMORY",
+    "reportVersionOrFingerprintMismatch": "STALE_REPORT",
+    "fixtureVersionOrBaselineMismatch": "STALE_TEST_EXPECTATION",
+    "unregisteredVersion": "UNKNOWN_VERSION",
+    "allInternalVersionsFingerprintsAndFixturesMatch": "SYNCED"
+  },
+  "publicationOnStale": "BLOCKED",
+  "automaticPublication": false
+}

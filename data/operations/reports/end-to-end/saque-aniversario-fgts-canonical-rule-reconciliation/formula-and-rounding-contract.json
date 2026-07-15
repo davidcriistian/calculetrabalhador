@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "formula": {
+    "bandSelection": "select the only band whose lower and upper boundary predicates accept balance",
+    "withdrawal": "balance * band.rate + band.additionalAmount",
+    "remainingBalance": "max(balance - withdrawal, 0)",
+    "intermediateCalculation": "raw JavaScript Number arithmetic",
+    "finalResult": "round withdrawal and remaining balance to two decimal places"
+  },
+  "rounding": {
+    "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+    "stage": "withdrawal and remaining balance final outputs",
+    "intermediateRounding": false,
+    "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+    "moneyScale": 2
+  },
+  "validation": {
+    "validWhen": "balance is a finite number greater than zero",
+    "invalidWhen": [
+      "balance is missing",
+      "balance is not finite",
+      "balance is zero or negative"
+    ],
+    "invalidResult": {
+      "state": "EMPTY",
+      "withdrawal": 0,
+      "remainingBalance": 0,
+      "band": null
+    },
+    "inputParserCompatibility": {
+      "mode": "DIGITS_AS_CENTS",
+      "algorithm": "remove every non-digit character and divide the remaining integer by 100",
+      "normativeAuthority": false,
+      "preservationReason": "immutable LEGACY_BEHAVIOR_BASELINE parser contract"
+    },
+    "bandRequirements": {
+      "count": 7,
+      "ordered": true,
+      "noOverlap": true,
+      "noGap": true,
+      "lastBandOpenEnded": true
+    }
+  },
+  "mathematicalChangeCount": 0,
+  "baselineChecksum": "33d7647001c85f04beba03df4fd3212722477f2eb65027f0833eac9b67400841"
+}

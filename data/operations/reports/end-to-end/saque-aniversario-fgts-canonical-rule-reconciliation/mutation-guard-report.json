@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "targetCalculator": {
+    "path": "saque-aniversario-fgts/index.html",
+    "expectedSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+    "actualSha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce",
+    "byteForByteUnchanged": true
+  },
+  "counters": {
+    "TARGET_CALCULATOR_MUTATION_COUNT": 0,
+    "OTHER_CALCULATOR_MUTATION_COUNT": 0,
+    "PUBLIC_PAGE_MUTATION_COUNT": 0,
+    "PUBLIC_RUNTIME_MUTATION_COUNT": 0,
+    "CATALOG_MUTATION_COUNT": 0,
+    "SITEMAP_MUTATION_COUNT": 0,
+    "PUBLIC_REGISTRY_MUTATION_COUNT": 0,
+    "PUBLIC_PUBLISHING_MUTATION_COUNT": 0,
+    "OTHER_LEGAL_RULE_MUTATION_COUNT": 0,
+    "PUBLICATION_COUNT": 0,
+    "INDEXNOW_SEND_COUNT": 0,
+    "GIT_WRITE_COUNT": 0,
+    "FGTS_CANONICAL_RULE_MUTATION_COUNT": 1,
+    "INTERNAL_GOVERNANCE_MUTATION_COUNT": 4,
+    "TEST_MUTATION_COUNT": 2,
+    "REPORT_CREATION_COUNT": 22
+  },
+  "protectedScopes": [
+    "target calculator",
+    "other 21 calculators",
+    "articles",
+    "Home",
+    "Guides",
+    "catalogs",
+    "sitemap",
+    "public runtime",
+    "public Registry/Publishing",
+    "legal rules outside FGTS"
+  ],
+  "publicConnectionAuthorized": false
+}

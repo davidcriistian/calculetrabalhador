@@ -1,0 +1,145 @@
+{
+  "id": "fgts-saque-aniversario-governed-projection-contract",
+  "version": "1.0.0",
+  "status": "canonical-rule-ready-public-migration-pending",
+  "runtimeStatus": "internal-governance-only",
+  "createdAt": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "sourceRuleId": "fgts.saque-aniversario",
+  "sourcePath": "data/rules/fgts.json#rules.saqueAniversario",
+  "sourceRuleVersion": "1.0.0-rc.1",
+  "fingerprintAlgorithm": "sha256-canonical-json",
+  "sourceProjectionFingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+  "flow": [
+    "CANONICAL_FGTS_RULE",
+    "SAQUE_ANIVERSARIO_CALCULATION_PROJECTION",
+    "VISIBLE_TABLE_PROJECTION",
+    "MEMORY_PROJECTION",
+    "REPORT_PROJECTION",
+    "VALIDATION_PROJECTION"
+  ],
+  "projectionPayloadPath": "data/rules/fgts.json#rules.saqueAniversario.projectionPayload",
+  "singleSourcePolicy": {
+    "calculationAndVisibleTableShareBands": true,
+    "independentBandHardcodesAllowedAfterMigration": false,
+    "forbiddenState": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_TABLE",
+    "publicConnectionAuthorizedThisPhase": false
+  },
+  "projections": {
+    "SAQUE_ANIVERSARIO_CALCULATION_PROJECTION": {
+      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "source": "projectionPayload.bands + projectionPayload.formula + projectionPayload.rounding",
+      "futureTarget": "data/tabelas-trabalhistas.json#saqueAniversario through assets/js/tabelas-trabalhistas.js",
+      "currentPublicMode": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "publicConnectionAuthorized": false
+    },
+    "VISIBLE_TABLE_PROJECTION": {
+      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "source": "projectionPayload.bands",
+      "futureTarget": "saque-aniversario-fgts/index.html#fgts-rates-body",
+      "lastBandLabel": "Acima de R$ 20.000,00",
+      "currentPublicLabel": "Acima de R$ 20.000,01",
+      "currentDifference": "APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION",
+      "mathematicalImpact": false,
+      "publicConnectionAuthorized": false
+    },
+    "MEMORY_PROJECTION": {
+      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "source": "same selected band and calculation result",
+      "fields": [
+        "inputBalance",
+        "bandId",
+        "rate",
+        "additionalAmount",
+        "withdrawalFormula",
+        "withdrawal",
+        "remainingBalance",
+        "ruleVersion",
+        "fingerprint"
+      ],
+      "independentHardcodesAllowed": false,
+      "publicConnectionAuthorized": false
+    },
+    "REPORT_PROJECTION": {
+      "status": "GOVERNED_INTERNAL_CONFIRMED_PUBLIC_CONNECTION_PENDING",
+      "source": "same calculation and memory projection",
+      "futureTarget": "adaptive calculator report",
+      "mustInclude": ["ruleVersion", "fingerprint", "selectedBand", "formula", "rounding"],
+      "publicConnectionAuthorized": false
+    },
+    "VALIDATION_PROJECTION": {
+      "status": "GOVERNED_CONFIRMED",
+      "source": "same canonical projection payload",
+      "targets": [
+        "scripts/validate-fgts-saque-aniversario-canonical-rule.js",
+        "data/pos/validation/fgts-saque-aniversario-canonical-rule-fixtures.json",
+        "data/operations/reports/end-to-end/pre-migration-calculator-saque-aniversario-fgts/regression-baseline.json"
+      ],
+      "requiredEquivalence": "42/42"
+    }
+  },
+  "fallback": {
+    "decision": "REPLACE_WITH_DERIVED_FALLBACK",
+    "currentPublicFallbackStatus": "LEGACY_DECLARED_PENDING_MIGRATION",
+    "legacyFallbackAllowedAfterMigration": false,
+    "futureFallback": {
+      "origin": "data/rules/fgts.json#rules.saqueAniversario.projectionPayload",
+      "ruleVersion": "1.0.0-rc.1",
+      "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+      "equivalenceRequired": "42/42 LEGACY_BEHAVIOR_BASELINE",
+      "useWhen": "canonical source loading fails and a registered last-known-good projection has the same version and fingerprint",
+      "blockWhen": [
+        "fingerprint mismatch",
+        "unknown version",
+        "invalid bands",
+        "baseline failure",
+        "fallback attempts to override an available canonical source"
+      ]
+    },
+    "silentFallbackAllowed": false,
+    "fallbackMayOverrideCanonicalSource": false,
+    "publicMutationThisPhase": false
+  },
+  "staleDetection": {
+    "states": [
+      "SYNCED",
+      "STALE_DERIVED_OUTPUT",
+      "STALE_VISIBLE_TABLE",
+      "STALE_FALLBACK",
+      "STALE_MEMORY",
+      "STALE_REPORT",
+      "STALE_TEST_EXPECTATION",
+      "UNKNOWN_VERSION"
+    ],
+    "checks": {
+      "canonicalChangedProjectionNotRegenerated": "STALE_DERIVED_OUTPUT",
+      "visibleTableFingerprintMismatch": "STALE_VISIBLE_TABLE",
+      "fallbackFingerprintMismatch": "STALE_FALLBACK",
+      "memoryVersionOrFingerprintMismatch": "STALE_MEMORY",
+      "reportVersionOrFingerprintMismatch": "STALE_REPORT",
+      "fixtureVersionOrBaselineMismatch": "STALE_TEST_EXPECTATION",
+      "unregisteredVersion": "UNKNOWN_VERSION",
+      "allInternalVersionsFingerprintsAndFixturesMatch": "SYNCED"
+    },
+    "knownPublicLegacyState": "LEGACY_DECLARED_PENDING_MIGRATION",
+    "knownPublicLabelDifference": "APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION",
+    "publicationOnStale": "BLOCKED",
+    "automaticPublication": false
+  },
+  "legalGate": {
+    "status": "LEGAL_REVIEW_RESOLVED",
+    "unresolvedObjectiveLegalOrMathDivergences": 0,
+    "controlledMigrationReadiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION",
+    "publicMigrationExecuted": false
+  },
+  "boundaries": {
+    "changesPublicCalculator": false,
+    "changesPublicRuntime": false,
+    "changesPublicContent": false,
+    "changesCatalog": false,
+    "changesSitemap": false,
+    "changesRegistryPublishing": false,
+    "publishes": false,
+    "sendsIndexNow": false
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "checks": {
+    "JSON_VALID": {
+      "status": "PASS",
+      "count": 27
+    },
+    "INTERNAL_JSON_REFS_VALID": "PASS",
+    "NODE_CHECK": [
+      {
+        "status": "PASS",
+        "executionMode": "DIRECT_TERMINAL_VALIDATED",
+        "command": "node --check scripts/transform-rules.js"
+      },
+      {
+        "status": "PASS",
+        "executionMode": "DIRECT_TERMINAL_VALIDATED",
+        "command": "node --check scripts/validate-fgts-saque-aniversario-canonical-rule.js"
+      },
+      {
+        "status": "PASS",
+        "executionMode": "DIRECT_TERMINAL_VALIDATED",
+        "command": "node --check data/operations/reports/end-to-end/saque-aniversario-fgts-canonical-rule-reconciliation/report-generator.js"
+      }
+    ],
+    "CANONICAL_RULE_VALIDATOR": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_READY",
+    "FIXTURES": "26/26",
+    "EQUIVALENCE": "42/42 EQUIVALENT",
+    "BOUNDARIES": "17/17",
+    "FALLBACK": "PASS",
+    "STALE_DETECTION": "SYNCED",
+    "GOVERNANCE": "PASS",
+    "MIGRATION_FOUNDATION": "PASS",
+    "CALCULATOR_EXPERIENCE_CONTRACT": "PASS",
+    "TRANSFORM_CHECK": "PASS",
+    "TRANSFORM_DRY_RUN": "PASS",
+    "CANONICAL_CONTROLS": [
+      {
+        "command": "node scripts/validate-migrated-calculadora-aviso-previo.js",
+        "status": "PASS"
+      },
+      {
+        "command": "node scripts/test-reserva-financeira-pj.js",
+        "status": "PASS"
+      },
+      {
+        "command": "node scripts/test-ferias-pj.js",
+        "status": "PASS"
+      }
+    ],
+    "SECRET_SCAN": {
+      "status": "PASS",
+      "matches": 0
+    },
+    "LARGE_FILE_SCAN": {
+      "status": "PASS",
+      "thresholdBytes": 5242880,
+      "matches": 0
+    },
+    "UNEXPECTED_ARTIFACT_SCAN": {
+      "status": "PASS",
+      "matches": 0
+    },
+    "GIT_DIFF_CHECK": "PASS",
+    "MUTATION_GUARD": "PASS"
+  },
+  "commands": [
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/validate-fgts-saque-aniversario-canonical-rule.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/validate-governance.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/validate-calculator-migration-foundation.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/validate-calculator-experience-contract.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/transform-rules.js --check"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/transform-rules.js --dry-run"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/validate-migrated-calculadora-aviso-previo.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/test-reserva-financeira-pj.js"
+    },
+    {
+      "status": "PASS",
+      "executionMode": "DIRECT_TERMINAL_VALIDATED",
+      "command": "node scripts/test-ferias-pj.js"
+    }
+  ],
+  "failures": []
+}

@@ -7,6 +7,7 @@ const FILES = Object.freeze({
   rulesDir: 'data/rules',
   inssRules: 'data/rules/inss.json',
   avisoPrevioRules: 'data/rules/aviso-previo.json',
+  fgtsRules: 'data/rules/fgts.json',
   aggregate: 'data/tabelas-trabalhistas.json'
 });
 
@@ -28,7 +29,8 @@ function writeJson(relativePath, value) {
 function loadRuleSets(rulesDir = FILES.rulesDir) {
   return {
     inss: readJson(path.join(rulesDir, 'inss.json')),
-    avisoPrevio: readJson(path.join(rulesDir, 'aviso-previo.json'))
+    avisoPrevio: readJson(path.join(rulesDir, 'aviso-previo.json')),
+    fgts: readJson(path.join(rulesDir, 'fgts.json'))
   };
 }
 
@@ -165,10 +167,63 @@ function transformAvisoPrevio(ruleSet) {
   };
 }
 
+function validateFgtsSaqueAniversarioRules(ruleSet) {
+  const rule = ruleSet && ruleSet.rules && ruleSet.rules.saqueAniversario;
+  if (!ruleSet || ruleSet.domainId !== 'fgts' || !rule || rule.ruleId !== 'fgts.saque-aniversario') {
+    throw new Error('Regra canonica de Saque-Aniversario FGTS ausente ou fora do dominio esperado.');
+  }
+  if (rule.status !== 'candidate' || rule.version !== '1.0.0-rc.1' || rule.reviewStatus !== 'LEGAL_REVIEW_RESOLVED') {
+    throw new Error('Regra canonica de Saque-Aniversario FGTS desconhecida ou nao reconciliada.');
+  }
+  const payload = rule.projectionPayload;
+  if (!payload || payload.ruleId !== rule.ruleId || payload.ruleVersion !== rule.version) {
+    throw new Error('projectionPayload de Saque-Aniversario FGTS ausente ou fora de versao.');
+  }
+  assertArray(payload.bands, 'fgts.saqueAniversario.projectionPayload.bands');
+  if (payload.bands.length !== 7) throw new Error('Saque-Aniversario FGTS deve possuir exatamente sete faixas.');
+  payload.bands.forEach((band, index) => {
+    assertNumber(band.lowerBound, `fgts.saqueAniversario.bands[${index}].lowerBound`);
+    if (band.upperBound !== null) assertNumber(band.upperBound, `fgts.saqueAniversario.bands[${index}].upperBound`);
+    assertNumber(band.rate, `fgts.saqueAniversario.bands[${index}].rate`);
+    assertNumber(band.additionalAmount, `fgts.saqueAniversario.bands[${index}].additionalAmount`);
+    if (band.order !== index + 1) throw new Error('Faixas de Saque-Aniversario FGTS fora de ordem.');
+    if (index > 0 && band.lowerBound !== payload.bands[index - 1].upperBound) throw new Error('Lacuna ou sobreposicao nas faixas de Saque-Aniversario FGTS.');
+  });
+  const lastBand = payload.bands[6];
+  if (lastBand.lowerBound !== 20000 || lastBand.lowerInclusive !== false || lastBand.upperBound !== null
+    || lastBand.displayLabel !== 'Acima de R$ 20.000,00') {
+    throw new Error('Ultima faixa de Saque-Aniversario FGTS representada incorretamente.');
+  }
+  return {rule, payload};
+}
+
+function transformFgtsSaqueAniversario(ruleSet) {
+  const {rule, payload} = validateFgtsSaqueAniversarioRules(ruleSet);
+  return {
+    ruleId: rule.ruleId,
+    ruleVersion: rule.version,
+    sourceProjectionFingerprint: rule.fingerprint,
+    updatedAt: rule.lastReviewedAt,
+    reviewStatus: rule.reviewStatus,
+    formula: payload.formula,
+    rounding: payload.rounding,
+    invalidBehavior: payload.invalidBehavior,
+    faixas: payload.bands.map((band, index) => ({
+      de: index === 0 ? 0 : Math.round((band.lowerBound + 0.01) * 100) / 100,
+      ate: band.upperBound,
+      aliquota: band.rate,
+      percentual: band.rate * 100,
+      parcelaAdicional: band.additionalAmount,
+      rotulo: band.displayLabel
+    }))
+  };
+}
+
 function transformRules(ruleSets) {
   return {
     ...transformInss(ruleSets.inss),
-    avisoPrevio: transformAvisoPrevio(ruleSets.avisoPrevio)
+    avisoPrevio: transformAvisoPrevio(ruleSets.avisoPrevio),
+    saqueAniversario: transformFgtsSaqueAniversario(ruleSets.fgts)
   };
 }
 
@@ -282,6 +337,37 @@ function validateAvisoPrevio(transformed, aggregate) {
   return { domain: 'AVISO PREVIO', checks, equivalent: checks.every((check) => check.pass) };
 }
 
+function validateFgtsSaqueAniversario(transformed, aggregate) {
+  const expected = transformed.saqueAniversario;
+  const actual = aggregate.saqueAniversario;
+  const expectedBands = Array.isArray(expected && expected.faixas) ? expected.faixas : [];
+  const actualBands = Array.isArray(actual && actual.faixas) ? actual.faixas : [];
+  const sameBandField = (field) => expectedBands.length === actualBands.length
+    && expectedBands.every((band, index) => JSON.stringify(band[field]) === JSON.stringify(actualBands[index][field]));
+  const lastActualLabel = actualBands[6] && actualBands[6].rotulo;
+  const checks = [
+    {label:'Regra e versao canonicas internas', pass:expected.ruleId === 'fgts.saque-aniversario' && expected.ruleVersion === '1.0.0-rc.1'},
+    {label:'Sete faixas', pass:expectedBands.length === 7 && actualBands.length === 7},
+    {label:'Limites inferiores compativeis', pass:sameBandField('de')},
+    {label:'Limites superiores', pass:sameBandField('ate')},
+    {label:'Aliquotas', pass:sameBandField('aliquota')},
+    {label:'Percentuais', pass:sameBandField('percentual')},
+    {label:'Parcelas adicionais', pass:sameBandField('parcelaAdicional')},
+    {label:'Rotulos 1 a 6', pass:expectedBands.slice(0, 6).every((band, index) => band.rotulo === actualBands[index].rotulo)},
+    {label:'Ultima faixa canonica acima de R$ 20.000,00', pass:expectedBands[6] && expectedBands[6].rotulo === 'Acima de R$ 20.000,00'},
+    {label:'Diferenca publica conhecida e restrita ao rotulo', pass:lastActualLabel === 'Acima de R$ 20.000,01' || lastActualLabel === 'Acima de R$ 20.000,00'}
+  ];
+  return {
+    domain:'FGTS SAQUE-ANIVERSARIO',
+    checks,
+    equivalent:checks.every((check) => check.pass),
+    publicConnectionStatus:'LEGACY_DECLARED_PENDING_MIGRATION',
+    publicLabelCorrectionStatus:lastActualLabel === 'Acima de R$ 20.000,00'
+      ? 'ALREADY_CORRECT'
+      : 'APPROVED_REPRESENTATIONAL_CORRECTION_PENDING_PUBLIC_MIGRATION'
+  };
+}
+
 function buildGenerationPlan(ruleSets, aggregate) {
   const transformed = transformRules(ruleSets);
   const nextAggregate = applyAvisoPrevioToAggregate(applyInssToAggregate(aggregate, transformed), transformed);
@@ -289,6 +375,8 @@ function buildGenerationPlan(ruleSets, aggregate) {
   const afterReport = validateInss(transformed, nextAggregate);
   const avisoBeforeReport = validateAvisoPrevio(transformed, aggregate);
   const avisoAfterReport = validateAvisoPrevio(transformed, nextAggregate);
+  const fgtsBeforeReport = validateFgtsSaqueAniversario(transformed, aggregate);
+  const fgtsAfterReport = validateFgtsSaqueAniversario(transformed, nextAggregate);
 
   return {
     transformed,
@@ -297,6 +385,9 @@ function buildGenerationPlan(ruleSets, aggregate) {
     afterReport,
     avisoBeforeReport,
     avisoAfterReport,
+    fgtsBeforeReport,
+    fgtsAfterReport,
+    fgtsPublicProjectionWriteAuthorized: false,
     changed: JSON.stringify(aggregate) !== JSON.stringify(nextAggregate)
   };
 }
@@ -317,9 +408,9 @@ function printDomainReport(report) {
 function printUsage() {
   console.log('Uso: node scripts/transform-rules.js [--check|--generate|--dry-run]');
   console.log('');
-  console.log('Sem argumentos ou --check: valida se INSS e aviso previo canonicos estao sincronizados com o agregador.');
+  console.log('Sem argumentos ou --check: valida INSS, aviso previo e a equivalencia matematica interna do Saque-Aniversario FGTS.');
   console.log('--dry-run: calcula a geracao derivada sem escrever arquivos.');
-  console.log('--generate: atualiza somente os campos derivados de INSS/salarioMinimo e aviso previo no agregador.');
+  console.log('--generate: atualiza somente INSS/salarioMinimo e aviso previo; FGTS permanece bloqueado ate a migracao publica controlada.');
 }
 
 function runCheck() {
@@ -329,11 +420,16 @@ function runCheck() {
     const transformed = transformRules(ruleSets);
     const report = validateInss(transformed, aggregate);
     const avisoReport = validateAvisoPrevio(transformed, aggregate);
+    const fgtsReport = validateFgtsSaqueAniversario(transformed, aggregate);
 
     printDomainReport(report);
     console.log('');
     printDomainReport(avisoReport);
-    return report.equivalent && avisoReport.equivalent ? 0 : 1;
+    console.log('');
+    printDomainReport(fgtsReport);
+    console.log(`Conexao publica FGTS: ${fgtsReport.publicConnectionStatus}`);
+    console.log(`Correcao de rotulo: ${fgtsReport.publicLabelCorrectionStatus}`);
+    return report.equivalent && avisoReport.equivalent && fgtsReport.equivalent ? 0 : 1;
   } catch (error) {
     console.error(`Erro: ${error.message}`);
     return 1;
@@ -346,7 +442,7 @@ function runGenerate({ dryRun = false } = {}) {
     const aggregate = readJson(FILES.aggregate);
     const plan = buildGenerationPlan(ruleSets, aggregate);
 
-    if (!plan.afterReport.equivalent || !plan.avisoAfterReport.equivalent) {
+    if (!plan.afterReport.equivalent || !plan.avisoAfterReport.equivalent || !plan.fgtsAfterReport.equivalent) {
       console.error('Erro: a geracao derivada nao produziu equivalencia governada.');
       return 1;
     }
@@ -354,6 +450,10 @@ function runGenerate({ dryRun = false } = {}) {
     printDomainReport(plan.beforeReport);
     console.log('');
     printDomainReport(plan.avisoBeforeReport);
+    console.log('');
+    printDomainReport(plan.fgtsBeforeReport);
+    console.log(`Conexao publica FGTS: ${plan.fgtsBeforeReport.publicConnectionStatus}`);
+    console.log(`Correcao de rotulo: ${plan.fgtsBeforeReport.publicLabelCorrectionStatus}`);
     console.log('');
     console.log('Geracao derivada INSS + Aviso Previo:');
 
@@ -423,9 +523,12 @@ module.exports = {
   runGenerate,
   transformInss,
   transformAvisoPrevio,
+  transformFgtsSaqueAniversario,
   transformRules,
   validateInss,
   validateInssRules,
   validateAvisoPrevio,
-  validateAvisoPrevioRules
+  validateAvisoPrevioRules,
+  validateFgtsSaqueAniversario,
+  validateFgtsSaqueAniversarioRules
 };

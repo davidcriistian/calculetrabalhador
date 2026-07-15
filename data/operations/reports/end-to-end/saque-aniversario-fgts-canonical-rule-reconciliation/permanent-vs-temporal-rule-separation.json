@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "permanentCalculationRule": {
+    "ruleId": "fgts.saque-aniversario",
+    "classification": "PERMANENT_CALCULATION_RULE",
+    "engineImpact": true
+  },
+  "operationalRules": [
+    {
+      "ruleId": "fgts.saque-aniversario.withdrawal-window",
+      "classification": "NOT_APPLICABLE_TO_CALCULATOR_ENGINE",
+      "status": "OFFICIAL_OPERATIONAL_RULE",
+      "effectiveFrom": "2019-07-24",
+      "rule": "saque disponível no mês de aniversário e até o último dia útil do segundo mês subsequente",
+      "consumer": "availability copy and editorial explanation",
+      "engineImpact": false,
+      "sourceIds": [
+        "lei-13932-2019",
+        "fgts-saque-aniversario-institucional"
+      ]
+    },
+    {
+      "ruleId": "fgts.saque-aniversario.return-to-saque-rescisao",
+      "classification": "TIME_SENSITIVE_OPERATIONAL_RULE",
+      "status": "OFFICIAL_OPERATIONAL_RULE",
+      "effectiveFrom": "2019-07-24",
+      "rule": "alteração produz efeitos no primeiro dia do 25º mês subsequente ao da solicitação, observadas as restrições aplicáveis",
+      "consumer": "editorial explanation and FAQ",
+      "engineImpact": false,
+      "sourceIds": [
+        "lei-13932-2019",
+        "fgts-saque-aniversario-institucional",
+        "fgts-faq-trabalhador"
+      ]
+    },
+    {
+      "ruleId": "fgts.saque-aniversario.antecipacao",
+      "classification": "TIME_SENSITIVE_OPERATIONAL_RULE",
+      "status": "OFFICIAL_OPERATIONAL_RULE_REVIEW_REQUIRED_ON_CHANGE",
+      "engineImpact": false,
+      "consumer": "editorial explanation only; never annual withdrawal engine",
+      "sourceIds": [
+        "resolucao-ccfgts-1130-2025",
+        "fgts-saque-aniversario-institucional"
+      ],
+      "periods": [
+        {
+          "effectiveFrom": "2025-11-01",
+          "effectiveThrough": "2026-10-31",
+          "maximumAnnualRights": 5,
+          "minimumPerAnnualRight": 100,
+          "maximumPerAnnualRight": 500,
+          "authorizationWaitingDays": 90
+        },
+        {
+          "effectiveFrom": "2026-11-01",
+          "effectiveThrough": null,
+          "maximumAnnualRights": 3,
+          "minimumPerAnnualRight": 100,
+          "maximumPerAnnualRight": 500,
+          "authorizationWaitingDays": 90
+        }
+      ],
+      "reviewPolicy": "LEGAL_UPDATE_REQUIRED"
+    }
+  ],
+  "annualEngineContaminationCount": 0
+}

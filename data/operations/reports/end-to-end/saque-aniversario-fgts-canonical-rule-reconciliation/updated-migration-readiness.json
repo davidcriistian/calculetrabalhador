@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_READY",
+  "readiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION",
+  "guards": [],
+  "blockers": [],
+  "publicMigrationExecuted": false
+}

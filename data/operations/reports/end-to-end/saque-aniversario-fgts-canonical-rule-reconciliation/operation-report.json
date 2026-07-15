@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "mode": "CONTROLLED_INTERNAL_RULE_RECONCILIATION",
+  "status": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_READY",
+  "readiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION",
+  "rule": "fgts.saque-aniversario@1.0.0-rc.1",
+  "projectionFingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd",
+  "baseline": "42/42 EQUIVALENT",
+  "bands": "7/7",
+  "fixtures": "26/26",
+  "typedConsumers": "9/9",
+  "fallback": "REPLACE_WITH_DERIVED_FALLBACK",
+  "staleState": "SYNCED",
+  "mathematicalChanges": 0,
+  "representationalCorrections": 1,
+  "unexplainedDivergences": 0,
+  "targetCalculatorMutationCount": 0,
+  "publicationCount": 0,
+  "indexNowSendCount": 0,
+  "gitWriteCount": 0
+}

@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "PASS",
+  "count": 7,
+  "noGaps": true,
+  "noOverlaps": true,
+  "boundariesDeterministic": true,
+  "lastBandCondition": "balance > 20000.00",
+  "lastBandLabel": "Acima de R$ 20.000,00",
+  "bands": [
+    {
+      "bandId": "saque-aniversario-band-01",
+      "lowerBound": 0,
+      "lowerInclusive": false,
+      "upperBound": 500,
+      "upperInclusive": true,
+      "rate": 0.5,
+      "additionalAmount": 0,
+      "displayLabel": "Até R$ 500,00",
+      "order": 1
+    },
+    {
+      "bandId": "saque-aniversario-band-02",
+      "lowerBound": 500,
+      "lowerInclusive": false,
+      "upperBound": 1000,
+      "upperInclusive": true,
+      "rate": 0.4,
+      "additionalAmount": 50,
+      "displayLabel": "R$ 500,01 a R$ 1.000,00",
+      "order": 2
+    },
+    {
+      "bandId": "saque-aniversario-band-03",
+      "lowerBound": 1000,
+      "lowerInclusive": false,
+      "upperBound": 5000,
+      "upperInclusive": true,
+      "rate": 0.3,
+      "additionalAmount": 150,
+      "displayLabel": "R$ 1.000,01 a R$ 5.000,00",
+      "order": 3
+    },
+    {
+      "bandId": "saque-aniversario-band-04",
+      "lowerBound": 5000,
+      "lowerInclusive": false,
+      "upperBound": 10000,
+      "upperInclusive": true,
+      "rate": 0.2,
+      "additionalAmount": 650,
+      "displayLabel": "R$ 5.000,01 a R$ 10.000,00",
+      "order": 4
+    },
+    {
+      "bandId": "saque-aniversario-band-05",
+      "lowerBound": 10000,
+      "lowerInclusive": false,
+      "upperBound": 15000,
+      "upperInclusive": true,
+      "rate": 0.15,
+      "additionalAmount": 1150,
+      "displayLabel": "R$ 10.000,01 a R$ 15.000,00",
+      "order": 5
+    },
+    {
+      "bandId": "saque-aniversario-band-06",
+      "lowerBound": 15000,
+      "lowerInclusive": false,
+      "upperBound": 20000,
+      "upperInclusive": true,
+      "rate": 0.1,
+      "additionalAmount": 1900,
+      "displayLabel": "R$ 15.000,01 a R$ 20.000,00",
+      "order": 6
+    },
+    {
+      "bandId": "saque-aniversario-band-07",
+      "lowerBound": 20000,
+      "lowerInclusive": false,
+      "upperBound": null,
+      "upperInclusive": false,
+      "rate": 0.05,
+      "additionalAmount": 2900,
+      "displayLabel": "Acima de R$ 20.000,00",
+      "order": 7
+    }
+  ]
+}

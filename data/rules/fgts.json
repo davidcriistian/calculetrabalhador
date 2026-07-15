@@ -1,7 +1,410 @@
 {
-  "version": 1,
-  "status": "draft",
-  "source": null,
-  "year": null,
-  "data": {}
+  "domainId": "fgts",
+  "ruleId": "fgts",
+  "title": "Regras canônicas do Fundo de Garantia do Tempo de Serviço",
+  "status": "candidate",
+  "version": "1.0.0-rc.1",
+  "effectiveFrom": "2019-07-24",
+  "jurisdiction": {
+    "country": "BR",
+    "scope": "contas vinculadas do FGTS",
+    "locale": "pt-BR",
+    "timezone": "America/Sao_Paulo"
+  },
+  "officialSources": [
+    {
+      "sourceId": "lei-8036-1990-art-20d-anexo",
+      "authority": "Presidência da República - Casa Civil",
+      "type": "federal-consolidated-law",
+      "title": "Lei nº 8.036, de 11 de maio de 1990",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8036compilada.htm",
+      "applicableProvision": "art. 20-D e Anexo",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "aplicação da alíquota à soma dos saldos das contas vinculadas",
+        "acréscimo da parcela adicional",
+        "sete faixas, alíquotas e parcelas adicionais",
+        "possibilidade de atualização oficial para o ano subsequente"
+      ],
+      "effectiveFrom": "2019-07-24",
+      "limitations": "A fonte legal define a regra; a operação do saque e da antecipação também depende de regulamentação e orientação do Agente Operador."
+    },
+    {
+      "sourceId": "lei-13932-2019",
+      "authority": "Presidência da República - Casa Civil",
+      "type": "federal-law",
+      "title": "Lei nº 13.932, de 11 de dezembro de 2019",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13932.htm",
+      "applicableProvision": "alterações dos arts. 20, 20-A, 20-B, 20-C e 20-D da Lei nº 8.036/1990",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "instituição da sistemática de Saque-Aniversário",
+        "janela anual de saque",
+        "retorno ao Saque-Rescisão no primeiro dia do 25º mês"
+      ],
+      "effectiveFrom": "2019-12-12",
+      "limitations": "Regras de antecipação posteriores são tratadas por atos específicos do Conselho Curador."
+    },
+    {
+      "sourceId": "fgts-saque-aniversario-institucional",
+      "authority": "FGTS - Agente Operador CAIXA",
+      "type": "official-institutional-guidance",
+      "title": "Saque-Aniversário do FGTS",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/saque/saque-aniversario.aspx",
+      "applicableProvision": "tabela institucional e orientações operacionais",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "fórmula anual",
+        "sete faixas vigentes",
+        "alíquotas e parcelas adicionais",
+        "última faixa como saldo acima de R$ 20.000,00",
+        "regras temporais de retorno e antecipação"
+      ],
+      "effectiveFrom": "2019-07-24",
+      "limitations": "Orientação institucional; a autoridade normativa primária da fórmula é a Lei nº 8.036/1990."
+    },
+    {
+      "sourceId": "fgts-faq-trabalhador",
+      "authority": "FGTS - Agente Operador CAIXA",
+      "type": "official-institutional-faq",
+      "title": "Perguntas Frequentes - Trabalhadores",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/perguntas-frequentes.aspx",
+      "applicableProvision": "Saque-Aniversário e alteração de sistemática",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "enquadramento do saldo total na faixa",
+        "efeito da alteração no primeiro dia útil do 25º mês"
+      ],
+      "effectiveFrom": null,
+      "limitations": "Fonte operacional complementar; não substitui a lei."
+    },
+    {
+      "sourceId": "resolucao-ccfgts-1130-2025",
+      "authority": "Conselho Curador do FGTS - Ministério do Trabalho e Emprego",
+      "type": "official-regulation",
+      "title": "Resolução CCFGTS nº 1.130, de 7 de outubro de 2025",
+      "url": "https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?captchafield=firstAccess&data=20%2F10%2F2025&jornal=515&pagina=153",
+      "applicableProvision": "arts. 1º a 5º",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "carência operacional de 90 dias para autorização",
+        "até cinco antecipações até 31/10/2026",
+        "até três antecipações a partir de 01/11/2026",
+        "valor entre R$ 100,00 e R$ 500,00 por saque anual antecipado"
+      ],
+      "effectiveFrom": "2025-10-20",
+      "limitations": "Regra de antecipação de crédito; não integra o cálculo anual desta calculadora."
+    }
+  ],
+  "scope": {
+    "canonicalSubrule": "rules.saqueAniversario",
+    "included": [
+      "cálculo anual do Saque-Aniversário",
+      "sete faixas oficiais",
+      "fórmula, limites, validação e arredondamento",
+      "metadados de atualização e projeções futuras"
+    ],
+    "separatedOperationalRules": [
+      "rules.withdrawalWindow",
+      "rules.returnToSaqueRescisao",
+      "rules.antecipacao"
+    ],
+    "excludedFromThisCanonicalEngine": [
+      "depósito mensal do FGTS",
+      "multa rescisória de 40%",
+      "cálculo do Saque-Rescisão",
+      "bloqueio de garantia da antecipação",
+      "saques extraordinários ou especiais"
+    ]
+  },
+  "rules": {
+    "base": {
+      "ruleId": "fgts.base",
+      "status": "NOT_MODELED_IN_THIS_RELEASE",
+      "scope": "depósitos mensais e regras gerais do domínio",
+      "engineImpact": false
+    },
+    "saqueAniversario": {
+      "ruleId": "fgts.saque-aniversario",
+      "title": "Cálculo anual do Saque-Aniversário FGTS",
+      "status": "candidate",
+      "version": "1.0.0-rc.1",
+      "effectiveFrom": "2019-07-24",
+      "jurisdiction": {
+        "country": "BR",
+        "scope": "titulares de contas vinculadas do FGTS optantes pelo Saque-Aniversário",
+        "locale": "pt-BR",
+        "timezone": "America/Sao_Paulo"
+      },
+      "officialSources": [
+        "lei-8036-1990-art-20d-anexo",
+        "lei-13932-2019",
+        "fgts-saque-aniversario-institucional"
+      ],
+      "scope": {
+        "input": "soma dos saldos das contas vinculadas do titular na data do débito",
+        "output": "valor anual estimado e saldo restante estimado",
+        "notIncluded": [
+          "antecipação de crédito",
+          "multa rescisória",
+          "Saque-Rescisão",
+          "calendário operacional por instituição"
+        ]
+      },
+      "parameters": {
+        "currency": "BRL",
+        "moneyScale": 2,
+        "minimumPositiveBalance": 0.01,
+        "comparisonTolerance": 0.001,
+        "additionalAmountTolerance": 0.01
+      },
+      "bands": [
+        {
+          "bandId": "saque-aniversario-band-01",
+          "lowerBound": 0,
+          "lowerInclusive": false,
+          "upperBound": 500,
+          "upperInclusive": true,
+          "rate": 0.5,
+          "additionalAmount": 0,
+          "displayLabel": "Até R$ 500,00",
+          "order": 1
+        },
+        {
+          "bandId": "saque-aniversario-band-02",
+          "lowerBound": 500,
+          "lowerInclusive": false,
+          "upperBound": 1000,
+          "upperInclusive": true,
+          "rate": 0.4,
+          "additionalAmount": 50,
+          "displayLabel": "R$ 500,01 a R$ 1.000,00",
+          "order": 2
+        },
+        {
+          "bandId": "saque-aniversario-band-03",
+          "lowerBound": 1000,
+          "lowerInclusive": false,
+          "upperBound": 5000,
+          "upperInclusive": true,
+          "rate": 0.3,
+          "additionalAmount": 150,
+          "displayLabel": "R$ 1.000,01 a R$ 5.000,00",
+          "order": 3
+        },
+        {
+          "bandId": "saque-aniversario-band-04",
+          "lowerBound": 5000,
+          "lowerInclusive": false,
+          "upperBound": 10000,
+          "upperInclusive": true,
+          "rate": 0.2,
+          "additionalAmount": 650,
+          "displayLabel": "R$ 5.000,01 a R$ 10.000,00",
+          "order": 4
+        },
+        {
+          "bandId": "saque-aniversario-band-05",
+          "lowerBound": 10000,
+          "lowerInclusive": false,
+          "upperBound": 15000,
+          "upperInclusive": true,
+          "rate": 0.15,
+          "additionalAmount": 1150,
+          "displayLabel": "R$ 10.000,01 a R$ 15.000,00",
+          "order": 5
+        },
+        {
+          "bandId": "saque-aniversario-band-06",
+          "lowerBound": 15000,
+          "lowerInclusive": false,
+          "upperBound": 20000,
+          "upperInclusive": true,
+          "rate": 0.1,
+          "additionalAmount": 1900,
+          "displayLabel": "R$ 15.000,01 a R$ 20.000,00",
+          "order": 6
+        },
+        {
+          "bandId": "saque-aniversario-band-07",
+          "lowerBound": 20000,
+          "lowerInclusive": false,
+          "upperBound": null,
+          "upperInclusive": false,
+          "rate": 0.05,
+          "additionalAmount": 2900,
+          "displayLabel": "Acima de R$ 20.000,00",
+          "order": 7
+        }
+      ],
+      "formula": {
+        "bandSelection": "select the only band whose lower and upper boundary predicates accept balance",
+        "withdrawal": "balance * band.rate + band.additionalAmount",
+        "remainingBalance": "max(balance - withdrawal, 0)",
+        "intermediateCalculation": "raw JavaScript Number arithmetic",
+        "finalResult": "round withdrawal and remaining balance to two decimal places"
+      },
+      "rounding": {
+        "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+        "stage": "withdrawal and remaining balance final outputs",
+        "intermediateRounding": false,
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "moneyScale": 2
+      },
+      "validation": {
+        "validWhen": "balance is a finite number greater than zero",
+        "invalidWhen": [
+          "balance is missing",
+          "balance is not finite",
+          "balance is zero or negative"
+        ],
+        "invalidResult": {
+          "state": "EMPTY",
+          "withdrawal": 0,
+          "remainingBalance": 0,
+          "band": null
+        },
+        "inputParserCompatibility": {
+          "mode": "DIGITS_AS_CENTS",
+          "algorithm": "remove every non-digit character and divide the remaining integer by 100",
+          "normativeAuthority": false,
+          "preservationReason": "immutable LEGACY_BEHAVIOR_BASELINE parser contract"
+        },
+        "bandRequirements": {
+          "count": 7,
+          "ordered": true,
+          "noOverlap": true,
+          "noGap": true,
+          "lastBandOpenEnded": true
+        }
+      },
+      "consumerContracts": {
+        "registry": "/data/core/update/governed-rule-consumers.json",
+        "projection": "/data/core/update/fgts-saque-aniversario-projection.contract.json",
+        "validator": "/scripts/validate-fgts-saque-aniversario-canonical-rule.js",
+        "fixtures": "/data/pos/validation/fgts-saque-aniversario-canonical-rule-fixtures.json",
+        "legacyBaseline": "/data/operations/reports/end-to-end/pre-migration-calculator-saque-aniversario-fgts/regression-baseline.json",
+        "publicConnectionAuthorized": false
+      },
+      "updateSensitivity": {
+        "class": "LEGAL_UPDATE_REQUIRED",
+        "staleOn": [
+          "version change",
+          "official source change",
+          "band boundary change",
+          "rate change",
+          "additional amount change",
+          "formula change",
+          "rounding change",
+          "validation change"
+        ],
+        "publicationAfterChange": "controlled-separate-step"
+      },
+      "temporalRuleReferences": [
+        "rules.withdrawalWindow",
+        "rules.returnToSaqueRescisao",
+        "rules.antecipacao"
+      ],
+      "projectionPayload": {
+        "ruleId": "fgts.saque-aniversario",
+        "ruleVersion": "1.0.0-rc.1",
+        "effectiveFrom": "2019-07-24",
+        "lastReviewedAt": "2026-07-15",
+        "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+        "balanceAggregation": "sum of all linked-account balances at debit date",
+        "minimumPositiveBalance": 0.01,
+        "formula": {
+          "withdrawal": "balance * rate + additionalAmount",
+          "remainingBalance": "max(balance - withdrawal, 0)"
+        },
+        "rounding": {
+          "method": "Math.round((value + Number.EPSILON) * 100) / 100",
+          "stage": "final outputs",
+          "moneyScale": 2
+        },
+        "invalidBehavior": "EMPTY_ZERO_OUTPUT",
+        "bands": [
+          {"bandId":"saque-aniversario-band-01","lowerBound":0,"lowerInclusive":false,"upperBound":500,"upperInclusive":true,"rate":0.5,"additionalAmount":0,"displayLabel":"Até R$ 500,00","order":1},
+          {"bandId":"saque-aniversario-band-02","lowerBound":500,"lowerInclusive":false,"upperBound":1000,"upperInclusive":true,"rate":0.4,"additionalAmount":50,"displayLabel":"R$ 500,01 a R$ 1.000,00","order":2},
+          {"bandId":"saque-aniversario-band-03","lowerBound":1000,"lowerInclusive":false,"upperBound":5000,"upperInclusive":true,"rate":0.3,"additionalAmount":150,"displayLabel":"R$ 1.000,01 a R$ 5.000,00","order":3},
+          {"bandId":"saque-aniversario-band-04","lowerBound":5000,"lowerInclusive":false,"upperBound":10000,"upperInclusive":true,"rate":0.2,"additionalAmount":650,"displayLabel":"R$ 5.000,01 a R$ 10.000,00","order":4},
+          {"bandId":"saque-aniversario-band-05","lowerBound":10000,"lowerInclusive":false,"upperBound":15000,"upperInclusive":true,"rate":0.15,"additionalAmount":1150,"displayLabel":"R$ 10.000,01 a R$ 15.000,00","order":5},
+          {"bandId":"saque-aniversario-band-06","lowerBound":15000,"lowerInclusive":false,"upperBound":20000,"upperInclusive":true,"rate":0.1,"additionalAmount":1900,"displayLabel":"R$ 15.000,01 a R$ 20.000,00","order":6},
+          {"bandId":"saque-aniversario-band-07","lowerBound":20000,"lowerInclusive":false,"upperBound":null,"upperInclusive":false,"rate":0.05,"additionalAmount":2900,"displayLabel":"Acima de R$ 20.000,00","order":7}
+        ]
+      },
+      "lastReviewedAt": "2026-07-15",
+      "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+      "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd"
+    },
+    "withdrawalWindow": {
+      "ruleId": "fgts.saque-aniversario.withdrawal-window",
+      "classification": "NOT_APPLICABLE_TO_CALCULATOR_ENGINE",
+      "status": "OFFICIAL_OPERATIONAL_RULE",
+      "effectiveFrom": "2019-07-24",
+      "rule": "saque disponível no mês de aniversário e até o último dia útil do segundo mês subsequente",
+      "consumer": "availability copy and editorial explanation",
+      "engineImpact": false,
+      "sourceIds": ["lei-13932-2019", "fgts-saque-aniversario-institucional"]
+    },
+    "returnToSaqueRescisao": {
+      "ruleId": "fgts.saque-aniversario.return-to-saque-rescisao",
+      "classification": "TIME_SENSITIVE_OPERATIONAL_RULE",
+      "status": "OFFICIAL_OPERATIONAL_RULE",
+      "effectiveFrom": "2019-07-24",
+      "rule": "alteração produz efeitos no primeiro dia do 25º mês subsequente ao da solicitação, observadas as restrições aplicáveis",
+      "consumer": "editorial explanation and FAQ",
+      "engineImpact": false,
+      "sourceIds": ["lei-13932-2019", "fgts-saque-aniversario-institucional", "fgts-faq-trabalhador"]
+    },
+    "antecipacao": {
+      "ruleId": "fgts.saque-aniversario.antecipacao",
+      "classification": "TIME_SENSITIVE_OPERATIONAL_RULE",
+      "status": "OFFICIAL_OPERATIONAL_RULE_REVIEW_REQUIRED_ON_CHANGE",
+      "engineImpact": false,
+      "consumer": "editorial explanation only; never annual withdrawal engine",
+      "sourceIds": ["resolucao-ccfgts-1130-2025", "fgts-saque-aniversario-institucional"],
+      "periods": [
+        {
+          "effectiveFrom": "2025-11-01",
+          "effectiveThrough": "2026-10-31",
+          "maximumAnnualRights": 5,
+          "minimumPerAnnualRight": 100,
+          "maximumPerAnnualRight": 500,
+          "authorizationWaitingDays": 90
+        },
+        {
+          "effectiveFrom": "2026-11-01",
+          "effectiveThrough": null,
+          "maximumAnnualRights": 3,
+          "minimumPerAnnualRight": 100,
+          "maximumPerAnnualRight": 500,
+          "authorizationWaitingDays": 90
+        }
+      ],
+      "reviewPolicy": "LEGAL_UPDATE_REQUIRED"
+    },
+    "multaRescisoria": {
+      "ruleId": "fgts.multa-rescisoria",
+      "status": "OUT_OF_SCOPE_NOT_MODELED",
+      "engineImpact": false
+    },
+    "saqueRescisao": {
+      "ruleId": "fgts.saque-rescisao",
+      "status": "OUT_OF_SCOPE_NOT_MODELED",
+      "engineImpact": false
+    }
+  },
+  "consumerContracts": {
+    "registry": "/data/core/update/governed-rule-consumers.json",
+    "projection": "/data/core/update/fgts-saque-aniversario-projection.contract.json",
+    "publicConnectionAuthorized": false
+  },
+  "updateSensitivity": {
+    "class": "LEGAL_UPDATE_REQUIRED",
+    "publicationAfterChange": "controlled-separate-step"
+  },
+  "lastReviewedAt": "2026-07-15",
+  "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+  "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd"
 }

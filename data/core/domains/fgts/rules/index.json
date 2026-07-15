@@ -1,1 +1,28 @@
-{ "version": "1.0.0", "schema": "/data/core/schemas/rule.schema.json", "domainId": "fgts", "compatibilityTarget": "/data/rules/", "items": [] }
+{
+  "id": "fgts-rules",
+  "version": "1.1.0",
+  "schema": "/data/core/schemas/rule.schema.json",
+  "domainId": "fgts",
+  "status": "compatibility-pointer",
+  "runtimeStatus": "internal-canonical-public-connection-pending",
+  "updatedAt": "2026-07-15",
+  "canonicalRule": "/data/rules/fgts.json",
+  "canonicalSubrule": "/data/rules/fgts.json#rules.saqueAniversario",
+  "projectionContract": "/data/core/update/fgts-saque-aniversario-projection.contract.json",
+  "compatibilityTarget": "/data/tabelas-trabalhistas.json#saqueAniversario",
+  "items": [
+    {
+      "id": "fgts.saque-aniversario",
+      "version": "1.0.0-rc.1",
+      "status": "candidate",
+      "publicConnectionStatus": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "validator": "/scripts/validate-fgts-saque-aniversario-canonical-rule.js",
+      "fixtures": "/data/pos/validation/fgts-saque-aniversario-canonical-rule-fixtures.json"
+    }
+  ],
+  "notes": [
+    "The annual Saque-Aniversario calculation is modeled as an explicit FGTS subrule.",
+    "Deposit, termination fine, Saque-Rescisao and anticipation credit are not mixed into the annual calculation engine.",
+    "The public calculator and public aggregate remain unchanged until a separate controlled migration."
+  ]
+}

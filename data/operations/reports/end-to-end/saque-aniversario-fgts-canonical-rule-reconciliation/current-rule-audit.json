@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "before": {
+    "classification": "EMPTY_DRAFT",
+    "evidence": {
+      "version": "1.0.0",
+      "generatedAt": "2026-07-15",
+      "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+      "assetId": "calculator:saque-aniversario-fgts",
+      "reportId": "pre-migration-saque-aniversario-canonical-rule",
+      "status": "NO_USABLE_CANONICAL_RULE",
+      "candidate": {
+        "path": "data/rules/fgts.json",
+        "version": 1,
+        "status": "draft",
+        "source": null,
+        "year": null,
+        "data": {},
+        "containsSevenBands": false,
+        "consumed": false
+      },
+      "aggregate": {
+        "path": "data/tabelas-trabalhistas.json#saqueAniversario",
+        "status": "PARTIAL_STRUCTURED_RUNTIME",
+        "containsSevenBands": true,
+        "sourceSummaryOnly": true,
+        "sourceUrl": false,
+        "ruleVersion": false,
+        "fingerprint": false,
+        "generatedByTransformRules": false
+      },
+      "decision": "Create/reconcile a specific governed Saque-Aniversário rule before public migration; do not certify the aggregate as canonical."
+    }
+  },
+  "after": {
+    "classification": "VERSIONED_CANONICAL_DOMAIN_WITH_TYPED_SUBRULE",
+    "domainId": "fgts",
+    "ruleId": "fgts.saque-aniversario",
+    "version": "1.0.0-rc.1",
+    "status": "candidate",
+    "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+    "sources": 5,
+    "bands": 7,
+    "effectiveFrom": "2019-07-24",
+    "fingerprint": "966ea90005f500f2d462844680860fc548755271e26f51f8688e5889efd620bd"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-15",
+  "operation": "SAQUE_ANIVERSARIO_FGTS_CANONICAL_RULE_RECONCILIATION",
+  "status": "OFFICIAL_SOURCES_RESOLVED",
+  "primaryOrInstitutionalSourceCount": 5,
+  "sources": [
+    {
+      "sourceId": "lei-8036-1990-art-20d-anexo",
+      "authority": "Presidência da República - Casa Civil",
+      "type": "federal-consolidated-law",
+      "title": "Lei nº 8.036, de 11 de maio de 1990",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8036compilada.htm",
+      "applicableProvision": "art. 20-D e Anexo",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "aplicação da alíquota à soma dos saldos das contas vinculadas",
+        "acréscimo da parcela adicional",
+        "sete faixas, alíquotas e parcelas adicionais",
+        "possibilidade de atualização oficial para o ano subsequente"
+      ],
+      "effectiveFrom": "2019-07-24",
+      "limitations": "A fonte legal define a regra; a operação do saque e da antecipação também depende de regulamentação e orientação do Agente Operador."
+    },
+    {
+      "sourceId": "lei-13932-2019",
+      "authority": "Presidência da República - Casa Civil",
+      "type": "federal-law",
+      "title": "Lei nº 13.932, de 11 de dezembro de 2019",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13932.htm",
+      "applicableProvision": "alterações dos arts. 20, 20-A, 20-B, 20-C e 20-D da Lei nº 8.036/1990",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "instituição da sistemática de Saque-Aniversário",
+        "janela anual de saque",
+        "retorno ao Saque-Rescisão no primeiro dia do 25º mês"
+      ],
+      "effectiveFrom": "2019-12-12",
+      "limitations": "Regras de antecipação posteriores são tratadas por atos específicos do Conselho Curador."
+    },
+    {
+      "sourceId": "fgts-saque-aniversario-institucional",
+      "authority": "FGTS - Agente Operador CAIXA",
+      "type": "official-institutional-guidance",
+      "title": "Saque-Aniversário do FGTS",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/saque/saque-aniversario.aspx",
+      "applicableProvision": "tabela institucional e orientações operacionais",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "fórmula anual",
+        "sete faixas vigentes",
+        "alíquotas e parcelas adicionais",
+        "última faixa como saldo acima de R$ 20.000,00",
+        "regras temporais de retorno e antecipação"
+      ],
+      "effectiveFrom": "2019-07-24",
+      "limitations": "Orientação institucional; a autoridade normativa primária da fórmula é a Lei nº 8.036/1990."
+    },
+    {
+      "sourceId": "fgts-faq-trabalhador",
+      "authority": "FGTS - Agente Operador CAIXA",
+      "type": "official-institutional-faq",
+      "title": "Perguntas Frequentes - Trabalhadores",
+      "url": "https://www.fgts.gov.br/Paginas/trabalhador/perguntas-frequentes.aspx",
+      "applicableProvision": "Saque-Aniversário e alteração de sistemática",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "enquadramento do saldo total na faixa",
+        "efeito da alteração no primeiro dia útil do 25º mês"
+      ],
+      "effectiveFrom": null,
+      "limitations": "Fonte operacional complementar; não substitui a lei."
+    },
+    {
+      "sourceId": "resolucao-ccfgts-1130-2025",
+      "authority": "Conselho Curador do FGTS - Ministério do Trabalho e Emprego",
+      "type": "official-regulation",
+      "title": "Resolução CCFGTS nº 1.130, de 7 de outubro de 2025",
+      "url": "https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?captchafield=firstAccess&data=20%2F10%2F2025&jornal=515&pagina=153",
+      "applicableProvision": "arts. 1º a 5º",
+      "verifiedAt": "2026-07-15",
+      "supports": [
+        "carência operacional de 90 dias para autorização",
+        "até cinco antecipações até 31/10/2026",
+        "até três antecipações a partir de 01/11/2026",
+        "valor entre R$ 100,00 e R$ 500,00 por saque anual antecipado"
+      ],
+      "effectiveFrom": "2025-10-20",
+      "limitations": "Regra de antecipação de crédito; não integra o cálculo anual desta calculadora."
+    }
+  ],
+  "secondarySourceAsSoleAuthority": false,
+  "objectiveLegalDivergences": 0
+}
