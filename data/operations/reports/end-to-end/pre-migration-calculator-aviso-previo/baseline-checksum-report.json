@@ -1,0 +1,331 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-baseline-checksums",
+  "status": "BASELINE_SNAPSHOT_CREATED",
+  "snapshotAlgorithm": "SHA-256",
+  "snapshotCommit": "d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+  "files": [
+    {
+      "path": "assets/css/global-layout.css",
+      "bytes": 5189,
+      "sha256": "eb180b702059576200dae4bbe582965f1504f11b6b334880e89444ccb23d0db6"
+    },
+    {
+      "path": "assets/js/editorial-metadata.js",
+      "bytes": 5428,
+      "sha256": "e082402197824e58a65b99898a069836a88076a82dcba46e182df2c19d17befa"
+    },
+    {
+      "path": "assets/js/global-layout.js",
+      "bytes": 5558,
+      "sha256": "321a11efe231541d478627602b8227e6c983e54248e82cad206f72465d012a53"
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "bytes": 21648,
+      "sha256": "6a3aaa981c5ab6aad49896279acc4705a1a94ad1c31011a78adbc263a9e18fb7"
+    },
+    {
+      "path": "calculadora-aviso-previo/index.html",
+      "bytes": 27526,
+      "sha256": "8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360"
+    },
+    {
+      "path": "data/core/compatibility/articles-map.json",
+      "bytes": 53007,
+      "sha256": "250d783c85aa2b0a98abb0a7415998ff26baa8bc059c8947a78e173da8d3351d"
+    },
+    {
+      "path": "data/core/compatibility/dependencies-map.json",
+      "bytes": 9462,
+      "sha256": "2e8426d1a5cda0f78af6792afa5abdd47ec03771ec597127540ab3acd7a88c68"
+    },
+    {
+      "path": "data/core/compatibility/tools-map.json",
+      "bytes": 14471,
+      "sha256": "11ec86c69584059133498773ed1f9fe0513d3b1d74d6e6ba059ad3a10acf5c8f"
+    },
+    {
+      "path": "data/core/domains/aviso-previo/legislation/index.json",
+      "bytes": 1717,
+      "sha256": "aa499c14205e2f9985b0819a9c151b785510131c49edc7cf383212d1821d9db9"
+    },
+    {
+      "path": "data/core/domains/aviso-previo/rules/index.json",
+      "bytes": 3392,
+      "sha256": "cf2929e802dc41644bf839164621782e355ae625c3a57b394691bd662f9c5fe9"
+    },
+    {
+      "path": "data/core/shadow/calculators/aviso-previo/index.json",
+      "bytes": 1258,
+      "sha256": "bc37c3e920ce0693e539e7105791881ca42242132ac1ef49fefa67298f3e370c"
+    },
+    {
+      "path": "data/core/shadow/comparisons/aviso-previo/index.json",
+      "bytes": 32706,
+      "sha256": "58b12fe8803d253259adc31050a6997c88374c3d7c8776eab974ff82cbd4eecf"
+    },
+    {
+      "path": "data/core/shadow/logs/aviso-previo.json",
+      "bytes": 649,
+      "sha256": "080e6dea38833b563f28d94e4f4437444ab3e8c4e94106f2624a89339d3eff3f"
+    },
+    {
+      "path": "data/core/update/governed-rule-consumers.json",
+      "bytes": 14970,
+      "sha256": "98884cf6b203a11f5df47c21fd1e3e61ed3f100be70fe87027ee6b03ff3b15ea"
+    },
+    {
+      "path": "data/maps/content-map.json",
+      "bytes": 48598,
+      "sha256": "683ac33bf1ff5ef9497b7d770a4d85b8553463a5e735e0a83b89a281d327ff5c"
+    },
+    {
+      "path": "data/maps/tools-map.json",
+      "bytes": 19449,
+      "sha256": "cc175d61ede3d72e61f00403485c44652800d58a8ec428a1e3bbaa212f8d0997"
+    },
+    {
+      "path": "data/maps/update-map.json",
+      "bytes": 8829,
+      "sha256": "a5063aa1c72407003964c1ace715c87893e0959fcd03b0a628835f92b985fffe"
+    },
+    {
+      "path": "data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/visual/calculadora-aviso-previo-desktop-result.png",
+      "bytes": 144210,
+      "sha256": "4d365c25ed118eb7fe03e3667e737b7ee3a89cb47c40b517910dac7cf6fb12f0"
+    },
+    {
+      "path": "data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/visual/calculadora-aviso-previo-mobile-entry.png",
+      "bytes": 90562,
+      "sha256": "098c8ea13499175919604bd0797fd6576883492d2ed0d249cc4eac1a22926f73"
+    },
+    {
+      "path": "data/rules/aviso-previo.json",
+      "bytes": 88,
+      "sha256": "43b26a971f055e5561706016757867b190d097d445045f0c96b108ebceb1f958"
+    },
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "bytes": 8191,
+      "sha256": "c4a4ab30c7fa1c6b1c6d604e7725f70138b4b7df5a7792cf8068b5a1b7984817"
+    },
+    {
+      "path": "data/tools.json",
+      "bytes": 18726,
+      "sha256": "e89445270b0670663f260f9ffb50212d4e719d3aadcb528a492ed2fb99ba6313"
+    },
+    {
+      "path": "scripts/validate-shadow-aviso-previo.js",
+      "bytes": 4450,
+      "sha256": "a83998da5d55f8c42e9cfda4892c2c4bf5be7be3af6907471ba267a56967c987"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 19515,
+      "sha256": "ec219d670742e65437e50f27728cb758e706d347334bd4e3ef8ac554c519b67c"
+    }
+  ],
+  "inlineBlocks": [
+    {
+      "kind": "inline-script",
+      "index": 1,
+      "characters": 1800,
+      "sha256": "5a4c1518052aeb5a036f6a3d529eb54b2faad6cb83e8f5314bfbef5c9c32809f"
+    },
+    {
+      "kind": "inline-script",
+      "index": 2,
+      "characters": 8829,
+      "sha256": "bf08addb2236c64840b6077a988694ea8d3a00e4f69516021780577504565b36"
+    },
+    {
+      "kind": "inline-style",
+      "index": 1,
+      "characters": 593,
+      "sha256": "0c329ead80c31a4e2b257cbf352a4c644abd4bc6cd874eed2c1870dcc9002088"
+    }
+  ],
+  "calculators": [
+    {
+      "path": "calculadora-13-salario/index.html",
+      "bytes": 42028,
+      "sha256": "f9891f9c5fd4a6ee12899e211f4520d5f8044d7494141c5e90b33bc0836e7a26"
+    },
+    {
+      "path": "calculadora-adicional-noturno/index.html",
+      "bytes": 24819,
+      "sha256": "07b04fb3b49a3168fad0478a754f90d854bf6f9c1972ea55d7e74564d519a429"
+    },
+    {
+      "path": "calculadora-aviso-previo/index.html",
+      "bytes": 27526,
+      "sha256": "8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360"
+    },
+    {
+      "path": "calculadora-clt-ou-pj/index.html",
+      "bytes": 45110,
+      "sha256": "4d893381403194022460919569d20629b40efff4fa1f3da99aab7b21549f9f56"
+    },
+    {
+      "path": "calculadora-custo-mensal-pj/index.html",
+      "bytes": 24031,
+      "sha256": "91b0bf6758c0ad00435a0f19b623b42a4587aa535c58fe9394a162a727924c23"
+    },
+    {
+      "path": "calculadora-das-mei-2026/index.html",
+      "bytes": 55516,
+      "sha256": "d0c007e237d717b2f0cc42f4d9ce182149e7a0902167379ccccecbba711bc2fb"
+    },
+    {
+      "path": "calculadora-das-mei-atraso-2026/index.html",
+      "bytes": 54392,
+      "sha256": "7256c0b6552d690d58ba776d7ab522303af743a881416c3a7062758de9552ff4"
+    },
+    {
+      "path": "calculadora-ferias-clt/index.html",
+      "bytes": 44317,
+      "sha256": "d0828c374a06e77df85e0602940b08d55fc41ddbe9e0cad017e55b33e5ce1fd3"
+    },
+    {
+      "path": "calculadora-ferias-pj/index.html",
+      "bytes": 63683,
+      "sha256": "772c69140e3d9e776ca6fcf380b27dc466fc21f9e45febe26878a8bc793cfbc6"
+    },
+    {
+      "path": "calculadora-horas-extras-clt/index.html",
+      "bytes": 39037,
+      "sha256": "f51284d03e167dd900bb5cb14ec1088577d5bb8de7a775b2138c9bd22e0bd93f"
+    },
+    {
+      "path": "calculadora-insalubridade/index.html",
+      "bytes": 22992,
+      "sha256": "b609a82c5314ba5644be82e9040c1ead43c559471f8a5ff90620804a4b1f9891"
+    },
+    {
+      "path": "calculadora-inss/index.html",
+      "bytes": 122521,
+      "sha256": "9d38103885aeee8f35c7d6180195de5c0ab4bc48cfd4602cb1fcec202ad871a6"
+    },
+    {
+      "path": "calculadora-inss-autonomo/index.html",
+      "bytes": 50721,
+      "sha256": "fdec01d2644928cb728a69a277889722d8e6a1718fff3b09c7f0ff546da65bb3"
+    },
+    {
+      "path": "calculadora-inss-mei/index.html",
+      "bytes": 60607,
+      "sha256": "7bd48f7cfa45371a2d21c18d1e58d1d6a082f361f972d63a7eb971543105beb9"
+    },
+    {
+      "path": "calculadora-limite-faturamento-mei-2026/index.html",
+      "bytes": 63451,
+      "sha256": "e06eb20d6942573584f3ae6f391fb2b53a03f68f02f50a746b5b808b772c9750"
+    },
+    {
+      "path": "calculadora-multa-40-fgts/index.html",
+      "bytes": 56522,
+      "sha256": "a66401d3f5c12394333f030f83598b9562e969a6d15a16fa0505bc0853237f69"
+    },
+    {
+      "path": "calculadora-rescisao-clt/index.html",
+      "bytes": 35989,
+      "sha256": "d0a7ae5667b8f627b80e2f8179ea3cdbcdda4cba450947c86f403b06b7ae059e"
+    },
+    {
+      "path": "calculadora-reserva-financeira-pj/index.html",
+      "bytes": 53978,
+      "sha256": "fe9f1468bc8e601cbb7b111c903a2e566ef81b818b26a38faacd413c6a535f9a"
+    },
+    {
+      "path": "calculadora-seguro-desemprego/index.html",
+      "bytes": 34353,
+      "sha256": "725891b0f9c8c6c8554efbf5cb615be02b8a58ef56612fde0a47b198c80eaa33"
+    },
+    {
+      "path": "calculadora-valor-hora-pj/index.html",
+      "bytes": 17620,
+      "sha256": "444fe2ca05b6a7ed0f18b84f5d652e4f26f3a4875e479bae0d44084706a83418"
+    },
+    {
+      "path": "salario-liquido-clt/index.html",
+      "bytes": 37582,
+      "sha256": "8309e398126592e2d7ac0ee049d890c557c3078073e40a19a6843280a142450f"
+    },
+    {
+      "path": "saque-aniversario-fgts/index.html",
+      "bytes": 34945,
+      "sha256": "d9bda7811af31a25bcfe4439a6c83910c6a80b294093a78b126eaf67575066ce"
+    }
+  ],
+  "groups": [
+    {
+      "group": "targetCalculator",
+      "count": 1,
+      "sha256": "f4652b13951e11ef84a5432e4c4c60b2e461854daa79f834e21fc47338d1d8fe"
+    },
+    {
+      "group": "otherCalculators",
+      "count": 21,
+      "sha256": "6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248"
+    },
+    {
+      "group": "articles",
+      "count": 63,
+      "sha256": "2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924"
+    },
+    {
+      "group": "home",
+      "count": 1,
+      "sha256": "7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa"
+    },
+    {
+      "group": "guides",
+      "count": 1,
+      "sha256": "390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30"
+    },
+    {
+      "group": "catalogs",
+      "count": 4,
+      "sha256": "ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b"
+    },
+    {
+      "group": "sitemap",
+      "count": 1,
+      "sha256": "392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779"
+    },
+    {
+      "group": "legalRules",
+      "count": 4,
+      "sha256": "edd5e60efaa1e4a71c3befe1592f73b5f1bccc7fef9d5eadda2eb6e7a19e6a4e"
+    },
+    {
+      "group": "publicRuntimes",
+      "count": 3,
+      "sha256": "312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc"
+    },
+    {
+      "group": "registry",
+      "count": 37,
+      "sha256": "72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91"
+    },
+    {
+      "group": "publishing",
+      "count": 62,
+      "sha256": "32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49"
+    },
+    {
+      "group": "relations",
+      "count": 4,
+      "sha256": "96bb56bdb89118830d2f51832f4b09e9d51d762da729b281228ab5e668e68085"
+    },
+    {
+      "group": "baselineEvidence",
+      "count": 6,
+      "sha256": "f9875758f2b0418b3413f794f4b3d30d2afd218a6dd001f2719c03b0ff26ee86"
+    }
+  ]
+}

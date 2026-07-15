@@ -1,0 +1,2308 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-shadow-baseline",
+  "status": "60/60 BASELINE_CAPTURED",
+  "source": "data/core/shadow/comparisons/aviso-previo/index.json",
+  "sourceChecksum": "58b12fe8803d253259adc31050a6997c88374c3d7c8776eab974ff82cbd4eecf",
+  "tolerance": 0.01,
+  "summary": {
+    "totalScenarios": 60,
+    "equal": 60,
+    "divergent": 0,
+    "coreErrors": 0,
+    "legacyErrors": 0,
+    "fallbackTriggered": 0,
+    "equivalencePercent": 100,
+    "coverage": [
+      "tempo minimo",
+      "tempo maximo",
+      "anos completos",
+      "limite de 90 dias",
+      "indenizado",
+      "trabalhado",
+      "desconto",
+      "casos invalidos",
+      "casos extremos",
+      "casos de borda"
+    ]
+  },
+  "scenarios": [
+    {
+      "scenarioId": "shadow-aviso-previo-001",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2024-01-01",
+        "endDate": "2024-01-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.320,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.320,00"
+      },
+      "logicalChecksum": "8ade40e1b719579f53314b866aded0b882ce531a1828f96d65b50a640b948f89",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-002",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2024-01-01",
+        "endDate": "2024-01-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.200,00"
+      },
+      "logicalChecksum": "f3f520d515b94f45aa3ebc9d6b734c2ec495212b4a4acdd53dc3328c49a19b1d",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-003",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2024-01-01",
+        "endDate": "2024-01-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.000,00"
+      },
+      "logicalChecksum": "3ba6f5d92dabc0a8b6484962c74bf33f70946fdc709264f63bfbf388a80458e9",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-004",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 5.000,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 5.000,00"
+      },
+      "logicalChecksum": "f6dbd99667885c51bfa482497f96b83dda3ea27a38397ebce3304a0a153b4362",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-005",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 10.000,00"
+      },
+      "logicalChecksum": "6edd662d977d77532630735111af54a6086c035a9ef5600233ac2c696dd51183",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-006",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2024-01-01",
+        "endDate": "2024-12-31",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,00"
+      },
+      "logicalChecksum": "5c1d447f79c29a812ce47ac249c393d05e6dcd49c8c945496258126f0fa6efd2",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-007",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-09",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.320,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.320,00"
+      },
+      "logicalChecksum": "70310fc14e62f2ee0d5b57a0fc0ca735d7342e67510ea686bc621b5b6e78d26b",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-008",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-09",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.200,00"
+      },
+      "logicalChecksum": "3e0fc618ce9629d5c0666781c881623c9752b69c756d1e704847d80159226c23",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-009",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-09",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.000,00"
+      },
+      "logicalChecksum": "92ce6983a01b78bfb1cbf675b288f4312382f11145ce429ac45c7fd1ca536e64",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-010",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-10",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5500
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5500
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 5.500,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 5.500,00"
+      },
+      "logicalChecksum": "f64989f3e395826dfde44835bb4deacd07f0e802b2d9a1d94db00e14a097b487",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-011",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-10",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 11000
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 11000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 33 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 11.000,00"
+      },
+      "logicalChecksum": "02bfdeeb1c79a0de49b7765ae32e5bee79c8c7d9068cc29c368547ac57b44440",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-012",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2023-01-10",
+        "endDate": "2024-01-10",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.1
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.1
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,10 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,10"
+      },
+      "logicalChecksum": "81c6208d33e3d89422fcc9feda0842882ae8e938aaad8d89d2427eb41cb3aa66",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-013",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2020-02-29",
+        "endDate": "2021-02-28",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.320,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.320,00"
+      },
+      "logicalChecksum": "678a41a8e047d505aa1f93458298526daeb527ee3619da5d4f780f98eb6b23e7",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-014",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2020-02-29",
+        "endDate": "2021-02-28",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.200,00"
+      },
+      "logicalChecksum": "d975f74e0a75d4e5471885466a0acba5f7b19ee679953b8b06897074eeb39e03",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-015",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2020-02-29",
+        "endDate": "2021-02-28",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.000,00"
+      },
+      "logicalChecksum": "0ffd4186d17f5bc102d1c209a11c76a1528653748a920e1c3c605ef98d07e703",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-016",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2020-02-29",
+        "endDate": "2021-03-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5500
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5500
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 5.500,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 5.500,00"
+      },
+      "logicalChecksum": "75318f357b59db2cc62e8dd826b0afd4c3078324473bc24133cf8bb7857dbbf5",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-017",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2020-02-29",
+        "endDate": "2021-03-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 11000
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 11000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 33 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 11.000,00"
+      },
+      "logicalChecksum": "96f86e073e858a29642d8d90dd98cf00ddf8178eda4df5dfaae93e2d197dbc1f",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-018",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2020-02-29",
+        "endDate": "2021-03-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 1,
+        "totalDays": 33,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.1
+      },
+      "components": {
+        "fullYears": 1,
+        "baseDays": 30,
+        "additionalDays": 3,
+        "totalDays": 33,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.1
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,10 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "33 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,10"
+      },
+      "logicalChecksum": "fb1b4ef215bc2f385efa34334723ba0bbfd769fd4ca720eb97e3dbaa5d763785",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-019",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-14",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 4,
+        "totalDays": 42,
+        "dailyValue": 44,
+        "estimatedValue": 1848
+      },
+      "components": {
+        "fullYears": 4,
+        "baseDays": 30,
+        "additionalDays": 12,
+        "totalDays": 42,
+        "dailyValue": 44,
+        "estimatedValue": 1848
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.848,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "42 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.848,00"
+      },
+      "logicalChecksum": "ecac24c32835af0987bdcdf4bfd1e91a352821922de8de4c56cb7276aae02e0c",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-020",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-14",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 4,
+        "totalDays": 42,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 3080
+      },
+      "components": {
+        "fullYears": 4,
+        "baseDays": 30,
+        "additionalDays": 12,
+        "totalDays": 42,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 3080
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 42 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "42 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 3.080,00"
+      },
+      "logicalChecksum": "dc14177803896a269d488da6e3678f540ce09e777ffeba5b162ae292ed5513e1",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-021",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-14",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 4,
+        "totalDays": 42,
+        "dailyValue": 100,
+        "estimatedValue": 4200
+      },
+      "components": {
+        "fullYears": 4,
+        "baseDays": 30,
+        "additionalDays": 12,
+        "totalDays": 42,
+        "dailyValue": 100,
+        "estimatedValue": 4200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 4.200,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "42 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 4.200,00"
+      },
+      "logicalChecksum": "fc9b2ee049b5718b9cabe95476754a91d10effe4b3fcc469f65c6eb31bcfdda0",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-022",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-15",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 5,
+        "totalDays": 45,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 7500
+      },
+      "components": {
+        "fullYears": 5,
+        "baseDays": 30,
+        "additionalDays": 15,
+        "totalDays": 45,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 7500
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 7.500,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "45 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 7.500,00"
+      },
+      "logicalChecksum": "24c53b1b37358c7fa305334e2f0096ee77b9056054486d7cea8102f33c93b3a8",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-023",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-15",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 5,
+        "totalDays": 45,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 15000
+      },
+      "components": {
+        "fullYears": 5,
+        "baseDays": 30,
+        "additionalDays": 15,
+        "totalDays": 45,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 15000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 45 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "45 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 15.000,00"
+      },
+      "logicalChecksum": "e175ec9bf7599a4ec23da2efb42714c7d57edd528008f540182f646cb3e8fcbf",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-024",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2019-07-15",
+        "endDate": "2024-07-15",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 5,
+        "totalDays": 45,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.5
+      },
+      "components": {
+        "fullYears": 5,
+        "baseDays": 30,
+        "additionalDays": 15,
+        "totalDays": 45,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.5
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,50 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "45 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,50"
+      },
+      "logicalChecksum": "8a84f730d418b87795934c77c2de18cba9f45296ed2c65ad4c880b2c481969e1",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-025",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2010-01-01",
+        "endDate": "2030-01-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 44,
+        "estimatedValue": 3960
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 44,
+        "estimatedValue": 3960
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 3.960,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 3.960,00"
+      },
+      "logicalChecksum": "344e551fb6e4651392be2741a6833cb0d3de3405a082b732195cf020facc0ed2",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-026",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2010-01-01",
+        "endDate": "2030-01-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 6600
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 6600
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 90 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 6.600,00"
+      },
+      "logicalChecksum": "1a16a13e86f369a7a0d728f98c998820967c34d5174b67024243408425be3cdf",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-027",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2010-01-01",
+        "endDate": "2030-01-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 100,
+        "estimatedValue": 9000
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 100,
+        "estimatedValue": 9000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 9.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 9.000,00"
+      },
+      "logicalChecksum": "8278d749b3f44f798b4bbc30b993e32f6d63a35a29553838fd40ab8a6a85139b",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-028",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "1990-01-01",
+        "endDate": "2026-07-09",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 36,
+        "totalDays": 90,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 15000
+      },
+      "components": {
+        "fullYears": 36,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 15000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 15.000,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 15.000,00"
+      },
+      "logicalChecksum": "047eead660f4b38e3e1cda256feb0ef488dd943b0ba79efb08093956f50e8d58",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-029",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "1990-01-01",
+        "endDate": "2026-07-09",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 36,
+        "totalDays": 90,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 30000
+      },
+      "components": {
+        "fullYears": 36,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 30000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 90 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 30.000,00"
+      },
+      "logicalChecksum": "0beac4673754df101a89535fa2c1675c71a23dfa7c6e99019756fa2af68ea819",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-030",
+      "inputs": {
+        "salary": 1,
+        "startDate": "1990-01-01",
+        "endDate": "2026-07-09",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 36,
+        "totalDays": 90,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 3
+      },
+      "components": {
+        "fullYears": 36,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 3
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 3,00"
+      },
+      "logicalChecksum": "b69adc94715d7dd9c4d583376fc5bc0c42984b01b87095232bf88040577dcbf1",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-031",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2026-07-09",
+        "endDate": "2026-07-10",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.320,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.320,00"
+      },
+      "logicalChecksum": "e477f18f769feab43b7f248e5ea1369299f46d28fb7fe0d3561d06c3ce84dd06",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-032",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2026-07-09",
+        "endDate": "2026-07-10",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.200,00"
+      },
+      "logicalChecksum": "5e58f52317511f2c7c7eb32b3b01e551e44ccc6b8f0f303b4b948012f53b6e63",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-033",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2026-07-09",
+        "endDate": "2026-07-10",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.000,00"
+      },
+      "logicalChecksum": "eaefab1cbc7456ebf3a3043ba5b447599cf8e8e19317ca3e496cf432d0952330",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-034",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2026-07-09",
+        "endDate": "2026-08-09",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 5.000,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 5.000,00"
+      },
+      "logicalChecksum": "e88769964049cfccc0eff972e1b072ffdd9127bdb633d439c90f64aa3a309fd3",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-035",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2026-07-09",
+        "endDate": "2026-08-09",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 10.000,00"
+      },
+      "logicalChecksum": "972e870ee7b00b9d8b64a10fae2ce84836d048ce236463053f9f8ed8d3916fc3",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-036",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2026-07-09",
+        "endDate": "2026-08-09",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,00"
+      },
+      "logicalChecksum": "ec84232aedbb7f6fe5a61e30e90a87ea4149f6772ccc1c71a9b0ebd69d253636",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-037",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2026-01-31",
+        "endDate": "2026-02-28",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 44,
+        "estimatedValue": 1320
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.320,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.320,00"
+      },
+      "logicalChecksum": "39c68b7580171db97946ac55125d823a2136846714fffdd523c4ca64d3f2cfe8",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-038",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2026-01-31",
+        "endDate": "2026-02-28",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2200
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.200,00"
+      },
+      "logicalChecksum": "d869e4ac50f708e62b6a45ca4fe8e56c424124f256ba7d72812e55263f60720d",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-039",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2026-01-31",
+        "endDate": "2026-02-28",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 100,
+        "estimatedValue": 3000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.000,00"
+      },
+      "logicalChecksum": "6a502a71a9c95551113dc58b6a9ef4e28f32576a7ec5401c1a0eb1ac458409da",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-040",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2025-12-31",
+        "endDate": "2026-01-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 5000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 5.000,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 5.000,00"
+      },
+      "logicalChecksum": "298cf24c21fb907855feddc76d1f753aa27958c6a873355336029cc846665117",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-041",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2025-12-31",
+        "endDate": "2026-01-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 10000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 30 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 10.000,00"
+      },
+      "logicalChecksum": "9df20320ab6c068100c36b96f95f9d1622b0c322dbdbbee1b3fd4daccfae6367",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-042",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2025-12-31",
+        "endDate": "2026-01-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "components": {
+        "fullYears": 0,
+        "baseDays": 30,
+        "additionalDays": 0,
+        "totalDays": 30,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "30 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,00"
+      },
+      "logicalChecksum": "563191fbfa751ffb1557dc3a38817bd072dcc898bf48ee4380f45fbd7cd41504",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-043",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2020-06-01",
+        "endDate": "2023-05-31",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 2,
+        "totalDays": 36,
+        "dailyValue": 44,
+        "estimatedValue": 1584
+      },
+      "components": {
+        "fullYears": 2,
+        "baseDays": 30,
+        "additionalDays": 6,
+        "totalDays": 36,
+        "dailyValue": 44,
+        "estimatedValue": 1584
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 1.584,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "36 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 1.584,00"
+      },
+      "logicalChecksum": "2334ae1395894fd044e01dadc446fd529632d582ff1f7cfd7848605e284e3975",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-044",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2020-06-01",
+        "endDate": "2023-05-31",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 2,
+        "totalDays": 36,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2640
+      },
+      "components": {
+        "fullYears": 2,
+        "baseDays": 30,
+        "additionalDays": 6,
+        "totalDays": 36,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 2640
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 36 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "36 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 2.640,00"
+      },
+      "logicalChecksum": "1d2eff0523b0c87419ab68b28ae73420671a15cdb6d3d603f5ae277c6660bbb7",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-045",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2020-06-01",
+        "endDate": "2023-05-31",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 2,
+        "totalDays": 36,
+        "dailyValue": 100,
+        "estimatedValue": 3600
+      },
+      "components": {
+        "fullYears": 2,
+        "baseDays": 30,
+        "additionalDays": 6,
+        "totalDays": 36,
+        "dailyValue": 100,
+        "estimatedValue": 3600
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 3.600,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "36 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 3.600,00"
+      },
+      "logicalChecksum": "9da5b2e6deffd7efc0999b7bf9c58acec51e2fcbb675ed0294dc1c74d0a8ffae",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-046",
+      "inputs": {
+        "salary": 5000,
+        "startDate": "2020-06-01",
+        "endDate": "2023-06-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 3,
+        "totalDays": 39,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 6500
+      },
+      "components": {
+        "fullYears": 3,
+        "baseDays": 30,
+        "additionalDays": 9,
+        "totalDays": 39,
+        "dailyValue": 166.66666666666666,
+        "estimatedValue": 6500
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 6.500,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "39 dias",
+        "dailyValueText": "R$ 166,67",
+        "estimatedValueText": "R$ 6.500,00"
+      },
+      "logicalChecksum": "1a79c3c38ce8c36d23ec84b37b6217e5f036c3fdc49e98da6115432d67c1ee60",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-047",
+      "inputs": {
+        "salary": 10000,
+        "startDate": "2020-06-01",
+        "endDate": "2023-06-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 3,
+        "totalDays": 39,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 13000
+      },
+      "components": {
+        "fullYears": 3,
+        "baseDays": 30,
+        "additionalDays": 9,
+        "totalDays": 39,
+        "dailyValue": 333.3333333333333,
+        "estimatedValue": 13000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 39 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "39 dias",
+        "dailyValueText": "R$ 333,33",
+        "estimatedValueText": "R$ 13.000,00"
+      },
+      "logicalChecksum": "98005d6379114b96554d2887b24f8e0263fdb9440bfd1059ee1d027888c1e55c",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-048",
+      "inputs": {
+        "salary": 1,
+        "startDate": "2020-06-01",
+        "endDate": "2023-06-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 3,
+        "totalDays": 39,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.3
+      },
+      "components": {
+        "fullYears": 3,
+        "baseDays": 30,
+        "additionalDays": 9,
+        "totalDays": 39,
+        "dailyValue": 0.03333333333333333,
+        "estimatedValue": 1.3
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 1,30 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "39 dias",
+        "dailyValueText": "R$ 0,03",
+        "estimatedValueText": "R$ 1,30"
+      },
+      "logicalChecksum": "b996fef5046050aa3df1724309ccfb9b8f8a4224d6337c89cd479af8f2a6c550",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-049",
+      "inputs": {
+        "salary": 1320,
+        "startDate": "2020-06-01",
+        "endDate": "2040-06-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 44,
+        "estimatedValue": 3960
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 44,
+        "estimatedValue": 3960
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio indenizado: o valor estimado de R$ 3.960,00 pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "verba estimada",
+        "estimatedLabel": "Verba estimada",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 44,00",
+        "estimatedValueText": "R$ 3.960,00"
+      },
+      "logicalChecksum": "a838bd62ba96777ae101b67c96c226075a90b0699810a03fa2e2d71c6143fcf6",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-050",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2020-06-01",
+        "endDate": "2040-06-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 6600
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 73.33333333333333,
+        "estimatedValue": 6600
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Aviso prévio trabalhado: a estimativa indica 90 dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "dias a cumprir",
+        "estimatedLabel": "Referência salarial",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 73,33",
+        "estimatedValueText": "R$ 6.600,00"
+      },
+      "logicalChecksum": "6ec9703c31f72c68d4a11c8fe52cd40f67b088f2ea4737369e53ad64a2eb0681",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-051",
+      "inputs": {
+        "salary": 3000,
+        "startDate": "2020-06-01",
+        "endDate": "2040-06-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": true,
+        "fullYears": 20,
+        "totalDays": 90,
+        "dailyValue": 100,
+        "estimatedValue": 9000
+      },
+      "components": {
+        "fullYears": 20,
+        "baseDays": 30,
+        "additionalDays": 60,
+        "totalDays": 90,
+        "dailyValue": 100,
+        "estimatedValue": 9000
+      },
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Pedido de demissão com desconto: o valor estimado de R$ 9.000,00 deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.",
+      "outputFinal": {
+        "resultStatus": "Cálculo realizado",
+        "badge": "possível desconto",
+        "estimatedLabel": "Possível desconto",
+        "totalDaysText": "90 dias",
+        "dailyValueText": "R$ 100,00",
+        "estimatedValueText": "R$ 9.000,00"
+      },
+      "logicalChecksum": "22593cb9fb34a7cbc6644731e1c7f2decdf6b36ba73c4892d697b56e510676c9",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-052",
+      "inputs": {
+        "salary": 0,
+        "startDate": "2024-01-01",
+        "endDate": "2024-02-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "459ed1cbaff5329e852aa7f216478961c52e7c0de32df40c30a6232b14d9b051",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-053",
+      "inputs": {
+        "salary": -1000,
+        "startDate": "2024-01-01",
+        "endDate": "2024-02-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "6e5eeb2e1e1fa7cb1b52badef61d02da786f3e5ec0d38ba1701bb5b648eac790",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-054",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "",
+        "endDate": "2024-02-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "2b2f0d0f792f4d41b53a4bcfde2359e4fe789aa988dd4a7bf060224487094ca9",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-055",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2024-01-01",
+        "endDate": "",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "9c1d38d3f4765fb1ff30c28cf1a89b8802c2b5fdf994fe39de0771df19301454",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-056",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2024-02-01",
+        "endDate": "2024-01-01",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "7f0dfb60869e64bd0022e073037e6bf0522e3912f359a3bdc5376c4fa3c04459",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-057",
+      "inputs": {
+        "salary": null,
+        "startDate": "2024-01-01",
+        "endDate": "2024-02-01",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "41843ee7685190cbab8b23bb9625ca150cb40931ef7671b3b313b44a288317a2",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-058",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "invalid",
+        "endDate": "2024-02-01",
+        "noticeType": "indenizado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "2026beddce27f10a7cf97da2397b9ec9d6138088c275fcb01f3accc963340319",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-059",
+      "inputs": {
+        "salary": 2200,
+        "startDate": "2024-01-01",
+        "endDate": "invalid",
+        "noticeType": "trabalhado"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "94c841797435fc00910847c7e0a3e5b10c560efd2ff303c6182408487c108a93",
+      "storedStatus": "equal"
+    },
+    {
+      "scenarioId": "shadow-aviso-previo-060",
+      "inputs": {
+        "salary": 0,
+        "startDate": "",
+        "endDate": "",
+        "noticeType": "desconto"
+      },
+      "resultCurrent": {
+        "valid": false,
+        "resultStatus": "Dados incompletos"
+      },
+      "components": null,
+      "rounding": {
+        "calculation": "raw JavaScript Number arithmetic",
+        "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+        "daysDisplay": "integer"
+      },
+      "message": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "outputFinal": {
+        "resultStatus": "Dados incompletos",
+        "badge": "simulação"
+      },
+      "logicalChecksum": "b9c27a2ce945da77b093735e7d42e9efbc9457ee532934b7bf417c25ccb8c830",
+      "storedStatus": "equal"
+    }
+  ]
+}

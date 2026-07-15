@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-visual-plan",
+  "status": "VISUAL_MIGRATION_PLAN_READY",
+  "family": "LEGACY_CALCULATOR_FAMILY_V1",
+  "preserve": [
+    "URL/canonical/SEO",
+    "all editorial blocks and headings",
+    "FAQ and FAQPage meaning",
+    "links",
+    "formula/result behavior",
+    "legal disclaimers"
+  ],
+  "futureStructure": [
+    "institutional blue identity",
+    "canonical hero",
+    "breadcrumb",
+    "visible updated-at metadata",
+    "guided journey",
+    "logical field groups",
+    "field validation and error summary",
+    "confirmation step if justified",
+    "dominant CTA",
+    "primary result",
+    "secondary indicators",
+    "interpretation",
+    "approved product slot or explicit omission",
+    "calculation memory",
+    "limitations",
+    "copy/print/download actions",
+    "adaptive report",
+    "preserved editorial content",
+    "FAQ",
+    "official sources",
+    "related content"
+  ],
+  "responsivePlan": {
+    "mobile": "single column, sticky-safe CTA, no horizontal overflow",
+    "tablet": "single column or balanced two-column after measured breakpoint",
+    "desktop": "form/result two-column with static editorial flow"
+  },
+  "visualValidationRequired": [
+    "mobile entry/error/result/footer",
+    "tablet entry/error/result",
+    "desktop entry/error/result/FAQ/footer"
+  ],
+  "guard": "No content rewriting or component deletion to fit the layout"
+}

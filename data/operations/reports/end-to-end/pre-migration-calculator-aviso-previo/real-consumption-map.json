@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-real-consumption",
+  "status": "RESOLVED_WITH_GUARDS",
+  "flow": [
+    {
+      "from": "data/tabelas-trabalhistas.json",
+      "to": "assets/js/tabelas-trabalhistas.js",
+      "mechanism": "fetch('/data/tabelas-trabalhistas.json')",
+      "active": true
+    },
+    {
+      "from": "assets/js/tabelas-trabalhistas.js",
+      "to": "calculadora-aviso-previo/index.html",
+      "mechanism": "window.CalculeTrabalhadorTabelas.calcularAvisoPrevio",
+      "active": true
+    },
+    {
+      "from": "calculadora-aviso-previo/index.html local formula",
+      "to": "user-visible result",
+      "mechanism": "primary while data is loading; fallback on absence/divergence",
+      "active": true
+    },
+    {
+      "from": "data/rules/aviso-previo.json",
+      "to": "data/tabelas-trabalhistas.json",
+      "mechanism": "none",
+      "active": false
+    },
+    {
+      "from": "data/core/domains/aviso-previo/rules/index.json",
+      "to": "production calculator",
+      "mechanism": "shadow validator only",
+      "active": false
+    },
+    {
+      "from": "scripts/validate-shadow-aviso-previo.js",
+      "to": "data/core/shadow/comparisons/aviso-previo/index.json",
+      "mechanism": "read-only 60-scenario validation",
+      "active": true
+    }
+  ],
+  "fallbacks": [
+    {
+      "location": "calculator inline script",
+      "values": [
+        30,
+        3,
+        90,
+        30
+      ],
+      "trigger": "helper/data absent or comparison mismatch",
+      "governed": true,
+      "evidence": "embedded-shadow-equivalence"
+    },
+    {
+      "location": "shared runtime helper",
+      "values": [
+        30,
+        3,
+        90
+      ],
+      "trigger": "aggregate properties absent",
+      "governed": false,
+      "evidence": "literal defaults"
+    }
+  ],
+  "sourceExistsVsConsumed": "Nominal source exists but is not consumed; mixed aggregate and local formula are the real production path"
+}

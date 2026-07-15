@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-formula-contract",
+  "status": "RESOLVED_WITH_GUARDS",
+  "pipeline": {
+    "INPUTS": [
+      "salary",
+      "startDate",
+      "endDate",
+      "noticeType"
+    ],
+    "NORMALIZATION": [
+      "Number(salary)",
+      "parse dates at local T00:00:00",
+      "reject missing/invalid/end-before-start",
+      "calculate full calendar years by anniversary"
+    ],
+    "RULES": [
+      "baseDays=30",
+      "additional=3 per full year",
+      "cap=90"
+    ],
+    "FORMULAS": [
+      "fullYears=max(adjusted year difference,0)",
+      "totalDays=min(90,30+fullYears*3)",
+      "additionalDays=totalDays-30",
+      "dailyValue=salary/30",
+      "estimatedValue=totalDays*dailyValue"
+    ],
+    "ROUNDING": [
+      "raw JavaScript Number for calculation",
+      "Intl.NumberFormat pt-BR BRL for currency display",
+      "integer day display"
+    ],
+    "OUTPUTS": [
+      "companyTime",
+      "fullYears",
+      "baseDays",
+      "additionalDays",
+      "totalDays",
+      "dailyValue",
+      "estimatedValue",
+      "note"
+    ]
+  },
+  "typeBehavior": {
+    "indenizado": "same math; value presented as estimated severance amount",
+    "trabalhado": "same math; value presented as salary reference and days to serve",
+    "desconto": "same positive math; value presented as possible deduction"
+  },
+  "fallback": "Return local result if governed data/helper is absent or if central comparison diverges",
+  "potentialCalculationIssues": [],
+  "guards": [
+    "Do not change full-year anniversary behavior",
+    "Do not introduce cent rounding into the internal calculation without approved baseline change",
+    "Do not change noticeType semantics while restructuring the UI"
+  ]
+}

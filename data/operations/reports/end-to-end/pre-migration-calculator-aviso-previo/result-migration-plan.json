@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-result-plan",
+  "status": "RESULT_MIGRATION_PLAN_READY",
+  "preserve": [
+    "companyTime",
+    "fullYears",
+    "baseDays",
+    "additionalDays",
+    "totalDays",
+    "dailyValue",
+    "estimatedValue",
+    "notice-type-specific badge/label/note",
+    "invalid status/message"
+  ],
+  "futureLayers": [
+    {
+      "order": 1,
+      "id": "result-context",
+      "content": "inputs and notice type used"
+    },
+    {
+      "order": 2,
+      "id": "primary-result",
+      "content": "days and monetary meaning appropriate to notice type"
+    },
+    {
+      "order": 3,
+      "id": "secondary-indicators",
+      "content": "company time, full years, base/additional days, daily value"
+    },
+    {
+      "order": 4,
+      "id": "interpretation",
+      "content": "plain-language meaning without adding legal conclusions"
+    },
+    {
+      "order": 5,
+      "id": "calculation-memory",
+      "content": "salary/30, base, proportional increment, cap and multiplication"
+    },
+    {
+      "order": 6,
+      "id": "limitations",
+      "content": "collective rules, official termination documents and excluded effects"
+    },
+    {
+      "order": 7,
+      "id": "next-step",
+      "content": "review termination documentation or related calculator"
+    },
+    {
+      "order": 8,
+      "id": "actions",
+      "content": "copy, print and adaptive HTML/PDF report"
+    }
+  ],
+  "comparison": "Not required unless a user-selectable notice-type comparison is explicitly approved",
+  "productSlot": "Use only if an approved relevant product exists; otherwise render no placeholder"
+}

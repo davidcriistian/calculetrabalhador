@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-visible-consumers",
+  "status": "RESOLVED_WITH_GUARDS",
+  "consumers": [
+    {
+      "type": "CALCULATION_ENGINE",
+      "path": "calculadora-aviso-previo/index.html#calculateNotice",
+      "declared": true,
+      "source": "mixed aggregate plus local fallback"
+    },
+    {
+      "type": "VISIBLE_RULE_CARD",
+      "path": "calculadora-aviso-previo/index.html#calculation-method",
+      "declared": false,
+      "source": "static HTML"
+    },
+    {
+      "type": "RESULT_EXPLANATION",
+      "path": "calculadora-aviso-previo/index.html#dynamic-note",
+      "declared": false,
+      "source": "inline templates"
+    },
+    {
+      "type": "RULE_SUMMARY",
+      "path": "hero, proportional section, FAQ and FAQPage",
+      "declared": false,
+      "source": "static HTML/JSON-LD"
+    },
+    {
+      "type": "UPDATED_AT_METADATA",
+      "path": "data/editorial-metadata.json + assets/js/editorial-metadata.js",
+      "declared": false,
+      "source": "editorial metadata"
+    },
+    {
+      "type": "VISIBLE_TABLE",
+      "path": null,
+      "present": false
+    },
+    {
+      "type": "RULE_DEPENDENT_EXAMPLE",
+      "path": null,
+      "present": false
+    },
+    {
+      "type": "REPORT_OUTPUT",
+      "path": null,
+      "present": false
+    }
+  ],
+  "calculationAndInterfaceShareSource": false,
+  "blockingRisk": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
+  "futureCertificationGate": "All numeric/legal visible consumers must be declared and derived or explicitly review-required"
+}

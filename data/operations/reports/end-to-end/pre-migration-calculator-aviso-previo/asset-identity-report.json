@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-asset-identity",
+  "status": "RESOLVED_WITH_GUARDS",
+  "identity": {
+    "assetId": "calculator:calculadora-aviso-previo",
+    "id": "calculadora-aviso-previo",
+    "name": "Aviso Prévio",
+    "slug": "/calculadora-aviso-previo/",
+    "url": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+    "physicalPage": "calculadora-aviso-previo/index.html",
+    "domain": "Rescisão",
+    "nucleusId": "nucleus:clt",
+    "clusterId": "cluster:calculadora-aviso-previo",
+    "guide": null,
+    "category": "Rescisão",
+    "publicationStatus": "published-public-catalog",
+    "tools": true,
+    "toolsMap": true,
+    "sitemap": true,
+    "featured": true,
+    "showOnHome": true,
+    "calculatorRole": "PRIMARY_FEATURED",
+    "registry": false,
+    "publishing": false
+  },
+  "relatedArticles": [
+    "/blog/como-calcular-aviso-previo/",
+    "/blog/aviso-previo-trabalhado-ou-indenizado/",
+    "/blog/quantos-dias-de-aviso-previo-tenho-direito/",
+    "/blog/como-funciona-o-aviso-previo-proporcional/",
+    "/blog/posso-pedir-demissao-sem-cumprir-aviso-previo/"
+  ],
+  "relatedCalculators": [
+    "/salario-liquido-clt/",
+    "/calculadora-rescisao-clt/",
+    "/calculadora-ferias-clt/",
+    "/calculadora-13-salario/",
+    "/calculadora-horas-extras-clt/",
+    "/calculadora-seguro-desemprego/",
+    "/saque-aniversario-fgts/"
+  ],
+  "inconsistencies": [
+    "REGISTRY_ENTRY_MISSING",
+    "PUBLISHING_ENTRY_MISSING",
+    "tools-map clusterSize is 0 while five related articles declare the calculator cluster",
+    "core compatibility map has cluster null/coreStatus not-connected while inventory resolves cluster:calculadora-aviso-previo",
+    "sitemap lastmod 2026-06-08 predates editorial metadata updatedAt 2026-06-10"
+  ]
+}

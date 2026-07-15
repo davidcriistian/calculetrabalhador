@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-validation",
+  "status": "PASS_WITH_GUARDS",
+  "validations": [
+    {
+      "id": "JSON_VALID",
+      "status": "PASS"
+    },
+    {
+      "id": "INTERNAL_JSON_REFS_VALID",
+      "status": "PASS"
+    },
+    {
+      "id": "NODE_CHECK_AUDITED_SCRIPTS",
+      "status": "PASS"
+    },
+    {
+      "id": "SHADOW_AVISO_PREVIO",
+      "status": "PASS",
+      "evidence": "60/60; 0 divergences"
+    },
+    {
+      "id": "CALCULATOR_EXPERIENCE_VALIDATOR",
+      "status": "PASS",
+      "evidence": "24/24; 196 references"
+    },
+    {
+      "id": "MIGRATION_FOUNDATION_VALIDATOR",
+      "status": "PASS",
+      "evidence": "20/20; 38 dependencies; 22 classifications"
+    },
+    {
+      "id": "GOVERNANCE_VALIDATOR",
+      "status": "PASS"
+    },
+    {
+      "id": "TRANSFORM_RULES_CHECK",
+      "status": "PASS"
+    },
+    {
+      "id": "TRANSFORM_RULES_DRY_RUN",
+      "status": "PASS",
+      "evidence": "NO_CHANGE_REQUIRED"
+    },
+    {
+      "id": "HARDCODE_SCAN",
+      "status": "PASS_WITH_FINDINGS",
+      "evidence": "9 classified findings"
+    },
+    {
+      "id": "DEPENDENCY_SCAN",
+      "status": "PASS_WITH_GUARDS"
+    },
+    {
+      "id": "LINK_SCAN",
+      "status": "PASS",
+      "evidence": "8/8 internal links resolved"
+    },
+    {
+      "id": "CANONICAL_SCHEMA_SCAN",
+      "status": "PASS_WITH_GUARDS",
+      "evidence": "canonical valid; FAQPage valid; Breadcrumb/SoftwareApplication absent"
+    },
+    {
+      "id": "SCREENSHOT_INSPECTION",
+      "status": "PASS_WITH_GUARDS",
+      "evidence": "mobile entry and desktop result inspected; additional states deferred"
+    },
+    {
+      "id": "SECRET_SCAN",
+      "status": "PASS"
+    },
+    {
+      "id": "LARGE_FILE_SCAN",
+      "status": "PASS"
+    },
+    {
+      "id": "UNEXPECTED_ARTIFACT_SCAN",
+      "status": "PASS"
+    },
+    {
+      "id": "GIT_DIFF_CHECK",
+      "status": "PASS"
+    },
+    {
+      "id": "MUTATION_GUARD",
+      "status": "PASS_ZERO_PUBLIC_MUTATION"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-current-result",
+  "status": "RESOLVED",
+  "classification": "BASIC_RESULT",
+  "score": 22,
+  "outputs": [
+    {
+      "id": "result-status",
+      "role": "status",
+      "states": [
+        "Aguardando dados",
+        "Dados incompletos",
+        "Cálculo realizado"
+      ]
+    },
+    {
+      "id": "result-badge",
+      "role": "meaning",
+      "states": [
+        "simulação",
+        "verba estimada",
+        "dias a cumprir",
+        "possível desconto"
+      ]
+    },
+    {
+      "id": "company-time",
+      "role": "secondary indicator"
+    },
+    {
+      "id": "full-years",
+      "role": "calculation component"
+    },
+    {
+      "id": "base-days",
+      "role": "calculation component"
+    },
+    {
+      "id": "additional-days",
+      "role": "calculation component"
+    },
+    {
+      "id": "total-days",
+      "role": "primary day result"
+    },
+    {
+      "id": "daily-value",
+      "role": "calculation component"
+    },
+    {
+      "id": "estimated-label",
+      "role": "conditional meaning"
+    },
+    {
+      "id": "estimated-value",
+      "role": "primary monetary result"
+    },
+    {
+      "id": "dynamic-note",
+      "role": "result explanation and limitation"
+    }
+  ],
+  "present": [
+    "primary result",
+    "result meaning",
+    "limitations",
+    "responsive result"
+  ],
+  "missing": [
+    "result context",
+    "premises",
+    "explicit interpretation",
+    "next step",
+    "recommendation/product slot",
+    "structured calculation memory",
+    "comparison",
+    "copy",
+    "print",
+    "download",
+    "adaptive report",
+    "methodology"
+  ],
+  "migrationRequirement": "Preserve every current output and semantic branch, then add canonical result layers without changing math"
+}

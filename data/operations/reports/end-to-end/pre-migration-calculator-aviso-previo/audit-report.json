@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-audit",
+  "status": "PASS_WITH_GUARDS",
+  "successCriteria": {
+    "baselineFrozen": true,
+    "sixtyScenariosReproduced": true,
+    "inputsOutputsMapped": true,
+    "ruleAndFallbacksResolved": true,
+    "visibleDependenciesMapped": true,
+    "seoEditorialFrozen": true,
+    "visualPlanReady": true,
+    "governedPlanReady": true,
+    "rollbackReady": true,
+    "zeroPublicMutation": true,
+    "zeroCalculationChange": true,
+    "zeroLegalRuleChange": true,
+    "zeroGitWrite": true
+  },
+  "warnings": [
+    "Nominal canonical data/rules/aviso-previo.json is empty/draft and not operational",
+    "Current aggregate is mixed-authority and has no deterministic Aviso Prévio transform",
+    "Visible rule summaries are hardcoded and not declared governed consumers",
+    "Shared runtime retains magic-number defaults",
+    "Registry and Publishing entries are missing",
+    "Five related articles coexist with tools-map clusterSize 0",
+    "FAQ answers are semantically aligned but not byte-identical to FAQPage",
+    "Additional decimal/failure/divergence fixtures and tablet/error/full-page screenshots are recommended"
+  ],
+  "blockers": [],
+  "decision": "READY_FOR_CONTROLLED_MIGRATION_WITH_GUARDS"
+}

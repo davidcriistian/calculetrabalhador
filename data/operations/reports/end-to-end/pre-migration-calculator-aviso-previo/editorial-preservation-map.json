@@ -1,0 +1,135 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-editorial-preservation",
+  "status": "RESOLVED_WITH_GUARDS",
+  "documentWordCount": 541,
+  "sections": [
+    {
+      "sectionId": "hero-summary",
+      "sectionType": "HERO_RULE_SUMMARY",
+      "heading": "Calculadora de Aviso Prévio 2026",
+      "wordCount": 67,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "GOVERNED_CONTENT"
+    },
+    {
+      "sectionId": "calculator-form",
+      "sectionType": "FORM",
+      "heading": "Dados para cálculo",
+      "wordCount": 32,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "RESTRUCTURE_WITHOUT_REWRITING"
+    },
+    {
+      "sectionId": "current-result",
+      "sectionType": "RESULT",
+      "heading": "Resultado",
+      "wordCount": 40,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "RESTRUCTURE_WITHOUT_REWRITING"
+    },
+    {
+      "sectionId": "calculation-method",
+      "sectionType": "VISIBLE_RULE_CARD",
+      "heading": "Como o cálculo é feito",
+      "wordCount": 44,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "GOVERNED_CONTENT"
+    },
+    {
+      "sectionId": "definition",
+      "sectionType": "EDITORIAL",
+      "heading": "O que é aviso prévio?",
+      "wordCount": 38,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "PRESERVE"
+    },
+    {
+      "sectionId": "proportional-rule",
+      "sectionType": "EDITORIAL_RULE_SUMMARY",
+      "heading": "Como funciona o aviso prévio proporcional?",
+      "wordCount": 45,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "GOVERNED_CONTENT"
+    },
+    {
+      "sectionId": "worked-vs-indemnified",
+      "sectionType": "EDITORIAL",
+      "heading": "Aviso prévio trabalhado x indenizado",
+      "wordCount": 36,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "PRESERVE"
+    },
+    {
+      "sectionId": "resignation-discount",
+      "sectionType": "EDITORIAL_LEGAL_CONTEXT",
+      "heading": "Pedido de demissão e desconto do aviso",
+      "wordCount": 46,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "sectionId": "faq",
+      "sectionType": "FAQ",
+      "heading": "Perguntas frequentes",
+      "wordCount": 121,
+      "links": [],
+      "schemaRelation": "FAQPage",
+      "preservationPolicy": "GOVERNED_CONTENT"
+    },
+    {
+      "sectionId": "disclaimer",
+      "sectionType": "DISCLAIMER",
+      "heading": "Aviso legal / Disclaimer",
+      "wordCount": 35,
+      "links": [],
+      "schemaRelation": null,
+      "preservationPolicy": "PRESERVE"
+    },
+    {
+      "sectionId": "related-tools",
+      "sectionType": "RELATED_TOOLS",
+      "heading": "Outras calculadoras trabalhistas",
+      "wordCount": 34,
+      "links": [
+        "/salario-liquido-clt/",
+        "/calculadora-rescisao-clt/",
+        "/calculadora-ferias-clt/",
+        "/calculadora-13-salario/",
+        "/calculadora-horas-extras-clt/",
+        "/calculadora-seguro-desemprego/",
+        "/saque-aniversario-fgts/",
+        "/ferramentas/"
+      ],
+      "schemaRelation": null,
+      "preservationPolicy": "PRESERVE"
+    }
+  ],
+  "inventory": {
+    "faqCount": 5,
+    "tables": 0,
+    "staticExamples": 0,
+    "ruleDependentExamples": 0,
+    "disclaimers": 2,
+    "primaryCta": "Calcular aviso prévio",
+    "secondaryCta": "Limpar",
+    "relatedToolLinks": 8
+  },
+  "policy": "No editorial rewriting during technical migration",
+  "guards": [
+    "Numeric/legal summaries must become declared governed consumers or receive human review",
+    "Pedido de demissão content remains HUMAN_REVIEW_REQUIRED",
+    "No block may be silently deleted or semantically merged"
+  ]
+}

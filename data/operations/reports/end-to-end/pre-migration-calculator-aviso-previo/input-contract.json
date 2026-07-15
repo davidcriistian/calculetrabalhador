@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-input-contract",
+  "status": "RESOLVED",
+  "inputs": [
+    {
+      "id": "salary",
+      "label": "Salário bruto mensal",
+      "type": "number",
+      "unit": "BRL/month",
+      "requiredByRuntime": true,
+      "requiredAttribute": false,
+      "minAttribute": 0,
+      "effectiveMinimumExclusive": 0,
+      "max": null,
+      "default": "empty",
+      "step": 0.01,
+      "inputMode": "decimal",
+      "mask": null,
+      "validation": "Number(value) > 0",
+      "emptyBehavior": "invalid",
+      "invalidBehavior": "Dados incompletos",
+      "conditionalDependency": null,
+      "calculationImpact": [
+        "dailyValue",
+        "estimatedValue"
+      ],
+      "resultImpact": [
+        "daily-value",
+        "estimated-value",
+        "dynamic-note"
+      ],
+      "reportPresence": true
+    },
+    {
+      "id": "start-date",
+      "label": "Data de admissão",
+      "type": "date",
+      "unit": "calendar-date",
+      "requiredByRuntime": true,
+      "requiredAttribute": false,
+      "min": null,
+      "max": null,
+      "default": "empty",
+      "mask": "browser-native-date",
+      "validation": "parseDate valid",
+      "emptyBehavior": "invalid",
+      "invalidBehavior": "Dados incompletos",
+      "conditionalDependency": "must be <= end-date",
+      "calculationImpact": [
+        "fullYears",
+        "companyTime"
+      ],
+      "resultImpact": [
+        "company-time",
+        "full-years",
+        "additional-days",
+        "total-days",
+        "estimated-value"
+      ],
+      "reportPresence": true
+    },
+    {
+      "id": "end-date",
+      "label": "Data de desligamento",
+      "type": "date",
+      "unit": "calendar-date",
+      "requiredByRuntime": true,
+      "requiredAttribute": false,
+      "min": null,
+      "max": null,
+      "default": "empty",
+      "mask": "browser-native-date",
+      "validation": "parseDate valid and >= start-date",
+      "emptyBehavior": "invalid",
+      "invalidBehavior": "Dados incompletos",
+      "conditionalDependency": "must be >= start-date",
+      "calculationImpact": [
+        "fullYears",
+        "companyTime"
+      ],
+      "resultImpact": [
+        "company-time",
+        "full-years",
+        "additional-days",
+        "total-days",
+        "estimated-value"
+      ],
+      "reportPresence": true
+    },
+    {
+      "id": "notice-type",
+      "label": "Tipo de aviso",
+      "type": "select",
+      "unit": null,
+      "requiredByRuntime": true,
+      "requiredAttribute": false,
+      "options": [
+        {
+          "value": "indenizado",
+          "label": "Aviso prévio indenizado"
+        },
+        {
+          "value": "trabalhado",
+          "label": "Aviso prévio trabalhado"
+        },
+        {
+          "value": "desconto",
+          "label": "Desconto de aviso no pedido de demissão"
+        }
+      ],
+      "default": "indenizado",
+      "validation": "UI-constrained enum; runtime reads current value",
+      "emptyBehavior": "not reachable through current UI",
+      "invalidBehavior": "falls into desconto note branch",
+      "conditionalDependency": null,
+      "calculationImpact": [],
+      "resultImpact": [
+        "badge",
+        "estimated-label",
+        "colors",
+        "dynamic-note"
+      ],
+      "reportPresence": true
+    }
+  ],
+  "nonexistentInputsConfirmed": [
+    "dependentes",
+    "motivo do desligamento",
+    "radio buttons",
+    "checkboxes"
+  ]
+}

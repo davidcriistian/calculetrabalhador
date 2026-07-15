@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-rule-source-resolution",
+  "status": "RESOLVED_WITH_GUARDS",
+  "sources": [
+    {
+      "path": "data/rules/aviso-previo.json",
+      "role": "nominal canonical rule file",
+      "sourceExists": true,
+      "status": "draft",
+      "content": "empty data object",
+      "sourceIsActuallyConsumed": false,
+      "authority": "NOT_OPERATIONAL"
+    },
+    {
+      "path": "data/tabelas-trabalhistas.json",
+      "role": "mixed aggregate currently fetched by runtime",
+      "sourceExists": true,
+      "status": "derived-mixed-authority",
+      "content": {
+        "diasBase": 30,
+        "diasPorAnoCompleto": 3,
+        "limiteDias": 90,
+        "diasDescontoPedidoDemissao": 30
+      },
+      "sourceIsActuallyConsumed": true,
+      "authority": "CURRENT_OPERATIONAL_DATA"
+    },
+    {
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "role": "shared public runtime/helper",
+      "sourceExists": true,
+      "sourceIsActuallyConsumed": true,
+      "functions": [
+        "carregarTabelasTrabalhistas",
+        "obterRegraAvisoPrevio",
+        "calcularAvisoPrevio"
+      ],
+      "authority": "CURRENT_OPERATIONAL_RUNTIME"
+    },
+    {
+      "path": "data/core/domains/aviso-previo/rules/index.json",
+      "role": "declarative shadow/homologation rule",
+      "status": "homologation",
+      "runtimeStatus": "not-connected",
+      "sourceIsActuallyConsumed": false,
+      "authority": "SHADOW_DESCRIPTION"
+    },
+    {
+      "path": "data/core/domains/aviso-previo/legislation/index.json",
+      "role": "legal references",
+      "status": "homologation-reference",
+      "sourceIsActuallyConsumed": false,
+      "officialLinks": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12506.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+      ]
+    }
+  ],
+  "classification": "GOVERNED_WITH_FALLBACK",
+  "foundationRegistryStatus": "LEGACY_DECLARED_PENDING_MIGRATION",
+  "guards": [
+    "Populate and legally approve the nominal canonical source before certification",
+    "Add deterministic transformation from canonical source to aggregate/runtime",
+    "Do not label the empty draft file as current production authority"
+  ]
+}

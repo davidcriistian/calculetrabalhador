@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-registry-publishing",
+  "status": "RESOLVED_WITH_GUARDS",
+  "registry": {
+    "exists": false,
+    "currentStatus": null,
+    "publicPageCoherentWithoutEntry": true,
+    "futureAction": "create or reconcile calculator:calculadora-aviso-previo entry during authorized migration",
+    "requiredMetadata": [
+      "assetId",
+      "type",
+      "slug",
+      "canonical",
+      "domain",
+      "nucleusId",
+      "clusterId",
+      "owner",
+      "version",
+      "status",
+      "rule dependencies",
+      "physical path"
+    ]
+  },
+  "publishing": {
+    "exists": false,
+    "currentStatus": null,
+    "publicPageCoherentWithoutEntry": true,
+    "futureAction": "create controlled draft/review/published lifecycle entry during authorized migration",
+    "requiredMetadata": [
+      "assetId",
+      "release version",
+      "source commit",
+      "approval",
+      "validation evidence",
+      "sitemap state",
+      "rollback reference"
+    ]
+  },
+  "catalog": {
+    "tools": true,
+    "toolsMap": true,
+    "sitemap": true,
+    "published": true
+  },
+  "warnings": [
+    "REGISTRY_ENTRY_MISSING",
+    "PUBLISHING_ENTRY_MISSING"
+  ]
+}

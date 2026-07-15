@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-gates",
+  "status": "READY_FOR_CONTROLLED_MIGRATION_WITH_GUARDS",
+  "gates": [
+    {
+      "gate": "ASSET_IDENTITY_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "SEO_PRESERVATION_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "EDITORIAL_PRESERVATION_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "INPUT_CONTRACT_RESOLVED",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "FORMULA_CONTRACT_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "RULE_SOURCE_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "REAL_CONSUMPTION_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "HARDCODE_MAP_RESOLVED",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "VISIBLE_RULE_CONSUMERS_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "REGRESSION_BASELINE_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "VISUAL_MIGRATION_PLAN_RESOLVED",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "RESULT_MIGRATION_PLAN_RESOLVED",
+      "status": "RESOLVED"
+    },
+    {
+      "gate": "GOVERNED_INTEGRATION_PLAN_RESOLVED",
+      "status": "RESOLVED_WITH_GUARDS"
+    },
+    {
+      "gate": "ROLLBACK_RESOLVED",
+      "status": "RESOLVED"
+    }
+  ],
+  "unknownCount": 0,
+  "resolvedCount": 5,
+  "resolvedWithGuardsCount": 9,
+  "blockingGuards": [
+    "Canonical rule file must be populated and legally approved before governed certification",
+    "Visible numeric/legal content must share the source or be review-required",
+    "Immutable 60-scenario baseline must remain 60/60",
+    "Registry/Publishing entries must be created/reconciled before publication",
+    "Dedicated tablet/error/full-page visual evidence is required during migration"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-operation",
+  "operation": "PILOTO 1 — PRÉ-MIGRAÇÃO CONTROLADA — CALCULADORA DE AVISO PRÉVIO",
+  "status": "READY_FOR_CONTROLLED_MIGRATION_WITH_GUARDS",
+  "baseline": {
+    "scenarioCount": 60,
+    "captured": 60,
+    "divergences": 0,
+    "classification": "BASELINE_SUFFICIENT_WITH_ADDITIONAL_RECOMMENDATIONS"
+  },
+  "asset": {
+    "inputs": 4,
+    "outputs": 11,
+    "resultClassification": "BASIC_RESULT",
+    "visualFamily": "LEGACY_CALCULATOR_FAMILY_V1",
+    "currentConsumption": "GOVERNED_WITH_FALLBACK"
+  },
+  "mutations": {
+    "public": 0,
+    "calculation": 0,
+    "legalRule": 0,
+    "gitWrite": 0
+  },
+  "createdFiles": 26,
+  "modifiedExistingFiles": 0,
+  "commit": false,
+  "push": false,
+  "nextAction": "WAIT_FOR_EXPLICIT_MIGRATION_AUTHORIZATION"
+}

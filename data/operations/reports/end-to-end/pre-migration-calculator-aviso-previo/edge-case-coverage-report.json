@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-edge-coverage",
+  "status": "BASELINE_SUFFICIENT_WITH_ADDITIONAL_RECOMMENDATIONS",
+  "covered": {
+    "noticeTypes": {
+      "indenizado": 20,
+      "trabalhado": 20,
+      "desconto": 20
+    },
+    "valid": 51,
+    "invalid": 9,
+    "salary": {
+      "minimumValid": 1,
+      "maximumExercised": 10000,
+      "zero": true,
+      "negative": true,
+      "missing": true
+    },
+    "dates": {
+      "sameDay": true,
+      "dayBeforeAnniversary": true,
+      "exactAnniversary": true,
+      "leapDay": true,
+      "endBeforeStart": true,
+      "missing": true,
+      "invalid": true
+    },
+    "serviceYears": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      20,
+      36
+    ],
+    "cap90": true,
+    "roundingExposure": "Repeating daily values exercised through salaries 2200 and 1",
+    "unusualCombinations": true
+  },
+  "additionalRecommendations": [
+    {
+      "id": "decimal-cent-salaries",
+      "cases": [
+        "0.01",
+        "3000.01",
+        "9999.99"
+      ],
+      "reason": "No decimal salary input appears in the 60 records"
+    },
+    {
+      "id": "very-large-finite-salary",
+      "cases": [
+        "999999999.99"
+      ],
+      "reason": "No HTML/runtime maximum is defined"
+    },
+    {
+      "id": "invalid-or-missing-notice-type",
+      "cases": [
+        "empty",
+        "unknown"
+      ],
+      "reason": "UI constrains enum but runtime default branch is not independently guarded"
+    },
+    {
+      "id": "forced-governed-load-failure",
+      "cases": [
+        "fetch failure",
+        "helper missing"
+      ],
+      "reason": "Stored scenarios do not force the browser fallback path"
+    },
+    {
+      "id": "forced-central-divergence",
+      "cases": [
+        "changed central days/value"
+      ],
+      "reason": "fallbackTriggered is zero and divergence protection needs explicit exercise"
+    }
+  ],
+  "migrationGate": "Proceed only while existing 60 remain immutable and additional cases are approved as additive fixtures"
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-current-visual",
+  "status": "RESOLVED_WITH_GUARDS",
+  "classification": "LEGACY_CALCULATOR_FAMILY_V1",
+  "canonicalStatus": "PARTIALLY_CANONICAL",
+  "evidence": [
+    {
+      "path": "data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/visual/calculadora-aviso-previo-mobile-entry.png",
+      "sha256": "098c8ea13499175919604bd0797fd6576883492d2ed0d249cc4eac1a22926f73",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": "mobile entry",
+      "inspection": "PASS_NO_VISIBLE_OVERFLOW"
+    },
+    {
+      "path": "data/operations/reports/end-to-end/calculator-portfolio-migration-inventory/visual/calculadora-aviso-previo-desktop-result.png",
+      "sha256": "4d365c25ed118eb7fe03e3667e737b7ee3a89cb47c40b517910dac7cf6fb12f0",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "state": "desktop result",
+      "inspection": "PASS_NO_VISIBLE_OVERFLOW"
+    }
+  ],
+  "strengths": [
+    "institutional header/logo",
+    "blue identity",
+    "responsive single-column/mobile and side-by-side desktop",
+    "dominant calculate CTA",
+    "aria-live result region",
+    "clear result cards",
+    "visible update metadata injected"
+  ],
+  "gaps": [
+    "no breadcrumb",
+    "no explicit guided steps/confirmation",
+    "no field-level error association or aria-invalid",
+    "required runtime inputs lack required attribute",
+    "no explicit calculation-memory component",
+    "no interpretation/next-step/product slot",
+    "no copy/print/download/adaptive report",
+    "tablet, explicit error, FAQ and footer states lack dedicated current screenshots"
+  ],
+  "accessibility": {
+    "labels": true,
+    "ariaLive": true,
+    "keyboardNativeControls": true,
+    "knownGaps": [
+      "no error linkage",
+      "no required attributes",
+      "dynamic color/status requires migration review"
+    ]
+  }
+}

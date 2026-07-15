@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-rounding-contract",
+  "status": "RESOLVED",
+  "rules": [
+    {
+      "field": "fullYears",
+      "calculation": "integer anniversary count",
+      "display": "integer"
+    },
+    {
+      "field": "baseDays",
+      "calculation": "constant integer 30",
+      "display": "integer days"
+    },
+    {
+      "field": "additionalDays",
+      "calculation": "integer multiple of 3 capped by totalDays",
+      "display": "integer days"
+    },
+    {
+      "field": "totalDays",
+      "calculation": "Math.min with integer operands",
+      "display": "integer days"
+    },
+    {
+      "field": "dailyValue",
+      "calculation": "salary / 30 without explicit rounding",
+      "display": "Intl.NumberFormat BRL, normally two decimal places"
+    },
+    {
+      "field": "estimatedValue",
+      "calculation": "totalDays * dailyValue without explicit rounding",
+      "display": "Intl.NumberFormat BRL, normally two decimal places"
+    }
+  ],
+  "toleranceUsedByShadow": 0.01,
+  "guard": "Preserve raw-number calculation and display-only currency formatting until an explicit mathematical change is approved"
+}

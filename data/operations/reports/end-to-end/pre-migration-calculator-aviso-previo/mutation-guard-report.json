@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-mutation-guard",
+  "status": "PASS_ZERO_PUBLIC_MUTATION",
+  "baselineCommit": "d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+  "groups": [
+    {
+      "group": "targetCalculator",
+      "count": 1,
+      "sha256": "f4652b13951e11ef84a5432e4c4c60b2e461854daa79f834e21fc47338d1d8fe",
+      "beforeDigest": "f4652b13951e11ef84a5432e4c4c60b2e461854daa79f834e21fc47338d1d8fe",
+      "afterDigest": "f4652b13951e11ef84a5432e4c4c60b2e461854daa79f834e21fc47338d1d8fe",
+      "mutationCount": 0
+    },
+    {
+      "group": "otherCalculators",
+      "count": 21,
+      "sha256": "6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248",
+      "beforeDigest": "6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248",
+      "afterDigest": "6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248",
+      "mutationCount": 0
+    },
+    {
+      "group": "articles",
+      "count": 63,
+      "sha256": "2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924",
+      "beforeDigest": "2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924",
+      "afterDigest": "2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924",
+      "mutationCount": 0
+    },
+    {
+      "group": "home",
+      "count": 1,
+      "sha256": "7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa",
+      "beforeDigest": "7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa",
+      "afterDigest": "7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa",
+      "mutationCount": 0
+    },
+    {
+      "group": "guides",
+      "count": 1,
+      "sha256": "390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30",
+      "beforeDigest": "390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30",
+      "afterDigest": "390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30",
+      "mutationCount": 0
+    },
+    {
+      "group": "catalogs",
+      "count": 4,
+      "sha256": "ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b",
+      "beforeDigest": "ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b",
+      "afterDigest": "ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b",
+      "mutationCount": 0
+    },
+    {
+      "group": "sitemap",
+      "count": 1,
+      "sha256": "392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779",
+      "beforeDigest": "392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779",
+      "afterDigest": "392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779",
+      "mutationCount": 0
+    },
+    {
+      "group": "legalRules",
+      "count": 4,
+      "sha256": "edd5e60efaa1e4a71c3befe1592f73b5f1bccc7fef9d5eadda2eb6e7a19e6a4e",
+      "beforeDigest": "edd5e60efaa1e4a71c3befe1592f73b5f1bccc7fef9d5eadda2eb6e7a19e6a4e",
+      "afterDigest": "edd5e60efaa1e4a71c3befe1592f73b5f1bccc7fef9d5eadda2eb6e7a19e6a4e",
+      "mutationCount": 0
+    },
+    {
+      "group": "publicRuntimes",
+      "count": 3,
+      "sha256": "312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc",
+      "beforeDigest": "312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc",
+      "afterDigest": "312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc",
+      "mutationCount": 0
+    },
+    {
+      "group": "registry",
+      "count": 37,
+      "sha256": "72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91",
+      "beforeDigest": "72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91",
+      "afterDigest": "72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91",
+      "mutationCount": 0
+    },
+    {
+      "group": "publishing",
+      "count": 62,
+      "sha256": "32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49",
+      "beforeDigest": "32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49",
+      "afterDigest": "32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49",
+      "mutationCount": 0
+    },
+    {
+      "group": "relations",
+      "count": 4,
+      "sha256": "96bb56bdb89118830d2f51832f4b09e9d51d762da729b281228ab5e668e68085",
+      "beforeDigest": "96bb56bdb89118830d2f51832f4b09e9d51d762da729b281228ab5e668e68085",
+      "afterDigest": "96bb56bdb89118830d2f51832f4b09e9d51d762da729b281228ab5e668e68085",
+      "mutationCount": 0
+    },
+    {
+      "group": "baselineEvidence",
+      "count": 6,
+      "sha256": "f9875758f2b0418b3413f794f4b3d30d2afd218a6dd001f2719c03b0ff26ee86",
+      "beforeDigest": "f9875758f2b0418b3413f794f4b3d30d2afd218a6dd001f2719c03b0ff26ee86",
+      "afterDigest": "f9875758f2b0418b3413f794f4b3d30d2afd218a6dd001f2719c03b0ff26ee86",
+      "mutationCount": 0
+    }
+  ],
+  "counters": {
+    "TARGET_CALCULATOR_MUTATION_COUNT": 0,
+    "OTHER_CALCULATOR_MUTATION_COUNT": 0,
+    "ARTICLE_MUTATION_COUNT": 0,
+    "HOME_MUTATION_COUNT": 0,
+    "GUIDE_MUTATION_COUNT": 0,
+    "CATALOG_MUTATION_COUNT": 0,
+    "SITEMAP_MUTATION_COUNT": 0,
+    "LEGAL_RULE_MUTATION_COUNT": 0,
+    "PUBLIC_RUNTIME_MUTATION_COUNT": 0,
+    "GIT_WRITE_COUNT": 0
+  }
+}

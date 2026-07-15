@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-hardcodes",
+  "status": "RESOLVED",
+  "findings": [
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "381-386",
+      "value": "30; 3; 90; salary/30",
+      "meaning": "local engine fallback",
+      "classification": "GOVERNED_RULE",
+      "origin": "current embedded rule",
+      "consumer": "CALCULATION_ENGINE",
+      "severity": "MEDIUM",
+      "futureAction": "replace with versioned last-known-good governed projection after parity approval"
+    },
+    {
+      "file": "assets/js/tabelas-trabalhistas.js",
+      "lineBlock": "228-230",
+      "value": "30; 3; 90",
+      "meaning": "runtime defaults",
+      "classification": "UNDECLARED_HARDCODE",
+      "origin": "legacy helper default",
+      "consumer": "CALCULATION_ENGINE",
+      "severity": "HIGH",
+      "futureAction": "remove magic defaults or bind to generated versioned snapshot"
+    },
+    {
+      "file": "data/tabelas-trabalhistas.json",
+      "lineBlock": "227-233",
+      "value": "30; 3; 90; 30",
+      "meaning": "currently consumed aggregate rule",
+      "classification": "GOVERNED_RULE",
+      "origin": "mixed aggregate",
+      "consumer": "CALCULATION_ENGINE",
+      "severity": "MEDIUM",
+      "futureAction": "derive deterministically from approved canonical rule"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "112",
+      "value": "30; 3; 90; Lei 12.506/2011",
+      "meaning": "hero rule summary",
+      "classification": "GOVERNED_RULE_SUMMARY",
+      "origin": "editorial HTML",
+      "consumer": "RULE_SUMMARY",
+      "severity": "MEDIUM",
+      "futureAction": "declare and derive/review on rule change"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "210-227",
+      "value": "30; 3; 90; salary/30",
+      "meaning": "visible calculation cards",
+      "classification": "GOVERNED_RULE_SUMMARY",
+      "origin": "editorial HTML",
+      "consumer": "VISIBLE_RULE_CARD",
+      "severity": "HIGH",
+      "futureAction": "share governed source with engine"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "239",
+      "value": "30; 3; 90",
+      "meaning": "proportional rule explanation",
+      "classification": "GOVERNED_RULE_SUMMARY",
+      "origin": "editorial HTML",
+      "consumer": "RULE_SUMMARY",
+      "severity": "MEDIUM",
+      "futureAction": "declare dependency and review/derive"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "258-274",
+      "value": "30; 3; 90; Lei 12.506/2011",
+      "meaning": "visible FAQ answers",
+      "classification": "GOVERNED_RULE_SUMMARY",
+      "origin": "visible FAQ",
+      "consumer": "RULE_SUMMARY",
+      "severity": "HIGH",
+      "futureAction": "synchronize governed projection with FAQPage"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "23-68",
+      "value": "30; 3; 90; Lei 12.506/2011",
+      "meaning": "FAQPage answers",
+      "classification": "GOVERNED_RULE_SUMMARY",
+      "origin": "JSON-LD",
+      "consumer": "RULE_SUMMARY",
+      "severity": "HIGH",
+      "futureAction": "regenerate/review with visible FAQ"
+    },
+    {
+      "file": "calculadora-aviso-previo/index.html",
+      "lineBlock": "6-7;109",
+      "value": "2026",
+      "meaning": "time-sensitive SEO/year",
+      "classification": "UNKNOWN",
+      "origin": "page metadata/headings",
+      "consumer": "UPDATED_AT_METADATA",
+      "severity": "LOW",
+      "futureAction": "preserve now; include in annual editorial review"
+    }
+  ],
+  "examples": {
+    "ruleDependent": [],
+    "static": []
+  },
+  "tables": []
+}

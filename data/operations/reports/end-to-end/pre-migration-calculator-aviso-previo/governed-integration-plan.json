@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-governed-integration-plan",
+  "status": "GOVERNED_INTEGRATION_PLAN_READY",
+  "targetRule": "rule:aviso-previo",
+  "canonicalTarget": "data/rules/aviso-previo.json after legal approval and population",
+  "runtimeTarget": "assets/js/tabelas-trabalhistas.js consuming deterministic data/tabelas-trabalhistas.json projection",
+  "steps": [
+    "Confirm official law/CLT sources and effective interpretation through human legal review",
+    "Populate and version data/rules/aviso-previo.json with source, effective date, 30/3/90 parameters and discount scope",
+    "Extend transform-rules with deterministic aviso-previo projection and equivalence check",
+    "Regenerate data/tabelas-trabalhistas.json from the approved source without touching unrelated domains",
+    "Declare typed consumers for engine, visible cards, summaries, result explanation, FAQ/FAQPage, updated metadata, tests, shadow and report output",
+    "Bind visible rule elements to governed projections or mark them review-required",
+    "Run immutable 60-scenario baseline plus approved additive cases",
+    "Exercise fetch failure and central divergence before removing fallback",
+    "Publish only through controlled Registry/Publishing gates"
+  ],
+  "fallbackPolicy": {
+    "remainDuringMigration": [
+      "current local engine while parity and failure tests run",
+      "last-known-good generated data snapshot"
+    ],
+    "removeAfterAcceptance": [
+      "unversioned inline numeric duplication",
+      "runtime magic-number defaults"
+    ],
+    "neverRemoveWithoutReplacement": true
+  },
+  "staleDetection": {
+    "blocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
+    "method": "compare canonical rule version/hash against every declared visible consumer projection and validation fixture",
+    "publicationBlockedOnMismatch": true
+  },
+  "requiredTests": [
+    "60 shadow scenarios",
+    "additional decimal/large/enum cases",
+    "load failure",
+    "forced divergence",
+    "visible consumer snapshot/parity",
+    "responsive visual states",
+    "link/canonical/schema",
+    "adaptive report"
+  ],
+  "humanReview": [
+    "legal interpretation and effective date",
+    "pedido de demissão discount wording",
+    "FAQ/FAQPage legal summaries",
+    "any future rule-dependent example"
+  ],
+  "rollback": "Restore only target HTML/runtime projection/rule declaration/registry/publishing/report artifacts from the frozen hashes; retain current legacy path as last-known-good until acceptance"
+}

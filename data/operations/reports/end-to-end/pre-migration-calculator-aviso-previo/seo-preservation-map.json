@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-seo-preservation",
+  "status": "RESOLVED_WITH_GUARDS",
+  "seoContentChangePolicy": "PRESERVE_BY_DEFAULT",
+  "url": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+  "canonical": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+  "title": "Calculadora de Aviso Prévio 2026 | Calcule Trabalhador",
+  "description": "Calcule aviso prévio trabalhado ou indenizado com base no salário e tempo de empresa conforme a Lei 12.506/2011.",
+  "h1": "Calculadora de Aviso Prévio 2026",
+  "headings": [
+    "Calculadora de Aviso Prévio 2026",
+    "Dados para cálculo",
+    "Resultado",
+    "Como o cálculo é feito",
+    "O que é aviso prévio?",
+    "Como funciona o aviso prévio proporcional?",
+    "Aviso prévio trabalhado x indenizado",
+    "Pedido de demissão e desconto do aviso",
+    "Perguntas frequentes",
+    "Aviso legal / Disclaimer",
+    "Outras calculadoras trabalhistas"
+  ],
+  "schemas": {
+    "FAQPage": {
+      "present": true,
+      "validJson": true,
+      "visibleQuestionCount": 5,
+      "schemaQuestionCount": 5,
+      "questionParity": "EXACT",
+      "answerParity": "SEMANTIC_NOT_BYTE_IDENTICAL"
+    },
+    "BreadcrumbList": {
+      "present": false
+    },
+    "SoftwareApplication": {
+      "present": false
+    },
+    "other": []
+  },
+  "links": {
+    "internal": [
+      "/salario-liquido-clt/",
+      "/calculadora-rescisao-clt/",
+      "/calculadora-ferias-clt/",
+      "/calculadora-13-salario/",
+      "/calculadora-horas-extras-clt/",
+      "/calculadora-seguro-desemprego/",
+      "/saque-aniversario-fgts/",
+      "/ferramentas/"
+    ],
+    "internalResolved": 8,
+    "internalBroken": 0,
+    "external": []
+  },
+  "sources": {
+    "visibleOfficialLinks": [],
+    "declaredLegalReference": "Lei 12.506/2011"
+  },
+  "preservation": [
+    "URL",
+    "slug",
+    "canonical",
+    "title",
+    "description",
+    "H1",
+    "H2 sequence",
+    "FAQ questions and meaning",
+    "internal links",
+    "valid FAQPage"
+  ],
+  "guards": [
+    "Do not add or remove schema without explicit migration scope",
+    "Revalidate visible FAQ versus FAQPage after structural migration",
+    "Preserve metadata wording unless legal/editorial review authorizes change"
+  ]
+}

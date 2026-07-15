@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-preflight",
+  "status": "PASS",
+  "git": {
+    "branch": "main",
+    "head": "d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+    "originMain": "d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+    "ahead": 0,
+    "behind": 0,
+    "staging": "EMPTY",
+    "workingTreeInitial": "CLEAN",
+    "preexistingChanges": []
+  },
+  "constraints": {
+    "publicMutation": false,
+    "calculationChange": false,
+    "legalRuleChange": false,
+    "gitWrite": false,
+    "commit": false,
+    "push": false
+  }
+}

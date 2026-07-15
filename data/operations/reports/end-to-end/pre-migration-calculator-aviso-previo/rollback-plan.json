@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-14",
+  "mode": "READ_ONLY_BASELINE_FREEZE_MIGRATION_PLANNING",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "reportId": "pre-migration-aviso-previo-rollback",
+  "status": "ROLLBACK_READY",
+  "scope": "Only the future Aviso Prévio migration",
+  "baselineCommit": "d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+  "restoreUnits": [
+    {
+      "component": "HTML/CSS/inline JS",
+      "path": "calculadora-aviso-previo/index.html",
+      "baselineSha256": "8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360"
+    },
+    {
+      "component": "shared runtime target hunks",
+      "path": "assets/js/tabelas-trabalhistas.js",
+      "baselineSha256": "6a3aaa981c5ab6aad49896279acc4705a1a94ad1c31011a78adbc263a9e18fb7",
+      "method": "revert only Aviso Prévio hunks"
+    },
+    {
+      "component": "aggregate rule target",
+      "path": "data/tabelas-trabalhistas.json",
+      "baselineSha256": "c4a4ab30c7fa1c6b1c6d604e7725f70138b4b7df5a7792cf8068b5a1b7984817",
+      "method": "restore only avisoPrevio object"
+    },
+    {
+      "component": "canonical rule",
+      "path": "data/rules/aviso-previo.json",
+      "baselineSha256": "43b26a971f055e5561706016757867b190d097d445045f0c96b108ebceb1f958"
+    },
+    {
+      "component": "typed dependencies",
+      "path": "data/core/update/governed-rule-consumers.json",
+      "baselineSha256": "98884cf6b203a11f5df47c21fd1e3e61ed3f100be70fe87027ee6b03ff3b15ea",
+      "method": "remove only target declarations added by migration"
+    },
+    {
+      "component": "Registry/Publishing",
+      "path": "future target-specific entries",
+      "method": "remove or revert only calculator:calculadora-aviso-previo entries"
+    },
+    {
+      "component": "catalogs/maps/sitemap",
+      "path": "target-specific hunks only",
+      "method": "restore frozen target metadata without touching other assets"
+    },
+    {
+      "component": "migration reports",
+      "path": "future Aviso Prévio migration report directory",
+      "method": "retain audit evidence or mark rolled back; do not delete unrelated reports"
+    }
+  ],
+  "verification": [
+    "rerun 60 shadow scenarios",
+    "compare protected hashes",
+    "verify canonical/links/schema",
+    "verify public result source is legacy last-known-good"
+  ],
+  "prohibited": [
+    "repository-wide reset",
+    "global restore",
+    "clean",
+    "rollback of unrelated assets"
+  ]
+}
