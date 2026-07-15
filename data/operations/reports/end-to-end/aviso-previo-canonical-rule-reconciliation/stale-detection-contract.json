@@ -1,0 +1,1 @@
+{"version":"1.1.0","generatedAt":"2026-07-14","status":"PASS","states":["SYNCED","STALE_DERIVED_OUTPUT","STALE_FALLBACK","STALE_VISIBLE_CONSUMER","STALE_TEST_EXPECTATION","LEGACY_BEHAVIOR_STILL_ACTIVE","UNKNOWN_VERSION"],"initialState":"SYNCED","legacyBehaviorStillActiveTest":"PASS","publicationOnStale":"BLOCKED","automaticPublication":false}

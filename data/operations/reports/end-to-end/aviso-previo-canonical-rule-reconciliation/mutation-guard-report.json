@@ -1,0 +1,21 @@
+{
+  "version":"1.1.0",
+  "generatedAt":"2026-07-14",
+  "status":"PASS_ZERO_PUBLIC_MUTATION",
+  "baselineCommit":"f62d0ff4603a25ffa8edc03273b8f90b8e864b5c",
+  "targetCalculator":{"path":"calculadora-aviso-previo/index.html","beforeSha256":"8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360","afterSha256":"8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360","mutationCount":0},
+  "checksumGroups":[
+    {"group":"otherCalculators","count":21,"beforeSha256":"6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248","afterSha256":"6353f6acea11df8dacbbea7dd9e0a8c0c169026887c980b3639b764032987248","mutationCount":0},
+    {"group":"articles","count":63,"beforeSha256":"2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924","afterSha256":"2ffa07ad922210ba1ef9d204e285bd464dc1a0f65d0274d6717260592b6d1924","mutationCount":0},
+    {"group":"home","count":1,"beforeSha256":"7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa","afterSha256":"7cd49bc28e7d4fc12c23d8631b45de688d143299ff3628843dc1dc5153005faa","mutationCount":0},
+    {"group":"guides","count":1,"beforeSha256":"390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30","afterSha256":"390d674c939ad8727b0737d4a0fb764ee0f91bf0fea9d5fe60f77dabad2c6b30","mutationCount":0},
+    {"group":"catalogs","count":4,"beforeSha256":"ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b","afterSha256":"ef25911cf83e9f634d0e475f9f79d8cf419af3af91ce4b60f00c80d47df00c4b","mutationCount":0},
+    {"group":"sitemap","count":1,"beforeSha256":"392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779","afterSha256":"392efb502faccaee1975740f0c8712b5aa7a48d69e49012b3c089d49421bf779","mutationCount":0},
+    {"group":"publicRuntimes","count":3,"beforeSha256":"312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc","afterSha256":"312bbcf57b8675711682e344204cc89571f74a15ac60840e8c8dc97366b44dfc","mutationCount":0},
+    {"group":"publicRegistry","count":37,"beforeSha256":"72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91","afterSha256":"72a8246d8bf0a10d27cc2052db6c613a275644f40cb74f3a6cf1a1388c386a91","mutationCount":0},
+    {"group":"publicPublishing","count":62,"beforeSha256":"32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49","afterSha256":"32de443013552bfc430f352dbbf412f3044a309f27a39c943654b01310a60e49","mutationCount":0},
+    {"group":"otherLegalRules","count":10,"beforeSha256":"fa05de8ea37e791089814224d9db97f47ce419b4eb56d1d9cc8eae61fe6748d5","afterSha256":"fa05de8ea37e791089814224d9db97f47ce419b4eb56d1d9cc8eae61fe6748d5","mutationCount":0}
+  ],
+  "counters":{"TARGET_CALCULATOR_MUTATION_COUNT":0,"OTHER_CALCULATOR_MUTATION_COUNT":0,"PUBLIC_PAGE_MUTATION_COUNT":0,"PUBLIC_RUNTIME_MUTATION_COUNT":0,"CATALOG_MUTATION_COUNT":0,"SITEMAP_MUTATION_COUNT":0,"PUBLIC_REGISTRY_MUTATION_COUNT":0,"PUBLIC_PUBLISHING_MUTATION_COUNT":0,"OTHER_LEGAL_RULE_MUTATION_COUNT":0,"PUBLICATION_COUNT":0,"INDEXNOW_SEND_COUNT":0,"GIT_WRITE_COUNT":0,"AVISO_PREVIO_RULE_MUTATION_COUNT":1,"INTERNAL_GOVERNANCE_MUTATION_COUNT":6,"TEST_MUTATION_COUNT":4,"REPORT_MUTATION_COUNT":25},
+  "staging":"EMPTY"
+}

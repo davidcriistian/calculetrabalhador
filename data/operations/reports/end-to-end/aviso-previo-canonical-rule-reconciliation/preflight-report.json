@@ -1,0 +1,14 @@
+{
+  "version":"1.0.0",
+  "generatedAt":"2026-07-14",
+  "mode":"CONTROLLED_INTERNAL_RULE_RECONCILIATION",
+  "status":"PASS",
+  "branch":"main",
+  "head":"f62d0ff4603a25ffa8edc03273b8f90b8e864b5c",
+  "originMain":"d55901e55fcba0e6c46e9c186bda1385b153c5ae",
+  "ahead":1,
+  "behind":0,
+  "initialStaging":"EMPTY",
+  "initialWorkingTree":"CLEAN",
+  "gitWriteAuthorized":false
+}

@@ -1,83 +1,20 @@
 {
   "id": "aviso-previo-rules",
-  "version": "0.2.0",
-  "status": "homologation",
+  "version": "0.3.0",
+  "status": "compatibility-pointer",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "owner": "Calcule Trabalhador",
-  "source": "Programa 1 - Homologacao da Plataforma - Sprint 2",
+  "source": "Aviso Previo Canonical Rule Reconciliation",
   "domainId": "aviso-previo",
-  "schema": "/data/core/schemas/rule.schema.json",
+  "canonicalRule": "/data/rules/aviso-previo.json",
   "compatibilityTarget": "/data/rules/aviso-previo.json",
+  "projectionContract": "/data/core/update/aviso-previo-projection.contract.json",
   "runtimeStatus": "not-connected",
-  "items": [
-    {
-      "id": "calculo-aviso-previo-atual",
-      "status": "homologation",
-      "ruleType": "calculation-equivalence",
-      "description": "Representa exatamente a formula atual da Calculadora de Aviso Previo publicada.",
-      "inputs": [
-        { "id": "salary", "label": "Salario bruto mensal", "type": "number", "validation": "required; greater-than-zero" },
-        { "id": "startDate", "label": "Data de admissao", "type": "date", "validation": "required; valid-date" },
-        { "id": "endDate", "label": "Data de desligamento", "type": "date", "validation": "required; valid-date; greater-than-or-equal-startDate" },
-        { "id": "noticeType", "label": "Tipo de aviso", "type": "enum", "values": ["indenizado", "trabalhado", "desconto"], "validation": "required" }
-      ],
-      "outputs": [
-        "companyTime",
-        "fullYears",
-        "baseDays",
-        "additionalDays",
-        "totalDays",
-        "dailyValue",
-        "estimatedValue",
-        "note"
-      ],
-      "formulas": {
-        "fullYears": "full years between startDate and endDate, subtracting one when endDate is before the anniversary in the final year",
-        "companyTime": "calendar difference in years, months and days used only for display",
-        "baseDays": "30",
-        "rawAdditionalDays": "fullYears * 3",
-        "totalDays": "min(90, baseDays + rawAdditionalDays)",
-        "additionalDays": "totalDays - baseDays",
-        "dailyValue": "salary / 30",
-        "estimatedValue": "totalDays * dailyValue"
-      },
-      "typeBehavior": {
-        "indenizado": "estimatedValue is presented as verba estimada",
-        "trabalhado": "totalDays is presented as dias a cumprir; estimatedValue is only referencia salarial",
-        "desconto": "estimatedValue is presented as possivel desconto"
-      },
-      "validationBehavior": {
-        "invalidWhen": [
-          "salary is missing or <= 0",
-          "startDate is missing or invalid",
-          "endDate is missing or invalid",
-          "endDate is before startDate"
-        ],
-        "invalidResultStatus": "Dados incompletos",
-        "invalidMessage": "Informe um salario valido e datas coerentes para calcular o aviso previo."
-      },
-      "rounding": {
-        "calculation": "raw JavaScript Number arithmetic",
-        "displayCurrency": "Intl.NumberFormat pt-BR BRL",
-        "displayDays": "integer days"
-      },
-      "notApplied": [
-        "medias de parcelas variaveis",
-        "projecao do aviso em outras verbas",
-        "INSS",
-        "IRRF",
-        "FGTS",
-        "regras coletivas especificas",
-        "dispensa do cumprimento do aviso no pedido de demissao"
-      ],
-      "notes": [
-        "A pagina compara a formula local com o helper centralizado e mantem fallback legado se houver divergencia.",
-        "O helper centralizado recebe fullYears ja calculado pela pagina."
-      ]
-    }
-  ],
+  "items": [],
   "notes": [
-    "Rules de homologacao sem conexao operacional."
+    "The former duplicated homologation formula was removed from this domain index.",
+    "All internal calculations and projections must resolve from the canonical rule.",
+    "Public consumers remain on the frozen legacy path until a separate controlled migration is approved."
   ]
 }

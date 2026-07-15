@@ -23,6 +23,7 @@
     "governedPropagationContract": "/data/core/update/governed-propagation.contract.json",
     "typedConsumers": "/data/core/update/governed-rule-consumers.json",
     "calculatorSensitivity": "/data/core/update/calculator-legal-sensitivity.json"
+    ,"avisoPrevioProjectionContract": "/data/core/update/aviso-previo-projection.contract.json"
   },
   "upstreamEngines": {
     "legislation": "/data/core/legislation/index.json",

@@ -19,6 +19,7 @@ const REQUIRED_PRINCIPLES = Object.freeze([
   'PRESERVE_VALID_SCHEMA',
   'PRESERVE_STATIC_VALID_INFORMATION',
   'PRESERVE_CALCULATION_BEHAVIOR_UNTIL_BASELINE_PROVES_CHANGE',
+  'LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE',
   'MIGRATE_CALCULATOR_EXPERIENCE',
   'MIGRATE_RESULT_EXPERIENCE',
   'CONNECT_LEGAL_DEPENDENCIES_WHEN_REQUIRED',
@@ -109,6 +110,24 @@ function validateContracts(migration, propagation) {
   if (propagation.singleSourcePolicy.certificationBlocker !== 'GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE') {
     throw new Error('Single-source blocker is missing.');
   }
+  const legalPolicy = migration.legalCorrectionPolicy || {};
+  if (legalPolicy.principle !== 'LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE'
+    || legalPolicy.historicalBaselineIsLegalAuthority !== false
+    || legalPolicy.confirmedLegalCorrectionMayDifferFromLegacy !== true
+    || legalPolicy.approvedDifferenceClassification !== 'APPROVED_INTENTIONAL_LEGAL_CORRECTION'
+    || legalPolicy.publicationBeforeValidation !== 'BLOCKED'
+    || legalPolicy.rollbackMayRepublishKnownLegalError !== false) {
+    throw new Error('Conservative legal correction policy is incomplete.');
+  }
+  assertSetContains(legalPolicy.requirements, [
+    'OFFICIAL_SOURCE',
+    'EXPLICIT_LEGAL_REASON',
+    'AUDITABLE_DIFF',
+    'HUMAN_APPROVAL_WHEN_REQUIRED',
+    'SEPARATE_LEGACY_AND_RECONCILED_BASELINES',
+    'NO_SILENT_EXPECTATION_REWRITE',
+    'NO_UNEXPLAINED_DIVERGENCE'
+  ], 'Legal correction requirements');
 }
 
 function validateSensitivityRegistry(registry) {

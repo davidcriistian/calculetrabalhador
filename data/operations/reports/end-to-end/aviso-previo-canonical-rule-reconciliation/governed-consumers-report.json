@@ -1,0 +1,13 @@
+{
+  "version":"1.0.0",
+  "generatedAt":"2026-07-14",
+  "status":"PASS",
+  "registry":"data/core/update/governed-rule-consumers.json",
+  "assetId":"calculator:calculadora-aviso-previo",
+  "declarationCount":8,
+  "types":["CALCULATION_ENGINE","RESULT_EXPLANATION","RULE_SUMMARY","RULE_DEPENDENT_EXAMPLE","UPDATED_AT_METADATA","VALIDATION_TEST","SHADOW_TEST","REPORT_OUTPUT"],
+  "states":{"GOVERNED_CONFIRMED":3,"LEGACY_DECLARED_PENDING_MIGRATION":4,"NOT_APPLICABLE":1,"REVIEW_REQUIRED":0},
+  "publicConsumersRemainLegacy":true,
+  "requiredFields":["consumerId","assetId","type","sourceRuleId","status","currentMode","migrationState","stalePolicy","validationRequirements"],
+  "rescisaoLegacyDeclarationPreserved":true
+}

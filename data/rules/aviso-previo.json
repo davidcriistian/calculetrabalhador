@@ -1,7 +1,237 @@
 {
-  "version": 1,
-  "status": "draft",
-  "source": null,
-  "year": null,
-  "data": {}
+  "ruleId": "aviso-previo",
+  "title": "Aviso previo proporcional ao tempo de servico",
+  "status": "candidate",
+  "version": "1.0.0-rc.2",
+  "effectiveFrom": "2011-10-13",
+  "jurisdiction": {
+    "country": "BR",
+    "scope": "relacoes de emprego regidas pela CLT",
+    "locale": "pt-BR",
+    "timezone": "America/Sao_Paulo"
+  },
+  "officialSources": [
+    {
+      "sourceId": "lei-12506-2011",
+      "authority": "Presidencia da Republica - Casa Civil",
+      "type": "federal-law",
+      "title": "Lei n. 12.506, de 11 de outubro de 2011",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12506.htm",
+      "applicableProvision": "art. 1 e paragrafo unico",
+      "verifiedAt": "2026-07-14",
+      "supports": ["30 dias iniciais", "3 dias adicionais por ano completo", "60 dias adicionais e 90 dias totais como limites"]
+    },
+    {
+      "sourceId": "clt-artigos-487-488",
+      "authority": "Presidencia da Republica - Casa Civil",
+      "type": "federal-consolidated-law",
+      "title": "Consolidacao das Leis do Trabalho",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "applicableProvision": "arts. 487 e 488",
+      "verifiedAt": "2026-07-14",
+      "supports": ["aviso reciproco de 30 dias", "desconto por falta de aviso do empregado", "reducao de jornada no aviso dado pelo empregador"]
+    },
+    {
+      "sourceId": "tst-e-rr-1964-73-2013-5-09-0009",
+      "authority": "Tribunal Superior do Trabalho",
+      "type": "official-case-guidance",
+      "title": "TST decide que aviso previo proporcional e obrigacao limitada ao empregador",
+      "url": "https://www.tst.jus.br/noticias/-/asset_publisher/89Dk/content/id/24468255",
+      "applicableProvision": "SDI-1, E-RR-1964-73.2013.5.09.0009",
+      "verifiedAt": "2026-07-14",
+      "supports": ["proporcionalidade como direito do empregado e obrigacao do empregador", "obrigacao do empregado limitada a 30 dias", "dias proporcionais excedentes nao podem ser exigidos como trabalho"]
+    },
+    {
+      "sourceId": "mte-perguntas-frequentes-aviso-previo",
+      "authority": "Ministerio do Trabalho e Emprego",
+      "type": "official-administrative-guidance",
+      "title": "Perguntas Frequentes - Aviso previo",
+      "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/proteja/duvidas-frequentes",
+      "applicableProvision": "tabela de anos completos e dias",
+      "verifiedAt": "2026-07-14",
+      "supports": ["0 anos = 30 dias", "1 ano = 33 dias", "20 anos = 90 dias"]
+    },
+    {
+      "sourceId": "esocial-manual-empregador-domestico-aviso-previo",
+      "authority": "eSocial - Governo Federal",
+      "type": "official-operational-guidance",
+      "title": "Manual do Empregador Domestico - Aviso previo",
+      "url": "https://www.gov.br/esocial/pt-br/empregador-domestico/manual-do-empregador-domestico",
+      "applicableProvision": "capitulo Aviso Previo",
+      "verifiedAt": "2026-07-14",
+      "supports": ["proporcionalidade quando o empregador concede o aviso", "desconto no pedido de demissao limitado a 30 dias", "aviso misto com dias trabalhados e indenizados"]
+    },
+    {
+      "sourceId": "esocial-manual-web-geral-aviso-misto",
+      "authority": "eSocial - Governo Federal",
+      "type": "official-operational-guidance",
+      "title": "Manual WEB GERAL - Aviso previo misto",
+      "url": "https://www.gov.br/esocial/pt-br/empresas/manual-web-geral/manual-web-geral/",
+      "applicableProvision": "evento S-2299, aviso previo misto",
+      "verifiedAt": "2026-07-14",
+      "supports": ["exemplo de 42 dias de direito", "30 dias trabalhados", "12 dias proporcionais indenizados"]
+    }
+  ],
+  "parameters": {
+    "baseDays": 30,
+    "additionalDaysPerFullYear": 3,
+    "maximumAdditionalDays": 60,
+    "maximumTotalDays": 90,
+    "maximumWorkedDays": 30,
+    "salaryDivisorDays": 30,
+    "employeeResignationNoticeDays": 30,
+    "employeeDiscountLimitDays": 30,
+    "comparisonTolerance": 0.01
+  },
+  "conditions": {
+    "fullYearTreatment": "count completed calendar anniversaries; fractions do not add days",
+    "employer_termination": {
+      "appliesWhen": "dismissal without cause initiated by employer",
+      "totalEntitlement": "30 plus 3 days per completed year, capped at 90",
+      "proportional_entitlement": "employee right and employer obligation"
+    },
+    "employee_resignation": {
+      "appliesWhen": "termination initiated by employee",
+      "noticeObligationDays": 30,
+      "proportionalityAgainstEmployeeAllowed": false
+    },
+    "worked_notice": {
+      "maximumWorkedDays": 30,
+      "proportionalExcessHandling": "indemnified, not automatically required as additional work"
+    },
+    "indemnified_notice": {
+      "fullyIndemnified": "all employer-termination entitlement days are indemnified",
+      "mixedNotice": "entitlement above the worked period is indemnified"
+    },
+    "employee_discount_limit": {
+      "maximumDays": 30,
+      "appliesWhen": "employee resignation notice is not fulfilled and employer does not waive it"
+    },
+    "collectiveRules": "not modeled; a collective rule may require case-specific review"
+  },
+  "formulas": {
+    "fullYears": "max(calendar year difference adjusted when endDate precedes the anniversary, 0)",
+    "employerTerminationTotalDays": "min(maximumTotalDays, baseDays + fullYears * additionalDaysPerFullYear)",
+    "employerTerminationProportionalDays": "employerTerminationTotalDays - baseDays",
+    "fullyIndemnifiedWorkedDays": "0",
+    "fullyIndemnifiedDays": "employerTerminationTotalDays",
+    "workedNoticeDays": "min(maximumWorkedDays, employerTerminationTotalDays)",
+    "workedNoticeIndemnifiedDays": "employerTerminationTotalDays - workedNoticeDays",
+    "employeeResignationTotalDays": "employeeResignationNoticeDays",
+    "employeeResignationDiscountDays": "min(employeeDiscountLimitDays, employeeResignationNoticeDays)",
+    "dailyValue": "salary / salaryDivisorDays",
+    "estimatedValue": "monetaryDays * dailyValue"
+  },
+  "noticeTypeContracts": {
+    "indenizado": {
+      "legalScenario": "employer_termination",
+      "totalDays": "employerTerminationTotalDays",
+      "workedDays": 0,
+      "indemnifiedDays": "employerTerminationTotalDays",
+      "discountDays": 0,
+      "monetaryDays": "employerTerminationTotalDays"
+    },
+    "trabalhado": {
+      "legalScenario": "employer_termination",
+      "totalDays": "employerTerminationTotalDays",
+      "workedDays": "min(30, employerTerminationTotalDays)",
+      "indemnifiedDays": "employerTerminationTotalDays - workedDays",
+      "discountDays": 0,
+      "monetaryDays": "employerTerminationTotalDays"
+    },
+    "desconto": {
+      "legalScenario": "employee_resignation",
+      "totalDays": 30,
+      "workedDays": 0,
+      "indemnifiedDays": 0,
+      "discountDays": 30,
+      "proportionalEntitlementDays": 0,
+      "monetaryDays": 30
+    }
+  },
+  "rounding": {
+    "calculation": "raw JavaScript Number arithmetic without intermediate cent rounding",
+    "currencyDisplay": "Intl.NumberFormat pt-BR BRL",
+    "daysDisplay": "integer",
+    "equivalenceTolerance": 0.01
+  },
+  "limits": {
+    "minimumEmployerTerminationDays": 30,
+    "maximumEmployerTerminationDays": 90,
+    "maximumWorkedDays": 30,
+    "maximumEmployeeResignationDiscountDays": 30,
+    "maximumFullYearsAffectingEntitlement": 20
+  },
+  "validation": {
+    "requiredInputs": ["salary", "startDate", "endDate", "noticeType"],
+    "allowedNoticeTypes": ["indenizado", "trabalhado", "desconto"],
+    "invalidWhen": ["salary is missing or not greater than zero", "startDate is missing or invalid", "endDate is missing or invalid", "endDate precedes startDate"],
+    "invalidResultStatus": "Dados incompletos",
+    "invalidMessage": "Informe um salario valido e datas coerentes para calcular o aviso previo."
+  },
+  "presentation": {
+    "validResultStatus": "Cálculo realizado",
+    "invalidResultStatus": "Dados incompletos",
+    "invalidBadge": "simulação",
+    "invalidMessage": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+    "types": {
+      "indenizado": {"badge":"verba estimada","estimatedLabel":"Verba estimada","messageTemplate":"Aviso prévio indenizado: o valor estimado de {estimatedValue} pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis."},
+      "trabalhadoWithoutExcess": {"badge":"dias a cumprir","estimatedLabel":"Referência salarial","messageTemplate":"Aviso prévio trabalhado: a estimativa indica {totalDays} dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional."},
+      "trabalhadoWithExcess": {"badge":"aviso misto","estimatedLabel":"Referência total do aviso","messageTemplate":"Aviso prévio misto: {workedDays} dias correspondem ao período trabalhado e {indemnifiedDays} dias à parcela proporcional indenizada."},
+      "desconto": {"badge":"possível desconto","estimatedLabel":"Possível desconto","messageTemplate":"Pedido de demissão com desconto: o valor estimado de {estimatedValue} deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento."}
+    }
+  },
+  "examples": [],
+  "historicalEvidence": {
+    "classification": "LEGACY_BEHAVIOR_BASELINE",
+    "path": "/data/operations/reports/end-to-end/pre-migration-calculator-aviso-previo/shadow-baseline-60-scenarios.json",
+    "authority": "historical implementation behavior only",
+    "normativeAuthority": false
+  },
+  "projectionPayload": {
+    "ruleId": "aviso-previo",
+    "ruleVersion": "1.0.0-rc.2",
+    "baseDays": 30,
+    "additionalDaysPerFullYear": 3,
+    "maximumAdditionalDays": 60,
+    "maximumTotalDays": 90,
+    "maximumWorkedDays": 30,
+    "salaryDivisorDays": 30,
+    "employeeResignationNoticeDays": 30,
+    "employeeDiscountLimitDays": 30,
+    "employerTerminationProportionality": true,
+    "employeeResignationProportionality": false,
+    "proportionalExcessIsIndemnified": true
+  },
+  "consumerContracts": {
+    "registry": "/data/core/update/governed-rule-consumers.json",
+    "projection": "/data/core/update/aviso-previo-projection.contract.json",
+    "validator": "/scripts/validate-aviso-previo-canonical-rule.js",
+    "fixtures": "/data/pos/validation/aviso-previo-canonical-rule-fixtures.json",
+    "legallyReconciledBaseline": "/data/operations/reports/end-to-end/aviso-previo-canonical-rule-reconciliation/legally-reconciled-baseline.json",
+    "publicConnectionAuthorized": false
+  },
+  "updateSensitivity": {
+    "class": "LEGAL_UPDATE_REQUIRED",
+    "staleOn": ["version change", "parameter change", "official source change", "applicability change", "rounding change", "validation change"],
+    "publicationAfterChange": "controlled-separate-step"
+  },
+  "legalAssessment": {
+    "status": "RESOLVED_APPROVED_INTENTIONAL_LEGAL_CORRECTION",
+    "principle": "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+    "humanDecisionReceivedAt": "2026-07-14",
+    "mathematicalCorrections": {"count":9,"noticeType":"desconto","resolution":"cap total and discount at 30 days"},
+    "allocationAndPresentationCorrections": {"count":9,"noticeType":"trabalhado","resolution":"work at most 30 days and indemnify proportional excess"},
+    "unresolvedMaterialSubcases": [],
+    "publicBehaviorStillLegacy": true
+  },
+  "lastReviewedAt": "2026-07-14",
+  "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+  "certification": {
+    "status": "INTERNAL_CANDIDATE_VALIDATED",
+    "legalCorrectionApproved": true,
+    "noUnexplainedDivergenceRequired": true,
+    "publicMigrationAuthorized": false,
+    "productionStatus": false
+  }
 }

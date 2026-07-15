@@ -1,0 +1,113 @@
+{
+  "id": "aviso-previo-governed-projection-contract",
+  "version": "1.1.0",
+  "status": "internal-candidate-validated",
+  "runtimeStatus": "not-connected",
+  "createdAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "sourceRuleId": "aviso-previo",
+  "sourcePath": "data/rules/aviso-previo.json",
+  "sourceRuleVersion": "1.0.0-rc.2",
+  "fingerprintAlgorithm": "sha256-canonical-json",
+  "sourceProjectionFingerprint": "d64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a",
+  "legalCorrectionPolicy": "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+  "flow": ["CANONICAL_RULE", "CALCULATION_PROJECTION", "CALCULATION_MEMORY", "VISIBLE_RULE_PROJECTION", "TEST_PROJECTION", "REPORT_PROJECTION"],
+  "projectionPayload": {
+    "ruleId": "aviso-previo",
+    "ruleVersion": "1.0.0-rc.2",
+    "baseDays": 30,
+    "additionalDaysPerFullYear": 3,
+    "maximumAdditionalDays": 60,
+    "maximumTotalDays": 90,
+    "maximumWorkedDays": 30,
+    "salaryDivisorDays": 30,
+    "employeeResignationNoticeDays": 30,
+    "employeeDiscountLimitDays": 30,
+    "employerTerminationProportionality": true,
+    "employeeResignationProportionality": false,
+    "proportionalExcessIsIndemnified": true
+  },
+  "projections": {
+    "CALCULATION_PROJECTION": {
+      "status": "GOVERNED_CONFIRMED_INTERNAL_ONLY",
+      "target": "future deterministic avisoPrevio object in data/tabelas-trabalhistas.json",
+      "branches": {
+        "indenizado": "employer entitlement fully indemnified",
+        "trabalhado": "maximum 30 worked days plus indemnified proportional excess",
+        "desconto": "employee resignation obligation and discount capped at 30 days"
+      },
+      "memoryProjection": {
+        "fields": ["fullYears", "baseDays", "proportionalEntitlementDays", "totalDays", "workedDays", "indemnifiedDays", "discountDays", "dailyValue", "estimatedValue"],
+        "source": "the same corrected calculation projection",
+        "independentHardcodesAllowed": false
+      },
+      "publicConnectionAuthorized": false
+    },
+    "VISIBLE_RULE_PROJECTION": {
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "target": "calculation cards, rule summary, FAQ, FAQPage and result explanation",
+      "strategy": "derive scenario-specific days and legal wording from the corrected projection",
+      "legacyBehaviorAfterMigration": "LEGACY_BEHAVIOR_STILL_ACTIVE",
+      "publicConnectionAuthorized": false
+    },
+    "TEST_PROJECTION": {
+      "status": "GOVERNED_CONFIRMED",
+      "legacyBaseline": "LEGACY_BEHAVIOR_REGRESSION",
+      "correctedBaseline": "LEGALLY_RECONCILED_EXPECTATION",
+      "strategy": "record legacy 60/60 separately and require 100% corrected expectations"
+    },
+    "REPORT_PROJECTION": {
+      "status": "GOVERNED_CONFIRMED",
+      "target": "internal reconciliation reports and legal correction matrix",
+      "strategy": "record source version, fingerprint, human approval and every intentional difference"
+    },
+    "UPDATED_AT_METADATA": {
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "strategy": "future controlled projection from lastReviewedAt after public migration approval"
+    }
+  },
+  "fallback": {
+    "decision": "REPLACE_WITH_DERIVED_FALLBACK",
+    "currentPublicFallbackStatus": "STALE_LEGACY_FALLBACK",
+    "currentPublicFallbackUse": "temporarily preserved only because public migration is outside this phase",
+    "legacyFallbackAllowedAfterMigration": false,
+    "futureFallback": {
+      "origin": "data/rules/aviso-previo.json#projectionPayload",
+      "ruleVersion": "1.0.0-rc.2",
+      "fingerprint": "d64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a",
+      "equivalenceRequired": "100% LEGALLY_RECONCILED_EXPECTATION",
+      "useWhen": "canonical source loading fails and the corrected last-known-good fingerprint is registered",
+      "blockWhen": ["fingerprint mismatch", "unknown version", "invalid rule", "legacy behavior detected", "reconciled baseline failure"]
+    },
+    "silentFallbackAllowed": false,
+    "publicMutationThisPhase": false
+  },
+  "staleDetection": {
+    "states": ["SYNCED", "STALE_DERIVED_OUTPUT", "STALE_FALLBACK", "STALE_VISIBLE_CONSUMER", "STALE_TEST_EXPECTATION", "LEGACY_BEHAVIOR_STILL_ACTIVE", "UNKNOWN_VERSION"],
+    "checks": {
+      "canonicalChangedProjectionNotRegenerated": "STALE_DERIVED_OUTPUT",
+      "fallbackFingerprintMismatch": "STALE_FALLBACK",
+      "visibleConsumerOldVersion": "STALE_VISIBLE_CONSUMER",
+      "fixtureVersionMismatch": "STALE_TEST_EXPECTATION",
+      "migratedConsumerStillUsesProportionalDiscountOrExcessWorkedDays": "LEGACY_BEHAVIOR_STILL_ACTIVE",
+      "unregisteredVersion": "UNKNOWN_VERSION",
+      "allVersionsFingerprintsAndLegalBranchesMatch": "SYNCED"
+    },
+    "publicationOnStale": "BLOCKED",
+    "automaticPublication": false
+  },
+  "legalGate": {
+    "status": "LEGAL_REVIEW_RESOLVED",
+    "humanDecision": "CORRECT_CONFIRMED_LEGAL_DIVERGENCE",
+    "unresolvedMaterialSubcases": [],
+    "publicMigrationAuthorized": false,
+    "controlledMigrationReadiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION"
+  },
+  "boundaries": {
+    "changesPublicCalculator": false,
+    "changesPublicRuntime": false,
+    "changesPublicContent": false,
+    "publishes": false,
+    "sendsIndexNow": false
+  }
+}

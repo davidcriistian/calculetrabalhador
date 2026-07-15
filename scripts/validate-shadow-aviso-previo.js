@@ -1,133 +1,49 @@
 const fs = require('fs');
 const path = require('path');
+const {legacyCalculate} = require('./validate-aviso-previo-canonical-rule');
 
 const root = path.resolve(__dirname, '..');
-const comparisonPath = path.join(root, 'data/core/shadow/comparisons/aviso-previo/index.json');
-const rulesPath = path.join(root, 'data/core/domains/aviso-previo/rules/index.json');
+const baselinePath = path.join(root, 'data/operations/reports/end-to-end/pre-migration-calculator-aviso-previo/shadow-baseline-60-scenarios.json');
+const rulePath = path.join(root, 'data/rules/aviso-previo.json');
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-function parseDate(value) {
-  if (!value) return null;
-  const date = new Date(`${value}T00:00:00`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
-
-function fullYearsBetween(start, end) {
-  let years = end.getFullYear() - start.getFullYear();
-  const beforeAnniversary = end.getMonth() < start.getMonth() || (end.getMonth() === start.getMonth() && end.getDate() < start.getDate());
-  if (beforeAnniversary) years -= 1;
-  return Math.max(years, 0);
-}
-
-function legacyCalculate(input) {
-  const salary = Number(input.salary);
-  const startDate = parseDate(input.startDate);
-  const endDate = parseDate(input.endDate);
-
-  if (!salary || salary <= 0 || !startDate || !endDate || endDate < startDate) {
-    return { valid: false, resultStatus: 'Dados incompletos' };
-  }
-
-  const fullYears = fullYearsBetween(startDate, endDate);
-  const baseDays = 30;
-  const totalDays = Math.min(90, baseDays + fullYears * 3);
-  const dailyValue = salary / 30;
-  const estimatedValue = totalDays * dailyValue;
-
-  return {
-    valid: true,
-    fullYears,
-    totalDays,
-    dailyValue,
-    estimatedValue
-  };
-}
-
-function coreCalculate(input, rules) {
-  const rule = rules.items.find((item) => item.id === 'calculo-aviso-previo-atual');
-  if (!rule) {
-    throw new Error('Core rule calculo-aviso-previo-atual not found');
-  }
-
-  return legacyCalculate(input);
-}
-
-function numericDiff(legacy, core) {
-  return {
-    fullYears: Math.abs(legacy.fullYears - core.fullYears),
-    totalDays: Math.abs(legacy.totalDays - core.totalDays),
-    dailyValue: Math.abs(legacy.dailyValue - core.dailyValue),
-    estimatedValue: Math.abs(legacy.estimatedValue - core.estimatedValue)
-  };
-}
-
 function main() {
-  const comparisons = readJson(comparisonPath);
-  const rules = readJson(rulesPath);
-  const tolerance = Number(comparisons.tolerance);
-  const started = process.hrtime.bigint();
+  const baseline = readJson(baselinePath);
+  const rule = readJson(rulePath);
   const failures = [];
+  const started = process.hrtime.bigint();
 
-  if (comparisons.records.length !== comparisons.summary.totalScenarios) {
-    failures.push(`record count ${comparisons.records.length} does not match summary ${comparisons.summary.totalScenarios}`);
-  }
-
-  for (const record of comparisons.records) {
-    let legacy;
-    let core;
-
-    try {
-      legacy = legacyCalculate(record.input);
-      core = coreCalculate(record.input, rules);
-    } catch (error) {
-      failures.push(`${record.id}: core error: ${error.message}`);
-      continue;
-    }
-
-    if (legacy.valid !== core.valid) {
-      failures.push(`${record.id}: validity mismatch between legacy and core`);
-      continue;
-    }
-
-    if (!legacy.valid) {
-      if (record.status !== 'equal' || record.resultadoRuntime.resultStatus !== legacy.resultStatus || record.resultadoCore.resultStatus !== core.resultStatus) {
-        failures.push(`${record.id}: invalid result status mismatch`);
-      }
-      continue;
-    }
-
-    const diff = numericDiff(legacy, core);
-    const equal = diff.fullYears <= tolerance && diff.totalDays <= tolerance && diff.dailyValue <= tolerance && diff.estimatedValue <= tolerance;
-    if (!equal) {
-      failures.push(`${record.id}: divergence ${JSON.stringify(diff)}`);
-      continue;
-    }
-
-    for (const field of ['fullYears', 'totalDays', 'dailyValue', 'estimatedValue']) {
-      if (Math.abs(record.resultadoRuntime[field] - legacy[field]) > tolerance || Math.abs(record.resultadoCore[field] - core[field]) > tolerance) {
-        failures.push(`${record.id}: stored ${field} does not match recalculated value`);
-      }
-    }
+  if (baseline.scenarios.length !== 60) failures.push(`expected 60 historical scenarios, received ${baseline.scenarios.length}`);
+  for (const scenario of baseline.scenarios) {
+    const actual = legacyCalculate(scenario.inputs, rule);
+    const expected = {
+      resultCurrent: scenario.resultCurrent,
+      components: scenario.components,
+      rounding: scenario.rounding,
+      message: scenario.message,
+      outputFinal: scenario.outputFinal
+    };
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) failures.push(`${scenario.scenarioId}: historical expectation changed`);
   }
 
   const elapsedMs = Number(process.hrtime.bigint() - started) / 1000000;
-
-  if (failures.length > 0) {
+  if (failures.length) {
     console.error('Shadow comparison Aviso Previo: FAIL');
     console.error(failures.join('\n'));
     process.exit(1);
   }
 
   console.log('Shadow comparison Aviso Previo: PASS');
-  console.log(`Calculator: ${comparisons.calculadora}`);
-  console.log(`Scenarios: ${comparisons.records.length}`);
-  console.log(`Equal: ${comparisons.records.length}`);
-  console.log('Divergences: 0');
+  console.log('Classification: LEGACY_BEHAVIOR_BASELINE');
+  console.log('Scenarios: 60');
+  console.log('Recorded: 60');
+  console.log('Historical expectation mutations: 0');
   console.log(`ElapsedMs: ${elapsedMs.toFixed(3)}`);
   console.log('User-facing result source: legacy-runtime');
+  console.log('Normative legal authority: false');
 }
 
 main();

@@ -17,6 +17,7 @@
     "PRESERVE_VALID_SCHEMA",
     "PRESERVE_STATIC_VALID_INFORMATION",
     "PRESERVE_CALCULATION_BEHAVIOR_UNTIL_BASELINE_PROVES_CHANGE",
+    "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
     "MIGRATE_CALCULATOR_EXPERIENCE",
     "MIGRATE_RESULT_EXPERIENCE",
     "CONNECT_LEGAL_DEPENDENCIES_WHEN_REQUIRED",
@@ -147,6 +148,23 @@
       "current-formula",
       "visible-result"
     ]
+  },
+  "legalCorrectionPolicy": {
+    "principle": "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+    "historicalBaselineIsLegalAuthority": false,
+    "confirmedLegalCorrectionMayDifferFromLegacy": true,
+    "requirements": [
+      "OFFICIAL_SOURCE",
+      "EXPLICIT_LEGAL_REASON",
+      "AUDITABLE_DIFF",
+      "HUMAN_APPROVAL_WHEN_REQUIRED",
+      "SEPARATE_LEGACY_AND_RECONCILED_BASELINES",
+      "NO_SILENT_EXPECTATION_REWRITE",
+      "NO_UNEXPLAINED_DIVERGENCE"
+    ],
+    "approvedDifferenceClassification": "APPROVED_INTENTIONAL_LEGAL_CORRECTION",
+    "publicationBeforeValidation": "BLOCKED",
+    "rollbackMayRepublishKnownLegalError": false
   },
   "migrationFamilies": {
     "LEGACY_CALCULATOR_FAMILY_V1": {

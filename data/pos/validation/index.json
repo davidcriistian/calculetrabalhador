@@ -44,6 +44,8 @@
     ,"nucleusHomeContract": "/data/blueprints/nucleus/home-distribution.contract.json"
     ,"nucleusHomeValidator": "/scripts/validate-nucleus-home-distribution.js"
     ,"nucleusHomeFixtures": "/data/pos/validation/nucleus-home-distribution-fixtures.json"
+    ,"avisoPrevioCanonicalRuleValidator": "/scripts/validate-aviso-previo-canonical-rule.js"
+    ,"avisoPrevioCanonicalRuleFixtures": "/data/pos/validation/aviso-previo-canonical-rule-fixtures.json"
   },
   "operationalBoundaries": {
     "executesValidations": false,
