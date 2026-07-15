@@ -1,0 +1,14 @@
+{
+  "status": "CALCULATOR_EXPERIENCE_PLAN_APPROVED",
+  "formComplexityClass": "GUIDED_MULTI_GROUP",
+  "formJustification": "Four essential inputs split into contract data and legal modality.",
+  "resultExperienceClass": "DECISION_REPORT",
+  "resultJustification": "A labor-law scenario changes allocation, discount and interpretation.",
+  "calculationMemoryLevel": "AUDITABLE_MEMORY",
+  "brandTheme": "INSTITUTIONAL_BLUE",
+  "updatedAt": "2026-07-14",
+  "editorialWords": 848,
+  "recommendationSlot": {"id":"CANONICAL_RESULT_RECOMMENDATION_SLOT","state":"NOT_CONFIGURED","rendering":"HIDDEN"},
+  "adaptiveReportDeclarations": ["REPORT_INPUT_FIELDS", "REPORT_PRIMARY_RESULT", "REPORT_SECONDARY_RESULTS", "REPORT_MEMORY_SECTIONS", "REPORT_INTERPRETATION", "REPORT_LIMITATIONS", "REPORT_OPTIONAL_SECTIONS"],
+  "actions": {"COPY_RESULT":"short scenario summary","PRINT_RESULT":"isolated A4 HTML report","DOWNLOAD_REPORT":"structured selectable PDF"}
+}

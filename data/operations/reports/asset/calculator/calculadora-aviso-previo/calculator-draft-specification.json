@@ -1,0 +1,16 @@
+{
+  "id": "calculadora-aviso-previo",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "assetType": "calculator",
+  "version": "1.0.0",
+  "status": "published-local-migration-not-deployed",
+  "compatibilityClass": "MIGRATED_ASSET",
+  "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+  "rule": "aviso-previo@1.0.0-rc.2",
+  "formComplexityClass": "GUIDED_MULTI_GROUP",
+  "resultExperienceClass": "DECISION_REPORT",
+  "calculationMemoryLevel": "AUDITABLE_MEMORY",
+  "recommendationState": "NOT_CONFIGURED",
+  "visualValidationStatus": "VISUAL_VALIDATION_PASSED"
+}

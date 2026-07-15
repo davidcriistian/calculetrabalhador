@@ -130,8 +130,8 @@
         "aviso-previo"
       ],
       "clusterSize": 0,
-      "reviewFrequency": "annual",
-      "risk": "medium"
+      "reviewFrequency": "on-rule-change",
+      "risk": "high"
     },
     {
       "id": "calculadora-adicional-noturno",

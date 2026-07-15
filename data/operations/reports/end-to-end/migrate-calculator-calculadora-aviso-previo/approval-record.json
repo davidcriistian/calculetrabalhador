@@ -1,0 +1,9 @@
+{
+  "status": "APPROVED_FOR_LOCAL_CONTROLLED_MIGRATION",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-14",
+  "approvedScope": "Migrate calculator:calculadora-aviso-previo using aviso-previo@1.0.0-rc.2 and deliver-asset-end-to-end.",
+  "approvedUrl": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+  "excludedScope": ["commit", "push", "deploy", "publication", "real IndexNow"],
+  "legalCorrectionApproval": "inherited from canonical reconciliation: 18 intentional corrections"
+}

@@ -233,6 +233,18 @@
                              "reference":  "/data/publishing/registry/calculator-calculadora-ferias-pj-published.json"
                          },
                          {
+                             "id":  "publishing-calculator-calculadora-aviso-previo",
+                             "assetId":  "calculator:calculadora-aviso-previo",
+                             "assetType":  "calculator",
+                             "status":  "published",
+                             "approvalStatus":  "approved-explicit-controlled-migration",
+                             "relationshipStatus":  "existing-cluster-preserved",
+                             "publishingStatus":  "published-local-migration-not-deployed",
+                             "owner":  "core-platform",
+                             "version":  "1.0.0",
+                             "reference":  "/data/publishing/registry/calculator-calculadora-aviso-previo-published.json"
+                         },
+                         {
                              "id":  "publishing-draft-guide-guide-pj",
                              "assetId":  "guide:guide-pj",
                              "assetType":  "guide",

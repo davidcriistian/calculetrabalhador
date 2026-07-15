@@ -1,0 +1,13 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "status": "SUCCESS_CONTROLLED_EXECUTION_LOCAL_NOT_DEPLOYED",
+  "outcome": "MIGRATED_AVISO_PREVIO_VALIDATED",
+  "rule": "aviso-previo@1.0.0-rc.2",
+  "result": {"reconciledExpectations":"60/60","intentionalCorrections":18,"unexplainedDivergences":0,"legacyFallbackActive":false,"visualValidation":"PASSED","seoPreserved":true,"usefulEditorialHeritagePreserved":true,"publicGovernanceMetadataVisible":false,"fileProtocolRuntime":"GOVERNED_DERIVED_FALLBACK_PASS","httpLocalRuntime":"GOVERNED_AGGREGATE_JSON_PASS"},
+  "integrations": ["canonical projection", "shared governed helper", "derived fallback", "stale detection", "typed consumers", "metadata", "catalog", "Registry", "Publishing", "sitemap plan"],
+  "evidence": ["validation-results.json", "visual-validation-report.json", "corrective-refinement-report.json", "governed-integration-report.json", "migration-heritage-snapshot.json", "mutation-guard-report.json", "rollback-plan.json"],
+  "externalActions": {"commit":false,"push":false,"deploy":false,"publication":false,"indexNowSend":false},
+  "finalReadiness": "READY_FOR_REVIEW_NO_COMMIT"
+}

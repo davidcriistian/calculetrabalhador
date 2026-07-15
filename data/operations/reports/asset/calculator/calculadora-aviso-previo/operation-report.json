@@ -1,0 +1,13 @@
+{
+  "id": "operation-report-calculator-calculadora-aviso-previo",
+  "operation": "deliver-asset-end-to-end",
+  "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "status": "completed-local-not-deployed",
+  "page": "/calculadora-aviso-previo/index.html",
+  "rule": "/data/rules/aviso-previo.json",
+  "registries": ["/data/registry/by-type/calculator-calculadora-aviso-previo.json", "/data/publishing/registry/calculator-calculadora-aviso-previo-published.json"],
+  "evidence": "/data/operations/reports/end-to-end/migrate-calculator-calculadora-aviso-previo/final-operation-report.json",
+  "commit": false,
+  "deploy": false
+}

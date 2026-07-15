@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "outcome": "MIGRATED_AVISO_PREVIO_VALIDATED",
+  "legallyReconciledBaseline": "60/60",
+  "intentionalLegalCorrections": 18,
+  "discountCorrections": 9,
+  "workedAllocationAndPresentationCorrections": 9,
+  "unexplainedDivergences": 0,
+  "canonicalFixtures": "28/28",
+  "migrationFoundationFixtures": "20/20",
+  "calculatorExperienceFixtures": "24/24",
+  "editorialWords": 848,
+  "faqVisibleSchemaParity": "EXACT",
+  "internalLinks": "PASS",
+  "seoHeritage": "PASS",
+  "registryPublishing": "PASS",
+  "sitemap": "PASS",
+  "reportActions": "PASS",
+  "visualEvidence": "PASS_4_VIEWPORTS_7_STATES",
+  "publicExperienceBoundary": "PASS_NO_INTERNAL_GOVERNANCE_METADATA_VISIBLE",
+  "localRuntime": {"fileProtocol":"PASS_GOVERNED_DERIVED_FALLBACK","httpLocal":"PASS_GOVERNED_AGGREGATE_JSON"},
+  "renderedScenarios": ["employer-proportional", "employee-resignation-correction", "worked-proportional-correction"]
+}

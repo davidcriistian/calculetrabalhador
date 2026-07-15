@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "assetType": "calculator",
+  "publicSlug": "/calculadora-aviso-previo/",
+  "owner": "core-platform",
+  "primaryDomain": "aviso-previo",
+  "primaryCluster": "calculadora-aviso-previo",
+  "blueprint": "calculator-blueprint-template@0.6.0",
+  "goldStandard": "calculator-gold-standard@1.3",
+  "experienceContract": "calculator-canonical-experience-contract@1.2.0",
+  "migrationContract": "calculator-conservative-migration-contract@1.0.0",
+  "propagationContract": "governed-rule-propagation-contract@1.0.0",
+  "canonicalRule": "aviso-previo@1.0.0-rc.2",
+  "migrationFamily": "CANONICAL_DIFF_PATCH",
+  "specializedReview": "LEGAL_REVIEW_RESOLVED",
+  "reference": "calculator-multa-40-fgts-reference"
+}

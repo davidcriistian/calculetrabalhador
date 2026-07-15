@@ -55,6 +55,12 @@
     "jsonLd": ["FAQPage", "BreadcrumbList", "SoftwareApplication"]
   },
   "structure": {
+    "publicExperienceBoundary": {
+      "principle": "INTERNAL GOVERNANCE METADATA MUST NOT LEAK INTO PUBLIC USER EXPERIENCE",
+      "publicLayer": ["user-benefit", "plain-language-guidance", "actionable-errors", "trust-context"],
+      "internalLayer": ["rule-version", "projection-fingerprint", "stale-state", "reconciliation-count", "legal-review-status", "registry-status", "publishing-status", "governance-architecture"],
+      "source": "/data/blueprints/contracts/calculator-experience.contract.json#publicExperienceBoundaryContract"
+    },
     "contentLayers": {
       "permanentBeforeCalculation": ["hero", "intro", "simulator", "editorial-or-methodology", "faq", "related-content", "sources", "footer"],
       "dynamicAfterCalculation": ["result", "indicators", "interpretation", "CANONICAL_RESULT_RECOMMENDATION_SLOT", "calculation-memory", "comparisons", "limitations", "result-actions"]
@@ -138,7 +144,7 @@
     "required": true,
     "validationReference": "/data/pos/validation/index.json",
     "requiredTypes": ["calculator-structure-validation", "calculation-validation", "governance-validation", "result-experience-validation", "visual-render-validation", "responsive-validation", "accessibility-validation", "seo-validation", "jsonld-validation", "human-approval"],
-    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED"]
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED", "PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED"]
   },
   "publishing": {
     "required": true,

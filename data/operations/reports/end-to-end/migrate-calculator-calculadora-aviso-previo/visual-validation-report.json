@@ -1,0 +1,15 @@
+{
+  "status": "VISUAL_VALIDATION_PASSED",
+  "browserExecuted": true,
+  "browser": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "viewports": [{"id":"small-mobile","width":320,"height":800},{"id":"large-mobile","width":430,"height":900},{"id":"intermediate","width":768,"height":1024},{"id":"desktop","width":1440,"height":1000}],
+  "statesPerViewport": ["entry", "form-focus", "empty-state", "error-state", "result", "result-actions", "adaptive-report"],
+  "evidenceCount": 28,
+  "evidenceDirectory": "/data/operations/reports/end-to-end/migrate-calculator-calculadora-aviso-previo/visual/",
+  "checks": {"overflow":"PASS","focus":"PASS","error":"PASS","empty":"PASS","validResult":"PASS","actions":"PASS","A4Report":"PASS","recommendationHidden":"PASS"},
+  "runtimeModes": {"fileProtocol":{"status":"PASS","ruleSource":"governed-derived-fallback"},"httpLocal":{"status":"PASS","ruleSource":"governed-aggregate-json"}},
+  "renderedScenarios": ["employer-proportional", "employee-resignation-correction", "worked-proportional-correction"],
+  "publicGovernanceMetadataVisible": false,
+  "manualInspection": ["desktop entry", "small mobile form", "desktop mixed result", "small mobile adaptive report"],
+  "falseVisualPass": false
+}

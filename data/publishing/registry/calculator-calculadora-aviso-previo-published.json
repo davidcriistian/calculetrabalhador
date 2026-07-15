@@ -1,0 +1,34 @@
+{
+  "id": "publishing-calculator-calculadora-aviso-previo",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "assetType": "calculator",
+  "status": "published",
+  "approvalStatus": "approved-explicit-controlled-migration",
+  "relationshipStatus": "existing-cluster-preserved",
+  "publishingStatus": "published-local-migration-not-deployed",
+  "runtimeStatus": "catalog-consumed",
+  "version": "1.0.0",
+  "owner": "core-platform",
+  "lifecycle": {
+    "current": "published",
+    "migrationState": "MIGRATED_LOCAL_NOT_DEPLOYED",
+    "maximumAllowedInThisOperation": "local-working-tree"
+  },
+  "publicUrl": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+  "actions": {
+    "publishes": false,
+    "deploys": false,
+    "modifiesSitemapPlan": true,
+    "createsPublicPage": false,
+    "modifiesExistingPage": true,
+    "callsIndexNow": false,
+    "indexNowDryRunOnly": true
+  },
+  "evidence": [
+    "/calculadora-aviso-previo/index.html",
+    "/data/tools.json",
+    "/data/editorial-metadata.json",
+    "/sitemap.xml",
+    "/data/operations/reports/end-to-end/migrate-calculator-calculadora-aviso-previo/final-operation-report.json"
+  ]
+}

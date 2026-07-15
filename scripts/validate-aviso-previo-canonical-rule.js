@@ -322,7 +322,9 @@ function validateRule(rule) {
     || payload.employeeDiscountLimitDays !== 30
     || payload.maximumWorkedDays !== 30
     || payload.proportionalExcessIsIndemnified !== true) reasons.push('corrected-legal-branches-incomplete');
-  if (!rule.certification || rule.certification.publicMigrationAuthorized !== false) reasons.push('public-migration-not-blocked');
+  if (!rule.certification || typeof rule.certification.publicMigrationAuthorized !== 'boolean') reasons.push('public-migration-state-missing');
+  if (rule.certification && rule.certification.publicMigrationAuthorized === true
+    && rule.certification.publicRuntimeMigrationStatus !== 'MIGRATED_LOCAL_NOT_DEPLOYED') reasons.push('public-migration-state-invalid');
   return {status: reasons.length ? 'BLOCKED_BY_INVALID_RULE' : 'PASS', reasons};
 }
 
@@ -336,7 +338,7 @@ function validateConsumers(registry, mutation = 'NONE') {
     types.add(declaration.type);
   }
   const missingTypes = REQUIRED_CONSUMER_TYPES.filter((type) => !types.has(type));
-  return missingTypes.length ? {status:'UNDECLARED_RULE_CONSUMER', declarationCount:declarations.length} : {status:'PASS', declarationCount:declarations.length};
+  return missingTypes.length ? {status:'UNDECLARED_RULE_CONSUMER', declarationCount:declarations.length, typeCount:types.size} : {status:'PASS', declarationCount:declarations.length, typeCount:types.size};
 }
 
 function validateLegacyBaseline(rule, legacyBaseline) {
@@ -476,7 +478,7 @@ function run() {
   console.log(`Rule validation: ${ruleResult.status}`);
   console.log(`Legal review: ${context.rule.reviewStatus}`);
   console.log(`Projection fingerprint: ${fingerprint(context.rule.projectionPayload)}`);
-  console.log(`Typed consumers: ${consumerResult.declarationCount}/${REQUIRED_CONSUMER_TYPES.length}`);
+  console.log(`Typed consumers: ${consumerResult.typeCount}/${REQUIRED_CONSUMER_TYPES.length} required types; ${consumerResult.declarationCount} declarations`);
   console.log(`Legacy baseline: ${legacyResult.status}`);
   console.log(`Legally reconciled baseline: ${reconciledResult.status}`);
   console.log(`Diff matrix: ${matrixResult.status} (${matrixResult.count})`);

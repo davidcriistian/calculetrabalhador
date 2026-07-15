@@ -209,7 +209,7 @@
     "validator": "/scripts/validate-aviso-previo-canonical-rule.js",
     "fixtures": "/data/pos/validation/aviso-previo-canonical-rule-fixtures.json",
     "legallyReconciledBaseline": "/data/operations/reports/end-to-end/aviso-previo-canonical-rule-reconciliation/legally-reconciled-baseline.json",
-    "publicConnectionAuthorized": false
+    "publicConnectionAuthorized": true
   },
   "updateSensitivity": {
     "class": "LEGAL_UPDATE_REQUIRED",
@@ -223,15 +223,16 @@
     "mathematicalCorrections": {"count":9,"noticeType":"desconto","resolution":"cap total and discount at 30 days"},
     "allocationAndPresentationCorrections": {"count":9,"noticeType":"trabalhado","resolution":"work at most 30 days and indemnify proportional excess"},
     "unresolvedMaterialSubcases": [],
-    "publicBehaviorStillLegacy": true
+    "publicBehaviorStillLegacy": false
   },
   "lastReviewedAt": "2026-07-14",
   "reviewStatus": "LEGAL_REVIEW_RESOLVED",
   "certification": {
-    "status": "INTERNAL_CANDIDATE_VALIDATED",
+    "status": "MIGRATED_ASSET_VALIDATED_LOCAL_NOT_DEPLOYED",
     "legalCorrectionApproved": true,
     "noUnexplainedDivergenceRequired": true,
-    "publicMigrationAuthorized": false,
+    "publicMigrationAuthorized": true,
+    "publicRuntimeMigrationStatus": "MIGRATED_LOCAL_NOT_DEPLOYED",
     "productionStatus": false
   }
 }

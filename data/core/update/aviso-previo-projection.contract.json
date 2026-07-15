@@ -1,8 +1,8 @@
 {
   "id": "aviso-previo-governed-projection-contract",
-  "version": "1.1.0",
-  "status": "internal-candidate-validated",
-  "runtimeStatus": "not-connected",
+  "version": "1.2.0",
+  "status": "controlled-migration-connected",
+  "runtimeStatus": "public-asset-connected-local-not-deployed",
   "createdAt": "2026-07-14",
   "updatedAt": "2026-07-14",
   "sourceRuleId": "aviso-previo",
@@ -29,8 +29,8 @@
   },
   "projections": {
     "CALCULATION_PROJECTION": {
-      "status": "GOVERNED_CONFIRMED_INTERNAL_ONLY",
-      "target": "future deterministic avisoPrevio object in data/tabelas-trabalhistas.json",
+      "status": "GOVERNED_CONFIRMED_PUBLIC_ASSET_CONNECTED",
+      "target": "data/tabelas-trabalhistas.json#avisoPrevio through assets/js/tabelas-trabalhistas.js",
       "branches": {
         "indenizado": "employer entitlement fully indemnified",
         "trabalhado": "maximum 30 worked days plus indemnified proportional excess",
@@ -41,14 +41,14 @@
         "source": "the same corrected calculation projection",
         "independentHardcodesAllowed": false
       },
-      "publicConnectionAuthorized": false
+      "publicConnectionAuthorized": true
     },
     "VISIBLE_RULE_PROJECTION": {
-      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "status": "GOVERNED_CONFIRMED_PUBLIC_ASSET_CONNECTED",
       "target": "calculation cards, rule summary, FAQ, FAQPage and result explanation",
       "strategy": "derive scenario-specific days and legal wording from the corrected projection",
-      "legacyBehaviorAfterMigration": "LEGACY_BEHAVIOR_STILL_ACTIVE",
-      "publicConnectionAuthorized": false
+      "legacyBehaviorAfterMigration": "BLOCKED_NOT_ACTIVE",
+      "publicConnectionAuthorized": true
     },
     "TEST_PROJECTION": {
       "status": "GOVERNED_CONFIRMED",
@@ -62,14 +62,14 @@
       "strategy": "record source version, fingerprint, human approval and every intentional difference"
     },
     "UPDATED_AT_METADATA": {
-      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
-      "strategy": "future controlled projection from lastReviewedAt after public migration approval"
+      "status": "GOVERNED_CONFIRMED_PUBLIC_ASSET_CONNECTED",
+      "strategy": "project lastReviewedAt into governed metadata and visible month-year text"
     }
   },
   "fallback": {
     "decision": "REPLACE_WITH_DERIVED_FALLBACK",
-    "currentPublicFallbackStatus": "STALE_LEGACY_FALLBACK",
-    "currentPublicFallbackUse": "temporarily preserved only because public migration is outside this phase",
+    "currentPublicFallbackStatus": "REPLACED_BY_CORRECTED_DERIVED_FALLBACK",
+    "currentPublicFallbackUse": "none; the legacy fallback is not referenced by the migrated asset",
     "legacyFallbackAllowedAfterMigration": false,
     "futureFallback": {
       "origin": "data/rules/aviso-previo.json#projectionPayload",
@@ -80,7 +80,7 @@
       "blockWhen": ["fingerprint mismatch", "unknown version", "invalid rule", "legacy behavior detected", "reconciled baseline failure"]
     },
     "silentFallbackAllowed": false,
-    "publicMutationThisPhase": false
+    "publicMutationThisPhase": true
   },
   "staleDetection": {
     "states": ["SYNCED", "STALE_DERIVED_OUTPUT", "STALE_FALLBACK", "STALE_VISIBLE_CONSUMER", "STALE_TEST_EXPECTATION", "LEGACY_BEHAVIOR_STILL_ACTIVE", "UNKNOWN_VERSION"],
@@ -100,13 +100,13 @@
     "status": "LEGAL_REVIEW_RESOLVED",
     "humanDecision": "CORRECT_CONFIRMED_LEGAL_DIVERGENCE",
     "unresolvedMaterialSubcases": [],
-    "publicMigrationAuthorized": false,
-    "controlledMigrationReadiness": "READY_FOR_CONTROLLED_CALCULATOR_MIGRATION"
+    "publicMigrationAuthorized": true,
+    "controlledMigrationReadiness": "CONTROLLED_CALCULATOR_MIGRATION_EXECUTED_LOCAL_NOT_DEPLOYED"
   },
   "boundaries": {
-    "changesPublicCalculator": false,
-    "changesPublicRuntime": false,
-    "changesPublicContent": false,
+    "changesPublicCalculator": true,
+    "changesPublicRuntime": true,
+    "changesPublicContent": true,
     "publishes": false,
     "sendsIndexNow": false
   }

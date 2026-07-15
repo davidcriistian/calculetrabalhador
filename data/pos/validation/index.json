@@ -46,6 +46,8 @@
     ,"nucleusHomeFixtures": "/data/pos/validation/nucleus-home-distribution-fixtures.json"
     ,"avisoPrevioCanonicalRuleValidator": "/scripts/validate-aviso-previo-canonical-rule.js"
     ,"avisoPrevioCanonicalRuleFixtures": "/data/pos/validation/aviso-previo-canonical-rule-fixtures.json"
+    ,"avisoPrevioMigratedCalculatorValidator": "/scripts/validate-migrated-calculadora-aviso-previo.js"
+    ,"avisoPrevioMigratedCalculatorVisualValidator": "/scripts/capture-aviso-previo-migration-visuals.js"
   },
   "operationalBoundaries": {
     "executesValidations": false,

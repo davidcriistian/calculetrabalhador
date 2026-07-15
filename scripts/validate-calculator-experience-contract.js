@@ -85,7 +85,7 @@ function validateInternalReferences(files = CONTRACT_CONSUMERS) {
 function validateContract(contract) {
   const required = [
     'calculatorExperienceContractVersion', 'conservativeMigrationContract', 'canonicalReference', 'brandThemeContract',
-    'visibleUpdatedAtContract', 'contentLayerContract', 'editorialDepthContract', 'faqContract',
+    'visibleUpdatedAtContract', 'contentLayerContract', 'editorialDepthContract', 'faqContract', 'publicExperienceBoundaryContract',
     'requiredCoreModules', 'conditionalModules', 'formJourneyContract', 'resultExperienceContract',
     'calculationMemoryContract', 'adaptiveReportContract', 'postResultActionsContract',
     'contentDepthContract', 'resultRecommendationsContract', 'visualSystemContract',
@@ -102,17 +102,20 @@ function validateContract(contract) {
   if (contract.brandThemeContract.defaultPrimaryTheme !== 'INSTITUTIONAL_BLUE') throw new Error('Institutional blue default is missing.');
   if (contract.visibleUpdatedAtContract.metadataField !== 'UPDATED_AT') throw new Error('Governed UPDATED_AT field is missing.');
   if (contract.editorialDepthContract.minimumWords !== 800 || contract.editorialDepthContract.maximumWords !== 1200) throw new Error('Editorial range is invalid.');
+  if (contract.publicExperienceBoundaryContract.principle !== 'INTERNAL GOVERNANCE METADATA MUST NOT LEAK INTO PUBLIC USER EXPERIENCE') throw new Error('Public experience governance boundary is missing.');
+  if (!contract.publicExperienceBoundaryContract.internalOnly.includes('rule-version') || !contract.publicExperienceBoundaryContract.internalOnly.includes('projection-fingerprint')) throw new Error('Internal governance metadata boundary is incomplete.');
   if (JSON.stringify(contract.resultRecommendationsContract.states) !== JSON.stringify(CANONICAL_RECOMMENDATION_STATES)) throw new Error('Recommendation states are not canonical.');
   if (contract.resultRecommendationsContract.slotId !== 'CANONICAL_RESULT_RECOMMENDATION_SLOT') throw new Error('Canonical recommendation slot is missing.');
   if (JSON.stringify(contract.adaptiveReportContract.requiredDeclarations) !== JSON.stringify(REPORT_DECLARATIONS)) throw new Error('Adaptive report declarations are incomplete.');
   const antiPatterns = new Set(contract.prohibitedAntiPatterns.map(({id}) => id));
-  [...REPORT_ANTI_PATTERNS, ...EDITORIAL_ANTI_PATTERNS, 'UNAPPROVED_PRIMARY_THEME'].forEach((id) => {
+  [...REPORT_ANTI_PATTERNS, ...EDITORIAL_ANTI_PATTERNS, 'UNAPPROVED_PRIMARY_THEME', 'INTERNAL_GOVERNANCE_METADATA_LEAK'].forEach((id) => {
     if (!antiPatterns.has(id)) throw new Error(`Required anti-pattern missing: ${id}`);
   });
   const gates = new Set(contract.validationGates.map(({id}) => id));
   NEW_GATES.forEach((id) => {
     if (!gates.has(id)) throw new Error(`Required gate missing: ${id}`);
   });
+  if (!gates.has('PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED')) throw new Error('Public experience boundary gate missing.');
   if (contract.visualSystemContract.notExecutedCannotBecome !== 'FULL_STANDARD_ACCEPTED') throw new Error('False visual pass guard missing.');
 }
 

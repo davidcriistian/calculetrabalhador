@@ -42,7 +42,8 @@ function main() {
   console.log('Recorded: 60');
   console.log('Historical expectation mutations: 0');
   console.log(`ElapsedMs: ${elapsedMs.toFixed(3)}`);
-  console.log('User-facing result source: legacy-runtime');
+  console.log('Historical evidence source: frozen legacy runtime');
+  console.log('Active user-facing authority: none (shadow is not a runtime consumer)');
   console.log('Normative legal authority: false');
 }
 

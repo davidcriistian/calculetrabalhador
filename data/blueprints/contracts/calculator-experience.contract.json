@@ -62,6 +62,13 @@
     "faqPageRequiresExactVisibleMatch": true,
     "excludedFromEditorialWordCount": true
   },
+  "publicExperienceBoundaryContract": {
+    "principle": "INTERNAL GOVERNANCE METADATA MUST NOT LEAK INTO PUBLIC USER EXPERIENCE",
+    "publicCommunicationPriorities": ["user-benefit", "plain-language-guidance", "actionable-confidence"],
+    "internalOnly": ["rule-version", "projection-fingerprint", "stale-state", "reconciliation-count", "legal-review-status", "registry-status", "publishing-status", "governance-architecture"],
+    "publicFailureBehavior": "simple-actionable-message-with-technical-details-restricted-to-internal-diagnostics",
+    "gate": "PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED"
+  },
   "requiredCoreModules": [
     {"id":"page-context","purpose":"Orient location and domain","minimumContent":["breadcrumb-or-equivalent-context","thematic-identification"],"depth":"explicit-and-visible","behavior":"precedes-or-is-integrated-with-hero","validationEvidence":["structure-map","render-evidence"],"referenceRelation":"abstracted-context-pattern","relatedAntiPatterns":["GENERIC_INTRO_CARD"]},
     {"id":"hero","purpose":"State intent and value before data entry","minimumContent":["single-clear-h1","user-oriented-description","concrete-value-promise","output-preview","dominant-primary-entry-cta"],"depth":"complete-entry-experience","behavior":"cta-transitions-clearly-to-simulator","validationEvidence":["hero-content-map","mobile-and-desktop-render"],"referenceRelation":"quality-parity-not-literal-copy","relatedAntiPatterns":["MINIMAL_HERO","GENERIC_INTRO_CARD","SMALL_PRIMARY_CTA"]},
@@ -191,6 +198,7 @@
     "notExecutedCannotBecome":"FULL_STANDARD_ACCEPTED"
   },
   "prohibitedAntiPatterns": [
+    {"id":"INTERNAL_GOVERNANCE_METADATA_LEAK","appliesWhen":"implementation, versioning, reconciliation, projection, stale-state, Registry or Publishing metadata is rendered in the public user experience","doesNotApplyWhen":"metadata remains restricted to internal governance, audit, validation or diagnostics","severity":"BLOCKER","validationMethod":"public-copy-and-render-scan","requiredEvidence":["public-copy-scan","render-evidence","internal-diagnostics-separation"]},
     {"id":"UNAPPROVED_PRIMARY_THEME","appliesWhen":"primary theme is not INSTITUTIONAL_BLUE and no approved variation exists","doesNotApplyWhen":"documented brand variation has human approval and render evidence","severity":"BLOCKER","validationMethod":"brand-theme-resolution","requiredEvidence":["theme-token-map","approval-record","render"]},
     {"id":"EDITORIAL_CONTENT_TOO_SHORT","appliesWhen":"main editorial content has fewer than 800 words after exclusions","doesNotApplyWhen":"never for NEW_ASSET or MIGRATED_ASSET","severity":"BLOCKER","validationMethod":"scoped-editorial-word-count","requiredEvidence":["word-count-report","exclusion-map"]},
     {"id":"EDITORIAL_CONTENT_GENERIC","appliesWhen":"editorial content could be reused unchanged across unrelated calculators","doesNotApplyWhen":"content is calculator-intent-specific and methodologically useful","severity":"BLOCKER","validationMethod":"editorial-specificity-review","requiredEvidence":["editorial-review"]},
@@ -230,7 +238,8 @@
     {"id":"EDITORIAL_DEPTH_RESOLVED","passWhen":["scoped-word-count-is-between-800-and-1200","content-is-useful-specific-and-not-padded"]},
     {"id":"RECOMMENDATION_SLOT_RESOLVED","passWhen":["stable-slot-exists-after-interpretation-before-memory","state-is-one-of-four-canonical-states","visibility-and-approved-source-rules-pass"]},
     {"id":"ADAPTIVE_REPORT_CONTRACT_RESOLVED","passWhen":["all-seven-report-declarations-resolved-from-calculator-contract","output-is-a4-structured-selectable-and-isolated","no-prohibited-report-pattern"]},
-    {"id":"REPORT_RENDER_VALIDATED","passWhen":["copy-print-download-behaviors-are-distinct","each-applicable-action-has-functional-evidence","report-is-viewport-independent"]}
+    {"id":"REPORT_RENDER_VALIDATED","passWhen":["copy-print-download-behaviors-are-distinct","each-applicable-action-has-functional-evidence","report-is-viewport-independent"]},
+    {"id":"PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED","passWhen":["public-copy-contains-no-internal-governance-metadata","public-errors-are-simple-and-actionable","technical-details-remain-in-internal-diagnostics"]}
   ],
   "exceptionRules": {
     "allowedOnlyWhen":["module-not-applicable-by-contract","alternative-achieves-same-quality-floor","manual-exception-approved-with-evidence"],

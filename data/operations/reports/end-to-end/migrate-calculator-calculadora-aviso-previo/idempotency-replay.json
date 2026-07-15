@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "assetDuplicates": 0,
+  "catalogDuplicates": 0,
+  "registryDuplicates": 0,
+  "publishingDuplicates": 0,
+  "sitemapUrlCount": 1,
+  "canonicalRuleProjection": "NO_CHANGE_REQUIRED_AFTER_GENERATION",
+  "replayDecision": "SKIPPED_ALREADY_COMPLIANT"
+}

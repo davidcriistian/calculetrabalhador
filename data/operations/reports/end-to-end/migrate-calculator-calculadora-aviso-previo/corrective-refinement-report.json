@@ -1,0 +1,33 @@
+{
+  "operation": "CALCULADORA_AVISO_PREVIO_CORRECTIVE_REFINEMENT",
+  "status": "PASS_LOCAL_NOT_COMMITTED_NOT_DEPLOYED",
+  "rootCause": {
+    "type": "FILE_PROTOCOL_ABSOLUTE_SCRIPT_PATH_RESOLUTION",
+    "before": "/assets/js/tabelas-trabalhistas.js",
+    "resolvedByFileProtocolAs": "file:///C:/assets/js/tabelas-trabalhistas.js",
+    "effect": "shared governed runtime unavailable; form catch rendered a misleading technical rule error"
+  },
+  "correction": {
+    "runtimePath": "../assets/js/tabelas-trabalhistas.js",
+    "fileProtocol": "loads shared runtime and uses validated governed derived fallback because fetch of the aggregate is not supported from file protocol",
+    "httpLocal": "loads shared runtime and consumes /data/tabelas-trabalhistas.json",
+    "legacyFallbackRestored": false,
+    "versionValidationDisabled": false,
+    "localLegalRuleDuplicated": false
+  },
+  "publicExperience": {
+    "activeRuleCardRemoved": true,
+    "technicalConfirmationCopyRemoved": true,
+    "technicalResultAndReportMetadataRemoved": true,
+    "publicError": "Não foi possível realizar o cálculo agora. Tente novamente em alguns instantes.",
+    "technicalDiagnostics": "window.__CalculeAvisoPrevioDiagnostics",
+    "internalGovernanceMetadataVisible": false
+  },
+  "renderedBrowserScenarios": [
+    {"id":"employer-proportional","salary":3000,"startDate":"2020-01-01","endDate":"2025-01-01","totalDays":45,"workedDays":0,"indemnifiedDays":45,"discountDays":0,"estimatedValue":4500,"status":"PASS"},
+    {"id":"employee-resignation-correction","salary":3000,"startDate":"2020-01-01","endDate":"2025-01-01","totalDays":30,"proportionalDays":0,"workedDays":0,"indemnifiedDays":0,"discountDays":30,"estimatedValue":3000,"status":"PASS"},
+    {"id":"worked-proportional-correction","salary":3000,"startDate":"2020-01-01","endDate":"2025-01-01","totalDays":45,"workedDays":30,"indemnifiedDays":15,"discountDays":0,"estimatedValue":4500,"status":"PASS"}
+  ],
+  "legalValidation": {"reconciledExpectations":"60/60","intentionalCorrections":"18/18","unexplainedDivergences":0},
+  "externalActions": {"commit":false,"push":false,"deploy":false,"indexNow":false}
+}

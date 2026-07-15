@@ -1,0 +1,18 @@
+{
+  "status": "MIGRATION_HERITAGE_PRESERVED",
+  "sourceHead": "3ac5b14071efa1ba0a40b18935d7a8e6f7a1066b",
+  "sourcePageSha256": "8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360",
+  "migratedPageSha256": "e4afa61219a3e722c3894e98228c1cfe8181ca8d37eccadeb5159bec7d14c872",
+  "preserved": {
+    "url": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+    "canonical": "https://calculetrabalhador.com.br/calculadora-aviso-previo/",
+    "title": "Calculadora de Aviso Prévio 2026 | Calcule Trabalhador",
+    "description": "Calcule aviso prévio trabalhado ou indenizado com base no salário e tempo de empresa conforme a Lei 12.506/2011.",
+    "h1": "Calculadora de Aviso Prévio 2026",
+    "inheritedInternalLinks": 8,
+    "disclaimer": true,
+    "usefulEditorialSections": 4
+  },
+  "governedCorrections": ["worked proportional excess is indemnified", "employee resignation discount is capped at 30 days", "visible rule summaries and FAQ corrected"],
+  "silentDeletions": 0
+}

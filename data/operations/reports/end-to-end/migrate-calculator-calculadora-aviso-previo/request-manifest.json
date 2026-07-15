@@ -1,0 +1,17 @@
+{
+  "operationId": "deliver-asset-end-to-end",
+  "requestType": "MIGRATE_TO_NEW_STANDARD",
+  "operationKind": "MIGRATE_EXISTING_CALCULATOR",
+  "executionMode": "CONTROLLED_EXECUTION_LOCAL_NOT_DEPLOYED",
+  "requestedBy": "user",
+  "objective": "Migrate the existing Aviso Previo calculator to the canonical calculator experience and aviso-previo@1.0.0-rc.2.",
+  "assetScope": ["calculator:calculadora-aviso-previo"],
+  "assetTypes": ["calculator"],
+  "publicationIntent": false,
+  "indexingIntent": "DRY_RUN_ONLY",
+  "manualApprovalRequired": true,
+  "manualApprovalSource": "explicit user request dated 2026-07-14",
+  "rollbackRequired": true,
+  "dryRun": false,
+  "constraints": ["preserve URL and SEO", "preserve useful editorial heritage and internal links", "apply 18 approved legal corrections", "no commit", "no push", "no deploy", "no real IndexNow"]
+}

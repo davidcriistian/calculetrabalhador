@@ -204,6 +204,18 @@
                                        ]
                     },
                     {
+                        "id":  "calculadora-aviso-previo",
+                        "assetId":  "calculator:calculadora-aviso-previo",
+                        "type":  "calculator",
+                        "slug":  "calculadora-aviso-previo",
+                        "status":  "published",
+                        "owner":  "core-platform",
+                        "version":  "1.0.0",
+                        "references":  [
+                                           "/data/registry/by-type/calculator-calculadora-aviso-previo.json"
+                                       ]
+                    },
+                    {
                         "id":  "guide-pj",
                         "assetId":  "guide:guide-pj",
                         "type":  "guide",

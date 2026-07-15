@@ -1,0 +1,5 @@
+{
+  "assetId": "calculator:calculadora-aviso-previo",
+  "status": "EXECUTED_PASS",
+  "tests": ["60 reconciled runtime scenarios", "18 intentional correction matrix", "derived fallback equivalence", "legacy fallback absence", "SEO heritage", "FAQ schema parity", "internal links", "result-memory equivalence", "copy-print-download actions", "Registry and Publishing", "sitemap uniqueness", "visual matrix"]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "calculator:calculadora-aviso-previo",
+  "status": "applied",
+  "officialEntry": "/data/registry/by-type/calculator-calculadora-aviso-previo.json",
+  "index": "/data/registry/by-type/index.json",
+  "decision": "UPDATE_EXISTING_IDENTITY_WITHOUT_DUPLICATION"
+}

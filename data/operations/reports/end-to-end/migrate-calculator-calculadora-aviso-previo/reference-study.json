@@ -1,0 +1,9 @@
+{
+  "status": "REFERENCE_STUDY_COMPLETE",
+  "referenceId": "calculator-multa-40-fgts-reference",
+  "physicalPath": "/calculadora-multa-40-fgts/index.html",
+  "studiedModules": ["institutional hero", "output preview", "guided form groups", "dominant result", "secondary indicators", "interpretation", "calculation memory", "summary table", "limitations", "next steps", "distinct actions", "adaptive A4 report", "responsive shell"],
+  "adaptedForAvisoPrevio": ["two semantic form groups", "decision report", "auditable memory", "mixed notice allocation", "corrected resignation discount"],
+  "literalCopy": false,
+  "parity": ["STRUCTURAL_PARITY", "DESIGN_SYSTEM_PARITY", "QUALITY_PARITY", "RESPONSIVE_PARITY"]
+}

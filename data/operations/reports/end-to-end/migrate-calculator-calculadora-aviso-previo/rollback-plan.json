@@ -1,0 +1,9 @@
+{
+  "status": "READY",
+  "sourceHead": "3ac5b14071efa1ba0a40b18935d7a8e6f7a1066b",
+  "targetPageSnapshotSha256": "8a4c2adae1cf79fce7b387daadb26ab586869fc581fb14a34424c735cecf9360",
+  "historicalBaselineSha256": "13407e996b3e0f9da2bf0038897609d33b087334e4e6d12f6ccb09c0926c8474",
+  "strategy": "Revert only paths recorded by this operation to their sourceHead versions and remove only operation-created Registry, Publishing, validator, capture and report paths.",
+  "safety": ["do not use destructive reset", "do not republish known legal error", "preserve historical baseline", "require explicit approval before rollback"],
+  "legalGuard": "A rollback may restore layout evidence but must not activate the known legacy legal behavior in production."
+}

@@ -73,10 +73,10 @@
     "tipo": "calculadora",
     "titulo": "Calculadora de Aviso Prévio 2026",
     "publicadoEm": "2026-06-10",
-    "atualizadoEm": "2026-06-10",
-    "revisadoEm": "2026-06-10",
+    "atualizadoEm": "2026-07-14",
+    "revisadoEm": "2026-07-14",
     "anoBase": 2026,
-    "fonteResumo": "Base de cálculo com regras trabalhistas vigentes em 2026.",
+    "fonteResumo": "Regra canônica aviso-previo@1.0.0-rc.2, revisada em 14 de julho de 2026.",
     "aviso": "Resultado estimado para fins educativos."
   },
   "/calculadora-adicional-noturno/": {

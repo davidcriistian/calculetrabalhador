@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "calculator:calculadora-aviso-previo and required governed integrations",
+  "historicalBaselineChanged": false,
+  "otherCalculatorPagesChanged": 0,
+  "otherRuleFilesChanged": 0,
+  "otherCatalogEntriesChanged": 0,
+  "otherSitemapEntriesChanged": 0,
+  "unrelatedPathsChanged": 0,
+  "commitExecuted": false,
+  "pushExecuted": false,
+  "deployExecuted": false,
+  "publicationExecuted": false,
+  "realIndexNowExecuted": false
+}

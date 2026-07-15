@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "flow": ["data/rules/aviso-previo.json", "scripts/transform-rules.js", "data/tabelas-trabalhistas.json#avisoPrevio", "assets/js/tabelas-trabalhistas.js", "calculadora-aviso-previo/index.html"],
+  "ruleVersion": "1.0.0-rc.2",
+  "fingerprint": "d64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a",
+  "activeLegacyFallback": false,
+  "derivedFallback": "100_PERCENT_LEGALLY_RECONCILED_EQUIVALENT",
+  "staleState": "SYNCED",
+  "typedConsumersConnected": ["CALCULATION_ENGINE", "RESULT_EXPLANATION", "RULE_SUMMARY", "UPDATED_AT_METADATA", "VALIDATION_TEST", "SHADOW_TEST", "REPORT_OUTPUT"],
+  "historicalBaselineRuntimeAuthority": false
+}

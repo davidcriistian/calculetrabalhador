@@ -42,7 +42,8 @@
     "must-not-use-unversioned-standard",
     "must-not-rewrite-editorial-content-during-technical-migration",
     "must-not-change-calculation-without-regression-baseline",
-    "must-not-certify-governed-engine-with-stale-visible-rule"
+    "must-not-certify-governed-engine-with-stale-visible-rule",
+    "internal-governance-metadata-must-not-leak-into-public-user-experience"
   ],
   "acceptanceCriteria": [
     "all mandatory sections present",
@@ -52,7 +53,8 @@
     "related content is intentional",
     "publishing gates are declared",
     "migrated assets preserve declared heritage",
-    "legal dependencies are typed and auditable when required"
+    "legal dependencies are typed and auditable when required",
+    "public copy exposes user benefit and guidance while governance metadata remains internal"
   ],
   "measurableApprovalCriteria": {
     "entryExperience": ["visible page context", "complete hero with value promise and output preview", "dominant entry CTA", "clear simulator transition"],

@@ -8,7 +8,7 @@
   },
   "moeda": "BRL",
   "salarioMinimo": {
-    "valor": 1621.0,
+    "valor": 1621,
     "ano": 2026,
     "observacao": "Valor usado como referência para cálculos que dependem do salário mínimo."
   },
@@ -18,7 +18,7 @@
     "metodo": "progressivo",
     "faixas": [
       {
-        "ate": 1621.0,
+        "ate": 1621,
         "aliquota": 0.075,
         "deducao": 0
       },
@@ -45,8 +45,8 @@
     "descontoSimplificado": 607.2,
     "redutorIsencao": {
       "ativo": true,
-      "limiteIsencao": 5000.0,
-      "limiteReducao": 7350.0,
+      "limiteIsencao": 5000,
+      "limiteReducao": 7350,
       "parcelaBase": 978.62,
       "coeficiente": 0.133145
     },
@@ -85,7 +85,7 @@
       "inicio": "2026-01-11",
       "observacao": "Tabela de referência usada para simulações educativas do seguro-desemprego em 2026."
     },
-    "piso": 1621.0,
+    "piso": 1621,
     "teto": 2518.65,
     "faixas": [
       {
@@ -105,7 +105,7 @@
         "rotulo": "Faixa 2: excedente acima de R$ 2.222,17 multiplicado por 50% + R$ 1.777,74."
       },
       {
-        "de": 3704.0,
+        "de": 3704,
         "ate": null,
         "tipo": "teto",
         "rotulo": "Faixa 3: média acima de R$ 3.703,99. Aplica-se o teto do benefício."
@@ -225,12 +225,57 @@
     "observacao": "Estrutura base para cálculo proporcional do 13º salário."
   },
   "avisoPrevio": {
+    "ruleId": "aviso-previo",
+    "ruleVersion": "1.0.0-rc.2",
+    "sourceProjectionFingerprint": "d64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a",
+    "updatedAt": "2026-07-14",
+    "reviewStatus": "LEGAL_REVIEW_RESOLVED",
+    "legalCorrectionPolicy": "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+    "baseDays": 30,
+    "additionalDaysPerFullYear": 3,
+    "maximumAdditionalDays": 60,
+    "maximumTotalDays": 90,
+    "maximumWorkedDays": 30,
+    "salaryDivisorDays": 30,
+    "employeeResignationNoticeDays": 30,
+    "employeeDiscountLimitDays": 30,
+    "employerTerminationProportionality": true,
+    "employeeResignationProportionality": false,
+    "proportionalExcessIsIndemnified": true,
+    "presentation": {
+      "validResultStatus": "Cálculo realizado",
+      "invalidResultStatus": "Dados incompletos",
+      "invalidBadge": "simulação",
+      "invalidMessage": "Informe um salário válido e datas coerentes para calcular o aviso prévio.",
+      "types": {
+        "indenizado": {
+          "badge": "verba estimada",
+          "estimatedLabel": "Verba estimada",
+          "messageTemplate": "Aviso prévio indenizado: o valor estimado de {estimatedValue} pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis."
+        },
+        "trabalhadoWithoutExcess": {
+          "badge": "dias a cumprir",
+          "estimatedLabel": "Referência salarial",
+          "messageTemplate": "Aviso prévio trabalhado: a estimativa indica {totalDays} dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional."
+        },
+        "trabalhadoWithExcess": {
+          "badge": "aviso misto",
+          "estimatedLabel": "Referência total do aviso",
+          "messageTemplate": "Aviso prévio misto: {workedDays} dias correspondem ao período trabalhado e {indemnifiedDays} dias à parcela proporcional indenizada."
+        },
+        "desconto": {
+          "badge": "possível desconto",
+          "estimatedLabel": "Possível desconto",
+          "messageTemplate": "Pedido de demissão com desconto: o valor estimado de {estimatedValue} deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento."
+        }
+      }
+    },
     "diasBase": 30,
     "diasPorAnoCompleto": 3,
-    "limiteDias": 90,
-    "observacao": "Regra geral do aviso prévio proporcional.",
     "diasPorAno": 3,
-    "diasDescontoPedidoDemissao": 30
+    "limiteDias": 90,
+    "diasDescontoPedidoDemissao": 30,
+    "observacao": "Projecao deterministica de aviso-previo@1.0.0-rc.2."
   },
   "adicionalNoturno": {
     "percentualPadrao": 0.2,
@@ -253,11 +298,11 @@
   },
   "horasExtras": {
     "percentualDiaUtil": 0.5,
-    "percentualDomingoFeriado": 1.0,
+    "percentualDomingoFeriado": 1,
     "observacao": "Percentuais mínimos usuais para simulações educativas.",
     "divisoresMensais": {
-      "44": 220,
-      "40": 200
+      "40": 200,
+      "44": 220
     },
     "personalizada": {
       "semanasPorMes": 4.33,

@@ -3,6 +3,37 @@
 
   const DATA_URL = '/data/tabelas-trabalhistas.json';
   let cacheTabelas = null;
+  const AVISO_PREVIO_GOVERNED_FALLBACK = Object.freeze({
+    ruleId: 'aviso-previo',
+    ruleVersion: '1.0.0-rc.2',
+    sourceProjectionFingerprint: 'd64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a',
+    updatedAt: '2026-07-14',
+    reviewStatus: 'LEGAL_REVIEW_RESOLVED',
+    legalCorrectionPolicy: 'LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE',
+    baseDays: 30,
+    additionalDaysPerFullYear: 3,
+    maximumAdditionalDays: 60,
+    maximumTotalDays: 90,
+    maximumWorkedDays: 30,
+    salaryDivisorDays: 30,
+    employeeResignationNoticeDays: 30,
+    employeeDiscountLimitDays: 30,
+    employerTerminationProportionality: true,
+    employeeResignationProportionality: false,
+    proportionalExcessIsIndemnified: true,
+    presentation: {
+      validResultStatus: 'Cálculo realizado',
+      invalidResultStatus: 'Dados incompletos',
+      invalidBadge: 'simulação',
+      invalidMessage: 'Informe um salário válido e datas coerentes para calcular o aviso prévio.',
+      types: {
+        indenizado: { badge: 'verba estimada', estimatedLabel: 'Verba estimada', messageTemplate: 'Aviso prévio indenizado: o valor estimado de {estimatedValue} pode aparecer como verba a receber na rescisão, conforme a modalidade de desligamento e as regras aplicáveis.' },
+        trabalhadoWithoutExcess: { badge: 'dias a cumprir', estimatedLabel: 'Referência salarial', messageTemplate: 'Aviso prévio trabalhado: a estimativa indica {totalDays} dias a cumprir. O valor exibido serve apenas como referência salarial do período, não como verba indenizada adicional.' },
+        trabalhadoWithExcess: { badge: 'aviso misto', estimatedLabel: 'Referência total do aviso', messageTemplate: 'Aviso prévio misto: {workedDays} dias correspondem ao período trabalhado e {indemnifiedDays} dias à parcela proporcional indenizada.' },
+        desconto: { badge: 'possível desconto', estimatedLabel: 'Possível desconto', messageTemplate: 'Pedido de demissão com desconto: o valor estimado de {estimatedValue} deve ser lido como possível desconto, caso o aviso não seja cumprido e a empresa não dispense o cumprimento.' }
+      }
+    }
+  });
 
   function arredondarCentavos(valor) {
     return Math.round((Number(valor) + Number.EPSILON) * 100) / 100;
@@ -218,30 +249,99 @@
   }
 
 
-  function obterRegraAvisoPrevio(tabelas) {
-    return tabelas?.avisoPrevio || null;
+  function validarRegraAvisoPrevio(regra) {
+    const requiredNumbers = ['baseDays', 'additionalDaysPerFullYear', 'maximumTotalDays', 'maximumWorkedDays', 'salaryDivisorDays', 'employeeResignationNoticeDays', 'employeeDiscountLimitDays'];
+    const valid = regra
+      && regra.ruleId === AVISO_PREVIO_GOVERNED_FALLBACK.ruleId
+      && regra.ruleVersion === AVISO_PREVIO_GOVERNED_FALLBACK.ruleVersion
+      && regra.sourceProjectionFingerprint === AVISO_PREVIO_GOVERNED_FALLBACK.sourceProjectionFingerprint
+      && regra.reviewStatus === 'LEGAL_REVIEW_RESOLVED'
+      && regra.employeeResignationProportionality === false
+      && regra.proportionalExcessIsIndemnified === true
+      && regra.presentation && regra.presentation.types
+      && requiredNumbers.every((field) => Number.isFinite(Number(regra[field])));
+    if (!valid) throw new Error('Regra governada de aviso previo ausente, invalida ou stale.');
+    return regra;
   }
 
-  function calcularAvisoPrevio(anosCompletos, salario, tabelas) {
-    const regra = obterRegraAvisoPrevio(tabelas) || {};
-    const anos = Math.max(0, Number(anosCompletos) || 0);
-    const baseDays = Number(regra.diasBase) || 30;
-    const diasPorAno = Number(regra.diasPorAnoCompleto) || Number(regra.diasPorAno) || 3;
-    const limiteDias = Number(regra.limiteDias) || 90;
-    const rawAdditionalDays = anos * diasPorAno;
-    const totalDays = Math.min(limiteDias, baseDays + rawAdditionalDays);
-    const additionalDays = totalDays - baseDays;
-    const dailyValue = (Number(salario) || 0) / 30;
-    const estimatedValue = totalDays * dailyValue;
+  function obterFallbackAvisoPrevio() {
+    return { ...AVISO_PREVIO_GOVERNED_FALLBACK };
+  }
+
+  function obterRegraAvisoPrevio(tabelas) {
+    return validarRegraAvisoPrevio(tabelas?.avisoPrevio || obterFallbackAvisoPrevio());
+  }
+
+  function calcularAvisoPrevio(inputOrYears, salarioOrTabelas, tabelasMaybe) {
+    const objectInput = inputOrYears && typeof inputOrYears === 'object';
+    const input = objectInput
+      ? inputOrYears
+      : { fullYears: inputOrYears, salary: salarioOrTabelas, noticeType: 'indenizado' };
+    const tabelas = objectInput ? salarioOrTabelas : tabelasMaybe;
+    const regra = obterRegraAvisoPrevio(tabelas);
+    const anos = Math.max(0, Number(input.fullYears) || 0);
+    const salario = Number(input.salary) || 0;
+    const noticeType = input.noticeType || 'indenizado';
+    const baseDays = Number(regra.baseDays);
+    const rawAdditionalDays = anos * Number(regra.additionalDaysPerFullYear);
+    const employerTotalDays = Math.min(Number(regra.maximumTotalDays), baseDays + rawAdditionalDays);
+    const dailyValue = salario / Number(regra.salaryDivisorDays);
+    let totalDays = employerTotalDays;
+    let proportionalEntitlementDays = employerTotalDays - baseDays;
+    let workedDays = 0;
+    let indemnifiedDays = employerTotalDays;
+    let discountDays = 0;
+
+    if (noticeType === 'trabalhado') {
+      workedDays = Math.min(Number(regra.maximumWorkedDays), employerTotalDays);
+      indemnifiedDays = employerTotalDays - workedDays;
+    } else if (noticeType === 'desconto') {
+      totalDays = Number(regra.employeeResignationNoticeDays);
+      proportionalEntitlementDays = 0;
+      indemnifiedDays = 0;
+      discountDays = Math.min(Number(regra.employeeDiscountLimitDays), totalDays);
+    } else if (noticeType !== 'indenizado') {
+      throw new Error(`Tipo de aviso previo desconhecido: ${noticeType}`);
+    }
+
+    const monetaryDays = noticeType === 'desconto' ? discountDays : totalDays;
+    const estimatedValue = monetaryDays * dailyValue;
 
     return {
+      ruleId: regra.ruleId,
+      ruleVersion: regra.ruleVersion,
+      sourceProjectionFingerprint: regra.sourceProjectionFingerprint,
       baseDays,
       rawAdditionalDays,
-      additionalDays,
+      additionalDays: proportionalEntitlementDays,
+      proportionalEntitlementDays,
       totalDays,
+      workedDays,
+      indemnifiedDays,
+      discountDays,
+      monetaryDays,
       dailyValue,
       estimatedValue
     };
+  }
+
+  function projetarApresentacaoAvisoPrevio(result, tabelas) {
+    const regra = obterRegraAvisoPrevio(tabelas);
+    let typeKey = 'indenizado';
+    if (result.discountDays > 0) typeKey = 'desconto';
+    else if (result.workedDays > 0) typeKey = result.indemnifiedDays > 0 ? 'trabalhadoWithExcess' : 'trabalhadoWithoutExcess';
+    const projection = regra.presentation.types[typeKey];
+    const replacements = {
+      estimatedValue: formatarMoeda(result.estimatedValue),
+      totalDays: result.totalDays,
+      workedDays: result.workedDays,
+      indemnifiedDays: result.indemnifiedDays
+    };
+    const message = Object.entries(replacements).reduce(
+      (text, [key, value]) => text.replaceAll(`{${key}}`, String(value)),
+      projection.messageTemplate
+    );
+    return { ...projection, message, typeKey, resultStatus: regra.presentation.validResultStatus };
   }
 
   function calcularAdicionalNoturno({ salary, monthlyHours, nightHours, percent }, tabelas) {
@@ -551,7 +651,10 @@
     obterPercentualInsalubridade,
     obterPercentualAdicionalNoturno,
     obterRegraAvisoPrevio,
+    obterFallbackAvisoPrevio,
+    validarRegraAvisoPrevio,
     calcularAvisoPrevio,
+    projetarApresentacaoAvisoPrevio,
     calcularAdicionalNoturno,
     obterPercentuaisInsalubridade,
     calcularInsalubridade,

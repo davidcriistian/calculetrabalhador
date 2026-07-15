@@ -6,6 +6,7 @@ const ROOT = path.resolve(__dirname, '..');
 const FILES = Object.freeze({
   rulesDir: 'data/rules',
   inssRules: 'data/rules/inss.json',
+  avisoPrevioRules: 'data/rules/aviso-previo.json',
   aggregate: 'data/tabelas-trabalhistas.json'
 });
 
@@ -26,7 +27,8 @@ function writeJson(relativePath, value) {
 
 function loadRuleSets(rulesDir = FILES.rulesDir) {
   return {
-    inss: readJson(path.join(rulesDir, 'inss.json'))
+    inss: readJson(path.join(rulesDir, 'inss.json')),
+    avisoPrevio: readJson(path.join(rulesDir, 'aviso-previo.json'))
   };
 }
 
@@ -112,9 +114,61 @@ function transformInss(ruleSet) {
   };
 }
 
+function validateAvisoPrevioRules(ruleSet) {
+  if (!ruleSet || ruleSet.ruleId !== 'aviso-previo' || ruleSet.version !== '1.0.0-rc.2') {
+    throw new Error('Regra canonica de aviso previo desconhecida ou sem versao registrada.');
+  }
+  if (ruleSet.reviewStatus !== 'LEGAL_REVIEW_RESOLVED' || ruleSet.status !== 'candidate') {
+    throw new Error('Regra de aviso previo ainda nao esta juridicamente reconciliada.');
+  }
+  const payload = ruleSet.projectionPayload;
+  if (!payload || payload.ruleVersion !== ruleSet.version) {
+    throw new Error('projectionPayload de aviso previo ausente ou fora de versao.');
+  }
+  [
+    'baseDays', 'additionalDaysPerFullYear', 'maximumAdditionalDays', 'maximumTotalDays',
+    'maximumWorkedDays', 'salaryDivisorDays', 'employeeResignationNoticeDays', 'employeeDiscountLimitDays'
+  ].forEach((field) => assertNumber(payload[field], `avisoPrevio.projectionPayload.${field}`));
+  if (payload.employeeResignationProportionality !== false || payload.proportionalExcessIsIndemnified !== true) {
+    throw new Error('Branches juridicos reconciliados de aviso previo nao estao preservados.');
+  }
+  return payload;
+}
+
+function transformAvisoPrevio(ruleSet) {
+  const payload = validateAvisoPrevioRules(ruleSet);
+  return {
+    ruleId: ruleSet.ruleId,
+    ruleVersion: ruleSet.version,
+    sourceProjectionFingerprint: 'd64857fa9777f45246637a88e0894ba658b0440e3edcc4708780832ac55eeb2a',
+    updatedAt: ruleSet.lastReviewedAt,
+    reviewStatus: ruleSet.reviewStatus,
+    legalCorrectionPolicy: ruleSet.legalAssessment.principle,
+    baseDays: payload.baseDays,
+    additionalDaysPerFullYear: payload.additionalDaysPerFullYear,
+    maximumAdditionalDays: payload.maximumAdditionalDays,
+    maximumTotalDays: payload.maximumTotalDays,
+    maximumWorkedDays: payload.maximumWorkedDays,
+    salaryDivisorDays: payload.salaryDivisorDays,
+    employeeResignationNoticeDays: payload.employeeResignationNoticeDays,
+    employeeDiscountLimitDays: payload.employeeDiscountLimitDays,
+    employerTerminationProportionality: payload.employerTerminationProportionality,
+    employeeResignationProportionality: payload.employeeResignationProportionality,
+    proportionalExcessIsIndemnified: payload.proportionalExcessIsIndemnified,
+    presentation: ruleSet.presentation,
+    diasBase: payload.baseDays,
+    diasPorAnoCompleto: payload.additionalDaysPerFullYear,
+    diasPorAno: payload.additionalDaysPerFullYear,
+    limiteDias: payload.maximumTotalDays,
+    diasDescontoPedidoDemissao: payload.employeeDiscountLimitDays,
+    observacao: 'Projecao deterministica de aviso-previo@1.0.0-rc.2.'
+  };
+}
+
 function transformRules(ruleSets) {
   return {
-    ...transformInss(ruleSets.inss)
+    ...transformInss(ruleSets.inss),
+    avisoPrevio: transformAvisoPrevio(ruleSets.avisoPrevio)
   };
 }
 
@@ -131,6 +185,13 @@ function applyInssToAggregate(aggregate, transformed) {
       metodo: transformed.inss.metodo,
       faixas: transformed.inss.faixas
     }
+  };
+}
+
+function applyAvisoPrevioToAggregate(aggregate, transformed) {
+  return {
+    ...aggregate,
+    avisoPrevio: transformed.avisoPrevio
   };
 }
 
@@ -202,17 +263,40 @@ function validateInss(transformed, aggregate) {
   };
 }
 
+function validateAvisoPrevio(transformed, aggregate) {
+  const expected = transformed.avisoPrevio;
+  const actual = aggregate.avisoPrevio;
+  const fields = [
+    'ruleId', 'ruleVersion', 'sourceProjectionFingerprint', 'updatedAt', 'reviewStatus',
+    'legalCorrectionPolicy', 'baseDays', 'additionalDaysPerFullYear', 'maximumAdditionalDays',
+    'maximumTotalDays', 'maximumWorkedDays', 'salaryDivisorDays',
+    'employeeResignationNoticeDays', 'employeeDiscountLimitDays',
+    'employerTerminationProportionality', 'employeeResignationProportionality',
+    'proportionalExcessIsIndemnified'
+  ];
+  const checks = fields.map((field) => ({
+    label: field,
+    pass: actual && JSON.stringify(actual[field]) === JSON.stringify(expected[field])
+  }));
+  checks.push({ label: 'presentation', pass: actual && JSON.stringify(actual.presentation) === JSON.stringify(expected.presentation) });
+  return { domain: 'AVISO PREVIO', checks, equivalent: checks.every((check) => check.pass) };
+}
+
 function buildGenerationPlan(ruleSets, aggregate) {
   const transformed = transformRules(ruleSets);
-  const nextAggregate = applyInssToAggregate(aggregate, transformed);
+  const nextAggregate = applyAvisoPrevioToAggregate(applyInssToAggregate(aggregate, transformed), transformed);
   const beforeReport = validateInss(transformed, aggregate);
   const afterReport = validateInss(transformed, nextAggregate);
+  const avisoBeforeReport = validateAvisoPrevio(transformed, aggregate);
+  const avisoAfterReport = validateAvisoPrevio(transformed, nextAggregate);
 
   return {
     transformed,
     nextAggregate,
     beforeReport,
     afterReport,
+    avisoBeforeReport,
+    avisoAfterReport,
     changed: JSON.stringify(aggregate) !== JSON.stringify(nextAggregate)
   };
 }
@@ -233,9 +317,9 @@ function printDomainReport(report) {
 function printUsage() {
   console.log('Uso: node scripts/transform-rules.js [--check|--generate|--dry-run]');
   console.log('');
-  console.log('Sem argumentos ou --check: valida se a regra INSS canonica esta sincronizada com o agregador.');
+  console.log('Sem argumentos ou --check: valida se INSS e aviso previo canonicos estao sincronizados com o agregador.');
   console.log('--dry-run: calcula a geracao derivada sem escrever arquivos.');
-  console.log('--generate: atualiza somente os campos derivados de INSS/salarioMinimo no agregador quando necessario.');
+  console.log('--generate: atualiza somente os campos derivados de INSS/salarioMinimo e aviso previo no agregador.');
 }
 
 function runCheck() {
@@ -244,9 +328,12 @@ function runCheck() {
     const aggregate = readJson(FILES.aggregate);
     const transformed = transformRules(ruleSets);
     const report = validateInss(transformed, aggregate);
+    const avisoReport = validateAvisoPrevio(transformed, aggregate);
 
     printDomainReport(report);
-    return report.equivalent ? 0 : 1;
+    console.log('');
+    printDomainReport(avisoReport);
+    return report.equivalent && avisoReport.equivalent ? 0 : 1;
   } catch (error) {
     console.error(`Erro: ${error.message}`);
     return 1;
@@ -259,14 +346,16 @@ function runGenerate({ dryRun = false } = {}) {
     const aggregate = readJson(FILES.aggregate);
     const plan = buildGenerationPlan(ruleSets, aggregate);
 
-    if (!plan.afterReport.equivalent) {
-      console.error('Erro: a geracao derivada nao produziu equivalencia INSS.');
+    if (!plan.afterReport.equivalent || !plan.avisoAfterReport.equivalent) {
+      console.error('Erro: a geracao derivada nao produziu equivalencia governada.');
       return 1;
     }
 
     printDomainReport(plan.beforeReport);
     console.log('');
-    console.log('Geracao derivada INSS:');
+    printDomainReport(plan.avisoBeforeReport);
+    console.log('');
+    console.log('Geracao derivada INSS + Aviso Previo:');
 
     if (!plan.changed) {
       console.log('NO_CHANGE_REQUIRED');
@@ -325,6 +414,7 @@ if (require.main === module) {
 module.exports = {
   FILES,
   applyInssToAggregate,
+  applyAvisoPrevioToAggregate,
   buildGenerationPlan,
   compareInss,
   loadRuleSets,
@@ -332,7 +422,10 @@ module.exports = {
   runCheck,
   runGenerate,
   transformInss,
+  transformAvisoPrevio,
   transformRules,
   validateInss,
-  validateInssRules
+  validateInssRules,
+  validateAvisoPrevio,
+  validateAvisoPrevioRules
 };

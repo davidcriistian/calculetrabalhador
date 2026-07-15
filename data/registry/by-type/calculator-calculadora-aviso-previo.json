@@ -1,0 +1,27 @@
+{
+  "id": "calculadora-aviso-previo",
+  "assetId": "calculator:calculadora-aviso-previo",
+  "type": "calculator",
+  "slug": "calculadora-aviso-previo",
+  "status": "published",
+  "approvalStatus": "approved-explicit-controlled-migration",
+  "relationshipStatus": "existing-cluster-preserved",
+  "publishingStatus": "published-local-migration-not-deployed",
+  "runtimeStatus": "catalog-consumed",
+  "owner": "core-platform",
+  "version": "1.0.0",
+  "calculatorStandard": "1.3",
+  "calculatorExperienceContract": "1.2.0",
+  "migrationContract": "1.0.0",
+  "governedRule": "aviso-previo@1.0.0-rc.2",
+  "references": [
+    "/calculadora-aviso-previo/index.html",
+    "/data/rules/aviso-previo.json",
+    "/data/core/update/aviso-previo-projection.contract.json",
+    "/data/operations/reports/end-to-end/migrate-calculator-calculadora-aviso-previo/final-operation-report.json"
+  ],
+  "notes": [
+    "Existing URL, SEO identity, useful editorial heritage and internal links are preserved.",
+    "The public asset file is migrated locally; deploy and external publication are outside this operation."
+  ]
+}
