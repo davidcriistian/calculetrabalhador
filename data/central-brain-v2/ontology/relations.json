@@ -1,0 +1,268 @@
+{
+  "version": "0.1.0",
+  "status": "PILOT_VALIDATED",
+  "relationTypes": [
+    {
+      "id": "applies-to",
+      "meaning": "applies to",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "derived-from",
+      "meaning": "derived from",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "effect-of",
+      "meaning": "effect of",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "initiates",
+      "meaning": "initiates",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "is-a",
+      "meaning": "is a",
+      "transitive": true,
+      "symmetric": false
+    },
+    {
+      "id": "modifies",
+      "meaning": "modifies",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "occurs-during",
+      "meaning": "occurs during",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "part-of",
+      "meaning": "part of",
+      "transitive": true,
+      "symmetric": false
+    },
+    {
+      "id": "participates-in",
+      "meaning": "participates in",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "qualifies",
+      "meaning": "qualifies",
+      "transitive": false,
+      "symmetric": false
+    },
+    {
+      "id": "relates-to",
+      "meaning": "relates to",
+      "transitive": false,
+      "symmetric": true
+    },
+    {
+      "id": "scope-of",
+      "meaning": "scope of",
+      "transitive": false,
+      "symmetric": false
+    }
+  ],
+  "items": [
+    {
+      "id": "ONT-REL-001",
+      "fromConceptId": "CPT-AVP-002",
+      "relation": "is-a",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-002",
+      "fromConceptId": "CPT-AVP-003",
+      "relation": "is-a",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491",
+        "SRC-TST-OJ-SDI1-82"
+      ]
+    },
+    {
+      "id": "ONT-REL-003",
+      "fromConceptId": "CPT-AVP-004",
+      "relation": "qualifies",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-LEI12506-2011"
+      ]
+    },
+    {
+      "id": "ONT-REL-004",
+      "fromConceptId": "CPT-AVP-005",
+      "relation": "part-of",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491",
+        "SRC-BR-LEI12506-2011"
+      ]
+    },
+    {
+      "id": "ONT-REL-005",
+      "fromConceptId": "CPT-AVP-006",
+      "relation": "initiates",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-006",
+      "fromConceptId": "CPT-AVP-007",
+      "relation": "effect-of",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491",
+        "SRC-TST-OJ-SDI1-82"
+      ]
+    },
+    {
+      "id": "ONT-REL-007",
+      "fromConceptId": "CPT-AVP-008",
+      "relation": "derived-from",
+      "toConceptId": "CPT-AVP-005",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-OJ-SDI1-82",
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-008",
+      "fromConceptId": "CPT-AVP-008",
+      "relation": "effect-of",
+      "toConceptId": "CPT-AVP-003",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-OJ-SDI1-82",
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-009",
+      "fromConceptId": "CPT-AVP-009",
+      "relation": "applies-to",
+      "toConceptId": "CPT-AVP-002",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-010",
+      "fromConceptId": "CPT-AVP-010",
+      "relation": "relates-to",
+      "toConceptId": "CPT-AVP-003",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-SUMULA-276",
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-011",
+      "fromConceptId": "CPT-AVP-010",
+      "relation": "relates-to",
+      "toConceptId": "CPT-AVP-012",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-SUMULA-276",
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-012",
+      "fromConceptId": "CPT-AVP-011",
+      "relation": "relates-to",
+      "toConceptId": "CPT-AVP-012",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-SUMULA-276"
+      ]
+    },
+    {
+      "id": "ONT-REL-013",
+      "fromConceptId": "CPT-AVP-012",
+      "relation": "qualifies",
+      "toConceptId": "CPT-AVP-011",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-SUMULA-276"
+      ]
+    },
+    {
+      "id": "ONT-REL-014",
+      "fromConceptId": "CPT-AVP-012",
+      "relation": "qualifies",
+      "toConceptId": "CPT-AVP-010",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-TST-SUMULA-276"
+      ]
+    },
+    {
+      "id": "ONT-REL-015",
+      "fromConceptId": "CPT-AVP-013",
+      "relation": "modifies",
+      "toConceptId": "CPT-AVP-006",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-016",
+      "fromConceptId": "CPT-AVP-014",
+      "relation": "occurs-during",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-017",
+      "fromConceptId": "CPT-AVP-015",
+      "relation": "participates-in",
+      "toConceptId": "CPT-AVP-006",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    },
+    {
+      "id": "ONT-REL-018",
+      "fromConceptId": "CPT-AVP-016",
+      "relation": "scope-of",
+      "toConceptId": "CPT-AVP-001",
+      "status": "validated",
+      "evidenceSourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ]
+    }
+  ]
+}

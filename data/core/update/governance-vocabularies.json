@@ -1,0 +1,58 @@
+{
+  "id": "governance-vocabularies",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "updatedAt": "2026-07-19",
+  "vocabularies": {
+    "runtimeStatus": [
+      "governance-only",
+      "evidence-only",
+      "planning-only",
+      "analysis-only",
+      "inactive",
+      "active"
+    ],
+    "generatedStatus": [
+      "generated-read-only",
+      "draft-proposal",
+      "review-ready",
+      "rejected",
+      "blocked-evidence-incomplete",
+      "blocked-validator-failure",
+      "approved-plan-read-only",
+      "blocked-awaiting-approval",
+      "blocked-invalid-approval",
+      "generated-internal-report"
+    ],
+    "referenceStatus": [
+      "resolved",
+      "ambiguous",
+      "unresolved",
+      "invalid"
+    ],
+    "referenceClassification": [
+      "RESOLVED_PHYSICAL_FILE",
+      "AMBIGUOUS_REFERENCE",
+      "INVALID_REFERENCE",
+      "LOGICAL_ID_WITHOUT_PHYSICAL_PATH",
+      "BARE_IDENTIFIER",
+      "UNRESOLVED_PATH_REFERENCE"
+    ],
+    "impactLevel": [
+      "CRITICAL",
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "UNRESOLVED"
+    ],
+    "certificationLevel": [
+      "DISCOVERED",
+      "COMPATIBLE",
+      "TRACEABLE",
+      "GOVERNED"
+    ]
+  },
+  "compatibilityNotes": {
+    "generated-internal-report": "Legacy generated status accepted with warning; new Phase 8 artifacts must use generated-read-only."
+  }
+}

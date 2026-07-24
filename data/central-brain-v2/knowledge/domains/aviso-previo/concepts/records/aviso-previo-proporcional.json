@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-004",
+  "domainId": "aviso-previo",
+  "canonicalName": "Aviso-prévio proporcional",
+  "slug": "aviso-previo-proporcional",
+  "semanticType": "duration",
+  "definition": {
+    "text": "Dimensão temporal do aviso-prévio que considera o tempo de serviço, preservado o mínimo constitucional e observado o limite legal.",
+    "nature": "normative-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CF1988-ART7-XXI",
+      "pinpoints": [
+        "art. 7º, XXI"
+      ],
+      "support": "Proporcionalidade e mínimo."
+    },
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "pinpoints": [
+        "art. 1º e parágrafo único"
+      ],
+      "support": "Critério legal de acréscimo e limite."
+    }
+  ],
+  "aliases": [
+    "aviso proporcional"
+  ],
+  "relations": [
+    {
+      "type": "qualifies",
+      "targetConceptId": "CPT-AVP-001",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

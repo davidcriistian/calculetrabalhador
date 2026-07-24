@@ -1,0 +1,108 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.0.0",
+  "acyclic": true,
+  "nodes": [
+    "PROJ-AP-001",
+    "PROJ-AP-002",
+    "PROJ-AP-003",
+    "PROJ-AP-004",
+    "PROJ-AP-005",
+    "PROJ-AP-006",
+    "PROJ-AP-007",
+    "PROJ-AP-008",
+    "PROJ-AP-009",
+    "PROJ-AP-010",
+    "PROJ-AP-011",
+    "PROJ-AP-012",
+    "PROJ-AP-013",
+    "PROJ-AP-014",
+    "PROJ-AP-015",
+    "PROJ-AP-016"
+  ],
+  "edges": [
+    {
+      "from": "PROJ-AP-001",
+      "to": "PROJ-AP-002",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-001",
+      "to": "PROJ-AP-003",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-003",
+      "to": "PROJ-AP-004",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-004",
+      "to": "PROJ-AP-005",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-002",
+      "to": "PROJ-AP-006",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-002",
+      "to": "PROJ-AP-007",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-001",
+      "to": "PROJ-AP-008",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-002",
+      "to": "PROJ-AP-008",
+      "requirement": "optional"
+    },
+    {
+      "from": "PROJ-AP-003",
+      "to": "PROJ-AP-008",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-004",
+      "to": "PROJ-AP-008",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-005",
+      "to": "PROJ-AP-008",
+      "requirement": "required"
+    },
+    {
+      "from": "PROJ-AP-006",
+      "to": "PROJ-AP-008",
+      "requirement": "optional"
+    },
+    {
+      "from": "PROJ-AP-007",
+      "to": "PROJ-AP-008",
+      "requirement": "optional"
+    }
+  ],
+  "topologicalOrder": [
+    "PROJ-AP-001",
+    "PROJ-AP-002",
+    "PROJ-AP-003",
+    "PROJ-AP-004",
+    "PROJ-AP-005",
+    "PROJ-AP-006",
+    "PROJ-AP-007",
+    "PROJ-AP-008",
+    "PROJ-AP-009",
+    "PROJ-AP-010",
+    "PROJ-AP-011",
+    "PROJ-AP-012",
+    "PROJ-AP-013",
+    "PROJ-AP-014",
+    "PROJ-AP-015",
+    "PROJ-AP-016"
+  ]
+}

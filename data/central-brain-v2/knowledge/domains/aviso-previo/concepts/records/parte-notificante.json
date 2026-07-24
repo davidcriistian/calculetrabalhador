@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-015",
+  "domainId": "aviso-previo",
+  "canonicalName": "Parte notificante",
+  "slug": "parte-notificante",
+  "semanticType": "party-role",
+  "definition": {
+    "text": "Parte da relação de emprego que comunica a intenção de extinguir o contrato e cuja identidade influencia prazo, modalidade e efeitos do aviso-prévio.",
+    "nature": "terminological-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 487 e parágrafos"
+      ],
+      "support": "Distingue aviso dado pelo empregador e pelo empregado."
+    }
+  ],
+  "aliases": [
+    "quem concede o aviso"
+  ],
+  "relations": [
+    {
+      "type": "participates-in",
+      "targetConceptId": "CPT-AVP-006",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

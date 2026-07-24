@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "version": "2.7.0-sprint5.6.7-phaseE",
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "manifestFiles": 344,
+    "manifestRootHash": "sha256:0d7d3718e0ccce756e06c97443041cfaa508ee86abb8d2d2a902a82c18ab3ce7",
+    "auditEvents": 18,
+    "approvalRecords": 0,
+    "federationContracts": 3,
+    "legacyPlaceholders": 8,
+    "classifiedLegacyPlaceholders": 8,
+    "checkedJsonFiles": 279,
+    "domains": 29,
+    "sources": 14,
+    "rules": 15,
+    "legacyProjections": 0,
+    "registeredCanonicalProjections": 17,
+    "canonicalProjections": 17,
+    "projections": 17,
+    "dependencies": 70,
+    "consumers": 22,
+    "ingestionBatches": 0,
+    "domainPackages": 1,
+    "concepts": 16
+  },
+  "readiness": {
+    "platformReadyForControlledIngestion": true,
+    "runtimeAuthority": false,
+    "legalKnowledgeLoaded": true
+  }
+}

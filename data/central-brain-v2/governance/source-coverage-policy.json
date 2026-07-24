@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "status": "active",
+  "updatedAt": "2026-07-22T03:00:00.000Z",
+  "requirements": {
+    "everyVerifiedSourceMustBeMappedOrExcepted": true,
+    "allowedExceptionStatuses": [
+      "federated",
+      "scope-boundary",
+      "background-only"
+    ],
+    "emptyChecksumForbidden": true,
+    "checksumScopeMustBeDisclosed": true
+  },
+  "runtimeAuthority": false
+}

@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/manifest.json",
+      "stage": "PROJECTIONS_LOADED",
+      "consumerReady": false
+    }
+  ],
+  "projectionCatalog": "./projections/global-projection-catalog.json",
+  "sharedVocabulary": "./shared/vocabulary.json",
+  "federationCatalog": "./federation/index.json",
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-005",
+  "domainId": "aviso-previo",
+  "canonicalName": "Prazo do aviso-prévio",
+  "slug": "prazo-do-aviso-previo",
+  "semanticType": "duration",
+  "definition": {
+    "text": "Intervalo juridicamente atribuído ao aviso-prévio, contado segundo a modalidade, a parte notificante, o tempo de serviço e a legislação temporalmente aplicável.",
+    "nature": "normative-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 487"
+      ],
+      "support": "Prazos gerais."
+    },
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "pinpoints": [
+        "art. 1º"
+      ],
+      "support": "Proporcionalidade."
+    }
+  ],
+  "aliases": [
+    "duração do aviso"
+  ],
+  "relations": [
+    {
+      "type": "part-of",
+      "targetConceptId": "CPT-AVP-001",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

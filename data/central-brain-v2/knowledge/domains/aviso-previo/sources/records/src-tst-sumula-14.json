@@ -1,0 +1,41 @@
+{
+  "id": "SRC-TST-SUMULA-14",
+  "type": "official-guidance",
+  "jurisdiction": "BR",
+  "title": "Tribunal Superior do Trabalho — Súmula 14",
+  "officialUrl": "https://www.tst.jus.br/",
+  "publicationDate": "2003-11-21",
+  "effectiveFrom": "2003-11-21",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-22T14:40:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.tst.jus.br/",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Súmula 14 — efeitos da culpa recíproca.",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-tst-sumula-14.snapshot.json",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:76c2e3e0c0c0dabd4b40b9e20bccab2483b5483ef3080fcba4271ac7be27fefa",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:76c2e3e0c0c0dabd4b40b9e20bccab2483b5483ef3080fcba4271ac7be27fefa",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária catalogada em URL oficial.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+    "Revisão jurídica formal permanece pendente."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "phase": "E",
+  "title": "Internal Consistency Corrections",
+  "status": "completed-pending-formal-legal-review",
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "correctedNonConformities": [
+    "NC-E-001",
+    "NC-E-002",
+    "NC-E-003",
+    "NC-E-004",
+    "NC-E-005",
+    "NC-E-006"
+  ],
+  "safety": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "formalLegalApproval": false
+  },
+  "implementedAt": "2026-07-24T00:30:00.000Z",
+  "validation": {
+    "validator": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    "structuralTests": {
+      "passed": 124,
+      "failed": 0
+    },
+    "projectionRuntime": {
+      "passed": 46,
+      "failed": 0
+    },
+    "declaredCases": {
+      "passed": 44,
+      "failed": 0
+    },
+    "manifest": {
+      "fileCount": 344,
+      "rootHash": "sha256:0d7d3718e0ccce756e06c97443041cfaa508ee86abb8d2d2a902a82c18ab3ce7"
+    }
+  },
+  "notes": [
+    "Manifest-binding evidence files are detached from manifest scope to avoid cryptographic self-reference.",
+    "LEGAL_REVIEW and CONSUMER_PROMOTION remain PENDING."
+  ]
+}

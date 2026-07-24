@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "status": "INTERFACES_DEFINED_TARGETS_UNAVAILABLE",
+  "updatedAt": "2026-07-22T03:00:00.000Z",
+  "items": [
+    {
+      "contractId": "FED-AP-FGTS",
+      "path": "./contracts/FED-AP-FGTS.json",
+      "sourceDomainId": "aviso-previo",
+      "targetDomainId": "fgts",
+      "status": "interface-defined"
+    },
+    {
+      "contractId": "FED-AP-FERIAS",
+      "path": "./contracts/FED-AP-FERIAS.json",
+      "sourceDomainId": "aviso-previo",
+      "targetDomainId": "ferias",
+      "status": "interface-defined"
+    },
+    {
+      "contractId": "FED-AP-13",
+      "path": "./contracts/FED-AP-13.json",
+      "sourceDomainId": "aviso-previo",
+      "targetDomainId": "decimo-terceiro",
+      "status": "interface-defined"
+    }
+  ]
+}

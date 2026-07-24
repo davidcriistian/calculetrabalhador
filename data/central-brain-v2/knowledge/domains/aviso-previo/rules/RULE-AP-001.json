@@ -1,0 +1,121 @@
+{
+  "id": "RULE-AP-001",
+  "domainId": "aviso-previo",
+  "title": "Obrigação geral de aviso-prévio nos contratos por prazo indeterminado",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-001-001",
+      "validFrom": "1988-10-05",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-001-A",
+          "allOf": [
+            "contrato regido pelo escopo clt-geral",
+            "contrato por prazo indeterminado",
+            "ruptura sem justo motivo por iniciativa de uma das partes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-001-A",
+          "when": "contrato por prazo determinado sem cláusula assecuratória aplicável",
+          "effect": "fora do escopo desta regra"
+        },
+        {
+          "id": "EXC-AP-001-B",
+          "when": "emprego doméstico",
+          "effect": "aplicar pacote jurídico próprio da LC 150/2015"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "Na ruptura sem justo motivo de contrato de trabalho por prazo indeterminado, a parte que toma a iniciativa deve conceder aviso-prévio; a ausência do aviso produz as consequências substitutivas previstas em lei.",
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-006",
+        "CPT-AVP-015",
+        "CPT-AVP-016"
+      ],
+      "factsRequired": [
+        "FACT-CONTRACT-INDEFINITE",
+        "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+        "FACT-NOTIFYING-PARTY"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-001-A",
+          "type": "duty",
+          "description": "constitui dever de pré-aviso da parte notificante"
+        },
+        {
+          "id": "EFFECT-AP-001-B",
+          "type": "substitution",
+          "description": "a falta do aviso pelo empregador gera direito aos salários correspondentes e integração ao tempo de serviço"
+        },
+        {
+          "id": "EFFECT-AP-001-C",
+          "type": "deduction",
+          "description": "a falta do aviso pelo empregado pode autorizar desconto dos salários correspondentes"
+        }
+      ],
+      "interpretiveLimits": [
+        "Não decide, isoladamente, a duração proporcional, a modalidade nem a data projetada.",
+        "Não abrange o regime doméstico neste pacote."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CF1988-ART7-XXI",
+          "pinpoint": "art. 7º, XXI"
+        },
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, caput e §§ 1º e 2º"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-001-01",
+          "given": [
+            "contrato por prazo indeterminado",
+            "dispensa sem justa causa pelo empregador"
+          ],
+          "expected": "regra aplicável"
+        },
+        {
+          "id": "TC-AP-001-02",
+          "given": [
+            "contrato por prazo determinado sem cláusula assecuratória"
+          ],
+          "expected": "regra não aplicável"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:9837cadfede7e73f30e4e53bcbdfd0620f8865e20c70f0e337ac52e51a4fd62e"
+    }
+  ],
+  "aliases": [
+    "existencia-do-aviso-previo",
+    "obrigacao-de-preavisar"
+  ],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Define o dever jurídico de comunicação antecipada da ruptura imotivada do contrato por prazo indeterminado e as consequências substitutivas da sua ausência."
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../../../schemas/domain-taxonomy.schema.json",
+  "domainId": "aviso-previo",
+  "classification": {
+    "root": "direito-do-trabalho",
+    "branch": "extincao-do-contrato-de-trabalho",
+    "category": "comunicacao-previa-de-desligamento"
+  },
+  "tags": [
+    "aviso-previo",
+    "rescisao",
+    "contrato-de-trabalho",
+    "clt",
+    "desligamento"
+  ],
+  "facets": {
+    "regime": [
+      "clt-geral"
+    ],
+    "subject": [
+      "prazo",
+      "modalidade",
+      "proporcionalidade",
+      "projecao-contratual"
+    ],
+    "consumerTypes": [
+      "calculator",
+      "article",
+      "faq",
+      "api",
+      "automation"
+    ]
+  }
+}

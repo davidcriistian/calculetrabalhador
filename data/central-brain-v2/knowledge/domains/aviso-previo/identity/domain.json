@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schemas/domain-identity.schema.json",
+  "id": "aviso-previo",
+  "canonicalName": "Aviso-Prévio",
+  "shortName": "Aviso-Prévio",
+  "slug": "aviso-previo",
+  "language": "pt-BR",
+  "jurisdiction": "BR",
+  "legalArea": "direito-do-trabalho",
+  "domainType": "legal-calculation-domain",
+  "summary": "Domínio canônico destinado a organizar o conhecimento sobre aviso-prévio nas relações de emprego abrangidas pelo escopo definido.",
+  "scope": {
+    "includedRegimes": [
+      "clt-geral"
+    ],
+    "excludedRegimes": [
+      "emprego-domestico"
+    ],
+    "exclusionReason": "O emprego doméstico será modelado em pacote próprio para evitar mistura de regimes jurídicos e fontes normativas.",
+    "geographicScope": "Brasil"
+  },
+  "boundaries": {
+    "includes": [
+      "identidade",
+      "fontes",
+      "conceitos",
+      "regras",
+      "excecoes",
+      "vigencias",
+      "projecoes",
+      "dependencias",
+      "testes",
+      "governanca"
+    ],
+    "doesNotInclude": [
+      "interface de calculadora",
+      "conteudo editorial",
+      "HTML",
+      "CSS",
+      "mensagens de interface",
+      "estado de publicação do portal"
+    ]
+  },
+  "status": "active",
+  "maturity": "CONCEPTS_VALIDATED",
+  "consumerReady": false,
+  "version": "0.3.0",
+  "owner": "Calcule Trabalhador",
+  "createdAt": "2026-07-21T15:30:00-03:00",
+  "updatedAt": "2026-07-21T20:30:00.000Z"
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-PROJECTED-TERMINATION-DATE",
+  "domainId": "aviso-previo",
+  "key": "projected_termination_date",
+  "label": "Data projetada de término",
+  "description": "Data civil de término contratual resultante da integração jurídica do período de aviso ao tempo de serviço.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-004"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "period-end",
+    "referenceRole": "projected-termination",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "derived-trace"
+    ],
+    "minimumConfidence": 1.0,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "internal",
+    "retentionClass": "audit-required",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-007",
+    "CPT-AVP-008"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-COMMUNICATION-DATE",
+      "FACT-NOTICE-DURATION"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DATA-006",
+      "severity": "error",
+      "assertion": "projected_termination_date >= notice_communication_date",
+      "message": "A data projetada não pode anteceder a comunicação do aviso.",
+      "relatedFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, § 1º",
+      "relevance": "Integra o período correspondente ao tempo de serviço."
+    },
+    {
+      "sourceId": "SRC-TST-OJ-SDI1-82",
+      "pinpoint": "OJ 82 da SDI-1",
+      "relevance": "Orienta a anotação da data de saída considerando a projeção do aviso indenizado."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:f1938b9664ac587861ed1feaa6923f4208264fce9577a1b7f6e5fe0c338cb1c6"
+}

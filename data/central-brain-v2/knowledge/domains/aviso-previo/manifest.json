@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../schemas/domain-package.schema.json",
+  "domainId": "aviso-previo",
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "stage": "PROJECTIONS_LOADED",
+  "consumerReady": false,
+  "runtimeAuthority": false,
+  "legalContentStatus": "VALIDATED",
+  "sections": {
+    "identity": "./identity/domain.json",
+    "aliases": "./identity/aliases.json",
+    "taxonomy": "./identity/taxonomy.json",
+    "glossary": "./identity/glossary.json",
+    "relationships": "./identity/relationships.json",
+    "maturity": "./governance/maturity.json",
+    "sources": "./sources/index.json",
+    "concepts": "./concepts/index.json",
+    "rules": "./rules/index.json",
+    "facts": "./facts/index.json",
+    "projections": "../../projections/domains/aviso-previo/index.json",
+    "federation": "../../federation/index.json",
+    "sharedVocabulary": "../../shared/vocabulary.json",
+    "normativeBaseline": "./governance/normative-baseline.json"
+  },
+  "reservedSections": {
+    "sources": "./sources/",
+    "concepts": "./concepts/",
+    "rules": "./rules/",
+    "exceptions": "./exceptions/",
+    "temporal": "./temporal/",
+    "projections": "./projections/",
+    "dependencies": "./dependencies/",
+    "tests": "./tests/",
+    "facts": "./facts/"
+  },
+  "createdAt": "2026-07-21T15:30:00-03:00",
+  "createdBy": "central-brain-domain-ingestion",
+  "notes": [
+    "Canonical identity, sources, concepts, facts, fifteen rules and seventeen legal projections are modeled and technically validated.",
+    "VALIDATED denotes technical completeness against the normative baseline; it does not constitute formal legal approval.",
+    "Normative baseline defines scope, completion criteria and overlap policy.",
+    "Projection runtime is executable in non-authoritative review mode; runtimeAuthority and consumerReady remain false.",
+    "Cross-domain FGTS incidence is emitted as a federated requirement and is not calculated in this domain.",
+    "Consumers remain on legacy authority pending formal legal promotion."
+  ]
+}

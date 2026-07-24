@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": "errors",
+      "path": "./errors.js"
+    },
+    {
+      "id": "integrity",
+      "path": "./integrity.js"
+    },
+    {
+      "id": "temporal-selector",
+      "path": "./temporal-selector.js"
+    },
+    {
+      "id": "projection-engine",
+      "path": "./projection-engine.js"
+    },
+    {
+      "id": "loader",
+      "path": "./loader.js"
+    },
+    {
+      "id": "governance-engine",
+      "path": "./governance-engine.js"
+    },
+    {
+      "id": "brain-interface",
+      "path": "./brain.js"
+    },
+    {
+      "id": "ingestion-engine",
+      "path": "./ingestion-engine.js"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

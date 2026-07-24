@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rule-version.schema.json",
+  "title": "Temporal Rule Version",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "versionId",
+    "validFrom",
+    "validTo",
+    "recordedAt",
+    "recordedUntil",
+    "status",
+    "sourceIds",
+    "parameters",
+    "conditions",
+    "exceptions",
+    "approval",
+    "approvalStatus",
+    "contentFingerprint",
+    "normativeStatement",
+    "conceptIds",
+    "factsRequired",
+    "legalEffects",
+    "interpretiveLimits",
+    "sourcePinpoints",
+    "testCases"
+  ],
+  "properties": {
+    "versionId": {
+      "type": "string",
+      "pattern": "^VER-[A-Z0-9-]+$"
+    },
+    "validFrom": {
+      "type": "string",
+      "format": "date"
+    },
+    "validTo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "recordedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recordedUntil": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "superseded",
+        "revoked"
+      ]
+    },
+    "sourceIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^SRC-[A-Z0-9-]+$"
+      }
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "conditions": {
+      "type": "array"
+    },
+    "exceptions": {
+      "type": "array"
+    },
+    "formula": {},
+    "rounding": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "approval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "approvedBy": {
+          "type": "string"
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reviewId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "approvedBy",
+        "approvedAt",
+        "reviewId"
+      ],
+      "additionalProperties": false
+    },
+    "contentFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "supersedesVersionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "normativeStatement": {
+      "type": "string",
+      "minLength": 40
+    },
+    "conceptIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^CPT-[A-Z0-9-]+$"
+      }
+    },
+    "factsRequired": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^FACT-[A-Z0-9-]+$"
+      }
+    },
+    "legalEffects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^EFFECT-[A-Z0-9-]+$"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "interpretiveLimits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "sourcePinpoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sourceId",
+          "pinpoint"
+        ],
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "pattern": "^SRC-[A-Z0-9-]+$"
+          },
+          "pinpoint": {
+            "type": "string",
+            "minLength": 2
+          }
+        }
+      }
+    },
+    "testCases": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "given",
+          "expected"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^TC-[A-Z0-9-]+$"
+          },
+          "given": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 5
+          }
+        }
+      }
+    },
+    "approvalStatus": {
+      "type": "string",
+      "enum": [
+        "NOT_SUBMITTED",
+        "SUBMITTED",
+        "UNDER_LEGAL_REVIEW",
+        "LEGAL_APPROVED",
+        "LEGAL_REJECTED",
+        "SUPERSEDED"
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "PROJ-AP-010",
+  "domainId": "aviso-previo",
+  "title": "Rescisão indireta reconhecida",
+  "purpose": "Projetar de forma declarativa os efeitos de rescisão indireta reconhecida.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-008",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-010-A",
+        "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-010-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-010-X1",
+          "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-008"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "indirect_termination_effect",
+      "valueType": "enum",
+      "semantics": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão h",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-008-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-010-A",
+    "TC-PROJ-AP-010-B"
+  ],
+  "contentFingerprint": "sha256:98248328f7a0518e1fe5ebdcb45587d9300b1ab8f53e37cfe3523619bea8bb9a"
+}

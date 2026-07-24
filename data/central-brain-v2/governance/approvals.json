@@ -1,0 +1,7 @@
+{
+  "version": "1.1.0",
+  "kind": "approval-records",
+  "items": [],
+  "authority": false,
+  "note": "Approval records are required before legal activation. Authors submit; legalReviewer, technicalReviewer and approver approve. No canonical rule is formally approved."
+}

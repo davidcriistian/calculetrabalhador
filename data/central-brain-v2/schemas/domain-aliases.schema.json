@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-aliases.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "canonicalTerm",
+    "items",
+    "normalization"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "canonicalTerm": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "value",
+          "kind",
+          "status"
+        ],
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "accepted",
+              "search-only",
+              "deprecated"
+            ]
+          }
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    }
+  }
+}

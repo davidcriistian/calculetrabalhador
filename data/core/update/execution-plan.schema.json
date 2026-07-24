@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/execution-plan.schema.json",
+  "title": "Controlled Execution Plan",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "generatedAt",
+    "input",
+    "approval",
+    "scope",
+    "preconditions",
+    "operations",
+    "validationSequence",
+    "rollbackPlan",
+    "publicationGate",
+    "safety"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "blocked-awaiting-approval",
+        "blocked-invalid-approval",
+        "approved-plan-read-only"
+      ]
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "input": {
+      "type": "object"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "preconditions": {
+      "type": "array"
+    },
+    "operations": {
+      "type": "array"
+    },
+    "validationSequence": {
+      "type": "array"
+    },
+    "rollbackPlan": {
+      "type": "object"
+    },
+    "publicationGate": {
+      "type": "object"
+    },
+    "safety": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

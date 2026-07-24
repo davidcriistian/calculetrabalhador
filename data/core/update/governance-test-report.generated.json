@@ -1,0 +1,129 @@
+{
+  "id": "governance-test-report",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:47:48.631Z",
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "all-json-valid",
+      "status": "PASS",
+      "details": {
+        "jsonCount": 1560,
+        "jsonErrors": []
+      }
+    },
+    {
+      "id": "structural-integrity-pass",
+      "status": "PASS",
+      "details": {
+        "exitCode": 0,
+        "warnings": [
+          "LEGACY_GENERATED_STATUS:compatibility:generated-internal-report"
+        ],
+        "unexpectedWarnings": []
+      }
+    },
+    {
+      "id": "invalid-semver-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "invalid-date-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "invalid-fingerprint-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "invalid-status-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "open-publication-gate-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "automatic-mutation-enabled-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "duplicate-id-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "broken-resolved-reference-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "unclassified-unresolved-reference-rejected",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "id": "validator-paths-resolve",
+      "status": "PASS",
+      "details": {
+        "summary": {
+          "validators": 3,
+          "resolved": 3,
+          "unresolved": 0,
+          "standalone": 3,
+          "argumentAware": 0
+        }
+      }
+    },
+    {
+      "id": "reference-counts-consistent",
+      "status": "PASS",
+      "details": {
+        "referenceSummary": {
+          "references": 20,
+          "resolved": 5,
+          "ambiguous": 0,
+          "unresolved": 15,
+          "invalid": 0
+        },
+        "classificationEntries": 20
+      }
+    },
+    {
+      "id": "generator-semantic-determinism",
+      "status": "PASS",
+      "details": {
+        "firstExit": 0,
+        "secondExit": 0
+      }
+    },
+    {
+      "id": "protected-files-unchanged",
+      "status": "PASS",
+      "details": {
+        "changed": []
+      }
+    }
+  ],
+  "safety": {
+    "fixturesOnly": true,
+    "sourceRulesModified": false,
+    "publicFilesModified": false,
+    "patchesApplied": 0,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false
+  }
+}

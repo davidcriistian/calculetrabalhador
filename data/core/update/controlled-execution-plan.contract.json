@@ -1,0 +1,87 @@
+{
+  "id": "controlled-execution-plan-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "planning-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Transformar uma análise de impacto aprovada em plano operacional auditável, sem executar escrita, commit, push, deploy ou publicação.",
+  "input": {
+    "required": [
+      "impactAnalysisFile"
+    ],
+    "optional": [
+      "approvalFile",
+      "requestedBy",
+      "changeWindow",
+      "notes"
+    ]
+  },
+  "approvalPolicy": {
+    "approvalRequired": true,
+    "requiredRoles": [
+      "domain-owner",
+      "legal-reviewer",
+      "publishing-owner"
+    ],
+    "allRequiredRolesMustApprove": true,
+    "approvalArtifactSchema": "/data/core/update/execution-approval.schema.json",
+    "expiredApprovalBlocksPlan": true,
+    "ruleMismatchBlocksPlan": true,
+    "impactAnalysisMismatchBlocksPlan": true
+  },
+  "modes": {
+    "DRY_RUN": {
+      "description": "Produz plano e comandos simulados, sem modificar arquivos.",
+      "sourceMutationAllowed": false,
+      "publicMutationAllowed": false,
+      "commitAllowed": false,
+      "pushAllowed": false,
+      "deployAllowed": false
+    },
+    "APPROVED_PLAN": {
+      "description": "Produz plano liberado para execução humana futura, mas ainda não executa ações.",
+      "sourceMutationAllowed": false,
+      "publicMutationAllowed": false,
+      "commitAllowed": false,
+      "pushAllowed": false,
+      "deployAllowed": false
+    }
+  },
+  "outputs": {
+    "planSchema": "/data/core/update/execution-plan.schema.json",
+    "planDirectory": "/data/core/update/execution-plans",
+    "statusValues": [
+      "blocked-awaiting-approval",
+      "blocked-invalid-approval",
+      "approved-plan-read-only"
+    ]
+  },
+  "principles": [
+    "NO_AUTOMATIC_FILE_WRITE",
+    "NO_AUTOMATIC_COMMIT",
+    "NO_AUTOMATIC_PUSH",
+    "NO_AUTOMATIC_DEPLOY",
+    "NO_AUTOMATIC_PUBLICATION",
+    "APPROVALS_ARE_EXPLICIT_ARTIFACTS",
+    "PLAN_IS_AUDIT_ARTIFACT_NOT_AN_EXECUTOR",
+    "ROLLBACK_DEFINED_BEFORE_CHANGE"
+  ],
+  "blockingConditions": [
+    "IMPACT_ANALYSIS_INVALID",
+    "IMPACT_ANALYSIS_UNRESOLVED",
+    "APPROVAL_FILE_MISSING",
+    "APPROVAL_ROLE_MISSING",
+    "APPROVAL_NOT_APPROVED",
+    "APPROVAL_EXPIRED",
+    "APPROVAL_RULE_MISMATCH",
+    "APPROVAL_IMPACT_MISMATCH",
+    "AUTOMATIC_EXECUTION_ATTEMPT",
+    "PUBLIC_RUNTIME_MUTATION"
+  ],
+  "references": {
+    "planner": "/scripts/build-controlled-execution-plan.js",
+    "validator": "/scripts/validate-controlled-execution-plan.js",
+    "impactValidator": "/scripts/validate-governed-impact-analysis.js"
+  }
+}

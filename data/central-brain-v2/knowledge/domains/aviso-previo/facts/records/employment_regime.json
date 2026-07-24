@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-EMPLOYMENT-REGIME",
+  "domainId": "aviso-previo",
+  "key": "employment_regime",
+  "label": "Regime jurídico do vínculo",
+  "description": "Identifica o regime jurídico material aplicável ao vínculo, evitando aplicar automaticamente o pacote CLT geral a relações submetidas a disciplina especial.",
+  "valueType": "enum",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-REGIME-001",
+      "severity": "review",
+      "assertion": "employment_regime != clt-geral",
+      "message": "Regimes diferentes de CLT geral exigem pacote jurídico próprio ou revisão humana.",
+      "relatedFactIds": []
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-LC150-2015-BOUNDARY",
+      "pinpoint": "escopo da LC 150/2015",
+      "relevance": "Delimita que emprego doméstico possui disciplina específica e fica fora do pacote CLT geral."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "allowedValues": [
+    "clt-geral",
+    "domestico-lc150",
+    "rural",
+    "servidor-estatutario",
+    "outro"
+  ],
+  "contentFingerprint": "sha256:6eafee8d266c747f50caff7b888cbc6b535e291a8f997cc3381e7c8d5ae7b9b2"
+}

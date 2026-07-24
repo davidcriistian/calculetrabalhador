@@ -1,0 +1,416 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projection-result.schema.json",
+  "title": "Projection Execution Result",
+  "description": "Auditable deterministic result envelope emitted by the legal Projection Engine.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "executionId",
+    "projectionId",
+    "projectionVersion",
+    "domainId",
+    "caseId",
+    "status",
+    "referenceDate",
+    "brainSnapshotId",
+    "engineVersion",
+    "inputFingerprint",
+    "outputFingerprint",
+    "startedAt",
+    "completedAt",
+    "usedFacts",
+    "missingFacts",
+    "ruleTrace",
+    "exceptionTrace",
+    "dependencyTrace",
+    "outputs",
+    "outputTrace",
+    "explanation",
+    "warnings",
+    "errors"
+  ],
+  "$defs": {
+    "traceDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "decision",
+        "reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "selected",
+            "rejected",
+            "matched",
+            "not-matched",
+            "skipped",
+            "unavailable"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "details": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "properties": {
+    "executionId": {
+      "type": "string",
+      "pattern": "^EXEC-PROJ-[A-Z0-9-]+$"
+    },
+    "projectionId": {
+      "type": "string",
+      "pattern": "^PROJ-[A-Z0-9-]+$"
+    },
+    "projectionVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "caseId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumerId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^CNS-[A-Z0-9-]+$"
+    },
+    "status": {
+      "enum": [
+        "resolved",
+        "not_applicable",
+        "insufficient_facts",
+        "conflict",
+        "ambiguous",
+        "human_review_required",
+        "error"
+      ]
+    },
+    "referenceDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "asKnownAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "brainSnapshotId": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "engineVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "inputFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "outputFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "usedFacts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^FACT-[A-Z0-9-]+$"
+      }
+    },
+    "missingFacts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^FACT-[A-Z0-9-]+$"
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "factId",
+          "reason"
+        ],
+        "properties": {
+          "factId": {
+            "type": "string",
+            "pattern": "^FACT-[A-Z0-9-]+$"
+          },
+          "assertionIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "ruleTrace": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/traceDecision"
+      }
+    },
+    "exceptionTrace": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/traceDecision"
+      }
+    },
+    "dependencyTrace": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/traceDecision"
+      }
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operationId",
+          "operationType",
+          "inputs",
+          "result"
+        ],
+        "properties": {
+          "operationId": {
+            "type": "string"
+          },
+          "operationType": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "object"
+          },
+          "result": {},
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          },
+          "temporalTrace": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "explanation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "legalBasis",
+        "factBasis",
+        "limitations"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "legalBasis": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "ruleId",
+              "versionId"
+            ],
+            "properties": {
+              "ruleId": {
+                "type": "string",
+                "pattern": "^RULE-[A-Z0-9-]+$"
+              },
+              "versionId": {
+                "type": "string",
+                "pattern": "^VER-[A-Z0-9-]+$"
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^SRC-[A-Z0-9-]+$"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "factBasis": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^FACT-[A-Z0-9-]+$"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "humanReadableSteps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "details": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "details": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "outputTrace": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^.+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sourceType",
+            "sourceId",
+            "factIds",
+            "ruleIds",
+            "dependencyIds"
+          ],
+          "properties": {
+            "sourceType": {
+              "enum": [
+                "constant",
+                "fact",
+                "operation",
+                "dependency",
+                "override",
+                "condition"
+              ]
+            },
+            "sourceId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "factIds": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^FACT-[A-Z0-9-]+$"
+              }
+            },
+            "ruleIds": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^RULE-[A-Z0-9-]+$"
+              }
+            },
+            "dependencyIds": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^PROJ-[A-Z0-9-]+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "temporalDecision": {
+      "type": "object"
+    }
+  }
+}

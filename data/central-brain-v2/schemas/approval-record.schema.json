@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "approval-record.schema.json",
+  "title": "Separation-of-Duties Approval Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "entityType",
+    "entityId",
+    "contentFingerprint",
+    "decisions",
+    "reviewScope",
+    "status",
+    "completedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^APR-[A-Z0-9-]+$"
+    },
+    "entityType": {
+      "enum": [
+        "rule-version",
+        "projection",
+        "contract",
+        "schema",
+        "runtime",
+        "governance"
+      ]
+    },
+    "entityId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "actor",
+          "decision",
+          "decidedAt"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "author",
+              "legalReviewer",
+              "technicalReviewer",
+              "approver"
+            ]
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "enum": [
+              "submitted",
+              "approved",
+              "rejected"
+            ]
+          },
+          "decidedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "const": "approved"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "reviewScope": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "normative",
+          "semantic",
+          "projection",
+          "mathematical",
+          "sources",
+          "traceability",
+          "runtime"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-EMPLOYEE-BENEFICIARY",
+  "domainId": "aviso-previo",
+  "key": "employee_beneficiary",
+  "label": "Empregado beneficiário do aviso",
+  "description": "Indica que, no cenário resolvido, o empregado é titular do aviso devido pelo empregador.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-001"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-TERMINATION-INITIATIVE",
+      "FACT-TERMINATION-CAUSE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "pinpoint": "art. 1º e parágrafo único",
+      "relevance": "Define duração mínima, acréscimo por ano de serviço e limite total do aviso devido ao empregado."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:d065116fd575db920026c33080016a48ae3eeae20c54c74cacf6e9afb19f17b3"
+}

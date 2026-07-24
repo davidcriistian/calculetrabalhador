@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/proposal-manifest.schema.json",
+  "title": "Proposal Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "ruleId",
+    "proposals"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft-proposal",
+        "review-ready",
+        "rejected"
+      ]
+    },
+    "ruleId": {
+      "type": "string"
+    },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "targetFile",
+          "changeType",
+          "summary",
+          "patchStatus"
+        ],
+        "properties": {
+          "targetFile": {
+            "type": "string"
+          },
+          "changeType": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "patchStatus": {
+            "enum": [
+              "not-created",
+              "draft-only",
+              "review-ready",
+              "rejected"
+            ]
+          },
+          "proposedPatchFile": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "risk": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

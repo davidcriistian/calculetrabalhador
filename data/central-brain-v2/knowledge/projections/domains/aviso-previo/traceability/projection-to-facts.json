@@ -1,0 +1,128 @@
+{
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "factIds": [
+        "FACT-EMPLOYMENT-REGIME",
+        "FACT-CONTRACT-TERM-TYPE",
+        "FACT-ASSURING-CLAUSE-PRESENT",
+        "FACT-TERMINATION-CAUSE",
+        "FACT-TERMINATION-INITIATIVE",
+        "FACT-NOTIFYING-PARTY"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "factIds": [
+        "FACT-NOTICE-GRANTED",
+        "FACT-NOTICE-MODALITY",
+        "FACT-NOTICE-WORKED",
+        "FACT-PAYMENT-SUBSTITUTION",
+        "FACT-NOTIFYING-PARTY"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "factIds": [
+        "FACT-EMPLOYEE-BENEFICIARY",
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-TERMINATION-DATE",
+        "FACT-LEGAL-REFERENCE-DATE"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "factIds": [
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-NOTICE-DURATION"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "factIds": [
+        "FACT-EMPLOYER-OWES-NOTICE"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "factIds": [
+        "FACT-TERMINATION-BY-EMPLOYER",
+        "FACT-NOTICE-WORKED",
+        "FACT-EMPLOYEE-OPTION-REDUCTION-MODE"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "factIds": [
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "FACT-NEW-EMPLOYMENT-PROVEN",
+        "FACT-NEW-EMPLOYMENT-OBTAINED",
+        "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+        "FACT-NOTICE-COMMUNICATION-DATE"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-008",
+      "factIds": []
+    },
+    {
+      "projectionId": "PROJ-AP-009",
+      "factIds": [
+        "FACT-CONTRACT-TERM-TYPE",
+        "FACT-ASSURING-CLAUSE-PRESENT"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-010",
+      "factIds": [
+        "FACT-INDIRECT-TERMINATION-STATUS",
+        "FACT-JUDICIAL-RECOGNITION-STATUS"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-011",
+      "factIds": [
+        "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+        "FACT-JUDICIAL-RECOGNITION-STATUS"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-012",
+      "factIds": [
+        "FACT-RECIPROCAL-FAULT-RECOGNIZED"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-013",
+      "factIds": [
+        "FACT-TERMINATION-BY-AGREEMENT",
+        "FACT-NOTICE-MODALITY"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-014",
+      "factIds": [
+        "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+        "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+        "FACT-RECONSIDERATION-ACCEPTANCE-MODE"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-015",
+      "factIds": [
+        "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+        "FACT-SERIOUS-MISCONDUCT-PARTY"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-016",
+      "factIds": [
+        "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+        "FACT-SERIOUS-MISCONDUCT-PARTY"
+      ]
+    }
+  ]
+}

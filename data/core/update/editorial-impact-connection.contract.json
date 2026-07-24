@@ -1,0 +1,53 @@
+{
+  "id": "editorial-impact-connection-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "projection-and-validation-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "authority": {
+    "articles": "/data/articles.json",
+    "tools": "/data/tools.json",
+    "contentMap": "/data/maps/content-map.json",
+    "toolsMap": "/data/maps/tools-map.json",
+    "clusters": "/data/brain/clusters.json",
+    "nuclei": "/data/brain/nuclei.json",
+    "ruleConsumers": "/data/core/update/governed-rule-consumers.json"
+  },
+  "derivedOutputs": [
+    "/data/core/update/editorial-impact-matrix.generated.json",
+    "/data/brain/editorial-clusters.generated.json",
+    "/data/brain/editorial-nuclei.generated.json"
+  ],
+  "impactClasses": {
+    "DIRECT": "Article explicitly declares legal rule dependencies.",
+    "INDIRECT_VIA_TOOL": "Article inherits rule impact through its primary calculator.",
+    "UNCONNECTED": "No deterministic rule path is currently available."
+  },
+  "principles": [
+    "NO_ARTICLE_CONTENT_MUTATION",
+    "NO_PUBLIC_UI_MUTATION",
+    "NO_AUTOMATIC_EDITORIAL_REWRITE",
+    "DECLARED_DEPENDENCY_PRECEDES_INFERENCE",
+    "INFER_ONLY_THROUGH_CONFIRMED_TOOL_RELATION",
+    "UNRESOLVED_CONNECTIONS_REMAIN_VISIBLE",
+    "GENERATED_OUTPUTS_ARE_READ_ONLY"
+  ],
+  "blockingConditions": [
+    "ARTICLE_REFERENCE_NOT_FOUND",
+    "TOOL_REFERENCE_NOT_FOUND",
+    "CLUSTER_REFERENCE_NOT_FOUND",
+    "NUCLEUS_REFERENCE_NOT_FOUND",
+    "GENERATED_EDITORIAL_PROJECTION_DRIFT",
+    "PUBLIC_RUNTIME_MUTATION"
+  ],
+  "workflow": [
+    "detect rule change",
+    "find governed calculator consumers",
+    "find direct and inherited article consumers",
+    "aggregate cluster impact",
+    "aggregate nucleus and pillar impact",
+    "emit review plan",
+    "wait for human approval"
+  ]
+}

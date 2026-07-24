@@ -1,29 +1,31 @@
 {
   "id": "calculator-blueprint-template",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/blueprints/schemas/calculator-blueprint.schema.json",
   "status": "template",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Productivity Layer Phase 2.2 - Cluster Blueprint System",
   "description": "Declarative model for future calculator construction.",
   "blueprintType": "calculator",
   "calculatorExperienceContract": {
     "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
     "legacyPolicy": "LEGACY_ACCEPTED_PENDING_MIGRATION"
   },
   "conservativeMigrationContract": {
     "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "appliesTo": ["MIGRATE_EXISTING_CALCULATOR", "MIGRATED_ASSET"],
     "families": ["LEGACY_CALCULATOR_FAMILY_V1", "CANONICAL_DIFF_PATCH"],
     "baselineRequired": true,
     "preserveEditorialHeritage": true,
-    "governedPropagation": "/data/core/update/governed-propagation.contract.json"
+    "governedPropagation": "/data/core/update/governed-propagation.contract.json",
+    "controlledProtocolRequired": true,
+    "batchMigrationIsIndividuallyGated": true
   },
   "clusterRole": {
     "belongsToCluster": true,
@@ -144,14 +146,14 @@
     "required": true,
     "validationReference": "/data/pos/validation/index.json",
     "requiredTypes": ["calculator-structure-validation", "calculation-validation", "governance-validation", "result-experience-validation", "visual-render-validation", "responsive-validation", "accessibility-validation", "seo-validation", "jsonld-validation", "human-approval"],
-    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED", "PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED"]
+    "requiredGates": ["REFERENCE_STUDY_COMPLETE", "CALCULATOR_EXPERIENCE_PLAN_APPROVED", "RESULT_CONTRACT_RESOLVED", "VISUAL_VALIDATION_STATUS_RESOLVED", "ANTI_PATTERN_GATE", "CONTENT_DEPTH_GATE", "BRAND_THEME_RESOLVED", "VISIBLE_UPDATED_AT_RESOLVED", "EDITORIAL_DEPTH_RESOLVED", "RECOMMENDATION_SLOT_RESOLVED", "ADAPTIVE_REPORT_CONTRACT_RESOLVED", "REPORT_RENDER_VALIDATED", "PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED", "CANONICAL_VISUAL_FAMILY_CONFORMANCE", "PUBLIC_ASSET_INTEGRITY", "HUMAN_ACCEPTANCE"]
   },
   "publishing": {
     "required": true,
     "status": "not-ready",
     "requiresManualApproval": true,
     "modifiesProductionInThisPhase": false,
-    "newStandardRule": "VISUAL_VALIDATION_NOT_EXECUTED cannot produce FULL_STANDARD_ACCEPTED",
+    "newStandardRule": "Migration completion requires canonical visual family, public asset integrity, human acceptance and post-deploy validation after publication.",
     "recommendationRule": "Render recommendations only from approved configuration and eligibility evidence"
   },
   "assetCompatibility": {

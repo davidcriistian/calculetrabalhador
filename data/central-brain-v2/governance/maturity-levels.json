@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "levels": [
+    {
+      "id": "STRUCTURE_ONLY",
+      "order": 0,
+      "consumerReady": false,
+      "gate": "Entities and schemas exist."
+    },
+    {
+      "id": "INVENTORIED",
+      "order": 1,
+      "consumerReady": false,
+      "gate": "Legacy knowledge and consumers are inventoried."
+    },
+    {
+      "id": "SOURCES_VALIDATED",
+      "order": 2,
+      "consumerReady": false,
+      "gate": "Official sources are captured and independently verified."
+    },
+    {
+      "id": "RULES_VALIDATED",
+      "order": 3,
+      "consumerReady": false,
+      "gate": "Temporal rules are normalized, tested and approved."
+    },
+    {
+      "id": "PROJECTIONS_VALIDATED",
+      "order": 4,
+      "consumerReady": false,
+      "gate": "Consumer projections are reproducible and schema-valid."
+    },
+    {
+      "id": "READY_FOR_CONSUMERS",
+      "order": 5,
+      "consumerReady": true,
+      "gate": "Shadow comparison passes and activation is approved."
+    }
+  ]
+}

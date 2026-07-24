@@ -1,0 +1,127 @@
+{
+  "$schemaVersion": "1.0.0",
+  "domainId": "aviso-previo",
+  "baselineVersion": "1.0.0",
+  "cutoffDate": "2026-07-22",
+  "status": "TECHNICALLY_VALIDATED_LEGAL_REVIEW_PENDING",
+  "scopeDefinition": {
+    "includedRegime": "clt-geral",
+    "excludedRegimes": [
+      "emprego-domestico"
+    ],
+    "completionRule": "Every IN_SCOPE item must have source, concepts, facts, rules, projections, executable tests and traceability, or be explicitly modeled as a FEDERATED_DEPENDENCY with a contract and emitting projection."
+  },
+  "granularityPolicy": {
+    "unitOfCoverage": "normative-item",
+    "overlapHandling": "specific-record-preferred-for-pinpoint; aggregate-record-retained-for-general-rules; overlapping records count once per normative effect",
+    "records": {
+      "SRC-BR-CLT-ART487-491": {
+        "role": "aggregate-general",
+        "covers": [
+          "487",
+          "488",
+          "489",
+          "490",
+          "491"
+        ]
+      },
+      "SRC-BR-CLT-ART489-491": {
+        "role": "specific-pinpoint",
+        "covers": [
+          "489",
+          "490",
+          "491"
+        ],
+        "doesNotSupersede": "SRC-BR-CLT-ART487-491"
+      }
+    }
+  },
+  "items": [
+    {
+      "sourceId": "SRC-BR-CF1988-ART7-XXI",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART481",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART483",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART484",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART484A",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL",
+      "effectiveFrom": "2017-11-11"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART489-491",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-TST-OJ-SDI1-82",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-14",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-305",
+      "classification": "FEDERATED_DEPENDENCY",
+      "coverage": "FULL",
+      "contractId": "FED-AP-FGTS",
+      "emittingRuleId": "RULE-AP-015",
+      "emittingProjectionId": "PROJ-AP-017"
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-441",
+      "classification": "IN_SCOPE",
+      "coverage": "FULL"
+    },
+    {
+      "sourceId": "SRC-BR-LC150-2015-BOUNDARY",
+      "classification": "SCOPE_BOUNDARY",
+      "coverage": "JUSTIFIED"
+    }
+  ],
+  "metrics": {
+    "cataloguedSources": 14,
+    "inScopeOrFederated": 13,
+    "fullCoverage": 13,
+    "coveragePercent": 100.0
+  },
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "legalApprovalPending": true,
+    "createdAt": "2026-07-22T17:30:00.000Z"
+  }
+}

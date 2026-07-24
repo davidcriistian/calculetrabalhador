@@ -1,0 +1,73 @@
+{
+  "id": "governed-rule-consumer-authority-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "projection-and-validation-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "authority": {
+    "canonicalRegistry": "/data/core/update/governed-rule-consumers.json",
+    "scope": "typed confirmed and declared relations between canonical rules and governed consumers",
+    "manualAuthorities": [
+      "/data/core/update/governed-rule-consumers.json"
+    ],
+    "derivedProjections": [
+      "/data/maps/update-map.generated.json",
+      "/data/brain/dependencies.generated.json"
+    ]
+  },
+  "principles": [
+    "SINGLE_TYPED_RELATION_AUTHORITY",
+    "NO_DESTRUCTIVE_REWRITE_OF_LEGACY_MAPS",
+    "GENERATED_PROJECTIONS_ARE_READ_ONLY",
+    "UNRESOLVED_RELATIONS_REMAIN_VISIBLE",
+    "NO_PUBLIC_RUNTIME_MUTATION",
+    "NO_AUTOMATIC_LEGAL_CLASSIFICATION"
+  ],
+  "minimumRelation": {
+    "required": [
+      "ruleId",
+      "consumerIdOrPath",
+      "consumerType",
+      "relationType",
+      "status"
+    ],
+    "consumerIdOrPath": [
+      "consumerId",
+      "path"
+    ],
+    "recommended": [
+      "relationId",
+      "nucleusId",
+      "domainId",
+      "clusterId",
+      "impactSeverity",
+      "reviewRequired",
+      "validators"
+    ]
+  },
+  "statusVocabulary": {
+    "confirmed": "Relation is verified and may drive deterministic impact analysis.",
+    "declared": "Relation is declared but requires validation.",
+    "legacy": "Legacy consumer exists and migration is pending.",
+    "pending-review": "Human review is required before use.",
+    "rejected": "Relation must not be projected as active."
+  },
+  "projectionPolicy": {
+    "generator": "/scripts/generate-governed-rule-projections.js",
+    "validator": "/scripts/validate-governed-rule-consumer-authority.js",
+    "overwriteLegacyMaps": false,
+    "sortDeterministically": true,
+    "includeRejectedRelations": false,
+    "includeUnresolvedRelations": true,
+    "generatedFilesMayBeEditedManually": false
+  },
+  "blockingConditions": [
+    "CANONICAL_REGISTRY_INVALID",
+    "DUPLICATE_RELATION_ID",
+    "RELATION_WITHOUT_RULE",
+    "RELATION_WITHOUT_CONSUMER_ID_OR_PATH",
+    "GENERATED_PROJECTION_DRIFT",
+    "PUBLIC_RUNTIME_MUTATION"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "RULE-AP-005",
+  "domainId": "aviso-previo",
+  "title": "Redução da jornada durante o aviso promovido pelo empregador",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-005-001",
+      "validFrom": "1983-04-26",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-005-A",
+          "allOf": [
+            "rescisão promovida pelo empregador",
+            "aviso-prévio trabalhado"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-005-A",
+          "when": "aviso promovido pelo empregado",
+          "effect": "redução prevista no art. 488 não aplicável por esta regra"
+        },
+        {
+          "id": "EXC-AP-005-B",
+          "when": "aviso integralmente indenizado",
+          "effect": "não há jornada a reduzir"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "Quando a rescisão é promovida pelo empregador e o aviso é trabalhado, o horário normal do empregado deve ser reduzido em duas horas diárias, sem prejuízo do salário integral; alternativamente, o empregado pode trabalhar sem a redução diária e faltar por sete dias corridos na hipótese legal aplicável.",
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-009",
+        "CPT-AVP-015"
+      ],
+      "factsRequired": [
+        "FACT-TERMINATION-BY-EMPLOYER",
+        "FACT-NOTICE-WORKED",
+        "FACT-EMPLOYEE-OPTION-REDUCTION-MODE"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-005-A",
+          "type": "working-time-reduction",
+          "description": "redução de duas horas diárias sem redução salarial"
+        },
+        {
+          "id": "EFFECT-AP-005-B",
+          "type": "alternative-absence",
+          "description": "faculdade de sete dias corridos de ausência, sem prejuízo salarial, em substituição à redução diária"
+        }
+      ],
+      "interpretiveLimits": [
+        "A alternativa de um dia prevista para antiga hipótese legal não integra o escopo constitucional mínimo contemporâneo deste pacote.",
+        "A escolha e o registro operacional devem ser tratados pela camada de fatos/projeções."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 488 e parágrafo único, com redação da Lei nº 7.093/1983"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-005-01",
+          "given": [
+            "dispensa pelo empregador",
+            "aviso trabalhado"
+          ],
+          "expected": "direito à redução ou ausência substitutiva"
+        },
+        {
+          "id": "TC-AP-005-02",
+          "given": [
+            "pedido de demissão",
+            "aviso trabalhado"
+          ],
+          "expected": "regra não aplicável"
+        },
+        {
+          "id": "TC-AP-005-03",
+          "given": [
+            "aviso indenizado"
+          ],
+          "expected": "regra não aplicável"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:6846a4dcb384ac67ecc7a2a5d964e2dfa5a41b6180225643c722a6b240adb123"
+    }
+  ],
+  "aliases": [
+    "reducao-da-jornada-no-aviso",
+    "sete-dias-corridos"
+  ],
+  "dependencies": [
+    "RULE-AP-001",
+    "RULE-AP-004"
+  ],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Modela o direito de redução de jornada ou ausência substitutiva durante o aviso trabalhado quando a rescisão é promovida pelo empregador."
+}

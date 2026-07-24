@@ -1,0 +1,105 @@
+{
+  "id": "projection-engine",
+  "version": "1.2.0",
+  "status": "implemented-validation",
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "purpose": "Resolve canonical legal projections deterministically from validated fact packages, effective rule versions and an immutable Brain snapshot.",
+  "boundaries": {
+    "must": [
+      "validate fact packages before evaluation",
+      "select rule versions by legal reference date and as-known-at time",
+      "evaluate conditions before exceptions",
+      "resolve dependencies topologically",
+      "emit explicit uncertainty states",
+      "record complete fact, rule, exception and dependency trace",
+      "compute reproducible fingerprints"
+    ],
+    "mustNot": [
+      "invent missing facts",
+      "silently resolve conflicting assertions",
+      "mutate canonical rules, facts or projection definitions",
+      "embed interface text or consumer-specific HTML",
+      "bypass legal or technical review gates",
+      "publish a result as legal advice"
+    ]
+  },
+  "executionOrder": [
+    "load-snapshot",
+    "validate-request",
+    "validate-facts",
+    "resolve-reference-date",
+    "select-projection-version",
+    "select-rule-versions",
+    "evaluate-activation",
+    "evaluate-exceptions",
+    "resolve-dependencies",
+    "execute-pure-operations",
+    "build-explanation",
+    "validate-result",
+    "fingerprint-result"
+  ],
+  "request": {
+    "required": [
+      "targetProjectionId",
+      "factPackage",
+      "executionContext"
+    ],
+    "executionContextRequired": [
+      "clock",
+      "mode"
+    ],
+    "optionalExecutionContext": [
+      "correlationId",
+      "requestedOutputs"
+    ]
+  },
+  "statusModel": [
+    "resolved",
+    "not_applicable",
+    "insufficient_facts",
+    "conflict",
+    "ambiguous",
+    "human_review_required",
+    "error"
+  ],
+  "determinism": {
+    "sameInputsSameOutput": true,
+    "fingerprintedInputs": [
+      "projection definition and version",
+      "fact package",
+      "selected rule versions",
+      "dependency results",
+      "brain snapshot",
+      "engine version"
+    ],
+    "excludedFromOutputFingerprint": [
+      "startedAt",
+      "completedAt",
+      "execution host",
+      "correlationId"
+    ]
+  },
+  "temporalPolicy": {
+    "ruleSelection": "effective-at-reference-date with optional bitemporal asKnownAt filter",
+    "dateOnlyOperations": "calendar dates without implicit timezone conversion",
+    "historicalSafety": "never default historical cases to the latest rule version"
+  },
+  "failurePolicy": {
+    "missingRequiredFact": "insufficient_facts",
+    "conflictingVerifiedFacts": "conflict",
+    "unresolvableInterpretation": "human_review_required",
+    "unexpectedRuntimeFailure": "error"
+  },
+  "compatibility": {
+    "legacyProjectionArtifacts": "The pre-existing PRJ-* consumer artifacts remain separate from PROJ-* canonical legal projections.",
+    "migration": "No production consumer is switched during Sprint 5.",
+    "canonicalInterface": "executeDomain(request, { brainRoot }) where request conforms to projection-execution-request.schema.json."
+  },
+  "requestSchema": "../schemas/projection-execution-request.schema.json",
+  "bundleSchema": "../schemas/projection-execution-bundle.schema.json",
+  "resultSchema": "../schemas/projection-result.schema.json",
+  "runtimeConfiguration": {
+    "brainRoot": "Required host configuration; never part of the legal execution request."
+  }
+}

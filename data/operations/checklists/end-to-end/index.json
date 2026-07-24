@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-checklists",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/operations/schemas/checklist.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Checklist for scoped end-to-end asset delivery. Items are declarative and do not execute operations.",
@@ -88,7 +88,13 @@
     "dependencies": ["legal-scope-class-declared", "typed-consumers-declared", "heuristics-not-confirmed", "engine-and-visible-rule-share-source", "rule-dependent-example-dynamic-or-review"],
     "families": ["LEGACY_CALCULATOR_FAMILY_V1-preserves-calculator-specific-semantics", "CANONICAL_DIFF_PATCH-preserves-compliant-components"],
     "review": ["specialized-exception-not-auto-migrated", "semantic-law-change-reviewed", "formula-change-reviewed", "effective-date-ambiguity-reviewed"],
-    "gates": ["MIGRATION_HERITAGE_PRESERVED", "REGRESSION_BASELINE_RESOLVED", "LEGAL_SCOPE_CLASS_RESOLVED", "TYPED_CONSUMERS_RESOLVED", "SINGLE_SOURCE_RULE_RESOLVED", "MIGRATION_FAMILY_RESOLVED", "SPECIALIZED_REVIEW_RESOLVED"]
+    "runtime": ["form-exercised-with-real-input", "result-state-rendered-and-asserted", "file-protocol-functional", "http-protocol-functional", "governed-derived-fallback-only-in-file-mode"],
+    "visualFamily": ["homologated-reference-selected", "mobile-compared", "desktop-compared", "shell-through-faq-compared", "CANONICAL_VISUAL_FAMILY_CONFORMANCE-passed"],
+    "assets": ["logos-loaded", "icons-loaded", "favicons-loaded", "fonts-loaded", "required-images-naturalWidth-positive", "required-asset-404-zero", "PUBLIC_ASSET_INTEGRITY-passed"],
+    "humanAcceptance": ["HUMAN_VISUAL_ACCEPTANCE-passed", "HUMAN_CALCULATION_ACCEPTANCE-passed", "HUMAN_LEGAL_BEHAVIOR_ACCEPTANCE-passed-when-applicable"],
+    "batch": ["each-asset-has-independent-status", "each-asset-has-independent-baseline-rule-result-rollback-and-acceptance", "individual-failure-not-hidden-by-consolidated-report"],
+    "publication": ["selective-checkpoint-before-publication", "controlled-publication-only", "public-post-deploy-validation-before-homologation"],
+    "gates": ["MIGRATION_HERITAGE_PRESERVED", "REGRESSION_BASELINE_RESOLVED", "LEGAL_SCOPE_CLASS_RESOLVED", "TYPED_CONSUMERS_RESOLVED", "SINGLE_SOURCE_RULE_RESOLVED", "MIGRATION_FAMILY_RESOLVED", "SPECIALIZED_REVIEW_RESOLVED", "CANONICAL_VISUAL_FAMILY_CONFORMANCE", "PUBLIC_ASSET_INTEGRITY", "HUMAN_ACCEPTANCE", "PUBLIC_POST_DEPLOY_VALIDATION"]
   },
   "articleStandard": {
     "appliesTo": ["NEW_ARTICLE", "MIGRATED_ARTICLE"],
@@ -152,6 +158,13 @@
     ,"heuristic-dependency-treated-as-governed"
     ,"non-legal-calculator-forced-into-legal-update-system"
     ,"specialized-calculator-auto-migration"
+    ,"canonical-visual-family-conformance-failed"
+    ,"public-asset-integrity-failed"
+    ,"calculation-form-not-exercised"
+    ,"result-state-not-rendered"
+    ,"human-acceptance-missing"
+    ,"batch-collective-false-pass"
+    ,"public-post-deploy-validation-missing"
     ,"article-search-intent-unresolved"
     ,"article-editorial-clarity-unresolved"
     ,"article-freshness-unresolved"

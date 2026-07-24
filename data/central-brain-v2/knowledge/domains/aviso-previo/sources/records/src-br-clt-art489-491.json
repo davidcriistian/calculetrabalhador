@@ -1,0 +1,41 @@
+{
+  "id": "SRC-BR-CLT-ART489-491",
+  "type": "decree",
+  "jurisdiction": "BR",
+  "title": "Consolidação das Leis do Trabalho — arts. 489 a 491",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+  "publicationDate": "1943-05-01",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-22T14:40:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "arts. 489 a 491 — reconsideração e falta grave durante o aviso.",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-clt-art489-491.snapshot.json",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:ec6c7396810312a7098bfc466373a78fa0e38f6dd1fd31d41242da08efac195e",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:ec6c7396810312a7098bfc466373a78fa0e38f6dd1fd31d41242da08efac195e",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária catalogada em URL oficial.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+    "Revisão jurídica formal permanece pendente."
+  ]
+}

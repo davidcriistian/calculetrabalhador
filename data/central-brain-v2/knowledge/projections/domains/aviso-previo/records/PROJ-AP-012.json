@@ -1,0 +1,104 @@
+{
+  "id": "PROJ-AP-012",
+  "domainId": "aviso-previo",
+  "title": "Efeitos da Súmula 14 na culpa recíproca",
+  "purpose": "Projetar de forma declarativa os efeitos de efeitos da súmula 14 na culpa recíproca.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-010",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-012-A",
+        "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-012-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-012-X1",
+          "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-010"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "reciprocal_fault_percentage",
+      "valueType": "enum",
+      "semantics": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido.",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-010-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-012-A",
+    "TC-PROJ-AP-012-B"
+  ],
+  "contentFingerprint": "sha256:f1662e3efd9f69cd96e7797fdaa3974e36e0a4b380a00843be43aefaecadbd64"
+}

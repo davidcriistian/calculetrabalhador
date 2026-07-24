@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/audit-event.schema.json",
+  "title": "Governance Audit Event",
+  "type": "object",
+  "required": [
+    "eventId",
+    "correlationId",
+    "eventType",
+    "timestamp",
+    "actor",
+    "sourceArtifact",
+    "sourceFingerprint",
+    "result",
+    "safety"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:-]+$"
+    },
+    "correlationId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*Z$"
+    },
+    "actor": {
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "system",
+            "role",
+            "human-approved-artifact"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourceArtifact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceFingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "outputArtifact": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outputFingerprint": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL",
+        "RECORDED"
+      ]
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety": {
+      "type": "object",
+      "required": [
+        "sourceMutation",
+        "publicMutation",
+        "commit",
+        "push",
+        "deploy",
+        "publication"
+      ],
+      "properties": {
+        "sourceMutation": {
+          "const": false
+        },
+        "publicMutation": {
+          "const": false
+        },
+        "commit": {
+          "const": false
+        },
+        "push": {
+          "const": false
+        },
+        "deploy": {
+          "const": false
+        },
+        "publication": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

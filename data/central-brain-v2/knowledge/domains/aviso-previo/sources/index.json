@@ -1,0 +1,202 @@
+{
+  "$schema": "../../../../schemas/domain-source-catalog.schema.json",
+  "domainId": "aviso-previo",
+  "catalogVersion": "0.3.0",
+  "status": "SOURCES_VALIDATED",
+  "scope": "clt-geral",
+  "items": [
+    {
+      "sourceId": "SRC-BR-CF1988-ART7-XXI",
+      "path": "./records/src-br-cf1988-art7-xxi.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 7º, XXI"
+      ],
+      "supports": [
+        "constitutional-foundation",
+        "minimum-notice-period",
+        "proportionality"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "path": "./records/src-br-clt-art487-491.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "arts. 487 a 491"
+      ],
+      "supports": [
+        "general-regime",
+        "notice-effects",
+        "working-time-reduction",
+        "reconsideration",
+        "serious-misconduct"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "path": "./records/src-br-lei12506-2011.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 1º",
+        "parágrafo único"
+      ],
+      "supports": [
+        "proportional-duration",
+        "maximum-duration",
+        "effective-date"
+      ]
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "path": "./records/src-tst-sumula-276.json",
+      "role": "jurisprudential",
+      "applicability": "included",
+      "pinpoints": [
+        "Súmula 276"
+      ],
+      "supports": [
+        "waiver",
+        "new-employment"
+      ]
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-305",
+      "path": "./records/src-tst-sumula-305.json",
+      "role": "jurisprudential",
+      "applicability": "included",
+      "pinpoints": [
+        "Súmula 305"
+      ],
+      "supports": [
+        "fgts-incidence"
+      ]
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-441",
+      "path": "./records/src-tst-sumula-441.json",
+      "role": "jurisprudential",
+      "applicability": "included",
+      "pinpoints": [
+        "Súmula 441"
+      ],
+      "supports": [
+        "temporal-application"
+      ]
+    },
+    {
+      "sourceId": "SRC-TST-OJ-SDI1-82",
+      "path": "./records/src-tst-oj-sdi1-82.json",
+      "role": "jurisprudential",
+      "applicability": "included",
+      "pinpoints": [
+        "OJ-SDI1-82"
+      ],
+      "supports": [
+        "projected-termination-date",
+        "ctps-annotation"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-LC150-2015-BOUNDARY",
+      "path": "./records/src-br-lc150-2015-boundary.json",
+      "role": "scope-boundary",
+      "applicability": "excluded",
+      "pinpoints": [
+        "regime do emprego doméstico"
+      ],
+      "supports": [
+        "scope-separation"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART481",
+      "path": "./records/src-br-clt-art481.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 481"
+      ],
+      "supports": [
+        "contrato a termo com cláusula assecuratória"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART483",
+      "path": "./records/src-br-clt-art483.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 483"
+      ],
+      "supports": [
+        "rescisão indireta"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART484",
+      "path": "./records/src-br-clt-art484.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 484"
+      ],
+      "supports": [
+        "culpa recíproca"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART484A",
+      "path": "./records/src-br-clt-art484a.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "art. 484-A"
+      ],
+      "supports": [
+        "extinção por acordo"
+      ]
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART489-491",
+      "path": "./records/src-br-clt-art489-491.json",
+      "role": "primary-normative",
+      "applicability": "included",
+      "pinpoints": [
+        "arts. 489 a 491"
+      ],
+      "supports": [
+        "reconsideração e falta grave durante o aviso"
+      ]
+    },
+    {
+      "sourceId": "SRC-TST-SUMULA-14",
+      "path": "./records/src-tst-sumula-14.json",
+      "role": "jurisprudential",
+      "applicability": "included",
+      "pinpoints": [
+        "Súmula 14"
+      ],
+      "supports": [
+        "efeitos da culpa recíproca"
+      ]
+    }
+  ],
+  "verification": {
+    "verifiedAt": "2026-07-22T14:40:00.000Z",
+    "verifiedBy": "central-brain-sprint-5.6.7-phase2",
+    "method": "official-url-and-authority-review",
+    "officialDomains": [
+      "planalto.gov.br",
+      "tst.jus.br"
+    ],
+    "notes": [
+      "Somente fontes oficiais foram promovidas ao catálogo.",
+      "A presença da fonte não constitui interpretação jurídica nem criação automática de regra.",
+      "O regime doméstico permanece explicitamente fora do pacote clt-geral."
+    ]
+  }
+}

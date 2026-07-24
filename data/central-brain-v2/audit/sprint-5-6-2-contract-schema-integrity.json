@@ -1,0 +1,31 @@
+{
+  "id": "AUDIT-SPRINT-5-6-2-CONTRACT-SCHEMA-INTEGRITY",
+  "status": "passed",
+  "executedAt": "2026-07-21T23:30:00.000Z",
+  "scope": [
+    "contracts",
+    "schemas",
+    "engines/projection-runtime",
+    "tests/projection-runtime"
+  ],
+  "findingsResolved": [
+    "projection engine contract/request/runtime interface divergence",
+    "execution schemas absent from schema index",
+    "legacy consumer contract ambiguity",
+    "superficial result validation",
+    "missing per-output traceability",
+    "runtime catalog and operation allowlist drift",
+    "missing explicit version compatibility matrix"
+  ],
+  "validation": {
+    "structuralTests": 84,
+    "projectionRuntimeTests": 34,
+    "checkedJsonFiles": 199,
+    "errors": 0,
+    "warnings": 1
+  },
+  "operationalState": {
+    "runtimeAuthority": false,
+    "consumerReady": false
+  }
+}

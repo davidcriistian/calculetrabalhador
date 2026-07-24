@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-maturity.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "technicalMaturity",
+    "legalMaturity",
+    "consumerReady",
+    "gates",
+    "lastReviewedAt",
+    "reviewedBy"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "consumerReady": {
+      "type": "boolean"
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "PENDING",
+              "FAIL"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "lastReviewedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewedBy": {
+      "type": "string"
+    },
+    "technicalMaturity": {
+      "enum": [
+        "STRUCTURE_ONLY",
+        "INVENTORIED",
+        "SOURCES_VALIDATED",
+        "RULES_VALIDATED",
+        "PROJECTIONS_VALIDATED",
+        "READY_FOR_CONSUMERS"
+      ]
+    },
+    "legalMaturity": {
+      "enum": [
+        "NOT_REVIEWED",
+        "PENDING_FORMAL_REVIEW",
+        "UNDER_FORMAL_REVIEW",
+        "LEGALLY_APPROVED",
+        "LEGAL_REJECTED"
+      ]
+    }
+  }
+}

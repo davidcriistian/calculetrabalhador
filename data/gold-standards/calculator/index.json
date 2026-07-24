@@ -2,24 +2,24 @@
   "id": "calculator-gold-standard",
   "name": "Calculator Standard",
   "type": "calculator",
-  "version": "1.3",
+  "version": "1.4",
   "schema": "/data/gold-standards/schemas/gold-standard.schema.json",
   "status": "active-foundation",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-10",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "description": "Declarative quality standard for future calculator assets.",
   "canonicalExperienceContract": {
     "reference": "/data/blueprints/contracts/calculator-experience.contract.json",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "referenceBacked": true,
     "contextAware": true,
     "pixelIdenticalCopyRequired": false
   },
   "conservativeMigrationStandard": {
     "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "preserveByDefault": ["SEO", "editorial-content", "internal-links", "URL", "canonical", "valid-schema", "static-valid-information", "calculation-behavior"],
     "baselineGateRequired": true,
     "typedLegalDependenciesRequiredWhenApplicable": true,
@@ -33,7 +33,7 @@
   "mandatorySeo": ["title", "description", "canonical", "headings", "internal-links", "open-graph"],
   "mandatoryJsonLd": ["SoftwareApplication", "FAQPage", "BreadcrumbList"],
   "mandatoryTesting": ["calculation-equivalence", "baseline-scenarios", "regression", "empty-state", "error-state"],
-  "mandatoryValidation": ["structure", "seo", "json-ld", "accessibility", "runtime-safety", "component-compliance"],
+  "mandatoryValidation": ["structure", "seo", "json-ld", "accessibility", "runtime-safety", "component-compliance", "canonical-visual-family-conformance", "public-asset-integrity", "file-and-http-runtime", "human-acceptance", "public-post-deploy-validation"],
   "mandatoryPublishing": ["manual-approval", "rollback-ready", "sitemap-policy-check", "canonical-check"],
   "restrictions": [
     "must-not-store-legal-source-outside-core",
@@ -44,6 +44,9 @@
     "must-not-change-calculation-without-regression-baseline",
     "must-not-certify-governed-engine-with-stale-visible-rule",
     "internal-governance-metadata-must-not-leak-into-public-user-experience"
+    ,"must-not-approve-by-screenshot-presence-alone"
+    ,"must-not-approve-broken-required-assets"
+    ,"must-not-approve-batch-assets-by-association"
   ],
   "acceptanceCriteria": [
     "all mandatory sections present",
@@ -67,11 +70,13 @@
     "brand": ["institutional blue is the mandatory default primary theme", "any variation has documented approval and render evidence"],
     "freshness": ["governed UPDATED_AT metadata exists", "visible Atualizado em month year text matches governed metadata"],
     "adaptiveReport": ["all seven report declarations derive from calculator semantics", "report is A4 structured selectable and viewport independent", "screenshot and raster-only reports are blocked"],
-    "visual": ["structural, design-system, quality and responsive parity assessed", "small mobile, large mobile, intermediate and desktop evidence resolved", "focus, error, empty and overflow states reviewed"],
+    "visual": ["structural, design-system, quality and responsive parity assessed against a homologated calculator", "small mobile, large mobile, intermediate and desktop evidence resolved", "focus, error, empty, valid result and overflow states reviewed", "result state asserted before result evidence"],
+    "assets": ["logos, favicons, icons, fonts and institutional images load", "required images have naturalWidth greater than zero", "file and HTTP mobile and desktop pass", "required asset 404 count is zero"],
+    "humanAcceptance": ["visual acceptance recorded", "calculation acceptance recorded", "legal behavior acceptance recorded when applicable"],
     "reference": ["physical reference studied", "modules decomposed", "literal copy avoided", "parity assessment recorded"]
   },
   "visualValidationStatuses": ["VISUAL_VALIDATION_PASSED", "VISUAL_VALIDATION_FAILED", "VISUAL_VALIDATION_NOT_EXECUTED", "VISUAL_APPROVAL_REQUIRED"],
-  "fullStandardBlockers": ["applicable BLOCKER anti-pattern", "REFERENCE_STUDY_COMPLETE not passed", "RESULT_CONTRACT_RESOLVED not passed", "BRAND_THEME_RESOLVED not passed", "VISIBLE_UPDATED_AT_RESOLVED not passed", "EDITORIAL_DEPTH_RESOLVED not passed", "RECOMMENDATION_SLOT_RESOLVED not passed", "ADAPTIVE_REPORT_CONTRACT_RESOLVED not passed", "REPORT_RENDER_VALIDATED not passed", "VISUAL_VALIDATION_NOT_EXECUTED", "false visual pass without rendered evidence", "unapproved recommendation source"],
+  "fullStandardBlockers": ["applicable BLOCKER anti-pattern", "REFERENCE_STUDY_COMPLETE not passed", "RESULT_CONTRACT_RESOLVED not passed", "BRAND_THEME_RESOLVED not passed", "VISIBLE_UPDATED_AT_RESOLVED not passed", "EDITORIAL_DEPTH_RESOLVED not passed", "RECOMMENDATION_SLOT_RESOLVED not passed", "ADAPTIVE_REPORT_CONTRACT_RESOLVED not passed", "REPORT_RENDER_VALIDATED not passed", "VISUAL_VALIDATION_NOT_EXECUTED", "CANONICAL_VISUAL_FAMILY_CONFORMANCE not passed", "PUBLIC_ASSET_INTEGRITY not passed", "HUMAN_ACCEPTANCE not passed", "calculation form not exercised", "result state not rendered", "rollback unavailable", "post-deploy validation missing after publication", "false visual pass without rendered evidence", "unapproved recommendation source"],
   "antiPatternSource": "/data/blueprints/contracts/calculator-experience.contract.json#prohibitedAntiPatterns",
   "backwardCompatibility": {
     "legacy": "LEGACY_ACCEPTED_PENDING_MIGRATION",
@@ -90,6 +95,7 @@
     "1.1": "Canonical reference-backed experience, result, memory, visual evidence and anti-pattern enforcement.",
     "1.2": "Institutional theme, visible freshness, permanent content, editorial depth, canonical recommendation slot and adaptive report enforcement.",
     "1.3": "Conservative migration, editorial heritage preservation, baseline gating and typed governed propagation.",
+    "1.4": "Pilot-consolidated visual family, asset integrity, human acceptance, protocol and batch-isolation enforcement.",
     "2.0": "Reserved for future layout, publishing and monetization quality changes."
   }
 }

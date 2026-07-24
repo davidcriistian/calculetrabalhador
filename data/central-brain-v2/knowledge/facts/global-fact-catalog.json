@@ -1,0 +1,276 @@
+{
+  "catalogId": "GLOBAL-LEGAL-FACT-CATALOG",
+  "version": "1.0.1-temporal-block1",
+  "status": "review",
+  "items": [
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "domainId": "aviso-previo",
+      "key": "employment_regime",
+      "path": "./domains/aviso-previo/facts/records/employment_regime.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "domainId": "aviso-previo",
+      "key": "contract_term_type",
+      "path": "./domains/aviso-previo/facts/records/contract_term_type.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "domainId": "aviso-previo",
+      "key": "contract_indefinite",
+      "path": "./domains/aviso-previo/facts/records/contract_indefinite.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "domainId": "aviso-previo",
+      "key": "assuring_clause_present",
+      "path": "./domains/aviso-previo/facts/records/assuring_clause_present.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-ADMISSION-DATE",
+      "domainId": "aviso-previo",
+      "key": "admission_date",
+      "path": "./domains/aviso-previo/facts/records/admission_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "notice_communication_date",
+      "path": "./domains/aviso-previo/facts/records/notice_communication_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "domainId": "aviso-previo",
+      "key": "legal_reference_date",
+      "path": "./domains/aviso-previo/facts/records/legal_reference_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "domainId": "aviso-previo",
+      "key": "termination_initiative",
+      "path": "./domains/aviso-previo/facts/records/termination_initiative.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "domainId": "aviso-previo",
+      "key": "notifying_party",
+      "path": "./domains/aviso-previo/facts/records/notifying_party.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "domainId": "aviso-previo",
+      "key": "termination_cause",
+      "path": "./domains/aviso-previo/facts/records/termination_cause.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "domainId": "aviso-previo",
+      "key": "termination_without_just_cause",
+      "path": "./domains/aviso-previo/facts/records/termination_without_just_cause.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "domainId": "aviso-previo",
+      "key": "termination_by_employer",
+      "path": "./domains/aviso-previo/facts/records/termination_by_employer.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "domainId": "aviso-previo",
+      "key": "employee_beneficiary",
+      "path": "./domains/aviso-previo/facts/records/employee_beneficiary.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-GRANTED",
+      "domainId": "aviso-previo",
+      "key": "notice_granted",
+      "path": "./domains/aviso-previo/facts/records/notice_granted.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "domainId": "aviso-previo",
+      "key": "notice_modality",
+      "path": "./domains/aviso-previo/facts/records/notice_modality.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "domainId": "aviso-previo",
+      "key": "notice_worked",
+      "path": "./domains/aviso-previo/facts/records/notice_worked.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-PAYMENT-SUBSTITUTION",
+      "domainId": "aviso-previo",
+      "key": "payment_substitution",
+      "path": "./domains/aviso-previo/facts/records/payment_substitution.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "domainId": "aviso-previo",
+      "key": "employer_owes_notice",
+      "path": "./domains/aviso-previo/facts/records/employer_owes_notice.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "domainId": "aviso-previo",
+      "key": "complete_service_years",
+      "path": "./domains/aviso-previo/facts/records/complete_service_years.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "domainId": "aviso-previo",
+      "key": "notice_duration_days",
+      "path": "./domains/aviso-previo/facts/records/notice_duration_days.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "termination_date",
+      "path": "./domains/aviso-previo/facts/records/termination_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "projected_termination_date",
+      "path": "./domains/aviso-previo/facts/records/projected_termination_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "domainId": "aviso-previo",
+      "key": "employee_option_reduction_mode",
+      "path": "./domains/aviso-previo/facts/records/employee_option_reduction_mode.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "domainId": "aviso-previo",
+      "key": "employee_requests_release",
+      "path": "./domains/aviso-previo/facts/records/employee_requests_release.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-PARTY-WAIVES-PERFORMANCE",
+      "domainId": "aviso-previo",
+      "key": "party_waives_performance",
+      "path": "./domains/aviso-previo/facts/records/party_waives_performance.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "domainId": "aviso-previo",
+      "key": "new_employment_obtained",
+      "path": "./domains/aviso-previo/facts/records/new_employment_obtained.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "domainId": "aviso-previo",
+      "key": "new_employment_proven",
+      "path": "./domains/aviso-previo/facts/records/new_employment_proven.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "domainId": "aviso-previo",
+      "key": "new_employment_evidence_date",
+      "path": "./domains/aviso-previo/facts/records/new_employment_evidence_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "domainId": "aviso-previo",
+      "key": "serious_misconduct_during_notice",
+      "path": "./domains/aviso-previo/facts/records/serious_misconduct_during_notice.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "domainId": "aviso-previo",
+      "key": "notice_reconsideration_proposed",
+      "path": "./domains/aviso-previo/facts/records/notice_reconsideration_proposed.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "domainId": "aviso-previo",
+      "key": "notice_reconsideration_accepted",
+      "path": "./domains/aviso-previo/facts/records/notice_reconsideration_accepted.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-NOTICE-COUNTING-START-DATE",
+      "domainId": "aviso-previo",
+      "key": "notice_counting_start_date",
+      "path": "./domains/aviso-previo/facts/records/notice_counting_start_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "domainId": "aviso-previo",
+      "key": "factual_last_worked_date",
+      "path": "./domains/aviso-previo/facts/records/factual_last_worked_date.json",
+      "status": "review",
+      "version": "1.0.0"
+    }
+  ],
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "updatedAt": "2026-07-21T18:30:00.000Z"
+  }
+}

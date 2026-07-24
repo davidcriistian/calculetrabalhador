@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "id": "approval-record",
+      "path": "./approval-record.schema.json"
+    },
+    {
+      "id": "audit-event",
+      "path": "./audit-event.schema.json"
+    },
+    {
+      "id": "brain-index",
+      "path": "./brain-index.schema.json"
+    },
+    {
+      "id": "canonical-projection",
+      "path": "./canonical-projection.schema.json"
+    },
+    {
+      "id": "concept",
+      "path": "./concept.schema.json"
+    },
+    {
+      "id": "consumer",
+      "path": "./consumer.schema.json"
+    },
+    {
+      "id": "dependency",
+      "path": "./dependency.schema.json"
+    },
+    {
+      "id": "domain",
+      "path": "./domain.schema.json"
+    },
+    {
+      "id": "domain-aliases",
+      "path": "./domain-aliases.schema.json"
+    },
+    {
+      "id": "domain-concept-catalog",
+      "path": "./domain-concept-catalog.schema.json"
+    },
+    {
+      "id": "domain-fact-catalog",
+      "path": "./domain-fact-catalog.schema.json"
+    },
+    {
+      "id": "domain-federation-contract",
+      "path": "./domain-federation-contract.schema.json"
+    },
+    {
+      "id": "domain-glossary",
+      "path": "./domain-glossary.schema.json"
+    },
+    {
+      "id": "domain-identity",
+      "path": "./domain-identity.schema.json"
+    },
+    {
+      "id": "domain-maturity",
+      "path": "./domain-maturity.schema.json"
+    },
+    {
+      "id": "domain-package",
+      "path": "./domain-package.schema.json"
+    },
+    {
+      "id": "domain-relationships",
+      "path": "./domain-relationships.schema.json"
+    },
+    {
+      "id": "domain-rule-catalog",
+      "path": "./domain-rule-catalog.schema.json"
+    },
+    {
+      "id": "domain-source-catalog",
+      "path": "./domain-source-catalog.schema.json"
+    },
+    {
+      "id": "domain-taxonomy",
+      "path": "./domain-taxonomy.schema.json"
+    },
+    {
+      "id": "fact-package",
+      "path": "./fact-package.schema.json"
+    },
+    {
+      "id": "ingestion-batch",
+      "path": "./ingestion-batch.schema.json"
+    },
+    {
+      "id": "legal-fact",
+      "path": "./legal-fact.schema.json"
+    },
+    {
+      "id": "ontology-relations",
+      "path": "./ontology-relations.schema.json"
+    },
+    {
+      "id": "projection",
+      "path": "./projection.schema.json"
+    },
+    {
+      "id": "projection-catalog",
+      "path": "./projection-catalog.schema.json"
+    },
+    {
+      "id": "projection-execution-bundle",
+      "path": "./projection-execution-bundle.schema.json"
+    },
+    {
+      "id": "projection-execution-request",
+      "path": "./projection-execution-request.schema.json"
+    },
+    {
+      "id": "projection-result",
+      "path": "./projection-result.schema.json"
+    },
+    {
+      "id": "readiness",
+      "path": "./readiness.schema.json"
+    },
+    {
+      "id": "registry",
+      "path": "./registry.schema.json"
+    },
+    {
+      "id": "rule",
+      "path": "./rule.schema.json"
+    },
+    {
+      "id": "rule-version",
+      "path": "./rule-version.schema.json"
+    },
+    {
+      "id": "semantic-policy",
+      "path": "./semantic-policy.schema.json",
+      "purpose": "Validação executável de coerência semântica entre fatos jurídicos."
+    },
+    {
+      "id": "shared-vocabulary",
+      "path": "./shared-vocabulary.schema.json"
+    },
+    {
+      "id": "source",
+      "path": "./source.schema.json"
+    },
+    {
+      "id": "temporal-policy",
+      "path": "./temporal-policy.schema.json"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

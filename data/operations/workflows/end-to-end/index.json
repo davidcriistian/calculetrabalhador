@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-workflows",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/operations/schemas/workflow.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Official ordered workflow for deliver-asset-end-to-end. It defines orchestration states only and does not execute operations.",
@@ -311,6 +311,14 @@
     "MIGRATE_EXISTING_CALCULATOR": ["CALCULATOR_MIGRATION_RESOLUTION", "CALCULATOR_EXPERIENCE_RESOLUTION", "REUSE_OR_CREATE_DECISION"],
     "PATCH_EXISTING_CALCULATOR": ["REUSE_OR_CREATE_DECISION", "PHYSICAL_PLAN"],
     "UPDATE_GOVERNED_RULE": ["GOVERNANCE_RESOLUTION", "TESTING", "VALIDATION", "MANUAL_APPROVAL"]
+  },
+  "controlledCalculatorMigrationProtocol": {
+    "appliesTo": ["MIGRATE_EXISTING_CALCULATOR", "MIGRATED_ASSET"],
+    "sequence": ["PRE_MIGRATION_RECONNAISSANCE", "BASELINE_FREEZE", "CANONICAL_RULE_RECONCILIATION_WHEN_APPLICABLE", "RULE_CHECKPOINT", "CONTROLLED_PUBLIC_MIGRATION", "TECHNICAL_VALIDATION", "CANONICAL_VISUAL_FAMILY_CONFORMANCE", "PUBLIC_ASSET_INTEGRITY", "HUMAN_ACCEPTANCE", "SELECTIVE_CHECKPOINT", "CONTROLLED_PUBLICATION", "PUBLIC_POST_DEPLOY_VALIDATION", "HOMOLOGATION"],
+    "validationClasses": ["DETERMINISTIC_CHECK", "BROWSER_RUNTIME_CHECK", "VISUAL_FAMILY_COMPARISON", "HEURISTIC_WARNING", "HUMAN_REVIEW_REQUIRED"],
+    "completionGates": ["calculation-form-exercised", "result-state-rendered", "canonical-visual-family-pass", "public-assets-pass-file-and-http", "public-rule-and-visible-data-synchronized", "adaptive-report-pass", "rollback-ready", "human-acceptance-pass"],
+    "postPublicationGate": "PUBLIC_POST_DEPLOY_VALIDATION",
+    "batchRule": "Each asset preserves independent state, baseline, rule, result, rollback and acceptance; aggregate status cannot hide an individual failure."
   },
   "nucleusHomeDistributionFlow": {
     "contract": "/data/blueprints/nucleus/home-distribution.contract.json",

@@ -1,0 +1,15 @@
+{
+  "packageId": "FPKG-PHASE2-SPECIAL-MISSING",
+  "domainId": "aviso-previo",
+  "caseId": "phase2-special-missing",
+  "consumerId": null,
+  "referenceDate": "2026-02-28",
+  "asKnownAt": null,
+  "createdAt": "2026-07-21T00:00:00.000Z",
+  "facts": [],
+  "conflictPolicy": "reject",
+  "inputFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "metadata": {
+    "fixture": true
+  }
+}

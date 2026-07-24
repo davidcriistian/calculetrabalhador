@@ -1,0 +1,215 @@
+{
+  "id": "canonical-rule-minimum-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "validation-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "owner": "Calcule Trabalhador",
+  "objective": "Estabelecer um envelope mínimo comum para regras canônicas sem exigir migração destrutiva dos formatos legados.",
+  "principles": [
+    "ADDITIVE_COMPATIBILITY",
+    "NO_PUBLIC_RUNTIME_MUTATION",
+    "NO_SILENT_LEGAL_NORMALIZATION",
+    "OFFICIAL_SOURCE_TRACEABILITY",
+    "VERSION_AND_EFFECTIVITY_REQUIRED_FOR_CERTIFICATION",
+    "RULE_PAYLOAD_REMAINS_DOMAIN_SPECIFIC"
+  ],
+  "certificationLevels": {
+    "DISCOVERED": {
+      "description": "Arquivo JSON localizado em data/rules.",
+      "requiredCapabilities": [
+        "identity"
+      ]
+    },
+    "COMPATIBLE": {
+      "description": "Regra pode ser adaptada ao envelope mínimo sem perda de dados.",
+      "requiredCapabilities": [
+        "identity",
+        "status",
+        "payload"
+      ]
+    },
+    "TRACEABLE": {
+      "description": "Regra possui versão, vigência e pelo menos uma fonte identificável.",
+      "requiredCapabilities": [
+        "identity",
+        "status",
+        "version",
+        "effectivePeriod",
+        "sources",
+        "payload"
+      ]
+    },
+    "GOVERNED": {
+      "description": "Regra possui rastreabilidade, consumidores declarados, revisão e fingerprint.",
+      "requiredCapabilities": [
+        "identity",
+        "status",
+        "version",
+        "effectivePeriod",
+        "sources",
+        "payload",
+        "consumerRegistry",
+        "review",
+        "fingerprint"
+      ]
+    }
+  },
+  "minimumEnvelope": {
+    "identity": {
+      "required": true,
+      "canonicalFields": [
+        "ruleId",
+        "domain",
+        "title"
+      ],
+      "acceptedLegacyMappings": {
+        "ruleId": [
+          "id",
+          "domain",
+          "filename"
+        ],
+        "domain": [
+          "domain",
+          "id",
+          "filename"
+        ],
+        "title": [
+          "title",
+          "name",
+          "domain",
+          "filename"
+        ]
+      }
+    },
+    "status": {
+      "required": true,
+      "canonicalField": "status",
+      "allowedCanonicalValues": [
+        "draft",
+        "review-required",
+        "active",
+        "superseded",
+        "archived"
+      ],
+      "legacyValuesMayBeMapped": true
+    },
+    "version": {
+      "requiredFor": [
+        "TRACEABLE",
+        "GOVERNED"
+      ],
+      "canonicalFields": [
+        "version",
+        "currentVersion"
+      ],
+      "acceptedLegacyMappings": [
+        "version",
+        "currentYear",
+        "versions"
+      ]
+    },
+    "effectivePeriod": {
+      "requiredFor": [
+        "TRACEABLE",
+        "GOVERNED"
+      ],
+      "canonicalFields": [
+        "effectiveFrom",
+        "effectiveThrough"
+      ],
+      "acceptedLegacyMappings": [
+        "validFrom",
+        "validUntil",
+        "vigencia.inicio",
+        "vigencia.fim",
+        "versions.<current>.validFrom",
+        "versions.<current>.validUntil"
+      ]
+    },
+    "sources": {
+      "requiredFor": [
+        "TRACEABLE",
+        "GOVERNED"
+      ],
+      "canonicalField": "officialSources",
+      "minimumSourceFields": [
+        "idOrName",
+        "urlOrReference"
+      ],
+      "acceptedLegacyMappings": [
+        "source",
+        "officialSourceName",
+        "officialSourceUrl",
+        "sourceName",
+        "sourceUrl",
+        "versions.<current>.officialSourceName",
+        "versions.<current>.officialSourceUrl"
+      ],
+      "emptyOrNullSourceIsNotTraceable": true
+    },
+    "payload": {
+      "required": true,
+      "canonicalField": "data",
+      "acceptedLegacyMappings": [
+        "data",
+        "parameters",
+        "rules",
+        "versions.<current>"
+      ],
+      "domainSpecificSchemaAllowed": true
+    },
+    "consumerRegistry": {
+      "requiredFor": [
+        "GOVERNED"
+      ],
+      "canonicalReference": "/data/core/update/governed-rule-consumers.json",
+      "inlineConsumerDeclarationsOptional": true
+    },
+    "review": {
+      "requiredFor": [
+        "GOVERNED"
+      ],
+      "canonicalFields": [
+        "lastReviewedAt",
+        "reviewStatus",
+        "reviewPolicy"
+      ],
+      "legalChangeMustRequireHumanReview": true
+    },
+    "fingerprint": {
+      "requiredFor": [
+        "GOVERNED"
+      ],
+      "canonicalField": "fingerprint",
+      "algorithm": "sha256",
+      "mustRepresent": "normalized canonical rule payload and legal provenance"
+    }
+  },
+  "compatibilityPolicy": {
+    "existingRuleMutationRequired": false,
+    "adapterAllowed": true,
+    "adapterOutputMayBecomeRuntimeAuthority": false,
+    "automaticSourceInferenceAllowed": false,
+    "automaticLegalValueCorrectionAllowed": false,
+    "unknownFieldsPreserved": true,
+    "emptyDraftMayRemainDiscovered": true
+  },
+  "blockingConditions": [
+    "RULE_JSON_INVALID",
+    "DUPLICATE_CANONICAL_RULE_ID",
+    "GOVERNED_WITHOUT_SOURCE",
+    "GOVERNED_WITHOUT_EFFECTIVE_PERIOD",
+    "GOVERNED_WITHOUT_CONSUMER_REGISTRY",
+    "FINGERPRINT_DECLARED_BUT_INVALID",
+    "PUBLIC_RUNTIME_MUTATION"
+  ],
+  "references": {
+    "rulesDirectory": "/data/rules",
+    "typedConsumers": "/data/core/update/governed-rule-consumers.json",
+    "propagationContract": "/data/core/update/governed-propagation.contract.json",
+    "validator": "/scripts/validate-canonical-rule-minimum-contract.js",
+    "compatibilityReport": "/data/core/update/canonical-rule-compatibility.json"
+  }
+}

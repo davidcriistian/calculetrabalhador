@@ -1,0 +1,42 @@
+{
+  "id": "AUD-S5-2-SCHEMAS-CONTRACTS",
+  "sprint": "5.2",
+  "executedAt": "2026-07-21T18:00:00Z",
+  "scope": [
+    "schemas",
+    "contracts",
+    "indexes",
+    "compatibility"
+  ],
+  "createdSchemas": [
+    "legal-fact",
+    "fact-package",
+    "canonical-projection",
+    "projection-result",
+    "projection-catalog"
+  ],
+  "createdContracts": [
+    "projection-engine",
+    "projection-result"
+  ],
+  "decisions": [
+    {
+      "id": "ADR-S5-2-001",
+      "decision": "Keep PRJ-* consumer artifacts separate from PROJ-* canonical legal projections.",
+      "reason": "Prevents semantic collision and preserves backward compatibility."
+    },
+    {
+      "id": "ADR-S5-2-002",
+      "decision": "Represent uncertainty as first-class result states.",
+      "reason": "Prevents fabricated legal conclusions when facts or interpretation are insufficient."
+    },
+    {
+      "id": "ADR-S5-2-003",
+      "decision": "Allow only enumerated pure operations in projection definitions.",
+      "reason": "Supports determinism, auditability and later sandboxed execution."
+    }
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "status": "PASS"
+}

@@ -1,0 +1,129 @@
+{
+  "id": "PROJ-AP-002",
+  "domainId": "aviso-previo",
+  "title": "Modalidade jurídica do aviso-prévio",
+  "purpose": "Classificar o aviso-prévio como trabalhado, indenizado ou juridicamente indeterminado.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-004",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    },
+    {
+      "ruleId": "RULE-AP-001",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "supporting"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-002",
+    "CPT-AVP-003"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-NOTICE-GRANTED",
+      "requirement": "required",
+      "purpose": "Distinguir concessão formal e ausência de concessão."
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "requirement": "conditional",
+      "purpose": "Classificar modalidade expressamente declarada."
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "requirement": "conditional",
+      "purpose": "Identificar cumprimento em trabalho."
+    },
+    {
+      "factId": "FACT-PAYMENT-SUBSTITUTION",
+      "requirement": "conditional",
+      "purpose": "Identificar substituição econômica do cumprimento."
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "requirement": "required",
+      "purpose": "Distinguir indenização patronal e potencial desconto do empregado."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [],
+    "defaultOutcome": "insufficient-facts"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": [
+        "notice_applicable"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "notice_modality",
+      "valueType": "enum",
+      "semantics": "Modalidade jurídica reconhecida.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-002-MAP",
+      "allowedValues": [
+        "worked",
+        "indemnified",
+        "mixed",
+        "employee_notice_unworked",
+        "unknown"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "OP-PROJ-AP-002-MAP",
+      "operationType": "map-value",
+      "inputs": {
+        "workedFactId": "FACT-NOTICE-WORKED",
+        "paymentFactId": "FACT-PAYMENT-SUBSTITUTION",
+        "noticeGrantedFactId": "FACT-NOTICE-GRANTED",
+        "notifyingPartyFactId": "FACT-NOTIFYING-PARTY"
+      },
+      "outputKey": "notice_modality",
+      "determinism": "pure",
+      "timezonePolicy": "not-applicable"
+    }
+  ],
+  "explanation": {
+    "summaryTemplate": "A modalidade decorre da forma de cumprimento ou da substituição por pagamento.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-002-A",
+    "TC-PROJ-AP-002-B",
+    "TC-PROJ-AP-002-C",
+    "TC-PROJ-AP-002-D"
+  ],
+  "contentFingerprint": "sha256:41da134b9b7866597d9c4313a7615fbbb4fa81a0ba96c92708af805c5eba36c1"
+}

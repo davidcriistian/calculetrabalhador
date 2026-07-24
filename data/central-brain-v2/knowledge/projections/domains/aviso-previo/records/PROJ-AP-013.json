@@ -1,0 +1,112 @@
+{
+  "id": "PROJ-AP-013",
+  "domainId": "aviso-previo",
+  "title": "Extinção por acordo do art. 484-A",
+  "purpose": "Projetar de forma declarativa os efeitos de extinção por acordo do art. 484-a.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "2017-11-11",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-011",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-TERMINATION-BY-AGREEMENT",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-013-A",
+        "factId": "FACT-TERMINATION-BY-AGREEMENT",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-013-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-013-X1",
+          "factId": "FACT-TERMINATION-BY-AGREEMENT",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-011"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "agreement_notice_effect",
+      "valueType": "enum",
+      "semantics": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-011-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana.",
+      "Não aplicar a fatos jurídicos anteriores a 2017-11-11."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": "2026-07-22T17:30:00.000Z",
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-013-A",
+    "TC-PROJ-AP-013-B",
+    "TC-PROJ-AP-013-C",
+    "TC-PROJ-AP-013-D"
+  ],
+  "contentFingerprint": "sha256:89c4b223d5f52a89cd7abcb6520dd2b2e695dd4cb14a8b45d7076562f5f2a5f7"
+}

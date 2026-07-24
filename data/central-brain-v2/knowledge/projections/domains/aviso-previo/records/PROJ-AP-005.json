@@ -1,0 +1,100 @@
+{
+  "id": "PROJ-AP-005",
+  "domainId": "aviso-previo",
+  "title": "Integração do aviso ao tempo de serviço",
+  "purpose": "Declarar se o período do aviso-prévio integra o tempo de serviço e quais efeitos são encaminhados.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-003",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-008",
+    "CPT-AVP-009"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "requirement": "required",
+      "purpose": "Restringir a integração aos casos em que o aviso é devido pelo empregador."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-005-OWED",
+        "factId": "FACT-EMPLOYER-OWES-NOTICE",
+        "operator": "equals",
+        "value": true,
+        "onUnknown": "insufficient-facts",
+        "reason": "A integração ao tempo de serviço pressupõe aviso devido pelo empregador."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-004",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": [
+        "projected_termination_date",
+        "contract_projection_applies"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "integrates_service_time",
+      "valueType": "boolean",
+      "semantics": "Indica integração ao tempo de serviço.",
+      "source": "rule-effect",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "RULE-AP-003",
+      "defaultValue": true
+    },
+    {
+      "key": "projected_termination_date",
+      "valueType": "date",
+      "semantics": "Data de término juridicamente projetada.",
+      "source": "dependency-output",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "PROJ-AP-004.projected_termination_date"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A integração ao tempo de serviço decorre da regra de projeção contratual.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-005-A"
+  ],
+  "contentFingerprint": "sha256:7e1e64549a60d87a4c454420cde57cea25d69b813c126f7c7a8802521ec5d510"
+}

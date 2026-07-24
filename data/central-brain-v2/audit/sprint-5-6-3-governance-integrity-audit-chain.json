@@ -1,0 +1,36 @@
+{
+  "sprint": "5.6.3",
+  "status": "passed",
+  "executedAt": "2026-07-21T23:13:05.000Z",
+  "scope": [
+    "manifest-integrity",
+    "identity-policy",
+    "separation-of-duties",
+    "audit-chain"
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "validation": {
+    "mainValidator": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 1,
+      "manifestFiles": 261,
+      "auditEvents": 11,
+      "approvalRecords": 0
+    },
+    "structuralTests": {
+      "passed": 92,
+      "failed": 0
+    },
+    "runtimeTests": {
+      "passed": 34,
+      "failed": 0
+    },
+    "tamperTests": {
+      "modifiedRuntimeFile": "blocked by MANIFEST_HASH_MISMATCH and MANIFEST_ROOT_HASH_MISMATCH",
+      "reorderedAuditEvents": "blocked by manifest and audit chain sequence/previous-hash checks"
+    }
+  },
+  "knownWarning": "8 legacy placeholder inventories remain isolated and cannot be promoted"
+}

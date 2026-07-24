@@ -1,0 +1,63 @@
+{
+  "id": "central-brain-responsibility-matrix",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "updatedAt": "2026-07-19",
+  "roles": [
+    {
+      "role": "domain-owner",
+      "responsibilities": [
+        "business scope",
+        "consumer impact review",
+        "change acceptance"
+      ]
+    },
+    {
+      "role": "legal-reviewer",
+      "responsibilities": [
+        "official source verification",
+        "legal interpretation",
+        "effective-date approval"
+      ]
+    },
+    {
+      "role": "publishing-owner",
+      "responsibilities": [
+        "publication authorization",
+        "release window",
+        "rollback authorization"
+      ]
+    },
+    {
+      "role": "technical-owner",
+      "responsibilities": [
+        "schemas",
+        "validators",
+        "generators",
+        "CI integration",
+        "incident response"
+      ]
+    },
+    {
+      "role": "editorial-owner",
+      "responsibilities": [
+        "article impact",
+        "cluster integrity",
+        "pillar-page review"
+      ]
+    },
+    {
+      "role": "audit-owner",
+      "responsibilities": [
+        "ledger review",
+        "evidence retention",
+        "exception tracking"
+      ]
+    }
+  ],
+  "segregationOfDuties": {
+    "singlePersonMayApproveAllRoles": false,
+    "legalApprovalMayBeSkipped": false,
+    "publicationApprovalMayBeImplicit": false
+  }
+}

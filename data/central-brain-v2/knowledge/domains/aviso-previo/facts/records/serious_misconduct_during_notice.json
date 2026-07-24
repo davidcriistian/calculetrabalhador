@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+  "domainId": "aviso-previo",
+  "key": "serious_misconduct_during_notice",
+  "label": "Falta grave durante o aviso",
+  "description": "Indica ocorrência de falta grave no curso do aviso, fato que pode alterar efeitos e exigir tratamento jurídico específico.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "official-record",
+      "system-record"
+    ],
+    "minimumConfidence": 0.85,
+    "humanVerificationRequired": true
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-014"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-FALTA-001",
+      "severity": "review",
+      "assertion": "serious_misconduct_during_notice == true",
+      "message": "Falta grave no curso do aviso exige revisão jurídica e regra específica antes de conclusão automática.",
+      "relatedFactIds": []
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 490 e art. 491",
+      "relevance": "Trata das consequências de falta grave no curso do prazo do aviso."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:e972918c85183cffddf802ebaa28b8e0ebe8c08b9f530528fe2af7b5d56a5976"
+}

@@ -1,0 +1,129 @@
+{
+  "id": "PROJ-AP-017",
+  "domainId": "aviso-previo",
+  "title": "Requisito federado de incidência de FGTS sobre aviso-prévio",
+  "purpose": "Emitir, sem cálculo financeiro local, o requisito de avaliação da incidência de FGTS sobre aviso-prévio trabalhado ou indenizado.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1992-11-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-015",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001",
+    "CPT-AVP-002",
+    "CPT-AVP-003"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "requirement": "required",
+      "purpose": "Identificar se o aviso é trabalhado ou indenizado."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-017-A",
+        "factId": "FACT-NOTICE-MODALITY",
+        "operator": "in",
+        "values": [
+          "trabalhado",
+          "indenizado",
+          "misto"
+        ],
+        "onUnknown": "human-review",
+        "reason": "A Súmula 305 alcança aviso trabalhado ou indenizado."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-017-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-017-X1",
+          "factId": "FACT-NOTICE-MODALITY",
+          "operator": "in",
+          "values": [
+            "desconhecido"
+          ],
+          "onUnknown": "human-review",
+          "reason": "Modalidade não resolvida."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Modalidade desconhecida impede emitir requisito determinístico.",
+      "ruleIds": [
+        "RULE-AP-015"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-002",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": [
+        "notice_modality"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "fgts_notice_incidence_required",
+      "valueType": "boolean",
+      "semantics": "Indica que o domínio FGTS deve avaliar a incidência sobre o período de aviso-prévio.",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-015-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "defaultValue": true
+    },
+    {
+      "key": "fgts_federation_contract_id",
+      "valueType": "string",
+      "semantics": "Contrato de federação responsável pela avaliação no domínio FGTS.",
+      "source": "constant",
+      "sourceRef": "FED-AP-FGTS",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "defaultValue": "FED-AP-FGTS"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A modalidade do aviso exige avaliação de incidência de FGTS pelo domínio federado competente.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Esta projeção não calcula FGTS nem multa rescisória.",
+      "O domínio FGTS ainda não possui autoridade de runtime."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T17:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-017-A",
+    "TC-PROJ-AP-017-B"
+  ],
+  "contentFingerprint": "sha256:be4f77cce5302be1d00b96f854602a23fd69ea8a77a757dbf0fb1856c860628e"
+}

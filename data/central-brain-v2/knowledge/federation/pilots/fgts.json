@@ -1,0 +1,18 @@
+{
+  "pilotId": "PILOT-FGTS-001",
+  "domainId": "fgts",
+  "status": "SOURCE_REQUIREMENT_MODELED_TARGET_KNOWLEDGE_NOT_INGESTED",
+  "federationContractIds": [
+    "FED-AP-FGTS"
+  ],
+  "requiredNextArtifacts": [
+    "canonical FGTS concepts",
+    "canonical FGTS facts",
+    "approved FGTS rules",
+    "canonical FGTS projections",
+    "cross-domain financial tests"
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "updatedAt": "2026-07-22T17:30:00.000Z"
+}

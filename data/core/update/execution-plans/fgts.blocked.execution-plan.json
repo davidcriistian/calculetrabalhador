@@ -1,0 +1,254 @@
+{
+  "id": "controlled-execution-plan-fgts-1784491090185",
+  "version": "1.0.0",
+  "status": "blocked-awaiting-approval",
+  "generatedAt": "2026-07-19T19:58:10.185Z",
+  "input": {
+    "impactAnalysisFile": "data/core/update/impact-analysis/fgts.impact.json",
+    "impactAnalysisSha256": "c6faf6e3914dd01aadea3fb8fbfe7bff0cfa4994a5464b2a1ca4933ab740e25b",
+    "approvalFile": null,
+    "requestedBy": null,
+    "changeWindow": null,
+    "notes": null
+  },
+  "approval": {
+    "required": true,
+    "state": "missing",
+    "valid": false,
+    "failures": [],
+    "requiredRoles": [
+      "domain-owner",
+      "legal-reviewer",
+      "publishing-owner"
+    ],
+    "artifact": null
+  },
+  "scope": {
+    "ruleId": "fgts",
+    "impactLevel": "MEDIUM",
+    "canonicalRuleFile": "/data/rules/fgts.json",
+    "affectedFiles": [
+      "/data/rules/fgts.json",
+      "calculadora-clt-ou-pj/index.html",
+      "calculadora-multa-40-fgts/index.html",
+      "calculadora-rescisao-clt/index.html",
+      "/blog/clt-ou-pj",
+      "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+      "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+      "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+      "/blog/multa-de-40-do-fgts-como-calcular/",
+      "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+      "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+      "/blog/rescisao-sem-justa-causa",
+      "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+      "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+      "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+      "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/"
+    ],
+    "directConsumers": 3,
+    "tools": 0,
+    "articles": 16,
+    "clusters": 3,
+    "nuclei": 0,
+    "pillarArticles": 0
+  },
+  "preconditions": [
+    {
+      "id": "impact-analysis-valid",
+      "required": true,
+      "status": "satisfied"
+    },
+    {
+      "id": "human-approval-artifact-valid",
+      "required": true,
+      "status": "blocked"
+    },
+    {
+      "id": "official-source-verified",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "id": "rollback-baseline-available",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "id": "change-window-approved",
+      "required": true,
+      "status": "pending"
+    }
+  ],
+  "operations": [
+    {
+      "order": 1,
+      "id": "capture-prechange-fingerprints",
+      "action": "CAPTURE_FINGERPRINTS",
+      "mode": "manual-controlled",
+      "targets": [
+        "/data/rules/fgts.json",
+        "calculadora-clt-ou-pj/index.html",
+        "calculadora-multa-40-fgts/index.html",
+        "calculadora-rescisao-clt/index.html",
+        "/blog/clt-ou-pj",
+        "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+        "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+        "/blog/multa-de-40-do-fgts-como-calcular/",
+        "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+        "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+        "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+        "/blog/rescisao-sem-justa-causa",
+        "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+        "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+        "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+        "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+        "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/"
+      ],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 2,
+      "id": "verify-legal-source",
+      "action": "VERIFY_OFFICIAL_SOURCE",
+      "mode": "human-required",
+      "targets": [
+        "/data/rules/fgts.json"
+      ],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 3,
+      "id": "prepare-rule-change",
+      "action": "PREPARE_CANONICAL_RULE_PATCH",
+      "mode": "human-authored",
+      "targets": [
+        "/data/rules/fgts.json"
+      ],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 4,
+      "id": "prepare-consumer-updates",
+      "action": "PREPARE_CONSUMER_PATCHES",
+      "mode": "human-authored",
+      "targets": [
+        "calculadora-clt-ou-pj/index.html",
+        "calculadora-multa-40-fgts/index.html",
+        "calculadora-rescisao-clt/index.html",
+        "/blog/clt-ou-pj",
+        "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+        "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+        "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+        "/blog/multa-de-40-do-fgts-como-calcular/",
+        "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+        "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+        "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+        "/blog/rescisao-sem-justa-causa",
+        "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+        "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+        "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+        "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+        "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/"
+      ],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 5,
+      "id": "run-validation-suite",
+      "action": "RUN_VALIDATORS",
+      "mode": "automation-after-manual-change",
+      "targets": [
+        "/scripts/validate-canonical-rule-minimum-contract.js",
+        "/scripts/validate-governed-rule-consumer-authority.js",
+        "/scripts/validate-editorial-impact-matrix.js"
+      ],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 6,
+      "id": "generate-preview",
+      "action": "GENERATE_PREVIEW",
+      "mode": "manual-controlled",
+      "targets": [],
+      "mutationAllowed": false,
+      "status": "pending"
+    },
+    {
+      "order": 7,
+      "id": "publication-approval",
+      "action": "FINAL_PUBLICATION_APPROVAL",
+      "mode": "human-required",
+      "targets": [],
+      "mutationAllowed": false,
+      "status": "pending"
+    }
+  ],
+  "validationSequence": [
+    {
+      "order": 1,
+      "validator": "/scripts/validate-canonical-rule-minimum-contract.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 2,
+      "validator": "/scripts/validate-governed-rule-consumer-authority.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 3,
+      "validator": "/scripts/validate-editorial-impact-matrix.js",
+      "required": true,
+      "status": "pending"
+    }
+  ],
+  "rollbackPlan": {
+    "required": true,
+    "baselineType": "pre-change file fingerprints plus approved repository baseline",
+    "actions": [
+      "stop publication",
+      "restore canonical rule from approved baseline",
+      "restore consumer files from approved baseline",
+      "regenerate derived projections",
+      "run full validation sequence",
+      "record rollback evidence"
+    ],
+    "automaticRollbackAllowed": false
+  },
+  "publicationGate": {
+    "open": false,
+    "requiredApprovals": [
+      "domain-owner",
+      "legal-reviewer",
+      "publishing-owner"
+    ],
+    "previewRequired": true,
+    "allValidatorsMustPass": true,
+    "unresolvedWarningsAllowed": false,
+    "automaticPublicationAllowed": false
+  },
+  "safety": {
+    "planningOnly": true,
+    "sourceFilesModified": false,
+    "publicFilesModified": false,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "automaticExecutionAllowed": false
+  }
+}

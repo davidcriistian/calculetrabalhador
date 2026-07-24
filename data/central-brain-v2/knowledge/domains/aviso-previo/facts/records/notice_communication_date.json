@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-COMMUNICATION-DATE",
+  "domainId": "aviso-previo",
+  "key": "notice_communication_date",
+  "label": "Data de comunicação do aviso",
+  "description": "Data em que a manifestação de ruptura e o aviso foram comunicados à outra parte, marco relevante para cronologia e vigência.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "event-date",
+    "referenceRole": "communication",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "system-record",
+      "declaration"
+    ],
+    "minimumConfidence": 0.75,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-006"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [
+      "FACT-NOTICE-GRANTED"
+    ],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DATA-003",
+      "severity": "error",
+      "assertion": "notice_communication_date >= admission_date",
+      "message": "A comunicação do aviso não pode anteceder a admissão.",
+      "relatedFactIds": [
+        "FACT-ADMISSION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487 e art. 489",
+      "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:695b7e874ab41b43ea4b47431560140a5bd9bd546644c12ed07392ca2300581a"
+}

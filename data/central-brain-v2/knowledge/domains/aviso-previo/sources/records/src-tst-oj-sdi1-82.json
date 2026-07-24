@@ -1,0 +1,40 @@
+{
+  "id": "SRC-TST-OJ-SDI1-82",
+  "type": "official-guidance",
+  "jurisdiction": "BR",
+  "title": "Tribunal Superior do Trabalho — Orientação Jurisprudencial nº 82 da SDI-1",
+  "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+  "publicationDate": null,
+  "effectiveFrom": null,
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "OJ-SDI1-82 — anotação da data de saída na CTPS considerando o término do prazo do aviso-prévio, ainda que indenizado.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-tst-oj-sdi1-82.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:9fad6c89f8bdf13b795b41f1ca36f86adf2491ec0401866d29426ee286d523f3",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:9fad6c89f8bdf13b795b41f1ca36f86adf2491ec0401866d29426ee286d523f3",
+  "supersedesSourceId": null,
+  "notes": [
+    "Orientação jurisprudencial oficial relevante à projeção contratual.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

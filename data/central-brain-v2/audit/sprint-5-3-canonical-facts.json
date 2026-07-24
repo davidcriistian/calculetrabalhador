@@ -1,0 +1,13 @@
+{
+  "sprint": "5.3",
+  "executedAt": "2026-07-21T18:30:00.000Z",
+  "status": "passed",
+  "facts": 31,
+  "ruleFactReferences": 20,
+  "uniqueRuleFacts": 18,
+  "undefinedRuleFacts": [],
+  "brokenFactDependencies": [],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "legalReviewRequired": true
+}

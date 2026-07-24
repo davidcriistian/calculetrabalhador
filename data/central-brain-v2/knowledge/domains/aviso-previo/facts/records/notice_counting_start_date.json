@@ -1,0 +1,77 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-COUNTING-START-DATE",
+  "domainId": "aviso-previo",
+  "key": "notice_counting_start_date",
+  "label": "Data de início da contagem do aviso",
+  "description": "Primeiro dia civil posterior à comunicação, derivado de forma determinística pela política temporal.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-004"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "event-date",
+    "referenceRole": "counting-start",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "derived-trace"
+    ],
+    "minimumConfidence": 1,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-006"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-COMMUNICATION-DATE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-TEMP-001",
+      "severity": "error",
+      "assertion": "notice_counting_start_date = notice_communication_date + 1 calendar day",
+      "message": "Primeiro dia civil posterior à comunicação, derivado de forma determinística pela política temporal.",
+      "relatedFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487 e art. 489",
+      "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:8a8eb8cb6835b49934ff55f0526dcb7c51bb22e9ca11dd86e382f4c056308783"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "AUDIT-SPRINT-5-BASELINE",
+  "type": "architecture-baseline",
+  "createdAt": "2026-07-21T00:00:00.000Z",
+  "baseVersion": "sprint-4.4",
+  "status": "passed_with_planned_gaps",
+  "evidence": {
+    "structuralValidation": "pass",
+    "existingTests": 40,
+    "checkedJsonFiles": 109,
+    "sources": 8,
+    "concepts": 16,
+    "rules": 6,
+    "projections": 0,
+    "runtimeAuthority": false,
+    "productionConsumersConnected": false
+  },
+  "blockingFindings": [],
+  "plannedGaps": [
+    "canonical legal fact model",
+    "projection definition model",
+    "projection execution result model",
+    "case resolution engine",
+    "projection dependency graph",
+    "decision explanations",
+    "deterministic execution fingerprints"
+  ],
+  "decision": "approved_for_sprint_5_implementation"
+}

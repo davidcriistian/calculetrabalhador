@@ -1,0 +1,76 @@
+{
+  "packageId": "FPKG-INSUFFICIENT",
+  "domainId": "aviso-previo",
+  "caseId": "insufficient",
+  "consumerId": null,
+  "referenceDate": "2026-01-31",
+  "asKnownAt": null,
+  "createdAt": "2026-07-21T00:00:00.000Z",
+  "facts": [
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "value": "clt-geral",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "value": "indeterminado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "value": "desconhecida",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "value": "empregado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    }
+  ],
+  "conflictPolicy": "reject",
+  "inputFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "metadata": {
+    "fixture": true
+  }
+}

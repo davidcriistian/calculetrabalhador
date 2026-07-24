@@ -1,0 +1,211 @@
+{
+  "packageId": "FPKG-PHASE2-SPECIAL-COMPLETE",
+  "domainId": "aviso-previo",
+  "caseId": "phase2-special-complete",
+  "consumerId": null,
+  "referenceDate": "2017-11-11",
+  "asKnownAt": null,
+  "createdAt": "2026-07-21T00:00:00.000Z",
+  "facts": [
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "value": "determinado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+      "value": "reconhecida",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "value": "reconhecido",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-AGREEMENT",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "value": "indenizado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+      "value": "expressa",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "value": "2026-02-28",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "value": true,
+      "origin": "document-extracted",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "type": "document",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "value": "empregado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-22T16:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture-phase2",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    }
+  ],
+  "conflictPolicy": "reject",
+  "inputFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "metadata": {
+    "fixture": true
+  }
+}

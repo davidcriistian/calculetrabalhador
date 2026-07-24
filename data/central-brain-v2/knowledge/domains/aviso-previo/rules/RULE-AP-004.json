@@ -1,0 +1,108 @@
+{
+  "id": "RULE-AP-004",
+  "domainId": "aviso-previo",
+  "title": "Modalidades de cumprimento: aviso trabalhado e aviso indenizado",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-004-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-004-A",
+          "anyOf": [
+            "prestação de trabalho durante o prazo do aviso",
+            "substituição legal do cumprimento pelo valor correspondente"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-004-A",
+          "when": "dispensa de cumprimento sem definição de seus efeitos econômicos",
+          "effect": "exigir qualificação jurídica adicional antes da projeção"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "O aviso-prévio pode ser cumprido mediante trabalho durante o respectivo prazo ou, nas hipóteses legais de ausência de cumprimento, mediante pagamento ou desconto substitutivo, sem prejuízo dos efeitos temporais expressamente assegurados.",
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-003",
+        "CPT-AVP-005",
+        "CPT-AVP-010"
+      ],
+      "factsRequired": [
+        "FACT-NOTICE-GRANTED",
+        "FACT-NOTICE-WORKED",
+        "FACT-PARTY-WAIVES-PERFORMANCE",
+        "FACT-PAYMENT-SUBSTITUTION"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-004-A",
+          "type": "classification",
+          "description": "classifica a modalidade como trabalhada ou indenizada"
+        },
+        {
+          "id": "EFFECT-AP-004-B",
+          "type": "payment-substitution",
+          "description": "reconhece obrigação ou desconto correspondente quando legalmente cabível"
+        }
+      ],
+      "interpretiveLimits": [
+        "A mera dispensa de comparecimento não autoriza presumir renúncia ao direito.",
+        "A modalidade não elimina automaticamente a projeção temporal prevista em regra própria."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, §§ 1º e 2º"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-004-01",
+          "given": [
+            "empregado trabalha durante todo o prazo"
+          ],
+          "expected": "modalidade trabalhada"
+        },
+        {
+          "id": "TC-AP-004-02",
+          "given": [
+            "empregador rompe imediatamente e paga período correspondente"
+          ],
+          "expected": "modalidade indenizada"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:0766bdd3baa802f3d89936b12aa78b8f641a0c877fb12bb9ea8619ebf48cc991"
+    }
+  ],
+  "aliases": [
+    "modalidades-do-aviso",
+    "aviso-trabalhado-ou-indenizado"
+  ],
+  "dependencies": [
+    "RULE-AP-001",
+    "RULE-AP-003"
+  ],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Distingue as modalidades de cumprimento físico do aviso e substituição pecuniária, preservando os efeitos temporais juridicamente aplicáveis."
+}

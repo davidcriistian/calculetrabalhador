@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-package.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "packageVersion",
+    "stage",
+    "consumerReady",
+    "runtimeAuthority",
+    "legalContentStatus",
+    "sections",
+    "reservedSections",
+    "createdAt",
+    "createdBy",
+    "notes"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "packageVersion": {
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "IDENTITY_ESTABLISHED",
+        "SOURCES_LOADED",
+        "CONCEPTS_LOADED",
+        "RULES_LOADED",
+        "FACTS_LOADED",
+        "PROJECTIONS_LOADED",
+        "READY_FOR_CONSUMERS"
+      ]
+    },
+    "consumerReady": {
+      "type": "boolean"
+    },
+    "runtimeAuthority": {
+      "type": "boolean"
+    },
+    "legalContentStatus": {
+      "enum": [
+        "NOT_LOADED",
+        "PARTIAL",
+        "VALIDATED"
+      ]
+    },
+    "sections": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "reservedSections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "RULE-AP-006",
+  "domainId": "aviso-previo",
+  "title": "Renúncia ao aviso e comprovação de novo emprego",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-006-001",
+      "validFrom": "2003-11-21",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-TST-SUMULA-276"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-006-A",
+          "allOf": [
+            "aviso devido pelo empregador",
+            "pedido de dispensa de cumprimento formulado pelo empregado"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-006-A",
+          "when": "empregado comprova obtenção de novo emprego",
+          "effect": "empregador pode ser exonerado do pagamento do período não cumprido, conforme Súmula 276"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "O direito ao aviso-prévio devido pelo empregador é irrenunciável pelo empregado; o pedido de dispensa de cumprimento não exime o empregador do pagamento, salvo quando comprovada a obtenção de novo emprego pelo empregado.",
+      "conceptIds": [
+        "CPT-AVP-010",
+        "CPT-AVP-011",
+        "CPT-AVP-012"
+      ],
+      "factsRequired": [
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "FACT-NEW-EMPLOYMENT-PROVEN"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-006-A",
+          "type": "right-preservation",
+          "description": "preserva o pagamento quando há simples pedido de dispensa do cumprimento"
+        },
+        {
+          "id": "EFFECT-AP-006-B",
+          "type": "payment-exoneration",
+          "description": "admite exoneração quando comprovado novo emprego"
+        }
+      ],
+      "interpretiveLimits": [
+        "A exceção exige comprovação do novo emprego; mera alegação não basta.",
+        "A regra não trata de pedido de demissão em que o aviso é devido pelo empregado."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-006-01",
+          "given": [
+            "aviso devido pelo empregador",
+            "pedido de dispensa",
+            "novo emprego não comprovado"
+          ],
+          "expected": "pagamento preservado"
+        },
+        {
+          "id": "TC-AP-006-02",
+          "given": [
+            "aviso devido pelo empregador",
+            "pedido de dispensa",
+            "novo emprego comprovado"
+          ],
+          "expected": "exceção de exoneração aplicável"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:1e6592d1abe2f6d2f11e0b359c9e07754e44d650522e4fe788061e68babec3b2"
+    }
+  ],
+  "aliases": [
+    "novo-emprego-no-aviso",
+    "renuncia-ao-aviso"
+  ],
+  "dependencies": [
+    "RULE-AP-001",
+    "RULE-AP-004"
+  ],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Modela a indisponibilidade do direito ao aviso devido pelo empregador e a exceção jurisprudencial quando o empregado comprova a obtenção de novo emprego."
+}

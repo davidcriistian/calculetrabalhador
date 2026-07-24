@@ -1,0 +1,17 @@
+{
+  "id": "projection-runtime-consumer",
+  "version": "1.0.0",
+  "status": "validation",
+  "canonical": true,
+  "operation": "executeProjection",
+  "requestSchema": "../schemas/projection-execution-request.schema.json",
+  "responseSchema": "../schemas/projection-execution-bundle.schema.json",
+  "rules": [
+    "Validate the request before execution.",
+    "Branch on targetResult.status before consuming outputs.",
+    "Preserve outputTrace, ruleTrace, warnings and limitations.",
+    "Do not treat runtime results as legal advice."
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false
+}

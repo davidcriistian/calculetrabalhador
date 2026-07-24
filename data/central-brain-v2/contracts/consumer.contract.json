@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "operation": "getProjection",
+  "requiredRequest": {
+    "ruleId": "RULE-*",
+    "referenceDate": "YYYY-MM-DD",
+    "projectionType": "enum",
+    "consumerId": "CNS-*"
+  },
+  "requiredResponse": {
+    "ruleId": "RULE-*",
+    "ruleVersionId": "VER-*",
+    "effectiveFrom": "date",
+    "effectiveTo": "date|null",
+    "payload": "any",
+    "contentFingerprint": "sha256:*",
+    "buildFingerprint": "sha256:*",
+    "provenance": "SRC-*[]"
+  },
+  "failureModes": [
+    "INVALID_REQUEST",
+    "CONSUMER_NOT_FOUND",
+    "RULE_NOT_FOUND",
+    "RULE_NOT_APPROVED",
+    "NO_VERSION_FOR_DATE",
+    "AMBIGUOUS_VERSION_FOR_DATE",
+    "DOMAIN_NOT_READY",
+    "PROJECTION_NOT_FOUND",
+    "FINGERPRINT_MISMATCH",
+    "REFERENCE_BROKEN"
+  ],
+  "id": "legacy-projection-consumer",
+  "status": "legacy-isolated",
+  "canonical": false,
+  "scope": "Legacy PRJ-* published projection lookup. It is not the PROJ-* Projection Runtime execution interface.",
+  "replacementContract": "projection-runtime-consumer.contract.json"
+}

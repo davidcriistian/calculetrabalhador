@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-identity.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "canonicalName",
+    "shortName",
+    "slug",
+    "language",
+    "jurisdiction",
+    "legalArea",
+    "domainType",
+    "summary",
+    "scope",
+    "boundaries",
+    "status",
+    "maturity",
+    "consumerReady",
+    "version",
+    "owner",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "canonicalName": {
+      "type": "string"
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "legalArea": {
+      "type": "string"
+    },
+    "domainType": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "includedRegimes",
+        "excludedRegimes",
+        "exclusionReason",
+        "geographicScope"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "includedRegimes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludedRegimes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusionReason": {
+          "type": "string"
+        },
+        "geographicScope": {
+          "type": "string"
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "required": [
+        "includes",
+        "doesNotInclude"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "includes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "doesNotInclude": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated",
+        "retired"
+      ]
+    },
+    "maturity": {
+      "enum": [
+        "STRUCTURE_ONLY",
+        "INVENTORIED",
+        "SOURCES_VALIDATED",
+        "RULES_VALIDATED",
+        "PROJECTIONS_VALIDATED",
+        "READY_FOR_CONSUMERS"
+      ]
+    },
+    "consumerReady": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

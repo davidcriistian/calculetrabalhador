@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projection-execution-bundle.schema.json",
+  "title": "Projection Execution Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request",
+    "status",
+    "brainSnapshotId",
+    "engineVersion",
+    "inputFingerprint",
+    "results",
+    "targetResult"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "resolved",
+        "not_applicable",
+        "insufficient_facts",
+        "conflict",
+        "ambiguous",
+        "human_review_required",
+        "error"
+      ]
+    },
+    "brainSnapshotId": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "engineVersion": {
+      "type": "string"
+    },
+    "inputFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "validation": {
+      "type": "object"
+    },
+    "results": {
+      "type": "object"
+    },
+    "targetResult": {
+      "oneOf": [
+        {
+          "$ref": "projection-result.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "request": {
+      "$ref": "projection-execution-request.schema.json"
+    }
+  }
+}

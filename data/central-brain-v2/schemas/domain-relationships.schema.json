@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-relationships.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "targetDomainId",
+          "relation",
+          "status"
+        ],
+        "properties": {
+          "targetDomainId": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "governed-by",
+              "related-to",
+              "may-impact",
+              "depends-on"
+            ]
+          },
+          "status": {
+            "enum": [
+              "declared",
+              "pending-validation",
+              "verified"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

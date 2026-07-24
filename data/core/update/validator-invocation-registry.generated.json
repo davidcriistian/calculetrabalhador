@@ -1,0 +1,74 @@
+{
+  "id": "validator-invocation-registry",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:25:00.589505+00:00",
+  "sourceExecutionPlan": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json",
+  "summary": {
+    "validators": 3,
+    "resolved": 3,
+    "unresolved": 0,
+    "standalone": 3,
+    "argumentAware": 0
+  },
+  "validators": [
+    {
+      "reference": "/scripts/validate-canonical-rule-minimum-contract.js",
+      "resolution": {
+        "original": "/scripts/validate-canonical-rule-minimum-contract.js",
+        "normalized": "scripts/validate-canonical-rule-minimum-contract.js",
+        "status": "resolved",
+        "resolvedPath": "scripts/validate-canonical-rule-minimum-contract.js",
+        "method": "exact-path",
+        "candidates": [
+          "scripts/validate-canonical-rule-minimum-contract.js"
+        ]
+      },
+      "invocation": {
+        "mode": "node-script",
+        "arguments": [],
+        "standalone": true
+      }
+    },
+    {
+      "reference": "/scripts/validate-governed-rule-consumer-authority.js",
+      "resolution": {
+        "original": "/scripts/validate-governed-rule-consumer-authority.js",
+        "normalized": "scripts/validate-governed-rule-consumer-authority.js",
+        "status": "resolved",
+        "resolvedPath": "scripts/validate-governed-rule-consumer-authority.js",
+        "method": "exact-path",
+        "candidates": [
+          "scripts/validate-governed-rule-consumer-authority.js"
+        ]
+      },
+      "invocation": {
+        "mode": "node-script",
+        "arguments": [],
+        "standalone": true
+      }
+    },
+    {
+      "reference": "/scripts/validate-editorial-impact-matrix.js",
+      "resolution": {
+        "original": "/scripts/validate-editorial-impact-matrix.js",
+        "normalized": "scripts/validate-editorial-impact-matrix.js",
+        "status": "resolved",
+        "resolvedPath": "scripts/validate-editorial-impact-matrix.js",
+        "method": "exact-path",
+        "candidates": [
+          "scripts/validate-editorial-impact-matrix.js"
+        ]
+      },
+      "invocation": {
+        "mode": "node-script",
+        "arguments": [],
+        "standalone": true
+      }
+    }
+  ],
+  "safety": {
+    "readOnlyExecutionOnly": true,
+    "sourceMutationAllowed": false
+  }
+}

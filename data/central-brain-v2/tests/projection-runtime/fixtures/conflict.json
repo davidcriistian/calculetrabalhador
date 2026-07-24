@@ -1,0 +1,316 @@
+{
+  "packageId": "FPKG-CONFLICT",
+  "domainId": "aviso-previo",
+  "caseId": "conflict",
+  "consumerId": null,
+  "referenceDate": "2026-01-31",
+  "asKnownAt": null,
+  "createdAt": "2026-07-21T00:00:00.000Z",
+  "facts": [
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "value": "clt-geral",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "value": true,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "value": true,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "value": "empregador",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-GRANTED",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "value": false,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-PAYMENT-SUBSTITUTION",
+      "value": true,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "value": true,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "value": 5,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "value": "2026-01-31",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "value": true,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "value": "nao-informada",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "value": true,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "value": false,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "value": false,
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "value": 7,
+      "origin": "derived",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "value": "2026-01-31",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "value": "indeterminado",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "value": "dispensa-sem-justa-causa",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "value": "empregador",
+      "origin": "user-declared",
+      "assertedAt": "2026-07-21T00:00:00.000Z",
+      "confidence": 1,
+      "evidence": [
+        {
+          "type": "declaration",
+          "reference": "fixture",
+          "capturedAt": "2026-07-21T00:00:00.000Z"
+        }
+      ],
+      "status": "verified"
+    }
+  ],
+  "conflictPolicy": "reject",
+  "inputFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "metadata": {
+    "fixture": true
+  }
+}

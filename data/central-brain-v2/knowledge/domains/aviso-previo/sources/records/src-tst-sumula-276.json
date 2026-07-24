@@ -1,0 +1,40 @@
+{
+  "id": "SRC-TST-SUMULA-276",
+  "type": "official-guidance",
+  "jurisdiction": "BR",
+  "title": "Tribunal Superior do Trabalho — Súmula nº 276",
+  "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+  "publicationDate": null,
+  "effectiveFrom": null,
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "SUM-276 — aviso-prévio; renúncia pelo empregado.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-tst-sumula-276.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:59bcabd907cfe0961a6d50badbb27642a79e3366c804f6559dbb2248375dfd4c",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:59bcabd907cfe0961a6d50badbb27642a79e3366c804f6559dbb2248375dfd4c",
+  "supersedesSourceId": null,
+  "notes": [
+    "Enunciado jurisprudencial oficial. A regra correspondente será criada somente após revisão jurídica.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

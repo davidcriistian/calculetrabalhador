@@ -1,0 +1,188 @@
+{
+  "catalogId": "GLOBAL-CANONICAL-PROJECTION-CATALOG",
+  "version": "1.5.0",
+  "status": "review",
+  "items": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-001.json",
+      "currentVersion": "1.2.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:8a1887aa1c459523fed6e19f6918b5734456e68733290b114114b6b32625f763"
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-002.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-001"
+      ],
+      "contentFingerprint": "sha256:41da134b9b7866597d9c4313a7615fbbb4fa81a0ba96c92708af805c5eba36c1"
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-003.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-001"
+      ],
+      "contentFingerprint": "sha256:3c418cbd903f2e741f7d0de5585e8328611d32b62f6dca454217d48705084f82"
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-004.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-003"
+      ],
+      "contentFingerprint": "sha256:303356d6a53d86bb21609cc3d681be1b94c81a201641553bafc52afb40d440f8"
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-005.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-004"
+      ],
+      "contentFingerprint": "sha256:7e1e64549a60d87a4c454420cde57cea25d69b813c126f7c7a8802521ec5d510"
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-006.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-002"
+      ],
+      "contentFingerprint": "sha256:451acc34e2ce6f08d6506ab7bf227023413392e36c22c5261b76cb1102822241"
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-007.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-002"
+      ],
+      "contentFingerprint": "sha256:75eaa724525d57d6f8813ae9cc7c6f173151240199f1488dd1e69b064d1f840d"
+    },
+    {
+      "projectionId": "PROJ-AP-008",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-008.json",
+      "currentVersion": "1.3.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-001",
+        "PROJ-AP-002",
+        "PROJ-AP-003",
+        "PROJ-AP-004",
+        "PROJ-AP-005",
+        "PROJ-AP-006",
+        "PROJ-AP-007"
+      ],
+      "contentFingerprint": "sha256:b18d73561373695659fbec1e64b6a9d797881f62aa8730049d334a1e6cf049d4"
+    },
+    {
+      "projectionId": "PROJ-AP-009",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-009.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:5582e1a1d57447555a8b89d4ecf72bc2a7923ebee7f7b3e3df678f0194e6012e"
+    },
+    {
+      "projectionId": "PROJ-AP-010",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-010.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:98248328f7a0518e1fe5ebdcb45587d9300b1ab8f53e37cfe3523619bea8bb9a"
+    },
+    {
+      "projectionId": "PROJ-AP-011",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-011.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:846c05a6bb1fb13f284622d5d5405857b15a96b12c48433af3c6f4e24ff6ab93"
+    },
+    {
+      "projectionId": "PROJ-AP-012",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-012.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:f1662e3efd9f69cd96e7797fdaa3974e36e0a4b380a00843be43aefaecadbd64"
+    },
+    {
+      "projectionId": "PROJ-AP-013",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-013.json",
+      "currentVersion": "1.1.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:89c4b223d5f52a89cd7abcb6520dd2b2e695dd4cb14a8b45d7076562f5f2a5f7"
+    },
+    {
+      "projectionId": "PROJ-AP-014",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-014.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:00c0b1bb0f98ee0514050e6e4bd12d92e94f7f7a8a8c034d0451d74e53d1fa81"
+    },
+    {
+      "projectionId": "PROJ-AP-015",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-015.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:0fe113da8c74e4e90730ce80486ea043e1b933a357b9bb7c36f7d8af293795bd"
+    },
+    {
+      "projectionId": "PROJ-AP-016",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-016.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [],
+      "contentFingerprint": "sha256:852579611f2bc28bbe902667fd7a731da6a8c6497572309d783c2167429c2149"
+    },
+    {
+      "projectionId": "PROJ-AP-017",
+      "domainId": "aviso-previo",
+      "path": "./domains/aviso-previo/records/PROJ-AP-017.json",
+      "currentVersion": "1.0.0",
+      "status": "review",
+      "dependencyIds": [
+        "PROJ-AP-002"
+      ],
+      "contentFingerprint": "sha256:be4f77cce5302be1d00b96f854602a23fd69ea8a77a757dbf0fb1856c860628e"
+    }
+  ],
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "updatedAt": "2026-07-21T21:30:00.000Z"
+  },
+  "updatedAt": "2026-07-22T17:30:00.000Z"
+}

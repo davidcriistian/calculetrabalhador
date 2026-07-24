@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-concept-catalog.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "catalogVersion",
+    "status",
+    "items",
+    "verification"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CONCEPTS_DRAFT",
+        "CONCEPTS_VALIDATED"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "conceptId",
+          "path",
+          "semanticType",
+          "reusable",
+          "status"
+        ],
+        "properties": {
+          "conceptId": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "semanticType": {
+            "type": "string"
+          },
+          "reusable": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "verifiedAt",
+        "verifiedBy",
+        "method",
+        "notes"
+      ],
+      "properties": {
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verifiedBy": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

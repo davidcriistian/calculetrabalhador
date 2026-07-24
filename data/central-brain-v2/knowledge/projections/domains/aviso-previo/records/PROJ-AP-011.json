@@ -1,0 +1,109 @@
+{
+  "id": "PROJ-AP-011",
+  "domainId": "aviso-previo",
+  "title": "Culpa recíproca",
+  "purpose": "Projetar de forma declarativa os efeitos de culpa recíproca.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-009",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-011-A",
+        "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-011-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-011-X1",
+          "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-009"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "reciprocal_fault_effect",
+      "valueType": "enum",
+      "semantics": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração da",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-009-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração das partes.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-011-A",
+    "TC-PROJ-AP-011-B"
+  ],
+  "contentFingerprint": "sha256:846c05a6bb1fb13f284622d5d5405857b15a96b12c48433af3c6f4e24ff6ab93"
+}

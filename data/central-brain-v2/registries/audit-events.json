@@ -1,0 +1,419 @@
+{
+  "version": "2.7.0-sprint5.6.7-phaseE",
+  "kind": "audit-events",
+  "items": [
+    {
+      "id": "AUD-AVISO-PREVIO-IDENTITY-001",
+      "occurredAt": "2026-07-21T15:30:00-03:00",
+      "actor": "central-brain-domain-ingestion",
+      "action": "activate",
+      "entityType": "domain",
+      "entityId": "aviso-previo",
+      "beforeFingerprint": "sha256:4b8daf1aea6e7bd1458b49bb465f421a8e2a6a09738ba88bce485e4a80d210ee",
+      "afterFingerprint": "sha256:c4df87a02d1d6e9d84d10e886b263c1ecf9a78fe235f74409b296989c59f1af3",
+      "reason": "Approved Sprint 1 execution for canonical domain identity.",
+      "correlationId": "CORR-AVISO-PREVIO-SPRINT-1",
+      "metadata": {
+        "packageVersion": "0.1.0",
+        "stage": "IDENTITY_ESTABLISHED",
+        "before": {
+          "maturity": "STRUCTURE_ONLY",
+          "status": "inventory-only"
+        },
+        "after": {
+          "maturity": "INVENTORIED",
+          "status": "active",
+          "packageVersion": "0.1.0"
+        }
+      },
+      "sequence": 1,
+      "previousEventHash": null,
+      "eventHash": "sha256:967ba55d67cad746ba06b236c47283aca45f570c14bdf165dc38bda3b9f48ae8"
+    },
+    {
+      "id": "AUD-AVISO-PREVIO-SOURCES-001",
+      "occurredAt": "2026-07-21T18:30:00.000Z",
+      "actor": "central-brain-domain-ingestion",
+      "action": "validate",
+      "entityType": "domain",
+      "entityId": "aviso-previo",
+      "beforeFingerprint": "sha256:6f9cde34a25d12abb1dbe46abe9423eb075e6e5bdab12b6416aec31e77f59cc7",
+      "afterFingerprint": "sha256:80d644ea49420a34ba9569801cfe3a398b4be27d22c5da7f6826d69ae6de3a14",
+      "reason": "Sprint 2 completed with official-source catalog validation for the aviso-previo pilot domain.",
+      "correlationId": "CORR-AVISO-PREVIO-SPRINT-2",
+      "metadata": {
+        "packageVersion": "0.2.0",
+        "stage": "SOURCES_LOADED",
+        "sourceCount": 8,
+        "officialAuthorities": [
+          "Presidência da República — Planalto",
+          "Tribunal Superior do Trabalho"
+        ],
+        "runtimeAuthority": false,
+        "rulesPromoted": 0
+      },
+      "sequence": 2,
+      "previousEventHash": "sha256:967ba55d67cad746ba06b236c47283aca45f570c14bdf165dc38bda3b9f48ae8",
+      "eventHash": "sha256:695fbf127fb1ed74812453404e8c9b04326a0bd0bd13aa4fb9758b59a3175247"
+    },
+    {
+      "id": "AUD-AVISO-PREVIO-CONCEPTS-001",
+      "occurredAt": "2026-07-21T20:30:00.000Z",
+      "actor": "central-brain-domain-ingestion",
+      "action": "validate",
+      "entityType": "domain",
+      "entityId": "aviso-previo",
+      "beforeFingerprint": "sha256:b1d6507362f543672f50508d902720eb36bc45fa75f154e93c461a7ff6547569",
+      "afterFingerprint": "sha256:fedbf9d7bcb9744f5fff55fe3236bea808c4f62c8264a1583504ac03b62d8f52",
+      "reason": "Sprint 3 completed with canonical concept catalog and ontology consolidation.",
+      "correlationId": "CORR-AVISO-PREVIO-SPRINT-3",
+      "metadata": {
+        "packageVersion": "0.3.0",
+        "stage": "CONCEPTS_LOADED",
+        "conceptCount": 16,
+        "ontologyRelationCount": 18,
+        "runtimeAuthority": false,
+        "rulesPromoted": 0
+      },
+      "sequence": 3,
+      "previousEventHash": "sha256:695fbf127fb1ed74812453404e8c9b04326a0bd0bd13aa4fb9758b59a3175247",
+      "eventHash": "sha256:703401aa5497174a1a297ac4ab52081122eae91dfce0aa1c32a3e38dda6d7df3"
+    },
+    {
+      "id": "AUD-CB-S44-AVP-RULES",
+      "actor": "central-brain-sprint-4.4",
+      "action": "validate",
+      "entityType": "domain",
+      "entityId": "aviso-previo",
+      "beforeFingerprint": null,
+      "afterFingerprint": "sha256:bd991020ee742728f97a6222845d967e3090772c2c291b81479293831db43b8a",
+      "reason": "Consolidar regras canônicas substantivas e rastreabilidade antes do Projection Engine.",
+      "correlationId": "CORR-SPRINT-4-4",
+      "occurredAt": "2026-07-21T23:30:00.000Z",
+      "metadata": {
+        "rules": [
+          "RULE-AP-001",
+          "RULE-AP-002",
+          "RULE-AP-003",
+          "RULE-AP-004",
+          "RULE-AP-005",
+          "RULE-AP-006"
+        ],
+        "status": "legal-review-required",
+        "runtimeAuthority": false
+      },
+      "sequence": 4,
+      "previousEventHash": "sha256:703401aa5497174a1a297ac4ab52081122eae91dfce0aa1c32a3e38dda6d7df3",
+      "eventHash": "sha256:2eb2fa64c1a769e2d1e86c5f0f27790f962d57f9f2c1e64d230b19562b29b02d"
+    },
+    {
+      "id": "AUD-CB-S52-SCHEMAS-CONTRACTS",
+      "occurredAt": "2026-07-21T23:40:00.000Z",
+      "actor": "central-brain-sprint-5.2",
+      "action": "validate",
+      "entityType": "schema",
+      "entityId": "schemas/index.json",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.2 established schemas and contracts.",
+      "correlationId": "CORR-SPRINT-5-2",
+      "metadata": {
+        "runtimeAuthority": false
+      },
+      "sequence": 5,
+      "previousEventHash": "sha256:2eb2fa64c1a769e2d1e86c5f0f27790f962d57f9f2c1e64d230b19562b29b02d",
+      "eventHash": "sha256:0837edfee32e94de3b4534603bf86dcb4e531f737542035d37e21a60a6335bd4"
+    },
+    {
+      "id": "AUD-CB-S53-CANONICAL-FACTS",
+      "occurredAt": "2026-07-21T23:50:00.000Z",
+      "actor": "central-brain-sprint-5.3",
+      "action": "validate",
+      "entityType": "brain",
+      "entityId": "canonical-facts",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.3 established canonical legal facts.",
+      "correlationId": "CORR-SPRINT-5-3",
+      "metadata": {
+        "runtimeAuthority": false
+      },
+      "sequence": 6,
+      "previousEventHash": "sha256:0837edfee32e94de3b4534603bf86dcb4e531f737542035d37e21a60a6335bd4",
+      "eventHash": "sha256:fc8b5ea571786ba5a2f2522cb6a668b08253c5a5e46628c993b074f77cdbac28"
+    },
+    {
+      "id": "AUD-CB-S54-CANONICAL-PROJECTIONS",
+      "occurredAt": "2026-07-22T00:00:00.000Z",
+      "actor": "central-brain-sprint-5.4",
+      "action": "validate",
+      "entityType": "projection",
+      "entityId": "canonical-projection-catalog",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.4 established canonical projections.",
+      "correlationId": "CORR-SPRINT-5-4",
+      "metadata": {
+        "runtimeAuthority": false,
+        "projectionCount": 8
+      },
+      "sequence": 7,
+      "previousEventHash": "sha256:fc8b5ea571786ba5a2f2522cb6a668b08253c5a5e46628c993b074f77cdbac28",
+      "eventHash": "sha256:717d55a079045683aad30c2fb5b29fb5fbdbfeed15028654c24a7a562e2f7ce1"
+    },
+    {
+      "id": "AUD-CB-S55-RESOLUTION-ENGINE",
+      "occurredAt": "2026-07-22T00:10:00.000Z",
+      "actor": "central-brain-sprint-5.5",
+      "action": "validate",
+      "entityType": "runtime",
+      "entityId": "ENG-PROJECTION-RUNTIME",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.5 established the deterministic projection runtime.",
+      "correlationId": "CORR-SPRINT-5-5",
+      "metadata": {
+        "runtimeAuthority": false
+      },
+      "sequence": 8,
+      "previousEventHash": "sha256:717d55a079045683aad30c2fb5b29fb5fbdbfeed15028654c24a7a562e2f7ce1",
+      "eventHash": "sha256:159dfaa1a4bd876d9f0ae5eacfdee3148809d0cc122bd59f06d2a9f10b858b2b"
+    },
+    {
+      "id": "AUD-CB-S561-TEMPORAL-COVERAGE",
+      "occurredAt": "2026-07-22T00:20:00.000Z",
+      "actor": "central-brain-sprint-5.6.1",
+      "action": "validate",
+      "entityType": "runtime",
+      "entityId": "ENG-PROJECTION-RUNTIME",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.6.1 added temporal and legal-scenario coverage while preserving non-authority.",
+      "correlationId": "CORR-SPRINT-5-6-1",
+      "metadata": {
+        "runtimeAuthority": false
+      },
+      "sequence": 9,
+      "previousEventHash": "sha256:159dfaa1a4bd876d9f0ae5eacfdee3148809d0cc122bd59f06d2a9f10b858b2b",
+      "eventHash": "sha256:689cf8e986c50d3c8b7c67b53618d86bac3c3187503e88d5b86a236d30431231"
+    },
+    {
+      "id": "AUD-CB-S562-CONTRACT-INTEGRITY",
+      "occurredAt": "2026-07-22T00:30:00.000Z",
+      "actor": "central-brain-sprint-5.6.2",
+      "action": "validate",
+      "entityType": "contract",
+      "entityId": "projection-runtime",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.6.2 synchronized contracts, schemas and runtime.",
+      "correlationId": "CORR-SPRINT-5-6-2",
+      "metadata": {
+        "runtimeAuthority": false,
+        "consumerReady": false
+      },
+      "sequence": 10,
+      "previousEventHash": "sha256:689cf8e986c50d3c8b7c67b53618d86bac3c3187503e88d5b86a236d30431231",
+      "eventHash": "sha256:f1fa55f21bccd5fc0d8ca677a01156f882ab3430b181355a75406aecacdb9437"
+    },
+    {
+      "id": "AUD-CB-S563-GOVERNANCE-INTEGRITY",
+      "occurredAt": "2026-07-21T23:13:05.000Z",
+      "actor": "central-brain-sprint-5.6.3",
+      "action": "seal",
+      "entityType": "audit-chain",
+      "entityId": "registries/audit-events.json",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.6.3 cryptographically chained audit events and enforced integrity governance.",
+      "correlationId": "CORR-SPRINT-5-6-3",
+      "metadata": {
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "timestampKind": "actual-execution-time"
+      },
+      "sequence": 11,
+      "previousEventHash": "sha256:f1fa55f21bccd5fc0d8ca677a01156f882ab3430b181355a75406aecacdb9437",
+      "eventHash": "sha256:fc85e0a57c63b1bbb71280ad798ee898e24d3b4194aa3311bb471726f84b2fb8"
+    },
+    {
+      "id": "AUD-59BB45097D24CD22ECF6773E",
+      "occurredAt": "2026-07-21T23:55:00.000Z",
+      "actor": "central-brain-sprint-5.6.4",
+      "action": "validate",
+      "entityType": "governance",
+      "entityId": "SEMANTIC-POLICY-AVISO-PREVIO-001",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.6.4 made legal semantic consistency executable and blocked contradictory fact packages.",
+      "correlationId": "CORR-SPRINT-5-6-4",
+      "metadata": {
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "timestampKind": "actual-execution-time"
+      },
+      "sequence": 12,
+      "previousEventHash": "sha256:fc85e0a57c63b1bbb71280ad798ee898e24d3b4194aa3311bb471726f84b2fb8",
+      "eventHash": "sha256:501520f936325050626b1f84e86dfd669e45f463f72528af67bd97e32d0fdb32"
+    },
+    {
+      "id": "AUD-3D40570E92488BD65B528950",
+      "occurredAt": "2026-07-22T01:30:00.000Z",
+      "actor": "central-brain-sprint-5.6.5",
+      "action": "validate",
+      "entityType": "runtime",
+      "entityId": "ENG-PROJECTION-RUNTIME",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Sprint 5.6.5 corrected inference activation, consolidation completeness, effect conflicts and transitive traceability.",
+      "correlationId": "CORR-SPRINT-5-6-5",
+      "metadata": {
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "timestampKind": "actual-execution-time"
+      },
+      "sequence": 13,
+      "previousEventHash": "sha256:501520f936325050626b1f84e86dfd669e45f463f72528af67bd97e32d0fdb32",
+      "eventHash": "sha256:d587a034e81c37140a250f835ee4bf2322f91a3820badf544bc460fe6f6cb54c"
+    },
+    {
+      "id": "AUD-SPRINT-5-6-6-FEDERATION",
+      "occurredAt": "2026-07-22T03:00:00.000Z",
+      "actor": "central-brain-sprint-5.6.6",
+      "action": "validate",
+      "entityType": "governance",
+      "entityId": "DOMAIN-FEDERATION",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Implemented synchronized projection discovery, shared vocabulary, federation contracts, source coverage integrity and FGTS pilot interface.",
+      "correlationId": "CORR-SPRINT-5-6-6",
+      "metadata": {
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "timestampKind": "actual-execution-time"
+      },
+      "sequence": 14,
+      "previousEventHash": "sha256:d587a034e81c37140a250f835ee4bf2322f91a3820badf544bc460fe6f6cb54c",
+      "eventHash": "sha256:8ad220b45dccb3ede0134f07a996dbd9fb79d1abc04f0874eb69d8b295301f12"
+    },
+    {
+      "id": "AUD-CB-S567-PHASE2-LEGAL-MODEL",
+      "occurredAt": "2026-07-22T14:20:48Z",
+      "actor": "central-brain-sprint-5.6.7-phase2",
+      "action": "validate",
+      "entityType": "governance",
+      "entityId": "SPRINT-5.6.7-PHASE2",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Registered the Phase 2 legal-model expansion and corrected structural release metadata without granting legal or runtime authority.",
+      "correlationId": "CORR-SPRINT-5-6-7-PHASE2",
+      "metadata": {
+        "packageVersion": "2.5.0-sprint5.6.7-phase2",
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "legalApprovalStatus": "UNDER_LEGAL_REVIEW",
+        "timestampKind": "actual-execution-time",
+        "validation": {
+          "validatorOk": true,
+          "structuralTestsPassed": 112,
+          "projectionRuntimePassed": 46,
+          "projectionRuntimeFailed": 0
+        }
+      },
+      "sequence": 15,
+      "previousEventHash": "sha256:8ad220b45dccb3ede0134f07a996dbd9fb79d1abc04f0874eb69d8b295301f12",
+      "eventHash": "sha256:545005e1636b2acd04a6668cee725a4310ee9a5fb9741b6153194dc315491a31"
+    },
+    {
+      "id": "AUD-CB-PHASE-C-NORMATIVE-COVERAGE",
+      "occurredAt": "2026-07-22T17:30:00.000Z",
+      "actor": "central-brain-phase-c-correction",
+      "action": "validate",
+      "entityType": "domain",
+      "entityId": "aviso-previo",
+      "beforeFingerprint": null,
+      "afterFingerprint": "sha256:5e2273d73406fc1667cfd3b01f269152c56061a9b46624691e1210afa8a4473e",
+      "reason": "Close technical normative-coverage nonconformities while preserving legal-review and runtime-authority gates.",
+      "correlationId": "CORR-PHASE-C-CORRECTION",
+      "metadata": {
+        "rules": 15,
+        "projections": 17,
+        "coveragePercent": 100,
+        "runtimeAuthority": false,
+        "formalLegalApproval": false
+      },
+      "sequence": 16,
+      "previousEventHash": "sha256:545005e1636b2acd04a6668cee725a4310ee9a5fb9741b6153194dc315491a31",
+      "eventHash": "sha256:bb818a50c5df20dee174d5f79220079c7c535399390e4d1caca623d00c46646c"
+    },
+    {
+      "id": "AUD-CB-PHASE-D-KNOWLEDGE-CONSOLIDATION",
+      "occurredAt": "2026-07-22T21:30:00.000Z",
+      "actor": "central-brain-phase-d-consolidation",
+      "action": "validate",
+      "entityType": "governance",
+      "entityId": "CENTRAL-BRAIN-V2",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Synchronize canonical package state after Phases B and C without granting formal legal or runtime authority.",
+      "correlationId": "CORR-PHASE-D-CONSOLIDATION",
+      "metadata": {
+        "packageVersion": "2.6.0-sprint5.6.7-phaseD",
+        "correctedNonConformities": [
+          "NC-D-001",
+          "NC-D-002",
+          "NC-D-003",
+          "NC-D-004",
+          "NC-D-005",
+          "NC-D-006"
+        ],
+        "phaseCArtifact": "audit/phase-c-normative-coverage.json",
+        "phaseDReport": "docs/sprint-5/phase-d-consolidation-correction-report.json",
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "formalLegalApproval": false
+      },
+      "sequence": 17,
+      "previousEventHash": "sha256:bb818a50c5df20dee174d5f79220079c7c535399390e4d1caca623d00c46646c",
+      "eventHash": "sha256:0ff44a0ac8d0934f399dc0695b1edc8897ce8223a405531a879dff23fae1e486"
+    },
+    {
+      "id": "AUD-CB-PHASE-E-INTERNAL-CONSISTENCY",
+      "occurredAt": "2026-07-24T00:30:00.000Z",
+      "actor": "central-brain-phase-e-consistency-correction",
+      "action": "validate",
+      "entityType": "governance",
+      "entityId": "CENTRAL-BRAIN-V2",
+      "beforeFingerprint": null,
+      "afterFingerprint": null,
+      "reason": "Resolve Phase E internal-consistency nonconformities, harden validators and normalize index metadata without granting legal or runtime authority.",
+      "correlationId": "CORR-PHASE-E-CONSISTENCY",
+      "metadata": {
+        "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+        "correctedNonConformities": [
+          "NC-E-001",
+          "NC-E-002",
+          "NC-E-003",
+          "NC-E-004",
+          "NC-E-005",
+          "NC-E-006"
+        ],
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "formalLegalApproval": false
+      },
+      "sequence": 18,
+      "previousEventHash": "sha256:0ff44a0ac8d0934f399dc0695b1edc8897ce8223a405531a879dff23fae1e486",
+      "eventHash": "sha256:deb34563a162a1516fe0256778018f3b853ba5096ac996126d3f98ce094b115c"
+    }
+  ],
+  "status": "CRYPTOGRAPHIC_CHAIN_ACTIVE",
+  "updatedAt": "2026-07-24T00:30:00.000Z",
+  "authority": false,
+  "note": "Events are ordered, hash-chained and validated. Authority remains false.",
+  "chain": {
+    "algorithm": "sha256",
+    "headEventHash": "sha256:deb34563a162a1516fe0256778018f3b853ba5096ac996126d3f98ce094b115c",
+    "eventCount": 18
+  }
+}

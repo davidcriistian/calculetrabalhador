@@ -1,0 +1,335 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.0.0",
+  "items": [
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "validations": [
+        {
+          "id": "FVAL-REGIME-001",
+          "severity": "review",
+          "assertion": "employment_regime != clt-geral",
+          "message": "Regimes diferentes de CLT geral exigem pacote jurídico próprio ou revisão humana.",
+          "relatedFactIds": []
+        }
+      ]
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "validations": [
+        {
+          "id": "FVAL-CONTRATO-001",
+          "severity": "review",
+          "assertion": "contract_term_type in [determinado, experiencia]",
+          "message": "Contrato a termo exige verificar cláusula assecuratória e causa específica de extinção.",
+          "relatedFactIds": [
+            "FACT-ASSURING-CLAUSE-PRESENT"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "validations": [
+        {
+          "id": "FVAL-CONTRATO-002",
+          "severity": "error",
+          "assertion": "contract_indefinite == (contract_term_type == indeterminado)",
+          "message": "A indicação booleana deve ser coerente com o tipo de prazo contratual.",
+          "relatedFactIds": [
+            "FACT-CONTRACT-TERM-TYPE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "validations": [
+        {
+          "id": "FVAL-CLAUSULA-001",
+          "severity": "warning",
+          "assertion": "assuring_clause_present only relevant when contract_term_type != indeterminado",
+          "message": "A cláusula assecuratória não deve alterar a classificação de contrato já indeterminado.",
+          "relatedFactIds": [
+            "FACT-CONTRACT-TERM-TYPE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-ADMISSION-DATE",
+      "validations": [
+        {
+          "id": "FVAL-DATA-001",
+          "severity": "error",
+          "assertion": "admission_date <= notice_communication_date",
+          "message": "A admissão não pode ser posterior à comunicação do aviso.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        },
+        {
+          "id": "FVAL-DATA-002",
+          "severity": "error",
+          "assertion": "admission_date <= termination_date",
+          "message": "A admissão não pode ser posterior à data de término informada.",
+          "relatedFactIds": [
+            "FACT-TERMINATION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "validations": [
+        {
+          "id": "FVAL-DATA-003",
+          "severity": "error",
+          "assertion": "notice_communication_date >= admission_date",
+          "message": "A comunicação do aviso não pode anteceder a admissão.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "validations": [
+        {
+          "id": "FVAL-DATA-004",
+          "severity": "error",
+          "assertion": "legal_reference_date is resolved by explicit temporal policy",
+          "message": "A data de referência não pode ser presumida pela data atual do sistema.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE",
+            "FACT-TERMINATION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "validations": [
+        {
+          "id": "FVAL-RUPTURA-001",
+          "severity": "error",
+          "assertion": "termination_initiative is compatible with notifying_party",
+          "message": "A iniciativa da ruptura e a parte notificante devem ser coerentes ou justificar divergência.",
+          "relatedFactIds": [
+            "FACT-NOTIFYING-PARTY"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "validations": [
+        {
+          "id": "FVAL-PARTE-001",
+          "severity": "warning",
+          "assertion": "notifying_party != desconhecida",
+          "message": "Parte notificante desconhecida impede resolver diversas projeções do aviso-prévio.",
+          "relatedFactIds": []
+        }
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "validations": [
+        {
+          "id": "FVAL-RUPTURA-002",
+          "severity": "review",
+          "assertion": "termination_cause in [culpa-reciproca,rescisao-indireta,mutuo-acordo,forca-maior,outra]",
+          "message": "Causa especial exige regra própria ou revisão humana antes de concluir efeitos.",
+          "relatedFactIds": []
+        }
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "validations": [
+        {
+          "id": "FVAL-RUPTURA-003",
+          "severity": "error",
+          "assertion": "termination_without_just_cause matches termination_cause",
+          "message": "O booleano deve ser derivado da causa jurídica e não informado isoladamente sem justificativa.",
+          "relatedFactIds": [
+            "FACT-TERMINATION-CAUSE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "validations": [
+        {
+          "id": "FVAL-AVISO-001",
+          "severity": "error",
+          "assertion": "notice_modality is coherent with notice_worked and payment_substitution",
+          "message": "Modalidade deve refletir coerentemente cumprimento e indenização substitutiva.",
+          "relatedFactIds": [
+            "FACT-NOTICE-WORKED",
+            "FACT-PAYMENT-SUBSTITUTION"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "validations": [
+        {
+          "id": "FVAL-AVISO-002",
+          "severity": "warning",
+          "assertion": "notice_worked and payment_substitution are not both true for the entire same period",
+          "message": "Cumprimento e indenização integral simultâneos exigem segmentação ou revisão.",
+          "relatedFactIds": [
+            "FACT-PAYMENT-SUBSTITUTION"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "validations": [
+        {
+          "id": "FVAL-DURACAO-001",
+          "severity": "error",
+          "assertion": "complete_service_years >= 0 and is integer",
+          "message": "Anos completos não podem ser negativos nem conter fração.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE",
+            "FACT-LEGAL-REFERENCE-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "validations": [
+        {
+          "id": "FVAL-DURACAO-002",
+          "severity": "error",
+          "assertion": "0 <= notice_duration_days <= 90 under current modeled law",
+          "message": "Duração fora do intervalo modelado exige versão normativa diferente ou revisão humana.",
+          "relatedFactIds": [
+            "FACT-LEGAL-REFERENCE-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "validations": [
+        {
+          "id": "FVAL-DATA-005",
+          "severity": "error",
+          "assertion": "termination_date >= admission_date",
+          "message": "A data de extinção não pode anteceder a admissão.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "validations": [
+        {
+          "id": "FVAL-DATA-006",
+          "severity": "error",
+          "assertion": "projected_termination_date >= notice_communication_date",
+          "message": "A data projetada não pode anteceder a comunicação do aviso.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "validations": [
+        {
+          "id": "FVAL-REDUCAO-001",
+          "severity": "error",
+          "assertion": "reduction option only when notice_worked and termination_by_employer",
+          "message": "A opção de redução só é aplicável ao aviso trabalhado promovido pelo empregador.",
+          "relatedFactIds": [
+            "FACT-NOTICE-WORKED",
+            "FACT-TERMINATION-BY-EMPLOYER"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-PARTY-WAIVES-PERFORMANCE",
+      "validations": [
+        {
+          "id": "FVAL-DISPENSA-001",
+          "severity": "review",
+          "assertion": "waiver effects depend on notifying party and proven new employment",
+          "message": "A dispensa de cumprimento não deve ser confundida automaticamente com renúncia ao direito econômico.",
+          "relatedFactIds": [
+            "FACT-NOTIFYING-PARTY",
+            "FACT-NEW-EMPLOYMENT-PROVEN"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "validations": [
+        {
+          "id": "FVAL-NOVO-EMPREGO-001",
+          "severity": "error",
+          "assertion": "new_employment_proven implies new_employment_obtained",
+          "message": "Não pode haver comprovação válida sem a ocorrência do novo emprego.",
+          "relatedFactIds": [
+            "FACT-NEW-EMPLOYMENT-OBTAINED"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "validations": [
+        {
+          "id": "FVAL-NOVO-EMPREGO-002",
+          "severity": "review",
+          "assertion": "evidence date is temporally connected to notice period",
+          "message": "Evidência temporalmente desconectada do aviso exige revisão humana.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE",
+            "FACT-PROJECTED-TERMINATION-DATE"
+          ]
+        }
+      ]
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "validations": [
+        {
+          "id": "FVAL-FALTA-001",
+          "severity": "review",
+          "assertion": "serious_misconduct_during_notice == true",
+          "message": "Falta grave no curso do aviso exige revisão jurídica e regra específica antes de conclusão automática.",
+          "relatedFactIds": []
+        }
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "validations": [
+        {
+          "id": "FVAL-RECONSIDERACAO-001",
+          "severity": "error",
+          "assertion": "reconsideration_accepted implies reconsideration_proposed",
+          "message": "Aceitação pressupõe proposta prévia de reconsideração.",
+          "relatedFactIds": [
+            "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+          ]
+        }
+      ]
+    }
+  ]
+}

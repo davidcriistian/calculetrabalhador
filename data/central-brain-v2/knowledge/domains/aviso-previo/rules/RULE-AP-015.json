@@ -1,0 +1,93 @@
+{
+  "id": "RULE-AP-015",
+  "domainId": "aviso-previo",
+  "title": "Encaminhamento da incidência de FGTS sobre o aviso-prévio ao domínio competente",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-015-001",
+      "validFrom": "1992-11-05",
+      "validTo": null,
+      "recordedAt": "2026-07-22T17:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-TST-SUMULA-305"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-015-A",
+          "allOf": [
+            "aviso-prévio trabalhado ou indenizado identificado",
+            "modalidade do aviso conhecida"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-015-A",
+          "when": "modalidade do aviso ausente ou desconhecida",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "O período de aviso-prévio, trabalhado ou indenizado, gera requisito de avaliação da incidência de FGTS pelo domínio FGTS, sem duplicar neste domínio o cálculo da contribuição ou da multa rescisória.",
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-002",
+        "CPT-AVP-003"
+      ],
+      "factsRequired": [
+        "FACT-NOTICE-MODALITY"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-015-A",
+          "type": "federated-fgts-requirement",
+          "description": "Emitir requisito federado para avaliação da incidência de FGTS sobre o aviso-prévio pelo domínio competente."
+        }
+      ],
+      "interpretiveLimits": [
+        "Esta regra não calcula FGTS nem multa de 40%.",
+        "A execução depende do contrato FED-AP-FGTS e da disponibilidade do domínio de destino.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-TST-SUMULA-305",
+          "pinpoint": "Súmula nº 305"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-015-01",
+          "given": [
+            "modalidade trabalhado ou indenizado"
+          ],
+          "expected": "requisito federado de FGTS emitido"
+        },
+        {
+          "id": "TC-AP-015-02",
+          "given": [
+            "modalidade ausente ou desconhecida"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Modelagem de fronteira: o aviso-prévio emite o requisito; o domínio FGTS permanece responsável pelo efeito financeiro."
+      ],
+      "contentFingerprint": "sha256:3ccb2c33df7e0013e15dc0b7c100331a2360804cb3655e668783787fc07267f0"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Representa a obrigação de encaminhar ao domínio FGTS a avaliação da incidência sobre o período de aviso-prévio."
+}

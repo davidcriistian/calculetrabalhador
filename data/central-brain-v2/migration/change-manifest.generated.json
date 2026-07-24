@@ -1,0 +1,283 @@
+{
+  "version": "2.0.0-rc.1",
+  "generatedAt": "2026-07-21T00:00:00-03:00",
+  "scope": "data/central-brain-v2",
+  "fileCount": 54,
+  "files": [
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/README.md",
+      "sha256": "44ca728969b75c4ee73c881fe5922817da9425c922132b654f275945af71266d",
+      "bytes": 488
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/contracts/authority.contract.json",
+      "sha256": "74fd50ac9e65fd1d394be6c2f5687e6fbaae54ff034c82b81184a905830d6422",
+      "bytes": 778
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/contracts/consumer.contract.json",
+      "sha256": "2c27a337f75fbc5782e1b135bf3d13aa6995c81914c8654e66c3dcbd6bec8962",
+      "bytes": 753
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/contracts/index.json",
+      "sha256": "547c5dbb4e0223de5720e34c99d7a79787f35fecc65fcfc484fbaa42a93a3ed3",
+      "bytes": 289
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/contracts/projection.contract.json",
+      "sha256": "a4b50563d278a5526839a448c3e5c56f5ab280990ac283d8c4eff203b4abd0a9",
+      "bytes": 419
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/docs/ARCHITECTURE.md",
+      "sha256": "0a9930b6bca671a4cebcc0439a5383767eb2a7b2e9282cc6392da4aef1e63a67",
+      "bytes": 664
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/docs/CONSOLIDATION.md",
+      "sha256": "cfc97e3da050597dfa75c26d4429c7346a7ff0f14977a55b8f5d0804b2e5e03c",
+      "bytes": 892
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/docs/DECISIONS.md",
+      "sha256": "9a6e8ea49b0859c2d19005989cada56b4959312937599234f0d83b74de310bbf",
+      "bytes": 555
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/docs/NEXT-STEPS.md",
+      "sha256": "34945650e4882d1ad1a5fc77d595edd6131b12e28ba5f675193d257b2aac516f",
+      "bytes": 424
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/brain.js",
+      "sha256": "c290e795c73620c8926f210ec8ed470326afda496467139207d37a21aac2ea53",
+      "bytes": 4141
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/errors.js",
+      "sha256": "4512fd553738726622b649d3a903a22aa14143e8fd89d60a289a8616ad66c940",
+      "bytes": 500
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/governance-engine.js",
+      "sha256": "9d32666e1d4d3ac21718ba3c2d1f1e193feb37ca4ee16be54c0bf2ece60b2032",
+      "bytes": 1112
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/index.json",
+      "sha256": "ec8a34b6d5670cb80712358c21ae64667982369dd7ddf36e3a6a2cbe8e641f6d",
+      "bytes": 423
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/integrity.js",
+      "sha256": "44c5d407070b643c80b3d1e2eb7736936cb45d67eb32502a3d310fa33c72b0b5",
+      "bytes": 892
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/loader.js",
+      "sha256": "aec6b653843c235f2d39d9d92e632244fe716e9b4eafd9a68736cfe3f4927b68",
+      "bytes": 1565
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/projection-engine.js",
+      "sha256": "2b7c2f014edb160c496ea5e2c6b627ba4753120491b4dbef3d30e2b4dd0b9211",
+      "bytes": 3371
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/engines/temporal-selector.js",
+      "sha256": "1983647b6f8741849c0586da92b5109152bf52b5dab73bebe5acfdfc20649726",
+      "bytes": 2210
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/governance/change-policy.json",
+      "sha256": "1bc5fe0fbc04d43d5eacf04775b01979c8bd8aa784cbdfde013724a7c39a3de0",
+      "bytes": 784
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/governance/identity-policy.json",
+      "sha256": "1fd2cf37719ba7ae69d1f52863d158b4bb211eb764dbd0e02fb398e25ac77f0e",
+      "bytes": 479
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/governance/index.json",
+      "sha256": "9a2511fbadfbaa898e60bd9c064050a3c4ba9505501b8a9dd2149a9eebf2ab61",
+      "bytes": 370
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/governance/maturity-levels.json",
+      "sha256": "5bf8ade0a61ab267dd790fa1d3fe406d4fee52aaa3a8e5e7ec26b51a06e71501",
+      "bytes": 992
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/governance/temporal-policy.json",
+      "sha256": "6f7bded9574244c1e5d26d6d9e8dcd794705ae87a5048c009789227b0681408a",
+      "bytes": 556
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/index.json",
+      "sha256": "cc10d593742002b8fe669ec978ca6e66371fa2a801c06b207129cbb7c16fd54e",
+      "bytes": 1173
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/migration/change-manifest.generated.json",
+      "sha256": "2090287aa0d75d2fc28ba1048f4e0788d512167ba5ceae94c4665845c2d7c3a9",
+      "bytes": 2519
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/migration/index.json",
+      "sha256": "f0b50e683194824182c23b62286ac7e582b97ea8609d0b098062aaf8935699c2",
+      "bytes": 273
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/migration/legacy-path-map.json",
+      "sha256": "4402db8f7903ca0dd25f374e36706f95cc9b58218b055aa9bb8750e1b912aae0",
+      "bytes": 524
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/migration/next-domain-template.json",
+      "sha256": "eb4d0de24a7687bf4866ae61be6a751a5c885c8452d5eec6aafae0ceab8fa7c7",
+      "bytes": 367
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/migration/phase-status.json",
+      "sha256": "cb1761da330587dc0358114f2ebafa73c6b650bcf47953927167245045b90f87",
+      "bytes": 551
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/aliases.json",
+      "sha256": "b32ee932d172b7274d5401075ecdf0d77629ab961342a5d2c1fdba38208d88a4",
+      "bytes": 239
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/audit-events.json",
+      "sha256": "205539783530cf3100dc42388bb237d1505d2b5492bf24c407f9e5cd292e6f28",
+      "bytes": 233
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/consumers.inventory.json",
+      "sha256": "58cceb6f0cd090e942e7dd0765016a61ef6d492befea47c1d86cff349e61c084",
+      "bytes": 8432
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/dependencies.json",
+      "sha256": "1a09b603d533fe0ae9db83f46249c41ca5f03cc7e7f1e8a5f6ebb033cdfed746",
+      "bytes": 28229
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/domains.json",
+      "sha256": "1e332775fe068137444a2975cc56fb319e8c8dfb5cdb94b5e0d1dfc1a29a7fb1",
+      "bytes": 16190
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/index.json",
+      "sha256": "5827bbbf07a73f1a091d2fd9612f43a246f33309d07aaa1b48ef1c8178baef23",
+      "bytes": 979
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/legacy-rules.inventory.json",
+      "sha256": "90fcf2b749843087350d06674d515747d2bdbbdbd6f490b7c40b7284f3172899",
+      "bytes": 5965
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/projections.json",
+      "sha256": "e9d6c733f4ece9f5da7b63ff4875e7b5819bfd9c6f617b79a487ea148a366ba0",
+      "bytes": 231
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/rules.json",
+      "sha256": "594fb56bf2ce4c490c26c5b35d265c2807c401b40aef9bbb27cf9e2fc40c5d1c",
+      "bytes": 220
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/registries/sources.json",
+      "sha256": "fbf9d7ce0668028e75c38414c483e15451b39a77db9c4660e35ddd23f034709c",
+      "bytes": 246
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/audit-event.schema.json",
+      "sha256": "e369091eef2a085ff95b3cba18230f426252e7c54fd5b5599ca30bcd6a5ff12b",
+      "bytes": 1473
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/brain-index.schema.json",
+      "sha256": "576bde21a1f43822dfdecb4ac11d27b75ceae93959c88acaaa43f5b857ccc522",
+      "bytes": 1545
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/consumer.schema.json",
+      "sha256": "af1533cb5068a8817b8bac54ea33295d04e36c1fa3cd6657f827089faf1aa536",
+      "bytes": 1263
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/dependency.schema.json",
+      "sha256": "27f4a28371e934b425347476e72367afa573b7e125b6a43d78999a87817e7f41",
+      "bytes": 1470
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/domain.schema.json",
+      "sha256": "148337436b7d4b726eb14c7b929f75ac1ad92443f91ba15226feded640b0cec4",
+      "bytes": 1490
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/index.json",
+      "sha256": "8d93b35a6e17ee48f7b03f9df20e3a8638b7c317175b8a2f9f13ad2963aebe3d",
+      "bytes": 821
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/projection.schema.json",
+      "sha256": "86db79ca6dd7cfa445054bd80485742f533ec9e5472c65b9cb3990f5f6363b8c",
+      "bytes": 2004
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/registry.schema.json",
+      "sha256": "ed76fb273ae45cb78940ff2a4f0be755eff2e71b3a2416242ce1343945f7e353",
+      "bytes": 875
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/rule-version.schema.json",
+      "sha256": "741dc7c783b684949b5bfc0fb1891ad2c32eea81ecfea9a09f1125a9702424ee",
+      "bytes": 2229
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/rule.schema.json",
+      "sha256": "707bf7f377f90714fdaf164bc587ac67096e9601fb00e3fd61648b100e8d1763",
+      "bytes": 1244
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/schemas/source.schema.json",
+      "sha256": "9d61f2af3b77c364d9d7e28ada595ea97c65c599b276c5cc6ec91cb1efd19adf",
+      "bytes": 2435
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/tests/README.md",
+      "sha256": "c05dbb38499c09cc34c1c162f04a4ec869106553957285f7253b8281a0e6621e",
+      "bytes": 183
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/tests/run-tests.js",
+      "sha256": "142b05173b8a905435eb6d0feeb2e7a3ff4873ce2e6801b1fe31bc267589cfa1",
+      "bytes": 3204
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/validation/index.json",
+      "sha256": "82db85f615ba973295b0dfc5a3570f1806cd3a9180d9dd9edefb2f7fc7ce4991",
+      "bytes": 277
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/validation/validate.py",
+      "sha256": "731c526d2c4b82a02b7e845f814f6116fe074fd0adb707dee2e735f70e5ac30e",
+      "bytes": 8180
+    },
+    {
+      "path": "/calculetrabalhador_brain_consolidado_work/data/central-brain-v2/validation/validation-report.generated.json",
+      "sha256": "0d828b7c8001f229f705ec6047f2ac81499d90bf5678b1b5381623c8143dcba8",
+      "bytes": 498
+    }
+  ],
+  "validation": {
+    "platformReadyForControlledIngestion": true,
+    "runtimeAuthority": false,
+    "legalKnowledgeLoaded": false
+  }
+}

@@ -1,11 +1,11 @@
 {
   "id": "pos-contract-calculator",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "schema": "/data/pos/schemas/contract.schema.json",
   "status": "draft",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-09",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Project Operating System Phase 3.5 - Governance Hardening",
   "name": "Calculator Contract",
@@ -14,9 +14,9 @@
     "coreContracts": "calculator knowledge capabilities, domains, rules and tables",
     "posContracts": "operational lifecycle, registry, migration, testing and approval process for calculators"
   },
-  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata", "canonical experience classification", "brand and visible freshness resolution", "permanent and dynamic content separation", "editorial depth", "canonical recommendation slot", "adaptive report declarations", "result and memory contract resolution", "conservative migration heritage classification", "regression baseline readiness", "legal update sensitivity", "typed governed consumers"],
+  "scope": ["calculator identity", "domain linkage", "version reference", "dependency metadata", "canonical experience classification", "brand and visible freshness resolution", "permanent and dynamic content separation", "editorial depth", "canonical recommendation slot", "adaptive report declarations", "result and memory contract resolution", "conservative migration heritage classification", "regression baseline readiness", "legal update sensitivity", "typed governed consumers", "canonical visual family conformance", "public asset integrity", "file and HTTP validation", "human acceptance", "individual batch state", "public post-deploy validation"],
   "expectedInputs": ["calculator slug", "domain reference", "runtime dependency reference", "status", "asset compatibility class", "form complexity class", "result experience class", "memory level", "reference study evidence", "governed updated-at metadata", "report semantics", "migration operation kind", "heritage snapshot", "baseline status", "legal scope class", "typed dependency declarations"],
-  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes", "calculator experience plan", "result contract resolution", "brand theme resolution", "visible updated-at resolution", "editorial depth resolution", "recommendation slot resolution", "adaptive report resolution", "report render validation", "visual validation status", "heritage preservation result", "baseline gate result", "governed propagation impact result"],
+  "expectedOutputs": ["calculator registry record", "dependency map", "relationship notes", "calculator experience plan", "result contract resolution", "brand theme resolution", "visible updated-at resolution", "editorial depth resolution", "recommendation slot resolution", "adaptive report resolution", "report render validation", "visual validation status", "heritage preservation result", "baseline gate result", "governed propagation impact result", "canonical visual family conformance", "public asset integrity result", "human acceptance record", "individual batch decision", "post-deploy validation result"],
   "dependencies": ["/data/pos/registry/index.json", "/data/blueprints/contracts/calculator-experience.contract.json", "/data/blueprints/contracts/calculator-migration.contract.json", "/data/core/update/governed-propagation.contract.json"],
   "nonResponsibilities": ["calculate values", "change calculator HTML", "change calculator JavaScript", "change URLs"],
   "notes": [

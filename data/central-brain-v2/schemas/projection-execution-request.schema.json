@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projection-execution-request.schema.json",
+  "title": "Projection Execution Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "targetProjectionId",
+    "factPackage",
+    "executionContext"
+  ],
+  "properties": {
+    "targetProjectionId": {
+      "type": "string",
+      "pattern": "^PROJ-[A-Z0-9-]+$"
+    },
+    "factPackage": {
+      "$ref": "fact-package.schema.json"
+    },
+    "executionContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clock",
+        "mode"
+      ],
+      "properties": {
+        "clock": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mode": {
+          "enum": [
+            "validation",
+            "shadow",
+            "sandbox",
+            "operational"
+          ]
+        },
+        "correlationId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requestedOutputs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

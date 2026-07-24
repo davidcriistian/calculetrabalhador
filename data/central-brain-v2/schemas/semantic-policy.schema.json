@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "semantic-policy.schema.json",
+  "title": "Executable Semantic Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domainId",
+    "version",
+    "status",
+    "rules"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^SEMANTIC-POLICY-[A-Z0-9-]+$"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "severity",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^SEM-[A-Z0-9-]+$"
+          },
+          "kind": {
+            "enum": [
+              "date-order",
+              "mapping",
+              "derived-origin",
+              "modality-consistency",
+              "implication",
+              "required-if",
+              "human-review-if",
+              "package-fact-equality",
+              "completed-years-reconciliation"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "error",
+              "warning",
+              "review"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

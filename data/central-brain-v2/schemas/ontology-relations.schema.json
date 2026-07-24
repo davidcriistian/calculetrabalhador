@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ontology-relations.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "status",
+    "relationTypes",
+    "items"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "relationTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "meaning",
+          "transitive",
+          "symmetric"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "transitive": {
+            "type": "boolean"
+          },
+          "symmetric": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "fromConceptId",
+          "relation",
+          "toConceptId",
+          "status",
+          "evidenceSourceIds"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "fromConceptId": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "toConceptId": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "validated",
+              "declared",
+              "pending-validation"
+            ]
+          },
+          "evidenceSourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "id": "PROJ-AP-001",
+  "domainId": "aviso-previo",
+  "title": "Incidência jurídica do aviso-prévio",
+  "purpose": "Determinar a incidência do aviso-prévio para ruptura unilateral sem justa causa, inclusive dispensa patronal, pedido de demissão e contrato a termo com cláusula assecuratória.",
+  "version": "1.2.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-001",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001",
+    "CPT-AVP-006",
+    "CPT-AVP-015"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "requirement": "required",
+      "purpose": "Delimitar o regime jurídico."
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "requirement": "required",
+      "purpose": "Distinguir contrato indeterminado e contrato a termo."
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "requirement": "conditional",
+      "purpose": "Verificar incidência do art. 481 em contrato a termo."
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "requirement": "required",
+      "purpose": "Identificar a causa jurídica da ruptura."
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "requirement": "required",
+      "purpose": "Identificar a iniciativa da ruptura."
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "requirement": "required",
+      "purpose": "Identificar a parte notificante."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-001-A",
+        "factId": "FACT-EMPLOYMENT-REGIME",
+        "operator": "equals",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "value": "clt-geral"
+      },
+      {
+        "id": "COND-PROJ-AP-001-B",
+        "factId": "FACT-TERMINATION-CAUSE",
+        "operator": "in",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "values": [
+          "dispensa-sem-justa-causa",
+          "pedido-demissao"
+        ]
+      },
+      {
+        "id": "COND-PROJ-AP-001-C",
+        "factId": "FACT-TERMINATION-INITIATIVE",
+        "operator": "in",
+        "values": [
+          "empregador",
+          "empregado"
+        ],
+        "onUnknown": "insufficient-facts",
+        "reason": "A iniciativa deve estar identificada."
+      },
+      {
+        "id": "COND-PROJ-AP-001-D",
+        "factId": "FACT-NOTIFYING-PARTY",
+        "operator": "in",
+        "values": [
+          "empregador",
+          "empregado"
+        ],
+        "onUnknown": "insufficient-facts",
+        "reason": "A parte notificante deve estar identificada."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-001-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-001-X1",
+          "factId": "FACT-EMPLOYMENT-REGIME",
+          "operator": "not-equals",
+          "onUnknown": "insufficient-facts",
+          "reason": "Condição jurídica necessária.",
+          "value": "clt-geral"
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Regime diverso exige pacote jurídico específico.",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "id": "EXC-PROJ-AP-001-B",
+      "priority": 2,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-001-X2",
+          "factId": "FACT-TERMINATION-CAUSE",
+          "operator": "in",
+          "onUnknown": "insufficient-facts",
+          "reason": "Condição jurídica necessária.",
+          "values": [
+            "culpa-reciproca",
+            "rescisao-indireta",
+            "mutuo-acordo",
+            "forca-maior",
+            "outra",
+            "desconhecida"
+          ]
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Causa especial exige regra própria ou revisão jurídica humana.",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "id": "EXC-PROJ-AP-001-C",
+      "priority": 3,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-001-X3",
+          "factId": "FACT-CONTRACT-TERM-TYPE",
+          "operator": "in",
+          "onUnknown": "insufficient-facts",
+          "reason": "Condição jurídica necessária.",
+          "values": [
+            "determinado",
+            "experiencia"
+          ]
+        },
+        {
+          "id": "COND-PROJ-AP-001-X4",
+          "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+          "operator": "equals",
+          "onUnknown": "insufficient-facts",
+          "reason": "Condição jurídica necessária.",
+          "value": false
+        }
+      ],
+      "outcome": "not-applicable",
+      "reason": "Contrato a termo sem cláusula assecuratória não segue o regime geral do aviso-prévio.",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "notice_applicable",
+      "valueType": "boolean",
+      "semantics": "Indica incidência do aviso-prévio.",
+      "source": "condition-result",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "COND-PROJ-AP-001-A",
+      "defaultValue": true
+    },
+    {
+      "key": "notifying_party",
+      "valueType": "enum",
+      "semantics": "Parte juridicamente responsável pela comunicação.",
+      "source": "fact",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "FACT-NOTIFYING-PARTY",
+      "allowedValues": [
+        "employer",
+        "employee"
+      ],
+      "valueMap": {
+        "empregador": "employer",
+        "empregado": "employee"
+      }
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A incidência foi resolvida pela combinação entre regime, tipo contratual, cláusula assecuratória, causa e iniciativa da ruptura.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-001-A",
+    "TC-PROJ-AP-001-B",
+    "TC-PROJ-AP-001-C",
+    "TC-PROJ-AP-001-D"
+  ],
+  "contentFingerprint": "sha256:8a1887aa1c459523fed6e19f6918b5734456e68733290b114114b6b32625f763"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "impact-analysis-__unknown-rule__-1784490746656",
+  "version": "1.0.0",
+  "status": "blocked-unresolved",
+  "generatedAt": "2026-07-19T19:52:26.656Z",
+  "input": {
+    "ruleId": "__unknown-rule__",
+    "changeType": "UNKNOWN",
+    "effectiveFrom": null,
+    "sourceReference": null,
+    "requestedBy": null,
+    "notes": null
+  },
+  "resolution": {
+    "ruleFound": false,
+    "canonicalRuleFile": null,
+    "certificationLevel": null,
+    "impactLevel": "UNRESOLVED",
+    "unresolvedReason": "RULE_ID_NOT_FOUND"
+  },
+  "impactSummary": {
+    "typedRelations": 0,
+    "confirmedRelations": 0,
+    "declaredRelations": 0,
+    "tools": 0,
+    "articles": 0,
+    "clusters": 0,
+    "nuclei": 0,
+    "pillarArticles": 0,
+    "affectedFiles": 0
+  },
+  "directImpact": {
+    "tools": [],
+    "articles": [],
+    "otherConsumers": []
+  },
+  "indirectImpact": {
+    "inheritedArticles": [],
+    "clusters": [],
+    "nuclei": [],
+    "pillarArticles": []
+  },
+  "humanReview": {
+    "required": true,
+    "automaticPublicationAllowed": false,
+    "requiredApprovals": [
+      {
+        "role": "domain-owner",
+        "status": "pending"
+      },
+      {
+        "role": "legal-reviewer",
+        "status": "pending"
+      },
+      {
+        "role": "publishing-owner",
+        "status": "pending"
+      }
+    ],
+    "reviewReasons": [
+      "LEGAL_OR_GOVERNANCE_CHANGE"
+    ]
+  },
+  "validationPlan": [
+    {
+      "order": 1,
+      "validator": "/scripts/validate-canonical-rule-minimum-contract.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 2,
+      "validator": "/scripts/validate-governed-rule-consumer-authority.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 3,
+      "validator": "/scripts/validate-editorial-impact-matrix.js",
+      "required": true,
+      "status": "pending"
+    }
+  ],
+  "executionPlan": [
+    {
+      "step": 1,
+      "action": "VERIFY_OFFICIAL_SOURCE",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "description": "Confirmar fonte oficial, vigência e escopo material da alteração."
+    },
+    {
+      "step": 2,
+      "action": "UPDATE_CANONICAL_RULE",
+      "mode": "manual-controlled",
+      "blockedUntilApproved": true,
+      "description": "Alterar somente a regra canônica aprovada e atualizar versão/fingerprint."
+    },
+    {
+      "step": 3,
+      "action": "VALIDATE_DIRECT_CONSUMERS",
+      "mode": "manual-plus-automation",
+      "blockedUntilApproved": true,
+      "targets": []
+    },
+    {
+      "step": 4,
+      "action": "REVIEW_EDITORIAL_IMPACT",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "targets": []
+    },
+    {
+      "step": 5,
+      "action": "RUN_VALIDATORS",
+      "mode": "automation-after-approval",
+      "blockedUntilApproved": true,
+      "validators": [
+        "/scripts/validate-canonical-rule-minimum-contract.js",
+        "/scripts/validate-governed-rule-consumer-authority.js",
+        "/scripts/validate-editorial-impact-matrix.js"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "PREVIEW_AND_APPROVE_PUBLICATION",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "description": "Nenhuma publicação automática é permitida."
+    }
+  ],
+  "affectedFiles": [],
+  "safety": {
+    "sourceFilesModified": false,
+    "publicFilesModified": false,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "automaticExecutionAllowed": false
+  }
+}

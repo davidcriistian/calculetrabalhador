@@ -1,0 +1,64 @@
+{
+  "id": "governance-observability-audit-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Registrar, correlacionar e validar eventos de governança de forma determinística, append-only e sem expor dados sensíveis.",
+  "auditPrinciples": [
+    "APPEND_ONLY",
+    "CORRELATION_ID_REQUIRED",
+    "ACTOR_REQUIRED",
+    "TIMESTAMP_REQUIRED",
+    "INPUT_FINGERPRINT_REQUIRED",
+    "OUTPUT_FINGERPRINT_REQUIRED_WHEN_OUTPUT_EXISTS",
+    "APPROVAL_EVIDENCE_REQUIRED_WHEN_APPLICABLE",
+    "VALIDATOR_EVIDENCE_REQUIRED_WHEN_APPLICABLE",
+    "NO_SECRET_VALUES",
+    "NO_PUBLICATION_SIDE_EFFECT"
+  ],
+  "eventTypes": [
+    "IMPACT_ANALYSIS_CREATED",
+    "APPROVAL_ARTIFACT_RECORDED",
+    "EXECUTION_PLAN_CREATED",
+    "PREVIEW_EVIDENCE_CREATED",
+    "REFERENCE_REGISTRY_GENERATED",
+    "STRUCTURAL_INTEGRITY_VALIDATED",
+    "REGRESSION_SUITE_EXECUTED",
+    "PUBLICATION_GATE_EVALUATED"
+  ],
+  "requiredFields": [
+    "eventId",
+    "correlationId",
+    "eventType",
+    "timestamp",
+    "actor",
+    "sourceArtifact",
+    "sourceFingerprint",
+    "result",
+    "safety"
+  ],
+  "immutabilityPolicy": {
+    "existingEventsMayBeRewritten": false,
+    "eventOrderMayBeRewritten": false,
+    "eventDeletionAllowed": false,
+    "correctionsRequireNewEvent": true
+  },
+  "privacyPolicy": {
+    "secretValuesAllowed": false,
+    "tokensAllowed": false,
+    "passwordsAllowed": false,
+    "rawPersonalDataAllowed": false,
+    "actorIdentifierPolicy": "role-or-system-identifier"
+  },
+  "outputs": {
+    "auditSchema": "/data/core/update/audit-event.schema.json",
+    "auditLedger": "/data/core/update/audit/governance-audit-ledger.generated.jsonl",
+    "auditSummary": "/data/core/update/audit/governance-audit-summary.generated.json"
+  },
+  "references": {
+    "generator": "/scripts/generate-governance-audit-ledger.js",
+    "validator": "/scripts/validate-governance-audit-ledger.js"
+  }
+}

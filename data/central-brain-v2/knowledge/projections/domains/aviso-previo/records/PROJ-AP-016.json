@@ -1,0 +1,109 @@
+{
+  "id": "PROJ-AP-016",
+  "domainId": "aviso-previo",
+  "title": "Falta grave do empregador durante o aviso",
+  "purpose": "Projetar de forma declarativa os efeitos de falta grave do empregador durante o aviso.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-014",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-016-A",
+        "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-016-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-016-X1",
+          "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-014"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "employer_misconduct_effect",
+      "valueType": "enum",
+      "semantics": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-014-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do fato.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-016-A",
+    "TC-PROJ-AP-016-B"
+  ],
+  "contentFingerprint": "sha256:852579611f2bc28bbe902667fd7a731da6a8c6497572309d783c2167429c2149"
+}

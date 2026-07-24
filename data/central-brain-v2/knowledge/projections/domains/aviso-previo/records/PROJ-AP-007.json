@@ -1,0 +1,171 @@
+{
+  "id": "PROJ-AP-007",
+  "domainId": "aviso-previo",
+  "title": "Dispensa de cumprimento por novo emprego",
+  "purpose": "Resolver os efeitos do pedido de dispensa de cumprimento diante de novo emprego comprovado.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "2003-11-21",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-006",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-010",
+    "CPT-AVP-011",
+    "CPT-AVP-012"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "requirement": "required",
+      "purpose": "Confirmar aviso devido pelo empregador."
+    },
+    {
+      "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "requirement": "required",
+      "purpose": "Confirmar pedido de dispensa."
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "requirement": "required",
+      "purpose": "Confirmar comprovação do novo emprego."
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "requirement": "required",
+      "purpose": "Confirmar a ocorrência do novo emprego."
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "requirement": "required",
+      "purpose": "Vincular temporalmente a prova ao período do aviso."
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "requirement": "required",
+      "purpose": "Delimitar o início do período relevante."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-007-A",
+        "factId": "FACT-EMPLOYER-OWES-NOTICE",
+        "operator": "equals",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "value": true
+      },
+      {
+        "id": "COND-PROJ-AP-007-B",
+        "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "operator": "equals",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "value": true
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-007-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-007-X1",
+          "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+          "operator": "equals",
+          "onUnknown": "insufficient-facts",
+          "reason": "Condição jurídica necessária.",
+          "value": true
+        },
+        {
+          "id": "COND-PROJ-AP-007-X2",
+          "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+          "operator": "equals",
+          "value": true,
+          "onUnknown": "insufficient-facts",
+          "reason": "A ocorrência do novo emprego deve estar confirmada."
+        }
+      ],
+      "outcome": "override",
+      "outputOverrides": {
+        "payment_preserved": false,
+        "release_effect": "employer_payment_exoneration"
+      },
+      "reason": "Novo emprego comprovado aciona a exceção da Súmula 276.",
+      "ruleIds": [
+        "RULE-AP-006"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-002",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": [
+        "notice_modality"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "payment_preserved",
+      "valueType": "boolean",
+      "semantics": "Indica preservação do pagamento no período dispensado.",
+      "source": "rule-effect",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "RULE-AP-006",
+      "defaultValue": true
+    },
+    {
+      "key": "release_effect",
+      "valueType": "enum",
+      "semantics": "Consequência jurídica da dispensa de cumprimento.",
+      "source": "condition-result",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "COND-PROJ-AP-007-X1",
+      "allowedValues": [
+        "payment_preserved",
+        "employer_payment_exoneration"
+      ],
+      "defaultValue": "payment_preserved"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "O simples pedido não elimina o pagamento; novo emprego comprovado pode acionar a exceção.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-007-A",
+    "TC-PROJ-AP-007-B"
+  ],
+  "contentFingerprint": "sha256:75eaa724525d57d6f8813ae9cc7c6f173151240199f1488dd1e69b064d1f840d"
+}

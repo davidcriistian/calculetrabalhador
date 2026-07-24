@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-federation-contract.schema.json",
+  "title": "Domain Federation Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "sourceDomainId",
+    "targetDomainId",
+    "status",
+    "requiredCapabilities",
+    "inputBindings",
+    "outputBindings",
+    "failurePolicy",
+    "compatibility",
+    "governance"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^FED-[A-Z0-9-]+$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "sourceDomainId": {
+      "type": "string"
+    },
+    "targetDomainId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "interface-defined",
+        "available",
+        "blocked",
+        "deprecated"
+      ]
+    },
+    "requiredCapabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "inputBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sharedFactId",
+          "required"
+        ],
+        "properties": {
+          "sharedFactId": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outputBindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "effectKey",
+          "valueType",
+          "required"
+        ],
+        "properties": {
+          "effectKey": {
+            "type": "string"
+          },
+          "valueType": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "failurePolicy": {
+      "enum": [
+        "block",
+        "partial-with-disclosure",
+        "human-review"
+      ]
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimumTargetVersion",
+        "maximumTargetVersion",
+        "versionPolicy"
+      ],
+      "properties": {
+        "minimumTargetVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "maximumTargetVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "versionPolicy": {
+          "enum": [
+            "exact",
+            "compatible-major",
+            "declared-interface"
+          ]
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtimeAuthority",
+        "consumerReady",
+        "owner",
+        "reviewRequired"
+      ],
+      "properties": {
+        "runtimeAuthority": {
+          "type": "boolean"
+        },
+        "consumerReady": {
+          "type": "boolean"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "reviewRequired": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

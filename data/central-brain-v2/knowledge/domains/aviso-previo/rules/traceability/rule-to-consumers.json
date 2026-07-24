@@ -1,0 +1,31 @@
+{
+  "version": "0.4.0",
+  "domainId": "aviso-previo",
+  "generatedAt": "2026-07-21T23:30:00.000Z",
+  "items": {
+    "RULE-AP-001": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ],
+    "RULE-AP-002": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ],
+    "RULE-AP-003": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ],
+    "RULE-AP-004": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ],
+    "RULE-AP-005": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ],
+    "RULE-AP-006": [
+      "CNS-CALCULADORA-AVISO-PREVIO",
+      "CNS-CALCULADORA-RESCISAO-CLT"
+    ]
+  }
+}

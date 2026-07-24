@@ -1,0 +1,42 @@
+{
+  "id": "SRC-BR-CLT-ART484A",
+  "type": "decree",
+  "jurisdiction": "BR",
+  "title": "Consolidação das Leis do Trabalho — art. 484-A",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+  "publicationDate": "2017-07-14",
+  "effectiveFrom": "2017-11-11",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-22T17:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "capturedAt": "2026-07-22T17:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Art. 484-A — extinção por acordo; incluído pela Lei nº 13.467/2017.",
+      "capturedAt": "2026-07-22T17:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-clt-art484a.snapshot.json",
+      "capturedAt": "2026-07-22T17:30:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:57e6b7d0f5619becb897bb0eab5eb55235afed56ca1040f835bd949376ae418b",
+      "capturedAt": "2026-07-22T17:30:00.000Z"
+    }
+  ],
+  "checksum": "sha256:57e6b7d0f5619becb897bb0eab5eb55235afed56ca1040f835bd949376ae418b",
+  "supersedesSourceId": null,
+  "notes": [
+    "Dispositivo incluído pela Lei nº 13.467/2017.",
+    "Vigência modelada a partir de 2017-11-11, após a vacatio legis de 120 dias.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+    "Revisão jurídica formal permanece pendente."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "SRC-BR-CLT-ART487-491",
+  "type": "decree",
+  "jurisdiction": "BR",
+  "title": "Consolidação das Leis do Trabalho — arts. 487 a 491",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+  "publicationDate": "1943-05-01",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Arts. 487 a 491 — disciplina geral do aviso-prévio, redução de jornada, reconsideração e faltas graves durante o prazo.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-clt-art487-491.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:37129067ebe39ded700a2f41a6081ac37a2f1b0c14d5e5d089e2a110ba3bcee3",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:37129067ebe39ded700a2f41a6081ac37a2f1b0c14d5e5d089e2a110ba3bcee3",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária em texto compilado oficial.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

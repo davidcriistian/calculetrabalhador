@@ -1,0 +1,119 @@
+{
+  "id": "PROJ-AP-014",
+  "domainId": "aviso-previo",
+  "title": "Reconsideração do aviso-prévio",
+  "purpose": "Projetar de forma declarativa os efeitos de reconsideração do aviso-prévio.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-012",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "requirement": "conditional",
+      "purpose": "Sustentar a aceitação tácita quando alegada continuidade da prestação após o termo do aviso."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-014-A",
+        "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-014-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-014-X1",
+          "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "reconsideration_effect",
+      "valueType": "enum",
+      "semantics": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-012-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-014-A",
+    "TC-PROJ-AP-014-B"
+  ],
+  "contentFingerprint": "sha256:00c0b1bb0f98ee0514050e6e4bd12d92e94f7f7a8a8c034d0451d74e53d1fa81"
+}

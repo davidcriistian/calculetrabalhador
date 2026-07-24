@@ -1,10 +1,10 @@
 {
   "id": "calculator-conservative-migration-contract",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "active-internal-standard",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-14",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
   "objective": "Migrate existing calculator experience without silently rewriting editorial heritage, SEO, identity or calculation behavior.",
@@ -18,6 +18,12 @@
     "PRESERVE_STATIC_VALID_INFORMATION",
     "PRESERVE_CALCULATION_BEHAVIOR_UNTIL_BASELINE_PROVES_CHANGE",
     "LEGAL_CORRECTNESS_OVERRIDES_LEGACY_EQUIVALENCE",
+    "SINGLE_GOVERNED_SOURCE_FOR_CALCULATION_AND_VISIBLE_RULE_DATA",
+    "CANONICAL_VISUAL_FAMILY_CONFORMANCE",
+    "PUBLIC_ASSET_INTEGRITY",
+    "INTERNAL_GOVERNANCE_METADATA_MUST_NOT_LEAK_INTO_PUBLIC_USER_EXPERIENCE",
+    "FILE_AND_HTTP_VALIDATION",
+    "PUBLIC_EXPERIENCE_FIRST",
     "MIGRATE_CALCULATOR_EXPERIENCE",
     "MIGRATE_RESULT_EXPERIENCE",
     "CONNECT_LEGAL_DEPENDENCIES_WHEN_REQUIRED",
@@ -192,7 +198,8 @@
     {
       "id": "PILOT_1",
       "calculator": "calculator:calculadora-aviso-previo",
-      "status": "REGISTERED_NOT_EXECUTED",
+      "status": "HOMOLOGATED",
+      "finalCommit": "0a8c8ce66e06cbadea9472e423f42fcdb2718046",
       "objectives": [
         "conservative-migration",
         "editorial-preservation",
@@ -206,7 +213,8 @@
     {
       "id": "PILOT_2",
       "calculator": "calculator:saque-aniversario-fgts",
-      "status": "REGISTERED_NOT_EXECUTED",
+      "status": "HOMOLOGATED",
+      "finalCommit": "c905a05d5a31567f827c46362c1bffe15fb39264",
       "objectives": [
         "canonical-experience-rebuild",
         "editorial-preservation",
@@ -233,10 +241,20 @@
     "NON_LEGAL_CALCULATOR_FORCED_INTO_LEGAL_UPDATE_SYSTEM",
     "MIGRATION_WITHOUT_REGRESSION_BASELINE",
     "SPECIALIZED_EXCEPTION_AUTO_MIGRATED",
-    "PUBLIC_MUTATION_DURING_FOUNDATION_PHASE"
+    "PUBLIC_MUTATION_DURING_FOUNDATION_PHASE",
+    "CANONICAL_VISUAL_FAMILY_CONFORMANCE_FAILED",
+    "PUBLIC_ASSET_INTEGRITY_FAILED",
+    "RESULT_STATE_NOT_EXERCISED",
+    "LEGACY_FALLBACK_PREVAILS",
+    "INTERNAL_GOVERNANCE_METADATA_LEAK",
+    "HUMAN_ACCEPTANCE_MISSING",
+    "PUBLIC_POST_DEPLOY_VALIDATION_MISSING",
+    "BATCH_COLLECTIVE_FALSE_PASS"
   ],
   "validationClasses": {
     "DETERMINISTIC_CHECK": "Evidence is explicit and mechanically reproducible.",
+    "BROWSER_RUNTIME_CHECK": "Evidence requires a real browser runtime and asserted rendered state.",
+    "VISUAL_FAMILY_COMPARISON": "Evidence compares the migrated asset with an approved canonical calculator family.",
     "HEURISTIC_WARNING": "Evidence may nominate a review candidate but cannot confirm a governed dependency.",
     "HUMAN_REVIEW_REQUIRED": "Semantic, legal or specialized judgment must be recorded before continuation."
   },
@@ -245,6 +263,56 @@
     "CANONICAL_COMPLIANT": "Preserve and patch only confirmed gaps.",
     "PARTIALLY_CANONICAL": "Use conservative migration after baseline gate.",
     "SPECIALIZED_EXCEPTION_REVIEW": "Automation cannot migrate without human review."
+  },
+  "definitiveProtocol": {
+    "id": "CONTROLLED_CALCULATOR_MIGRATION_PROTOCOL",
+    "requiredSequence": [
+      "PRE_MIGRATION_RECONNAISSANCE",
+      "BASELINE_FREEZE",
+      "CANONICAL_RULE_RECONCILIATION_WHEN_APPLICABLE",
+      "RULE_CHECKPOINT",
+      "CONTROLLED_PUBLIC_MIGRATION",
+      "TECHNICAL_VALIDATION",
+      "CANONICAL_VISUAL_FAMILY_CONFORMANCE",
+      "PUBLIC_ASSET_INTEGRITY",
+      "HUMAN_ACCEPTANCE",
+      "SELECTIVE_CHECKPOINT",
+      "CONTROLLED_PUBLICATION",
+      "PUBLIC_POST_DEPLOY_VALIDATION",
+      "HOMOLOGATION"
+    ],
+    "completionBlockers": [
+      "visual-family-fail",
+      "asset-integrity-fail",
+      "calculation-form-not-exercised",
+      "result-state-not-rendered",
+      "human-acceptance-missing",
+      "public-rule-visible-data-divergence",
+      "rollback-missing",
+      "post-deploy-validation-missing-after-publication"
+    ],
+    "humanAcceptance": {
+      "alwaysRequired": ["HUMAN_VISUAL_ACCEPTANCE", "HUMAN_CALCULATION_ACCEPTANCE"],
+      "requiredForLegalRules": ["HUMAN_LEGAL_BEHAVIOR_ACCEPTANCE"],
+      "assetGate": "PUBLIC_ASSET_INTEGRITY"
+    },
+    "protocolCompatibility": {
+      "legacyUnmigrated": "LEGACY_ACCEPTED_PENDING_MIGRATION",
+      "newMigrationAfterConsolidation": "FULL_PROTOCOL_REQUIRED"
+    }
+  },
+  "batchMigrationProtocol": {
+    "defaultMaximumAssets": 3,
+    "conditionalMaximumAssets": 4,
+    "fourAssetCondition": "PROVEN_HOMOGENEOUS_FAMILY_AND_RULES",
+    "specializedMaximumAssets": 1,
+    "individualRequiredEvidence": ["identity", "baseline", "formula", "rule", "consumers", "dependencies", "seo-preservation", "editorial-preservation", "tests", "evidence", "rollback", "status", "human-acceptance"],
+    "sharedBatchEvidence": ["visual-family", "protocol", "execution", "common-validators", "consolidated-report"],
+    "mustRemainIndividual": ["baseline", "formula", "rule", "result", "rollback", "legal-decision"],
+    "individualStates": ["READY", "READY_WITH_GUARDS", "BLOCKED", "REVIEW_REQUIRED", "MIGRATED", "HUMAN_ACCEPTED", "HOMOLOGATED"],
+    "failureIsolationRule": "Block only the affected asset when technically isolated; never infer approval by batch association.",
+    "baselinePolicy": {"REGRESSION_BASELINE_READY":"MAY_PROCEED","REGRESSION_BASELINE_PARTIAL":"ADDITIONAL_FREEZE_REQUIRED","REGRESSION_BASELINE_MISSING":"BLOCKED"},
+    "unreconciledRulePolicy": "BLOCKED_FOR_PUBLIC_MIGRATION"
   },
   "boundaries": {
     "rewritesEditorialContent": false,

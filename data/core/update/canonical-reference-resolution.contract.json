@@ -1,0 +1,56 @@
+{
+  "id": "canonical-reference-resolution-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Normalizar referências de ativos e validadores sem reescrever catálogos legados nem inferir relações jurídicas.",
+  "canonicalPathRules": {
+    "separator": "/",
+    "leadingSlashAllowedInInput": true,
+    "leadingSlashInCanonicalOutput": false,
+    "duplicateSeparatorsCollapsed": true,
+    "caseSensitiveFilesystem": true,
+    "relativeToProjectRoot": true
+  },
+  "resolutionOrder": [
+    "exact-path",
+    "known-prefix-alias",
+    "catalog-id",
+    "basename-index",
+    "stem-index",
+    "common-location-projection"
+  ],
+  "statuses": [
+    "resolved",
+    "ambiguous",
+    "unresolved",
+    "invalid"
+  ],
+  "ambiguityPolicy": {
+    "automaticChoiceAllowed": false,
+    "allCandidatesMustRemainVisible": true,
+    "humanDecisionRequired": true
+  },
+  "mutationPolicy": {
+    "legacyCatalogRewriteAllowed": false,
+    "publicFileRewriteAllowed": false,
+    "ruleFileRewriteAllowed": false,
+    "generatedProjectionOnly": true
+  },
+  "validatorPolicy": {
+    "validatorPathMustResolve": true,
+    "requiredArgumentsMustBeDeclared": true,
+    "standaloneAssumptionForbidden": true,
+    "readOnlyExecutionOnly": true
+  },
+  "outputs": {
+    "referenceRegistry": "/data/core/update/canonical-reference-registry.generated.json",
+    "validatorRegistry": "/data/core/update/validator-invocation-registry.generated.json"
+  },
+  "references": {
+    "generator": "/scripts/generate-canonical-reference-registry.js",
+    "validator": "/scripts/validate-canonical-reference-registry.js"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "RULE-AP-007",
+  "domainId": "aviso-previo",
+  "title": "Contrato a termo com cláusula assecuratória",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-007-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-22T14:40:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART481"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-007-A",
+          "allOf": [
+            "contrato a termo com cláusula assecuratória",
+            "fatos mínimos presentes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-007-A",
+          "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado.",
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "factsRequired": [
+        "FACT-CONTRACT-TERM-TYPE",
+        "FACT-ASSURING-CLAUSE-PRESENT"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-007-A",
+          "type": "regime-indeterminado-aplicavel",
+          "description": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeter"
+        }
+      ],
+      "interpretiveLimits": [
+        "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART481",
+          "pinpoint": "art. 481"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-007-01",
+          "given": [
+            "fatos de incidência presentes"
+          ],
+          "expected": "regra aplicável em revisão"
+        },
+        {
+          "id": "TC-AP-007-02",
+          "given": [
+            "fatos insuficientes ou controvertidos"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+      ],
+      "contentFingerprint": "sha256:6091144c62a7fc8ff7d25b338a92b11176647c5e28ea1e0d3c2a90e23222468b"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado."
+}

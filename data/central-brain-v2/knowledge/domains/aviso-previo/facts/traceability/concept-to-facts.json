@@ -1,0 +1,123 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.0.0",
+  "items": [
+    {
+      "conceptId": "CPT-AVP-001",
+      "factIds": [
+        "FACT-EMPLOYEE-BENEFICIARY",
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-EMPLOYMENT-REGIME",
+        "FACT-TERMINATION-CAUSE",
+        "FACT-TERMINATION-WITHOUT-JUST-CAUSE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-002",
+      "factIds": [
+        "FACT-NOTICE-MODALITY",
+        "FACT-NOTICE-WORKED"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-003",
+      "factIds": [
+        "FACT-NOTICE-MODALITY",
+        "FACT-PAYMENT-SUBSTITUTION"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-004",
+      "factIds": [
+        "FACT-ADMISSION-DATE",
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-NOTICE-DURATION"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-005",
+      "factIds": [
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-NOTICE-DURATION"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-006",
+      "factIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-NOTICE-GRANTED"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-007",
+      "factIds": [
+        "FACT-PROJECTED-TERMINATION-DATE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-008",
+      "factIds": [
+        "FACT-PROJECTED-TERMINATION-DATE",
+        "FACT-TERMINATION-DATE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-009",
+      "factIds": [
+        "FACT-EMPLOYEE-OPTION-REDUCTION-MODE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-010",
+      "factIds": [
+        "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "FACT-NOTICE-MODALITY",
+        "FACT-PARTY-WAIVES-PERFORMANCE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-011",
+      "factIds": [
+        "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "FACT-PARTY-WAIVES-PERFORMANCE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-012",
+      "factIds": [
+        "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+        "FACT-NEW-EMPLOYMENT-OBTAINED",
+        "FACT-NEW-EMPLOYMENT-PROVEN"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-013",
+      "factIds": [
+        "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+        "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-014",
+      "factIds": [
+        "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-015",
+      "factIds": [
+        "FACT-NOTIFYING-PARTY",
+        "FACT-TERMINATION-BY-EMPLOYER",
+        "FACT-TERMINATION-INITIATIVE"
+      ]
+    },
+    {
+      "conceptId": "CPT-AVP-016",
+      "factIds": [
+        "FACT-ASSURING-CLAUSE-PRESENT",
+        "FACT-CONTRACT-INDEFINITE",
+        "FACT-CONTRACT-TERM-TYPE"
+      ]
+    }
+  ]
+}

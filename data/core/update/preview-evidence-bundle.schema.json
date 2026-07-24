@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/preview-evidence-bundle.schema.json",
+  "title": "Preview Evidence Bundle",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "generatedAt",
+    "input",
+    "fingerprints",
+    "fileEvidence",
+    "proposal",
+    "validatorEvidence",
+    "humanReview",
+    "publicationGate",
+    "safety"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "review-ready",
+        "blocked-evidence-incomplete",
+        "blocked-validator-failure"
+      ]
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "input": {
+      "type": "object"
+    },
+    "fingerprints": {
+      "type": "object"
+    },
+    "fileEvidence": {
+      "type": "array"
+    },
+    "proposal": {
+      "type": "object"
+    },
+    "validatorEvidence": {
+      "type": "array"
+    },
+    "humanReview": {
+      "type": "object"
+    },
+    "publicationGate": {
+      "type": "object"
+    },
+    "safety": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

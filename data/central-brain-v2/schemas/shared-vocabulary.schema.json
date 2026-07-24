@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shared-vocabulary.schema.json",
+  "title": "Shared Employment Vocabulary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "status",
+    "facts",
+    "reusePolicy",
+    "updatedAt"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved"
+      ]
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sharedFactId",
+          "canonicalFactId",
+          "ownerDomainId",
+          "semanticScope",
+          "reuseMode"
+        ],
+        "properties": {
+          "sharedFactId": {
+            "type": "string",
+            "pattern": "^SHARED-FACT-[A-Z0-9-]+$"
+          },
+          "canonicalFactId": {
+            "type": "string",
+            "pattern": "^FACT-[A-Z0-9-]+$"
+          },
+          "ownerDomainId": {
+            "type": "string"
+          },
+          "semanticScope": {
+            "type": "string"
+          },
+          "reuseMode": {
+            "enum": [
+              "reference",
+              "materialize-by-contract"
+            ]
+          }
+        }
+      }
+    },
+    "reusePolicy": {
+      "type": "object"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "domains",
+  "items": [
+    {
+      "id": "adicional-noturno",
+      "slug": "adicional-noturno",
+      "name": "Adicional Noturno",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "clt",
+        "jornada"
+      ],
+      "legacyReferences": [
+        "/calculadora-adicional-noturno/",
+        "/data/tabelas-trabalhistas.json",
+        "/assets/js/tabelas-trabalhistas.js",
+        "/data/core/compatibility/tools-map.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "aposentadoria",
+      "slug": "aposentadoria",
+      "name": "Aposentadoria",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "inss",
+        "salario-minimo"
+      ],
+      "legacyReferences": [
+        "/data/rules/inss.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "aviso-previo",
+      "slug": "aviso-previo",
+      "name": "Aviso-Prévio",
+      "status": "active",
+      "maturity": "PROJECTIONS_VALIDATED",
+      "currentVersion": "0.6.0",
+      "dependencies": [
+        "clt"
+      ],
+      "legacyReferences": [
+        "/data/rules/aviso-previo.json",
+        "/data/tabelas-trabalhistas.json",
+        "/data/core/compatibility/rules-map.json",
+        "/data/central-brain-v2/knowledge/domains/aviso-previo/manifest.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Canonical domain package validated through projections and federation interfaces.",
+        "Runtime and consumers remain non-authoritative pending formal promotion.",
+        "Domestic employment remains a separately governed boundary."
+      ],
+      "aliases": [
+        "aviso previo",
+        "aviso prévio",
+        "aviso-prévio"
+      ]
+    },
+    {
+      "id": "beneficios",
+      "slug": "beneficios",
+      "name": "Beneficios",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "salario-minimo",
+        "clt"
+      ],
+      "legacyReferences": [
+        "/data/rules/seguro-desemprego.json",
+        "/data/tabelas-trabalhistas.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "calendario-das-mei",
+      "slug": "calendario-das-mei",
+      "name": "Calendario Das Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "clt",
+      "slug": "clt",
+      "name": "CLT",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "salario-minimo",
+        "inss",
+        "irrf",
+        "fgts"
+      ],
+      "legacyReferences": [
+        "/data/rules/",
+        "/data/tabelas-trabalhistas.json",
+        "/data/maps/tools-map.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "das-mei",
+      "slug": "das-mei",
+      "name": "Das Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "decimo-terceiro",
+      "slug": "decimo-terceiro",
+      "name": "Decimo Terceiro",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "faturamento-mei",
+      "slug": "faturamento-mei",
+      "name": "Faturamento Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "ferias",
+      "slug": "ferias",
+      "name": "Ferias",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "fgts",
+      "slug": "fgts",
+      "name": "FGTS",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "clt",
+        "salario-minimo"
+      ],
+      "legacyReferences": [
+        "/data/rules/fgts.json",
+        "/data/tabelas-trabalhistas.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "horas-extras",
+      "slug": "horas-extras",
+      "name": "Horas Extras",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "clt"
+      ],
+      "legacyReferences": [
+        "/calculadora-horas-extras-clt/",
+        "/data/tabelas-trabalhistas.json",
+        "/assets/js/tabelas-trabalhistas.js",
+        "/data/core/compatibility/tools-map.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "icms",
+      "slug": "icms",
+      "name": "Icms",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "insalubridade",
+      "slug": "insalubridade",
+      "name": "Insalubridade",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "inss",
+      "slug": "inss",
+      "name": "INSS",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "salario-minimo"
+      ],
+      "legacyReferences": [
+        "/data/rules/inss.json",
+        "/data/tabelas-trabalhistas.json",
+        "/scripts/transform-rules.js"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "inss-teto",
+      "slug": "inss-teto",
+      "name": "Inss Teto",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [
+        "tetoINSS"
+      ],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "irrf",
+      "slug": "irrf",
+      "name": "IRRF",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "inss"
+      ],
+      "legacyReferences": [
+        "/data/rules/irrf.json",
+        "/data/tabelas-trabalhistas.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "iss",
+      "slug": "iss",
+      "name": "Iss",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "jornada",
+      "slug": "jornada",
+      "name": "Jornada",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "juros-das-mei",
+      "slug": "juros-das-mei",
+      "name": "Juros Das Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "limite-faturamento-mei",
+      "slug": "limite-faturamento-mei",
+      "name": "Limite Faturamento Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "mei",
+      "slug": "mei",
+      "name": "MEI",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "salario-minimo",
+        "inss",
+        "tributos"
+      ],
+      "legacyReferences": [
+        "/data/tabelas-trabalhistas.json",
+        "/data/tools.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "multa-das-mei",
+      "slug": "multa-das-mei",
+      "name": "Multa Das Mei",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "multa-fgts",
+      "slug": "multa-fgts",
+      "name": "Multa Fgts",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "pj",
+      "slug": "pj",
+      "name": "PJ",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [
+        "clt",
+        "inss",
+        "irrf"
+      ],
+      "legacyReferences": [
+        "/data/tools.json",
+        "/data/maps/tools-map.json"
+      ],
+      "sourceRecord": "/data/core/registry/domains.json",
+      "consumerReady": false,
+      "notes": [
+        "Migrated as structural inventory only. Legal knowledge has not been revalidated in Central Brain v2."
+      ],
+      "aliases": []
+    },
+    {
+      "id": "rescisao",
+      "slug": "rescisao",
+      "name": "Rescisao",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "salario-minimo",
+      "slug": "salario-minimo",
+      "name": "Salario Minimo",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "seguro-desemprego",
+      "slug": "seguro-desemprego",
+      "name": "Seguro Desemprego",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    },
+    {
+      "id": "tributos",
+      "slug": "tributos",
+      "name": "Tributos",
+      "status": "inventory-only",
+      "maturity": "STRUCTURE_ONLY",
+      "currentVersion": "0.1.0",
+      "dependencies": [],
+      "aliases": [],
+      "legacyReferences": [],
+      "sourceRecord": "inventory-reconciliation",
+      "consumerReady": false,
+      "notes": [
+        "Created during consolidation to close taxonomy references. No legal content has been approved."
+      ]
+    }
+  ],
+  "status": "TAXONOMY_CLOSED_FOR_CURRENT_INVENTORY",
+  "updatedAt": "2026-07-22T03:00:00.000Z",
+  "authority": false,
+  "note": "Complete structural taxonomy for current inventory; no legal knowledge approved."
+}

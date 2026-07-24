@@ -1,0 +1,82 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-CONTRACT-INDEFINITE",
+  "domainId": "aviso-previo",
+  "key": "contract_indefinite",
+  "label": "Contrato por prazo indeterminado",
+  "description": "Indica, de forma normalizada, que o vínculo é por prazo indeterminado e está potencialmente sujeito ao aviso-prévio geral.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-001"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-016"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-CONTRACT-TERM-TYPE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-CONTRATO-002",
+      "severity": "error",
+      "assertion": "contract_indefinite == (contract_term_type == indeterminado)",
+      "message": "A indicação booleana deve ser coerente com o tipo de prazo contratual.",
+      "relatedFactIds": [
+        "FACT-CONTRACT-TERM-TYPE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, caput",
+      "relevance": "Condição material de incidência da obrigação geral de aviso-prévio."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:28421f46052e2a66e37951786e5b380fa41fb417e6e8fbe41cb99bc60410ed90"
+}

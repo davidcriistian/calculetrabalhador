@@ -1,0 +1,40 @@
+{
+  "id": "SRC-BR-LC150-2015-BOUNDARY",
+  "type": "law",
+  "jurisdiction": "BR",
+  "title": "Lei Complementar nº 150, de 1º de junho de 2015 — referência de fronteira de escopo",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp150.htm",
+  "publicationDate": "2015-06-01",
+  "effectiveFrom": "2015-06-02",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp150.htm",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Lei Complementar nº 150/2015 — regime jurídico do emprego doméstico, mantido fora do escopo clt-geral deste pacote.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-lc150-2015-boundary.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:112192a3b67c63d33a245ed5501a43dbbd2deb02c40d8b46b48efbc8ed5ee9fc",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:112192a3b67c63d33a245ed5501a43dbbd2deb02c40d8b46b48efbc8ed5ee9fc",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte de fronteira. Não autoriza mistura do regime doméstico com o pacote clt-geral.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

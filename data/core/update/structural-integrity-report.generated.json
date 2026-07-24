@@ -1,0 +1,60 @@
+{
+  "id": "structural-integrity-report",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:47:48.616Z",
+  "artifacts": [
+    {
+      "file": "data/core/update/canonical-rule-compatibility.json",
+      "exists": true,
+      "sha256": "6837dd029df1647f7086b9a6d706a460cda28b471a67a115e9bb42a096859020",
+      "size": 7317
+    },
+    {
+      "file": "data/core/update/governed-rule-consumers.json",
+      "exists": true,
+      "sha256": "47a9bfae71dfaf84294df90fbf838a981ea9c463bf2a5454265babc0fbe5957a",
+      "size": 31038
+    },
+    {
+      "file": "data/core/update/editorial-impact-matrix.generated.json",
+      "exists": true,
+      "sha256": "3df0d09a18c5a369b7975ad1a06246d9acfa0e834dc58648a976a9ebf0267547",
+      "size": 49512
+    },
+    {
+      "file": "data/core/update/canonical-reference-registry.generated.json",
+      "exists": true,
+      "sha256": "9e589b189dd30c481a4f49c0194a73e615b4023e4aa8e99b6bbb154c5e46a48a",
+      "size": 6690
+    },
+    {
+      "file": "data/core/update/validator-invocation-registry.generated.json",
+      "exists": true,
+      "sha256": "e677fdf2866008c2c8d78158ff4134cfcf8b89f13d2ea3d11430571941d44b21",
+      "size": 2327
+    },
+    {
+      "file": "data/core/update/reference-classification-registry.generated.json",
+      "exists": true,
+      "sha256": "edd9a8a5002ab88778122301f228679bbc839164dbb6119bb5194c30d2cb44aa",
+      "size": 8782
+    },
+    {
+      "file": "data/core/update/governance-vocabularies.json",
+      "exists": true,
+      "sha256": "9b91b31cb892aace36c63ccbfe103a4a7aa1696c64bf857cc9d1cafb75930684",
+      "size": 1361
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "existing": 7,
+    "missing": 0
+  },
+  "safety": {
+    "sourceFilesModified": false,
+    "publicFilesModified": false,
+    "publication": false
+  }
+}

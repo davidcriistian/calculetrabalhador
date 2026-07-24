@@ -1,0 +1,201 @@
+{
+  "id": "PROJ-AP-008",
+  "domainId": "aviso-previo",
+  "title": "Matriz consolidada de efeitos jurídicos",
+  "purpose": "Consolidar os efeitos jurídicos produzidos pelas projeções do domínio sem calcular verbas de outros domínios.",
+  "version": "1.3.0",
+  "status": "review",
+  "effectiveFrom": "2011-10-13",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-001",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "supporting"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001",
+    "CPT-AVP-007",
+    "CPT-AVP-008",
+    "CPT-AVP-009"
+  ],
+  "inputFacts": [],
+  "activation": {
+    "logic": "all",
+    "conditions": [],
+    "defaultOutcome": "insufficient-facts"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "requirement": "optional",
+      "failurePolicy": "continue-without",
+      "consumesOutputs": []
+    }
+  ],
+  "outputs": [
+    {
+      "key": "legal_effects",
+      "valueType": "array",
+      "semantics": "Lista consolidada e deduplicada de efeitos jurídicos reconhecidos, com proveniência por projeção.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-008-AGG"
+    },
+    {
+      "key": "consolidation_status",
+      "valueType": "string",
+      "semantics": "Completude da consolidação: complete, partial ou blocked.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-008-STATUS"
+    },
+    {
+      "key": "unresolved_projections",
+      "valueType": "array",
+      "semantics": "Projeções não resolvidas e seus estados, quando a consolidação é parcial.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-008-UNRESOLVED"
+    },
+    {
+      "key": "cross_domain_requirements",
+      "valueType": "array",
+      "semantics": "Contratos de federação interdomínio verificáveis; destinos ainda não executáveis.",
+      "source": "constant",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "sourceRef": "FED-AP-FGTS/FED-AP-FERIAS/FED-AP-13",
+      "defaultValue": [
+        "FED-AP-FGTS",
+        "FED-AP-FERIAS",
+        "FED-AP-13"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "OP-PROJ-AP-008-AGG",
+      "operationType": "aggregate-effects",
+      "inputs": {
+        "projectionIds": [
+          "PROJ-AP-001",
+          "PROJ-AP-002",
+          "PROJ-AP-003",
+          "PROJ-AP-004",
+          "PROJ-AP-005",
+          "PROJ-AP-006",
+          "PROJ-AP-007"
+        ]
+      },
+      "outputKey": "legal_effects",
+      "determinism": "pure",
+      "timezonePolicy": "not-applicable"
+    },
+    {
+      "id": "OP-PROJ-AP-008-STATUS",
+      "operationType": "consolidation-status",
+      "inputs": {
+        "projectionIds": [
+          "PROJ-AP-001",
+          "PROJ-AP-002",
+          "PROJ-AP-003",
+          "PROJ-AP-004",
+          "PROJ-AP-005",
+          "PROJ-AP-006",
+          "PROJ-AP-007"
+        ],
+        "requiredProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "outputKey": "consolidation_status",
+      "determinism": "pure",
+      "timezonePolicy": "not-applicable"
+    },
+    {
+      "id": "OP-PROJ-AP-008-UNRESOLVED",
+      "operationType": "unresolved-projections",
+      "inputs": {
+        "projectionIds": [
+          "PROJ-AP-001",
+          "PROJ-AP-002",
+          "PROJ-AP-003",
+          "PROJ-AP-004",
+          "PROJ-AP-005",
+          "PROJ-AP-006",
+          "PROJ-AP-007"
+        ]
+      },
+      "outputKey": "unresolved_projections",
+      "determinism": "pure",
+      "timezonePolicy": "not-applicable"
+    }
+  ],
+  "explanation": {
+    "summaryTemplate": "A matriz agrega efeitos resolvidos e declara contratos verificáveis de federação, sem executar domínios indisponíveis.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": "2026-07-22T03:00:00.000Z",
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-008-A",
+    "TC-PROJ-AP-008-B"
+  ],
+  "contentFingerprint": "sha256:b18d73561373695659fbec1e64b6a9d797881f62aa8730049d334a1e6cf049d4"
+}

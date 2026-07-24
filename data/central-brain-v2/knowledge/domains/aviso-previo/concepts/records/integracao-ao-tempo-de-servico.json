@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-007",
+  "domainId": "aviso-previo",
+  "canonicalName": "Integração do período ao tempo de serviço",
+  "slug": "integracao-ao-tempo-de-servico",
+  "semanticType": "effect",
+  "definition": {
+    "text": "Efeito pelo qual o período correspondente ao aviso-prévio compõe o tempo de serviço para os efeitos jurídicos reconhecidos pela legislação e pela jurisprudência aplicável.",
+    "nature": "normative-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 487, § 1º"
+      ],
+      "support": "Garante integração do período."
+    },
+    {
+      "sourceId": "SRC-TST-OJ-SDI1-82",
+      "pinpoints": [
+        "OJ 82"
+      ],
+      "support": "Data de saída corresponde ao término do prazo."
+    }
+  ],
+  "aliases": [
+    "integração do aviso",
+    "projeção no tempo de serviço"
+  ],
+  "relations": [
+    {
+      "type": "effect-of",
+      "targetConceptId": "CPT-AVP-001",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

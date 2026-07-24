@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-GRANTED",
+  "domainId": "aviso-previo",
+  "key": "notice_granted",
+  "label": "Aviso-prévio concedido",
+  "description": "Indica se houve concessão ou comunicação efetiva de aviso-prévio por uma das partes.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-006"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [
+      "FACT-NOTICE-COMMUNICATION-DATE"
+    ],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487 e §§ 1º e 2º",
+      "relevance": "A concessão ou falta do aviso define consequências trabalhadas ou substitutivas."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:da3c146f9b40bd90d864d514acb168314deb4e41233ee2513a59bc5098ef30ba"
+}

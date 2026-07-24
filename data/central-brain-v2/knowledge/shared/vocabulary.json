@@ -1,0 +1,43 @@
+{
+  "$schema": "../../schemas/shared-vocabulary.schema.json",
+  "id": "SHARED-EMPLOYMENT-CORE",
+  "version": "1.0.0",
+  "status": "review",
+  "updatedAt": "2026-07-22T03:00:00.000Z",
+  "facts": [
+    {
+      "sharedFactId": "SHARED-FACT-ADMISSION-DATE",
+      "canonicalFactId": "FACT-ADMISSION-DATE",
+      "ownerDomainId": "aviso-previo",
+      "semanticScope": "Data inicial do vínculo de emprego usada por múltiplos domínios.",
+      "reuseMode": "reference"
+    },
+    {
+      "sharedFactId": "SHARED-FACT-LEGAL-REFERENCE-DATE",
+      "canonicalFactId": "FACT-LEGAL-REFERENCE-DATE",
+      "ownerDomainId": "aviso-previo",
+      "semanticScope": "Data canônica para seleção temporal do direito aplicável.",
+      "reuseMode": "reference"
+    },
+    {
+      "sharedFactId": "SHARED-FACT-TERMINATION-DATE",
+      "canonicalFactId": "FACT-TERMINATION-DATE",
+      "ownerDomainId": "aviso-previo",
+      "semanticScope": "Data factual de encerramento informada ou comprovada.",
+      "reuseMode": "reference"
+    },
+    {
+      "sharedFactId": "SHARED-FACT-EMPLOYMENT-REGIME",
+      "canonicalFactId": "FACT-EMPLOYMENT-REGIME",
+      "ownerDomainId": "aviso-previo",
+      "semanticScope": "Regime jurídico do vínculo de trabalho.",
+      "reuseMode": "reference"
+    }
+  ],
+  "reusePolicy": {
+    "duplicateSemanticFactsForbidden": true,
+    "newDomainMustBindSharedFacts": true,
+    "ownerDomainIsTemporary": true,
+    "promotionRequiresGovernanceReview": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projection-catalog.schema.json",
+  "title": "Domain Projection Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "version",
+    "status",
+    "updatedAt",
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "PROJECTIONS_MODELED",
+        "PROJECTIONS_VALIDATED",
+        "RETIRED"
+      ]
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "projectionId",
+          "path",
+          "currentVersion",
+          "status",
+          "dependencyIds"
+        ],
+        "properties": {
+          "projectionId": {
+            "type": "string",
+            "pattern": "^PROJ-[A-Z0-9-]+$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*\\.\\.).+\\.json$"
+          },
+          "currentVersion": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "review",
+              "approved",
+              "deprecated",
+              "retired"
+            ]
+          },
+          "dependencyIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^PROJ-[A-Z0-9-]+$"
+            }
+          },
+          "outputKeys": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "contentFingerprint": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

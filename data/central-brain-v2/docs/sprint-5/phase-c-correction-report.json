@@ -1,0 +1,51 @@
+{
+  "phase": "C",
+  "status": "TECHNICALLY_CORRECTED_LEGAL_APPROVAL_PENDING",
+  "correctedAt": "2026-07-22T17:30:00.000Z",
+  "corrections": [
+    {
+      "nc": "NC-C-01",
+      "result": "CLOSED",
+      "evidence": "knowledge/domains/aviso-previo/governance/normative-baseline.json"
+    },
+    {
+      "nc": "NC-C-02",
+      "result": "CLOSED",
+      "evidence": [
+        "RULE-AP-015",
+        "PROJ-AP-017",
+        "FED-AP-FGTS"
+      ]
+    },
+    {
+      "nc": "NC-C-03",
+      "result": "CLOSED",
+      "evidence": [
+        "SRC-BR-CLT-ART484A",
+        "RULE-AP-011",
+        "PROJ-AP-013",
+        "temporal tests"
+      ]
+    },
+    {
+      "nc": "NC-C-04",
+      "result": "CLOSED",
+      "evidence": "normative-baseline.granularityPolicy"
+    },
+    {
+      "nc": "NC-C-05",
+      "result": "OPEN_GOVERNANCE_GATE",
+      "reason": "Formal legal approval cannot be self-issued; runtimeAuthority remains false."
+    }
+  ],
+  "coverage": {
+    "plannedItems": 13,
+    "fullyModeledOrFederated": 13,
+    "percent": 100.0
+  },
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "formalLegalApproval": false
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "dependencies",
+  "items": [
+    {
+      "id": "DEP-0AC3B3DFB34EB844",
+      "from": "CNS-CALCULADORA-FERIAS-CLT",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-0C2316C54B8CD04F",
+      "from": "CNS-CALCULADORA-INSS-AUTONOMO",
+      "fromType": "consumer",
+      "to": "inss-teto",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-0E6A37AFAD204B1D",
+      "from": "CNS-CALCULADORA-INSS-AUTONOMO",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-1097B78940325661",
+      "from": "fgts",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-15C7590F695FE2AE",
+      "from": "CNS-CALCULADORA-INSS-AUTONOMO",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-1D8BA8D7C0573520",
+      "from": "CNS-SALARIO-LIQUIDO-CLT",
+      "fromType": "consumer",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-2296BDAA04331B6D",
+      "from": "pj",
+      "fromType": "domain",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-27E5FC7E141A38EC",
+      "from": "CNS-CALCULADORA-INSS",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-2EC4D465AF8EE4D2",
+      "from": "CNS-CALCULADORA-DAS-MEI-ATRASO-2026",
+      "fromType": "consumer",
+      "to": "juros-das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-3507E8EBA421B07A",
+      "from": "CNS-CALCULADORA-INSALUBRIDADE",
+      "fromType": "consumer",
+      "to": "insalubridade",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-37C4E524215A223A",
+      "from": "clt",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-3B7AE8BC53BD6E3F",
+      "from": "beneficios",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-3EEA46C140C9555A",
+      "from": "mei",
+      "fromType": "domain",
+      "to": "tributos",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-417B877481B33DCC",
+      "from": "CNS-CALCULADORA-DAS-MEI-2026",
+      "fromType": "consumer",
+      "to": "iss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-45C25A180EBC9E37",
+      "from": "CNS-CALCULADORA-LIMITE-FATURAMENTO-MEI-2026",
+      "fromType": "consumer",
+      "to": "limite-faturamento-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-484DEE5198C6602B",
+      "from": "CNS-CALCULADORA-FERIAS-CLT",
+      "fromType": "consumer",
+      "to": "decimo-terceiro",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-4C2DF6072B72889E",
+      "from": "fgts",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-4E4D3428316E9051",
+      "from": "CNS-SALARIO-LIQUIDO-CLT",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-50C5345C3A2DEC7F",
+      "from": "aposentadoria",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-5469E6A6DCE2CA56",
+      "from": "CNS-CALCULADORA-CLT-OU-PJ",
+      "fromType": "consumer",
+      "to": "fgts",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-5516AF4EE4BFA5E4",
+      "from": "clt",
+      "fromType": "domain",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-560C576ED6BCFB15",
+      "from": "CNS-CALCULADORA-FERIAS-CLT",
+      "fromType": "consumer",
+      "to": "ferias",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-582758F1C728DB62",
+      "from": "CNS-CALCULADORA-DAS-MEI-2026",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-592B4BDB75E3099C",
+      "from": "CNS-CALCULADORA-DAS-MEI-2026",
+      "fromType": "consumer",
+      "to": "das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-5A231B4C994FD1C3",
+      "from": "CNS-CALCULADORA-RESCISAO-CLT",
+      "fromType": "consumer",
+      "to": "decimo-terceiro",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-5F6ABD3B72E4FCEC",
+      "from": "CNS-CALCULADORA-CLT-OU-PJ",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-675E51287B86CC4F",
+      "from": "mei",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-6ABD34EF16E5AC46",
+      "from": "CNS-CALCULADORA-AVISO-PREVIO",
+      "fromType": "consumer",
+      "to": "aviso-previo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-72414C5DB4102481",
+      "from": "horas-extras",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-75D6EE7732E2E532",
+      "from": "CNS-CALCULADORA-CLT-OU-PJ",
+      "fromType": "consumer",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-7675C5DEFE21A67D",
+      "from": "CNS-CALCULADORA-DAS-MEI-ATRASO-2026",
+      "fromType": "consumer",
+      "to": "calendario-das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-7A2ED02CC63B9EA3",
+      "from": "clt",
+      "fromType": "domain",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-7F9B01F9F73B0B6E",
+      "from": "CNS-CALCULADORA-SEGURO-DESEMPREGO",
+      "fromType": "consumer",
+      "to": "seguro-desemprego",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-8003888CFEA8963D",
+      "from": "CNS-CALCULADORA-13-SALARIO",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-8218C97CB4227B08",
+      "from": "CNS-CALCULADORA-DAS-MEI-ATRASO-2026",
+      "fromType": "consumer",
+      "to": "multa-das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-8235CBB7A4CC9E47",
+      "from": "clt",
+      "fromType": "domain",
+      "to": "fgts",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-854C8579DCBEDC17",
+      "from": "adicional-noturno",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-88791FEBB75113E2",
+      "from": "inss",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-8CCB4182313C86BD",
+      "from": "CNS-CALCULADORA-RESCISAO-CLT",
+      "fromType": "consumer",
+      "to": "ferias",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-908D722E71B3E02E",
+      "from": "CNS-CALCULADORA-FERIAS-CLT",
+      "fromType": "consumer",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-90B69E0514BE3C43",
+      "from": "aviso-previo",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-9146C3E3E2F2EFFA",
+      "from": "CNS-CALCULADORA-DAS-MEI-ATRASO-2026",
+      "fromType": "consumer",
+      "to": "das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-97EB222A985656D0",
+      "from": "CNS-CALCULADORA-INSS-MEI",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-9E93529B54338F53",
+      "from": "CNS-CALCULADORA-INSALUBRIDADE",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-A23AE3BC11E02343",
+      "from": "aposentadoria",
+      "fromType": "domain",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-A9E7F8DC8155D4AC",
+      "from": "CNS-CALCULADORA-CLT-OU-PJ",
+      "fromType": "consumer",
+      "to": "decimo-terceiro",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-AD0AD173E8EFD35E",
+      "from": "adicional-noturno",
+      "fromType": "domain",
+      "to": "jornada",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-AF8EF20E4304C5DC",
+      "from": "CNS-CALCULADORA-HORAS-EXTRAS-CLT",
+      "fromType": "consumer",
+      "to": "horas-extras",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-B2648450D496AF01",
+      "from": "CNS-CALCULADORA-MULTA-40-FGTS",
+      "fromType": "consumer",
+      "to": "rescisao",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-B5D96F294BCB026B",
+      "from": "beneficios",
+      "fromType": "domain",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-B9E4416F652593EA",
+      "from": "CNS-CALCULADORA-MULTA-40-FGTS",
+      "fromType": "consumer",
+      "to": "multa-fgts",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-BCF1B04DAC66E1D2",
+      "from": "CNS-CALCULADORA-INSS",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-C47BB0B792BF91ED",
+      "from": "CNS-SAQUE-ANIVERSARIO-FGTS",
+      "fromType": "consumer",
+      "to": "fgts",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-C6BFFCAB68853DC2",
+      "from": "CNS-CALCULADORA-ADICIONAL-NOTURNO",
+      "fromType": "consumer",
+      "to": "adicional-noturno",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-CFF8CE35E0BFD50E",
+      "from": "mei",
+      "fromType": "domain",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-D05DC8BBA9EF9392",
+      "from": "pj",
+      "fromType": "domain",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-D0AEB76F82416628",
+      "from": "pj",
+      "fromType": "domain",
+      "to": "clt",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-D2597896969CB5FD",
+      "from": "CNS-CALCULADORA-LIMITE-FATURAMENTO-MEI-2026",
+      "fromType": "consumer",
+      "to": "das-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-D48FBD6D2F8B93F1",
+      "from": "irrf",
+      "fromType": "domain",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "depends-on",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "domain-inventory"
+      }
+    },
+    {
+      "id": "DEP-D98B2C3B7E43EC40",
+      "from": "CNS-CALCULADORA-INSS-MEI",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-D9A204C055F83259",
+      "from": "CNS-CALCULADORA-DAS-MEI-2026",
+      "fromType": "consumer",
+      "to": "inss",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-DACA71885AD4C031",
+      "from": "CNS-CALCULADORA-RESCISAO-CLT",
+      "fromType": "consumer",
+      "to": "fgts",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-DF914A98A0C4F318",
+      "from": "CNS-CALCULADORA-CLT-OU-PJ",
+      "fromType": "consumer",
+      "to": "ferias",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-E60CEF9726C064DF",
+      "from": "CNS-CALCULADORA-13-SALARIO",
+      "fromType": "consumer",
+      "to": "decimo-terceiro",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-EE548D3BC5A92717",
+      "from": "CNS-CALCULADORA-SEGURO-DESEMPREGO",
+      "fromType": "consumer",
+      "to": "salario-minimo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-F1D3166F366056B9",
+      "from": "CNS-CALCULADORA-DAS-MEI-2026",
+      "fromType": "consumer",
+      "to": "icms",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-F6100E02E22FD93E",
+      "from": "CNS-CALCULADORA-LIMITE-FATURAMENTO-MEI-2026",
+      "fromType": "consumer",
+      "to": "faturamento-mei",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-F74BEC1772D13365",
+      "from": "CNS-CALCULADORA-MULTA-40-FGTS",
+      "fromType": "consumer",
+      "to": "fgts",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-FB0E5BD2FD17D8E4",
+      "from": "CNS-CALCULADORA-13-SALARIO",
+      "fromType": "consumer",
+      "to": "irrf",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    },
+    {
+      "id": "DEP-FC05E2DB8B55EA8E",
+      "from": "CNS-CALCULADORA-RESCISAO-CLT",
+      "fromType": "consumer",
+      "to": "aviso-previo",
+      "toType": "domain",
+      "relation": "consumes",
+      "status": "declared",
+      "declaredAt": "2026-07-21T00:00:00-03:00",
+      "verifiedAt": null,
+      "metadata": {
+        "origin": "legacy-consumer-inventory",
+        "canonicalRulePending": true
+      }
+    }
+  ],
+  "status": "STRUCTURAL_DEPENDENCIES_MATERIALIZED",
+  "updatedAt": "2026-07-21T00:00:00-03:00",
+  "authority": false,
+  "note": "Edges target domains until canonical rules are ingested."
+}

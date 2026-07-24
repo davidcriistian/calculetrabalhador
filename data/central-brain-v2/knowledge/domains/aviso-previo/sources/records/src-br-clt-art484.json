@@ -1,0 +1,41 @@
+{
+  "id": "SRC-BR-CLT-ART484",
+  "type": "decree",
+  "jurisdiction": "BR",
+  "title": "Consolidação das Leis do Trabalho — art. 484",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+  "publicationDate": "1943-05-01",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-22T14:40:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "art. 484 — culpa recíproca.",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-clt-art484.snapshot.json",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:5efbcc38bcbcf128f095bcac52bee393974742c7a4d8c896ddb6375819ad3dc8",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:5efbcc38bcbcf128f095bcac52bee393974742c7a4d8c896ddb6375819ad3dc8",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária catalogada em URL oficial.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+    "Revisão jurídica formal permanece pendente."
+  ]
+}

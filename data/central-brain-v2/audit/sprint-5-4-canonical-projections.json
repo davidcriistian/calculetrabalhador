@@ -1,0 +1,19 @@
+{
+  "sprint": "5.4",
+  "status": "completed",
+  "createdAt": "2026-07-21T21:30:00.000Z",
+  "counts": {
+    "projections": 8,
+    "dependencies": 13,
+    "ruleLinks": 16,
+    "factLinks": 19
+  },
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "validation": {
+    "schema": "passed",
+    "graphAcyclic": true,
+    "brokenReferences": 0,
+    "testsPassed": 84
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "governance-audit-summary",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:58:15.873Z",
+  "ledger": "data/core/update/audit/governance-audit-ledger.generated.jsonl",
+  "ledgerFingerprint": "aa962fe5930ad0268bfa3d0a4a9360df5d26458042e9bb80c28b6cc272872401",
+  "summary": {
+    "events": 10,
+    "byType": {
+      "REFERENCE_REGISTRY_GENERATED": 1,
+      "REGRESSION_SUITE_EXECUTED": 1,
+      "STRUCTURAL_INTEGRITY_VALIDATED": 1,
+      "EXECUTION_PLAN_CREATED": 2,
+      "APPROVAL_ARTIFACT_RECORDED": 2,
+      "IMPACT_ANALYSIS_CREATED": 2,
+      "PREVIEW_EVIDENCE_CREATED": 1
+    },
+    "pass": 3,
+    "blocked": 3,
+    "fail": 0,
+    "recorded": 4
+  },
+  "safety": {
+    "appendOnlyProjection": true,
+    "sourceMutation": false,
+    "publicMutation": false,
+    "publication": false
+  }
+}

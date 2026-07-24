@@ -1,0 +1,33 @@
+{
+  "id": "BATCH-REPLACE-ME",
+  "domainId": "replace-me",
+  "status": "draft",
+  "createdAt": "YYYY-MM-DDTHH:MM:SS.000Z",
+  "createdBy": "REPLACE_ME",
+  "correlationId": "CORR-REPLACE-ME",
+  "sources": [],
+  "rules": [],
+  "projections": [],
+  "dependencies": [],
+  "reviews": {
+    "legal": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "notes": []
+    },
+    "technical": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "notes": []
+    },
+    "approval": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "notes": []
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,296 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "consumers",
+  "generatedAt": "2026-07-21T00:00:00-03:00",
+  "updatedAt": "2026-07-21T00:00:00-03:00",
+  "authority": false,
+  "status": "INVENTORY_NORMALIZED_NOT_CONNECTED",
+  "items": [
+    {
+      "id": "saque-aniversario-fgts",
+      "type": "calculator",
+      "path": "/saque-aniversario-fgts/",
+      "declaredRuleDependencies": [
+        "fgts"
+      ],
+      "risk": "medium",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-SAQUE-ANIVERSARIO-FGTS"
+    },
+    {
+      "id": "salario-liquido-clt",
+      "type": "calculator",
+      "path": "/salario-liquido-clt/",
+      "declaredRuleDependencies": [
+        "inss",
+        "irrf"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-SALARIO-LIQUIDO-CLT"
+    },
+    {
+      "id": "calculadora-rescisao-clt",
+      "type": "calculator",
+      "path": "/calculadora-rescisao-clt/",
+      "declaredRuleDependencies": [
+        "fgts",
+        "ferias",
+        "decimo-terceiro",
+        "aviso-previo"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-RESCISAO-CLT"
+    },
+    {
+      "id": "calculadora-13-salario",
+      "type": "calculator",
+      "path": "/calculadora-13-salario/",
+      "declaredRuleDependencies": [
+        "decimo-terceiro",
+        "inss",
+        "irrf"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-13-SALARIO"
+    },
+    {
+      "id": "calculadora-ferias-clt",
+      "type": "calculator",
+      "path": "/calculadora-ferias-clt/",
+      "declaredRuleDependencies": [
+        "ferias",
+        "inss",
+        "irrf",
+        "decimo-terceiro"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-FERIAS-CLT"
+    },
+    {
+      "id": "calculadora-horas-extras-clt",
+      "type": "calculator",
+      "path": "/calculadora-horas-extras-clt/",
+      "declaredRuleDependencies": [
+        "horas-extras"
+      ],
+      "risk": "medium",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-HORAS-EXTRAS-CLT"
+    },
+    {
+      "id": "calculadora-seguro-desemprego",
+      "type": "calculator",
+      "path": "/calculadora-seguro-desemprego/",
+      "declaredRuleDependencies": [
+        "seguro-desemprego",
+        "salario-minimo"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-SEGURO-DESEMPREGO"
+    },
+    {
+      "id": "calculadora-aviso-previo",
+      "type": "calculator",
+      "path": "/calculadora-aviso-previo/",
+      "declaredRuleDependencies": [
+        "aviso-previo"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-AVISO-PREVIO"
+    },
+    {
+      "id": "calculadora-adicional-noturno",
+      "type": "calculator",
+      "path": "/calculadora-adicional-noturno/",
+      "declaredRuleDependencies": [
+        "adicional-noturno"
+      ],
+      "risk": "medium",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-ADICIONAL-NOTURNO"
+    },
+    {
+      "id": "calculadora-insalubridade",
+      "type": "calculator",
+      "path": "/calculadora-insalubridade/",
+      "declaredRuleDependencies": [
+        "insalubridade",
+        "salario-minimo"
+      ],
+      "risk": "medium",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-INSALUBRIDADE"
+    },
+    {
+      "id": "calculadora-clt-ou-pj",
+      "type": "calculator",
+      "path": "/calculadora-clt-ou-pj/",
+      "declaredRuleDependencies": [
+        "inss",
+        "irrf",
+        "fgts",
+        "ferias",
+        "decimo-terceiro"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-CLT-OU-PJ"
+    },
+    {
+      "id": "calculadora-inss",
+      "type": "calculator",
+      "path": "/calculadora-inss/",
+      "declaredRuleDependencies": [
+        "inss",
+        "salario-minimo"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-INSS"
+    },
+    {
+      "id": "calculadora-inss-autonomo",
+      "type": "calculator",
+      "path": "/calculadora-inss-autonomo/",
+      "declaredRuleDependencies": [
+        "inss",
+        "salario-minimo",
+        "inss-teto"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-INSS-AUTONOMO"
+    },
+    {
+      "id": "calculadora-inss-mei",
+      "type": "calculator",
+      "path": "/calculadora-inss-mei/",
+      "declaredRuleDependencies": [
+        "inss",
+        "salario-minimo"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-INSS-MEI"
+    },
+    {
+      "id": "calculadora-das-mei-2026",
+      "type": "calculator",
+      "path": "/calculadora-das-mei-2026/",
+      "declaredRuleDependencies": [
+        "inss",
+        "salario-minimo",
+        "das-mei",
+        "icms",
+        "iss"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-DAS-MEI-2026"
+    },
+    {
+      "id": "calculadora-limite-faturamento-mei-2026",
+      "type": "calculator",
+      "path": "/calculadora-limite-faturamento-mei-2026/",
+      "declaredRuleDependencies": [
+        "limite-faturamento-mei",
+        "faturamento-mei",
+        "das-mei"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-LIMITE-FATURAMENTO-MEI-2026"
+    },
+    {
+      "id": "calculadora-das-mei-atraso-2026",
+      "type": "calculator",
+      "path": "/calculadora-das-mei-atraso-2026/",
+      "declaredRuleDependencies": [
+        "das-mei",
+        "multa-das-mei",
+        "juros-das-mei",
+        "calendario-das-mei"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-DAS-MEI-ATRASO-2026"
+    },
+    {
+      "id": "calculadora-multa-40-fgts",
+      "type": "calculator",
+      "path": "/calculadora-multa-40-fgts/",
+      "declaredRuleDependencies": [
+        "fgts",
+        "multa-fgts",
+        "rescisao"
+      ],
+      "risk": "high",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-MULTA-40-FGTS"
+    },
+    {
+      "id": "calculadora-valor-hora-pj",
+      "type": "calculator",
+      "path": "/calculadora-valor-hora-pj/",
+      "declaredRuleDependencies": [],
+      "risk": "low",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-VALOR-HORA-PJ"
+    },
+    {
+      "id": "calculadora-custo-mensal-pj",
+      "type": "calculator",
+      "path": "/calculadora-custo-mensal-pj/",
+      "declaredRuleDependencies": [],
+      "risk": "low",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-CUSTO-MENSAL-PJ"
+    },
+    {
+      "id": "calculadora-reserva-financeira-pj",
+      "type": "calculator",
+      "path": "/calculadora-reserva-financeira-pj/",
+      "declaredRuleDependencies": [],
+      "risk": "low",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-RESERVA-FINANCEIRA-PJ"
+    },
+    {
+      "id": "calculadora-ferias-pj",
+      "type": "calculator",
+      "path": "/calculadora-ferias-pj/",
+      "declaredRuleDependencies": [],
+      "risk": "low",
+      "integrationStatus": "NOT_CONNECTED",
+      "authority": "legacy-runtime",
+      "canonicalId": "CNS-CALCULADORA-FERIAS-PJ"
+    }
+  ]
+}

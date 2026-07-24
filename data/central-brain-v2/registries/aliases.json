@@ -1,0 +1,28 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "aliases",
+  "updatedAt": "2026-07-21T15:30:00-03:00",
+  "items": [
+    {
+      "alias": "tetoINSS",
+      "canonicalId": "inss-teto",
+      "entityType": "domain"
+    },
+    {
+      "alias": "aviso previo",
+      "canonicalId": "aviso-previo",
+      "entityType": "domain"
+    },
+    {
+      "alias": "aviso prévio",
+      "canonicalId": "aviso-previo",
+      "entityType": "domain"
+    },
+    {
+      "alias": "aviso-prévio",
+      "canonicalId": "aviso-previo",
+      "entityType": "domain"
+    }
+  ],
+  "status": "ACTIVE"
+}

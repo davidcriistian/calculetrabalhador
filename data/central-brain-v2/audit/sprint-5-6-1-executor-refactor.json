@@ -1,0 +1,26 @@
+{
+  "auditId": "AUDIT-SPRINT-5-6-1-EXECUTOR-REFACTOR",
+  "scope": "engines/projection-runtime/executor.js and declarative output materialization",
+  "status": "passed",
+  "findings": [],
+  "changes": [
+    "Removed projection-specific conditionals from executor",
+    "Removed fact-specific value mappings from executor",
+    "Introduced generic output-materializer module",
+    "Moved defaults and mappings into canonical projection metadata",
+    "Extended canonical projection schema with defaultValue and valueMap",
+    "Added regression tests preventing domain IDs in executor"
+  ],
+  "validation": {
+    "structuralTestsPassed": 84,
+    "runtimeTestsPassed": 23,
+    "jsonFilesChecked": 189,
+    "errors": 0,
+    "warnings": 1
+  },
+  "readiness": {
+    "executorDomainAgnostic": true,
+    "runtimeAuthority": false,
+    "consumerReady": false
+  }
+}

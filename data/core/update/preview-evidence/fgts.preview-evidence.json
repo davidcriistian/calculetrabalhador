@@ -1,0 +1,645 @@
+{
+  "id": "preview-evidence-fgts-1784491550550",
+  "version": "1.0.0",
+  "status": "blocked-evidence-incomplete",
+  "generatedAt": "2026-07-19T20:05:50.550Z",
+  "input": {
+    "executionPlanFile": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json",
+    "proposalManifestFile": "data/core/update/proposals/fgts.proposal-manifest.json",
+    "requestedBy": "phase-6-validation",
+    "notes": null
+  },
+  "fingerprints": {
+    "executionPlan": {
+      "reference": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json",
+      "exists": true,
+      "sha256": "ecbe8962813427c19fde0bfd0bd34a875a7647f6be733b3a58254273d80c9483",
+      "size": 10209
+    },
+    "impactAnalysis": {
+      "reference": "data/core/update/impact-analysis/fgts.impact.json",
+      "exists": true,
+      "sha256": "c6faf6e3914dd01aadea3fb8fbfe7bff0cfa4994a5464b2a1ca4933ab740e25b",
+      "size": 15785
+    },
+    "approvalArtifact": {
+      "reference": "data/core/update/execution-approvals/fgts.approval.test-only.json",
+      "exists": true,
+      "sha256": "cb1a631f06e544e31d62e2c9b8165420d615284a678548ac3b86f049a36b2457",
+      "size": 1005
+    },
+    "proposalManifest": {
+      "reference": "data/core/update/proposals/fgts.proposal-manifest.json",
+      "exists": true,
+      "sha256": "b6c8a08fa58c2303a7f286c6a0d502090fab60f0b6fb4cd34c36e9c24e0383b8",
+      "size": 7938
+    }
+  },
+  "fileEvidence": [
+    {
+      "reference": "/data/rules/fgts.json",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "canonical-rule",
+      "proposedChange": {
+        "targetFile": "/data/rules/fgts.json",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "calculadora-clt-ou-pj/index.html",
+      "exists": true,
+      "sha256": "4d893381403194022460919569d20629b40efff4fa1f3da99aab7b21549f9f56",
+      "size": 45110,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "calculadora-clt-ou-pj/index.html",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "calculadora-multa-40-fgts/index.html",
+      "exists": true,
+      "sha256": "a66401d3f5c12394333f030f83598b9562e969a6d15a16fa0505bc0853237f69",
+      "size": 56522,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "calculadora-multa-40-fgts/index.html",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "calculadora-rescisao-clt/index.html",
+      "exists": true,
+      "sha256": "d0a7ae5667b8f627b80e2f8179ea3cdbcdda4cba450947c86f403b06b7ae059e",
+      "size": 35989,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "calculadora-rescisao-clt/index.html",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "/blog/clt-ou-pj",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "/blog/clt-ou-pj",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "/blog/multa-de-40-do-fgts-como-calcular/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "/blog/multa-de-40-do-fgts-como-calcular/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "/blog/rescisao-sem-justa-causa",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "/blog/rescisao-sem-justa-causa",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    },
+    {
+      "reference": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+      "exists": false,
+      "sha256": null,
+      "size": null,
+      "classification": "consumer-or-editorial",
+      "proposedChange": {
+        "targetFile": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+        "changeType": "TO_BE_DEFINED",
+        "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+        "patchStatus": "not-created",
+        "proposedPatchFile": null,
+        "risk": "MEDIUM",
+        "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+      }
+    }
+  ],
+  "proposal": {
+    "state": "present",
+    "manifest": {
+      "id": "proposal-manifest-fgts",
+      "version": "1.0.0",
+      "status": "draft-proposal",
+      "ruleId": "fgts",
+      "createdAt": "2026-07-19",
+      "sourceExecutionPlan": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json",
+      "proposals": [
+        {
+          "targetFile": "/data/rules/fgts.json",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "calculadora-clt-ou-pj/index.html",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "calculadora-multa-40-fgts/index.html",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "calculadora-rescisao-clt/index.html",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "/blog/clt-ou-pj",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "/blog/multa-de-40-do-fgts-como-calcular/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "/blog/rescisao-sem-justa-causa",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        },
+        {
+          "targetFile": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+          "changeType": "TO_BE_DEFINED",
+          "summary": "Alteração ainda não redigida. Entrada reservada para revisão humana.",
+          "patchStatus": "not-created",
+          "proposedPatchFile": null,
+          "risk": "MEDIUM",
+          "notes": "Nenhum patch foi aplicado ou criado nesta fase."
+        }
+      ]
+    },
+    "incomplete": true,
+    "proposedPatchFilesCreated": 0,
+    "patchesApplied": 0
+  },
+  "validatorEvidence": [
+    {
+      "validator": "/scripts/validate-canonical-rule-minimum-contract.js",
+      "exists": false,
+      "executed": false,
+      "exitCode": null,
+      "status": "missing",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "validator": "/scripts/validate-governed-rule-consumer-authority.js",
+      "exists": false,
+      "executed": false,
+      "exitCode": null,
+      "status": "missing",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "validator": "/scripts/validate-editorial-impact-matrix.js",
+      "exists": false,
+      "executed": false,
+      "exitCode": null,
+      "status": "missing",
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "evidenceSummary": {
+    "affectedFiles": 20,
+    "existingFiles": 3,
+    "missingFiles": 17,
+    "validators": 3,
+    "validatorPasses": 0,
+    "validatorFailures": 0,
+    "validatorMissing": 3,
+    "proposalIncomplete": true
+  },
+  "humanReview": {
+    "required": true,
+    "checklist": [
+      {
+        "item": "official source verified",
+        "status": "pending"
+      },
+      {
+        "item": "legal scope reviewed",
+        "status": "pending"
+      },
+      {
+        "item": "proposed rule change reviewed",
+        "status": "pending"
+      },
+      {
+        "item": "consumer impact reviewed",
+        "status": "pending"
+      },
+      {
+        "item": "editorial impact reviewed",
+        "status": "pending"
+      },
+      {
+        "item": "preview approved",
+        "status": "pending"
+      },
+      {
+        "item": "publication explicitly approved",
+        "status": "pending"
+      }
+    ]
+  },
+  "publicationGate": {
+    "open": false,
+    "previewReady": false,
+    "automaticPublicationAllowed": false,
+    "reason": "blocked-evidence-incomplete"
+  },
+  "safety": {
+    "evidenceOnly": true,
+    "sourceFilesModified": false,
+    "publicFilesModified": false,
+    "patchesCreated": 0,
+    "patchesApplied": 0,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "outputKeys": [
+        "notice_applicable",
+        "notifying_party"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "outputKeys": [
+        "notice_modality"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "outputKeys": [
+        "notice_duration_days",
+        "duration_floor_days",
+        "duration_cap_days"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "outputKeys": [
+        "projected_termination_date",
+        "contract_projection_applies"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "outputKeys": [
+        "integrates_service_time",
+        "projected_termination_date"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "outputKeys": [
+        "workday_reduction_entitlement",
+        "reduction_mode"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "outputKeys": [
+        "payment_preserved",
+        "release_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-008",
+      "outputKeys": [
+        "legal_effects",
+        "consolidation_status",
+        "unresolved_projections",
+        "cross_domain_requirements"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-009",
+      "outputKeys": [
+        "term_clause_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-010",
+      "outputKeys": [
+        "indirect_termination_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-011",
+      "outputKeys": [
+        "reciprocal_fault_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-012",
+      "outputKeys": [
+        "reciprocal_fault_percentage"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-013",
+      "outputKeys": [
+        "agreement_notice_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-014",
+      "outputKeys": [
+        "reconsideration_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-015",
+      "outputKeys": [
+        "employee_misconduct_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-016",
+      "outputKeys": [
+        "employer_misconduct_effect"
+      ]
+    }
+  ]
+}

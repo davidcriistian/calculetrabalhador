@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-DURATION",
+  "domainId": "aviso-previo",
+  "key": "notice_duration_days",
+  "label": "Duração jurídica do aviso em dias",
+  "description": "Quantidade jurídica total de dias do aviso, produzida pelo Projection Engine após selecionar regras vigentes e resolver os fatos necessários.",
+  "valueType": "duration-days",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-003"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-004",
+    "CPT-AVP-005"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-COMPLETE-SERVICE-YEARS",
+      "FACT-EMPLOYER-OWES-NOTICE",
+      "FACT-LEGAL-REFERENCE-DATE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DURACAO-002",
+      "severity": "error",
+      "assertion": "0 <= notice_duration_days <= 90 under current modeled law",
+      "message": "Duração fora do intervalo modelado exige versão normativa diferente ou revisão humana.",
+      "relatedFactIds": [
+        "FACT-LEGAL-REFERENCE-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-LEI12506-2011",
+      "pinpoint": "art. 1º e parágrafo único",
+      "relevance": "Define duração mínima, acréscimo por ano de serviço e limite total do aviso devido ao empregado."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "constraints": {
+    "minimum": 0,
+    "maximum": 90
+  },
+  "contentFingerprint": "sha256:629690dd3bb760fed1116c3d275a6518e263d84b26df9a36f59ec7a42cb7002b"
+}

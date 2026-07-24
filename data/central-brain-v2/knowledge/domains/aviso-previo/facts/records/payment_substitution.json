@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-PAYMENT-SUBSTITUTION",
+  "domainId": "aviso-previo",
+  "key": "payment_substitution",
+  "label": "Indenização substitutiva do aviso",
+  "description": "Indica que o cumprimento do aviso foi substituído pelo pagamento ou desconto correspondente, conforme a parte responsável.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-003"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [
+      "FACT-NOTICE-WORKED"
+    ],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, §§ 1º e 2º",
+      "relevance": "Prevê salários correspondentes ou desconto na falta de aviso."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:e804ac3070247556d63980da5a8e0e4dfd6bae3f4e595aea41b52277901d989b"
+}

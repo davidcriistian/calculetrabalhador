@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-FACTUAL-LAST-WORKED-DATE",
+  "domainId": "aviso-previo",
+  "key": "factual_last_worked_date",
+  "label": "Último dia efetivamente trabalhado",
+  "description": "Último dia em que houve prestação factual de trabalho; não se confunde com o término jurídico projetado.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "event-date",
+    "referenceRole": "factual-last-worked",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "system-record",
+      "declaration"
+    ],
+    "minimumConfidence": 0.75,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-006"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-COMMUNICATION-DATE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-TEMP-002",
+      "severity": "error",
+      "assertion": "factual_last_worked_date >= notice_communication_date when present",
+      "message": "Último dia em que houve prestação factual de trabalho; não se confunde com o término jurídico projetado.",
+      "relatedFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487 e art. 489",
+      "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:5d0aa60190b225161de0a258f6a83fa50aabd07bf3b0a949203d64010b66bea8"
+}

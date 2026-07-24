@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-LEGAL-REFERENCE-DATE",
+  "domainId": "aviso-previo",
+  "key": "legal_reference_date",
+  "label": "Data de referência jurídica",
+  "description": "Data usada pelo motor para selecionar a versão histórica das regras aplicáveis ao caso.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-001"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "reference-date",
+    "referenceRole": "legal-reference",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "derived-trace"
+    ],
+    "minimumConfidence": 1.0,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "internal",
+    "retentionClass": "audit-required",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-COMMUNICATION-DATE",
+      "FACT-TERMINATION-DATE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DATA-004",
+      "severity": "error",
+      "assertion": "legal_reference_date is resolved by explicit temporal policy",
+      "message": "A data de referência não pode ser presumida pela data atual do sistema.",
+      "relatedFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-TERMINATION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:d62157056314ac2f1ee83f4aa58ba937ca74877ddfb76fca7a873d944c0acc38"
+}

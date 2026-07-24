@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain.schema.json",
+  "title": "Canonical Domain",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "status",
+    "maturity",
+    "consumerReady",
+    "dependencies",
+    "aliases"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "inventory-only",
+        "active",
+        "deprecated",
+        "retired"
+      ]
+    },
+    "maturity": {
+      "enum": [
+        "STRUCTURE_ONLY",
+        "INVENTORIED",
+        "SOURCES_VALIDATED",
+        "RULES_VALIDATED",
+        "PROJECTIONS_VALIDATED",
+        "READY_FOR_CONSUMERS"
+      ]
+    },
+    "consumerReady": {
+      "type": "boolean"
+    },
+    "dependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "currentVersion": {
+      "type": "string"
+    },
+    "legacyReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceRecord": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

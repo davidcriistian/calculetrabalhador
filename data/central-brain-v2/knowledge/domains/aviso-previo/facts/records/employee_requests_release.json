@@ -1,0 +1,69 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+  "domainId": "aviso-previo",
+  "key": "employee_requests_release",
+  "label": "Pedido de dispensa do cumprimento",
+  "description": "Indica que o empregado pediu dispensa do cumprimento do aviso-prévio.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-010",
+    "CPT-AVP-011"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [
+      "FACT-PARTY-WAIVES-PERFORMANCE"
+    ],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoint": "Súmula 276",
+      "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:bfa3be23dc167d40630edd086c167b5473b6f14ae3474ab7f50f7139f2697eee"
+}

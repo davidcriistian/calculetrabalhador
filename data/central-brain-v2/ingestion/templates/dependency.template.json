@@ -1,0 +1,12 @@
+{
+  "id": "DEP-REPLACE-ME",
+  "from": "CNS-REPLACE-ME",
+  "fromType": "consumer",
+  "to": "RULE-REPLACE-ME",
+  "toType": "rule",
+  "relation": "consumes",
+  "status": "declared",
+  "declaredAt": "YYYY-MM-DDTHH:MM:SS.000Z",
+  "verifiedAt": null,
+  "metadata": {}
+}

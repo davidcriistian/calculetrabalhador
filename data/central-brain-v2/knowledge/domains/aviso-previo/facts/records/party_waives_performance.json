@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-PARTY-WAIVES-PERFORMANCE",
+  "domainId": "aviso-previo",
+  "key": "party_waives_performance",
+  "label": "Parte dispensa o cumprimento",
+  "description": "Indica que a parte credora do cumprimento aceitou dispensá-lo, sem por si só resolver os efeitos financeiros.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-010",
+    "CPT-AVP-011"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DISPENSA-001",
+      "severity": "review",
+      "assertion": "waiver effects depend on notifying party and proven new employment",
+      "message": "A dispensa de cumprimento não deve ser confundida automaticamente com renúncia ao direito econômico.",
+      "relatedFactIds": [
+        "FACT-NOTIFYING-PARTY",
+        "FACT-NEW-EMPLOYMENT-PROVEN"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoint": "Súmula 276",
+      "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:3c19bf279e4478cc332e0a4c04ce8262d70744195d9591e5a1cf655f265f6803"
+}

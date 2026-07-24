@@ -1,0 +1,79 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+  "domainId": "aviso-previo",
+  "key": "new_employment_evidence_date",
+  "label": "Data da evidência de novo emprego",
+  "description": "Data em que a prova de novo emprego foi emitida ou capturada, para avaliar sua relação temporal com o aviso.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "event-date",
+    "referenceRole": "evidence-recorded",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "official-record",
+      "system-record"
+    ],
+    "minimumConfidence": 0.9,
+    "humanVerificationRequired": true
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-012"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NEW-EMPLOYMENT-PROVEN"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-NOVO-EMPREGO-002",
+      "severity": "review",
+      "assertion": "evidence date is temporally connected to notice period",
+      "message": "Evidência temporalmente desconectada do aviso exige revisão humana.",
+      "relatedFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-PROJECTED-TERMINATION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoint": "Súmula 276",
+      "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:32010667f1d0efe2383abb34ec6db2268c479109bef6ffcde65f025591a10abc"
+}

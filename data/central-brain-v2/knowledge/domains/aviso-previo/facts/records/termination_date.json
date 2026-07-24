@@ -1,0 +1,77 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-TERMINATION-DATE",
+  "domainId": "aviso-previo",
+  "key": "termination_date",
+  "label": "Data de extinção informada",
+  "description": "Data civil de extinção registrada ou pretendida antes da eventual projeção jurídica do aviso.",
+  "valueType": "date",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "period-end",
+    "referenceRole": "termination",
+    "timezonePolicy": "date-only"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "official-record",
+      "system-record",
+      "declaration"
+    ],
+    "minimumConfidence": 0.8,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-008"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-DATA-005",
+      "severity": "error",
+      "assertion": "termination_date >= admission_date",
+      "message": "A data de extinção não pode anteceder a admissão.",
+      "relatedFactIds": [
+        "FACT-ADMISSION-DATE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 489",
+      "relevance": "A rescisão torna-se efetiva após expirar o prazo do aviso, salvo projeções substitutivas aplicáveis."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:59355923fc4e4a51fe7c0477f703960bb8d1fa33e150b82264f629c7be81a0c4"
+}

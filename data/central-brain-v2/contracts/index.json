@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "authority",
+      "path": "./authority.contract.json"
+    },
+    {
+      "id": "consumer",
+      "path": "./consumer.contract.json"
+    },
+    {
+      "id": "projection",
+      "path": "./projection.contract.json"
+    },
+    {
+      "id": "projection-engine",
+      "path": "./projection-engine.contract.json"
+    },
+    {
+      "id": "projection-result",
+      "path": "./projection-result.contract.json"
+    },
+    {
+      "id": "projection-runtime-compatibility",
+      "path": "./projection-runtime.compatibility.json"
+    },
+    {
+      "id": "projection-runtime-consumer",
+      "path": "./projection-runtime-consumer.contract.json"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "2.2.0-sprint5.6.2",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

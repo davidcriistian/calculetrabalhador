@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-fact-catalog.schema.json",
+  "title": "Domain Legal Fact Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "domainId",
+    "catalogVersion",
+    "status",
+    "items",
+    "verification"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "catalogVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "enum": [
+        "FACTS_DRAFT",
+        "FACTS_IN_REVIEW",
+        "FACTS_VALIDATED",
+        "FACTS_DEPRECATED"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "factId",
+          "path",
+          "key",
+          "category",
+          "status"
+        ],
+        "properties": {
+          "factId": {
+            "type": "string",
+            "pattern": "^FACT-[A-Z0-9-]+$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^\\./records/.+\\.json$"
+          },
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+          },
+          "category": {
+            "enum": [
+              "contract",
+              "party",
+              "termination",
+              "notice",
+              "duration",
+              "temporal",
+              "evidence",
+              "exception",
+              "procedure",
+              "scope",
+              "financial"
+            ]
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "review",
+              "approved",
+              "deprecated",
+              "retired"
+            ]
+          },
+          "requiredByRuleIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^RULE-[A-Z0-9-]+$"
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verifiedAt",
+        "verifiedBy",
+        "method",
+        "notes"
+      ],
+      "properties": {
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verifiedBy": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

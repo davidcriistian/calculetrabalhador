@@ -1,0 +1,81 @@
+{
+  "id": "end-to-end-simulation-report",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T22:06:35.752235+00:00",
+  "environment": {
+    "isolatedWorkspace": true,
+    "fixtureMode": true,
+    "realMutation": false
+  },
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "publicationGatesClosed": 5
+  },
+  "scenarios": [
+    {
+      "id": "APPROVED_READ_ONLY_FLOW",
+      "status": "PASS",
+      "finalState": "APPROVED_PLAN_READ_ONLY",
+      "publicationGate": "CLOSED",
+      "evidence": {
+        "impactLevel": null,
+        "planStatus": "approved-plan-read-only",
+        "previewStatus": "blocked-evidence-incomplete"
+      }
+    },
+    {
+      "id": "BLOCKED_WITHOUT_APPROVAL",
+      "status": "PASS",
+      "finalState": "BLOCKED",
+      "publicationGate": "CLOSED",
+      "evidence": {
+        "planStatus": "blocked-awaiting-approval"
+      }
+    },
+    {
+      "id": "VALIDATOR_FAILURE_BLOCKS_PUBLICATION",
+      "status": "PASS",
+      "finalState": "BLOCKED_VALIDATION_FAILURE",
+      "publicationGate": "CLOSED",
+      "evidence": {
+        "fixtureOnly": true,
+        "validatorExitCode": 1
+      }
+    },
+    {
+      "id": "ROLLBACK_PLAN_AVAILABLE",
+      "status": "PASS",
+      "finalState": "ROLLBACK_READY",
+      "publicationGate": "CLOSED",
+      "evidence": {
+        "defined": true,
+        "executed": false,
+        "sourceField": "rollbackPlan"
+      }
+    },
+    {
+      "id": "PROTECTED_FILES_UNCHANGED",
+      "status": "PASS",
+      "finalState": "UNCHANGED",
+      "publicationGate": "CLOSED",
+      "evidence": {
+        "changed": []
+      }
+    }
+  ],
+  "safety": {
+    "sourceMutation": false,
+    "ruleMutation": false,
+    "articleMutation": false,
+    "publicMutation": false,
+    "patchesApplied": 0,
+    "rollbackExecuted": false,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "publication": false
+  }
+}

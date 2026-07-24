@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NEW-EMPLOYMENT-OBTAINED",
+  "domainId": "aviso-previo",
+  "key": "new_employment_obtained",
+  "label": "Obtenção de novo emprego",
+  "description": "Indica que o empregado obteve novo emprego durante o período relevante do aviso.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-012"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [
+      "FACT-NEW-EMPLOYMENT-PROVEN"
+    ],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoint": "Súmula 276",
+      "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:be9e2b98ae12095db023db341346c1bb3c29526ec0f265a313a803442db44bd5"
+}

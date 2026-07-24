@@ -1,0 +1,20 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.0.0",
+  "items": [
+    {
+      "factId": "FACT-NOTICE-COUNTING-START-DATE",
+      "projectionIds": [
+        "PROJ-AP-004"
+      ],
+      "role": "derived-output"
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "projectionIds": [
+        "PROJ-AP-014"
+      ],
+      "role": "conditional-input"
+    }
+  ]
+}

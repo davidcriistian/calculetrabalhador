@@ -1,0 +1,452 @@
+{
+  "id": "impact-analysis-fgts-1784490746525",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T19:52:26.525Z",
+  "input": {
+    "ruleId": "fgts",
+    "changeType": "LEGAL_VALUE_CHANGE",
+    "effectiveFrom": null,
+    "sourceReference": null,
+    "requestedBy": "phase-4-validation",
+    "notes": null
+  },
+  "resolution": {
+    "ruleFound": true,
+    "canonicalRuleFile": "/data/rules/fgts.json",
+    "certificationLevel": "GOVERNED",
+    "impactLevel": "MEDIUM",
+    "unresolvedReason": null
+  },
+  "impactSummary": {
+    "typedRelations": 3,
+    "confirmedRelations": 0,
+    "declaredRelations": 3,
+    "tools": 0,
+    "articles": 16,
+    "clusters": 3,
+    "nuclei": 0,
+    "pillarArticles": 0,
+    "affectedFiles": 20
+  },
+  "directImpact": {
+    "tools": [],
+    "articles": [],
+    "otherConsumers": [
+      {
+        "relationId": "relation-0020",
+        "ruleId": "fgts",
+        "consumerId": "calculator:calculadora-clt-ou-pj",
+        "consumerType": "calculation_engine",
+        "path": "calculadora-clt-ou-pj/index.html",
+        "relationType": "unspecified",
+        "status": "legacy_declared_pending_migration",
+        "impactSeverity": null,
+        "reviewRequired": true,
+        "validators": []
+      },
+      {
+        "relationId": "relation-0021",
+        "ruleId": "fgts",
+        "consumerId": "calculator:calculadora-multa-40-fgts",
+        "consumerType": "calculation_engine",
+        "path": "calculadora-multa-40-fgts/index.html",
+        "relationType": "unspecified",
+        "status": "legacy_declared_pending_migration",
+        "impactSeverity": null,
+        "reviewRequired": true,
+        "validators": []
+      },
+      {
+        "relationId": "relation-0022",
+        "ruleId": "fgts",
+        "consumerId": "calculator:calculadora-rescisao-clt",
+        "consumerType": "calculation_engine",
+        "path": "calculadora-rescisao-clt/index.html",
+        "relationType": "unspecified",
+        "status": "legacy_declared_pending_migration",
+        "impactSeverity": null,
+        "reviewRequired": true,
+        "validators": []
+      }
+    ]
+  },
+  "indirectImpact": {
+    "inheritedArticles": [
+      {
+        "articleId": "clt-ou-pj",
+        "title": "CLT ou PJ: Qual Vale Mais a Pena em 2026",
+        "path": "/blog/clt-ou-pj",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "clt-ou-pj-vale-a-pena-em-2026",
+        "title": "CLT ou PJ Vale a Pena em 2026?",
+        "path": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "como-calcular-clt-ou-pj",
+        "title": "Como Calcular CLT ou PJ: Entenda a Comparacao",
+        "path": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "como-calcular-rescisao-clt",
+        "title": "Como Calcular Rescisao CLT: Passo a Passo Completo",
+        "path": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+        "primaryToolId": "calculadora-rescisao-clt",
+        "clusterId": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "como-calcular-saque-aniversario-fgts",
+        "title": "Como Calcular o Saque-Aniversário do FGTS em 2026",
+        "path": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+        "primaryToolId": "saque-aniversario-fgts",
+        "clusterId": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "contrato-pj-o-que-analisar-antes-de-aceitar",
+        "title": "Contrato PJ: O Que Analisar Antes de Aceitar?",
+        "path": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "multa-de-40-do-fgts-como-calcular",
+        "title": "Multa de 40% do FGTS: Como Funciona e Como Calcular",
+        "path": "/blog/multa-de-40-do-fgts-como-calcular/",
+        "primaryToolId": "calculadora-rescisao-clt",
+        "clusterId": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "pedido-de-demissao-quais-direitos-recebo",
+        "title": "Pedido de Demissao: Quais Direitos Recebo?",
+        "path": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+        "primaryToolId": "calculadora-rescisao-clt",
+        "clusterId": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "title": "Quanto Preciso Ganhar Como PJ para Compensar CLT?",
+        "path": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "quem-tem-direito-ao-saque-aniversario-fgts",
+        "title": "Quem Tem Direito ao Saque-Aniversário do FGTS em 2026?",
+        "path": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+        "primaryToolId": "saque-aniversario-fgts",
+        "clusterId": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "rescisao-sem-justa-causa",
+        "title": "Como Funciona a Rescisão Sem Justa Causa em 2026",
+        "path": "/blog/rescisao-sem-justa-causa",
+        "primaryToolId": "calculadora-rescisao-clt",
+        "clusterId": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "saque-aniversario-fgts-2026",
+        "title": "Saque-Aniversário FGTS 2026: Como Funciona, Quem Tem Direito e Como Calcular",
+        "path": "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+        "primaryToolId": "saque-aniversario-fgts",
+        "clusterId": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "vantagens-e-desvantagens-clt-ou-pj",
+        "title": "Vantagens e Desvantagens de CLT ou PJ: Qual Vale Mais a Pena?",
+        "path": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+        "primaryToolId": "calculadora-clt-ou-pj",
+        "clusterId": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "vantagens-e-desvantagens-saque-aniversario-fgts",
+        "title": "Vantagens e Desvantagens do Saque-Aniversário FGTS",
+        "path": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+        "primaryToolId": "saque-aniversario-fgts",
+        "clusterId": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "verbas-rescisorias-o-que-receber-na-demissao",
+        "title": "Verbas Rescisórias: O Que Você Tem Direito a Receber na Demissão",
+        "path": "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+        "primaryToolId": "calculadora-rescisao-clt",
+        "clusterId": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      },
+      {
+        "articleId": "voltar-saque-aniversario-para-saque-rescisao",
+        "title": "Posso Voltar do Saque-Aniversário para o Saque-Rescisão?",
+        "path": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+        "primaryToolId": "saque-aniversario-fgts",
+        "clusterId": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "isPillar": false,
+        "impactConnection": "DIRECT"
+      }
+    ],
+    "clusters": [
+      {
+        "clusterId": "calculadora-clt-ou-pj",
+        "title": "calculadora-clt-ou-pj",
+        "nucleusId": null,
+        "domainId": null,
+        "toolIds": [
+          "calculadora-clt-ou-pj"
+        ],
+        "articleIds": [
+          "clt-ou-pj",
+          "clt-ou-pj-vale-a-pena-em-2026",
+          "como-calcular-clt-ou-pj",
+          "contrato-pj-o-que-analisar-antes-de-aceitar",
+          "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+          "vantagens-e-desvantagens-clt-ou-pj"
+        ],
+        "ruleIds": [
+          "decimo-terceiro",
+          "ferias",
+          "fgts",
+          "inss",
+          "irrf"
+        ],
+        "pillarArticleIds": []
+      },
+      {
+        "clusterId": "calculadora-rescisao-clt",
+        "title": "calculadora-rescisao-clt",
+        "nucleusId": null,
+        "domainId": null,
+        "toolIds": [
+          "calculadora-rescisao-clt"
+        ],
+        "articleIds": [
+          "como-calcular-rescisao-clt",
+          "multa-de-40-do-fgts-como-calcular",
+          "pedido-de-demissao-quais-direitos-recebo",
+          "rescisao-sem-justa-causa",
+          "verbas-rescisorias-o-que-receber-na-demissao"
+        ],
+        "ruleIds": [
+          "aviso-previo",
+          "decimo-terceiro",
+          "ferias",
+          "fgts",
+          "seguro-desemprego"
+        ],
+        "pillarArticleIds": []
+      },
+      {
+        "clusterId": "saque-aniversario-fgts",
+        "title": "saque-aniversario-fgts",
+        "nucleusId": null,
+        "domainId": null,
+        "toolIds": [
+          "saque-aniversario-fgts"
+        ],
+        "articleIds": [
+          "como-calcular-saque-aniversario-fgts",
+          "quem-tem-direito-ao-saque-aniversario-fgts",
+          "saque-aniversario-fgts-2026",
+          "vantagens-e-desvantagens-saque-aniversario-fgts",
+          "voltar-saque-aniversario-para-saque-rescisao"
+        ],
+        "ruleIds": [
+          "decimo-terceiro",
+          "ferias",
+          "fgts",
+          "rescisao",
+          "salario-liquido"
+        ],
+        "pillarArticleIds": []
+      }
+    ],
+    "nuclei": [],
+    "pillarArticles": []
+  },
+  "humanReview": {
+    "required": true,
+    "automaticPublicationAllowed": false,
+    "requiredApprovals": [
+      {
+        "role": "domain-owner",
+        "status": "pending"
+      },
+      {
+        "role": "legal-reviewer",
+        "status": "pending"
+      },
+      {
+        "role": "publishing-owner",
+        "status": "pending"
+      }
+    ],
+    "reviewReasons": [
+      "LEGAL_OR_GOVERNANCE_CHANGE",
+      "EDITORIAL_CONTENT_AFFECTED"
+    ]
+  },
+  "validationPlan": [
+    {
+      "order": 1,
+      "validator": "/scripts/validate-canonical-rule-minimum-contract.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 2,
+      "validator": "/scripts/validate-governed-rule-consumer-authority.js",
+      "required": true,
+      "status": "pending"
+    },
+    {
+      "order": 3,
+      "validator": "/scripts/validate-editorial-impact-matrix.js",
+      "required": true,
+      "status": "pending"
+    }
+  ],
+  "executionPlan": [
+    {
+      "step": 1,
+      "action": "VERIFY_OFFICIAL_SOURCE",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "description": "Confirmar fonte oficial, vigência e escopo material da alteração."
+    },
+    {
+      "step": 2,
+      "action": "UPDATE_CANONICAL_RULE",
+      "mode": "manual-controlled",
+      "blockedUntilApproved": true,
+      "description": "Alterar somente a regra canônica aprovada e atualizar versão/fingerprint."
+    },
+    {
+      "step": 3,
+      "action": "VALIDATE_DIRECT_CONSUMERS",
+      "mode": "manual-plus-automation",
+      "blockedUntilApproved": true,
+      "targets": []
+    },
+    {
+      "step": 4,
+      "action": "REVIEW_EDITORIAL_IMPACT",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "targets": [
+        "clt-ou-pj",
+        "clt-ou-pj-vale-a-pena-em-2026",
+        "como-calcular-clt-ou-pj",
+        "como-calcular-rescisao-clt",
+        "como-calcular-saque-aniversario-fgts",
+        "contrato-pj-o-que-analisar-antes-de-aceitar",
+        "multa-de-40-do-fgts-como-calcular",
+        "pedido-de-demissao-quais-direitos-recebo",
+        "quanto-preciso-ganhar-como-pj-para-compensar-clt",
+        "quem-tem-direito-ao-saque-aniversario-fgts",
+        "rescisao-sem-justa-causa",
+        "saque-aniversario-fgts-2026",
+        "vantagens-e-desvantagens-clt-ou-pj",
+        "vantagens-e-desvantagens-saque-aniversario-fgts",
+        "verbas-rescisorias-o-que-receber-na-demissao",
+        "voltar-saque-aniversario-para-saque-rescisao"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "RUN_VALIDATORS",
+      "mode": "automation-after-approval",
+      "blockedUntilApproved": true,
+      "validators": [
+        "/scripts/validate-canonical-rule-minimum-contract.js",
+        "/scripts/validate-governed-rule-consumer-authority.js",
+        "/scripts/validate-editorial-impact-matrix.js"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "PREVIEW_AND_APPROVE_PUBLICATION",
+      "mode": "human-required",
+      "blockedUntilApproved": true,
+      "description": "Nenhuma publicação automática é permitida."
+    }
+  ],
+  "affectedFiles": [
+    "/data/rules/fgts.json",
+    "calculadora-clt-ou-pj/index.html",
+    "calculadora-multa-40-fgts/index.html",
+    "calculadora-rescisao-clt/index.html",
+    "/blog/clt-ou-pj",
+    "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+    "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+    "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+    "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+    "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+    "/blog/multa-de-40-do-fgts-como-calcular/",
+    "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+    "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+    "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+    "/blog/rescisao-sem-justa-causa",
+    "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+    "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+    "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+    "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+    "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/"
+  ],
+  "safety": {
+    "sourceFilesModified": false,
+    "publicFilesModified": false,
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "automaticExecutionAllowed": false
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "editorial-nucleus-impact-projection",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:25:01.341Z",
+  "sourceAuthority": "/data/brain/nuclei.json",
+  "nucleusCount": 10,
+  "nuclei": [
+    {
+      "nucleusId": "aposentadoria",
+      "title": "Guia de Aposentadoria",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "autonomo",
+      "title": "Guia do Autonomo",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "beneficios-trabalhistas",
+      "title": "Guia de Beneficios Trabalhistas",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "clt",
+      "title": "Guia CLT",
+      "status": "active",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "empregador-domestico",
+      "title": "Guia do Empregador Domestico",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "fgts",
+      "title": "Guia FGTS",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "inss",
+      "title": "Guia INSS",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "irpf",
+      "title": "Guia IRPF",
+      "status": "coming-soon",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "mei",
+      "title": "Guia MEI",
+      "status": "active",
+      "clusterIds": [],
+      "toolIds": [],
+      "articleIds": [],
+      "ruleIds": [],
+      "pillarArticleIds": []
+    },
+    {
+      "nucleusId": "pj",
+      "title": "Guia PJ",
+      "status": "active",
+      "clusterIds": [],
+      "toolIds": [
+        "calculadora-custo-mensal-pj",
+        "calculadora-reserva-financeira-pj"
+      ],
+      "articleIds": [
+        "como-montar-uma-reserva-de-emergencia-sendo-pj",
+        "como-organizar-as-financas-sendo-pj"
+      ],
+      "ruleIds": [
+        "article:como-organizar-as-financas-sendo-pj",
+        "calculator:calculadora-reserva-financeira-pj",
+        "financial-planning-pj"
+      ],
+      "pillarArticleIds": []
+    }
+  ]
+}

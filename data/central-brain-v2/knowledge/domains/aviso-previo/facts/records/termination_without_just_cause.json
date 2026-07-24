@@ -1,0 +1,82 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+  "domainId": "aviso-previo",
+  "key": "termination_without_just_cause",
+  "label": "Ruptura sem justo motivo",
+  "description": "Indica que a extinção ocorreu sem justa causa impeditiva do aviso, derivada da causa jurídica normalizada.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record",
+      "derived"
+    ],
+    "derivationAllowed": true,
+    "derivationProjectionIds": [
+      "PROJ-AP-001"
+    ]
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-TERMINATION-CAUSE"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-RUPTURA-003",
+      "severity": "error",
+      "assertion": "termination_without_just_cause matches termination_cause",
+      "message": "O booleano deve ser derivado da causa jurídica e não informado isoladamente sem justificativa.",
+      "relatedFactIds": [
+        "FACT-TERMINATION-CAUSE"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, caput",
+      "relevance": "Expressa o pressuposto de ausência de justo motivo na incidência geral."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:054f780a57303a9e04cf83e6b4c38c66a47ded2ac7b10bfec1a7dd4867b51460"
+}

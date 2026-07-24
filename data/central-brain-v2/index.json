@@ -1,0 +1,38 @@
+{
+  "$schema": "./schemas/brain-index.schema.json",
+  "$id": "central-brain-v2",
+  "version": "2.7.0-sprint5.6.7-phaseE",
+  "status": "parallel-only",
+  "runtimeAuthority": false,
+  "createdAt": "2026-07-21",
+  "owner": "Calcule Trabalhador",
+  "purpose": "Validated canonical knowledge platform with controlled transactional ingestion; isolated from production consumers until explicit activation.",
+  "principles": [
+    "append-only temporal history",
+    "official-source traceability",
+    "single canonical identity",
+    "immutable published projections",
+    "consumers never author legal knowledge",
+    "human approval before activation",
+    "schema and reference validation before every write",
+    "projection execution is deterministic, explicit about uncertainty and fully traceable"
+  ],
+  "entrypoints": {
+    "registries": "./registries/index.json",
+    "schemas": "./schemas/index.json",
+    "contracts": "./contracts/index.json",
+    "engines": "./engines/index.json",
+    "governance": "./governance/index.json",
+    "migration": "./migration/index.json",
+    "validation": "./validation/index.json",
+    "ingestion": "./ingestion/index.json",
+    "state": "./state/readiness.json",
+    "knowledge": "./knowledge/index.json"
+  },
+  "safety": {
+    "connectedToCurrentCalculators": false,
+    "connectedToCurrentArticles": false,
+    "connectedToAutomations": false,
+    "connectedToPanel": false
+  }
+}

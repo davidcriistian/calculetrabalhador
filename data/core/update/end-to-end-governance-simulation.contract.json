@@ -1,0 +1,43 @@
+{
+  "id": "end-to-end-governance-simulation-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Simular o fluxo completo de governança em ambiente isolado, incluindo caminhos aprovado, bloqueado, falha de validação e rollback, sem mutações reais.",
+  "requiredScenarios": [
+    "APPROVED_READ_ONLY_FLOW",
+    "BLOCKED_WITHOUT_APPROVAL",
+    "VALIDATOR_FAILURE_BLOCKS_PUBLICATION",
+    "ROLLBACK_PLAN_AVAILABLE",
+    "PROTECTED_FILES_UNCHANGED"
+  ],
+  "executionPolicy": {
+    "isolatedWorkspaceRequired": true,
+    "realPatchApplicationAllowed": false,
+    "sourceMutationAllowed": false,
+    "ruleMutationAllowed": false,
+    "articleMutationAllowed": false,
+    "publicMutationAllowed": false,
+    "commitAllowed": false,
+    "pushAllowed": false,
+    "deployAllowed": false,
+    "publicationAllowed": false
+  },
+  "successCriteria": {
+    "approvedScenarioEndsReadOnly": true,
+    "blockedScenarioRemainsBlocked": true,
+    "validatorFailureClosesGate": true,
+    "rollbackDefinedBeforeExecution": true,
+    "protectedFingerprintsRemainEqual": true
+  },
+  "outputs": {
+    "scenarioMatrix": "/data/core/update/end-to-end-simulation-matrix.json",
+    "simulationReport": "/data/core/update/end-to-end-simulation-report.generated.json"
+  },
+  "references": {
+    "runner": "/scripts/run-end-to-end-governance-simulation.js",
+    "validator": "/scripts/validate-end-to-end-governance-simulation.js"
+  }
+}

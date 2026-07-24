@@ -1,0 +1,269 @@
+{
+  "version": "1.1.0",
+  "cases": [
+    {
+      "id": "TC-PROJ-AP-001-A",
+      "projectionId": "PROJ-AP-001",
+      "fixture": "employee_resignation",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-001-B",
+      "projectionId": "PROJ-AP-001",
+      "fixture": "fixed_without_clause",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-001-C",
+      "projectionId": "PROJ-AP-001",
+      "fixture": "fixed_without_clause",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-001-D",
+      "projectionId": "PROJ-AP-001",
+      "fixture": "fixed_without_clause",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-002-A",
+      "projectionId": "PROJ-AP-002",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-002-B",
+      "projectionId": "PROJ-AP-002",
+      "fixture": "insufficient",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-002-C",
+      "projectionId": "PROJ-AP-002",
+      "fixture": "insufficient",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-002-D",
+      "projectionId": "PROJ-AP-002",
+      "fixture": "insufficient",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-003-A",
+      "projectionId": "PROJ-AP-003",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-003-B",
+      "projectionId": "PROJ-AP-003",
+      "fixture": "pre_2011",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-003-C",
+      "projectionId": "PROJ-AP-003",
+      "fixture": "pre_2011",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-003-D",
+      "projectionId": "PROJ-AP-003",
+      "fixture": "pre_2011",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-003-E",
+      "projectionId": "PROJ-AP-003",
+      "fixture": "pre_2011",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-004-A",
+      "projectionId": "PROJ-AP-004",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-004-B",
+      "projectionId": "PROJ-AP-004",
+      "fixture": "employee_resignation",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-004-C",
+      "projectionId": "PROJ-AP-004",
+      "fixture": "employee_resignation",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-005-A",
+      "projectionId": "PROJ-AP-005",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-006-A",
+      "projectionId": "PROJ-AP-006",
+      "fixture": "employer_worked_reduction",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-006-B",
+      "projectionId": "PROJ-AP-006",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-006-C",
+      "projectionId": "PROJ-AP-006",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-007-A",
+      "projectionId": "PROJ-AP-007",
+      "fixture": "new_job_proven",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-007-B",
+      "projectionId": "PROJ-AP-007",
+      "fixture": "insufficient",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-008-A",
+      "projectionId": "PROJ-AP-008",
+      "fixture": "employer_indemnified_5y",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-008-B",
+      "projectionId": "PROJ-AP-008",
+      "fixture": "insufficient",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-009-A",
+      "projectionId": "PROJ-AP-009",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-009-B",
+      "projectionId": "PROJ-AP-009",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-010-A",
+      "projectionId": "PROJ-AP-010",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-010-B",
+      "projectionId": "PROJ-AP-010",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-011-A",
+      "projectionId": "PROJ-AP-011",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-011-B",
+      "projectionId": "PROJ-AP-011",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-012-A",
+      "projectionId": "PROJ-AP-012",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-012-B",
+      "projectionId": "PROJ-AP-012",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-013-A",
+      "projectionId": "PROJ-AP-013",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-013-B",
+      "projectionId": "PROJ-AP-013",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-014-A",
+      "projectionId": "PROJ-AP-014",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-014-B",
+      "projectionId": "PROJ-AP-014",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-015-A",
+      "projectionId": "PROJ-AP-015",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-015-B",
+      "projectionId": "PROJ-AP-015",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-016-A",
+      "projectionId": "PROJ-AP-016",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-016-B",
+      "projectionId": "PROJ-AP-016",
+      "fixture": "phase2_special_missing",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-013-C",
+      "projectionId": "PROJ-AP-013",
+      "fixture": "agreement_pre_2017",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-013-D",
+      "projectionId": "PROJ-AP-013",
+      "fixture": "agreement_post_2017",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-017-A",
+      "projectionId": "PROJ-AP-017",
+      "fixture": "phase2_special_complete",
+      "assertion": "execution-completes"
+    },
+    {
+      "id": "TC-PROJ-AP-017-B",
+      "projectionId": "PROJ-AP-017",
+      "fixture": "fgts_requirement_unknown",
+      "assertion": "execution-completes"
+    }
+  ]
+}

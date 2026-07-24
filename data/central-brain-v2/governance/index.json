@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "maturity",
+      "path": "./maturity-levels.json"
+    },
+    {
+      "id": "change-policy",
+      "path": "./change-policy.json"
+    },
+    {
+      "id": "identity-policy",
+      "path": "./identity-policy.json"
+    },
+    {
+      "id": "temporal-policy",
+      "path": "./temporal-policy.json"
+    },
+    {
+      "id": "approvals",
+      "path": "./approvals.json"
+    },
+    {
+      "id": "SEMANTIC-POLICY-AVISO-PREVIO-001",
+      "path": "semantic-policy.json",
+      "status": "active"
+    },
+    {
+      "id": "source-coverage-policy",
+      "path": "./source-coverage-policy.json"
+    },
+    {
+      "id": "approval-policy",
+      "path": "./approval-policy.json"
+    },
+    {
+      "id": "maturity-policy",
+      "path": "./maturity-policy.json"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

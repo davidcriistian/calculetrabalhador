@@ -1,0 +1,23 @@
+{
+  "sprint": "5.6.7-phase-1",
+  "title": "Legal Governance Foundation",
+  "status": "completed",
+  "scope": [
+    "approval-status",
+    "review-scope",
+    "separation-of-duties",
+    "maturity-isolation",
+    "catalog-metadata",
+    "governance-tests"
+  ],
+  "validation": {
+    "validatorVersion": "2.4.1-sprint5.6.7-phase1",
+    "validatorOk": true,
+    "structuralTestsPassed": 109,
+    "projectionRuntimePassed": 46,
+    "projectionRuntimeFailed": 0
+  },
+  "legalAuthority": false,
+  "formalApprovals": 0,
+  "consumerReady": false
+}

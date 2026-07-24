@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": "phase-status",
+      "path": "./phase-status.json"
+    },
+    {
+      "id": "legacy-path-map",
+      "path": "./legacy-path-map.json"
+    },
+    {
+      "id": "next-domain-template",
+      "path": "./next-domain-template.json"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

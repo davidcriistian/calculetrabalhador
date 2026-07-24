@@ -1,0 +1,208 @@
+{
+  "id": "RULE-AP-002",
+  "domainId": "aviso-previo",
+  "title": "Duração mínima e proporcional do aviso-prévio devido ao empregado",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-002-000",
+      "validFrom": "1988-10-05",
+      "validTo": "2011-10-12",
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-002-PRE-A",
+          "allOf": [
+            "aviso-prévio juridicamente devido",
+            "rescisão anterior à Lei nº 12.506/2011"
+          ]
+        }
+      ],
+      "exceptions": [],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "Antes da vigência da Lei nº 12.506/2011, o aviso-prévio devido sob o regime geral observa o mínimo constitucional de trinta dias, sem o acréscimo proporcional criado pela lei posterior.",
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-004"
+      ],
+      "factsRequired": [
+        "FACT-TERMINATION-DATE"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-002-PRE-A",
+          "type": "duration-floor",
+          "description": "fixa duração mínima de 30 dias sem proporcionalidade legal"
+        }
+      ],
+      "interpretiveLimits": [
+        "Não aplica retroativamente a proporcionalidade da Lei nº 12.506/2011."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CF1988-ART7-XXI",
+          "pinpoint": "art. 7º, XXI"
+        },
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-002-PRE-01",
+          "given": [
+            "aviso devido",
+            "rescisão anterior a 13/10/2011"
+          ],
+          "expected": "duração mínima de 30 dias sem proporcionalidade"
+        },
+        {
+          "id": "TC-AP-002-PRE-02",
+          "given": [
+            "aviso devido ao empregado",
+            "rescisão em 2010",
+            "vinte anos de serviço"
+          ],
+          "expected": "30 dias, sem acréscimo proporcional"
+        }
+      ],
+      "notes": [
+        "Versão histórica criada para permitir seleção temporal determinística do piso de 30 dias."
+      ],
+      "contentFingerprint": "sha256:f46cd4842c29c2d608acc5edf669ec11c1442607568c3003c72e55d2f1937ba8"
+    },
+    {
+      "versionId": "VER-RULE-AP-002-001",
+      "validFrom": "2011-10-13",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-LEI12506-2011",
+        "SRC-TST-SUMULA-441"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-002-A",
+          "allOf": [
+            "aviso devido ao empregado",
+            "rescisão contratual ocorrida a partir da publicação da Lei nº 12.506/2011",
+            "tempo de serviço prestado à mesma empresa"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-002-A",
+          "when": "rescisão anterior à publicação da Lei nº 12.506/2011",
+          "effect": "não aplicar proporcionalidade legal, conforme Súmula 441 do TST"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "Ao empregado é assegurado aviso-prévio mínimo de trinta dias, acrescido de três dias por ano de serviço prestado na mesma empresa, até o acréscimo máximo de sessenta dias e duração total máxima de noventa dias, nas rescisões alcançadas temporalmente pela Lei nº 12.506/2011.",
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-004",
+        "CPT-AVP-005"
+      ],
+      "factsRequired": [
+        "FACT-EMPLOYEE-BENEFICIARY",
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-TERMINATION-DATE"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-002-A",
+          "type": "duration-floor",
+          "description": "fixa duração mínima de 30 dias"
+        },
+        {
+          "id": "EFFECT-AP-002-B",
+          "type": "duration-increment",
+          "description": "reconhece acréscimo legal de 3 dias por ano de serviço na mesma empresa"
+        },
+        {
+          "id": "EFFECT-AP-002-C",
+          "type": "duration-cap",
+          "description": "limita o acréscimo a 60 dias e a duração total a 90 dias"
+        }
+      ],
+      "interpretiveLimits": [
+        "A regra registra o conteúdo normativo; arredondamento, contagem de anos completos e algoritmo pertencem à projeção validada.",
+        "A extensão da proporcionalidade ao aviso devido pelo empregado não é promovida por esta regra."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CF1988-ART7-XXI",
+          "pinpoint": "art. 7º, XXI"
+        },
+        {
+          "sourceId": "SRC-BR-LEI12506-2011",
+          "pinpoint": "art. 1º e parágrafo único"
+        },
+        {
+          "sourceId": "SRC-TST-SUMULA-441",
+          "pinpoint": "Súmula 441"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-002-01",
+          "given": [
+            "aviso devido ao empregado",
+            "rescisão em 2010"
+          ],
+          "expected": "proporcionalidade não aplicável"
+        },
+        {
+          "id": "TC-AP-002-02",
+          "given": [
+            "aviso devido ao empregado",
+            "rescisão após 13/10/2011",
+            "tempo de serviço na mesma empresa"
+          ],
+          "expected": "mínimo e proporcionalidade aplicáveis"
+        },
+        {
+          "id": "TC-AP-002-03",
+          "given": [
+            "tempo de serviço suficiente para exceder 90 dias"
+          ],
+          "expected": "duração total limitada a 90 dias"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:dc60e340ffbfb5433d0bec3cfcf9391faa8208555233a682d0ee1f17a4f6c680"
+    }
+  ],
+  "aliases": [
+    "aviso-previo-proporcional",
+    "duracao-do-aviso-previo"
+  ],
+  "dependencies": [
+    "RULE-AP-001"
+  ],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Modela a base jurídica da duração mínima de trinta dias e do acréscimo proporcional previsto na Lei nº 12.506/2011, sem incorporar algoritmo de cálculo."
+}

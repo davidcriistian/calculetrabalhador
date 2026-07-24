@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+  "domainId": "aviso-previo",
+  "key": "employee_option_reduction_mode",
+  "label": "Opção de redução no aviso trabalhado",
+  "description": "Registra a opção do empregado entre redução diária de jornada ou ausência por dias corridos, quando o art. 488 for aplicável.",
+  "valueType": "enum",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-009"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-WORKED",
+      "FACT-TERMINATION-BY-EMPLOYER"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-REDUCAO-001",
+      "severity": "error",
+      "assertion": "reduction option only when notice_worked and termination_by_employer",
+      "message": "A opção de redução só é aplicável ao aviso trabalhado promovido pelo empregador.",
+      "relatedFactIds": [
+        "FACT-NOTICE-WORKED",
+        "FACT-TERMINATION-BY-EMPLOYER"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 488 e parágrafo único",
+      "relevance": "Define redução de duas horas diárias ou sete dias corridos sem prejuízo salarial."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "allowedValues": [
+    "duas-horas-diarias",
+    "sete-dias-corridos",
+    "nao-informada",
+    "nao-aplicavel"
+  ],
+  "contentFingerprint": "sha256:ecf20d54325a8d9bdacadf4a9e5dde38d469823bd3228fdefa6ca75072511d9c"
+}

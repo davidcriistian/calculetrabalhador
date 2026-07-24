@@ -1,0 +1,92 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-TERMINATION-CAUSE",
+  "domainId": "aviso-previo",
+  "key": "termination_cause",
+  "label": "Causa jurídica da extinção",
+  "description": "Classifica a causa jurídica da extinção para determinar se o aviso-prévio é devido ou se o caso está fora do escopo.",
+  "valueType": "enum",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.1.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-RUPTURA-002",
+      "severity": "review",
+      "assertion": "termination_cause in [culpa-reciproca,rescisao-indireta,mutuo-acordo,forca-maior,outra]",
+      "message": "Causa especial exige regra própria ou revisão humana antes de concluir efeitos.",
+      "relatedFactIds": []
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, caput",
+      "relevance": "A regra geral trata da rescisão sem justo motivo; causas especiais demandam tratamento próprio."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "allowedValues": [
+    "dispensa-sem-justa-causa",
+    "pedido-demissao",
+    "justa-causa-empregado",
+    "culpa-reciproca",
+    "rescisao-indireta",
+    "mutuo-acordo",
+    "termino-prazo",
+    "forca-maior",
+    "falecimento",
+    "outra",
+    "desconhecida",
+    "extincao-por-acordo",
+    "fato-do-principe",
+    "falecimento-empregado",
+    "falecimento-empregador-pessoa-fisica",
+    "contrato-prazo-com-clausula-assecuratoria"
+  ],
+  "contentFingerprint": "sha256:e854be8dc3d348074f53a33e7510ba959c6597b27a403f5755b4242121035f84"
+}

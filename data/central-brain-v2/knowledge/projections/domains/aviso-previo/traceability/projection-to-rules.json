@@ -1,0 +1,104 @@
+{
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "ruleIds": [
+        "RULE-AP-004",
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "ruleIds": [
+        "RULE-AP-002",
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "ruleIds": [
+        "RULE-AP-003",
+        "RULE-AP-002"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "ruleIds": [
+        "RULE-AP-003"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "ruleIds": [
+        "RULE-AP-005"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "ruleIds": [
+        "RULE-AP-006"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-008",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-009",
+      "ruleIds": [
+        "RULE-AP-007"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-010",
+      "ruleIds": [
+        "RULE-AP-008"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-011",
+      "ruleIds": [
+        "RULE-AP-009"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-012",
+      "ruleIds": [
+        "RULE-AP-010"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-013",
+      "ruleIds": [
+        "RULE-AP-011"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-014",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-015",
+      "ruleIds": [
+        "RULE-AP-013"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-016",
+      "ruleIds": [
+        "RULE-AP-014"
+      ]
+    }
+  ]
+}

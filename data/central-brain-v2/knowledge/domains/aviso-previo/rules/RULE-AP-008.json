@@ -1,0 +1,91 @@
+{
+  "id": "RULE-AP-008",
+  "domainId": "aviso-previo",
+  "title": "Rescisão indireta reconhecida",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-008-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-22T14:40:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART483"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-008-A",
+          "allOf": [
+            "rescisão indireta reconhecida",
+            "fatos mínimos presentes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-008-A",
+          "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana.",
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "factsRequired": [
+        "FACT-INDIRECT-TERMINATION-STATUS",
+        "FACT-JUDICIAL-RECOGNITION-STATUS"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-008-A",
+          "type": "efeitos-rescisao-indireta",
+          "description": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão h"
+        }
+      ],
+      "interpretiveLimits": [
+        "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART483",
+          "pinpoint": "art. 483"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-008-01",
+          "given": [
+            "fatos de incidência presentes"
+          ],
+          "expected": "regra aplicável em revisão"
+        },
+        {
+          "id": "TC-AP-008-02",
+          "given": [
+            "fatos insuficientes ou controvertidos"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+      ],
+      "contentFingerprint": "sha256:edcfe3be8efdc708966a105301515a66cdede54c5c1de217b575476d9d21a61b"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana."
+}

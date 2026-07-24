@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fact-package.schema.json",
+  "title": "Projection Fact Package",
+  "description": "Immutable execution input envelope containing typed fact assertions and provenance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packageId",
+    "domainId",
+    "caseId",
+    "referenceDate",
+    "createdAt",
+    "facts",
+    "conflictPolicy",
+    "inputFingerprint"
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "reference",
+        "capturedAt"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "declaration",
+            "document",
+            "official-record",
+            "system-record",
+            "derived-trace"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "issuer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "checksum": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "factAssertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "factId",
+        "value",
+        "origin",
+        "assertedAt",
+        "confidence",
+        "evidence",
+        "status"
+      ],
+      "properties": {
+        "factId": {
+          "type": "string",
+          "pattern": "^FACT-[A-Z0-9-]+$"
+        },
+        "value": {},
+        "origin": {
+          "enum": [
+            "user-declared",
+            "document-extracted",
+            "system-observed",
+            "official-record",
+            "derived"
+          ]
+        },
+        "assertedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "effectiveAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "status": {
+          "enum": [
+            "asserted",
+            "verified",
+            "disputed",
+            "superseded"
+          ]
+        },
+        "derivedBy": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^PROJ-[A-Z0-9-]+$"
+        },
+        "supersedesAssertionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "packageId": {
+      "type": "string",
+      "pattern": "^FPKG-[A-Z0-9-]+$"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "caseId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumerId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^CNS-[A-Z0-9-]+$"
+    },
+    "referenceDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "asKnownAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/factAssertion"
+      }
+    },
+    "conflictPolicy": {
+      "enum": [
+        "reject",
+        "prefer-verified",
+        "human-review"
+      ]
+    },
+    "inputFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "description": "Fact identifiers are required to be unique; enforced by semantic validator because JSON Schema uniqueItems compares whole objects."
+    }
+  ]
+}

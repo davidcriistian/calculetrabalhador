@@ -1,0 +1,1612 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "rules",
+  "items": [
+    {
+      "id": "RULE-AP-001",
+      "domainId": "aviso-previo",
+      "title": "Obrigação geral de aviso-prévio nos contratos por prazo indeterminado",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-001-001",
+          "validFrom": "1988-10-05",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CF1988-ART7-XXI",
+            "SRC-BR-CLT-ART487-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-001-A",
+              "allOf": [
+                "contrato regido pelo escopo clt-geral",
+                "contrato por prazo indeterminado",
+                "ruptura sem justo motivo por iniciativa de uma das partes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-001-A",
+              "when": "contrato por prazo determinado sem cláusula assecuratória aplicável",
+              "effect": "fora do escopo desta regra"
+            },
+            {
+              "id": "EXC-AP-001-B",
+              "when": "emprego doméstico",
+              "effect": "aplicar pacote jurídico próprio da LC 150/2015"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Na ruptura sem justo motivo de contrato de trabalho por prazo indeterminado, a parte que toma a iniciativa deve conceder aviso-prévio; a ausência do aviso produz as consequências substitutivas previstas em lei.",
+          "conceptIds": [
+            "CPT-AVP-001",
+            "CPT-AVP-006",
+            "CPT-AVP-015",
+            "CPT-AVP-016"
+          ],
+          "factsRequired": [
+            "FACT-CONTRACT-INDEFINITE",
+            "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+            "FACT-NOTIFYING-PARTY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-001-A",
+              "type": "duty",
+              "description": "constitui dever de pré-aviso da parte notificante"
+            },
+            {
+              "id": "EFFECT-AP-001-B",
+              "type": "substitution",
+              "description": "a falta do aviso pelo empregador gera direito aos salários correspondentes e integração ao tempo de serviço"
+            },
+            {
+              "id": "EFFECT-AP-001-C",
+              "type": "deduction",
+              "description": "a falta do aviso pelo empregado pode autorizar desconto dos salários correspondentes"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não decide, isoladamente, a duração proporcional, a modalidade nem a data projetada.",
+            "Não abrange o regime doméstico neste pacote."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CF1988-ART7-XXI",
+              "pinpoint": "art. 7º, XXI"
+            },
+            {
+              "sourceId": "SRC-BR-CLT-ART487-491",
+              "pinpoint": "art. 487, caput e §§ 1º e 2º"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-001-01",
+              "given": [
+                "contrato por prazo indeterminado",
+                "dispensa sem justa causa pelo empregador"
+              ],
+              "expected": "regra aplicável"
+            },
+            {
+              "id": "TC-AP-001-02",
+              "given": [
+                "contrato por prazo determinado sem cláusula assecuratória"
+              ],
+              "expected": "regra não aplicável"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:9837cadfede7e73f30e4e53bcbdfd0620f8865e20c70f0e337ac52e51a4fd62e"
+        }
+      ],
+      "aliases": [
+        "existencia-do-aviso-previo",
+        "obrigacao-de-preavisar"
+      ],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Define o dever jurídico de comunicação antecipada da ruptura imotivada do contrato por prazo indeterminado e as consequências substitutivas da sua ausência."
+    },
+    {
+      "id": "RULE-AP-002",
+      "domainId": "aviso-previo",
+      "title": "Duração mínima e proporcional do aviso-prévio devido ao empregado",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-002-000",
+          "validFrom": "1988-10-05",
+          "validTo": "2011-10-12",
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CF1988-ART7-XXI",
+            "SRC-BR-CLT-ART487-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-002-PRE-A",
+              "allOf": [
+                "aviso-prévio juridicamente devido",
+                "rescisão anterior à Lei nº 12.506/2011"
+              ]
+            }
+          ],
+          "exceptions": [],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Antes da vigência da Lei nº 12.506/2011, o aviso-prévio devido sob o regime geral observa o mínimo constitucional de trinta dias, sem o acréscimo proporcional criado pela lei posterior.",
+          "conceptIds": [
+            "CPT-AVP-001",
+            "CPT-AVP-004"
+          ],
+          "factsRequired": [
+            "FACT-TERMINATION-DATE"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-002-PRE-A",
+              "type": "duration-floor",
+              "description": "fixa duração mínima de 30 dias sem proporcionalidade legal"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não aplica retroativamente a proporcionalidade da Lei nº 12.506/2011."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CF1988-ART7-XXI",
+              "pinpoint": "art. 7º, XXI"
+            },
+            {
+              "sourceId": "SRC-BR-CLT-ART487-491",
+              "pinpoint": "art. 487"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-002-PRE-01",
+              "given": [
+                "aviso devido",
+                "rescisão anterior a 13/10/2011"
+              ],
+              "expected": "duração mínima de 30 dias sem proporcionalidade"
+            },
+            {
+              "id": "TC-AP-002-PRE-02",
+              "given": [
+                "aviso devido ao empregado",
+                "rescisão em 2010",
+                "vinte anos de serviço"
+              ],
+              "expected": "30 dias, sem acréscimo proporcional"
+            }
+          ],
+          "notes": [
+            "Versão histórica criada para permitir seleção temporal determinística do piso de 30 dias."
+          ],
+          "contentFingerprint": "sha256:f46cd4842c29c2d608acc5edf669ec11c1442607568c3003c72e55d2f1937ba8"
+        },
+        {
+          "versionId": "VER-RULE-AP-002-001",
+          "validFrom": "2011-10-13",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CF1988-ART7-XXI",
+            "SRC-BR-LEI12506-2011",
+            "SRC-TST-SUMULA-441"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-002-A",
+              "allOf": [
+                "aviso devido ao empregado",
+                "rescisão contratual ocorrida a partir da publicação da Lei nº 12.506/2011",
+                "tempo de serviço prestado à mesma empresa"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-002-A",
+              "when": "rescisão anterior à publicação da Lei nº 12.506/2011",
+              "effect": "não aplicar proporcionalidade legal, conforme Súmula 441 do TST"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Ao empregado é assegurado aviso-prévio mínimo de trinta dias, acrescido de três dias por ano de serviço prestado na mesma empresa, até o acréscimo máximo de sessenta dias e duração total máxima de noventa dias, nas rescisões alcançadas temporalmente pela Lei nº 12.506/2011.",
+          "conceptIds": [
+            "CPT-AVP-001",
+            "CPT-AVP-004",
+            "CPT-AVP-005"
+          ],
+          "factsRequired": [
+            "FACT-EMPLOYEE-BENEFICIARY",
+            "FACT-COMPLETE-SERVICE-YEARS",
+            "FACT-TERMINATION-DATE"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-002-A",
+              "type": "duration-floor",
+              "description": "fixa duração mínima de 30 dias"
+            },
+            {
+              "id": "EFFECT-AP-002-B",
+              "type": "duration-increment",
+              "description": "reconhece acréscimo legal de 3 dias por ano de serviço na mesma empresa"
+            },
+            {
+              "id": "EFFECT-AP-002-C",
+              "type": "duration-cap",
+              "description": "limita o acréscimo a 60 dias e a duração total a 90 dias"
+            }
+          ],
+          "interpretiveLimits": [
+            "A regra registra o conteúdo normativo; arredondamento, contagem de anos completos e algoritmo pertencem à projeção validada.",
+            "A extensão da proporcionalidade ao aviso devido pelo empregado não é promovida por esta regra."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CF1988-ART7-XXI",
+              "pinpoint": "art. 7º, XXI"
+            },
+            {
+              "sourceId": "SRC-BR-LEI12506-2011",
+              "pinpoint": "art. 1º e parágrafo único"
+            },
+            {
+              "sourceId": "SRC-TST-SUMULA-441",
+              "pinpoint": "Súmula 441"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-002-01",
+              "given": [
+                "aviso devido ao empregado",
+                "rescisão em 2010"
+              ],
+              "expected": "proporcionalidade não aplicável"
+            },
+            {
+              "id": "TC-AP-002-02",
+              "given": [
+                "aviso devido ao empregado",
+                "rescisão após 13/10/2011",
+                "tempo de serviço na mesma empresa"
+              ],
+              "expected": "mínimo e proporcionalidade aplicáveis"
+            },
+            {
+              "id": "TC-AP-002-03",
+              "given": [
+                "tempo de serviço suficiente para exceder 90 dias"
+              ],
+              "expected": "duração total limitada a 90 dias"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:dc60e340ffbfb5433d0bec3cfcf9391faa8208555233a682d0ee1f17a4f6c680"
+        }
+      ],
+      "aliases": [
+        "aviso-previo-proporcional",
+        "duracao-do-aviso-previo"
+      ],
+      "dependencies": [
+        "RULE-AP-001"
+      ],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Modela a base jurídica da duração mínima de trinta dias e do acréscimo proporcional previsto na Lei nº 12.506/2011, sem incorporar algoritmo de cálculo."
+    },
+    {
+      "id": "RULE-AP-003",
+      "domainId": "aviso-previo",
+      "title": "Integração do aviso-prévio ao tempo de serviço e projeção do término contratual",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-003-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART487-491",
+            "SRC-TST-OJ-SDI1-82"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-003-A",
+              "allOf": [
+                "aviso devido pelo empregador",
+                "prazo do aviso juridicamente definido"
+              ]
+            }
+          ],
+          "exceptions": [],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "O período correspondente ao aviso-prévio devido pelo empregador integra o tempo de serviço do empregado; a data de término contratual deve considerar o fim do prazo do aviso, ainda que indenizado.",
+          "conceptIds": [
+            "CPT-AVP-003",
+            "CPT-AVP-005",
+            "CPT-AVP-007",
+            "CPT-AVP-008"
+          ],
+          "factsRequired": [
+            "FACT-EMPLOYER-OWES-NOTICE",
+            "FACT-NOTICE-DURATION",
+            "FACT-NOTICE-COMMUNICATION-DATE",
+            "FACT-NOTICE-MODALITY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-003-A",
+              "type": "service-time-integration",
+              "description": "integra o prazo do aviso ao tempo de serviço"
+            },
+            {
+              "id": "EFFECT-AP-003-B",
+              "type": "date-projection",
+              "description": "projeta a data de término do contrato até o fim do aviso"
+            },
+            {
+              "id": "EFFECT-AP-003-C",
+              "type": "record-annotation",
+              "description": "orienta a anotação da data de saída considerando o término projetado"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não determina, isoladamente, reflexos financeiros específicos em férias, 13º salário ou FGTS; esses efeitos exigem regras interdomínios."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART487-491",
+              "pinpoint": "art. 487, § 1º"
+            },
+            {
+              "sourceId": "SRC-TST-OJ-SDI1-82",
+              "pinpoint": "OJ 82 da SDI-1"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-003-01",
+              "given": [
+                "aviso indenizado devido pelo empregador",
+                "prazo definido"
+              ],
+              "expected": "tempo de serviço e data de término projetados"
+            },
+            {
+              "id": "TC-AP-003-02",
+              "given": [
+                "aviso trabalhado",
+                "prazo definido"
+              ],
+              "expected": "término contratual ao fim do período trabalhado"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:b958bb7260445c024733c9d74d1359fdf9b3df8e8d79d650917ceef614b91fbf"
+        }
+      ],
+      "aliases": [
+        "integracao-do-aviso",
+        "projecao-do-contrato"
+      ],
+      "dependencies": [
+        "RULE-AP-001",
+        "RULE-AP-002"
+      ],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Define a integração temporal do aviso, inclusive indenizado, e a consequente projeção da data de término para efeitos legais."
+    },
+    {
+      "id": "RULE-AP-004",
+      "domainId": "aviso-previo",
+      "title": "Modalidades de cumprimento: aviso trabalhado e aviso indenizado",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-004-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART487-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-004-A",
+              "anyOf": [
+                "prestação de trabalho durante o prazo do aviso",
+                "substituição legal do cumprimento pelo valor correspondente"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-004-A",
+              "when": "dispensa de cumprimento sem definição de seus efeitos econômicos",
+              "effect": "exigir qualificação jurídica adicional antes da projeção"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "O aviso-prévio pode ser cumprido mediante trabalho durante o respectivo prazo ou, nas hipóteses legais de ausência de cumprimento, mediante pagamento ou desconto substitutivo, sem prejuízo dos efeitos temporais expressamente assegurados.",
+          "conceptIds": [
+            "CPT-AVP-002",
+            "CPT-AVP-003",
+            "CPT-AVP-005",
+            "CPT-AVP-010"
+          ],
+          "factsRequired": [
+            "FACT-NOTICE-GRANTED",
+            "FACT-NOTICE-WORKED",
+            "FACT-PARTY-WAIVES-PERFORMANCE",
+            "FACT-PAYMENT-SUBSTITUTION"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-004-A",
+              "type": "classification",
+              "description": "classifica a modalidade como trabalhada ou indenizada"
+            },
+            {
+              "id": "EFFECT-AP-004-B",
+              "type": "payment-substitution",
+              "description": "reconhece obrigação ou desconto correspondente quando legalmente cabível"
+            }
+          ],
+          "interpretiveLimits": [
+            "A mera dispensa de comparecimento não autoriza presumir renúncia ao direito.",
+            "A modalidade não elimina automaticamente a projeção temporal prevista em regra própria."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART487-491",
+              "pinpoint": "art. 487, §§ 1º e 2º"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-004-01",
+              "given": [
+                "empregado trabalha durante todo o prazo"
+              ],
+              "expected": "modalidade trabalhada"
+            },
+            {
+              "id": "TC-AP-004-02",
+              "given": [
+                "empregador rompe imediatamente e paga período correspondente"
+              ],
+              "expected": "modalidade indenizada"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:0766bdd3baa802f3d89936b12aa78b8f641a0c877fb12bb9ea8619ebf48cc991"
+        }
+      ],
+      "aliases": [
+        "modalidades-do-aviso",
+        "aviso-trabalhado-ou-indenizado"
+      ],
+      "dependencies": [
+        "RULE-AP-001",
+        "RULE-AP-003"
+      ],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Distingue as modalidades de cumprimento físico do aviso e substituição pecuniária, preservando os efeitos temporais juridicamente aplicáveis."
+    },
+    {
+      "id": "RULE-AP-005",
+      "domainId": "aviso-previo",
+      "title": "Redução da jornada durante o aviso promovido pelo empregador",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-005-001",
+          "validFrom": "1983-04-26",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART487-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-005-A",
+              "allOf": [
+                "rescisão promovida pelo empregador",
+                "aviso-prévio trabalhado"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-005-A",
+              "when": "aviso promovido pelo empregado",
+              "effect": "redução prevista no art. 488 não aplicável por esta regra"
+            },
+            {
+              "id": "EXC-AP-005-B",
+              "when": "aviso integralmente indenizado",
+              "effect": "não há jornada a reduzir"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Quando a rescisão é promovida pelo empregador e o aviso é trabalhado, o horário normal do empregado deve ser reduzido em duas horas diárias, sem prejuízo do salário integral; alternativamente, o empregado pode trabalhar sem a redução diária e faltar por sete dias corridos na hipótese legal aplicável.",
+          "conceptIds": [
+            "CPT-AVP-002",
+            "CPT-AVP-009",
+            "CPT-AVP-015"
+          ],
+          "factsRequired": [
+            "FACT-TERMINATION-BY-EMPLOYER",
+            "FACT-NOTICE-WORKED",
+            "FACT-EMPLOYEE-OPTION-REDUCTION-MODE"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-005-A",
+              "type": "working-time-reduction",
+              "description": "redução de duas horas diárias sem redução salarial"
+            },
+            {
+              "id": "EFFECT-AP-005-B",
+              "type": "alternative-absence",
+              "description": "faculdade de sete dias corridos de ausência, sem prejuízo salarial, em substituição à redução diária"
+            }
+          ],
+          "interpretiveLimits": [
+            "A alternativa de um dia prevista para antiga hipótese legal não integra o escopo constitucional mínimo contemporâneo deste pacote.",
+            "A escolha e o registro operacional devem ser tratados pela camada de fatos/projeções."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART487-491",
+              "pinpoint": "art. 488 e parágrafo único, com redação da Lei nº 7.093/1983"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-005-01",
+              "given": [
+                "dispensa pelo empregador",
+                "aviso trabalhado"
+              ],
+              "expected": "direito à redução ou ausência substitutiva"
+            },
+            {
+              "id": "TC-AP-005-02",
+              "given": [
+                "pedido de demissão",
+                "aviso trabalhado"
+              ],
+              "expected": "regra não aplicável"
+            },
+            {
+              "id": "TC-AP-005-03",
+              "given": [
+                "aviso indenizado"
+              ],
+              "expected": "regra não aplicável"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:6846a4dcb384ac67ecc7a2a5d964e2dfa5a41b6180225643c722a6b240adb123"
+        }
+      ],
+      "aliases": [
+        "reducao-da-jornada-no-aviso",
+        "sete-dias-corridos"
+      ],
+      "dependencies": [
+        "RULE-AP-001",
+        "RULE-AP-004"
+      ],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Modela o direito de redução de jornada ou ausência substitutiva durante o aviso trabalhado quando a rescisão é promovida pelo empregador."
+    },
+    {
+      "id": "RULE-AP-006",
+      "domainId": "aviso-previo",
+      "title": "Renúncia ao aviso e comprovação de novo emprego",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-006-001",
+          "validFrom": "2003-11-21",
+          "validTo": null,
+          "recordedAt": "2026-07-21T23:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-TST-SUMULA-276"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-006-A",
+              "allOf": [
+                "aviso devido pelo empregador",
+                "pedido de dispensa de cumprimento formulado pelo empregado"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-006-A",
+              "when": "empregado comprova obtenção de novo emprego",
+              "effect": "empregador pode ser exonerado do pagamento do período não cumprido, conforme Súmula 276"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "O direito ao aviso-prévio devido pelo empregador é irrenunciável pelo empregado; o pedido de dispensa de cumprimento não exime o empregador do pagamento, salvo quando comprovada a obtenção de novo emprego pelo empregado.",
+          "conceptIds": [
+            "CPT-AVP-010",
+            "CPT-AVP-011",
+            "CPT-AVP-012"
+          ],
+          "factsRequired": [
+            "FACT-EMPLOYER-OWES-NOTICE",
+            "FACT-EMPLOYEE-REQUESTS-RELEASE",
+            "FACT-NEW-EMPLOYMENT-PROVEN"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-006-A",
+              "type": "right-preservation",
+              "description": "preserva o pagamento quando há simples pedido de dispensa do cumprimento"
+            },
+            {
+              "id": "EFFECT-AP-006-B",
+              "type": "payment-exoneration",
+              "description": "admite exoneração quando comprovado novo emprego"
+            }
+          ],
+          "interpretiveLimits": [
+            "A exceção exige comprovação do novo emprego; mera alegação não basta.",
+            "A regra não trata de pedido de demissão em que o aviso é devido pelo empregado."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-TST-SUMULA-276",
+              "pinpoint": "Súmula 276"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-006-01",
+              "given": [
+                "aviso devido pelo empregador",
+                "pedido de dispensa",
+                "novo emprego não comprovado"
+              ],
+              "expected": "pagamento preservado"
+            },
+            {
+              "id": "TC-AP-006-02",
+              "given": [
+                "aviso devido pelo empregador",
+                "pedido de dispensa",
+                "novo emprego comprovado"
+              ],
+              "expected": "exceção de exoneração aplicável"
+            }
+          ],
+          "notes": [
+            "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+            "Status review: exige revisão jurídica humana antes de promoção para approved."
+          ],
+          "contentFingerprint": "sha256:1e6592d1abe2f6d2f11e0b359c9e07754e44d650522e4fe788061e68babec3b2"
+        }
+      ],
+      "aliases": [
+        "novo-emprego-no-aviso",
+        "renuncia-ao-aviso"
+      ],
+      "dependencies": [
+        "RULE-AP-001",
+        "RULE-AP-004"
+      ],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Modela a indisponibilidade do direito ao aviso devido pelo empregador e a exceção jurisprudencial quando o empregado comprova a obtenção de novo emprego."
+    },
+    {
+      "id": "RULE-AP-007",
+      "domainId": "aviso-previo",
+      "title": "Contrato a termo com cláusula assecuratória",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-007-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART481"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-007-A",
+              "allOf": [
+                "contrato a termo com cláusula assecuratória",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-007-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-CONTRACT-TERM-TYPE",
+            "FACT-ASSURING-CLAUSE-PRESENT"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-007-A",
+              "type": "regime-indeterminado-aplicavel",
+              "description": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeter"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART481",
+              "pinpoint": "art. 481"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-007-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-007-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:6091144c62a7fc8ff7d25b338a92b11176647c5e28ea1e0d3c2a90e23222468b"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado."
+    },
+    {
+      "id": "RULE-AP-008",
+      "domainId": "aviso-previo",
+      "title": "Rescisão indireta reconhecida",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-008-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART483"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-008-A",
+              "allOf": [
+                "rescisão indireta reconhecida",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-008-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-INDIRECT-TERMINATION-STATUS",
+            "FACT-JUDICIAL-RECOGNITION-STATUS"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-008-A",
+              "type": "efeitos-rescisao-indireta",
+              "description": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão h"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART483",
+              "pinpoint": "art. 483"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-008-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-008-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:edcfe3be8efdc708966a105301515a66cdede54c5c1de217b575476d9d21a61b"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana."
+    },
+    {
+      "id": "RULE-AP-009",
+      "domainId": "aviso-previo",
+      "title": "Culpa recíproca",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-009-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART484"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-009-A",
+              "allOf": [
+                "culpa recíproca",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-009-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração das partes.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+            "FACT-JUDICIAL-RECOGNITION-STATUS"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-009-A",
+              "type": "redução-culpa-reciproca",
+              "description": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração da"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART484",
+              "pinpoint": "art. 484"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-009-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-009-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:d45e99f79f9f8ec133415b7f1e595fde0305016ca8d3afc07d47d26e00690315"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração das partes."
+    },
+    {
+      "id": "RULE-AP-010",
+      "domainId": "aviso-previo",
+      "title": "Efeitos da Súmula 14 na culpa recíproca",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-010-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-TST-SUMULA-14"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-010-A",
+              "allOf": [
+                "efeitos da súmula 14 na culpa recíproca",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-010-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-RECIPROCAL-FAULT-RECOGNIZED"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-010-A",
+              "type": "percentual-sumula-14",
+              "description": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido."
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-TST-SUMULA-14",
+              "pinpoint": "Súmula 14"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-010-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-010-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:ae6b270f85ac167c141a19621b78673657bdb1e9b6f4127ae2529ce48df79b74"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido."
+    },
+    {
+      "id": "RULE-AP-011",
+      "domainId": "aviso-previo",
+      "title": "Extinção por acordo do art. 484-A",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-011-001",
+          "validFrom": "2017-11-11",
+          "validTo": null,
+          "recordedAt": "2026-07-22T17:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART484A"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-011-A",
+              "allOf": [
+                "extinção por acordo do art. 484-a",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-011-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-TERMINATION-BY-AGREEMENT",
+            "FACT-NOTICE-MODALITY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-011-A",
+              "type": "aviso-acordo",
+              "description": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra."
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART484A",
+              "pinpoint": "art. 484-A"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-011-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-011-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica.",
+            "Marco temporal corrigido na Fase C para 2017-11-11, conforme inclusão pela Lei nº 13.467/2017."
+          ],
+          "contentFingerprint": "sha256:c5b92f89418eb67d514801a7974ae0668e232588662968f0e5b6e1776ff529f7"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra."
+    },
+    {
+      "id": "RULE-AP-012",
+      "domainId": "aviso-previo",
+      "title": "Reconsideração do aviso-prévio",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-012-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART489-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-012-A",
+              "allOf": [
+                "reconsideração do aviso-prévio",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-012-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+            "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+            "FACT-RECONSIDERATION-ACCEPTANCE-MODE"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-012-A",
+              "type": "reconsideracao",
+              "description": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso."
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART489-491",
+              "pinpoint": "art. 489"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-012-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-012-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:9296fdb769a4483ff9b876719a403ccefbee3c393d19ad5858e0c1835c5367f8"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso."
+    },
+    {
+      "id": "RULE-AP-013",
+      "domainId": "aviso-previo",
+      "title": "Falta grave do empregado durante o aviso",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-013-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART489-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-013-A",
+              "allOf": [
+                "falta grave do empregado durante o aviso",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-013-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+            "FACT-SERIOUS-MISCONDUCT-PARTY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-013-A",
+              "type": "falta-grave-empregado",
+              "description": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa."
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART489-491",
+              "pinpoint": "art. 491"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-013-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-013-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:573537a8678c0aa1a733a31f5cdeb1bdc36b3ac80eae40f8aa8f9c0446649afb"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa."
+    },
+    {
+      "id": "RULE-AP-014",
+      "domainId": "aviso-previo",
+      "title": "Falta grave do empregador durante o aviso",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-014-001",
+          "validFrom": "1943-11-10",
+          "validTo": null,
+          "recordedAt": "2026-07-22T14:40:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-BR-CLT-ART489-491"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-014-A",
+              "allOf": [
+                "falta grave do empregador durante o aviso",
+                "fatos mínimos presentes"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-014-A",
+              "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do fato.",
+          "conceptIds": [
+            "CPT-AVP-001"
+          ],
+          "factsRequired": [
+            "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+            "FACT-SERIOUS-MISCONDUCT-PARTY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-014-A",
+              "type": "falta-grave-empregador",
+              "description": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do"
+            }
+          ],
+          "interpretiveLimits": [
+            "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-BR-CLT-ART489-491",
+              "pinpoint": "art. 490"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-014-01",
+              "given": [
+                "fatos de incidência presentes"
+              ],
+              "expected": "regra aplicável em revisão"
+            },
+            {
+              "id": "TC-AP-014-02",
+              "given": [
+                "fatos insuficientes ou controvertidos"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+          ],
+          "contentFingerprint": "sha256:0c0721b07d2f678c88b6d49eab8d95776eb92c55f6cd17a09bac7707d7b9dd19"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do fato."
+    },
+    {
+      "id": "RULE-AP-015",
+      "domainId": "aviso-previo",
+      "title": "Encaminhamento da incidência de FGTS sobre o aviso-prévio ao domínio competente",
+      "status": "review",
+      "versions": [
+        {
+          "versionId": "VER-RULE-AP-015-001",
+          "validFrom": "1992-11-05",
+          "validTo": null,
+          "recordedAt": "2026-07-22T17:30:00.000Z",
+          "recordedUntil": null,
+          "status": "review",
+          "sourceIds": [
+            "SRC-TST-SUMULA-305"
+          ],
+          "parameters": {},
+          "conditions": [
+            {
+              "id": "COND-AP-015-A",
+              "allOf": [
+                "aviso-prévio trabalhado ou indenizado identificado",
+                "modalidade do aviso conhecida"
+              ]
+            }
+          ],
+          "exceptions": [
+            {
+              "id": "EXC-AP-015-A",
+              "when": "modalidade do aviso ausente ou desconhecida",
+              "effect": "encaminhar para revisão humana"
+            }
+          ],
+          "approvalStatus": "UNDER_LEGAL_REVIEW",
+          "approval": null,
+          "supersedesVersionId": null,
+          "normativeStatement": "O período de aviso-prévio, trabalhado ou indenizado, gera requisito de avaliação da incidência de FGTS pelo domínio FGTS, sem duplicar neste domínio o cálculo da contribuição ou da multa rescisória.",
+          "conceptIds": [
+            "CPT-AVP-001",
+            "CPT-AVP-002",
+            "CPT-AVP-003"
+          ],
+          "factsRequired": [
+            "FACT-NOTICE-MODALITY"
+          ],
+          "legalEffects": [
+            {
+              "id": "EFFECT-AP-015-A",
+              "type": "federated-fgts-requirement",
+              "description": "Emitir requisito federado para avaliação da incidência de FGTS sobre o aviso-prévio pelo domínio competente."
+            }
+          ],
+          "interpretiveLimits": [
+            "Esta regra não calcula FGTS nem multa de 40%.",
+            "A execução depende do contrato FED-AP-FGTS e da disponibilidade do domínio de destino.",
+            "Não promove autoridade de runtime antes de aprovação jurídica formal."
+          ],
+          "sourcePinpoints": [
+            {
+              "sourceId": "SRC-TST-SUMULA-305",
+              "pinpoint": "Súmula nº 305"
+            }
+          ],
+          "testCases": [
+            {
+              "id": "TC-AP-015-01",
+              "given": [
+                "modalidade trabalhado ou indenizado"
+              ],
+              "expected": "requisito federado de FGTS emitido"
+            },
+            {
+              "id": "TC-AP-015-02",
+              "given": [
+                "modalidade ausente ou desconhecida"
+              ],
+              "expected": "revisão humana obrigatória"
+            }
+          ],
+          "notes": [
+            "Modelagem de fronteira: o aviso-prévio emite o requisito; o domínio FGTS permanece responsável pelo efeito financeiro."
+          ],
+          "contentFingerprint": "sha256:3ccb2c33df7e0013e15dc0b7c100331a2360804cb3655e668783787fc07267f0"
+        }
+      ],
+      "aliases": [],
+      "dependencies": [],
+      "consumerIds": [
+        "CNS-CALCULADORA-AVISO-PREVIO",
+        "CNS-CALCULADORA-RESCISAO-CLT"
+      ],
+      "description": "Representa a obrigação de encaminhar ao domínio FGTS a avaliação da incidência sobre o período de aviso-prévio."
+    }
+  ],
+  "status": "CANONICAL_RULES_IN_REVIEW",
+  "updatedAt": "2026-07-21T23:30:00.000Z",
+  "authority": false,
+  "note": "Aviso-prévio rules are structurally validated but require formal legal approval before runtime authority."
+}

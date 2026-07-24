@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-011",
+  "domainId": "aviso-previo",
+  "canonicalName": "Renúncia ao aviso-prévio",
+  "slug": "renuncia-ao-aviso-previo",
+  "semanticType": "procedure",
+  "definition": {
+    "text": "Manifestação do empregado de não usufruir o aviso, sujeita ao caráter irrenunciável do direito e à exceção reconhecida quando comprovado novo emprego.",
+    "nature": "jurisprudential-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoints": [
+        "Súmula 276"
+      ],
+      "support": "Irrenunciabilidade e exceção por novo emprego."
+    }
+  ],
+  "aliases": [
+    "renúncia ao aviso"
+  ],
+  "relations": [
+    {
+      "type": "relates-to",
+      "targetConceptId": "CPT-AVP-012",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

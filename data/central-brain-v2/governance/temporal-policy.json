@@ -1,0 +1,98 @@
+{
+  "$schema": "../schemas/temporal-policy.schema.json",
+  "id": "TEMPORAL-POLICY-BR-001",
+  "version": "3.0.0",
+  "status": "review",
+  "title": "Política temporal canônica do Central Brain",
+  "dateModel": {
+    "civilDateFormat": "YYYY-MM-DD",
+    "timezone": "none",
+    "calendar": "proleptic-gregorian",
+    "invalidDatePolicy": "reject",
+    "timeOfDayMustNotAffectCivilDate": true
+  },
+  "legalInstants": {
+    "admissionDate": {
+      "factId": "FACT-ADMISSION-DATE",
+      "meaning": "início factual do vínculo"
+    },
+    "noticeCommunicationDate": {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "meaning": "dia em que o aviso foi comunicado; não é contado no prazo"
+    },
+    "noticeCountingStartDate": {
+      "factId": "FACT-NOTICE-COUNTING-START-DATE",
+      "meaning": "primeiro dia civil posterior à comunicação"
+    },
+    "factualTerminationDate": {
+      "factId": "FACT-TERMINATION-DATE",
+      "meaning": "último marco factual informado; não substitui a projeção jurídica"
+    },
+    "projectedTerminationDate": {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "meaning": "vencimento jurídico após a projeção do aviso"
+    },
+    "legalReferenceDate": {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "meaning": "data usada para selecionar o direito aplicável"
+    }
+  },
+  "countingRules": {
+    "noticePeriod": {
+      "ruleId": "COUNT-NOTICE-CIVIL-DAYS-001",
+      "excludeInitialDay": true,
+      "includeDueDate": true,
+      "unit": "calendar-day",
+      "formula": "dueDate = communicationDate + durationDays",
+      "examples": [
+        {
+          "communicationDate": "2026-01-31",
+          "durationDays": 30,
+          "countingStartDate": "2026-02-01",
+          "dueDate": "2026-03-02"
+        }
+      ]
+    }
+  },
+  "bitemporalSelection": {
+    "validTime": "validFrom/validTo inclusive",
+    "transactionTime": "recordedAt inclusive and recordedUntil exclusive",
+    "defaultAsKnownAt": "execution timestamp",
+    "tieBreakers": [
+      "latest validFrom",
+      "latest recordedAt",
+      "lexicographically greatest versionId"
+    ],
+    "overlapPolicy": "reject ambiguous approved candidates"
+  },
+  "executionGates": {
+    "operational": {
+      "allowedRuleStatuses": [
+        "approved"
+      ],
+      "approvalRequired": true
+    },
+    "sandbox": {
+      "allowedRuleStatuses": [
+        "approved",
+        "review"
+      ],
+      "approvalRequired": false,
+      "warningRequiredForNonApproved": true
+    }
+  },
+  "referenceDateResolution": {
+    "priority": [
+      "FACT-LEGAL-REFERENCE-DATE",
+      "FACT-NOTICE-COMMUNICATION-DATE",
+      "package.referenceDate"
+    ],
+    "systemCurrentDateForbidden": true
+  },
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "legalReviewRequired": true,
+    "owner": "central-brain/legal-knowledge"
+  }
+}

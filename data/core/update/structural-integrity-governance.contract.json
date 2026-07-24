@@ -1,0 +1,64 @@
+{
+  "id": "structural-integrity-governance-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Endurecer contratos, schemas e validações cruzadas para impedir estruturas formalmente válidas porém logicamente inconsistentes.",
+  "scope": {
+    "contracts": [
+      "/data/core/update/canonical-rule-minimum.contract.json",
+      "/data/core/update/governed-rule-consumer-authority.contract.json",
+      "/data/core/update/editorial-impact-connection.contract.json",
+      "/data/core/update/governed-impact-analyzer.contract.json",
+      "/data/core/update/controlled-execution-plan.contract.json",
+      "/data/core/update/preview-evidence-orchestrator.contract.json",
+      "/data/core/update/canonical-reference-resolution.contract.json"
+    ],
+    "registries": [
+      "/data/core/update/canonical-rule-compatibility.json",
+      "/data/core/update/governed-rule-consumers.json",
+      "/data/core/update/editorial-impact-matrix.generated.json",
+      "/data/core/update/canonical-reference-registry.generated.json",
+      "/data/core/update/validator-invocation-registry.generated.json",
+      "/data/core/update/reference-classification-registry.generated.json"
+    ]
+  },
+  "integrityRules": [
+    "IDS_MUST_BE_NON_EMPTY_AND_UNIQUE_WITHIN_SCOPE",
+    "VERSIONS_MUST_FOLLOW_SEMVER",
+    "DATES_MUST_BE_ISO_COMPATIBLE_WHEN_PRESENT",
+    "FINGERPRINTS_MUST_BE_SHA256_WHEN_PRESENT",
+    "STATUS_VALUES_MUST_BELONG_TO_DECLARED_VOCABULARIES",
+    "RESOLVED_REFERENCES_MUST_POINT_TO_EXISTING_FILES",
+    "AMBIGUOUS_REFERENCES_MUST_PRESERVE_MULTIPLE_CANDIDATES",
+    "UNRESOLVED_REFERENCES_MUST_HAVE_EXPLICIT_CLASSIFICATION",
+    "GENERATED_ARTIFACTS_MUST_DECLARE_READ_ONLY_STATUS",
+    "PUBLICATION_GATES_MUST_REMAIN_CLOSED",
+    "AUTOMATIC_MUTATION_FLAGS_MUST_REMAIN_DISABLED",
+    "CROSS_REFERENCES_MUST_NOT_SILENTLY_DISAPPEAR"
+  ],
+  "blockingConditions": [
+    "DUPLICATE_ID",
+    "INVALID_VERSION",
+    "INVALID_DATE",
+    "INVALID_FINGERPRINT",
+    "INVALID_STATUS",
+    "BROKEN_RESOLVED_REFERENCE",
+    "UNCLASSIFIED_UNRESOLVED_REFERENCE",
+    "GENERATED_ARTIFACT_NOT_READ_ONLY",
+    "PUBLICATION_GATE_OPEN",
+    "AUTOMATIC_MUTATION_ENABLED"
+  ],
+  "outputs": {
+    "masterSchema": "/data/core/update/structural-integrity.schema.json",
+    "vocabularyRegistry": "/data/core/update/governance-vocabularies.json",
+    "integrityReport": "/data/core/update/structural-integrity-report.generated.json",
+    "referenceClassification": "/data/core/update/reference-classification-registry.generated.json"
+  },
+  "references": {
+    "validator": "/scripts/validate-structural-integrity.js",
+    "reportGenerator": "/scripts/generate-structural-integrity-report.js"
+  }
+}

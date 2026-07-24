@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "mappings": [
+    {
+      "legacy": "/data/core/",
+      "target": "/data/central-brain-v2/",
+      "action": "retain legacy; no automatic replacement"
+    },
+    {
+      "legacy": "/data/rules/*.json",
+      "target": "/data/central-brain-v2/registries/legacy-rules.inventory.json",
+      "action": "inventory only"
+    },
+    {
+      "legacy": "/data/maps/tools-map.json",
+      "target": "/data/central-brain-v2/registries/consumers.inventory.json",
+      "action": "inventory only"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/execution-approval.schema.json",
+  "title": "Controlled Execution Approval",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "ruleId",
+    "impactAnalysisFile",
+    "issuedAt",
+    "expiresAt",
+    "approvals"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "expired"
+      ]
+    },
+    "ruleId": {
+      "type": "string"
+    },
+    "impactAnalysisFile": {
+      "type": "string"
+    },
+    "issuedAt": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "type": "string"
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "decision",
+          "reviewer",
+          "decidedAt"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "approved",
+              "rejected",
+              "pending"
+            ]
+          },
+          "reviewer": {
+            "type": "string"
+          },
+          "decidedAt": {
+            "type": "string"
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

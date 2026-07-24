@@ -1,0 +1,113 @@
+{
+  "id": "RULE-AP-003",
+  "domainId": "aviso-previo",
+  "title": "Integração do aviso-prévio ao tempo de serviço e projeção do término contratual",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-003-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-21T23:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491",
+        "SRC-TST-OJ-SDI1-82"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-003-A",
+          "allOf": [
+            "aviso devido pelo empregador",
+            "prazo do aviso juridicamente definido"
+          ]
+        }
+      ],
+      "exceptions": [],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "O período correspondente ao aviso-prévio devido pelo empregador integra o tempo de serviço do empregado; a data de término contratual deve considerar o fim do prazo do aviso, ainda que indenizado.",
+      "conceptIds": [
+        "CPT-AVP-003",
+        "CPT-AVP-005",
+        "CPT-AVP-007",
+        "CPT-AVP-008"
+      ],
+      "factsRequired": [
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-NOTICE-DURATION",
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-NOTICE-MODALITY"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-003-A",
+          "type": "service-time-integration",
+          "description": "integra o prazo do aviso ao tempo de serviço"
+        },
+        {
+          "id": "EFFECT-AP-003-B",
+          "type": "date-projection",
+          "description": "projeta a data de término do contrato até o fim do aviso"
+        },
+        {
+          "id": "EFFECT-AP-003-C",
+          "type": "record-annotation",
+          "description": "orienta a anotação da data de saída considerando o término projetado"
+        }
+      ],
+      "interpretiveLimits": [
+        "Não determina, isoladamente, reflexos financeiros específicos em férias, 13º salário ou FGTS; esses efeitos exigem regras interdomínios."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, § 1º"
+        },
+        {
+          "sourceId": "SRC-TST-OJ-SDI1-82",
+          "pinpoint": "OJ 82 da SDI-1"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-003-01",
+          "given": [
+            "aviso indenizado devido pelo empregador",
+            "prazo definido"
+          ],
+          "expected": "tempo de serviço e data de término projetados"
+        },
+        {
+          "id": "TC-AP-003-02",
+          "given": [
+            "aviso trabalhado",
+            "prazo definido"
+          ],
+          "expected": "término contratual ao fim do período trabalhado"
+        }
+      ],
+      "notes": [
+        "Regra sem algoritmo ou fórmula; a aplicação computacional pertence ao Projection Engine.",
+        "Status review: exige revisão jurídica humana antes de promoção para approved."
+      ],
+      "contentFingerprint": "sha256:b958bb7260445c024733c9d74d1359fdf9b3df8e8d79d650917ceef614b91fbf"
+    }
+  ],
+  "aliases": [
+    "integracao-do-aviso",
+    "projecao-do-contrato"
+  ],
+  "dependencies": [
+    "RULE-AP-001",
+    "RULE-AP-002"
+  ],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Define a integração temporal do aviso, inclusive indenizado, e a consequente projeção da data de término para efeitos legais."
+}

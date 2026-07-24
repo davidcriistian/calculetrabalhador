@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NEW-EMPLOYMENT-PROVEN",
+  "domainId": "aviso-previo",
+  "key": "new_employment_proven",
+  "label": "Novo emprego comprovado",
+  "description": "Indica que a obtenção de novo emprego foi comprovada por evidência adequada para aplicação da exceção sumulada.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": true,
+    "acceptedEvidenceTypes": [
+      "document",
+      "official-record",
+      "system-record"
+    ],
+    "minimumConfidence": 0.9,
+    "humanVerificationRequired": true
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-012"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NEW-EMPLOYMENT-OBTAINED"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-NOVO-EMPREGO-001",
+      "severity": "error",
+      "assertion": "new_employment_proven implies new_employment_obtained",
+      "message": "Não pode haver comprovação válida sem a ocorrência do novo emprego.",
+      "relatedFactIds": [
+        "FACT-NEW-EMPLOYMENT-OBTAINED"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoint": "Súmula 276",
+      "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:7af80d24b0a986e8ed4f1c1e7b1266ff08f2a9ca896a8fb6069bda8e3fc96ade"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-016",
+  "domainId": "aviso-previo",
+  "canonicalName": "Contrato por prazo indeterminado",
+  "slug": "contrato-prazo-indeterminado",
+  "semanticType": "scope-qualifier",
+  "definition": {
+    "text": "Contrato de trabalho sem termo final previamente estipulado, abrangido pelo regime geral do aviso-prévio previsto no art. 487 da CLT.",
+    "nature": "terminological-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 487, caput"
+      ],
+      "support": "Delimita a incidência do aviso aos contratos sem prazo estipulado."
+    }
+  ],
+  "aliases": [
+    "contrato sem prazo estipulado"
+  ],
+  "relations": [
+    {
+      "type": "scope-of",
+      "targetConceptId": "CPT-AVP-001",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

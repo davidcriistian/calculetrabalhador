@@ -1,0 +1,45 @@
+{
+  "version": "2.1.0",
+  "workflow": [
+    "detect",
+    "register-source",
+    "propose-rule-version",
+    "legal-review",
+    "technical-review",
+    "approve",
+    "generate-projections",
+    "validate-projections",
+    "publish-projections",
+    "impact-analysis",
+    "shadow-validation",
+    "activate",
+    "audit"
+  ],
+  "forbidden": [
+    "overwrite historical version",
+    "activate without approval",
+    "delete source evidence",
+    "allow consumer mutation",
+    "publish without fingerprints",
+    "write registry without validation",
+    "reuse canonical ID for different content"
+  ],
+  "separationOfDuties": {
+    "requiredRoles": [
+      "author",
+      "legalReviewer",
+      "technicalReviewer",
+      "approver"
+    ],
+    "distinctActorsRequired": true,
+    "approvalBindsContentFingerprint": true,
+    "enforcedBeforeActivation": true,
+    "approvalRegistry": "./approvals.json"
+  },
+  "activationRequirements": [
+    "valid approval record",
+    "four distinct role actors",
+    "approved content fingerprint equals current content fingerprint",
+    "append-only audit activation event"
+  ]
+}

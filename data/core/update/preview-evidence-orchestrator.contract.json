@@ -1,0 +1,80 @@
+{
+  "id": "preview-evidence-orchestrator-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "evidence-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Consolidar fingerprints, validações, escopo, diferenças propostas e pacote de revisão humana sem alterar arquivos-fonte nem publicar.",
+  "input": {
+    "required": [
+      "executionPlanFile"
+    ],
+    "optional": [
+      "proposalManifestFile",
+      "requestedBy",
+      "notes",
+      "outputDirectory"
+    ]
+  },
+  "authorities": {
+    "executionPlan": "/data/core/update/execution-plans",
+    "impactAnalysis": "/data/core/update/impact-analysis",
+    "approvalArtifacts": "/data/core/update/execution-approvals"
+  },
+  "outputs": {
+    "previewBundleSchema": "/data/core/update/preview-evidence-bundle.schema.json",
+    "proposalManifestSchema": "/data/core/update/proposal-manifest.schema.json",
+    "bundleDirectory": "/data/core/update/preview-evidence"
+  },
+  "bundleContents": [
+    "execution plan fingerprint",
+    "impact analysis fingerprint",
+    "approval fingerprint when available",
+    "affected file fingerprints",
+    "proposal manifest",
+    "validator evidence",
+    "human review checklist",
+    "publication gate status"
+  ],
+  "proposalPolicy": {
+    "proposalManifestRequiredForDiffPreview": true,
+    "proposalFilesMayReferenceFuturePatches": true,
+    "proposalFilesMayNotOverwriteProjectFiles": true,
+    "binaryDiffGenerationAllowed": false,
+    "automaticPatchApplicationAllowed": false
+  },
+  "validationPolicy": {
+    "validatorExecutionAllowed": true,
+    "validatorExecutionMustBeReadOnly": true,
+    "failedValidatorBlocksPreviewApproval": true,
+    "missingFileRemainsVisible": true
+  },
+  "publicationPolicy": {
+    "publicationAllowed": false,
+    "previewApprovalMayBeRecorded": true,
+    "humanReviewRequired": true
+  },
+  "principles": [
+    "EVIDENCE_BEFORE_MUTATION",
+    "NO_SOURCE_MUTATION",
+    "NO_PUBLIC_MUTATION",
+    "NO_PATCH_APPLICATION",
+    "NO_COMMIT_PUSH_DEPLOY",
+    "MISSING_EVIDENCE_IS_EXPLICIT",
+    "BUNDLE_IS_IMMUTABLE_REVIEW_ARTIFACT"
+  ],
+  "blockingConditions": [
+    "EXECUTION_PLAN_INVALID",
+    "EXECUTION_PLAN_NOT_APPROVED_READ_ONLY",
+    "FINGERPRINT_FAILURE",
+    "VALIDATOR_FAILURE",
+    "PROPOSAL_MANIFEST_INVALID",
+    "PUBLIC_RUNTIME_MUTATION",
+    "AUTOMATIC_PATCH_APPLICATION_ATTEMPT"
+  ],
+  "references": {
+    "orchestrator": "/scripts/build-preview-evidence-bundle.js",
+    "validator": "/scripts/validate-preview-evidence-bundle.js"
+  }
+}

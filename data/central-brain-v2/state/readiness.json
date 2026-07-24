@@ -1,0 +1,63 @@
+{
+  "version": "2.7.0-sprint5.6.7-phaseE",
+  "generatedAt": "2026-07-22T21:30:00.000Z",
+  "overall": "READY_FOR_CONTROLLED_INGESTION",
+  "gates": [
+    {
+      "id": "STRUCTURE_SEPARATED",
+      "status": "PASS",
+      "blocking": true,
+      "evidence": [
+        "Central Brain remains parallel-only and disconnected from production consumers."
+      ]
+    },
+    {
+      "id": "SCHEMAS_VALID",
+      "status": "PASS",
+      "blocking": true,
+      "evidence": [
+        "All canonical registries and ingestion batches are schema validated."
+      ]
+    },
+    {
+      "id": "TEMPORAL_HISTORY",
+      "status": "PASS",
+      "blocking": true,
+      "evidence": [
+        "Bitemporal rule selection and overlap detection are implemented."
+      ]
+    },
+    {
+      "id": "TRACEABILITY",
+      "status": "PASS",
+      "blocking": true,
+      "evidence": [
+        "Sources, fingerprints, dependencies and audit events are mandatory before activation."
+      ]
+    },
+    {
+      "id": "CONTROLLED_INGESTION",
+      "status": "PASS",
+      "blocking": true,
+      "evidence": [
+        "Transactional preflight and staged commit engine are available."
+      ]
+    },
+    {
+      "id": "LEGAL_KNOWLEDGE",
+      "status": "PASS",
+      "blocking": false,
+      "evidence": [
+        "Aviso-prévio possui baseline normativa com cobertura técnica de 100%, 14 fontes, 16 conceitos, 39 fatos, 15 regras e 17 projeções canônicas. Aprovação jurídica formal permanece pendente; runtimeAuthority e consumerReady continuam false."
+      ]
+    },
+    {
+      "id": "RUNTIME_AUTHORITY",
+      "status": "NOT_APPLICABLE",
+      "blocking": false,
+      "evidence": [
+        "Runtime authority remains intentionally disabled."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "sprint": "5.6.4",
+  "title": "Knowledge Consistency & Legal Semantics",
+  "status": "completed",
+  "changes": [
+    "executable-semantic-policy",
+    "canonical-legal-reference-date",
+    "derived-fact-reconciliation",
+    "single-source-notice-modality",
+    "new-employment-evidence-chain",
+    "conditional-consolidation-dependencies"
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false
+}

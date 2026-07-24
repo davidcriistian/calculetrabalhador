@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "lifecycle": [
+    "draft",
+    "validated",
+    "published",
+    "retired"
+  ],
+  "rules": [
+    "Only approved rule versions generate projections.",
+    "Validation is required before publication.",
+    "Published projections are immutable.",
+    "Content fingerprint excludes build metadata; build fingerprint includes it.",
+    "Retirement is append-only and never deletes history."
+  ]
+}

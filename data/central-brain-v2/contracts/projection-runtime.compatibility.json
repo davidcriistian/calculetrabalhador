@@ -1,0 +1,14 @@
+{
+  "id": "projection-runtime-compatibility",
+  "version": "1.0.0",
+  "runtimeVersion": "1.2.0",
+  "compatible": {
+    "projectionExecutionRequestSchema": "projection-execution-request.schema.json",
+    "projectionExecutionBundleSchema": "projection-execution-bundle.schema.json",
+    "projectionResultSchema": "projection-result.schema.json",
+    "projectionEngineContract": "1.2.0",
+    "projectionResultContract": "1.1.0",
+    "runtimeConsumerContract": "1.0.0"
+  },
+  "policy": "Any incompatible change requires a runtime major version increment and a new compatibility record."
+}

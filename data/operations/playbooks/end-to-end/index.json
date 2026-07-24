@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-playbooks",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/operations/schemas/playbook.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Playbook for deliver-asset-end-to-end. It coordinates existing capabilities and stops when scope, governance or approval is missing.",
@@ -43,6 +43,8 @@
         "for-existing-calculator-resolve-legal-scope-and-typed-rule-consumers",
         "for-existing-calculator-resolve-single-source-engine-and-visible-rules",
         "for-existing-calculator-select-legacy-family-or-canonical-diff-patch",
+        "for-existing-calculator-run-definitive-controlled-migration-protocol-in-order",
+        "for-batch-migration-preserve-independent-asset-gates-and-statuses",
         "for-specialized-calculator-require-human-review",
         "for-new-or-migrated-calculator-open-and-study-official-physical-reference",
         "for-new-or-migrated-calculator-decompose-reference-modules-without-literal-copy",
@@ -53,6 +55,10 @@
         "for-new-or-migrated-calculator-resolve-canonical-recommendation-slot",
         "for-new-or-migrated-calculator-declare-adaptive-report-and-distinct-actions",
         "for-new-or-migrated-calculator-approve-experience-plan",
+        "for-migrated-calculator-compare-against-homologated-canonical-visual-family",
+        "for-migrated-calculator-validate-public-assets-in-file-and-http-mobile-and-desktop",
+        "for-migrated-calculator-require-human-visual-calculation-and-legal-acceptance-when-applicable",
+        "after-publication-run-public-post-deploy-validation-before-homologation",
         "for-new-or-migrated-article-resolve-search-intent-reader-problem-and-action",
         "for-new-or-migrated-article-resolve-plain-language-flow-examples-and-repetition",
         "for-new-or-migrated-article-resolve-freshness-mutable-content-sources-and-impact",
@@ -110,6 +116,8 @@
         "calculatorValidator": "/scripts/validate-calculator-experience-contract.js"
         ,"calculatorMigrationFixtures": "/data/pos/validation/calculator-migration-foundation-fixtures.json"
         ,"calculatorMigrationValidator": "/scripts/validate-calculator-migration-foundation.js"
+        ,"calculatorBatchProtocolFixtures": "/data/pos/validation/calculator-batch-migration-protocol-fixtures.json"
+        ,"calculatorBatchProtocolValidator": "/scripts/validate-calculator-batch-migration-protocol.js"
         ,"articleFixtures": "/data/pos/validation/article-automation-fixtures.json"
         ,"articleValidator": "/scripts/validate-article-automation.js"
       },
@@ -137,7 +145,10 @@
         "singleSourceBlocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
         "nonLegalRule": "NO_CENTRAL_LEGAL_RULE_REQUIRED calculators remain outside the central legal update system.",
         "specializedRule": "SPECIALIZED_REVIEW_REQUIRED cannot be automatically migrated.",
-        "publicationRule": "Rule propagation prepares, transforms, tests and reports impact; publication remains controlled."
+        "publicationRule": "Rule propagation prepares, transforms, tests and reports impact; publication remains controlled.",
+        "definitiveProtocol": ["PRE_MIGRATION_RECONNAISSANCE", "BASELINE_FREEZE", "CANONICAL_RULE_RECONCILIATION_WHEN_APPLICABLE", "RULE_CHECKPOINT", "CONTROLLED_PUBLIC_MIGRATION", "TECHNICAL_VALIDATION", "CANONICAL_VISUAL_FAMILY_CONFORMANCE", "PUBLIC_ASSET_INTEGRITY", "HUMAN_ACCEPTANCE", "SELECTIVE_CHECKPOINT", "CONTROLLED_PUBLICATION", "PUBLIC_POST_DEPLOY_VALIDATION", "HOMOLOGATION"],
+        "batchLimits": {"defaultMaximum":3,"conditionalMaximum":4,"specializedMaximum":1},
+        "individualBatchStates": ["READY", "READY_WITH_GUARDS", "BLOCKED", "REVIEW_REQUIRED", "MIGRATED", "HUMAN_ACCEPTED", "HOMOLOGATED"]
       },
       "articleAutomationPolicy": {
         "contract": "/data/blueprints/article/editorial-automation.contract.json",
@@ -209,6 +220,14 @@
         "heuristic-dependency-treated-as-governed",
         "non-legal-calculator-forced-into-legal-update-system",
         "specialized-calculator-auto-migration",
+        "canonical-visual-family-conformance-failed",
+        "public-asset-integrity-failed",
+        "calculation-form-not-exercised",
+        "result-state-not-rendered",
+        "legacy-fallback-prevails",
+        "human-acceptance-missing",
+        "batch-collective-false-pass",
+        "public-post-deploy-validation-missing",
         "article-search-intent-unresolved",
         "article-editorial-clarity-unresolved",
         "article-freshness-unresolved",

@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-001",
+  "domainId": "aviso-previo",
+  "canonicalName": "Aviso-prévio",
+  "slug": "aviso-previo",
+  "semanticType": "institution",
+  "definition": {
+    "text": "Comunicação antecipada de uma das partes à outra sobre a intenção de extinguir contrato de trabalho por prazo indeterminado, com prazo e efeitos definidos pelo ordenamento.",
+    "nature": "normative-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "arts. 487 a 491"
+      ],
+      "support": "Disciplina geral do instituto."
+    },
+    {
+      "sourceId": "SRC-BR-CF1988-ART7-XXI",
+      "pinpoints": [
+        "art. 7º, XXI"
+      ],
+      "support": "Fundamento constitucional do prazo mínimo e da proporcionalidade."
+    }
+  ],
+  "aliases": [
+    "aviso prévio"
+  ],
+  "relations": [],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

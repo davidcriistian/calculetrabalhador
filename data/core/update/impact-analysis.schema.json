@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calculetrabalhador.local/schemas/impact-analysis.schema.json",
+  "title": "Governed Impact Analysis",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "generatedAt",
+    "input",
+    "resolution",
+    "impactSummary",
+    "directImpact",
+    "indirectImpact",
+    "humanReview",
+    "validationPlan",
+    "executionPlan",
+    "safety"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "generated-read-only",
+        "blocked-unresolved"
+      ]
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "ruleId"
+      ],
+      "properties": {
+        "ruleId": {
+          "type": "string"
+        },
+        "changeType": {
+          "type": "string"
+        },
+        "effectiveFrom": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceReference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requestedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "resolution": {
+      "type": "object",
+      "required": [
+        "ruleFound",
+        "certificationLevel",
+        "impactLevel"
+      ],
+      "properties": {
+        "ruleFound": {
+          "type": "boolean"
+        },
+        "certificationLevel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "impactLevel": {
+          "type": "string"
+        }
+      }
+    },
+    "impactSummary": {
+      "type": "object"
+    },
+    "directImpact": {
+      "type": "object"
+    },
+    "indirectImpact": {
+      "type": "object"
+    },
+    "humanReview": {
+      "type": "object"
+    },
+    "validationPlan": {
+      "type": "array"
+    },
+    "executionPlan": {
+      "type": "array"
+    },
+    "safety": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

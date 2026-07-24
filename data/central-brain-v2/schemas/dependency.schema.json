@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dependency.schema.json",
+  "title": "Directed Dependency Edge",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "from",
+    "fromType",
+    "to",
+    "toType",
+    "relation",
+    "status",
+    "declaredAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^DEP-[A-Z0-9-]+$"
+    },
+    "from": {
+      "type": "string"
+    },
+    "fromType": {
+      "enum": [
+        "domain",
+        "source",
+        "rule",
+        "rule-version",
+        "projection",
+        "consumer",
+        "test",
+        "document"
+      ]
+    },
+    "to": {
+      "type": "string"
+    },
+    "toType": {
+      "enum": [
+        "domain",
+        "source",
+        "rule",
+        "rule-version",
+        "projection",
+        "consumer",
+        "test",
+        "document"
+      ]
+    },
+    "relation": {
+      "enum": [
+        "derived-from",
+        "depends-on",
+        "consumes",
+        "projects",
+        "supersedes",
+        "documents",
+        "tests"
+      ]
+    },
+    "status": {
+      "enum": [
+        "declared",
+        "verified",
+        "broken",
+        "deprecated"
+      ]
+    },
+    "declaredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verifiedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

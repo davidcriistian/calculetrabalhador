@@ -1,0 +1,34 @@
+{
+  "status": "controlled-only",
+  "purpose": "Single entrypoint for legal knowledge ingestion. Automations must create and validate a batch before any registry write.",
+  "pipeline": [
+    "scope",
+    "capture-sources",
+    "normalize-rules",
+    "preflight",
+    "legal-review",
+    "technical-review",
+    "approval",
+    "generate-projections",
+    "validate-projections",
+    "commit",
+    "impact-analysis",
+    "shadow-validation"
+  ],
+  "templates": {
+    "batch": "./templates/ingestion-batch.template.json",
+    "source": "./templates/source.template.json",
+    "rule": "./templates/rule.template.json",
+    "projection": "./templates/projection.template.json",
+    "dependency": "./templates/dependency.template.json"
+  },
+  "queue": "./batches/index.json",
+  "engine": "../engines/ingestion-engine.js",
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

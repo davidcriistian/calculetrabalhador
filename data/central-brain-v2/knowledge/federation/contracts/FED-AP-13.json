@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../schemas/domain-federation-contract.schema.json",
+  "id": "FED-AP-13",
+  "version": "1.0.0",
+  "sourceDomainId": "aviso-previo",
+  "targetDomainId": "decimo-terceiro",
+  "status": "interface-defined",
+  "requiredCapabilities": [
+    "notice-projection-on-thirteenth-salary"
+  ],
+  "inputBindings": [
+    {
+      "sharedFactId": "SHARED-FACT-LEGAL-REFERENCE-DATE",
+      "required": true,
+      "description": "Seleciona a versão jurídica aplicável."
+    },
+    {
+      "sharedFactId": "SHARED-FACT-TERMINATION-DATE",
+      "required": false,
+      "description": "Data factual ou projetada de encerramento."
+    }
+  ],
+  "outputBindings": [
+    {
+      "effectKey": "thirteenth_salary_notice_projection",
+      "valueType": "object",
+      "required": false,
+      "description": "Efeito produzido exclusivamente pelo domínio de destino."
+    }
+  ],
+  "failurePolicy": "partial-with-disclosure",
+  "compatibility": {
+    "minimumTargetVersion": null,
+    "maximumTargetVersion": null,
+    "versionPolicy": "declared-interface"
+  },
+  "governance": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "owner": "central-brain-domain-federation",
+    "reviewRequired": true
+  }
+}

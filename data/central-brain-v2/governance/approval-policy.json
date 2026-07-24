@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "kind": "legal-approval-policy",
+  "authority": false,
+  "roles": {
+    "author": {
+      "requiredDecision": "submitted"
+    },
+    "legalReviewer": {
+      "requiredDecision": "approved"
+    },
+    "technicalReviewer": {
+      "requiredDecision": "approved"
+    },
+    "approver": {
+      "requiredDecision": "approved"
+    }
+  },
+  "requiredReviewScope": [
+    "normative",
+    "semantic",
+    "sources",
+    "traceability"
+  ],
+  "activationGate": {
+    "requiresApprovalStatus": "LEGAL_APPROVED",
+    "requiresFormalRecord": true,
+    "requiresDistinctActors": true,
+    "requiresFingerprintMatch": true
+  }
+}

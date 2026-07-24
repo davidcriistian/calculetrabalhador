@@ -1,0 +1,24 @@
+{
+  "status": "PILOT_VALIDATED",
+  "namespaces": [
+    {
+      "id": "CPT-AVP",
+      "domainId": "aviso-previo",
+      "catalogPath": "../knowledge/domains/aviso-previo/concepts/index.json"
+    }
+  ],
+  "relationsPath": "./relations.json",
+  "principles": [
+    "Concept identity is stable and independent from rules.",
+    "Relations are explicit, typed and source-grounded.",
+    "Cross-domain reuse requires canonical identity rather than copying definitions.",
+    "Ontology has no runtime authority until consumer gates pass."
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "componentVersion": "0.1.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "id": "PROJ-AP-003",
+  "domainId": "aviso-previo",
+  "title": "Duração jurídica do aviso-prévio",
+  "purpose": "Derivar a duração legal do aviso-prévio com piso, proporcionalidade e teto normativo.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "2011-10-13",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-002",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    },
+    {
+      "ruleId": "RULE-AP-001",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "supporting"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-004",
+    "CPT-AVP-005"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "requirement": "required",
+      "purpose": "Confirmar beneficiário da proporcionalidade."
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "requirement": "conditional",
+      "purpose": "Informar anos completos quando a proporcionalidade for aplicável."
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "requirement": "required",
+      "purpose": "Selecionar versão temporal aplicável."
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "requirement": "required",
+      "purpose": "Selecionar a versão jurídica e o regime temporal aplicável."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [],
+    "defaultOutcome": "insufficient-facts"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": [
+        "notice_applicable"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "notice_duration_days",
+      "valueType": "duration-days",
+      "semantics": "Duração jurídica total do aviso em dias.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-003-DURATION"
+    },
+    {
+      "key": "duration_floor_days",
+      "valueType": "integer",
+      "semantics": "Piso legal de duração.",
+      "source": "constant",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "30"
+    },
+    {
+      "key": "duration_cap_days",
+      "valueType": "integer",
+      "semantics": "Teto legal de duração total.",
+      "source": "constant",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "90"
+    }
+  ],
+  "operations": [
+    {
+      "id": "OP-PROJ-AP-003-DURATION",
+      "operationType": "effective-bounded-linear-duration",
+      "inputs": {
+        "baseDays": 30,
+        "additionalDaysPerCompletedYear": 3,
+        "completedYearsFactId": "FACT-COMPLETE-SERVICE-YEARS",
+        "maximumTotalDays": 90,
+        "beneficiaryFactId": "FACT-EMPLOYEE-BENEFICIARY",
+        "referenceDateFactId": "FACT-LEGAL-REFERENCE-DATE",
+        "proportionalEffectiveFrom": "2011-10-13"
+      },
+      "outputKey": "notice_duration_days",
+      "determinism": "pure",
+      "timezonePolicy": "not-applicable"
+    }
+  ],
+  "explanation": {
+    "summaryTemplate": "A duração observa o mínimo de 30 dias, o acréscimo legal e o teto de 90 dias.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-003-A",
+    "TC-PROJ-AP-003-B",
+    "TC-PROJ-AP-003-C",
+    "TC-PROJ-AP-003-D",
+    "TC-PROJ-AP-003-E"
+  ],
+  "contentFingerprint": "sha256:3c418cbd903f2e741f7d0de5585e8328611d32b62f6dca454217d48705084f82"
+}

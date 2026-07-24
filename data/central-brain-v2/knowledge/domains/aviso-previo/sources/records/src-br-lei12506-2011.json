@@ -1,0 +1,40 @@
+{
+  "id": "SRC-BR-LEI12506-2011",
+  "type": "law",
+  "jurisdiction": "BR",
+  "title": "Lei nº 12.506, de 11 de outubro de 2011",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/L12506.htm",
+  "publicationDate": "2011-10-11",
+  "effectiveFrom": "2011-10-13",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/L12506.htm",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Art. 1º e parágrafo único — regulamentação legal da proporcionalidade do aviso-prévio.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-lei12506-2011.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:fdf141c78560a78d45f47850e6f8c7017d2107fdde5d1b8ad7aa950e90df9e51",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:fdf141c78560a78d45f47850e6f8c7017d2107fdde5d1b8ad7aa950e90df9e51",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária específica do domínio.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "PROJ-AP-004",
+  "domainId": "aviso-previo",
+  "title": "Projeção temporal do vínculo contratual",
+  "purpose": "Determinar a projeção jurídica do término contratual decorrente do aviso-prévio.",
+  "version": "1.3.0",
+  "status": "review",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-003",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    },
+    {
+      "ruleId": "RULE-AP-002",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "supporting"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-007",
+    "CPT-AVP-008"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "requirement": "required",
+      "purpose": "Limitar a projeção contratual aos casos em que o aviso é juridicamente devido pelo empregador."
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "requirement": "required",
+      "purpose": "Definir o dia da comunicação, excluído da contagem canônica."
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "requirement": "conditional",
+      "purpose": "Receber duração já materializada quando disponível."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-004-OWED",
+        "factId": "FACT-EMPLOYER-OWES-NOTICE",
+        "operator": "equals",
+        "value": true,
+        "onUnknown": "insufficient-facts",
+        "reason": "A projeção contratual depende de aviso devido pelo empregador."
+      },
+      {
+        "id": "COND-PROJ-AP-004-A",
+        "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+        "operator": "exists",
+        "onUnknown": "insufficient-facts",
+        "reason": "A data de comunicação é necessária."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-003",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": [
+        "notice_duration_days"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "notice_counting_start_date",
+      "valueType": "date",
+      "semantics": "Primeiro dia civil posterior à comunicação do aviso, com exclusão do dia inicial.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "audit-only",
+      "sourceRef": "OP-PROJ-AP-004-COUNTING-START"
+    },
+    {
+      "key": "projected_termination_date",
+      "valueType": "date",
+      "semantics": "Data final projetada do vínculo.",
+      "source": "derived-operation",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "OP-PROJ-AP-004-DATE"
+    },
+    {
+      "key": "contract_projection_applies",
+      "valueType": "boolean",
+      "semantics": "Indica integração temporal do aviso.",
+      "source": "rule-effect",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "RULE-AP-003",
+      "defaultValue": true
+    }
+  ],
+  "operations": [
+    {
+      "id": "OP-PROJ-AP-004-COUNTING-START",
+      "operationType": "date-add-days",
+      "inputs": {
+        "startDateFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+        "days": 1
+      },
+      "outputKey": "notice_counting_start_date",
+      "determinism": "pure",
+      "timezonePolicy": "date-only",
+      "temporalPolicyId": "TEMPORAL-POLICY-BR-001"
+    },
+    {
+      "id": "OP-PROJ-AP-004-DATE",
+      "operationType": "calendar-add-days",
+      "inputs": {
+        "startDateFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+        "durationDependency": "PROJ-AP-003.notice_duration_days",
+        "countingPolicy": "exclude-initial-include-due"
+      },
+      "outputKey": "projected_termination_date",
+      "determinism": "pure",
+      "timezonePolicy": "date-only",
+      "temporalPolicyId": "TEMPORAL-POLICY-BR-001"
+    }
+  ],
+  "explanation": {
+    "summaryTemplate": "A data projetada resulta da integração legal do período de aviso ao vínculo.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-004-A",
+    "TC-PROJ-AP-004-B",
+    "TC-PROJ-AP-004-C"
+  ],
+  "contentFingerprint": "sha256:303356d6a53d86bb21609cc3d681be1b94c81a201641553bafc52afb40d440f8",
+  "explanations": {
+    "resolved": "A comunicação não é contada; o primeiro dia é o dia civil seguinte e o vencimento é incluído."
+  }
+}

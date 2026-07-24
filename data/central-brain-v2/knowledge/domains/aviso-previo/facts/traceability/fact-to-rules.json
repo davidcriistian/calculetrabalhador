@@ -1,0 +1,229 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.1.0",
+  "items": [
+    {
+      "factId": "FACT-ADMISSION-DATE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "ruleIds": [
+        "RULE-AP-007"
+      ]
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "ruleIds": [
+        "RULE-AP-002"
+      ]
+    },
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "ruleIds": [
+        "RULE-AP-007"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "ruleIds": [
+        "RULE-AP-002"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "ruleIds": [
+        "RULE-AP-005"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "ruleIds": [
+        "RULE-AP-006"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "ruleIds": [
+        "RULE-AP-003",
+        "RULE-AP-006"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    },
+    {
+      "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+      "ruleIds": [
+        "RULE-AP-008"
+      ]
+    },
+    {
+      "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "ruleIds": [
+        "RULE-AP-008",
+        "RULE-AP-009"
+      ]
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "ruleIds": [
+        "RULE-AP-006"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "ruleIds": [
+        "RULE-AP-003"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-COUNTING-START-DATE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "ruleIds": [
+        "RULE-AP-003"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-GRANTED",
+      "ruleIds": [
+        "RULE-AP-004"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "ruleIds": [
+        "RULE-AP-003",
+        "RULE-AP-011"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "ruleIds": [
+        "RULE-AP-004",
+        "RULE-AP-005"
+      ]
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    },
+    {
+      "factId": "FACT-PARTY-WAIVES-PERFORMANCE",
+      "ruleIds": [
+        "RULE-AP-004"
+      ]
+    },
+    {
+      "factId": "FACT-PAYMENT-SUBSTITUTION",
+      "ruleIds": [
+        "RULE-AP-004"
+      ]
+    },
+    {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "ruleIds": [
+        "RULE-AP-009",
+        "RULE-AP-010"
+      ]
+    },
+    {
+      "factId": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+      "ruleIds": [
+        "RULE-AP-012"
+      ]
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "ruleIds": [
+        "RULE-AP-013",
+        "RULE-AP-014"
+      ]
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "ruleIds": [
+        "RULE-AP-013",
+        "RULE-AP-014"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-AGREEMENT",
+      "ruleIds": [
+        "RULE-AP-011"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "ruleIds": [
+        "RULE-AP-005"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "ruleIds": [
+        "RULE-AP-002"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "ruleIds": []
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "ruleIds": [
+        "RULE-AP-001"
+      ]
+    }
+  ]
+}

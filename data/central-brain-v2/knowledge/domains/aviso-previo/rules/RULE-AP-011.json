@@ -1,0 +1,92 @@
+{
+  "id": "RULE-AP-011",
+  "domainId": "aviso-previo",
+  "title": "Extinção por acordo do art. 484-A",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-011-001",
+      "validFrom": "2017-11-11",
+      "validTo": null,
+      "recordedAt": "2026-07-22T17:30:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART484A"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-011-A",
+          "allOf": [
+            "extinção por acordo do art. 484-a",
+            "fatos mínimos presentes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-011-A",
+          "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "factsRequired": [
+        "FACT-TERMINATION-BY-AGREEMENT",
+        "FACT-NOTICE-MODALITY"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-011-A",
+          "type": "aviso-acordo",
+          "description": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra."
+        }
+      ],
+      "interpretiveLimits": [
+        "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART484A",
+          "pinpoint": "art. 484-A"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-011-01",
+          "given": [
+            "fatos de incidência presentes"
+          ],
+          "expected": "regra aplicável em revisão"
+        },
+        {
+          "id": "TC-AP-011-02",
+          "given": [
+            "fatos insuficientes ou controvertidos"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Regra adicionada na Fase 2 e mantida sob revisão jurídica.",
+        "Marco temporal corrigido na Fase C para 2017-11-11, conforme inclusão pela Lei nº 13.467/2017."
+      ],
+      "contentFingerprint": "sha256:c5b92f89418eb67d514801a7974ae0668e232588662968f0e5b6e1776ff529f7"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra."
+}

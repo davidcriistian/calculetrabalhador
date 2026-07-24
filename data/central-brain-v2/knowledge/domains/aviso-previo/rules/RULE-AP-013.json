@@ -1,0 +1,91 @@
+{
+  "id": "RULE-AP-013",
+  "domainId": "aviso-previo",
+  "title": "Falta grave do empregado durante o aviso",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-013-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-22T14:40:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART489-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-013-A",
+          "allOf": [
+            "falta grave do empregado durante o aviso",
+            "fatos mínimos presentes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-013-A",
+          "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "factsRequired": [
+        "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+        "FACT-SERIOUS-MISCONDUCT-PARTY"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-013-A",
+          "type": "falta-grave-empregado",
+          "description": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa."
+        }
+      ],
+      "interpretiveLimits": [
+        "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART489-491",
+          "pinpoint": "art. 491"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-013-01",
+          "given": [
+            "fatos de incidência presentes"
+          ],
+          "expected": "regra aplicável em revisão"
+        },
+        {
+          "id": "TC-AP-013-02",
+          "given": [
+            "fatos insuficientes ou controvertidos"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+      ],
+      "contentFingerprint": "sha256:573537a8678c0aa1a733a31f5cdeb1bdc36b3ac80eae40f8aa8f9c0446649afb"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa."
+}

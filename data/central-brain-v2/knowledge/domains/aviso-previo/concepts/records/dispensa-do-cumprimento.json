@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-010",
+  "domainId": "aviso-previo",
+  "canonicalName": "Dispensa do cumprimento do aviso",
+  "slug": "dispensa-do-cumprimento",
+  "semanticType": "procedure",
+  "definition": {
+    "text": "Liberação do trabalho durante o período comunicado, cuja repercussão econômica depende da parte notificante, da prova de novo emprego e das demais condições jurídicas aplicáveis.",
+    "nature": "jurisprudential-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-TST-SUMULA-276",
+      "pinpoints": [
+        "Súmula 276"
+      ],
+      "support": "Renúncia, dispensa e prova de novo emprego."
+    },
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 487"
+      ],
+      "support": "Efeitos da falta de cumprimento."
+    }
+  ],
+  "aliases": [
+    "dispensa do aviso"
+  ],
+  "relations": [
+    {
+      "type": "relates-to",
+      "targetConceptId": "CPT-AVP-003",
+      "status": "validated"
+    },
+    {
+      "type": "relates-to",
+      "targetConceptId": "CPT-AVP-012",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

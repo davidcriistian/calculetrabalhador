@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "kind": "maturity-isolation-policy",
+  "technicalAndLegalIndependent": true,
+  "rules": [
+    "technicalMaturity must not promote legalMaturity",
+    "legalMaturity must not alter technicalMaturity",
+    "consumer promotion requires both technical and legal gates"
+  ]
+}

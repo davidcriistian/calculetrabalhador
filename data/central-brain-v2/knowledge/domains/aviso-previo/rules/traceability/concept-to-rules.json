@@ -1,0 +1,56 @@
+{
+  "version": "0.4.0",
+  "domainId": "aviso-previo",
+  "generatedAt": "2026-07-21T23:30:00.000Z",
+  "items": {
+    "CPT-AVP-001": [
+      "RULE-AP-001",
+      "RULE-AP-002"
+    ],
+    "CPT-AVP-006": [
+      "RULE-AP-001"
+    ],
+    "CPT-AVP-015": [
+      "RULE-AP-001",
+      "RULE-AP-005"
+    ],
+    "CPT-AVP-016": [
+      "RULE-AP-001"
+    ],
+    "CPT-AVP-004": [
+      "RULE-AP-002"
+    ],
+    "CPT-AVP-005": [
+      "RULE-AP-002",
+      "RULE-AP-003",
+      "RULE-AP-004"
+    ],
+    "CPT-AVP-003": [
+      "RULE-AP-003",
+      "RULE-AP-004"
+    ],
+    "CPT-AVP-007": [
+      "RULE-AP-003"
+    ],
+    "CPT-AVP-008": [
+      "RULE-AP-003"
+    ],
+    "CPT-AVP-002": [
+      "RULE-AP-004",
+      "RULE-AP-005"
+    ],
+    "CPT-AVP-010": [
+      "RULE-AP-004",
+      "RULE-AP-006"
+    ],
+    "CPT-AVP-009": [
+      "RULE-AP-005"
+    ],
+    "CPT-AVP-011": [
+      "RULE-AP-006"
+    ],
+    "CPT-AVP-012": [
+      "RULE-AP-006"
+    ]
+  }
+}

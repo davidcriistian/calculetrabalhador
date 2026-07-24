@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "audit-event.schema.json",
+  "title": "Cryptographically Chained Append-only Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "occurredAt",
+    "actor",
+    "action",
+    "entityType",
+    "entityId",
+    "beforeFingerprint",
+    "afterFingerprint",
+    "reason",
+    "correlationId",
+    "sequence",
+    "previousEventHash",
+    "eventHash"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^AUD-[A-Z0-9-]+$"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "enum": [
+        "activate",
+        "approve",
+        "create",
+        "deactivate",
+        "migrate",
+        "propose",
+        "publish",
+        "retire",
+        "review",
+        "revoke",
+        "seal",
+        "snapshot",
+        "validate"
+      ]
+    },
+    "entityType": {
+      "enum": [
+        "audit-chain",
+        "brain",
+        "contract",
+        "dependency",
+        "domain",
+        "governance",
+        "manifest",
+        "projection",
+        "rule",
+        "rule-version",
+        "runtime",
+        "schema",
+        "source"
+      ]
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "beforeFingerprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "afterFingerprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "previousEventHash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "eventHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  }
+}

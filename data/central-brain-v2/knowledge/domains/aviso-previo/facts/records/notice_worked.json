@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-WORKED",
+  "domainId": "aviso-previo",
+  "key": "notice_worked",
+  "label": "Aviso-prévio trabalhado",
+  "description": "Indica se houve prestação de trabalho durante o período de aviso.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-002"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [
+      "FACT-PAYMENT-SUBSTITUTION"
+    ],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-AVISO-002",
+      "severity": "warning",
+      "assertion": "notice_worked and payment_substitution are not both true for the entire same period",
+      "message": "Cumprimento e indenização integral simultâneos exigem segmentação ou revisão.",
+      "relatedFactIds": [
+        "FACT-PAYMENT-SUBSTITUTION"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 488",
+      "relevance": "Pressupõe aviso cumprido em serviço para aplicação da redução de jornada."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:d496b7a41712a667b55ee8fc07fbf9a768bf4e80c158f526496de0c6e52fbe06"
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTIFYING-PARTY",
+  "domainId": "aviso-previo",
+  "key": "notifying_party",
+  "label": "Parte notificante",
+  "description": "Parte que comunicou a intenção de extinguir o contrato ou concedeu o aviso-prévio.",
+  "valueType": "enum",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-015"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-PARTE-001",
+      "severity": "warning",
+      "assertion": "notifying_party != desconhecida",
+      "message": "Parte notificante desconhecida impede resolver diversas projeções do aviso-prévio.",
+      "relatedFactIds": []
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 487, §§ 1º e 2º",
+      "relevance": "Distingue os efeitos da falta de aviso conforme a parte responsável."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "allowedValues": [
+    "empregador",
+    "empregado",
+    "ambas",
+    "desconhecida"
+  ],
+  "contentFingerprint": "sha256:49b1d2ee39e8fc9d70b62d8c6cfc3a9b1332fd8cb26839f4c2617c35e0bb7972"
+}

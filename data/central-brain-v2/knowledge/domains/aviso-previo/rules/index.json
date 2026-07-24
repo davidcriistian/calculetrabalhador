@@ -1,0 +1,218 @@
+{
+  "$schema": "../../../../schemas/domain-rule-catalog.schema.json",
+  "domainId": "aviso-previo",
+  "catalogVersion": "0.6.0",
+  "status": "RULES_IN_LEGAL_REVIEW",
+  "items": [
+    {
+      "ruleId": "RULE-AP-001",
+      "path": "./RULE-AP-001.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-001-001",
+      "sourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-006",
+        "CPT-AVP-015",
+        "CPT-AVP-016"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-002",
+      "path": "./RULE-AP-002.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-002-001",
+      "sourceIds": [
+        "SRC-BR-CF1988-ART7-XXI",
+        "SRC-BR-LEI12506-2011",
+        "SRC-TST-SUMULA-441"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-004",
+        "CPT-AVP-005"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-003",
+      "path": "./RULE-AP-003.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-003-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491",
+        "SRC-TST-OJ-SDI1-82"
+      ],
+      "conceptIds": [
+        "CPT-AVP-003",
+        "CPT-AVP-005",
+        "CPT-AVP-007",
+        "CPT-AVP-008"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-004",
+      "path": "./RULE-AP-004.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-004-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-003",
+        "CPT-AVP-005",
+        "CPT-AVP-010"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-005",
+      "path": "./RULE-AP-005.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-005-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART487-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-009",
+        "CPT-AVP-015"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-006",
+      "path": "./RULE-AP-006.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-006-001",
+      "sourceIds": [
+        "SRC-TST-SUMULA-276"
+      ],
+      "conceptIds": [
+        "CPT-AVP-010",
+        "CPT-AVP-011",
+        "CPT-AVP-012"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-007",
+      "path": "./RULE-AP-007.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-007-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART481"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-008",
+      "path": "./RULE-AP-008.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-008-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART483"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-009",
+      "path": "./RULE-AP-009.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-009-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART484"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-010",
+      "path": "./RULE-AP-010.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-010-001",
+      "sourceIds": [
+        "SRC-TST-SUMULA-14"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-011",
+      "path": "./RULE-AP-011.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-011-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART484A"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-012",
+      "path": "./RULE-AP-012.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-012-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART489-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-013",
+      "path": "./RULE-AP-013.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-013-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART489-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-014",
+      "path": "./RULE-AP-014.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-014-001",
+      "sourceIds": [
+        "SRC-BR-CLT-ART489-491"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ]
+    },
+    {
+      "ruleId": "RULE-AP-015",
+      "path": "./RULE-AP-015.json",
+      "status": "review",
+      "currentVersionId": "VER-RULE-AP-015-001",
+      "sourceIds": [
+        "SRC-TST-SUMULA-305"
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-002",
+        "CPT-AVP-003"
+      ]
+    }
+  ],
+  "verification": {
+    "verifiedAt": "2026-07-22T17:30:00.000Z",
+    "verifiedBy": "central-brain-phase-c-correction",
+    "method": "normative-baseline-temporal-correction-federated-coverage",
+    "ruleCount": 15,
+    "notes": [
+      "Quinze regras canônicas modeladas; todas permanecem sob revisão jurídica formal."
+    ]
+  }
+}

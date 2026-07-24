@@ -1,0 +1,32 @@
+{
+  "$schema": "../../../../schemas/domain-glossary.schema.json",
+  "domainId": "aviso-previo",
+  "status": "VALIDATED",
+  "items": [
+    {
+      "id": "aviso-previo",
+      "term": "Aviso-prévio",
+      "definitionStatus": "validated"
+    },
+    {
+      "id": "aviso-previo-trabalhado",
+      "term": "Aviso-prévio trabalhado",
+      "definitionStatus": "validated"
+    },
+    {
+      "id": "aviso-previo-indenizado",
+      "term": "Aviso-prévio indenizado",
+      "definitionStatus": "validated"
+    },
+    {
+      "id": "aviso-previo-proporcional",
+      "term": "Aviso-prévio proporcional",
+      "definitionStatus": "validated"
+    },
+    {
+      "id": "projecao-do-aviso-previo",
+      "term": "Projeção do aviso-prévio",
+      "definitionStatus": "validated"
+    }
+  ]
+}

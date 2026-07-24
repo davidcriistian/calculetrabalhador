@@ -1,0 +1,83 @@
+{
+  "id": "governance-test-matrix",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "updatedAt": "2026-07-19",
+  "scenarios": [
+    {
+      "id": "all-json-valid",
+      "class": "BASELINE_VALIDATION",
+      "expected": "PASS"
+    },
+    {
+      "id": "structural-integrity-pass",
+      "class": "BASELINE_VALIDATION",
+      "expected": "PASS"
+    },
+    {
+      "id": "duplicate-id-rejected",
+      "class": "NEGATIVE_SCHEMA_SCENARIOS",
+      "expected": "REJECT"
+    },
+    {
+      "id": "invalid-semver-rejected",
+      "class": "NEGATIVE_SCHEMA_SCENARIOS",
+      "expected": "REJECT"
+    },
+    {
+      "id": "invalid-date-rejected",
+      "class": "NEGATIVE_SCHEMA_SCENARIOS",
+      "expected": "REJECT"
+    },
+    {
+      "id": "invalid-fingerprint-rejected",
+      "class": "NEGATIVE_SCHEMA_SCENARIOS",
+      "expected": "REJECT"
+    },
+    {
+      "id": "invalid-status-rejected",
+      "class": "NEGATIVE_SCHEMA_SCENARIOS",
+      "expected": "REJECT"
+    },
+    {
+      "id": "broken-resolved-reference-rejected",
+      "class": "REFERENCE_INTEGRITY",
+      "expected": "REJECT"
+    },
+    {
+      "id": "unclassified-unresolved-reference-rejected",
+      "class": "REFERENCE_INTEGRITY",
+      "expected": "REJECT"
+    },
+    {
+      "id": "open-publication-gate-rejected",
+      "class": "PUBLICATION_SAFETY",
+      "expected": "REJECT"
+    },
+    {
+      "id": "automatic-mutation-enabled-rejected",
+      "class": "PUBLICATION_SAFETY",
+      "expected": "REJECT"
+    },
+    {
+      "id": "validator-paths-resolve",
+      "class": "VALIDATOR_REGISTRY",
+      "expected": "PASS"
+    },
+    {
+      "id": "reference-counts-consistent",
+      "class": "REFERENCE_INTEGRITY",
+      "expected": "PASS"
+    },
+    {
+      "id": "generator-semantic-determinism",
+      "class": "DETERMINISM",
+      "expected": "PASS"
+    },
+    {
+      "id": "protected-files-unchanged",
+      "class": "MUTATION_GUARD",
+      "expected": "PASS"
+    }
+  ]
+}

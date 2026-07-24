@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-009",
+  "domainId": "aviso-previo",
+  "canonicalName": "Redução da jornada durante o aviso",
+  "slug": "reducao-da-jornada",
+  "semanticType": "procedure",
+  "definition": {
+    "text": "Mecanismo aplicável ao aviso trabalhado promovido pelo empregador que reduz o tempo de trabalho sem prejuízo do salário, nas alternativas previstas em lei.",
+    "nature": "normative-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "art. 488"
+      ],
+      "support": "Redução diária ou ausência em dias corridos."
+    }
+  ],
+  "aliases": [
+    "redução de duas horas",
+    "sete dias corridos"
+  ],
+  "relations": [
+    {
+      "type": "applies-to",
+      "targetConceptId": "CPT-AVP-002",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

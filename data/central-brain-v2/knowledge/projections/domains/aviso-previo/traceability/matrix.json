@@ -1,0 +1,154 @@
+{
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "projectionId": "PROJ-AP-001",
+      "ruleIds": [
+        "RULE-AP-001"
+      ],
+      "factIds": [
+        "FACT-EMPLOYMENT-REGIME",
+        "FACT-CONTRACT-INDEFINITE",
+        "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+        "FACT-NOTIFYING-PARTY"
+      ],
+      "dependencyIds": [],
+      "outputKeys": [
+        "notice_applicable",
+        "notifying_party"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-002",
+      "ruleIds": [
+        "RULE-AP-004",
+        "RULE-AP-001"
+      ],
+      "factIds": [
+        "FACT-NOTICE-GRANTED",
+        "FACT-NOTICE-MODALITY",
+        "FACT-NOTICE-WORKED",
+        "FACT-PAYMENT-SUBSTITUTION"
+      ],
+      "dependencyIds": [
+        "PROJ-AP-001"
+      ],
+      "outputKeys": [
+        "notice_modality"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-003",
+      "ruleIds": [
+        "RULE-AP-002",
+        "RULE-AP-001"
+      ],
+      "factIds": [
+        "FACT-EMPLOYEE-BENEFICIARY",
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-TERMINATION-DATE"
+      ],
+      "dependencyIds": [
+        "PROJ-AP-001"
+      ],
+      "outputKeys": [
+        "notice_duration_days",
+        "duration_floor_days",
+        "duration_cap_days"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-004",
+      "ruleIds": [
+        "RULE-AP-003",
+        "RULE-AP-002"
+      ],
+      "factIds": [
+        "FACT-TERMINATION-DATE",
+        "FACT-NOTICE-DURATION"
+      ],
+      "dependencyIds": [
+        "PROJ-AP-003"
+      ],
+      "outputKeys": [
+        "projected_termination_date",
+        "contract_projection_applies"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-005",
+      "ruleIds": [
+        "RULE-AP-003"
+      ],
+      "factIds": [],
+      "dependencyIds": [
+        "PROJ-AP-004"
+      ],
+      "outputKeys": [
+        "integrates_service_time",
+        "projected_termination_date"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-006",
+      "ruleIds": [
+        "RULE-AP-005"
+      ],
+      "factIds": [
+        "FACT-TERMINATION-BY-EMPLOYER",
+        "FACT-NOTICE-WORKED",
+        "FACT-EMPLOYEE-OPTION-REDUCTION-MODE"
+      ],
+      "dependencyIds": [
+        "PROJ-AP-002"
+      ],
+      "outputKeys": [
+        "workday_reduction_entitlement",
+        "reduction_mode"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-007",
+      "ruleIds": [
+        "RULE-AP-006"
+      ],
+      "factIds": [
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-EMPLOYEE-REQUESTS-RELEASE",
+        "FACT-NEW-EMPLOYMENT-PROVEN"
+      ],
+      "dependencyIds": [
+        "PROJ-AP-002"
+      ],
+      "outputKeys": [
+        "payment_preserved",
+        "release_effect"
+      ]
+    },
+    {
+      "projectionId": "PROJ-AP-008",
+      "ruleIds": [
+        "RULE-AP-001",
+        "RULE-AP-002",
+        "RULE-AP-003",
+        "RULE-AP-004",
+        "RULE-AP-005",
+        "RULE-AP-006"
+      ],
+      "factIds": [],
+      "dependencyIds": [
+        "PROJ-AP-001",
+        "PROJ-AP-002",
+        "PROJ-AP-003",
+        "PROJ-AP-004",
+        "PROJ-AP-005",
+        "PROJ-AP-006",
+        "PROJ-AP-007"
+      ],
+      "outputKeys": [
+        "legal_effects",
+        "cross_domain_requirements"
+      ]
+    }
+  ]
+}

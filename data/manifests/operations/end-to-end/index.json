@@ -1,11 +1,11 @@
 {
   "id": "end-to-end-operation-manifests",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "schema": "/data/manifests/schemas/manifest.schema.json",
   "status": "foundation",
   "runtimeStatus": "consumed-by-asset-automation",
   "createdAt": "2026-07-12",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "Operational Capabilities Phase 5.16 - End-to-End Automation Workflow",
   "description": "Canonical manifest for governing end-to-end asset delivery by orchestrating existing operations without duplicating them.",
@@ -102,6 +102,13 @@
       ,"legalScopeClass"
       ,"typedRuleConsumers"
       ,"migrationFamily"
+      ,"migrationProtocolState"
+      ,"batchId"
+      ,"individualBatchState"
+      ,"canonicalVisualFamilyStatus"
+      ,"publicAssetIntegrityStatus"
+      ,"humanAcceptanceStatus"
+      ,"postDeployValidationStatus"
     ],
     "conditional": [
       "coreSource",
@@ -127,6 +134,11 @@
       ,"regressionBaselineEvidence"
       ,"singleSourceEvidence"
       ,"governedImpactAnalysis"
+      ,"canonicalVisualFamilyEvidence"
+      ,"publicAssetIntegrityEvidence"
+      ,"humanAcceptanceRecord"
+      ,"individualRollbackEvidence"
+      ,"publicPostDeployValidationEvidence"
     ],
     "manualDecision": [
       "missingDomain",
@@ -316,6 +328,8 @@
     ,"governedPropagationContract": "/data/core/update/governed-propagation.contract.json"
     ,"calculatorMigrationValidator": "/scripts/validate-calculator-migration-foundation.js"
     ,"calculatorMigrationFixtures": "/data/pos/validation/calculator-migration-foundation-fixtures.json"
+    ,"calculatorBatchProtocolValidator": "/scripts/validate-calculator-batch-migration-protocol.js"
+    ,"calculatorBatchProtocolFixtures": "/data/pos/validation/calculator-batch-migration-protocol-fixtures.json"
     ,"calculatorLegalSensitivity": "/data/core/update/calculator-legal-sensitivity.json"
     ,"typedRuleConsumers": "/data/core/update/governed-rule-consumers.json"
     ,"articleEditorialContract": "/data/blueprints/article/editorial-automation.contract.json"
@@ -345,6 +359,9 @@
     ,"Do not certify a governed engine with a stale visible rule representation."
     ,"Do not force NO_CENTRAL_LEGAL_RULE_REQUIRED calculators into the legal update system."
     ,"Do not automatically migrate SPECIALIZED_REVIEW_REQUIRED calculators."
+    ,"Do not mark MIGRATION_COMPLETED when canonical visual family, public asset integrity, rendered result, human acceptance or rollback gates are unresolved."
+    ,"Do not homologate a published migration before public post-deploy validation."
+    ,"Do not infer an individual calculator PASS from aggregate batch status."
     ,"Do not generate a NEW_ARTICLE or MIGRATED_ARTICLE with unresolved editorial, freshness, source, cluster or bidirectional-link gates."
     ,"Do not apply the new article standard retroactively without explicit migration scope."
     ,"Do not represent a Guide asset as an isolated Home card."

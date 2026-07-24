@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "rules": [
+    {
+      "id": "AUTH-001",
+      "statement": "Only approved canonical rule versions may generate published projections."
+    },
+    {
+      "id": "AUTH-002",
+      "statement": "Consumers cannot create or mutate legal knowledge."
+    },
+    {
+      "id": "AUTH-003",
+      "statement": "Historical versions are append-only and never overwritten."
+    },
+    {
+      "id": "AUTH-004",
+      "statement": "Consumers request by canonical identity and reference date."
+    },
+    {
+      "id": "AUTH-005",
+      "statement": "No artifact is runtime authority without an audit activation event."
+    },
+    {
+      "id": "AUTH-006",
+      "statement": "All registry writes must pass schema, reference and fingerprint validation."
+    }
+  ]
+}

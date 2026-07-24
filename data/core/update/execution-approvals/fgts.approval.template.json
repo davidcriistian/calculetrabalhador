@@ -1,0 +1,32 @@
+{
+  "id": "execution-approval-fgts",
+  "version": "1.0.0",
+  "status": "pending",
+  "ruleId": "fgts",
+  "impactAnalysisFile": "data/core/update/impact-analysis/fgts.impact.json",
+  "issuedAt": "2026-07-19T00:00:00Z",
+  "expiresAt": "2026-08-19T00:00:00Z",
+  "approvals": [
+    {
+      "role": "domain-owner",
+      "decision": "pending",
+      "reviewer": "UNASSIGNED",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": null
+    },
+    {
+      "role": "legal-reviewer",
+      "decision": "pending",
+      "reviewer": "UNASSIGNED",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": null
+    },
+    {
+      "role": "publishing-owner",
+      "decision": "pending",
+      "reviewer": "UNASSIGNED",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": null
+    }
+  ]
+}

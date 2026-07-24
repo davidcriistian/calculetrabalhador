@@ -1,0 +1,2287 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "projections",
+  "items": [
+    {
+      "id": "PROJ-AP-001",
+      "domainId": "aviso-previo",
+      "title": "Incidência jurídica do aviso-prévio",
+      "purpose": "Determinar a incidência do aviso-prévio para ruptura unilateral sem justa causa, inclusive dispensa patronal, pedido de demissão e contrato a termo com cláusula assecuratória.",
+      "version": "1.2.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-001",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-006",
+        "CPT-AVP-015"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-EMPLOYMENT-REGIME",
+          "requirement": "required",
+          "purpose": "Delimitar o regime jurídico."
+        },
+        {
+          "factId": "FACT-CONTRACT-TERM-TYPE",
+          "requirement": "required",
+          "purpose": "Distinguir contrato indeterminado e contrato a termo."
+        },
+        {
+          "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+          "requirement": "conditional",
+          "purpose": "Verificar incidência do art. 481 em contrato a termo."
+        },
+        {
+          "factId": "FACT-TERMINATION-CAUSE",
+          "requirement": "required",
+          "purpose": "Identificar a causa jurídica da ruptura."
+        },
+        {
+          "factId": "FACT-TERMINATION-INITIATIVE",
+          "requirement": "required",
+          "purpose": "Identificar a iniciativa da ruptura."
+        },
+        {
+          "factId": "FACT-NOTIFYING-PARTY",
+          "requirement": "required",
+          "purpose": "Identificar a parte notificante."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-001-A",
+            "factId": "FACT-EMPLOYMENT-REGIME",
+            "operator": "equals",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "value": "clt-geral"
+          },
+          {
+            "id": "COND-PROJ-AP-001-B",
+            "factId": "FACT-TERMINATION-CAUSE",
+            "operator": "in",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "values": [
+              "dispensa-sem-justa-causa",
+              "pedido-demissao"
+            ]
+          },
+          {
+            "id": "COND-PROJ-AP-001-C",
+            "factId": "FACT-TERMINATION-INITIATIVE",
+            "operator": "in",
+            "values": [
+              "empregador",
+              "empregado"
+            ],
+            "onUnknown": "insufficient-facts",
+            "reason": "A iniciativa deve estar identificada."
+          },
+          {
+            "id": "COND-PROJ-AP-001-D",
+            "factId": "FACT-NOTIFYING-PARTY",
+            "operator": "in",
+            "values": [
+              "empregador",
+              "empregado"
+            ],
+            "onUnknown": "insufficient-facts",
+            "reason": "A parte notificante deve estar identificada."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-001-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-001-X1",
+              "factId": "FACT-EMPLOYMENT-REGIME",
+              "operator": "not-equals",
+              "onUnknown": "insufficient-facts",
+              "reason": "Condição jurídica necessária.",
+              "value": "clt-geral"
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Regime diverso exige pacote jurídico específico.",
+          "ruleIds": [
+            "RULE-AP-001"
+          ]
+        },
+        {
+          "id": "EXC-PROJ-AP-001-B",
+          "priority": 2,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-001-X2",
+              "factId": "FACT-TERMINATION-CAUSE",
+              "operator": "in",
+              "onUnknown": "insufficient-facts",
+              "reason": "Condição jurídica necessária.",
+              "values": [
+                "culpa-reciproca",
+                "rescisao-indireta",
+                "mutuo-acordo",
+                "forca-maior",
+                "outra",
+                "desconhecida"
+              ]
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Causa especial exige regra própria ou revisão jurídica humana.",
+          "ruleIds": [
+            "RULE-AP-001"
+          ]
+        },
+        {
+          "id": "EXC-PROJ-AP-001-C",
+          "priority": 3,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-001-X3",
+              "factId": "FACT-CONTRACT-TERM-TYPE",
+              "operator": "in",
+              "onUnknown": "insufficient-facts",
+              "reason": "Condição jurídica necessária.",
+              "values": [
+                "determinado",
+                "experiencia"
+              ]
+            },
+            {
+              "id": "COND-PROJ-AP-001-X4",
+              "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+              "operator": "equals",
+              "onUnknown": "insufficient-facts",
+              "reason": "Condição jurídica necessária.",
+              "value": false
+            }
+          ],
+          "outcome": "not-applicable",
+          "reason": "Contrato a termo sem cláusula assecuratória não segue o regime geral do aviso-prévio.",
+          "ruleIds": [
+            "RULE-AP-001"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "notice_applicable",
+          "valueType": "boolean",
+          "semantics": "Indica incidência do aviso-prévio.",
+          "source": "condition-result",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "COND-PROJ-AP-001-A",
+          "defaultValue": true
+        },
+        {
+          "key": "notifying_party",
+          "valueType": "enum",
+          "semantics": "Parte juridicamente responsável pela comunicação.",
+          "source": "fact",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "FACT-NOTIFYING-PARTY",
+          "allowedValues": [
+            "employer",
+            "employee"
+          ],
+          "valueMap": {
+            "empregador": "employer",
+            "empregado": "employee"
+          }
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A incidência foi resolvida pela combinação entre regime, tipo contratual, cláusula assecuratória, causa e iniciativa da ruptura.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-001-A",
+        "TC-PROJ-AP-001-B",
+        "TC-PROJ-AP-001-C",
+        "TC-PROJ-AP-001-D"
+      ],
+      "contentFingerprint": "sha256:8a1887aa1c459523fed6e19f6918b5734456e68733290b114114b6b32625f763"
+    },
+    {
+      "id": "PROJ-AP-002",
+      "domainId": "aviso-previo",
+      "title": "Modalidade jurídica do aviso-prévio",
+      "purpose": "Classificar o aviso-prévio como trabalhado, indenizado ou juridicamente indeterminado.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-004",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        },
+        {
+          "ruleId": "RULE-AP-001",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "supporting"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-003"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-NOTICE-GRANTED",
+          "requirement": "required",
+          "purpose": "Distinguir concessão formal e ausência de concessão."
+        },
+        {
+          "factId": "FACT-NOTICE-MODALITY",
+          "requirement": "conditional",
+          "purpose": "Classificar modalidade expressamente declarada."
+        },
+        {
+          "factId": "FACT-NOTICE-WORKED",
+          "requirement": "conditional",
+          "purpose": "Identificar cumprimento em trabalho."
+        },
+        {
+          "factId": "FACT-PAYMENT-SUBSTITUTION",
+          "requirement": "conditional",
+          "purpose": "Identificar substituição econômica do cumprimento."
+        },
+        {
+          "factId": "FACT-NOTIFYING-PARTY",
+          "requirement": "required",
+          "purpose": "Distinguir indenização patronal e potencial desconto do empregado."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [],
+        "defaultOutcome": "insufficient-facts"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-001",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": [
+            "notice_applicable"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "notice_modality",
+          "valueType": "enum",
+          "semantics": "Modalidade jurídica reconhecida.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-002-MAP",
+          "allowedValues": [
+            "worked",
+            "indemnified",
+            "mixed",
+            "employee_notice_unworked",
+            "unknown"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "id": "OP-PROJ-AP-002-MAP",
+          "operationType": "map-value",
+          "inputs": {
+            "workedFactId": "FACT-NOTICE-WORKED",
+            "paymentFactId": "FACT-PAYMENT-SUBSTITUTION",
+            "noticeGrantedFactId": "FACT-NOTICE-GRANTED",
+            "notifyingPartyFactId": "FACT-NOTIFYING-PARTY"
+          },
+          "outputKey": "notice_modality",
+          "determinism": "pure",
+          "timezonePolicy": "not-applicable"
+        }
+      ],
+      "explanation": {
+        "summaryTemplate": "A modalidade decorre da forma de cumprimento ou da substituição por pagamento.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-002-A",
+        "TC-PROJ-AP-002-B",
+        "TC-PROJ-AP-002-C",
+        "TC-PROJ-AP-002-D"
+      ],
+      "contentFingerprint": "sha256:41da134b9b7866597d9c4313a7615fbbb4fa81a0ba96c92708af805c5eba36c1"
+    },
+    {
+      "id": "PROJ-AP-003",
+      "domainId": "aviso-previo",
+      "title": "Duração jurídica do aviso-prévio",
+      "purpose": "Derivar a duração legal do aviso-prévio com piso, proporcionalidade e teto normativo.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "2011-10-13",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-002",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        },
+        {
+          "ruleId": "RULE-AP-001",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "supporting"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-004",
+        "CPT-AVP-005"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-EMPLOYEE-BENEFICIARY",
+          "requirement": "required",
+          "purpose": "Confirmar beneficiário da proporcionalidade."
+        },
+        {
+          "factId": "FACT-COMPLETE-SERVICE-YEARS",
+          "requirement": "conditional",
+          "purpose": "Informar anos completos quando a proporcionalidade for aplicável."
+        },
+        {
+          "factId": "FACT-TERMINATION-DATE",
+          "requirement": "required",
+          "purpose": "Selecionar versão temporal aplicável."
+        },
+        {
+          "factId": "FACT-LEGAL-REFERENCE-DATE",
+          "requirement": "required",
+          "purpose": "Selecionar a versão jurídica e o regime temporal aplicável."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [],
+        "defaultOutcome": "insufficient-facts"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-001",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": [
+            "notice_applicable"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "notice_duration_days",
+          "valueType": "duration-days",
+          "semantics": "Duração jurídica total do aviso em dias.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-003-DURATION"
+        },
+        {
+          "key": "duration_floor_days",
+          "valueType": "integer",
+          "semantics": "Piso legal de duração.",
+          "source": "constant",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "30"
+        },
+        {
+          "key": "duration_cap_days",
+          "valueType": "integer",
+          "semantics": "Teto legal de duração total.",
+          "source": "constant",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "90"
+        }
+      ],
+      "operations": [
+        {
+          "id": "OP-PROJ-AP-003-DURATION",
+          "operationType": "effective-bounded-linear-duration",
+          "inputs": {
+            "baseDays": 30,
+            "additionalDaysPerCompletedYear": 3,
+            "completedYearsFactId": "FACT-COMPLETE-SERVICE-YEARS",
+            "maximumTotalDays": 90,
+            "beneficiaryFactId": "FACT-EMPLOYEE-BENEFICIARY",
+            "referenceDateFactId": "FACT-LEGAL-REFERENCE-DATE",
+            "proportionalEffectiveFrom": "2011-10-13"
+          },
+          "outputKey": "notice_duration_days",
+          "determinism": "pure",
+          "timezonePolicy": "not-applicable"
+        }
+      ],
+      "explanation": {
+        "summaryTemplate": "A duração observa o mínimo de 30 dias, o acréscimo legal e o teto de 90 dias.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-003-A",
+        "TC-PROJ-AP-003-B",
+        "TC-PROJ-AP-003-C",
+        "TC-PROJ-AP-003-D",
+        "TC-PROJ-AP-003-E"
+      ],
+      "contentFingerprint": "sha256:3c418cbd903f2e741f7d0de5585e8328611d32b62f6dca454217d48705084f82"
+    },
+    {
+      "id": "PROJ-AP-004",
+      "domainId": "aviso-previo",
+      "title": "Projeção temporal do vínculo contratual",
+      "purpose": "Determinar a projeção jurídica do término contratual decorrente do aviso-prévio.",
+      "version": "1.3.0",
+      "status": "review",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-003",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        },
+        {
+          "ruleId": "RULE-AP-002",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "supporting"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-007",
+        "CPT-AVP-008"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-EMPLOYER-OWES-NOTICE",
+          "requirement": "required",
+          "purpose": "Limitar a projeção contratual aos casos em que o aviso é juridicamente devido pelo empregador."
+        },
+        {
+          "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+          "requirement": "required",
+          "purpose": "Definir o dia da comunicação, excluído da contagem canônica."
+        },
+        {
+          "factId": "FACT-NOTICE-DURATION",
+          "requirement": "conditional",
+          "purpose": "Receber duração já materializada quando disponível."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-004-OWED",
+            "factId": "FACT-EMPLOYER-OWES-NOTICE",
+            "operator": "equals",
+            "value": true,
+            "onUnknown": "insufficient-facts",
+            "reason": "A projeção contratual depende de aviso devido pelo empregador."
+          },
+          {
+            "id": "COND-PROJ-AP-004-A",
+            "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+            "operator": "exists",
+            "onUnknown": "insufficient-facts",
+            "reason": "A data de comunicação é necessária."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-003",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": [
+            "notice_duration_days"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "notice_counting_start_date",
+          "valueType": "date",
+          "semantics": "Primeiro dia civil posterior à comunicação do aviso, com exclusão do dia inicial.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "audit-only",
+          "sourceRef": "OP-PROJ-AP-004-COUNTING-START"
+        },
+        {
+          "key": "projected_termination_date",
+          "valueType": "date",
+          "semantics": "Data final projetada do vínculo.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-004-DATE"
+        },
+        {
+          "key": "contract_projection_applies",
+          "valueType": "boolean",
+          "semantics": "Indica integração temporal do aviso.",
+          "source": "rule-effect",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "RULE-AP-003",
+          "defaultValue": true
+        }
+      ],
+      "operations": [
+        {
+          "id": "OP-PROJ-AP-004-COUNTING-START",
+          "operationType": "date-add-days",
+          "inputs": {
+            "startDateFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+            "days": 1
+          },
+          "outputKey": "notice_counting_start_date",
+          "determinism": "pure",
+          "timezonePolicy": "date-only",
+          "temporalPolicyId": "TEMPORAL-POLICY-BR-001"
+        },
+        {
+          "id": "OP-PROJ-AP-004-DATE",
+          "operationType": "calendar-add-days",
+          "inputs": {
+            "startDateFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+            "durationDependency": "PROJ-AP-003.notice_duration_days",
+            "countingPolicy": "exclude-initial-include-due"
+          },
+          "outputKey": "projected_termination_date",
+          "determinism": "pure",
+          "timezonePolicy": "date-only",
+          "temporalPolicyId": "TEMPORAL-POLICY-BR-001"
+        }
+      ],
+      "explanation": {
+        "summaryTemplate": "A data projetada resulta da integração legal do período de aviso ao vínculo.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-004-A",
+        "TC-PROJ-AP-004-B",
+        "TC-PROJ-AP-004-C"
+      ],
+      "contentFingerprint": "sha256:303356d6a53d86bb21609cc3d681be1b94c81a201641553bafc52afb40d440f8",
+      "explanations": {
+        "resolved": "A comunicação não é contada; o primeiro dia é o dia civil seguinte e o vencimento é incluído."
+      }
+    },
+    {
+      "id": "PROJ-AP-005",
+      "domainId": "aviso-previo",
+      "title": "Integração do aviso ao tempo de serviço",
+      "purpose": "Declarar se o período do aviso-prévio integra o tempo de serviço e quais efeitos são encaminhados.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-003",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-008",
+        "CPT-AVP-009"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-EMPLOYER-OWES-NOTICE",
+          "requirement": "required",
+          "purpose": "Restringir a integração aos casos em que o aviso é devido pelo empregador."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-005-OWED",
+            "factId": "FACT-EMPLOYER-OWES-NOTICE",
+            "operator": "equals",
+            "value": true,
+            "onUnknown": "insufficient-facts",
+            "reason": "A integração ao tempo de serviço pressupõe aviso devido pelo empregador."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-004",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": [
+            "projected_termination_date",
+            "contract_projection_applies"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "integrates_service_time",
+          "valueType": "boolean",
+          "semantics": "Indica integração ao tempo de serviço.",
+          "source": "rule-effect",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "RULE-AP-003",
+          "defaultValue": true
+        },
+        {
+          "key": "projected_termination_date",
+          "valueType": "date",
+          "semantics": "Data de término juridicamente projetada.",
+          "source": "dependency-output",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "PROJ-AP-004.projected_termination_date"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A integração ao tempo de serviço decorre da regra de projeção contratual.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-005-A"
+      ],
+      "contentFingerprint": "sha256:7e1e64549a60d87a4c454420cde57cea25d69b813c126f7c7a8802521ec5d510"
+    },
+    {
+      "id": "PROJ-AP-006",
+      "domainId": "aviso-previo",
+      "title": "Direito à redução de jornada no aviso",
+      "purpose": "Resolver a incidência e a modalidade do direito à redução de jornada durante aviso trabalhado.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-005",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-013",
+        "CPT-AVP-014"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-TERMINATION-BY-EMPLOYER",
+          "requirement": "required",
+          "purpose": "Confirmar iniciativa patronal."
+        },
+        {
+          "factId": "FACT-NOTICE-WORKED",
+          "requirement": "required",
+          "purpose": "Confirmar aviso trabalhado."
+        },
+        {
+          "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+          "requirement": "conditional",
+          "purpose": "Registrar opção legal do empregado."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-006-A",
+            "factId": "FACT-TERMINATION-BY-EMPLOYER",
+            "operator": "equals",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "value": true
+          },
+          {
+            "id": "COND-PROJ-AP-006-B",
+            "factId": "FACT-NOTICE-WORKED",
+            "operator": "equals",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "value": true
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-002",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": [
+            "notice_modality"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "workday_reduction_entitlement",
+          "valueType": "boolean",
+          "semantics": "Indica existência do direito à redução.",
+          "source": "condition-result",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "COND-PROJ-AP-006-A",
+          "defaultValue": true
+        },
+        {
+          "key": "reduction_mode",
+          "valueType": "enum",
+          "semantics": "Modalidade escolhida para redução.",
+          "source": "fact",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+          "allowedValues": [
+            "two_hours_daily",
+            "seven_consecutive_days",
+            "not_selected"
+          ],
+          "valueMap": {
+            "duas-horas-diarias": "two_hours_daily",
+            "sete-dias-corridos": "seven_consecutive_days",
+            "nao-informada": "not_selected",
+            "nao-aplicavel": "not_selected"
+          },
+          "defaultValue": "not_selected"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A redução é resolvida pela iniciativa patronal e pelo caráter trabalhado do aviso.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-006-A",
+        "TC-PROJ-AP-006-B",
+        "TC-PROJ-AP-006-C"
+      ],
+      "contentFingerprint": "sha256:451acc34e2ce6f08d6506ab7bf227023413392e36c22c5261b76cb1102822241"
+    },
+    {
+      "id": "PROJ-AP-007",
+      "domainId": "aviso-previo",
+      "title": "Dispensa de cumprimento por novo emprego",
+      "purpose": "Resolver os efeitos do pedido de dispensa de cumprimento diante de novo emprego comprovado.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "2003-11-21",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-006",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-010",
+        "CPT-AVP-011",
+        "CPT-AVP-012"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-EMPLOYER-OWES-NOTICE",
+          "requirement": "required",
+          "purpose": "Confirmar aviso devido pelo empregador."
+        },
+        {
+          "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+          "requirement": "required",
+          "purpose": "Confirmar pedido de dispensa."
+        },
+        {
+          "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+          "requirement": "required",
+          "purpose": "Confirmar comprovação do novo emprego."
+        },
+        {
+          "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+          "requirement": "required",
+          "purpose": "Confirmar a ocorrência do novo emprego."
+        },
+        {
+          "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+          "requirement": "required",
+          "purpose": "Vincular temporalmente a prova ao período do aviso."
+        },
+        {
+          "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+          "requirement": "required",
+          "purpose": "Delimitar o início do período relevante."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-007-A",
+            "factId": "FACT-EMPLOYER-OWES-NOTICE",
+            "operator": "equals",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "value": true
+          },
+          {
+            "id": "COND-PROJ-AP-007-B",
+            "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+            "operator": "equals",
+            "onUnknown": "insufficient-facts",
+            "reason": "Condição jurídica necessária.",
+            "value": true
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-007-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-007-X1",
+              "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+              "operator": "equals",
+              "onUnknown": "insufficient-facts",
+              "reason": "Condição jurídica necessária.",
+              "value": true
+            },
+            {
+              "id": "COND-PROJ-AP-007-X2",
+              "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+              "operator": "equals",
+              "value": true,
+              "onUnknown": "insufficient-facts",
+              "reason": "A ocorrência do novo emprego deve estar confirmada."
+            }
+          ],
+          "outcome": "override",
+          "outputOverrides": {
+            "payment_preserved": false,
+            "release_effect": "employer_payment_exoneration"
+          },
+          "reason": "Novo emprego comprovado aciona a exceção da Súmula 276.",
+          "ruleIds": [
+            "RULE-AP-006"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-002",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": [
+            "notice_modality"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "payment_preserved",
+          "valueType": "boolean",
+          "semantics": "Indica preservação do pagamento no período dispensado.",
+          "source": "rule-effect",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "RULE-AP-006",
+          "defaultValue": true
+        },
+        {
+          "key": "release_effect",
+          "valueType": "enum",
+          "semantics": "Consequência jurídica da dispensa de cumprimento.",
+          "source": "condition-result",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "COND-PROJ-AP-007-X1",
+          "allowedValues": [
+            "payment_preserved",
+            "employer_payment_exoneration"
+          ],
+          "defaultValue": "payment_preserved"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "O simples pedido não elimina o pagamento; novo emprego comprovado pode acionar a exceção.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-007-A",
+        "TC-PROJ-AP-007-B"
+      ],
+      "contentFingerprint": "sha256:75eaa724525d57d6f8813ae9cc7c6f173151240199f1488dd1e69b064d1f840d"
+    },
+    {
+      "id": "PROJ-AP-008",
+      "domainId": "aviso-previo",
+      "title": "Matriz consolidada de efeitos jurídicos",
+      "purpose": "Consolidar os efeitos jurídicos produzidos pelas projeções do domínio sem calcular verbas de outros domínios.",
+      "version": "1.3.0",
+      "status": "review",
+      "effectiveFrom": "2011-10-13",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-001",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "supporting"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-007",
+        "CPT-AVP-008",
+        "CPT-AVP-009"
+      ],
+      "inputFacts": [],
+      "activation": {
+        "logic": "all",
+        "conditions": [],
+        "defaultOutcome": "insufficient-facts"
+      },
+      "exceptions": [],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-001",
+          "requirement": "required",
+          "failurePolicy": "propagate",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-002",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-003",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-004",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-005",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-006",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        },
+        {
+          "projectionId": "PROJ-AP-007",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": []
+        }
+      ],
+      "outputs": [
+        {
+          "key": "legal_effects",
+          "valueType": "array",
+          "semantics": "Lista consolidada e deduplicada de efeitos jurídicos reconhecidos, com proveniência por projeção.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-008-AGG"
+        },
+        {
+          "key": "consolidation_status",
+          "valueType": "string",
+          "semantics": "Completude da consolidação: complete, partial ou blocked.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-008-STATUS"
+        },
+        {
+          "key": "unresolved_projections",
+          "valueType": "array",
+          "semantics": "Projeções não resolvidas e seus estados, quando a consolidação é parcial.",
+          "source": "derived-operation",
+          "nullable": false,
+          "consumerVisibility": "public",
+          "sourceRef": "OP-PROJ-AP-008-UNRESOLVED"
+        },
+        {
+          "key": "cross_domain_requirements",
+          "valueType": "array",
+          "semantics": "Contratos de federação interdomínio verificáveis; destinos ainda não executáveis.",
+          "source": "constant",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "sourceRef": "FED-AP-FGTS/FED-AP-FERIAS/FED-AP-13",
+          "defaultValue": [
+            "FED-AP-FGTS",
+            "FED-AP-FERIAS",
+            "FED-AP-13"
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "id": "OP-PROJ-AP-008-AGG",
+          "operationType": "aggregate-effects",
+          "inputs": {
+            "projectionIds": [
+              "PROJ-AP-001",
+              "PROJ-AP-002",
+              "PROJ-AP-003",
+              "PROJ-AP-004",
+              "PROJ-AP-005",
+              "PROJ-AP-006",
+              "PROJ-AP-007"
+            ]
+          },
+          "outputKey": "legal_effects",
+          "determinism": "pure",
+          "timezonePolicy": "not-applicable"
+        },
+        {
+          "id": "OP-PROJ-AP-008-STATUS",
+          "operationType": "consolidation-status",
+          "inputs": {
+            "projectionIds": [
+              "PROJ-AP-001",
+              "PROJ-AP-002",
+              "PROJ-AP-003",
+              "PROJ-AP-004",
+              "PROJ-AP-005",
+              "PROJ-AP-006",
+              "PROJ-AP-007"
+            ],
+            "requiredProjectionIds": [
+              "PROJ-AP-001"
+            ]
+          },
+          "outputKey": "consolidation_status",
+          "determinism": "pure",
+          "timezonePolicy": "not-applicable"
+        },
+        {
+          "id": "OP-PROJ-AP-008-UNRESOLVED",
+          "operationType": "unresolved-projections",
+          "inputs": {
+            "projectionIds": [
+              "PROJ-AP-001",
+              "PROJ-AP-002",
+              "PROJ-AP-003",
+              "PROJ-AP-004",
+              "PROJ-AP-005",
+              "PROJ-AP-006",
+              "PROJ-AP-007"
+            ]
+          },
+          "outputKey": "unresolved_projections",
+          "determinism": "pure",
+          "timezonePolicy": "not-applicable"
+        }
+      ],
+      "explanation": {
+        "summaryTemplate": "A matriz agrega efeitos resolvidos e declara contratos verificáveis de federação, sem executar domínios indisponíveis.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": "2026-07-22T03:00:00.000Z",
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-008-A",
+        "TC-PROJ-AP-008-B"
+      ],
+      "contentFingerprint": "sha256:b18d73561373695659fbec1e64b6a9d797881f62aa8730049d334a1e6cf049d4"
+    },
+    {
+      "id": "PROJ-AP-009",
+      "domainId": "aviso-previo",
+      "title": "Contrato a termo com cláusula assecuratória",
+      "purpose": "Projetar de forma declarativa os efeitos de contrato a termo com cláusula assecuratória.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-007",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-CONTRACT-TERM-TYPE",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-009-A",
+            "factId": "FACT-CONTRACT-TERM-TYPE",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-009-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-009-X1",
+              "factId": "FACT-CONTRACT-TERM-TYPE",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-007"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "term_clause_effect",
+          "valueType": "enum",
+          "semantics": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeter",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-007-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-009-A",
+        "TC-PROJ-AP-009-B"
+      ],
+      "contentFingerprint": "sha256:5582e1a1d57447555a8b89d4ecf72bc2a7923ebee7f7b3e3df678f0194e6012e"
+    },
+    {
+      "id": "PROJ-AP-010",
+      "domainId": "aviso-previo",
+      "title": "Rescisão indireta reconhecida",
+      "purpose": "Projetar de forma declarativa os efeitos de rescisão indireta reconhecida.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-008",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-010-A",
+            "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-010-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-010-X1",
+              "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-008"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "indirect_termination_effect",
+          "valueType": "enum",
+          "semantics": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão h",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-008-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A rescisão indireta somente produz os efeitos definitivos modelados quando houver reconhecimento juridicamente suficiente, mantendo-se alegações ou processos pendentes em revisão humana.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-010-A",
+        "TC-PROJ-AP-010-B"
+      ],
+      "contentFingerprint": "sha256:98248328f7a0518e1fe5ebdcb45587d9300b1ab8f53e37cfe3523619bea8bb9a"
+    },
+    {
+      "id": "PROJ-AP-011",
+      "domainId": "aviso-previo",
+      "title": "Culpa recíproca",
+      "purpose": "Projetar de forma declarativa os efeitos de culpa recíproca.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-009",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-011-A",
+            "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-011-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-011-X1",
+              "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-009"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "reciprocal_fault_effect",
+          "valueType": "enum",
+          "semantics": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração da",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-009-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "Reconhecida a culpa recíproca, as verbas alcançadas pela disciplina legal e jurisprudencial devem observar a redução aplicável, sem presumir reconhecimento apenas por declaração das partes.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-011-A",
+        "TC-PROJ-AP-011-B"
+      ],
+      "contentFingerprint": "sha256:846c05a6bb1fb13f284622d5d5405857b15a96b12c48433af3c6f4e24ff6ab93"
+    },
+    {
+      "id": "PROJ-AP-012",
+      "domainId": "aviso-previo",
+      "title": "Efeitos da Súmula 14 na culpa recíproca",
+      "purpose": "Projetar de forma declarativa os efeitos de efeitos da súmula 14 na culpa recíproca.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-010",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-012-A",
+            "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-012-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-012-X1",
+              "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-010"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "reciprocal_fault_percentage",
+          "valueType": "enum",
+          "semantics": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido.",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-010-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "Na culpa recíproca reconhecida, o aviso-prévio e as demais parcelas expressamente abrangidas pela Súmula 14 são devidos no percentual nela estabelecido.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-012-A",
+        "TC-PROJ-AP-012-B"
+      ],
+      "contentFingerprint": "sha256:f1662e3efd9f69cd96e7797fdaa3974e36e0a4b380a00843be43aefaecadbd64"
+    },
+    {
+      "id": "PROJ-AP-013",
+      "domainId": "aviso-previo",
+      "title": "Extinção por acordo do art. 484-A",
+      "purpose": "Projetar de forma declarativa os efeitos de extinção por acordo do art. 484-a.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "2017-11-11",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-011",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-TERMINATION-BY-AGREEMENT",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-NOTICE-MODALITY",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-013-A",
+            "factId": "FACT-TERMINATION-BY-AGREEMENT",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-013-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-013-X1",
+              "factId": "FACT-TERMINATION-BY-AGREEMENT",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-011"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "agreement_notice_effect",
+          "valueType": "enum",
+          "semantics": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-011-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "Na extinção contratual por acordo, o aviso-prévio indenizado é devido pela metade, enquanto o aviso trabalhado não sofre redução automática por esta regra.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana.",
+          "Não aplicar a fatos jurídicos anteriores a 2017-11-11."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": "2026-07-22T17:30:00.000Z",
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-013-A",
+        "TC-PROJ-AP-013-B",
+        "TC-PROJ-AP-013-C",
+        "TC-PROJ-AP-013-D"
+      ],
+      "contentFingerprint": "sha256:89c4b223d5f52a89cd7abcb6520dd2b2e695dd4cb14a8b45d7076562f5f2a5f7"
+    },
+    {
+      "id": "PROJ-AP-014",
+      "domainId": "aviso-previo",
+      "title": "Reconsideração do aviso-prévio",
+      "purpose": "Projetar de forma declarativa os efeitos de reconsideração do aviso-prévio.",
+      "version": "1.1.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-012",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+          "requirement": "conditional",
+          "purpose": "Sustentar a aceitação tácita quando alegada continuidade da prestação após o termo do aviso."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-014-A",
+            "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-014-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-014-X1",
+              "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-012"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "reconsideration_effect",
+          "valueType": "enum",
+          "semantics": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-012-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-014-A",
+        "TC-PROJ-AP-014-B"
+      ],
+      "contentFingerprint": "sha256:00c0b1bb0f98ee0514050e6e4bd12d92e94f7f7a8a8c034d0451d74e53d1fa81"
+    },
+    {
+      "id": "PROJ-AP-015",
+      "domainId": "aviso-previo",
+      "title": "Falta grave do empregado durante o aviso",
+      "purpose": "Projetar de forma declarativa os efeitos de falta grave do empregado durante o aviso.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-013",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-015-A",
+            "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-015-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-015-X1",
+              "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-013"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "employee_misconduct_effect",
+          "valueType": "enum",
+          "semantics": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-013-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-015-A",
+        "TC-PROJ-AP-015-B"
+      ],
+      "contentFingerprint": "sha256:0fe113da8c74e4e90730ce80486ea043e1b933a357b9bb7c36f7d8af293795bd"
+    },
+    {
+      "id": "PROJ-AP-016",
+      "domainId": "aviso-previo",
+      "title": "Falta grave do empregador durante o aviso",
+      "purpose": "Projetar de forma declarativa os efeitos de falta grave do empregador durante o aviso.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-014",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        },
+        {
+          "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+          "requirement": "required",
+          "purpose": "Fato necessário à aplicação da regra especial."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-016-A",
+            "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+            "operator": "exists",
+            "onUnknown": "human-review",
+            "reason": "A incidência depende da presença do fato principal."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-016-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-016-X1",
+              "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+              "operator": "not-exists",
+              "onUnknown": "human-review",
+              "reason": "Fato principal ausente ou desconhecido."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+          "ruleIds": [
+            "RULE-AP-014"
+          ]
+        }
+      ],
+      "dependencies": [],
+      "outputs": [
+        {
+          "key": "employer_misconduct_effect",
+          "valueType": "enum",
+          "semantics": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-014-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "allowedValues": [
+            "applicable",
+            "not-applicable",
+            "human-review"
+          ],
+          "defaultValue": "applicable"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A falta grave praticada pelo empregador durante o aviso assegura ao empregado os efeitos previstos para a ruptura imputável ao empregador, condicionada à caracterização jurídica do fato.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-016-A",
+        "TC-PROJ-AP-016-B"
+      ],
+      "contentFingerprint": "sha256:852579611f2bc28bbe902667fd7a731da6a8c6497572309d783c2167429c2149"
+    },
+    {
+      "id": "PROJ-AP-017",
+      "domainId": "aviso-previo",
+      "title": "Requisito federado de incidência de FGTS sobre aviso-prévio",
+      "purpose": "Emitir, sem cálculo financeiro local, o requisito de avaliação da incidência de FGTS sobre aviso-prévio trabalhado ou indenizado.",
+      "version": "1.0.0",
+      "status": "review",
+      "effectiveFrom": "1992-11-05",
+      "effectiveTo": null,
+      "ruleRefs": [
+        {
+          "ruleId": "RULE-AP-015",
+          "versionPolicy": "effective-at-reference-date",
+          "role": "authoritative"
+        }
+      ],
+      "conceptIds": [
+        "CPT-AVP-001",
+        "CPT-AVP-002",
+        "CPT-AVP-003"
+      ],
+      "inputFacts": [
+        {
+          "factId": "FACT-NOTICE-MODALITY",
+          "requirement": "required",
+          "purpose": "Identificar se o aviso é trabalhado ou indenizado."
+        }
+      ],
+      "activation": {
+        "logic": "all",
+        "conditions": [
+          {
+            "id": "COND-PROJ-AP-017-A",
+            "factId": "FACT-NOTICE-MODALITY",
+            "operator": "in",
+            "values": [
+              "trabalhado",
+              "indenizado",
+              "misto"
+            ],
+            "onUnknown": "human-review",
+            "reason": "A Súmula 305 alcança aviso trabalhado ou indenizado."
+          }
+        ],
+        "defaultOutcome": "not-applicable"
+      },
+      "exceptions": [
+        {
+          "id": "EXC-PROJ-AP-017-A",
+          "priority": 1,
+          "conditions": [
+            {
+              "id": "COND-PROJ-AP-017-X1",
+              "factId": "FACT-NOTICE-MODALITY",
+              "operator": "in",
+              "values": [
+                "desconhecido"
+              ],
+              "onUnknown": "human-review",
+              "reason": "Modalidade não resolvida."
+            }
+          ],
+          "outcome": "human-review",
+          "reason": "Modalidade desconhecida impede emitir requisito determinístico.",
+          "ruleIds": [
+            "RULE-AP-015"
+          ]
+        }
+      ],
+      "dependencies": [
+        {
+          "projectionId": "PROJ-AP-002",
+          "requirement": "optional",
+          "failurePolicy": "continue-without",
+          "consumesOutputs": [
+            "notice_modality"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "key": "fgts_notice_incidence_required",
+          "valueType": "boolean",
+          "semantics": "Indica que o domínio FGTS deve avaliar a incidência sobre o período de aviso-prévio.",
+          "source": "rule-effect",
+          "sourceRef": "EFFECT-AP-015-A",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "defaultValue": true
+        },
+        {
+          "key": "fgts_federation_contract_id",
+          "valueType": "string",
+          "semantics": "Contrato de federação responsável pela avaliação no domínio FGTS.",
+          "source": "constant",
+          "sourceRef": "FED-AP-FGTS",
+          "nullable": false,
+          "consumerVisibility": "internal",
+          "defaultValue": "FED-AP-FGTS"
+        }
+      ],
+      "operations": [],
+      "explanation": {
+        "summaryTemplate": "A modalidade do aviso exige avaliação de incidência de FGTS pelo domínio federado competente.",
+        "includeFacts": true,
+        "includeRules": true,
+        "includeRejectedRules": true,
+        "includeExceptions": true,
+        "publicLimitations": [
+          "Esta projeção não calcula FGTS nem multa rescisória.",
+          "O domínio FGTS ainda não possui autoridade de runtime."
+        ]
+      },
+      "governance": {
+        "owner": "central-brain-legal-architecture",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "runtimeAuthority": false,
+        "consumerReady": false,
+        "createdAt": "2026-07-22T17:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "testCaseIds": [
+        "TC-PROJ-AP-017-A",
+        "TC-PROJ-AP-017-B"
+      ],
+      "contentFingerprint": "sha256:be4f77cce5302be1d00b96f854602a23fd69ea8a77a757dbf0fb1856c860628e"
+    }
+  ],
+  "status": "CANONICAL_PROJECTIONS_SYNCHRONIZED",
+  "updatedAt": "2026-07-22T03:00:00.000Z",
+  "authority": false,
+  "note": "Global discovery registry synchronized from the canonical projection catalog. Entries remain review-only and non-authoritative."
+}

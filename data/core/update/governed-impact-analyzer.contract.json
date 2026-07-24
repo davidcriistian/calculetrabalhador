@@ -1,0 +1,78 @@
+{
+  "id": "governed-impact-analyzer-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "analysis-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Receber uma regra alterada e produzir um plano determinístico de impacto sem modificar arquivos-fonte ou conteúdo público.",
+  "input": {
+    "required": [
+      "ruleId"
+    ],
+    "optional": [
+      "changeType",
+      "effectiveFrom",
+      "sourceReference",
+      "requestedBy",
+      "notes"
+    ],
+    "allowedChangeTypes": [
+      "LEGAL_VALUE_CHANGE",
+      "LEGAL_TEXT_CHANGE",
+      "SOURCE_CHANGE",
+      "EFFECTIVITY_CHANGE",
+      "STRUCTURAL_CHANGE",
+      "CORRECTION",
+      "UNKNOWN"
+    ]
+  },
+  "authorities": {
+    "ruleContract": "/data/core/update/canonical-rule-minimum.contract.json",
+    "ruleCompatibility": "/data/core/update/canonical-rule-compatibility.json",
+    "typedConsumers": "/data/core/update/governed-rule-consumers.json",
+    "editorialImpactMatrix": "/data/core/update/editorial-impact-matrix.generated.json",
+    "clusterProjection": "/data/brain/editorial-clusters.generated.json",
+    "nucleusProjection": "/data/brain/editorial-nuclei.generated.json"
+  },
+  "outputs": {
+    "schema": "/data/core/update/impact-analysis.schema.json",
+    "reportDirectory": "/data/core/update/impact-analysis",
+    "mode": "generated-read-only"
+  },
+  "impactLevels": {
+    "CRITICAL": "Legal or monetary rule change with confirmed calculator consumers and inherited editorial impact.",
+    "HIGH": "Confirmed consumers exist and human review is mandatory.",
+    "MEDIUM": "Declared or indirect consumers exist but execution scope is limited.",
+    "LOW": "No active deterministic consumers; governance review remains required.",
+    "UNRESOLVED": "Rule or relation cannot be deterministically resolved."
+  },
+  "humanApproval": {
+    "required": true,
+    "minimumApprovers": [
+      "domain-owner",
+      "legal-reviewer",
+      "publishing-owner"
+    ],
+    "automaticPublicationAllowed": false,
+    "automaticSourceInferenceAllowed": false,
+    "automaticLegalCorrectionAllowed": false
+  },
+  "executionPolicy": {
+    "analyzer": "/scripts/analyze-governed-impact.js",
+    "validator": "/scripts/validate-governed-impact-analysis.js",
+    "mayModifySourceFiles": false,
+    "mayModifyPublicFiles": false,
+    "mayCommit": false,
+    "mayPush": false,
+    "mayDeploy": false
+  },
+  "blockingConditions": [
+    "RULE_ID_NOT_FOUND",
+    "ANALYSIS_SCHEMA_INVALID",
+    "ANALYSIS_WITHOUT_HUMAN_APPROVAL",
+    "UNKNOWN_CONSUMER_REFERENCE",
+    "AUTOMATIC_EXECUTION_ATTEMPT",
+    "PUBLIC_RUNTIME_MUTATION"
+  ]
+}

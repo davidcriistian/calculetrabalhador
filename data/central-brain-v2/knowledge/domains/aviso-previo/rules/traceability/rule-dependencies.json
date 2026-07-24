@@ -1,0 +1,27 @@
+{
+  "version": "0.4.0",
+  "domainId": "aviso-previo",
+  "generatedAt": "2026-07-21T23:30:00.000Z",
+  "items": {
+    "RULE-AP-001": [],
+    "RULE-AP-002": [
+      "RULE-AP-001"
+    ],
+    "RULE-AP-003": [
+      "RULE-AP-001",
+      "RULE-AP-002"
+    ],
+    "RULE-AP-004": [
+      "RULE-AP-001",
+      "RULE-AP-003"
+    ],
+    "RULE-AP-005": [
+      "RULE-AP-001",
+      "RULE-AP-004"
+    ],
+    "RULE-AP-006": [
+      "RULE-AP-001",
+      "RULE-AP-004"
+    ]
+  }
+}

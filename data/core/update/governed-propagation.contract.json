@@ -1,10 +1,10 @@
 {
   "id": "governed-rule-propagation-contract",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "active-internal-standard",
   "runtimeStatus": "consumed-by-migration-foundation",
   "createdAt": "2026-07-14",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
   "objective": "Represent declared, typed and auditable dependencies from a rule source through transformed governed data to every confirmed consumer.",
@@ -50,7 +50,8 @@
     ]
   },
   "singleSourcePolicy": {
-    "rule": "When calculation logic and a visible element reproduce the same official rule, both derive from one governed source or deterministic projections of it.",
+    "principle": "SINGLE_GOVERNED_SOURCE_FOR_CALCULATION_AND_VISIBLE_RULE_DATA",
+    "rule": "When calculation logic and a visible element reproduce the same official rule, calculation, table, card, memory, explanation, report and tests derive from one governed source or deterministic projections of it.",
     "certificationBlocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE",
     "visibleDependencyRequired": true,
     "examples": {
@@ -73,6 +74,18 @@
         "VALIDATION_TEST"
       ]
     }
+  },
+  "fallbackPolicy": {
+    "legacyFallbackMayPrevail": false,
+    "fileProtocolFallback": "DERIVED_GOVERNED_FALLBACK_ONLY",
+    "requirements": ["canonical-version-match", "projection-fingerprint-match", "non-silent-diagnostics", "canonical-source-precedence"],
+    "blockers": ["LEGACY_FALLBACK_PREVAILS", "STALE_FALLBACK", "UNKNOWN_VERSION"]
+  },
+  "consumerCoherenceGate": {
+    "requiredConsumersWhenApplicable": ["CALCULATION_ENGINE", "VISIBLE_TABLE", "VISIBLE_RULE_CARD", "RESULT_EXPLANATION", "RULE_SUMMARY", "REPORT_OUTPUT", "VALIDATION_TEST"],
+    "sameProjectionRequired": true,
+    "staleDetectionRequired": true,
+    "blocker": "GOVERNED_ENGINE_WITH_STALE_VISIBLE_RULE"
   },
   "impactAnalysisContract": {
     "requiredInput": [

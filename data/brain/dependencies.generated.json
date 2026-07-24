@@ -1,0 +1,1056 @@
+{
+  "id": "governed-dependency-projection",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:25:01.103Z",
+  "sourceAuthority": "/data/core/update/governed-rule-consumers.json",
+  "generator": "/scripts/generate-governed-rule-projections.js",
+  "relationCount": 55,
+  "dependencies": [
+    {
+      "relationId": "relation-0001",
+      "from": {
+        "type": "rule",
+        "id": "adicional-noturno"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-adicional-noturno",
+        "path": "calculadora-adicional-noturno/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0002",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-aviso-previo",
+        "path": "calculadora-aviso-previo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0012",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-rescisao-clt",
+        "path": "calculadora-rescisao-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0009",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "REPORT_OUTPUT",
+        "id": "report:aviso-previo-canonical-rule-reconciliation",
+        "path": "data/operations/reports/end-to-end/aviso-previo-canonical-rule-reconciliation/operation-report.json"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0011",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "REPORT_OUTPUT",
+        "id": "report:migrate-calculator-calculadora-aviso-previo",
+        "path": "data/operations/reports/end-to-end/migrate-calculator-calculadora-aviso-previo/final-operation-report.json"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0003",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "RESULT_EXPLANATION",
+        "id": "content:calculadora-aviso-previo:result-explanation",
+        "path": "calculadora-aviso-previo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0005",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "RULE_DEPENDENT_EXAMPLE",
+        "id": "content:calculadora-aviso-previo:rule-dependent-example",
+        "path": "data/rules/aviso-previo.json"
+      },
+      "relationType": "unspecified",
+      "status": "NOT_APPLICABLE",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0004",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "RULE_SUMMARY",
+        "id": "content:calculadora-aviso-previo:rule-summary",
+        "path": "calculadora-aviso-previo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0008",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "SHADOW_TEST",
+        "id": "validator:shadow-aviso-previo",
+        "path": "scripts/validate-shadow-aviso-previo.js"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0006",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "UPDATED_AT_METADATA",
+        "id": "metadata:calculadora-aviso-previo:updated-at",
+        "path": "data/editorial-metadata.json"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0007",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "VALIDATION_TEST",
+        "id": "validator:aviso-previo-canonical-rule",
+        "path": "scripts/validate-aviso-previo-canonical-rule.js"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0010",
+      "from": {
+        "type": "rule",
+        "id": "aviso-previo"
+      },
+      "to": {
+        "type": "VALIDATION_TEST",
+        "id": "validator:migrated-calculadora-aviso-previo",
+        "path": "scripts/validate-migrated-calculadora-aviso-previo.js"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0013",
+      "from": {
+        "type": "rule",
+        "id": "decimo-terceiro"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-13-salario",
+        "path": "calculadora-13-salario/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0014",
+      "from": {
+        "type": "rule",
+        "id": "decimo-terceiro"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-clt-ou-pj",
+        "path": "calculadora-clt-ou-pj/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0015",
+      "from": {
+        "type": "rule",
+        "id": "decimo-terceiro"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-ferias-clt",
+        "path": "calculadora-ferias-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0016",
+      "from": {
+        "type": "rule",
+        "id": "decimo-terceiro"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-rescisao-clt",
+        "path": "calculadora-rescisao-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0017",
+      "from": {
+        "type": "rule",
+        "id": "ferias"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-clt-ou-pj",
+        "path": "calculadora-clt-ou-pj/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0018",
+      "from": {
+        "type": "rule",
+        "id": "ferias"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-ferias-clt",
+        "path": "calculadora-ferias-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0019",
+      "from": {
+        "type": "rule",
+        "id": "ferias"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-rescisao-clt",
+        "path": "calculadora-rescisao-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0020",
+      "from": {
+        "type": "rule",
+        "id": "fgts"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-clt-ou-pj",
+        "path": "calculadora-clt-ou-pj/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0021",
+      "from": {
+        "type": "rule",
+        "id": "fgts"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-multa-40-fgts",
+        "path": "calculadora-multa-40-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0022",
+      "from": {
+        "type": "rule",
+        "id": "fgts"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-rescisao-clt",
+        "path": "calculadora-rescisao-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0023",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:saque-aniversario-fgts",
+        "path": "saque-aniversario-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONNECTED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0030",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "REPORT_OUTPUT",
+        "id": "report:fgts-saque-aniversario-canonical-rule-reconciliation",
+        "path": "data/operations/reports/end-to-end/saque-aniversario-fgts-canonical-rule-reconciliation/operation-report.json"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0025",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "RESULT_EXPLANATION",
+        "id": "content:saque-aniversario-fgts:result-explanation",
+        "path": "saque-aniversario-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONNECTED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0027",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "RULE_DEPENDENT_EXAMPLE",
+        "id": "content:saque-aniversario-fgts:rule-dependent-example",
+        "path": "data/rules/fgts.json"
+      },
+      "relationType": "unspecified",
+      "status": "NOT_APPLICABLE",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0026",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "RULE_SUMMARY",
+        "id": "content:saque-aniversario-fgts:rule-summary",
+        "path": "saque-aniversario-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONNECTED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0031",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "STALE_DETECTION",
+        "id": "validator:fgts-saque-aniversario-stale-detection",
+        "path": "scripts/validate-fgts-saque-aniversario-canonical-rule.js"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0028",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "UPDATED_AT_METADATA",
+        "id": "metadata:saque-aniversario-fgts:updated-at",
+        "path": "data/editorial-metadata.json"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONNECTED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0029",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "VALIDATION_TEST",
+        "id": "validator:fgts-saque-aniversario-canonical-rule",
+        "path": "scripts/validate-fgts-saque-aniversario-canonical-rule.js"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONFIRMED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0024",
+      "from": {
+        "type": "rule",
+        "id": "fgts.saque-aniversario"
+      },
+      "to": {
+        "type": "VISIBLE_TABLE",
+        "id": "content:saque-aniversario-fgts:visible-table",
+        "path": "saque-aniversario-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "GOVERNED_CONNECTED",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0032",
+      "from": {
+        "type": "rule",
+        "id": "horas-extras"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-horas-extras-clt",
+        "path": "calculadora-horas-extras-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0033",
+      "from": {
+        "type": "rule",
+        "id": "insalubridade"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-insalubridade",
+        "path": "calculadora-insalubridade/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0034",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-13-salario",
+        "path": "calculadora-13-salario/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0035",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-clt-ou-pj",
+        "path": "calculadora-clt-ou-pj/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0036",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-das-mei-2026",
+        "path": "calculadora-das-mei-2026/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0037",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-ferias-clt",
+        "path": "calculadora-ferias-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0038",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss",
+        "path": "calculadora-inss/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0039",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss-autonomo",
+        "path": "calculadora-inss-autonomo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0040",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss-mei",
+        "path": "calculadora-inss-mei/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0041",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:salario-liquido-clt",
+        "path": "salario-liquido-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0042",
+      "from": {
+        "type": "rule",
+        "id": "inss"
+      },
+      "to": {
+        "type": "VALIDATION_TEST",
+        "id": "validator:transform-rules",
+        "path": "scripts/transform-rules.js"
+      },
+      "relationType": "unspecified",
+      "status": "CONFIRMED_GOVERNED_CONSUMER",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0043",
+      "from": {
+        "type": "rule",
+        "id": "irrf"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-13-salario",
+        "path": "calculadora-13-salario/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0044",
+      "from": {
+        "type": "rule",
+        "id": "irrf"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-clt-ou-pj",
+        "path": "calculadora-clt-ou-pj/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0045",
+      "from": {
+        "type": "rule",
+        "id": "irrf"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-ferias-clt",
+        "path": "calculadora-ferias-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0046",
+      "from": {
+        "type": "rule",
+        "id": "irrf"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:salario-liquido-clt",
+        "path": "salario-liquido-clt/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0047",
+      "from": {
+        "type": "rule",
+        "id": "rescisao"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-multa-40-fgts",
+        "path": "calculadora-multa-40-fgts/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0048",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-das-mei-2026",
+        "path": "calculadora-das-mei-2026/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0049",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-insalubridade",
+        "path": "calculadora-insalubridade/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0050",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss",
+        "path": "calculadora-inss/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0051",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss-autonomo",
+        "path": "calculadora-inss-autonomo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0052",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss-mei",
+        "path": "calculadora-inss-mei/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0053",
+      "from": {
+        "type": "rule",
+        "id": "salario-minimo"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-seguro-desemprego",
+        "path": "calculadora-seguro-desemprego/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0054",
+      "from": {
+        "type": "rule",
+        "id": "seguro-desemprego"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-seguro-desemprego",
+        "path": "calculadora-seguro-desemprego/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    },
+    {
+      "relationId": "relation-0055",
+      "from": {
+        "type": "rule",
+        "id": "tetoINSS"
+      },
+      "to": {
+        "type": "CALCULATION_ENGINE",
+        "id": "calculator:calculadora-inss-autonomo",
+        "path": "calculadora-inss-autonomo/index.html"
+      },
+      "relationType": "unspecified",
+      "status": "LEGACY_DECLARED_PENDING_MIGRATION",
+      "context": {
+        "nucleusId": null,
+        "domainId": null,
+        "clusterId": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "PROJ-AP-006",
+  "domainId": "aviso-previo",
+  "title": "Direito à redução de jornada no aviso",
+  "purpose": "Resolver a incidência e a modalidade do direito à redução de jornada durante aviso trabalhado.",
+  "version": "1.1.0",
+  "status": "review",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-005",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-013",
+    "CPT-AVP-014"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "requirement": "required",
+      "purpose": "Confirmar iniciativa patronal."
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "requirement": "required",
+      "purpose": "Confirmar aviso trabalhado."
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "requirement": "conditional",
+      "purpose": "Registrar opção legal do empregado."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-006-A",
+        "factId": "FACT-TERMINATION-BY-EMPLOYER",
+        "operator": "equals",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "value": true
+      },
+      {
+        "id": "COND-PROJ-AP-006-B",
+        "factId": "FACT-NOTICE-WORKED",
+        "operator": "equals",
+        "onUnknown": "insufficient-facts",
+        "reason": "Condição jurídica necessária.",
+        "value": true
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [],
+  "dependencies": [
+    {
+      "projectionId": "PROJ-AP-002",
+      "requirement": "required",
+      "failurePolicy": "propagate",
+      "consumesOutputs": [
+        "notice_modality"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "key": "workday_reduction_entitlement",
+      "valueType": "boolean",
+      "semantics": "Indica existência do direito à redução.",
+      "source": "condition-result",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "COND-PROJ-AP-006-A",
+      "defaultValue": true
+    },
+    {
+      "key": "reduction_mode",
+      "valueType": "enum",
+      "semantics": "Modalidade escolhida para redução.",
+      "source": "fact",
+      "nullable": false,
+      "consumerVisibility": "public",
+      "sourceRef": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "allowedValues": [
+        "two_hours_daily",
+        "seven_consecutive_days",
+        "not_selected"
+      ],
+      "valueMap": {
+        "duas-horas-diarias": "two_hours_daily",
+        "sete-dias-corridos": "seven_consecutive_days",
+        "nao-informada": "not_selected",
+        "nao-aplicavel": "not_selected"
+      },
+      "defaultValue": "not_selected"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A redução é resolvida pela iniciativa patronal e pelo caráter trabalhado do aviso.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-21T21:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-006-A",
+    "TC-PROJ-AP-006-B",
+    "TC-PROJ-AP-006-C"
+  ],
+  "contentFingerprint": "sha256:451acc34e2ce6f08d6506ab7bf227023413392e36c22c5261b76cb1102822241"
+}

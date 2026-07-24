@@ -1,0 +1,40 @@
+{
+  "id": "SRC-TST-SUMULA-305",
+  "type": "official-guidance",
+  "jurisdiction": "BR",
+  "title": "Tribunal Superior do Trabalho — Súmula nº 305",
+  "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+  "publicationDate": null,
+  "effectiveFrom": null,
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "SUM-305 — incidência do FGTS sobre o aviso-prévio, trabalhado ou indenizado.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-tst-sumula-305.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:5b895a68f443dffa2b458bb4e68bb6e66d729aaf07492f48cc8e66c5f331bad9",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:5b895a68f443dffa2b458bb4e68bb6e66d729aaf07492f48cc8e66c5f331bad9",
+  "supersedesSourceId": null,
+  "notes": [
+    "Enunciado jurisprudencial oficial relacionado a projeções e dependências com FGTS.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

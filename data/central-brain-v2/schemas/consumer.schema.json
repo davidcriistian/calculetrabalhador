@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consumer.schema.json",
+  "title": "Brain Consumer Inventory Item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "path",
+    "declaredRuleDependencies",
+    "risk",
+    "integrationStatus",
+    "authority"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "canonicalId": {
+      "type": "string",
+      "pattern": "^CNS-[A-Z0-9-]+$"
+    },
+    "type": {
+      "enum": [
+        "calculator",
+        "article",
+        "api",
+        "dashboard",
+        "automation",
+        "test",
+        "other"
+      ]
+    },
+    "path": {
+      "type": "string"
+    },
+    "declaredRuleDependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "integrationStatus": {
+      "enum": [
+        "NOT_CONNECTED",
+        "SHADOW",
+        "CONNECTED",
+        "RETIRED"
+      ]
+    },
+    "authority": {
+      "enum": [
+        "legacy-runtime",
+        "central-brain",
+        "none"
+      ]
+    }
+  }
+}

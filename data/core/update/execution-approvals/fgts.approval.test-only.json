@@ -1,0 +1,33 @@
+{
+  "id": "execution-approval-fgts-test-only",
+  "version": "1.0.0",
+  "status": "approved",
+  "ruleId": "fgts",
+  "impactAnalysisFile": "data/core/update/impact-analysis/fgts.impact.json",
+  "issuedAt": "2026-07-19T00:00:00Z",
+  "expiresAt": "2099-12-31T23:59:59Z",
+  "testOnly": true,
+  "approvals": [
+    {
+      "role": "domain-owner",
+      "decision": "approved",
+      "reviewer": "phase-5-test-fixture",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": "Fixture de validação; não autoriza execução real."
+    },
+    {
+      "role": "legal-reviewer",
+      "decision": "approved",
+      "reviewer": "phase-5-test-fixture",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": "Fixture de validação; não autoriza execução real."
+    },
+    {
+      "role": "publishing-owner",
+      "decision": "approved",
+      "reviewer": "phase-5-test-fixture",
+      "decidedAt": "2026-07-19T00:00:00Z",
+      "notes": "Fixture de validação; não autoriza execução real."
+    }
+  ]
+}

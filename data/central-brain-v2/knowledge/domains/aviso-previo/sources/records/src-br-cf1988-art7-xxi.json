@@ -1,0 +1,40 @@
+{
+  "id": "SRC-BR-CF1988-ART7-XXI",
+  "type": "constitution",
+  "jurisdiction": "BR",
+  "title": "Constituição da República Federativa do Brasil de 1988 — art. 7º, XXI",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+  "publicationDate": "1988-10-05",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-21T18:30:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "Art. 7º, XXI — fundamento constitucional do aviso-prévio proporcional ao tempo de serviço, com mínimo de trinta dias.",
+      "capturedAt": "2026-07-21T18:30:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-cf1988-art7-xxi.snapshot.json",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:37c94b57d3068f1d6c8442cf28b04fdd5caf656ba77d0d5f0b0cdfc71ab88fa1",
+      "capturedAt": "2026-07-22T03:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:37c94b57d3068f1d6c8442cf28b04fdd5caf656ba77d0d5f0b0cdfc71ab88fa1",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária. O conteúdo interpretado será modelado em conceitos e regras posteriores.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page."
+  ]
+}

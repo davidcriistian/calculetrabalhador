@@ -1,0 +1,31 @@
+{
+  "auditId": "AUDIT-SPRINT-5-6-1-BLOCK-1",
+  "scope": "temporalidade",
+  "executedAt": "2026-07-21T22:00:00.000Z",
+  "baseline": "sprint-5.5",
+  "result": "approved-with-governance-gate",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "remaining": [
+    {
+      "severity": "medium",
+      "code": "LEGAL_APPROVAL_PENDING",
+      "description": "As versões das regras continuam em review; execução operacional permanece bloqueada até aprovação jurídica formal."
+    }
+  ],
+  "validation": {
+    "structuralTests": 84,
+    "runtimeTests": 20,
+    "jsonFilesChecked": 188,
+    "errors": 0
+  },
+  "readiness": {
+    "temporalLayerReady": true,
+    "runtimeAuthority": false,
+    "consumerReady": false
+  }
+}

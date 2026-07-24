@@ -1,0 +1,52 @@
+{
+  "engineId": "ENG-PROJECTION-RUNTIME",
+  "status": "validation",
+  "domainAdapters": [
+    "aviso-previo"
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "modules": [
+    "snapshot-loader",
+    "fact-validator",
+    "temporal-rule-selector",
+    "condition-evaluator",
+    "operation-library",
+    "executor",
+    "explanation-builder",
+    "result-validator",
+    {
+      "id": "temporal",
+      "path": "./temporal.js",
+      "purpose": "Canonical civil-date arithmetic and legal reference resolution."
+    },
+    "canonical",
+    "output-materializer",
+    "schema-validator"
+  ],
+  "allowedOperations": [
+    "aggregate-effects",
+    "bounded-linear-duration",
+    "calendar-add-days",
+    "effective-bounded-linear-duration",
+    "map-value",
+    "consolidation-status",
+    "unresolved-projections"
+  ],
+  "determinism": {
+    "canonicalization": "recursive-key-sort",
+    "hash": "sha256",
+    "clock": "injected",
+    "timezone": "UTC/date-only"
+  },
+  "supportedOperations": [
+    "date-add-days"
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "componentVersion": "1.4.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

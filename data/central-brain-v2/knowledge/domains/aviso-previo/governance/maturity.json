@@ -1,0 +1,91 @@
+{
+  "$schema": "../../../../schemas/domain-maturity.schema.json",
+  "domainId": "aviso-previo",
+  "consumerReady": false,
+  "gates": [
+    {
+      "id": "IDENTITY",
+      "status": "PASS",
+      "evidence": [
+        "identity/"
+      ]
+    },
+    {
+      "id": "SOURCES",
+      "status": "PASS",
+      "evidence": [
+        "sources/index.json",
+        "sources/evidence/"
+      ]
+    },
+    {
+      "id": "CONCEPTS",
+      "status": "PASS",
+      "evidence": [
+        "concepts/index.json",
+        "../../../ontology/relations.json"
+      ]
+    },
+    {
+      "id": "RULES_TECHNICAL",
+      "status": "PASS",
+      "evidence": [
+        "rules/index.json",
+        "rules/traceability/"
+      ]
+    },
+    {
+      "id": "PROJECTIONS_TECHNICAL",
+      "status": "PASS",
+      "evidence": [
+        "../../../projections/domains/aviso-previo/index.json",
+        "../../../../tests/projection-runtime/run.js"
+      ]
+    },
+    {
+      "id": "DEPENDENCIES",
+      "status": "PASS",
+      "evidence": [
+        "../../../federation/index.json",
+        "../../../shared/vocabulary.json"
+      ]
+    },
+    {
+      "id": "TESTS_TECHNICAL",
+      "status": "PASS",
+      "evidence": [
+        "tests/",
+        "../../../../tests/run-tests.js",
+        "../../../../tests/projection-runtime/run.js"
+      ]
+    },
+    {
+      "id": "LEGAL_REVIEW",
+      "status": "PENDING",
+      "evidence": [
+        "../../../../governance/approvals.json"
+      ]
+    },
+    {
+      "id": "NORMATIVE_COMPLETENESS",
+      "status": "PASS",
+      "evidence": [
+        "governance/normative-baseline.json",
+        "rules/index.json",
+        "../../../projections/domains/aviso-previo/index.json",
+        "tests/"
+      ]
+    },
+    {
+      "id": "CONSUMER_PROMOTION",
+      "status": "PENDING",
+      "evidence": [
+        "../../../../registries/consumers.inventory.json"
+      ]
+    }
+  ],
+  "lastReviewedAt": "2026-07-24T00:30:00.000Z",
+  "reviewedBy": "central-brain-phase-e-consistency-correction",
+  "technicalMaturity": "PROJECTIONS_VALIDATED",
+  "legalMaturity": "PENDING_FORMAL_REVIEW"
+}

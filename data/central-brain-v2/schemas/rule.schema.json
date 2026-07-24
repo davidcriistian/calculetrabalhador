@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rule.schema.json",
+  "title": "Canonical Temporal Rule",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domainId",
+    "title",
+    "status",
+    "versions",
+    "aliases"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^RULE-[A-Z0-9-]+$"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "deprecated",
+        "retired"
+      ]
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "$ref": "./rule-version.schema.json"
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "consumerIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

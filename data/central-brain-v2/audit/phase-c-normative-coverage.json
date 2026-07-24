@@ -1,0 +1,33 @@
+{
+  "phase": "C",
+  "title": "Normative Coverage Corrections",
+  "status": "technically-completed-pending-formal-legal-review",
+  "eventId": "AUD-CB-PHASE-C-NORMATIVE-COVERAGE",
+  "packageVersionAtExecution": "2.5.0-sprint5.6.7-phase2",
+  "domainId": "aviso-previo",
+  "scope": [
+    "normative-baseline",
+    "article-484a-temporality",
+    "sumula-305-federation",
+    "granularity-policy",
+    "tests",
+    "traceability"
+  ],
+  "results": {
+    "sources": 14,
+    "concepts": 16,
+    "facts": 39,
+    "rules": 15,
+    "projections": 17,
+    "coveragePercent": 100,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "formalLegalApproval": false
+  },
+  "evidence": [
+    "docs/sprint-5/phase-c-correction-report.json",
+    "knowledge/domains/aviso-previo/governance/normative-baseline.json",
+    "registries/audit-events.json"
+  ],
+  "recordedAt": "2026-07-22T17:30:00.000Z"
+}

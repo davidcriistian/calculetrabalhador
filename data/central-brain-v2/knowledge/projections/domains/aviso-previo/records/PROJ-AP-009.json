@@ -1,0 +1,109 @@
+{
+  "id": "PROJ-AP-009",
+  "domainId": "aviso-previo",
+  "title": "Contrato a termo com cláusula assecuratória",
+  "purpose": "Projetar de forma declarativa os efeitos de contrato a termo com cláusula assecuratória.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-007",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-009-A",
+        "factId": "FACT-CONTRACT-TERM-TYPE",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-009-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-009-X1",
+          "factId": "FACT-CONTRACT-TERM-TYPE",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-007"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "term_clause_effect",
+      "valueType": "enum",
+      "semantics": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeter",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-007-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A cláusula assecuratória do direito recíproco de rescisão antecipada em contrato a termo atrai, quando exercida, os princípios aplicáveis à rescisão dos contratos por prazo indeterminado.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-009-A",
+    "TC-PROJ-AP-009-B"
+  ],
+  "contentFingerprint": "sha256:5582e1a1d57447555a8b89d4ecf72bc2a7923ebee7f7b3e3df678f0194e6012e"
+}

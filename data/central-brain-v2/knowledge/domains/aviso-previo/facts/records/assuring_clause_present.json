@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-ASSURING-CLAUSE-PRESENT",
+  "domainId": "aviso-previo",
+  "key": "assuring_clause_present",
+  "label": "Cláusula assecuratória de rescisão antecipada",
+  "description": "Indica se contrato a termo contém cláusula que assegura às partes o direito de rescisão antecipada, informação necessária para encaminhamento ao regime jurídico correto.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-016"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [
+      "FACT-CONTRACT-TERM-TYPE"
+    ],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-CLAUSULA-001",
+      "severity": "warning",
+      "assertion": "assuring_clause_present only relevant when contract_term_type != indeterminado",
+      "message": "A cláusula assecuratória não deve alterar a classificação de contrato já indeterminado.",
+      "relatedFactIds": [
+        "FACT-CONTRACT-TERM-TYPE"
+      ]
+    }
+  ],
+  "legalBasis": [],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:1c74710e7e660a9a54b4dc46c00d1c326c17814a4c4f836e4f7ba9af814e990e"
+}

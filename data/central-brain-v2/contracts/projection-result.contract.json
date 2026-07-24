@@ -1,0 +1,47 @@
+{
+  "id": "projection-result",
+  "version": "1.1.0",
+  "status": "design-approved",
+  "schema": "../schemas/projection-result.schema.json",
+  "guarantees": [
+    "Every result identifies the exact projection version, Brain snapshot and engine version.",
+    "Every output has a machine-readable outputTrace linking it to facts, rules, dependencies, constants, overrides or pure operations.",
+    "Unresolved states never masquerade as resolved conclusions.",
+    "Output fingerprints are stable for semantically identical executions.",
+    "Warnings and limitations are preserved for consumers."
+  ],
+  "consumerRules": [
+    "Consumers must branch on status before reading outputs.",
+    "Consumers must not infer values from missing outputs.",
+    "Consumers must display or preserve human-review and limitation signals.",
+    "Consumers must not alter legal-basis trace.",
+    "Consumers may format human-readable text but must not rewrite the canonical result."
+  ],
+  "requiredAuditFields": [
+    "executionId",
+    "projectionId",
+    "projectionVersion",
+    "referenceDate",
+    "brainSnapshotId",
+    "engineVersion",
+    "inputFingerprint",
+    "outputFingerprint",
+    "ruleTrace",
+    "usedFacts",
+    "completedAt"
+  ],
+  "privacyRules": [
+    "Result payloads should reference fact identifiers rather than duplicate personal evidence.",
+    "Sensitive evidence contents remain outside canonical result objects.",
+    "Logs must support redaction without breaking fingerprints of canonical legal outputs."
+  ],
+  "lifecycle": [
+    "generated",
+    "validated",
+    "consumed",
+    "archived"
+  ],
+  "runtimeAuthority": false,
+  "consumerReady": false,
+  "outputTraceRequired": true
+}

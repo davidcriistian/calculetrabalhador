@@ -1,16 +1,16 @@
 {
   "id": "calculator-canonical-experience-contract",
-  "calculatorExperienceContractVersion": "1.2.0",
+  "calculatorExperienceContractVersion": "1.3.0",
   "status": "active-internal-standard",
   "runtimeStatus": "consumed-by-calculator-automation",
   "createdAt": "2026-07-14",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "owner": "Calcule Trabalhador",
   "source": "CALCULATOR CONSERVATIVE MIGRATION AND GOVERNED PROPAGATION FOUNDATION",
   "principle": ["SAME_PRODUCT_SYSTEM", "SAME_QUALITY_FLOOR", "DOMAIN_SPECIFIC_ADAPTATION"],
   "conservativeMigrationContract": {
     "reference": "/data/blueprints/contracts/calculator-migration.contract.json",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "requiredFor": ["MIGRATED_ASSET", "MIGRATE_EXISTING_CALCULATOR"],
     "preservationIsDefault": true,
     "editorialRewriteIsMigrationResponsibility": false,
@@ -27,6 +27,10 @@
     "requiredParityAssessment": ["STRUCTURAL_PARITY", "DESIGN_SYSTEM_PARITY", "QUALITY_PARITY", "RESPONSIVE_PARITY"],
     "prohibitedLiteralCopy": ["text", "legal-rules", "field-identifiers", "domain-formulas", "fixed-step-count", "reference-specific-theme-color", "pixel-identical-copy"]
   },
+  "approvedMigrationReferenceFamily": [
+    {"assetId":"calculator:calculadora-aviso-previo","status":"HOMOLOGATED","commit":"0a8c8ce66e06cbadea9472e423f42fcdb2718046"},
+    {"assetId":"calculator:saque-aniversario-fgts","status":"HOMOLOGATED","commit":"c905a05d5a31567f827c46362c1bffe15fb39264"}
+  ],
   "brandThemeContract": {
     "defaultPrimaryTheme": "INSTITUTIONAL_BLUE",
     "requiredFor": ["NEW_ASSET", "MIGRATED_ASSET"],
@@ -197,7 +201,29 @@
     "visualPassRequires":{"renderedEvidence":true,"requiredViewports":["small-mobile","large-mobile","intermediate","desktop"],"criticalAreas":["hero","form","fields","cta","result","cards","tables-when-present","faq","overflow","text-wrap","footer","result-actions"]},
     "notExecutedCannotBecome":"FULL_STANDARD_ACCEPTED"
   },
+  "canonicalVisualFamilyConformanceContract": {
+    "gate": "CANONICAL_VISUAL_FAMILY_CONFORMANCE",
+    "statuses": ["PASS", "FAIL", "HUMAN_REVIEW_REQUIRED"],
+    "approvedReferencesSource": "approvedMigrationReferenceFamily",
+    "presenceOfScreenshotsIsSufficient": false,
+    "minimumComparison": ["shell","header","hero","breadcrumb","badge","cta","discovery-block","journey","step-cards","confirmation","empty-state","result","metrics","interpretation","memory","actions","adaptive-report","content","faq","mobile","desktop"],
+    "resultStateMustBeRenderedBeforeEvidence": true,
+    "failureBlocksMigrationCompletion": true
+  },
+  "publicAssetIntegrityContract": {
+    "gate": "PUBLIC_ASSET_INTEGRITY",
+    "requiredProtocols": ["file://", "http-local"],
+    "requiredViewports": ["mobile", "desktop"],
+    "requiredAssets": ["logos", "favicons", "icons", "fonts", "institutional-images"],
+    "imagePassCondition": "element-present-and-complete-and-naturalWidth-greater-than-zero",
+    "networkPassCondition": "no-required-asset-404-or-path-error",
+    "filePathBoundary": "must-resolve-inside-repository",
+    "domPresenceAloneIsSufficient": false,
+    "failureBlocksMigrationCompletion": true
+  },
   "prohibitedAntiPatterns": [
+    {"id":"CANONICAL_VISUAL_FAMILY_NOT_COMPARED","appliesWhen":"a migrated calculator seeks approval without comparison to a homologated calculator family","doesNotApplyWhen":"legacy asset remains LEGACY_ACCEPTED_PENDING_MIGRATION","severity":"BLOCKER","validationMethod":"visual-family-comparison","requiredEvidence":["approved-reference","mobile-comparison","desktop-comparison","rendered-result-state"]},
+    {"id":"BROKEN_REQUIRED_PUBLIC_ASSET","appliesWhen":"a required logo, icon, font or institutional image fails real loading","doesNotApplyWhen":"asset is explicitly optional and absent by design","severity":"BLOCKER","validationMethod":"browser-runtime-asset-check","requiredEvidence":["naturalWidth-or-equivalent","network-log","file-and-http-matrix"]},
     {"id":"INTERNAL_GOVERNANCE_METADATA_LEAK","appliesWhen":"implementation, versioning, reconciliation, projection, stale-state, Registry or Publishing metadata is rendered in the public user experience","doesNotApplyWhen":"metadata remains restricted to internal governance, audit, validation or diagnostics","severity":"BLOCKER","validationMethod":"public-copy-and-render-scan","requiredEvidence":["public-copy-scan","render-evidence","internal-diagnostics-separation"]},
     {"id":"UNAPPROVED_PRIMARY_THEME","appliesWhen":"primary theme is not INSTITUTIONAL_BLUE and no approved variation exists","doesNotApplyWhen":"documented brand variation has human approval and render evidence","severity":"BLOCKER","validationMethod":"brand-theme-resolution","requiredEvidence":["theme-token-map","approval-record","render"]},
     {"id":"EDITORIAL_CONTENT_TOO_SHORT","appliesWhen":"main editorial content has fewer than 800 words after exclusions","doesNotApplyWhen":"never for NEW_ASSET or MIGRATED_ASSET","severity":"BLOCKER","validationMethod":"scoped-editorial-word-count","requiredEvidence":["word-count-report","exclusion-map"]},
@@ -224,7 +250,8 @@
     {"id":"STATIC_VALIDATION_ONLY","appliesWhen":"full-standard visual approval is requested","doesNotApplyWhen":"internal plan/dry-run without visual certification","severity":"BLOCKER","validationMethod":"visual-status-review","requiredEvidence":["browser-render-or-manual-screenshot-approval"]},
     {"id":"FAQ_PRESENT_BUT_SHALLOW","appliesWhen":"FAQ is required by user intent or FAQPage is emitted","doesNotApplyWhen":"FAQ is not applicable and schema absent","severity":"MAJOR","validationMethod":"faq-intent-and-schema-review","requiredEvidence":["faq-map"]},
     {"id":"CONTENT_PRESENT_BUT_MINIMAL","appliesWhen":"guide/content is required by complexity or risk","doesNotApplyWhen":"simple low-risk utility with approved concise content","severity":"MAJOR","validationMethod":"content-depth-review","requiredEvidence":["content-review"]},
-    {"id":"REFERENCE_DECLARED_BUT_NOT_ENFORCED","appliesWhen":"new or migrated calculator generation","doesNotApplyWhen":"legacy asset is only being inventoried","severity":"BLOCKER","validationMethod":"reference-study-gate","requiredEvidence":["reference-study","module-decomposition","parity-assessment"]}
+    {"id":"REFERENCE_DECLARED_BUT_NOT_ENFORCED","appliesWhen":"new or migrated calculator generation","doesNotApplyWhen":"legacy asset is only being inventoried","severity":"BLOCKER","validationMethod":"reference-study-gate","requiredEvidence":["reference-study","module-decomposition","parity-assessment"]},
+    {"id":"RESULT_EVIDENCE_CAPTURED_BEFORE_RESULT","appliesWhen":"visual evidence is captured before a valid result is rendered and asserted","doesNotApplyWhen":"evidence is explicitly an entry or error state","severity":"BLOCKER","validationMethod":"browser-state-timing-check","requiredEvidence":["form-exercised","result-visible","numeric-or-semantic-result-assertion"]}
   ],
   "validationGates": [
     {"id":"REFERENCE_STUDY_COMPLETE","passWhen":["reference-resolved","physical-page-opened","modules-decomposed","literal-copy-avoidance-recorded"]},
@@ -239,7 +266,10 @@
     {"id":"RECOMMENDATION_SLOT_RESOLVED","passWhen":["stable-slot-exists-after-interpretation-before-memory","state-is-one-of-four-canonical-states","visibility-and-approved-source-rules-pass"]},
     {"id":"ADAPTIVE_REPORT_CONTRACT_RESOLVED","passWhen":["all-seven-report-declarations-resolved-from-calculator-contract","output-is-a4-structured-selectable-and-isolated","no-prohibited-report-pattern"]},
     {"id":"REPORT_RENDER_VALIDATED","passWhen":["copy-print-download-behaviors-are-distinct","each-applicable-action-has-functional-evidence","report-is-viewport-independent"]},
-    {"id":"PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED","passWhen":["public-copy-contains-no-internal-governance-metadata","public-errors-are-simple-and-actionable","technical-details-remain-in-internal-diagnostics"]}
+    {"id":"PUBLIC_EXPERIENCE_BOUNDARY_RESOLVED","passWhen":["public-copy-contains-no-internal-governance-metadata","public-errors-are-simple-and-actionable","technical-details-remain-in-internal-diagnostics"]},
+    {"id":"CANONICAL_VISUAL_FAMILY_CONFORMANCE","passWhen":["approved-reference-selected","mobile-and-desktop-compared","result-state-rendered","status-is-pass-or-human-review-is-resolved"]},
+    {"id":"PUBLIC_ASSET_INTEGRITY","passWhen":["file-and-http-executed","mobile-and-desktop-executed","required-images-have-naturalWidth","fonts-loaded","no-required-asset-404"]},
+    {"id":"HUMAN_ACCEPTANCE","passWhen":["human-visual-acceptance-pass","human-calculation-acceptance-pass","human-legal-behavior-acceptance-pass-when-applicable"]}
   ],
   "exceptionRules": {
     "allowedOnlyWhen":["module-not-applicable-by-contract","alternative-achieves-same-quality-floor","manual-exception-approved-with-evidence"],

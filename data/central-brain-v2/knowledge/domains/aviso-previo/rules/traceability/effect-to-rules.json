@@ -1,0 +1,97 @@
+{
+  "version": "0.4.0",
+  "domainId": "aviso-previo",
+  "generatedAt": "2026-07-21T23:30:00.000Z",
+  "items": {
+    "duty": [
+      {
+        "ruleId": "RULE-AP-001",
+        "effectId": "EFFECT-AP-001-A"
+      }
+    ],
+    "substitution": [
+      {
+        "ruleId": "RULE-AP-001",
+        "effectId": "EFFECT-AP-001-B"
+      }
+    ],
+    "deduction": [
+      {
+        "ruleId": "RULE-AP-001",
+        "effectId": "EFFECT-AP-001-C"
+      }
+    ],
+    "duration-floor": [
+      {
+        "ruleId": "RULE-AP-002",
+        "effectId": "EFFECT-AP-002-A"
+      }
+    ],
+    "duration-increment": [
+      {
+        "ruleId": "RULE-AP-002",
+        "effectId": "EFFECT-AP-002-B"
+      }
+    ],
+    "duration-cap": [
+      {
+        "ruleId": "RULE-AP-002",
+        "effectId": "EFFECT-AP-002-C"
+      }
+    ],
+    "service-time-integration": [
+      {
+        "ruleId": "RULE-AP-003",
+        "effectId": "EFFECT-AP-003-A"
+      }
+    ],
+    "date-projection": [
+      {
+        "ruleId": "RULE-AP-003",
+        "effectId": "EFFECT-AP-003-B"
+      }
+    ],
+    "record-annotation": [
+      {
+        "ruleId": "RULE-AP-003",
+        "effectId": "EFFECT-AP-003-C"
+      }
+    ],
+    "classification": [
+      {
+        "ruleId": "RULE-AP-004",
+        "effectId": "EFFECT-AP-004-A"
+      }
+    ],
+    "payment-substitution": [
+      {
+        "ruleId": "RULE-AP-004",
+        "effectId": "EFFECT-AP-004-B"
+      }
+    ],
+    "working-time-reduction": [
+      {
+        "ruleId": "RULE-AP-005",
+        "effectId": "EFFECT-AP-005-A"
+      }
+    ],
+    "alternative-absence": [
+      {
+        "ruleId": "RULE-AP-005",
+        "effectId": "EFFECT-AP-005-B"
+      }
+    ],
+    "right-preservation": [
+      {
+        "ruleId": "RULE-AP-006",
+        "effectId": "EFFECT-AP-006-A"
+      }
+    ],
+    "payment-exoneration": [
+      {
+        "ruleId": "RULE-AP-006",
+        "effectId": "EFFECT-AP-006-B"
+      }
+    ]
+  }
+}

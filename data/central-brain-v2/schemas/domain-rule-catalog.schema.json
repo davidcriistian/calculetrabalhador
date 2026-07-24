@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "domain-rule-catalog.schema.json",
+  "title": "Domain Rule Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domainId",
+    "catalogVersion",
+    "status",
+    "items",
+    "verification"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "RULES_IN_LEGAL_REVIEW",
+        "RULES_VALIDATED",
+        "RULES_DEPRECATED"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ruleId",
+          "path",
+          "status",
+          "currentVersionId",
+          "sourceIds",
+          "conceptIds"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string",
+            "pattern": "^RULE-[A-Z0-9-]+$"
+          },
+          "path": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "review",
+              "approved",
+              "deprecated",
+              "retired"
+            ]
+          },
+          "currentVersionId": {
+            "type": "string",
+            "pattern": "^VER-[A-Z0-9-]+$"
+          },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^SRC-[A-Z0-9-]+$"
+            }
+          },
+          "conceptIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^CPT-[A-Z0-9-]+$"
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "verifiedAt",
+        "verifiedBy",
+        "method",
+        "notes"
+      ],
+      "properties": {
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verifiedBy": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ruleCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

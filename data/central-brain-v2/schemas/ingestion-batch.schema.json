@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ingestion-batch.schema.json",
+  "title": "Controlled Legal Ingestion Batch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domainId",
+    "status",
+    "createdAt",
+    "createdBy",
+    "correlationId",
+    "sources",
+    "rules",
+    "projections",
+    "dependencies",
+    "reviews"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^BATCH-[A-Z0-9-]+$"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "preflight-passed",
+        "legal-review",
+        "technical-review",
+        "approved",
+        "committed",
+        "rejected"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "correlationId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "./source.schema.json"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "./rule.schema.json"
+      }
+    },
+    "projections": {
+      "type": "array",
+      "items": {
+        "$ref": "./projection.schema.json"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "./dependency.schema.json"
+      }
+    },
+    "reviews": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "legal",
+        "technical",
+        "approval"
+      ],
+      "properties": {
+        "legal": {
+          "$ref": "#/$defs/review"
+        },
+        "technical": {
+          "$ref": "#/$defs/review"
+        },
+        "approval": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

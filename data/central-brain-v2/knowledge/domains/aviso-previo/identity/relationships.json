@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../../schemas/domain-relationships.schema.json",
+  "domainId": "aviso-previo",
+  "items": [
+    {
+      "targetDomainId": "clt",
+      "relation": "governed-by",
+      "status": "declared"
+    },
+    {
+      "targetDomainId": "rescisao",
+      "relation": "related-to",
+      "status": "declared"
+    },
+    {
+      "targetDomainId": "ferias",
+      "relation": "may-impact",
+      "status": "pending-validation"
+    },
+    {
+      "targetDomainId": "decimo-terceiro",
+      "relation": "may-impact",
+      "status": "pending-validation"
+    },
+    {
+      "targetDomainId": "fgts",
+      "relation": "may-impact",
+      "status": "pending-validation"
+    }
+  ]
+}

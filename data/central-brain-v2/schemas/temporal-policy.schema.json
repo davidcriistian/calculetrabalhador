@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "temporal-policy.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "status",
+    "dateModel",
+    "legalInstants",
+    "countingRules",
+    "bitemporalSelection",
+    "executionGates",
+    "referenceDateResolution",
+    "governance"
+  ],
+  "properties": {
+    "id": {
+      "const": "TEMPORAL-POLICY-BR-001"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "dateModel": {
+      "type": "object"
+    },
+    "legalInstants": {
+      "type": "object"
+    },
+    "countingRules": {
+      "type": "object"
+    },
+    "bitemporalSelection": {
+      "type": "object"
+    },
+    "executionGates": {
+      "type": "object"
+    },
+    "referenceDateResolution": {
+      "type": "object"
+    },
+    "governance": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

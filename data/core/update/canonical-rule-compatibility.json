@@ -1,0 +1,289 @@
+{
+  "id": "canonical-rule-compatibility-report",
+  "version": "1.0.0",
+  "status": "generated-internal-report",
+  "generatedAt": "2026-07-19",
+  "contract": "/data/core/update/canonical-rule-minimum.contract.json",
+  "scope": {
+    "directory": "/data/rules",
+    "ruleCount": 11,
+    "existingRulesMutated": 0,
+    "publicFilesMutated": 0
+  },
+  "summary": {
+    "DISCOVERED": 8,
+    "TRACEABLE": 2,
+    "GOVERNED": 1
+  },
+  "rules": [
+    {
+      "file": "/data/rules/adicional-noturno.json",
+      "canonicalRuleIdCandidate": "adicional-noturno",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/aviso-previo.json",
+      "canonicalRuleIdCandidate": "aviso-previo",
+      "currentStatus": "candidate",
+      "certificationLevel": "TRACEABLE",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": true,
+        "version": true,
+        "effectivePeriod": true,
+        "sources": true,
+        "consumerRegistry": true,
+        "review": true,
+        "fingerprint": false
+      },
+      "gaps": [
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/decimo-terceiro.json",
+      "canonicalRuleIdCandidate": "decimo-terceiro",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/ferias.json",
+      "canonicalRuleIdCandidate": "ferias",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/fgts.json",
+      "canonicalRuleIdCandidate": "fgts",
+      "currentStatus": "candidate",
+      "certificationLevel": "GOVERNED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": true,
+        "version": true,
+        "effectivePeriod": true,
+        "sources": true,
+        "consumerRegistry": true,
+        "review": true,
+        "fingerprint": true
+      },
+      "gaps": [],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/horas-extras.json",
+      "canonicalRuleIdCandidate": "horas-extras",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/insalubridade.json",
+      "canonicalRuleIdCandidate": "insalubridade",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/inss.json",
+      "canonicalRuleIdCandidate": "inss",
+      "currentStatus": "draft",
+      "certificationLevel": "TRACEABLE",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": true,
+        "version": true,
+        "effectivePeriod": true,
+        "sources": true,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/irrf.json",
+      "canonicalRuleIdCandidate": "irrf",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/salario-minimo.json",
+      "canonicalRuleIdCandidate": "salario-minimo",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    },
+    {
+      "file": "/data/rules/seguro-desemprego.json",
+      "canonicalRuleIdCandidate": "seguro-desemprego",
+      "currentStatus": "draft",
+      "certificationLevel": "DISCOVERED",
+      "capabilities": {
+        "identity": true,
+        "status": true,
+        "payload": false,
+        "version": true,
+        "effectivePeriod": false,
+        "sources": false,
+        "consumerRegistry": true,
+        "review": false,
+        "fingerprint": false
+      },
+      "gaps": [
+        "payload",
+        "effectivePeriod",
+        "sources",
+        "review",
+        "fingerprint"
+      ],
+      "mutationApplied": false
+    }
+  ],
+  "migrationPolicy": {
+    "strategy": "progressive-per-rule",
+    "bulkRewriteAllowed": false,
+    "legalValuesMayBeInvented": false,
+    "sourceMayBeInferredWithoutEvidence": false,
+    "nextStep": "prioritize rules by active governed consumers and legal volatility"
+  }
+}

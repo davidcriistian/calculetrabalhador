@@ -1,0 +1,65 @@
+{
+  "id": "central-brain-open-items-register",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T22:22:09.013422+00:00",
+  "summary": {
+    "items": 4,
+    "open": 4,
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 1
+  },
+  "items": [
+    {
+      "id": "OPEN-REF-001",
+      "category": "REFERENCE_NORMALIZATION",
+      "severity": "MEDIUM",
+      "count": 15,
+      "status": "OPEN",
+      "description": "Unresolved path references remain classified and must be corrected or explicitly marked virtual.",
+      "blockingFor": [
+        "automatic patch generation",
+        "complete preview evidence"
+      ],
+      "automaticResolutionAllowed": false
+    },
+    {
+      "id": "OPEN-CI-001",
+      "category": "CI_INTEGRATION",
+      "severity": "MEDIUM",
+      "count": 1,
+      "status": "OPEN",
+      "description": "Validators are available but are not yet proven to be enforced in the repository merge pipeline.",
+      "blockingFor": [
+        "unattended production readiness"
+      ],
+      "automaticResolutionAllowed": false
+    },
+    {
+      "id": "OPEN-PILOT-001",
+      "category": "REAL_WORLD_PILOT",
+      "severity": "MEDIUM",
+      "count": 1,
+      "status": "OPEN",
+      "description": "A real legal-change pilot with controlled patches and human review has not yet been executed.",
+      "blockingFor": [
+        "full operational certification"
+      ],
+      "automaticResolutionAllowed": false
+    },
+    {
+      "id": "OPEN-MON-001",
+      "category": "CONTINUOUS_MONITORING",
+      "severity": "LOW",
+      "count": 1,
+      "status": "OPEN",
+      "description": "Continuous alerting for stale rules, broken references and failed validators is not yet connected.",
+      "blockingFor": [
+        "continuous operations maturity"
+      ],
+      "automaticResolutionAllowed": false
+    }
+  ]
+}

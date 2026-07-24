@@ -1,0 +1,29 @@
+{
+  "validator": "./validate.py",
+  "report": "./validation-report.generated.json",
+  "checks": [
+    "json-schema",
+    "formats",
+    "unique-identities",
+    "cross-references",
+    "bitemporal-overlaps",
+    "maturity-gates",
+    "projection-fingerprints",
+    "index-paths",
+    "aliases",
+    "legacy-placeholder-disposition",
+    "release-metadata-consistency",
+    "normative-baseline-maturity-consistency",
+    "phase-evidence-manifest-binding",
+    "manifest-chronology",
+    "next-steps-freshness",
+    "explicit-index-version-semantics"
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "componentVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

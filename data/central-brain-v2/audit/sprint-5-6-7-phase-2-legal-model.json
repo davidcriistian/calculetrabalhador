@@ -1,0 +1,27 @@
+{
+  "sprint": "5.6.7-phase-2",
+  "title": "Legal Model Expansion and Phase A Structural Corrections",
+  "status": "completed-pending-formal-legal-review",
+  "packageVersion": "2.5.0-sprint5.6.7-phase2",
+  "scope": [
+    "sources",
+    "facts",
+    "rules",
+    "projections",
+    "release-metadata",
+    "documentation",
+    "legacy-disposition",
+    "audit-chain"
+  ],
+  "validation": {
+    "validatorVersion": "2.5.0-sprint5.6.7-phase2",
+    "validatorOk": true,
+    "structuralTestsPassed": 112,
+    "projectionRuntimePassed": 46,
+    "projectionRuntimeFailed": 0
+  },
+  "legalAuthority": false,
+  "formalApprovals": 0,
+  "consumerReady": false,
+  "recordedAt": "2026-07-22T14:20:48Z"
+}

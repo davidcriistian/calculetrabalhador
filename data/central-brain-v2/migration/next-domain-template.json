@@ -1,0 +1,16 @@
+{
+  "domainId": "REPLACE_ME",
+  "steps": [
+    "confirm scope",
+    "capture official sources",
+    "create source records",
+    "normalize rules with temporal versions",
+    "legal review",
+    "technical review",
+    "approve rule versions",
+    "generate projections",
+    "register dependencies",
+    "run shadow comparison",
+    "mark READY_FOR_CONSUMERS"
+  ]
+}

@@ -1,0 +1,2968 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "items": [
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-ADMISSION-DATE",
+      "domainId": "aviso-previo",
+      "key": "admission_date",
+      "label": "Data de admissão",
+      "description": "Data civil de início do vínculo, usada para medir tempo de serviço e validar a cronologia do caso.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "period-start",
+        "referenceRole": "admission",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "official-record",
+          "system-record",
+          "declaration"
+        ],
+        "minimumConfidence": 0.8,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-004"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DATA-001",
+          "severity": "error",
+          "assertion": "admission_date <= notice_communication_date",
+          "message": "A admissão não pode ser posterior à comunicação do aviso.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        },
+        {
+          "id": "FVAL-DATA-002",
+          "severity": "error",
+          "assertion": "admission_date <= termination_date",
+          "message": "A admissão não pode ser posterior à data de término informada.",
+          "relatedFactIds": [
+            "FACT-TERMINATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:14e0c15993c8eab5af16290896e322b49d3b7f8a86064a5a760de1e0cc851473"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-ASSURING-CLAUSE-PRESENT",
+      "domainId": "aviso-previo",
+      "key": "assuring_clause_present",
+      "label": "Cláusula assecuratória de rescisão antecipada",
+      "description": "Indica se contrato a termo contém cláusula que assegura às partes o direito de rescisão antecipada, informação necessária para encaminhamento ao regime jurídico correto.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-016"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [
+          "FACT-CONTRACT-TERM-TYPE"
+        ],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-CLAUSULA-001",
+          "severity": "warning",
+          "assertion": "assuring_clause_present only relevant when contract_term_type != indeterminado",
+          "message": "A cláusula assecuratória não deve alterar a classificação de contrato já indeterminado.",
+          "relatedFactIds": [
+            "FACT-CONTRACT-TERM-TYPE"
+          ]
+        }
+      ],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:1c74710e7e660a9a54b4dc46c00d1c326c17814a4c4f836e4f7ba9af814e990e"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-COMPLETE-SERVICE-YEARS",
+      "domainId": "aviso-previo",
+      "key": "complete_service_years",
+      "label": "Anos completos de serviço",
+      "description": "Quantidade inteira de anos completos de serviço apurada segundo datas canônicas, usada como parâmetro da proporcionalidade.",
+      "valueType": "integer",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-003"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-004",
+        "CPT-AVP-005"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-ADMISSION-DATE",
+          "FACT-LEGAL-REFERENCE-DATE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DURACAO-001",
+          "severity": "error",
+          "assertion": "complete_service_years >= 0 and is integer",
+          "message": "Anos completos não podem ser negativos nem conter fração.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE",
+            "FACT-LEGAL-REFERENCE-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-LEI12506-2011",
+          "pinpoint": "art. 1º e parágrafo único",
+          "relevance": "Define duração mínima, acréscimo por ano de serviço e limite total do aviso devido ao empregado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "constraints": {
+        "minimum": 0,
+        "maximum": 100
+      },
+      "contentFingerprint": "sha256:5256c6f1a55ed76a4d3830252ad93627196765764f2341e53b1c822dcd1f24b6"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-CONTRACT-INDEFINITE",
+      "domainId": "aviso-previo",
+      "key": "contract_indefinite",
+      "label": "Contrato por prazo indeterminado",
+      "description": "Indica, de forma normalizada, que o vínculo é por prazo indeterminado e está potencialmente sujeito ao aviso-prévio geral.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-016"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-CONTRACT-TERM-TYPE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-CONTRATO-002",
+          "severity": "error",
+          "assertion": "contract_indefinite == (contract_term_type == indeterminado)",
+          "message": "A indicação booleana deve ser coerente com o tipo de prazo contratual.",
+          "relatedFactIds": [
+            "FACT-CONTRACT-TERM-TYPE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, caput",
+          "relevance": "Condição material de incidência da obrigação geral de aviso-prévio."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:28421f46052e2a66e37951786e5b380fa41fb417e6e8fbe41cb99bc60410ed90"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-CONTRACT-TERM-TYPE",
+      "domainId": "aviso-previo",
+      "key": "contract_term_type",
+      "label": "Tipo de prazo contratual",
+      "description": "Classifica o contrato como por prazo indeterminado, determinado ou experiência para resolver a incidência do aviso-prévio.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-016"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-CONTRATO-001",
+          "severity": "review",
+          "assertion": "contract_term_type in [determinado, experiencia]",
+          "message": "Contrato a termo exige verificar cláusula assecuratória e causa específica de extinção.",
+          "relatedFactIds": [
+            "FACT-ASSURING-CLAUSE-PRESENT"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, caput",
+          "relevance": "O aviso-prévio geral é estruturado para contratos sem prazo estipulado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "indeterminado",
+        "determinado",
+        "experiencia",
+        "desconhecido"
+      ],
+      "contentFingerprint": "sha256:2db379b911aae48fbc27577984666d764dc4e3b2a4297451167ca98f70973e88"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-EMPLOYEE-BENEFICIARY",
+      "domainId": "aviso-previo",
+      "key": "employee_beneficiary",
+      "label": "Empregado beneficiário do aviso",
+      "description": "Indica que, no cenário resolvido, o empregado é titular do aviso devido pelo empregador.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-TERMINATION-INITIATIVE",
+          "FACT-TERMINATION-CAUSE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-LEI12506-2011",
+          "pinpoint": "art. 1º e parágrafo único",
+          "relevance": "Define duração mínima, acréscimo por ano de serviço e limite total do aviso devido ao empregado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:d065116fd575db920026c33080016a48ae3eeae20c54c74cacf6e9afb19f17b3"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "domainId": "aviso-previo",
+      "key": "employee_option_reduction_mode",
+      "label": "Opção de redução no aviso trabalhado",
+      "description": "Registra a opção do empregado entre redução diária de jornada ou ausência por dias corridos, quando o art. 488 for aplicável.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-009"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-WORKED",
+          "FACT-TERMINATION-BY-EMPLOYER"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-REDUCAO-001",
+          "severity": "error",
+          "assertion": "reduction option only when notice_worked and termination_by_employer",
+          "message": "A opção de redução só é aplicável ao aviso trabalhado promovido pelo empregador.",
+          "relatedFactIds": [
+            "FACT-NOTICE-WORKED",
+            "FACT-TERMINATION-BY-EMPLOYER"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 488 e parágrafo único",
+          "relevance": "Define redução de duas horas diárias ou sete dias corridos sem prejuízo salarial."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "duas-horas-diarias",
+        "sete-dias-corridos",
+        "nao-informada",
+        "nao-aplicavel"
+      ],
+      "contentFingerprint": "sha256:ecf20d54325a8d9bdacadf4a9e5dde38d469823bd3228fdefa6ca75072511d9c"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "domainId": "aviso-previo",
+      "key": "employee_requests_release",
+      "label": "Pedido de dispensa do cumprimento",
+      "description": "Indica que o empregado pediu dispensa do cumprimento do aviso-prévio.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-010",
+        "CPT-AVP-011"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [
+          "FACT-PARTY-WAIVES-PERFORMANCE"
+        ],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276",
+          "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:bfa3be23dc167d40630edd086c167b5473b6f14ae3474ab7f50f7139f2697eee"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-EMPLOYER-OWES-NOTICE",
+      "domainId": "aviso-previo",
+      "key": "employer_owes_notice",
+      "label": "Aviso devido pelo empregador",
+      "description": "Indica, como conclusão derivada, que o empregador deve conceder ou indenizar aviso ao empregado.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-TERMINATION-INITIATIVE",
+          "FACT-TERMINATION-CAUSE",
+          "FACT-CONTRACT-INDEFINITE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, § 1º",
+          "relevance": "Conseqüência da falta do aviso por parte do empregador."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:48804c1cc6392fff79ac7d7cb1cc6ce40b53f377008fb8c6f262ada9dddbac88"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-EMPLOYMENT-REGIME",
+      "domainId": "aviso-previo",
+      "key": "employment_regime",
+      "label": "Regime jurídico do vínculo",
+      "description": "Identifica o regime jurídico material aplicável ao vínculo, evitando aplicar automaticamente o pacote CLT geral a relações submetidas a disciplina especial.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-REGIME-001",
+          "severity": "review",
+          "assertion": "employment_regime != clt-geral",
+          "message": "Regimes diferentes de CLT geral exigem pacote jurídico próprio ou revisão humana.",
+          "relatedFactIds": []
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-LC150-2015-BOUNDARY",
+          "pinpoint": "escopo da LC 150/2015",
+          "relevance": "Delimita que emprego doméstico possui disciplina específica e fica fora do pacote CLT geral."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "clt-geral",
+        "domestico-lc150",
+        "rural",
+        "servidor-estatutario",
+        "outro"
+      ],
+      "contentFingerprint": "sha256:6eafee8d266c747f50caff7b888cbc6b535e291a8f997cc3381e7c8d5ae7b9b2"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "domainId": "aviso-previo",
+      "key": "factual_last_worked_date",
+      "label": "Último dia efetivamente trabalhado",
+      "description": "Último dia em que houve prestação factual de trabalho; não se confunde com o término jurídico projetado.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "event-date",
+        "referenceRole": "factual-last-worked",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "system-record",
+          "declaration"
+        ],
+        "minimumConfidence": 0.75,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-006"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-COMMUNICATION-DATE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-TEMP-002",
+          "severity": "error",
+          "assertion": "factual_last_worked_date >= notice_communication_date when present",
+          "message": "Último dia em que houve prestação factual de trabalho; não se confunde com o término jurídico projetado.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487 e art. 489",
+          "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:5d0aa60190b225161de0a258f6a83fa50aabd07bf3b0a949203d64010b66bea8"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-INDIRECT-TERMINATION-STATUS",
+      "domainId": "aviso-previo",
+      "key": "indirect_termination_status",
+      "label": "Estado da rescisão indireta",
+      "description": "Estado da rescisão indireta para aplicação das regras especiais da Fase 2.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:c865ff9cf1a72cf93bd5c2a2a012597199123883eb9d433210b5da43d4e27804",
+      "allowedValues": [
+        "alegada",
+        "pendente",
+        "reconhecida",
+        "rejeitada"
+      ]
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "domainId": "aviso-previo",
+      "key": "judicial_recognition_status",
+      "label": "Estado do reconhecimento judicial",
+      "description": "Estado do reconhecimento judicial para aplicação das regras especiais da Fase 2.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:fb540d41d20c2503c83c37c6c685f8f4a252152efb2d475fb493c5b2ef34f208",
+      "allowedValues": [
+        "nao-ajuizado",
+        "pendente",
+        "reconhecido",
+        "rejeitado"
+      ]
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-LEGAL-REFERENCE-DATE",
+      "domainId": "aviso-previo",
+      "key": "legal_reference_date",
+      "label": "Data de referência jurídica",
+      "description": "Data usada pelo motor para selecionar a versão histórica das regras aplicáveis ao caso.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "reference-date",
+        "referenceRole": "legal-reference",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "derived-trace"
+        ],
+        "minimumConfidence": 1.0,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "internal",
+        "retentionClass": "audit-required",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-COMMUNICATION-DATE",
+          "FACT-TERMINATION-DATE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DATA-004",
+          "severity": "error",
+          "assertion": "legal_reference_date is resolved by explicit temporal policy",
+          "message": "A data de referência não pode ser presumida pela data atual do sistema.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE",
+            "FACT-TERMINATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:d62157056314ac2f1ee83f4aa58ba937ca74877ddfb76fca7a873d944c0acc38"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "domainId": "aviso-previo",
+      "key": "new_employment_evidence_date",
+      "label": "Data da evidência de novo emprego",
+      "description": "Data em que a prova de novo emprego foi emitida ou capturada, para avaliar sua relação temporal com o aviso.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "event-date",
+        "referenceRole": "evidence-recorded",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "official-record",
+          "system-record"
+        ],
+        "minimumConfidence": 0.9,
+        "humanVerificationRequired": true
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-012"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NEW-EMPLOYMENT-PROVEN"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-NOVO-EMPREGO-002",
+          "severity": "review",
+          "assertion": "evidence date is temporally connected to notice period",
+          "message": "Evidência temporalmente desconectada do aviso exige revisão humana.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE",
+            "FACT-PROJECTED-TERMINATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276",
+          "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:32010667f1d0efe2383abb34ec6db2268c479109bef6ffcde65f025591a10abc"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "domainId": "aviso-previo",
+      "key": "new_employment_obtained",
+      "label": "Obtenção de novo emprego",
+      "description": "Indica que o empregado obteve novo emprego durante o período relevante do aviso.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-012"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [
+          "FACT-NEW-EMPLOYMENT-PROVEN"
+        ],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276",
+          "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:be9e2b98ae12095db023db341346c1bb3c29526ec0f265a313a803442db44bd5"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "domainId": "aviso-previo",
+      "key": "new_employment_proven",
+      "label": "Novo emprego comprovado",
+      "description": "Indica que a obtenção de novo emprego foi comprovada por evidência adequada para aplicação da exceção sumulada.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "official-record",
+          "system-record"
+        ],
+        "minimumConfidence": 0.9,
+        "humanVerificationRequired": true
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-012"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NEW-EMPLOYMENT-OBTAINED"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-NOVO-EMPREGO-001",
+          "severity": "error",
+          "assertion": "new_employment_proven implies new_employment_obtained",
+          "message": "Não pode haver comprovação válida sem a ocorrência do novo emprego.",
+          "relatedFactIds": [
+            "FACT-NEW-EMPLOYMENT-OBTAINED"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276",
+          "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:7af80d24b0a986e8ed4f1c1e7b1266ff08f2a9ca896a8fb6069bda8e3fc96ade"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-COMMUNICATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "notice_communication_date",
+      "label": "Data de comunicação do aviso",
+      "description": "Data em que a manifestação de ruptura e o aviso foram comunicados à outra parte, marco relevante para cronologia e vigência.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "event-date",
+        "referenceRole": "communication",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "system-record",
+          "declaration"
+        ],
+        "minimumConfidence": 0.75,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-006"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [
+          "FACT-NOTICE-GRANTED"
+        ],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DATA-003",
+          "severity": "error",
+          "assertion": "notice_communication_date >= admission_date",
+          "message": "A comunicação do aviso não pode anteceder a admissão.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487 e art. 489",
+          "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:695b7e874ab41b43ea4b47431560140a5bd9bd546644c12ed07392ca2300581a"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-COUNTING-START-DATE",
+      "domainId": "aviso-previo",
+      "key": "notice_counting_start_date",
+      "label": "Data de início da contagem do aviso",
+      "description": "Primeiro dia civil posterior à comunicação, derivado de forma determinística pela política temporal.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-004"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "event-date",
+        "referenceRole": "counting-start",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "derived-trace"
+        ],
+        "minimumConfidence": 1,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-006"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-COMMUNICATION-DATE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-TEMP-001",
+          "severity": "error",
+          "assertion": "notice_counting_start_date = notice_communication_date + 1 calendar day",
+          "message": "Primeiro dia civil posterior à comunicação, derivado de forma determinística pela política temporal.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487 e art. 489",
+          "relevance": "A comunicação inicia o período de aviso e antecede a eficácia da rescisão."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T21:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:8a8eb8cb6835b49934ff55f0526dcb7c51bb22e9ca11dd86e382f4c056308783"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-DURATION",
+      "domainId": "aviso-previo",
+      "key": "notice_duration_days",
+      "label": "Duração jurídica do aviso em dias",
+      "description": "Quantidade jurídica total de dias do aviso, produzida pelo Projection Engine após selecionar regras vigentes e resolver os fatos necessários.",
+      "valueType": "duration-days",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-003"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-004",
+        "CPT-AVP-005"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-COMPLETE-SERVICE-YEARS",
+          "FACT-EMPLOYER-OWES-NOTICE",
+          "FACT-LEGAL-REFERENCE-DATE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DURACAO-002",
+          "severity": "error",
+          "assertion": "0 <= notice_duration_days <= 90 under current modeled law",
+          "message": "Duração fora do intervalo modelado exige versão normativa diferente ou revisão humana.",
+          "relatedFactIds": [
+            "FACT-LEGAL-REFERENCE-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-LEI12506-2011",
+          "pinpoint": "art. 1º e parágrafo único",
+          "relevance": "Define duração mínima, acréscimo por ano de serviço e limite total do aviso devido ao empregado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "constraints": {
+        "minimum": 0,
+        "maximum": 90
+      },
+      "contentFingerprint": "sha256:629690dd3bb760fed1116c3d275a6518e263d84b26df9a36f59ec7a42cb7002b"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-GRANTED",
+      "domainId": "aviso-previo",
+      "key": "notice_granted",
+      "label": "Aviso-prévio concedido",
+      "description": "Indica se houve concessão ou comunicação efetiva de aviso-prévio por uma das partes.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-006"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [
+          "FACT-NOTICE-COMMUNICATION-DATE"
+        ],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487 e §§ 1º e 2º",
+          "relevance": "A concessão ou falta do aviso define consequências trabalhadas ou substitutivas."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:da3c146f9b40bd90d864d514acb168314deb4e41233ee2513a59bc5098ef30ba"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-MODALITY",
+      "domainId": "aviso-previo",
+      "key": "notice_modality",
+      "label": "Modalidade do aviso-prévio",
+      "description": "Classifica a modalidade jurídica do aviso como trabalhada, indenizada, mista, dispensada de cumprimento ou ainda não resolvida.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-002",
+        "CPT-AVP-003",
+        "CPT-AVP-010"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": "notice-modality"
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-AVISO-001",
+          "severity": "error",
+          "assertion": "notice_modality is coherent with notice_worked and payment_substitution",
+          "message": "Modalidade deve refletir coerentemente cumprimento e indenização substitutiva.",
+          "relatedFactIds": [
+            "FACT-NOTICE-WORKED",
+            "FACT-PAYMENT-SUBSTITUTION"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, §§ 1º e 2º",
+          "relevance": "A falta de cumprimento produz indenização ou desconto substitutivo."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "trabalhado",
+        "indenizado",
+        "misto",
+        "dispensado-cumprimento",
+        "nao-concedido",
+        "desconhecido"
+      ],
+      "contentFingerprint": "sha256:0b9ad29ed3bc675914a6d4db1e09b9396c355761880ba726ffd99400514d2aee"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "domainId": "aviso-previo",
+      "key": "notice_reconsideration_accepted",
+      "label": "Reconsideração aceita",
+      "description": "Indica que a outra parte aceitou expressa ou tacitamente a reconsideração, permitindo continuidade do contrato.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-013"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-RECONSIDERACAO-001",
+          "severity": "error",
+          "assertion": "reconsideration_accepted implies reconsideration_proposed",
+          "message": "Aceitação pressupõe proposta prévia de reconsideração.",
+          "relatedFactIds": [
+            "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 489, parágrafo único",
+          "relevance": "A continuação da prestação após expiração pode importar aceitação tácita da reconsideração."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:afee52318afbcaa7ba1c5f0709224e429d24099c4ad688c07b569765a3f8706e"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "domainId": "aviso-previo",
+      "key": "notice_reconsideration_proposed",
+      "label": "Reconsideração proposta",
+      "description": "Indica que a parte notificante propôs tornar sem efeito o aviso antes de seu término.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-013"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 489, parágrafo único",
+          "relevance": "Admite reconsideração sujeita à aceitação da outra parte."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:8dc5b58764ff242d3e2107a63147b9146de9b91fb377efb8abb3be52a5a8db46"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTICE-WORKED",
+      "domainId": "aviso-previo",
+      "key": "notice_worked",
+      "label": "Aviso-prévio trabalhado",
+      "description": "Indica se houve prestação de trabalho durante o período de aviso.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-002"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [
+          "FACT-PAYMENT-SUBSTITUTION"
+        ],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-AVISO-002",
+          "severity": "warning",
+          "assertion": "notice_worked and payment_substitution are not both true for the entire same period",
+          "message": "Cumprimento e indenização integral simultâneos exigem segmentação ou revisão.",
+          "relatedFactIds": [
+            "FACT-PAYMENT-SUBSTITUTION"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 488",
+          "relevance": "Pressupõe aviso cumprido em serviço para aplicação da redução de jornada."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:d496b7a41712a667b55ee8fc07fbf9a768bf4e80c158f526496de0c6e52fbe06"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-NOTIFYING-PARTY",
+      "domainId": "aviso-previo",
+      "key": "notifying_party",
+      "label": "Parte notificante",
+      "description": "Parte que comunicou a intenção de extinguir o contrato ou concedeu o aviso-prévio.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-015"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-PARTE-001",
+          "severity": "warning",
+          "assertion": "notifying_party != desconhecida",
+          "message": "Parte notificante desconhecida impede resolver diversas projeções do aviso-prévio.",
+          "relatedFactIds": []
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, §§ 1º e 2º",
+          "relevance": "Distingue os efeitos da falta de aviso conforme a parte responsável."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "empregador",
+        "empregado",
+        "ambas",
+        "desconhecida"
+      ],
+      "contentFingerprint": "sha256:49b1d2ee39e8fc9d70b62d8c6cfc3a9b1332fd8cb26839f4c2617c35e0bb7972"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-PARTY-WAIVES-PERFORMANCE",
+      "domainId": "aviso-previo",
+      "key": "party_waives_performance",
+      "label": "Parte dispensa o cumprimento",
+      "description": "Indica que a parte credora do cumprimento aceitou dispensá-lo, sem por si só resolver os efeitos financeiros.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-010",
+        "CPT-AVP-011"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DISPENSA-001",
+          "severity": "review",
+          "assertion": "waiver effects depend on notifying party and proven new employment",
+          "message": "A dispensa de cumprimento não deve ser confundida automaticamente com renúncia ao direito econômico.",
+          "relatedFactIds": [
+            "FACT-NOTIFYING-PARTY",
+            "FACT-NEW-EMPLOYMENT-PROVEN"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-TST-SUMULA-276",
+          "pinpoint": "Súmula 276",
+          "relevance": "Disciplina irrenunciabilidade e exceção por comprovação de novo emprego."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:3c19bf279e4478cc332e0a4c04ce8262d70744195d9591e5a1cf655f265f6803"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-PAYMENT-SUBSTITUTION",
+      "domainId": "aviso-previo",
+      "key": "payment_substitution",
+      "label": "Indenização substitutiva do aviso",
+      "description": "Indica que o cumprimento do aviso foi substituído pelo pagamento ou desconto correspondente, conforme a parte responsável.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-003"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [
+          "FACT-NOTICE-WORKED"
+        ],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, §§ 1º e 2º",
+          "relevance": "Prevê salários correspondentes ou desconto na falta de aviso."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:e804ac3070247556d63980da5a8e0e4dfd6bae3f4e595aea41b52277901d989b"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-PROJECTED-TERMINATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "projected_termination_date",
+      "label": "Data projetada de término",
+      "description": "Data civil de término contratual resultante da integração jurídica do período de aviso ao tempo de serviço.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-004"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "period-end",
+        "referenceRole": "projected-termination",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "derived-trace"
+        ],
+        "minimumConfidence": 1.0,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "internal",
+        "retentionClass": "audit-required",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-007",
+        "CPT-AVP-008"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-NOTICE-COMMUNICATION-DATE",
+          "FACT-NOTICE-DURATION"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DATA-006",
+          "severity": "error",
+          "assertion": "projected_termination_date >= notice_communication_date",
+          "message": "A data projetada não pode anteceder a comunicação do aviso.",
+          "relatedFactIds": [
+            "FACT-NOTICE-COMMUNICATION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, § 1º",
+          "relevance": "Integra o período correspondente ao tempo de serviço."
+        },
+        {
+          "sourceId": "SRC-TST-OJ-SDI1-82",
+          "pinpoint": "OJ 82 da SDI-1",
+          "relevance": "Orienta a anotação da data de saída considerando a projeção do aviso indenizado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:f1938b9664ac587861ed1feaa6923f4208264fce9577a1b7f6e5fe0c338cb1c6"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "domainId": "aviso-previo",
+      "key": "reciprocal_fault_recognized",
+      "label": "Culpa recíproca reconhecida",
+      "description": "Culpa recíproca reconhecida para aplicação das regras especiais da Fase 2.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:7f7e7922348d3f1cc5e35faac3e37ca8d190657576a524f34bc946405adc1200"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+      "domainId": "aviso-previo",
+      "key": "reconsideration_acceptance_mode",
+      "label": "Modo de aceitação da reconsideração",
+      "description": "Modo de aceitação da reconsideração para aplicação das regras especiais da Fase 2.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:bf912d4dd4e6ed11f582fdc7d8c1da966959274151cc2b96bfe73afbe9e9d704",
+      "allowedValues": [
+        "expressa",
+        "tacita",
+        "rejeitada",
+        "nao-informada"
+      ]
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "domainId": "aviso-previo",
+      "key": "serious_misconduct_during_notice",
+      "label": "Falta grave durante o aviso",
+      "description": "Indica ocorrência de falta grave no curso do aviso, fato que pode alterar efeitos e exigir tratamento jurídico específico.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "official-record",
+          "system-record"
+        ],
+        "minimumConfidence": 0.85,
+        "humanVerificationRequired": true
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-014"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-FALTA-001",
+          "severity": "review",
+          "assertion": "serious_misconduct_during_notice == true",
+          "message": "Falta grave no curso do aviso exige revisão jurídica e regra específica antes de conclusão automática.",
+          "relatedFactIds": []
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 490 e art. 491",
+          "relevance": "Trata das consequências de falta grave no curso do prazo do aviso."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:e972918c85183cffddf802ebaa28b8e0ebe8c08b9f530528fe2af7b5d56a5976"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "domainId": "aviso-previo",
+      "key": "serious_misconduct_party",
+      "label": "Parte autora da falta grave durante o aviso",
+      "description": "Parte autora da falta grave durante o aviso para aplicação das regras especiais da Fase 2.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:03ab5290ff70f3883d3cd90a170818f762560324214135e9eba00e9af12f0b24",
+      "allowedValues": [
+        "empregado",
+        "empregador",
+        "ambos",
+        "nao-identificada"
+      ]
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-BY-AGREEMENT",
+      "domainId": "aviso-previo",
+      "key": "termination_by_agreement",
+      "label": "Extinção por acordo formalizada",
+      "description": "Extinção por acordo formalizada para aplicação das regras especiais da Fase 2.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-22T14:40:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:f613794fc9e31a1e4c6139f46a130075e6967ef5b04a40e47b4bb7c7531e298a"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-BY-EMPLOYER",
+      "domainId": "aviso-previo",
+      "key": "termination_by_employer",
+      "label": "Ruptura promovida pelo empregador",
+      "description": "Indica que a iniciativa da ruptura pertence ao empregador, derivada da classificação canônica da iniciativa.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-015"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-TERMINATION-INITIATIVE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, § 1º",
+          "relevance": "Determina consequências da falta de aviso por parte do empregador."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:2a0e1654e35b72fc81f56ca171b8e6da635863c7de8da8f954705409806719f3"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-CAUSE",
+      "domainId": "aviso-previo",
+      "key": "termination_cause",
+      "label": "Causa jurídica da extinção",
+      "description": "Classifica a causa jurídica da extinção para determinar se o aviso-prévio é devido ou se o caso está fora do escopo.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.1.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-RUPTURA-002",
+          "severity": "review",
+          "assertion": "termination_cause in [culpa-reciproca,rescisao-indireta,mutuo-acordo,forca-maior,outra]",
+          "message": "Causa especial exige regra própria ou revisão humana antes de concluir efeitos.",
+          "relatedFactIds": []
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, caput",
+          "relevance": "A regra geral trata da rescisão sem justo motivo; causas especiais demandam tratamento próprio."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "dispensa-sem-justa-causa",
+        "pedido-demissao",
+        "justa-causa-empregado",
+        "culpa-reciproca",
+        "rescisao-indireta",
+        "mutuo-acordo",
+        "termino-prazo",
+        "forca-maior",
+        "falecimento",
+        "outra",
+        "desconhecida",
+        "extincao-por-acordo",
+        "fato-do-principe",
+        "falecimento-empregado",
+        "falecimento-empregador-pessoa-fisica",
+        "contrato-prazo-com-clausula-assecuratoria"
+      ],
+      "contentFingerprint": "sha256:e854be8dc3d348074f53a33e7510ba959c6597b27a403f5755b4242121035f84"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-DATE",
+      "domainId": "aviso-previo",
+      "key": "termination_date",
+      "label": "Data de extinção informada",
+      "description": "Data civil de extinção registrada ou pretendida antes da eventual projeção jurídica do aviso.",
+      "valueType": "date",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "period-end",
+        "referenceRole": "termination",
+        "timezonePolicy": "date-only"
+      },
+      "evidencePolicy": {
+        "required": true,
+        "acceptedEvidenceTypes": [
+          "document",
+          "official-record",
+          "system-record",
+          "declaration"
+        ],
+        "minimumConfidence": 0.8,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-008"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-DATA-005",
+          "severity": "error",
+          "assertion": "termination_date >= admission_date",
+          "message": "A data de extinção não pode anteceder a admissão.",
+          "relatedFactIds": [
+            "FACT-ADMISSION-DATE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 489",
+          "relevance": "A rescisão torna-se efetiva após expirar o prazo do aviso, salvo projeções substitutivas aplicáveis."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:59355923fc4e4a51fe7c0477f703960bb8d1fa33e150b82264f629c7be81a0c4"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-INITIATIVE",
+      "domainId": "aviso-previo",
+      "key": "termination_initiative",
+      "label": "Iniciativa da ruptura",
+      "description": "Identifica qual parte tomou a iniciativa da ruptura contratual, sem confundir iniciativa com causa jurídica.",
+      "valueType": "enum",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record"
+        ],
+        "derivationAllowed": false
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-015"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-RUPTURA-001",
+          "severity": "error",
+          "assertion": "termination_initiative is compatible with notifying_party",
+          "message": "A iniciativa da ruptura e a parte notificante devem ser coerentes ou justificar divergência.",
+          "relatedFactIds": [
+            "FACT-NOTIFYING-PARTY"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, §§ 1º e 2º",
+          "relevance": "As consequências diferem conforme o aviso seja omitido pelo empregador ou pelo empregado."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "allowedValues": [
+        "empregador",
+        "empregado",
+        "mutuo-acordo",
+        "nenhuma",
+        "desconhecida"
+      ],
+      "contentFingerprint": "sha256:f3229f64339c4de7a292d6d6d7464d6b1cd5ba27e0c025871b1498279346d6ff"
+    },
+    {
+      "$schema": "../../../../../schemas/legal-fact.schema.json",
+      "id": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "domainId": "aviso-previo",
+      "key": "termination_without_just_cause",
+      "label": "Ruptura sem justo motivo",
+      "description": "Indica que a extinção ocorreu sem justa causa impeditiva do aviso, derivada da causa jurídica normalizada.",
+      "valueType": "boolean",
+      "originPolicy": {
+        "allowedOrigins": [
+          "user-declared",
+          "document-extracted",
+          "official-record",
+          "derived"
+        ],
+        "derivationAllowed": true,
+        "derivationProjectionIds": [
+          "PROJ-AP-001"
+        ]
+      },
+      "temporalSemantics": {
+        "kind": "atemporal",
+        "referenceRole": "none",
+        "timezonePolicy": "not-applicable"
+      },
+      "evidencePolicy": {
+        "required": false,
+        "acceptedEvidenceTypes": [
+          "declaration",
+          "document",
+          "official-record"
+        ],
+        "minimumConfidence": 0.6,
+        "humanVerificationRequired": false
+      },
+      "privacy": {
+        "classification": "personal",
+        "retentionClass": "case-lifetime",
+        "redactionRequired": false
+      },
+      "status": "review",
+      "version": "1.0.0",
+      "aliases": [],
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "relationships": {
+        "dependsOnFactIds": [
+          "FACT-TERMINATION-CAUSE"
+        ],
+        "conflictsWithFactIds": [],
+        "requiredWithFactIds": [],
+        "mutuallyExclusiveGroup": null
+      },
+      "semanticValidation": [
+        {
+          "id": "FVAL-RUPTURA-003",
+          "severity": "error",
+          "assertion": "termination_without_just_cause matches termination_cause",
+          "message": "O booleano deve ser derivado da causa jurídica e não informado isoladamente sem justificativa.",
+          "relatedFactIds": [
+            "FACT-TERMINATION-CAUSE"
+          ]
+        }
+      ],
+      "legalBasis": [
+        {
+          "sourceId": "SRC-BR-CLT-ART487-491",
+          "pinpoint": "art. 487, caput",
+          "relevance": "Expressa o pressuposto de ausência de justo motivo na incidência geral."
+        }
+      ],
+      "governance": {
+        "owner": "central-brain/legal-knowledge",
+        "legalReviewRequired": true,
+        "technicalReviewRequired": true,
+        "createdAt": "2026-07-21T18:30:00.000Z",
+        "lastReviewedAt": null,
+        "reviewId": null
+      },
+      "contentFingerprint": "sha256:054f780a57303a9e04cf83e6b4c38c66a47ded2ac7b10bfec1a7dd4867b51460"
+    }
+  ]
+}

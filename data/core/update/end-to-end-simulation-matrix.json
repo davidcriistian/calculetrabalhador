@@ -1,0 +1,40 @@
+{
+  "id": "end-to-end-simulation-matrix",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "updatedAt": "2026-07-19",
+  "scenarios": [
+    {
+      "id": "APPROVED_READ_ONLY_FLOW",
+      "inputs": {
+        "impactAnalysis": "data/core/update/impact-analysis/__unknown-rule__.impact.json",
+        "executionPlan": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json",
+        "previewEvidence": "data/core/update/preview-evidence/fgts.preview-evidence.json"
+      },
+      "expected": "APPROVED_PLAN_READ_ONLY"
+    },
+    {
+      "id": "BLOCKED_WITHOUT_APPROVAL",
+      "inputs": {
+        "executionPlan": "data/core/update/execution-plans/fgts.blocked.execution-plan.json"
+      },
+      "expected": "BLOCKED"
+    },
+    {
+      "id": "VALIDATOR_FAILURE_BLOCKS_PUBLICATION",
+      "fixture": "synthetic-validator-failure",
+      "expected": "BLOCKED_VALIDATION_FAILURE"
+    },
+    {
+      "id": "ROLLBACK_PLAN_AVAILABLE",
+      "inputs": {
+        "executionPlan": "data/core/update/execution-plans/fgts.approved-test.execution-plan.json"
+      },
+      "expected": "ROLLBACK_READY"
+    },
+    {
+      "id": "PROTECTED_FILES_UNCHANGED",
+      "expected": "UNCHANGED"
+    }
+  ]
+}

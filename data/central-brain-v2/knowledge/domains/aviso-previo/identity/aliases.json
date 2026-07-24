@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../../schemas/domain-aliases.schema.json",
+  "domainId": "aviso-previo",
+  "canonicalTerm": "aviso-prévio",
+  "items": [
+    {
+      "value": "aviso previo",
+      "kind": "orthographic",
+      "status": "accepted"
+    },
+    {
+      "value": "aviso-prévio",
+      "kind": "canonical-spelling",
+      "status": "accepted"
+    },
+    {
+      "value": "aviso prévio",
+      "kind": "common-spelling",
+      "status": "accepted"
+    },
+    {
+      "value": "aviso de desligamento",
+      "kind": "informal",
+      "status": "search-only"
+    },
+    {
+      "value": "pré-aviso",
+      "kind": "informal",
+      "status": "search-only"
+    }
+  ],
+  "normalization": {
+    "caseSensitive": false,
+    "diacriticsSensitive": false,
+    "hyphenSensitive": false
+  }
+}

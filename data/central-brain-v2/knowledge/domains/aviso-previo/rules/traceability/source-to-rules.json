@@ -1,0 +1,67 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.2.0",
+  "generatedAt": "2026-07-22T17:30:00.000Z",
+  "items": {
+    "SRC-BR-CF1988-ART7-XXI": [
+      "RULE-AP-001",
+      "RULE-AP-002"
+    ],
+    "SRC-BR-CLT-ART487-491": [
+      "RULE-AP-001",
+      "RULE-AP-002",
+      "RULE-AP-003",
+      "RULE-AP-004",
+      "RULE-AP-005"
+    ],
+    "SRC-BR-LEI12506-2011": [
+      "RULE-AP-002"
+    ],
+    "SRC-TST-SUMULA-276": [
+      "RULE-AP-006"
+    ],
+    "SRC-TST-SUMULA-305": [
+      "RULE-AP-015"
+    ],
+    "SRC-TST-SUMULA-441": [
+      "RULE-AP-002"
+    ],
+    "SRC-TST-OJ-SDI1-82": [
+      "RULE-AP-003"
+    ],
+    "SRC-BR-LC150-2015-BOUNDARY": [],
+    "SRC-BR-CLT-ART481": [
+      "RULE-AP-007"
+    ],
+    "SRC-BR-CLT-ART483": [
+      "RULE-AP-008"
+    ],
+    "SRC-BR-CLT-ART484": [
+      "RULE-AP-009"
+    ],
+    "SRC-BR-CLT-ART484A": [
+      "RULE-AP-011"
+    ],
+    "SRC-BR-CLT-ART489-491": [
+      "RULE-AP-012",
+      "RULE-AP-013",
+      "RULE-AP-014"
+    ],
+    "SRC-TST-SUMULA-14": [
+      "RULE-AP-010"
+    ]
+  },
+  "coverageExceptions": {
+    "SRC-TST-SUMULA-305": {
+      "status": "federated-with-emitting-rule",
+      "contractId": "FED-AP-FGTS",
+      "ruleId": "RULE-AP-015",
+      "projectionId": "PROJ-AP-017",
+      "reason": "The notice domain emits the requirement; the FGTS domain owns the financial effect."
+    },
+    "SRC-BR-LC150-2015-BOUNDARY": {
+      "status": "scope-boundary",
+      "reason": "Domestic employment is excluded and routed to human review pending its own domain package."
+    }
+  }
+}

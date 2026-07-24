@@ -1,0 +1,291 @@
+{
+  "$schema": "../../../../schemas/domain-fact-catalog.schema.json",
+  "domainId": "aviso-previo",
+  "catalogVersion": "1.1.0",
+  "status": "FACTS_IN_REVIEW",
+  "items": [
+    {
+      "factId": "FACT-ADMISSION-DATE",
+      "path": "./records/admission_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-ASSURING-CLAUSE-PRESENT",
+      "path": "./records/assuring_clause_present.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "path": "./records/complete_service_years.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "integer"
+    },
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "path": "./records/contract_indefinite.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-CONTRACT-TERM-TYPE",
+      "path": "./records/contract_term_type.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "path": "./records/employee_beneficiary.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "path": "./records/employee_option_reduction_mode.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-EMPLOYEE-REQUESTS-RELEASE",
+      "path": "./records/employee_requests_release.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "path": "./records/employer_owes_notice.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-EMPLOYMENT-REGIME",
+      "path": "./records/employment_regime.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "path": "./records/factual_last_worked_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-INDIRECT-TERMINATION-STATUS",
+      "path": "./records/indirect_termination_status.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-JUDICIAL-RECOGNITION-STATUS",
+      "path": "./records/judicial_recognition_status.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "path": "./records/legal_reference_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "path": "./records/new_employment_evidence_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "path": "./records/new_employment_obtained.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "path": "./records/new_employment_proven.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "path": "./records/notice_communication_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-NOTICE-COUNTING-START-DATE",
+      "path": "./records/notice_counting_start_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "path": "./records/notice_duration_days.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "duration-days"
+    },
+    {
+      "factId": "FACT-NOTICE-GRANTED",
+      "path": "./records/notice_granted.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NOTICE-MODALITY",
+      "path": "./records/notice_modality.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "path": "./records/notice_reconsideration_accepted.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "path": "./records/notice_reconsideration_proposed.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NOTICE-WORKED",
+      "path": "./records/notice_worked.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-NOTIFYING-PARTY",
+      "path": "./records/notifying_party.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-PARTY-WAIVES-PERFORMANCE",
+      "path": "./records/party_waives_performance.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-PAYMENT-SUBSTITUTION",
+      "path": "./records/payment_substitution.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "path": "./records/projected_termination_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-RECIPROCAL-FAULT-RECOGNIZED",
+      "path": "./records/reciprocal_fault_recognized.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-RECONSIDERATION-ACCEPTANCE-MODE",
+      "path": "./records/reconsideration_acceptance_mode.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "path": "./records/serious_misconduct_during_notice.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "path": "./records/serious_misconduct_party.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-AGREEMENT",
+      "path": "./records/termination_by_agreement.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "path": "./records/termination_by_employer.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    },
+    {
+      "factId": "FACT-TERMINATION-CAUSE",
+      "path": "./records/termination_cause.json",
+      "status": "review",
+      "version": "1.1.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-TERMINATION-DATE",
+      "path": "./records/termination_date.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "date"
+    },
+    {
+      "factId": "FACT-TERMINATION-INITIATIVE",
+      "path": "./records/termination_initiative.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "enum"
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "path": "./records/termination_without_just_cause.json",
+      "status": "review",
+      "version": "1.0.0",
+      "valueType": "boolean"
+    }
+  ],
+  "verification": {
+    "verifiedAt": "2026-07-21T18:30:00.000Z",
+    "verifiedBy": "central-brain-sprint-5.3",
+    "method": "schema-validation-semantic-cross-reference-and-rule-coverage",
+    "notes": [
+      "Catálogo contém fatos de entrada, derivados, temporais, probatórios e procedimentais.",
+      "Todos os factsRequired atualmente usados pelas regras RULE-AP-001 a RULE-AP-006 possuem definição canônica.",
+      "Status permanece em revisão até revisão jurídica humana formal."
+    ]
+  }
+}

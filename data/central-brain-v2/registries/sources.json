@@ -1,0 +1,577 @@
+{
+  "version": "2.6.0-sprint5.6.7-phaseD",
+  "kind": "sources",
+  "items": [
+    {
+      "id": "SRC-BR-CF1988-ART7-XXI",
+      "type": "constitution",
+      "jurisdiction": "BR",
+      "title": "Constituição da República Federativa do Brasil de 1988 — art. 7º, XXI",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "publicationDate": "1988-10-05",
+      "effectiveFrom": "1988-10-05",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Art. 7º, XXI — fundamento constitucional do aviso-prévio proporcional ao tempo de serviço, com mínimo de trinta dias.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-cf1988-art7-xxi.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:37c94b57d3068f1d6c8442cf28b04fdd5caf656ba77d0d5f0b0cdfc71ab88fa1",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:37c94b57d3068f1d6c8442cf28b04fdd5caf656ba77d0d5f0b0cdfc71ab88fa1",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária. O conteúdo interpretado será modelado em conceitos e regras posteriores.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART487-491",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — arts. 487 a 491",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "1943-05-01",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Arts. 487 a 491 — disciplina geral do aviso-prévio, redução de jornada, reconsideração e faltas graves durante o prazo.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art487-491.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:37129067ebe39ded700a2f41a6081ac37a2f1b0c14d5e5d089e2a110ba3bcee3",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:37129067ebe39ded700a2f41a6081ac37a2f1b0c14d5e5d089e2a110ba3bcee3",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária em texto compilado oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-BR-LEI12506-2011",
+      "type": "law",
+      "jurisdiction": "BR",
+      "title": "Lei nº 12.506, de 11 de outubro de 2011",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/L12506.htm",
+      "publicationDate": "2011-10-11",
+      "effectiveFrom": "2011-10-13",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/L12506.htm",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Art. 1º e parágrafo único — regulamentação legal da proporcionalidade do aviso-prévio.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-lei12506-2011.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:fdf141c78560a78d45f47850e6f8c7017d2107fdde5d1b8ad7aa950e90df9e51",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:fdf141c78560a78d45f47850e6f8c7017d2107fdde5d1b8ad7aa950e90df9e51",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária específica do domínio.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-TST-SUMULA-276",
+      "type": "official-guidance",
+      "jurisdiction": "BR",
+      "title": "Tribunal Superior do Trabalho — Súmula nº 276",
+      "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "publicationDate": null,
+      "effectiveFrom": null,
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "SUM-276 — aviso-prévio; renúncia pelo empregado.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-tst-sumula-276.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:59bcabd907cfe0961a6d50badbb27642a79e3366c804f6559dbb2248375dfd4c",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:59bcabd907cfe0961a6d50badbb27642a79e3366c804f6559dbb2248375dfd4c",
+      "supersedesSourceId": null,
+      "notes": [
+        "Enunciado jurisprudencial oficial. A regra correspondente será criada somente após revisão jurídica.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-TST-SUMULA-305",
+      "type": "official-guidance",
+      "jurisdiction": "BR",
+      "title": "Tribunal Superior do Trabalho — Súmula nº 305",
+      "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "publicationDate": null,
+      "effectiveFrom": null,
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "SUM-305 — incidência do FGTS sobre o aviso-prévio, trabalhado ou indenizado.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-tst-sumula-305.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:5b895a68f443dffa2b458bb4e68bb6e66d729aaf07492f48cc8e66c5f331bad9",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:5b895a68f443dffa2b458bb4e68bb6e66d729aaf07492f48cc8e66c5f331bad9",
+      "supersedesSourceId": null,
+      "notes": [
+        "Enunciado jurisprudencial oficial relacionado a projeções e dependências com FGTS.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-TST-SUMULA-441",
+      "type": "official-guidance",
+      "jurisdiction": "BR",
+      "title": "Tribunal Superior do Trabalho — Súmula nº 441",
+      "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "publicationDate": null,
+      "effectiveFrom": null,
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "SUM-441 — aplicação temporal da proporcionalidade prevista na Lei nº 12.506/2011.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-tst-sumula-441.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:66cefd90e7aad68df4a6e34a5b4890a55213f3b7784ea995d56e894e615457de",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:66cefd90e7aad68df4a6e34a5b4890a55213f3b7784ea995d56e894e615457de",
+      "supersedesSourceId": null,
+      "notes": [
+        "Enunciado jurisprudencial oficial relevante à camada temporal.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-TST-OJ-SDI1-82",
+      "type": "official-guidance",
+      "jurisdiction": "BR",
+      "title": "Tribunal Superior do Trabalho — Orientação Jurisprudencial nº 82 da SDI-1",
+      "officialUrl": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+      "publicationDate": null,
+      "effectiveFrom": null,
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.tst.jus.br/livro-de-jurisprudencia-indice",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "OJ-SDI1-82 — anotação da data de saída na CTPS considerando o término do prazo do aviso-prévio, ainda que indenizado.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-tst-oj-sdi1-82.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:9fad6c89f8bdf13b795b41f1ca36f86adf2491ec0401866d29426ee286d523f3",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:9fad6c89f8bdf13b795b41f1ca36f86adf2491ec0401866d29426ee286d523f3",
+      "supersedesSourceId": null,
+      "notes": [
+        "Orientação jurisprudencial oficial relevante à projeção contratual.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-BR-LC150-2015-BOUNDARY",
+      "type": "law",
+      "jurisdiction": "BR",
+      "title": "Lei Complementar nº 150, de 1º de junho de 2015 — referência de fronteira de escopo",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp150.htm",
+      "publicationDate": "2015-06-01",
+      "effectiveFrom": "2015-06-02",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-21T18:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp150.htm",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Lei Complementar nº 150/2015 — regime jurídico do emprego doméstico, mantido fora do escopo clt-geral deste pacote.",
+          "capturedAt": "2026-07-21T18:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-lc150-2015-boundary.snapshot.json",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:112192a3b67c63d33a245ed5501a43dbbd2deb02c40d8b46b48efbc8ed5ee9fc",
+          "capturedAt": "2026-07-22T03:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:112192a3b67c63d33a245ed5501a43dbbd2deb02c40d8b46b48efbc8ed5ee9fc",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte de fronteira. Não autoriza mistura do regime doméstico com o pacote clt-geral.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART481",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — art. 481",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "1943-05-01",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T14:40:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "art. 481 — contrato a termo com cláusula assecuratória.",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art481.snapshot.json",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:33369f3cd7aada4ac3c24d42b115cb824bd20ed7024055368732e5026220002f",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:33369f3cd7aada4ac3c24d42b115cb824bd20ed7024055368732e5026220002f",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária catalogada em URL oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART483",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — art. 483",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "1943-05-01",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T14:40:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "art. 483 — rescisão indireta.",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art483.snapshot.json",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:367c709e230ef6c99afd322bc0152b301573d058b1c29f867b6319c31ad5c68c",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:367c709e230ef6c99afd322bc0152b301573d058b1c29f867b6319c31ad5c68c",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária catalogada em URL oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART484",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — art. 484",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "1943-05-01",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T14:40:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "art. 484 — culpa recíproca.",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art484.snapshot.json",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:5efbcc38bcbcf128f095bcac52bee393974742c7a4d8c896ddb6375819ad3dc8",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:5efbcc38bcbcf128f095bcac52bee393974742c7a4d8c896ddb6375819ad3dc8",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária catalogada em URL oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART484A",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — art. 484-A",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "2017-07-14",
+      "effectiveFrom": "2017-11-11",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T17:30:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-22T17:30:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Art. 484-A — extinção por acordo; incluído pela Lei nº 13.467/2017.",
+          "capturedAt": "2026-07-22T17:30:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art484a.snapshot.json",
+          "capturedAt": "2026-07-22T17:30:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:57e6b7d0f5619becb897bb0eab5eb55235afed56ca1040f835bd949376ae418b",
+          "capturedAt": "2026-07-22T17:30:00.000Z"
+        }
+      ],
+      "checksum": "sha256:57e6b7d0f5619becb897bb0eab5eb55235afed56ca1040f835bd949376ae418b",
+      "supersedesSourceId": null,
+      "notes": [
+        "Dispositivo incluído pela Lei nº 13.467/2017.",
+        "Vigência modelada a partir de 2017-11-11, após a vacatio legis de 120 dias.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    },
+    {
+      "id": "SRC-BR-CLT-ART489-491",
+      "type": "decree",
+      "jurisdiction": "BR",
+      "title": "Consolidação das Leis do Trabalho — arts. 489 a 491",
+      "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "publicationDate": "1943-05-01",
+      "effectiveFrom": "1943-11-10",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T14:40:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "arts. 489 a 491 — reconsideração e falta grave durante o aviso.",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-br-clt-art489-491.snapshot.json",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:ec6c7396810312a7098bfc466373a78fa0e38f6dd1fd31d41242da08efac195e",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:ec6c7396810312a7098bfc466373a78fa0e38f6dd1fd31d41242da08efac195e",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária catalogada em URL oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    },
+    {
+      "id": "SRC-TST-SUMULA-14",
+      "type": "official-guidance",
+      "jurisdiction": "BR",
+      "title": "Tribunal Superior do Trabalho — Súmula 14",
+      "officialUrl": "https://www.tst.jus.br/",
+      "publicationDate": "2003-11-21",
+      "effectiveFrom": "2003-11-21",
+      "effectiveTo": null,
+      "retrievedAt": "2026-07-22T14:40:00.000Z",
+      "status": "verified",
+      "evidence": [
+        {
+          "kind": "url",
+          "value": "https://www.tst.jus.br/",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "citation",
+          "value": "Súmula 14 — efeitos da culpa recíproca.",
+          "capturedAt": "2026-07-22T14:40:00.000Z"
+        },
+        {
+          "kind": "local-copy",
+          "value": "../evidence/src-tst-sumula-14.snapshot.json",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        },
+        {
+          "kind": "checksum",
+          "value": "sha256:76c2e3e0c0c0dabd4b40b9e20bccab2483b5483ef3080fcba4271ac7be27fefa",
+          "capturedAt": "2026-07-22T16:00:00.000Z"
+        }
+      ],
+      "checksum": "sha256:76c2e3e0c0c0dabd4b40b9e20bccab2483b5483ef3080fcba4271ac7be27fefa",
+      "supersedesSourceId": null,
+      "notes": [
+        "Fonte normativa primária catalogada em URL oficial.",
+        "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+        "Revisão jurídica formal permanece pendente."
+      ]
+    }
+  ],
+  "status": "FULL_CANONICAL_SOURCES_LOADED_TECHNICALLY_VALIDATED",
+  "updatedAt": "2026-07-22T21:30:00.000Z",
+  "authority": false,
+  "note": "Fourteen canonical sources are loaded and technically covered for the aviso-previo baseline, including the federated FGTS dependency. Formal legal approval, runtime authority and consumer readiness remain pending."
+}

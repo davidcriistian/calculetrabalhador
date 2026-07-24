@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "id": "domains",
+      "path": "./domains.json",
+      "schema": "../schemas/domain.schema.json"
+    },
+    {
+      "id": "sources",
+      "path": "./sources.json",
+      "schema": "../schemas/source.schema.json"
+    },
+    {
+      "id": "rules",
+      "path": "./rules.json",
+      "schema": "../schemas/rule.schema.json"
+    },
+    {
+      "id": "projections",
+      "path": "./projections.json",
+      "schema": "../schemas/canonical-projection.schema.json"
+    },
+    {
+      "id": "dependencies",
+      "path": "./dependencies.json",
+      "schema": "../schemas/dependency.schema.json"
+    },
+    {
+      "id": "consumers",
+      "path": "./consumers.inventory.json",
+      "schema": "../schemas/consumer.schema.json"
+    },
+    {
+      "id": "audit-events",
+      "path": "./audit-events.json",
+      "schema": "../schemas/audit-event.schema.json"
+    },
+    {
+      "id": "aliases",
+      "path": "./aliases.json"
+    },
+    {
+      "id": "facts",
+      "path": "./facts.json",
+      "schema": "../schemas/legal-fact.schema.json"
+    }
+  ],
+  "packageVersion": "2.7.0-sprint5.6.7-phaseE",
+  "catalogVersion": "1.0.0",
+  "versionSemantics": {
+    "packageVersion": "release containing this index",
+    "componentVersion": "independent executable component version",
+    "catalogVersion": "independent catalog structure version"
+  }
+}

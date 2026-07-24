@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../../schemas/concept.schema.json",
+  "id": "CPT-AVP-002",
+  "domainId": "aviso-previo",
+  "canonicalName": "Aviso-prévio trabalhado",
+  "slug": "aviso-previo-trabalhado",
+  "semanticType": "modality",
+  "definition": {
+    "text": "Modalidade em que o contrato permanece em execução durante o prazo do aviso, observadas as condições legais aplicáveis ao período.",
+    "nature": "terminological-synthesis",
+    "interpretiveLimit": "Conceito descritivo; não substitui regra executável, cálculo, exceção ou decisão jurídica contextual."
+  },
+  "scope": {
+    "regimes": [
+      "clt-geral"
+    ],
+    "jurisdiction": "BR",
+    "exclusions": [
+      "emprego-domestico"
+    ]
+  },
+  "sourceRefs": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoints": [
+        "arts. 487 e 488"
+      ],
+      "support": "Execução do prazo e redução de jornada."
+    }
+  ],
+  "aliases": [
+    "aviso trabalhado"
+  ],
+  "relations": [
+    {
+      "type": "is-a",
+      "targetConceptId": "CPT-AVP-001",
+      "status": "validated"
+    }
+  ],
+  "status": "validated",
+  "version": "1.0.0",
+  "governance": {
+    "createdAt": "2026-07-21T20:30:00.000Z",
+    "reviewedAt": "2026-07-21T20:30:00.000Z",
+    "reviewedBy": "central-brain-domain-ingestion",
+    "consumerAuthority": false
+  }
+}

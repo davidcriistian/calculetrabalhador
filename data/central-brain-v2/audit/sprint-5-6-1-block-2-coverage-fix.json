@@ -1,0 +1,23 @@
+{
+  "auditId": "AUD-SPRINT-5-6-1-BLOCK-2",
+  "scope": "aviso-previo-knowledge-and-runtime-coverage",
+  "status": "passed-with-nonblocking-warning",
+  "implementedFindings": 6,
+  "validation": {
+    "structuralTestsPassed": 84,
+    "runtimeTestsPassed": 31,
+    "rulesValidated": 6,
+    "factsValidated": 33,
+    "jsonFilesChecked": 196,
+    "canonicalProjectionsValidated": 8,
+    "errors": 0,
+    "warnings": [
+      "Eight legacy placeholder inventories remain isolated and must not be promoted."
+    ]
+  },
+  "operationalState": {
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "platformReadyForControlledIngestion": true
+  }
+}

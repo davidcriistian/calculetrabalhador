@@ -1,0 +1,92 @@
+{
+  "id": "RULE-AP-012",
+  "domainId": "aviso-previo",
+  "title": "Reconsideração do aviso-prévio",
+  "status": "review",
+  "versions": [
+    {
+      "versionId": "VER-RULE-AP-012-001",
+      "validFrom": "1943-11-10",
+      "validTo": null,
+      "recordedAt": "2026-07-22T14:40:00.000Z",
+      "recordedUntil": null,
+      "status": "review",
+      "sourceIds": [
+        "SRC-BR-CLT-ART489-491"
+      ],
+      "parameters": {},
+      "conditions": [
+        {
+          "id": "COND-AP-012-A",
+          "allOf": [
+            "reconsideração do aviso-prévio",
+            "fatos mínimos presentes"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EXC-AP-012-A",
+          "when": "fatos controvertidos, insuficientes ou sem reconhecimento exigido",
+          "effect": "encaminhar para revisão humana"
+        }
+      ],
+      "approvalStatus": "UNDER_LEGAL_REVIEW",
+      "approval": null,
+      "supersedesVersionId": null,
+      "normativeStatement": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso.",
+      "conceptIds": [
+        "CPT-AVP-001"
+      ],
+      "factsRequired": [
+        "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+        "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+        "FACT-RECONSIDERATION-ACCEPTANCE-MODE"
+      ],
+      "legalEffects": [
+        {
+          "id": "EFFECT-AP-012-A",
+          "type": "reconsideracao",
+          "description": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso."
+        }
+      ],
+      "interpretiveLimits": [
+        "Não substitui qualificação jurídica humana quando houver controvérsia fática ou judicial.",
+        "Não promove autoridade de runtime antes de aprovação jurídica formal."
+      ],
+      "sourcePinpoints": [
+        {
+          "sourceId": "SRC-BR-CLT-ART489-491",
+          "pinpoint": "art. 489"
+        }
+      ],
+      "testCases": [
+        {
+          "id": "TC-AP-012-01",
+          "given": [
+            "fatos de incidência presentes"
+          ],
+          "expected": "regra aplicável em revisão"
+        },
+        {
+          "id": "TC-AP-012-02",
+          "given": [
+            "fatos insuficientes ou controvertidos"
+          ],
+          "expected": "revisão humana obrigatória"
+        }
+      ],
+      "notes": [
+        "Regra adicionada na Fase 2 e mantida sob revisão jurídica."
+      ],
+      "contentFingerprint": "sha256:9296fdb769a4483ff9b876719a403ccefbee3c393d19ad5858e0c1835c5367f8"
+    }
+  ],
+  "aliases": [],
+  "dependencies": [],
+  "consumerIds": [
+    "CNS-CALCULADORA-AVISO-PREVIO",
+    "CNS-CALCULADORA-RESCISAO-CLT"
+  ],
+  "description": "A reconsideração do aviso-prévio depende de aceitação da outra parte, expressa ou decorrente da continuidade da prestação após o termo, preservada a análise dos fatos do caso."
+}

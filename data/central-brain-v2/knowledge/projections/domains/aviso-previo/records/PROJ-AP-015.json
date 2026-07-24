@@ -1,0 +1,109 @@
+{
+  "id": "PROJ-AP-015",
+  "domainId": "aviso-previo",
+  "title": "Falta grave do empregado durante o aviso",
+  "purpose": "Projetar de forma declarativa os efeitos de falta grave do empregado durante o aviso.",
+  "version": "1.0.0",
+  "status": "review",
+  "effectiveFrom": "1988-10-05",
+  "effectiveTo": null,
+  "ruleRefs": [
+    {
+      "ruleId": "RULE-AP-013",
+      "versionPolicy": "effective-at-reference-date",
+      "role": "authoritative"
+    }
+  ],
+  "conceptIds": [
+    "CPT-AVP-001"
+  ],
+  "inputFacts": [
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    },
+    {
+      "factId": "FACT-SERIOUS-MISCONDUCT-PARTY",
+      "requirement": "required",
+      "purpose": "Fato necessário à aplicação da regra especial."
+    }
+  ],
+  "activation": {
+    "logic": "all",
+    "conditions": [
+      {
+        "id": "COND-PROJ-AP-015-A",
+        "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+        "operator": "exists",
+        "onUnknown": "human-review",
+        "reason": "A incidência depende da presença do fato principal."
+      }
+    ],
+    "defaultOutcome": "not-applicable"
+  },
+  "exceptions": [
+    {
+      "id": "EXC-PROJ-AP-015-A",
+      "priority": 1,
+      "conditions": [
+        {
+          "id": "COND-PROJ-AP-015-X1",
+          "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+          "operator": "not-exists",
+          "onUnknown": "human-review",
+          "reason": "Fato principal ausente ou desconhecido."
+        }
+      ],
+      "outcome": "human-review",
+      "reason": "Fatos insuficientes ou controvertidos exigem revisão humana.",
+      "ruleIds": [
+        "RULE-AP-013"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "key": "employee_misconduct_effect",
+      "valueType": "enum",
+      "semantics": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+      "source": "rule-effect",
+      "sourceRef": "EFFECT-AP-013-A",
+      "nullable": false,
+      "consumerVisibility": "internal",
+      "allowedValues": [
+        "applicable",
+        "not-applicable",
+        "human-review"
+      ],
+      "defaultValue": "applicable"
+    }
+  ],
+  "operations": [],
+  "explanation": {
+    "summaryTemplate": "A falta grave praticada pelo empregado durante o aviso pode afastar o restante do prazo e seus efeitos, condicionada à caracterização jurídica da justa causa.",
+    "includeFacts": true,
+    "includeRules": true,
+    "includeRejectedRules": true,
+    "includeExceptions": true,
+    "publicLimitations": [
+      "Resultado declarativo em revisão; não substitui revisão jurídica humana."
+    ]
+  },
+  "governance": {
+    "owner": "central-brain-legal-architecture",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "runtimeAuthority": false,
+    "consumerReady": false,
+    "createdAt": "2026-07-22T14:40:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "testCaseIds": [
+    "TC-PROJ-AP-015-A",
+    "TC-PROJ-AP-015-B"
+  ],
+  "contentFingerprint": "sha256:0fe113da8c74e4e90730ce80486ea043e1b933a357b9bb7c36f7d8af293795bd"
+}

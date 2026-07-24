@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../schemas/domain-concept-catalog.schema.json",
+  "domainId": "aviso-previo",
+  "catalogVersion": "0.3.0",
+  "status": "CONCEPTS_VALIDATED",
+  "items": [
+    {
+      "conceptId": "CPT-AVP-001",
+      "path": "./records/aviso-previo.json",
+      "semanticType": "institution",
+      "reusable": false,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-002",
+      "path": "./records/aviso-previo-trabalhado.json",
+      "semanticType": "modality",
+      "reusable": false,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-003",
+      "path": "./records/aviso-previo-indenizado.json",
+      "semanticType": "modality",
+      "reusable": false,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-004",
+      "path": "./records/aviso-previo-proporcional.json",
+      "semanticType": "duration",
+      "reusable": false,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-005",
+      "path": "./records/prazo-do-aviso-previo.json",
+      "semanticType": "duration",
+      "reusable": false,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-006",
+      "path": "./records/comunicacao-do-aviso-previo.json",
+      "semanticType": "event",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-007",
+      "path": "./records/integracao-ao-tempo-de-servico.json",
+      "semanticType": "effect",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-008",
+      "path": "./records/data-projetada-de-termino.json",
+      "semanticType": "effect",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-009",
+      "path": "./records/reducao-da-jornada.json",
+      "semanticType": "procedure",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-010",
+      "path": "./records/dispensa-do-cumprimento.json",
+      "semanticType": "procedure",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-011",
+      "path": "./records/renuncia-ao-aviso-previo.json",
+      "semanticType": "procedure",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-012",
+      "path": "./records/obtencao-de-novo-emprego.json",
+      "semanticType": "event",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-013",
+      "path": "./records/reconsideracao-do-aviso.json",
+      "semanticType": "procedure",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-014",
+      "path": "./records/falta-grave-durante-aviso.json",
+      "semanticType": "event",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-015",
+      "path": "./records/parte-notificante.json",
+      "semanticType": "party-role",
+      "reusable": true,
+      "status": "validated"
+    },
+    {
+      "conceptId": "CPT-AVP-016",
+      "path": "./records/contrato-prazo-indeterminado.json",
+      "semanticType": "scope-qualifier",
+      "reusable": true,
+      "status": "validated"
+    }
+  ],
+  "verification": {
+    "verifiedAt": "2026-07-21T20:30:00.000Z",
+    "verifiedBy": "central-brain-domain-ingestion",
+    "method": "source-grounded-concept-modeling-and-ontology-review",
+    "notes": [
+      "Conceitos foram separados de regras executáveis.",
+      "Cada conceito possui fonte oficial e limite interpretativo.",
+      "Nenhum conceito concede autoridade de consumo ou runtime."
+    ]
+  }
+}

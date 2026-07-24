@@ -1,0 +1,19 @@
+{
+  "id": "PRJ-REPLACE-ME",
+  "ruleId": "RULE-REPLACE-ME",
+  "ruleVersionId": "VER-REPLACE-ME",
+  "projectionType": "calculator-parameters",
+  "status": "draft",
+  "effectiveFrom": "YYYY-MM-DD",
+  "effectiveTo": null,
+  "payload": {},
+  "provenance": [
+    "SRC-REPLACE-ME"
+  ],
+  "generatedAt": "YYYY-MM-DDTHH:MM:SS.000Z",
+  "validatedAt": null,
+  "publishedAt": null,
+  "retiredAt": null,
+  "contentFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "buildFingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+}

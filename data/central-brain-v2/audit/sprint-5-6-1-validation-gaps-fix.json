@@ -1,0 +1,51 @@
+{
+  "auditId": "AUDIT-SPRINT-5-6-1-VALIDATION-GAPS-FIX",
+  "performedAt": "2026-07-21T22:40:00.000Z",
+  "scope": "Correção dos quatro achados da auditoria: contador de fatos, validação de projeções canônicas, entrada não declarada e documentação desatualizada.",
+  "baseline": "sprint5_6_1_executor_generico",
+  "findingsResolved": [
+    {
+      "id": "FIND-FACT-COUNT",
+      "status": "resolved",
+      "evidence": "validate-aviso-previo-facts.js exige 33 fatos e o teste passa."
+    },
+    {
+      "id": "FIND-CANONICAL-PROJECTIONS-BLIND-SPOT",
+      "status": "resolved",
+      "evidence": "validate.py carrega, valida e contabiliza 8 projeções canônicas; projections=8."
+    },
+    {
+      "id": "FIND-PROJ-AP-004-UNDECLARED-INPUT",
+      "status": "resolved",
+      "evidence": "FACT-TERMINATION-DATE declarado em inputFacts e vinculado à condição COND-PROJ-AP-004-A."
+    },
+    {
+      "id": "FIND-STALE-READMES",
+      "status": "resolved",
+      "evidence": "Sete READMEs substituídos por descrições compatíveis com o conteúdo real."
+    }
+  ],
+  "additionalHardening": [
+    "Validação de schema para cada projeção canônica.",
+    "Validação de fingerprints entre registros e catálogos.",
+    "Detecção de fatos usados em condições mas ausentes de inputFacts.",
+    "Separação estatística entre legacyProjections e canonicalProjections."
+  ],
+  "validation": {
+    "structuralTests": 84,
+    "runtimeTests": 23,
+    "factsValidated": 33,
+    "rulesValidated": 6,
+    "canonicalProjectionsValidated": 8,
+    "checkedJsonFiles": 190,
+    "errors": 0,
+    "warnings": [
+      "8 inventários legados permanecem placeholders isolados e sem autoridade jurídica."
+    ]
+  },
+  "decision": {
+    "status": "approved-with-nonblocking-warning",
+    "runtimeAuthority": false,
+    "consumerReady": false
+  }
+}

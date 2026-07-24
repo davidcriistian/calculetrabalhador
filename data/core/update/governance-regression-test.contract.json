@@ -1,0 +1,61 @@
+{
+  "id": "governance-regression-test-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Executar testes automatizados positivos, negativos, determinísticos e de não regressão sem modificar regras, conteúdo público ou catálogos legados.",
+  "testClasses": [
+    "BASELINE_VALIDATION",
+    "NEGATIVE_SCHEMA_SCENARIOS",
+    "REFERENCE_INTEGRITY",
+    "VALIDATOR_REGISTRY",
+    "DETERMINISM",
+    "MUTATION_GUARD",
+    "PUBLICATION_SAFETY"
+  ],
+  "requiredScenarios": [
+    "all-json-valid",
+    "structural-integrity-pass",
+    "duplicate-id-rejected",
+    "invalid-semver-rejected",
+    "invalid-date-rejected",
+    "invalid-fingerprint-rejected",
+    "invalid-status-rejected",
+    "broken-resolved-reference-rejected",
+    "unclassified-unresolved-reference-rejected",
+    "open-publication-gate-rejected",
+    "automatic-mutation-enabled-rejected",
+    "validator-paths-resolve",
+    "reference-counts-consistent",
+    "generator-semantic-determinism",
+    "protected-files-unchanged"
+  ],
+  "executionPolicy": {
+    "testFixturesOnlyForNegativeCases": true,
+    "temporaryDirectoryRequired": true,
+    "sourceMutationAllowed": false,
+    "publicMutationAllowed": false,
+    "ruleMutationAllowed": false,
+    "commitAllowed": false,
+    "pushAllowed": false,
+    "deployAllowed": false,
+    "publicationAllowed": false
+  },
+  "passPolicy": {
+    "allRequiredScenariosMustPass": true,
+    "unexpectedWarningsAllowed": false,
+    "knownCompatibilityWarningsAllowed": [
+      "LEGACY_GENERATED_STATUS:compatibility:generated-internal-report"
+    ]
+  },
+  "outputs": {
+    "testMatrix": "/data/core/update/governance-test-matrix.json",
+    "testReport": "/data/core/update/governance-test-report.generated.json"
+  },
+  "references": {
+    "runner": "/scripts/run-governance-regression-tests.js",
+    "validator": "/scripts/validate-governance-test-report.js"
+  }
+}

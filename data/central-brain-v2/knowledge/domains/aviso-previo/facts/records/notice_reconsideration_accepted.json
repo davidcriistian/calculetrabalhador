@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../../schemas/legal-fact.schema.json",
+  "id": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+  "domainId": "aviso-previo",
+  "key": "notice_reconsideration_accepted",
+  "label": "Reconsideração aceita",
+  "description": "Indica que a outra parte aceitou expressa ou tacitamente a reconsideração, permitindo continuidade do contrato.",
+  "valueType": "boolean",
+  "originPolicy": {
+    "allowedOrigins": [
+      "user-declared",
+      "document-extracted",
+      "official-record"
+    ],
+    "derivationAllowed": false
+  },
+  "temporalSemantics": {
+    "kind": "atemporal",
+    "referenceRole": "none",
+    "timezonePolicy": "not-applicable"
+  },
+  "evidencePolicy": {
+    "required": false,
+    "acceptedEvidenceTypes": [
+      "declaration",
+      "document",
+      "official-record"
+    ],
+    "minimumConfidence": 0.6,
+    "humanVerificationRequired": false
+  },
+  "privacy": {
+    "classification": "personal",
+    "retentionClass": "case-lifetime",
+    "redactionRequired": false
+  },
+  "status": "review",
+  "version": "1.0.0",
+  "aliases": [],
+  "conceptIds": [
+    "CPT-AVP-013"
+  ],
+  "relationships": {
+    "dependsOnFactIds": [
+      "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+    ],
+    "conflictsWithFactIds": [],
+    "requiredWithFactIds": [],
+    "mutuallyExclusiveGroup": null
+  },
+  "semanticValidation": [
+    {
+      "id": "FVAL-RECONSIDERACAO-001",
+      "severity": "error",
+      "assertion": "reconsideration_accepted implies reconsideration_proposed",
+      "message": "Aceitação pressupõe proposta prévia de reconsideração.",
+      "relatedFactIds": [
+        "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+      ]
+    }
+  ],
+  "legalBasis": [
+    {
+      "sourceId": "SRC-BR-CLT-ART487-491",
+      "pinpoint": "art. 489, parágrafo único",
+      "relevance": "A continuação da prestação após expiração pode importar aceitação tácita da reconsideração."
+    }
+  ],
+  "governance": {
+    "owner": "central-brain/legal-knowledge",
+    "legalReviewRequired": true,
+    "technicalReviewRequired": true,
+    "createdAt": "2026-07-21T18:30:00.000Z",
+    "lastReviewedAt": null,
+    "reviewId": null
+  },
+  "contentFingerprint": "sha256:afee52318afbcaa7ba1c5f0709224e429d24099c4ad688c07b569765a3f8706e"
+}

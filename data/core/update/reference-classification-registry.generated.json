@@ -1,0 +1,228 @@
+{
+  "id": "reference-classification-registry",
+  "version": "1.0.0",
+  "status": "generated-read-only",
+  "generatedAt": "2026-07-19T20:36:53.160380+00:00",
+  "sourceRegistry": "data/core/update/canonical-reference-registry.generated.json",
+  "summary": {
+    "RESOLVED_PHYSICAL_FILE": 5,
+    "UNRESOLVED_PATH_REFERENCE": 15
+  },
+  "entries": [
+    {
+      "original": "/data/rules/fgts.json",
+      "normalized": "data/rules/fgts.json",
+      "resolutionStatus": "resolved",
+      "classification": "RESOLVED_PHYSICAL_FILE",
+      "recommendedAction": "NONE",
+      "confidence": "HIGH",
+      "resolvedPath": "data/rules/fgts.json",
+      "candidates": [
+        "data/rules/fgts.json"
+      ]
+    },
+    {
+      "original": "calculadora-clt-ou-pj/index.html",
+      "normalized": "calculadora-clt-ou-pj/index.html",
+      "resolutionStatus": "resolved",
+      "classification": "RESOLVED_PHYSICAL_FILE",
+      "recommendedAction": "NONE",
+      "confidence": "HIGH",
+      "resolvedPath": "calculadora-clt-ou-pj/index.html",
+      "candidates": [
+        "calculadora-clt-ou-pj/index.html"
+      ]
+    },
+    {
+      "original": "calculadora-multa-40-fgts/index.html",
+      "normalized": "calculadora-multa-40-fgts/index.html",
+      "resolutionStatus": "resolved",
+      "classification": "RESOLVED_PHYSICAL_FILE",
+      "recommendedAction": "NONE",
+      "confidence": "HIGH",
+      "resolvedPath": "calculadora-multa-40-fgts/index.html",
+      "candidates": [
+        "calculadora-multa-40-fgts/index.html"
+      ]
+    },
+    {
+      "original": "calculadora-rescisao-clt/index.html",
+      "normalized": "calculadora-rescisao-clt/index.html",
+      "resolutionStatus": "resolved",
+      "classification": "RESOLVED_PHYSICAL_FILE",
+      "recommendedAction": "NONE",
+      "confidence": "HIGH",
+      "resolvedPath": "calculadora-rescisao-clt/index.html",
+      "candidates": [
+        "calculadora-rescisao-clt/index.html"
+      ]
+    },
+    {
+      "original": "/blog/clt-ou-pj",
+      "normalized": "blog/clt-ou-pj",
+      "resolutionStatus": "resolved",
+      "classification": "RESOLVED_PHYSICAL_FILE",
+      "recommendedAction": "NONE",
+      "confidence": "HIGH",
+      "resolvedPath": "data/registry/by-cluster/clt-ou-pj.json",
+      "candidates": [
+        "data/registry/by-cluster/clt-ou-pj.json"
+      ]
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/clt-ou-pj-vale-a-pena-em-2026/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/como-calcular-clt-ou-pj/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/como-calcular-rescisao-clt/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/como-calcular-saque-aniversario-fgts/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/contrato-pj-o-que-analisar-antes-de-aceitar/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "/blog/multa-de-40-do-fgts-como-calcular/",
+      "normalized": "blog/multa-de-40-do-fgts-como-calcular/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/pedido-de-demissao-quais-direitos-recebo/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/quanto-preciso-ganhar-como-pj-para-compensar-clt/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/quem-tem-direito-ao-saque-aniversario-fgts/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "/blog/rescisao-sem-justa-causa",
+      "normalized": "blog/rescisao-sem-justa-causa",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/saque-aniversario-fgts-2026/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/vantagens-e-desvantagens-clt-ou-pj/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/vantagens-e-desvantagens-saque-aniversario-fgts/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "/blog/verbas-rescisorias-o-que-receber-na-demissao/",
+      "normalized": "blog/verbas-rescisorias-o-que-receber-na-demissao/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    },
+    {
+      "original": "https://calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+      "normalized": "https:/calculetrabalhador.com.br/blog/voltar-saque-aniversario-para-saque-rescisao/",
+      "resolutionStatus": "unresolved",
+      "classification": "UNRESOLVED_PATH_REFERENCE",
+      "recommendedAction": "CORRECT_SOURCE_PATH",
+      "confidence": "MEDIUM",
+      "resolvedPath": null,
+      "candidates": []
+    }
+  ],
+  "safety": {
+    "automaticCorrectionAllowed": false,
+    "legacySourceMutationAllowed": false,
+    "publicMutationAllowed": false
+  }
+}

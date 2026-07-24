@@ -1,0 +1,27 @@
+{
+  "version": "2.1.0",
+  "prefixes": {
+    "source": "SRC-",
+    "rule": "RULE-",
+    "ruleVersion": "VER-",
+    "projection": "PROJ-",
+    "consumer": "CNS-",
+    "dependency": "DEP-",
+    "auditEvent": "AUD-",
+    "domain": "lowercase-kebab-case",
+    "legacyProjection": "PRJ-"
+  },
+  "immutability": "Canonical IDs never change after approval. Renames use aliases and supersession records.",
+  "aliasResolution": "Aliases are accepted only at input boundaries and always resolve to a canonical identity.",
+  "projectionFamilies": {
+    "canonicalLegalProjection": {
+      "prefix": "PROJ-",
+      "schema": "../schemas/canonical-projection.schema.json"
+    },
+    "legacyConsumerProjection": {
+      "prefix": "PRJ-",
+      "schema": "../schemas/projection.schema.json",
+      "status": "legacy-isolated"
+    }
+  }
+}

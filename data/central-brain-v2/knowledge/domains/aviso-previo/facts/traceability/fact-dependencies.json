@@ -1,0 +1,93 @@
+{
+  "domainId": "aviso-previo",
+  "version": "1.0.0",
+  "items": [
+    {
+      "factId": "FACT-CONTRACT-INDEFINITE",
+      "dependsOnFactIds": [
+        "FACT-CONTRACT-TERM-TYPE"
+      ]
+    },
+    {
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "dependsOnFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-TERMINATION-DATE"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "dependsOnFactIds": [
+        "FACT-TERMINATION-CAUSE"
+      ]
+    },
+    {
+      "factId": "FACT-TERMINATION-BY-EMPLOYER",
+      "dependsOnFactIds": [
+        "FACT-TERMINATION-INITIATIVE"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-BENEFICIARY",
+      "dependsOnFactIds": [
+        "FACT-TERMINATION-INITIATIVE",
+        "FACT-TERMINATION-CAUSE"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYER-OWES-NOTICE",
+      "dependsOnFactIds": [
+        "FACT-TERMINATION-INITIATIVE",
+        "FACT-TERMINATION-CAUSE",
+        "FACT-CONTRACT-INDEFINITE"
+      ]
+    },
+    {
+      "factId": "FACT-COMPLETE-SERVICE-YEARS",
+      "dependsOnFactIds": [
+        "FACT-ADMISSION-DATE",
+        "FACT-LEGAL-REFERENCE-DATE"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-DURATION",
+      "dependsOnFactIds": [
+        "FACT-COMPLETE-SERVICE-YEARS",
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-LEGAL-REFERENCE-DATE"
+      ]
+    },
+    {
+      "factId": "FACT-PROJECTED-TERMINATION-DATE",
+      "dependsOnFactIds": [
+        "FACT-NOTICE-COMMUNICATION-DATE",
+        "FACT-NOTICE-DURATION"
+      ]
+    },
+    {
+      "factId": "FACT-EMPLOYEE-OPTION-REDUCTION-MODE",
+      "dependsOnFactIds": [
+        "FACT-NOTICE-WORKED",
+        "FACT-TERMINATION-BY-EMPLOYER"
+      ]
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "dependsOnFactIds": [
+        "FACT-NEW-EMPLOYMENT-OBTAINED"
+      ]
+    },
+    {
+      "factId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "dependsOnFactIds": [
+        "FACT-NEW-EMPLOYMENT-PROVEN"
+      ]
+    },
+    {
+      "factId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "dependsOnFactIds": [
+        "FACT-NOTICE-RECONSIDERATION-PROPOSED"
+      ]
+    }
+  ]
+}

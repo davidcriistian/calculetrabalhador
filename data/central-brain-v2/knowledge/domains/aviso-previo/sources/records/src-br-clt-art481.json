@@ -1,0 +1,41 @@
+{
+  "id": "SRC-BR-CLT-ART481",
+  "type": "decree",
+  "jurisdiction": "BR",
+  "title": "Consolidação das Leis do Trabalho — art. 481",
+  "officialUrl": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+  "publicationDate": "1943-05-01",
+  "effectiveFrom": "1943-11-10",
+  "effectiveTo": null,
+  "retrievedAt": "2026-07-22T14:40:00.000Z",
+  "status": "verified",
+  "evidence": [
+    {
+      "kind": "url",
+      "value": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "citation",
+      "value": "art. 481 — contrato a termo com cláusula assecuratória.",
+      "capturedAt": "2026-07-22T14:40:00.000Z"
+    },
+    {
+      "kind": "local-copy",
+      "value": "../evidence/src-br-clt-art481.snapshot.json",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    },
+    {
+      "kind": "checksum",
+      "value": "sha256:33369f3cd7aada4ac3c24d42b115cb824bd20ed7024055368732e5026220002f",
+      "capturedAt": "2026-07-22T16:00:00.000Z"
+    }
+  ],
+  "checksum": "sha256:33369f3cd7aada4ac3c24d42b115cb824bd20ed7024055368732e5026220002f",
+  "supersedesSourceId": null,
+  "notes": [
+    "Fonte normativa primária catalogada em URL oficial.",
+    "Checksum covers the frozen citation snapshot, not the mutable official web page.",
+    "Revisão jurídica formal permanece pendente."
+  ]
+}

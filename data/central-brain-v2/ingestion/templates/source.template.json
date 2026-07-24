@@ -1,0 +1,22 @@
+{
+  "id": "SRC-REPLACE-ME",
+  "type": "law",
+  "jurisdiction": "BR",
+  "title": "REPLACE_ME",
+  "officialUrl": null,
+  "publicationDate": null,
+  "effectiveFrom": null,
+  "effectiveTo": null,
+  "retrievedAt": "YYYY-MM-DDTHH:MM:SS.000Z",
+  "status": "draft",
+  "evidence": [
+    {
+      "kind": "citation",
+      "value": "REPLACE_ME",
+      "capturedAt": "YYYY-MM-DDTHH:MM:SS.000Z"
+    }
+  ],
+  "checksum": null,
+  "supersedesSourceId": null,
+  "notes": []
+}

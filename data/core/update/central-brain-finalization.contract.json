@@ -1,0 +1,59 @@
+{
+  "id": "central-brain-finalization-and-readiness-contract",
+  "version": "1.0.0",
+  "status": "active-internal-standard",
+  "runtimeStatus": "governance-only",
+  "createdAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "objective": "Consolidar a arquitetura do cérebro central, documentar operação e manutenção, registrar limites conhecidos e emitir uma avaliação final de prontidão.",
+  "requiredDeliverables": [
+    "ARCHITECTURE_OVERVIEW",
+    "OPERATIONS_MANUAL",
+    "RULE_UPDATE_MANUAL",
+    "CONTENT_ONBOARDING_MANUAL",
+    "APPROVAL_AND_PUBLICATION_MANUAL",
+    "ROLLBACK_AND_INCIDENT_MANUAL",
+    "RESPONSIBILITY_MATRIX",
+    "READINESS_REPORT",
+    "OPEN_ITEMS_REGISTER",
+    "FINAL_VALIDATION"
+  ],
+  "nonNegotiableSafety": {
+    "automaticRuleMutationAllowed": false,
+    "automaticArticleMutationAllowed": false,
+    "automaticPublicMutationAllowed": false,
+    "automaticPublicationAllowed": false,
+    "humanApprovalRequired": true,
+    "rollbackRequiredBeforeExecution": true,
+    "evidenceRequiredBeforePublication": true
+  },
+  "readinessPolicy": {
+    "readyForGovernedUseWhen": [
+      "all mandatory documentation exists",
+      "all validation suites pass",
+      "publication gates remain closed by default",
+      "known limitations are explicitly registered",
+      "protected files remain unchanged"
+    ],
+    "notEquivalentTo": [
+      "zero-defect guarantee",
+      "automatic legal correctness",
+      "unattended publication",
+      "elimination of human review"
+    ]
+  },
+  "outputs": {
+    "architectureOverview": "/docs/central-brain/architecture-overview.md",
+    "operationsManual": "/docs/central-brain/operations-manual.md",
+    "ruleUpdateManual": "/docs/central-brain/rule-update-manual.md",
+    "contentOnboardingManual": "/docs/central-brain/content-onboarding-manual.md",
+    "approvalPublicationManual": "/docs/central-brain/approval-publication-manual.md",
+    "rollbackIncidentManual": "/docs/central-brain/rollback-incident-manual.md",
+    "responsibilityMatrix": "/data/core/update/responsibility-matrix.json",
+    "openItemsRegister": "/data/core/update/open-items-register.generated.json",
+    "readinessReport": "/data/core/update/final-readiness-report.generated.json"
+  },
+  "references": {
+    "validator": "/scripts/validate-final-readiness.js"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "$schema": "../schemas/semantic-policy.schema.json",
+  "id": "SEMANTIC-POLICY-AVISO-PREVIO-001",
+  "domainId": "aviso-previo",
+  "version": "1.1.0",
+  "status": "active",
+  "rules": [
+    {
+      "id": "SEM-AP-001",
+      "kind": "date-order",
+      "severity": "error",
+      "leftFactId": "FACT-ADMISSION-DATE",
+      "operator": "on-or-before",
+      "rightFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "message": "A admissão não pode ser posterior à comunicação do aviso."
+    },
+    {
+      "id": "SEM-AP-002",
+      "kind": "date-order",
+      "severity": "error",
+      "leftFactId": "FACT-ADMISSION-DATE",
+      "operator": "on-or-before",
+      "rightFactId": "FACT-LEGAL-REFERENCE-DATE",
+      "message": "A admissão não pode ser posterior à data jurídica de referência."
+    },
+    {
+      "id": "SEM-AP-003",
+      "kind": "mapping",
+      "severity": "error",
+      "sourceFactId": "FACT-CONTRACT-TERM-TYPE",
+      "targetFactId": "FACT-CONTRACT-INDEFINITE",
+      "map": {
+        "indeterminado": true,
+        "determinado": false,
+        "experiencia": false
+      },
+      "message": "O indicador de contrato indeterminado contradiz o tipo contratual."
+    },
+    {
+      "id": "SEM-AP-004",
+      "kind": "mapping",
+      "severity": "error",
+      "sourceFactId": "FACT-TERMINATION-CAUSE",
+      "targetFactId": "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+      "map": {
+        "dispensa-sem-justa-causa": true,
+        "pedido-demissao": false,
+        "dispensa-com-justa-causa": false
+      },
+      "message": "O indicador de ruptura sem justa causa contradiz a causa informada."
+    },
+    {
+      "id": "SEM-AP-005",
+      "kind": "mapping",
+      "severity": "error",
+      "sourceFactId": "FACT-TERMINATION-CAUSE",
+      "targetFactId": "FACT-TERMINATION-BY-EMPLOYER",
+      "map": {
+        "dispensa-sem-justa-causa": true,
+        "dispensa-com-justa-causa": true,
+        "pedido-demissao": false
+      },
+      "message": "O indicador de ruptura pelo empregador contradiz a causa informada."
+    },
+    {
+      "id": "SEM-AP-006",
+      "kind": "mapping",
+      "severity": "error",
+      "sourceFactId": "FACT-TERMINATION-CAUSE",
+      "targetFactId": "FACT-TERMINATION-INITIATIVE",
+      "map": {
+        "dispensa-sem-justa-causa": "empregador",
+        "dispensa-com-justa-causa": "empregador",
+        "pedido-demissao": "empregado"
+      },
+      "message": "A iniciativa da ruptura contradiz a causa jurídica."
+    },
+    {
+      "id": "SEM-AP-007",
+      "kind": "mapping",
+      "severity": "error",
+      "sourceFactId": "FACT-TERMINATION-INITIATIVE",
+      "targetFactId": "FACT-NOTIFYING-PARTY",
+      "map": {
+        "empregador": "empregador",
+        "empregado": "empregado"
+      },
+      "message": "A parte notificante contradiz a iniciativa da ruptura."
+    },
+    {
+      "id": "SEM-AP-008",
+      "kind": "derived-origin",
+      "severity": "error",
+      "factIds": [
+        "FACT-CONTRACT-INDEFINITE",
+        "FACT-TERMINATION-WITHOUT-JUST-CAUSE",
+        "FACT-TERMINATION-BY-EMPLOYER",
+        "FACT-EMPLOYER-OWES-NOTICE",
+        "FACT-EMPLOYEE-BENEFICIARY",
+        "FACT-COMPLETE-SERVICE-YEARS"
+      ],
+      "allowedOrigins": [
+        "derived",
+        "official-record"
+      ],
+      "message": "Fato derivado não pode prevalecer como simples declaração sem reconciliação."
+    },
+    {
+      "id": "SEM-AP-009",
+      "kind": "modality-consistency",
+      "severity": "error",
+      "message": "A modalidade declarada contradiz os fatos elementares do aviso."
+    },
+    {
+      "id": "SEM-AP-010",
+      "kind": "implication",
+      "severity": "error",
+      "ifFactId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "ifValue": true,
+      "thenFactId": "FACT-NEW-EMPLOYMENT-OBTAINED",
+      "thenValue": true,
+      "message": "Novo emprego comprovado pressupõe obtenção do novo emprego."
+    },
+    {
+      "id": "SEM-AP-011",
+      "kind": "required-if",
+      "severity": "error",
+      "ifFactId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "ifValue": true,
+      "requiredFactIds": [
+        "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE"
+      ],
+      "message": "A comprovação do novo emprego exige data da evidência."
+    },
+    {
+      "id": "SEM-AP-012",
+      "kind": "date-order",
+      "severity": "error",
+      "leftFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "operator": "on-or-before",
+      "rightFactId": "FACT-NEW-EMPLOYMENT-EVIDENCE-DATE",
+      "whenFactId": "FACT-NEW-EMPLOYMENT-PROVEN",
+      "whenValue": true,
+      "message": "A evidência de novo emprego não pode anteceder a comunicação do aviso."
+    },
+    {
+      "id": "SEM-AP-013",
+      "kind": "implication",
+      "severity": "error",
+      "ifFactId": "FACT-NOTICE-RECONSIDERATION-ACCEPTED",
+      "ifValue": true,
+      "thenFactId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "thenValue": true,
+      "message": "Aceitação da reconsideração pressupõe proposta."
+    },
+    {
+      "id": "SEM-AP-014",
+      "kind": "human-review-if",
+      "severity": "review",
+      "factId": "FACT-SERIOUS-MISCONDUCT-DURING-NOTICE",
+      "value": true,
+      "message": "Falta grave durante o aviso exige regra específica e revisão jurídica."
+    },
+    {
+      "id": "SEM-AP-015",
+      "kind": "human-review-if",
+      "severity": "review",
+      "factId": "FACT-NOTICE-RECONSIDERATION-PROPOSED",
+      "value": true,
+      "message": "Reconsideração do aviso exige resolução jurídica específica antes da consolidação."
+    },
+    {
+      "id": "SEM-AP-016",
+      "kind": "date-order",
+      "severity": "error",
+      "leftFactId": "FACT-NOTICE-COMMUNICATION-DATE",
+      "operator": "on-or-before",
+      "rightFactId": "FACT-FACTUAL-LAST-WORKED-DATE",
+      "message": "O último dia trabalhado não pode anteceder a comunicação do aviso."
+    },
+    {
+      "id": "SEM-AP-017",
+      "kind": "date-order",
+      "severity": "error",
+      "leftFactId": "FACT-NOTICE-COUNTING-START-DATE",
+      "operator": "on-or-before",
+      "rightFactId": "FACT-PROJECTED-TERMINATION-DATE",
+      "message": "O início da contagem não pode ser posterior ao término projetado."
+    },
+    {
+      "id": "SEM-AP-018",
+      "kind": "package-fact-equality",
+      "severity": "error",
+      "packageField": "referenceDate",
+      "factId": "FACT-LEGAL-REFERENCE-DATE",
+      "message": "A data jurídica do pacote contradiz FACT-LEGAL-REFERENCE-DATE."
+    },
+    {
+      "id": "SEM-AP-019",
+      "kind": "completed-years-reconciliation",
+      "severity": "error",
+      "admissionFactId": "FACT-ADMISSION-DATE",
+      "referenceFactId": "FACT-LEGAL-REFERENCE-DATE",
+      "yearsFactId": "FACT-COMPLETE-SERVICE-YEARS",
+      "message": "Os anos completos de serviço contradizem as datas canônicas."
+    }
+  ]
+}

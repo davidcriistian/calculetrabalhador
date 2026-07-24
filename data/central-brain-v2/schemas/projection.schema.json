@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projection.schema.json",
+  "title": "Immutable Consumer Projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "ruleId",
+    "ruleVersionId",
+    "projectionType",
+    "generatedAt",
+    "effectiveFrom",
+    "effectiveTo",
+    "payload",
+    "contentFingerprint",
+    "buildFingerprint",
+    "provenance",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^PRJ-[A-Z0-9-]+$"
+    },
+    "ruleId": {
+      "type": "string",
+      "pattern": "^RULE-[A-Z0-9-]+$"
+    },
+    "ruleVersionId": {
+      "type": "string",
+      "pattern": "^VER-[A-Z0-9-]+$"
+    },
+    "projectionType": {
+      "enum": [
+        "calculator-parameters",
+        "editorial-facts",
+        "impact-index",
+        "api-payload",
+        "test-fixtures"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publishedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "retiredAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "effectiveFrom": {
+      "type": "string",
+      "format": "date"
+    },
+    "effectiveTo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "payload": {},
+    "contentFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "buildFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^SRC-[A-Z0-9-]+$"
+      }
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "validated",
+        "published",
+        "retired"
+      ]
+    },
+    "validation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}
